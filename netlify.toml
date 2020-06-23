@@ -1,8 +1,2 @@
 [build]
   publish = "src"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 302
-  force = true
