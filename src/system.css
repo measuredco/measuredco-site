@@ -1,0 +1,181 @@
+/*
+ * Measured Co. design tokens & base styles
+ */
+
+:root {
+
+  /*
+   * Color palette
+   */
+
+  --color-rose-0: #4a001c;
+  --color-rose-1: #670833;
+  --color-rose-2: #87114c;
+  --color-rose-3: #a81a66;
+  --color-rose-4: #bc5089;
+  --color-rose-5: #cc7ca5;
+  --color-rose-6: #d89aba;
+  --color-rose-7: #e3b8cf;
+  --color-rose-8: #efd6e3;
+  --color-rose-9: #faf4f8;
+
+  --color-azure-0: #00175d;
+  --color-azure-1: #002c77;
+  --color-azure-2: #014292;
+  --color-azure-3: #0158ad;
+  --color-azure-4: #3479be;
+  --color-azure-5: #6499cf;
+  --color-azure-6: #88b0da;
+  --color-azure-7: #abc7e5;
+  --color-azure-8: #cfdff0;
+  --color-azure-9: #f3f6fb;
+
+  --color-green-0: #002000;
+  --color-green-1: #043604;
+  --color-green-2: #084e08;
+  --color-green-3: #0c680c;
+  --color-green-4: #1d882f;
+  --color-green-5: #2faa53;
+  --color-green-6: #56c16f;
+  --color-green-7: #7dd78b;
+  --color-green-8: #b8e8bf;
+  --color-green-9: #eff8f0;
+
+  --color-yellow-0: #211000;
+  --color-yellow-1: #362700;
+  --color-yellow-2: #4c4000;
+  --color-yellow-3: #645a00;
+  --color-yellow-4: #877614;
+  --color-yellow-5: #ab9429;
+  --color-yellow-6: #bfac4e;
+  --color-yellow-7: #d4c474;
+  --color-yellow-8: #e6deb1;
+  --color-yellow-9: #f9f7ed;
+
+  --color-red-0: #4c0000;
+  --color-red-1: #6a0a10;
+  --color-red-2: #8a1422;
+  --color-red-3: #ac1f35;
+  --color-red-4: #bf5366;
+  --color-red-5: #ce7e8e;
+  --color-red-6: #d99ca8;
+  --color-red-7: #e4b9c2;
+  --color-red-8: #efd7db;
+  --color-red-9: #faf4f5;
+
+  --color-grey-0: #111111;
+  --color-grey-1: #282828;
+  --color-grey-2: #404040;
+  --color-grey-3: #5a5a5a;
+  --color-grey-4: #767676;
+  --color-grey-5: #949494;
+  --color-grey-6: #ababab;
+  --color-grey-7: #c3c3c3;
+  --color-grey-8: #dcdcdc;
+  --color-grey-9: #f5f5f5;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /*
+   * Color tokens
+   */
+
+  --color-background: var(--color-white);
+  --color-background-inverted: var(--color-grey-0);
+
+  --color-brand: var(--color-rose-3);
+  --color-brand-inverted: var(--color-rose-5);
+
+  --color-interactive: var(--color-azure-3);
+  --color-interactive-focus: var(--color-azure-2);
+  --color-interactive-active: var(--color-azure-1);
+  --color-interactive-inverted: var(--color-azure-5);
+  --color-interactive-inverted-focus: var(--color-azure-6);
+  --color-interactive-inverted-active: var(--color-azure-7);
+
+  --color-text: var(--color-black);
+  --color-text-muted: var(--color-grey-4);
+  --color-text-inverted: var(--color-white);
+  --color-text-inverted-muted: var(--color-grey-5);
+}
+
+/*
+ * Base styles
+ */
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  src: url("Inter.var.woff2?v=3.13") format("woff2");
+}
+
+.msrd {
+  background-color: var(--color-background);
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  line-height: 1.5;
+}
+
+.msrd *,
+.msrd *::after,
+.msrd *::before {
+  box-sizing: border-box;
+}
+
+.msrd a {
+  color: #0158ad; /* fallback */
+  color: var(--color-interactive);
+  text-decoration: none;
+}
+
+.msrd a:visited {
+  color: var(--color-brand);
+}
+
+.msrd a:hover,
+.msrd a:focus {
+  color: var(--color-interactive-focus);
+}
+
+.msrd a:hover {
+  text-decoration: underline;
+}
+
+.msrd a:focus {
+  text-decoration: none;
+}
+
+.msrd a:active {
+  color: var(--color-interactive-active);
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd {
+    background-color: var(--color-background-inverted);
+    color: var(--color-text-inverted);
+  }
+
+  .msrd a {
+    color: var(--color-interactive-inverted);
+  }
+
+  .msrd a:visited {
+    color: var(--color-brand-inverted);
+  }
+
+  .msrd a:hover,
+  .msrd a:focus {
+    color: var(--color-interactive-inverted-focus);
+  }
+
+  .msrd a:active {
+    color: var(--color-interactive-inverted-active);
+  }
+}
