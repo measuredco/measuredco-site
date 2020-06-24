@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>Measured Co.</title>
+    <meta name="description" content="We turn brands into design systems." />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <meta name="description" content="We turn brands into Design Systems." />
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="system.css" />
@@ -46,28 +46,13 @@
        */
 
       .msrd header {
+        border-top: var(--space-vertical-02) solid var(--color-brand);
+        left: 0;
+        padding: var(--space-vertical-02) var(--space-horizontal)
+          var(--space-vertical-03);
         position: absolute;
-        left: 0;
-        top: 0;
         right: 0;
-      }
-
-      .msrd .bar {
-        background: var(--color-brand);
-        height: 0.375rem;
-      }
-
-      .msrd .logo {
-        font-feature-settings: "cpsp", "cv06", "cv11";
-        font-size: 1.75rem;
-        font-variation-settings: "wght" 725;
-        font-weight: 700;
-        left: 0;
-        letter-spacing: -0.022em;
-        margin: env(safe-area-inset-top) env(safe-area-inset-right)
-          env(safe-area-inset-bottom) env(safe-area-inset-left);
-        padding: 0.375rem 1rem;
-        white-space: nowrap;
+        top: 0;
       }
 
       .msrd main {
@@ -77,57 +62,67 @@
         flex-grow: 1;
         flex-shrink: 0;
         justify-content: center;
-        padding: 4.5rem 1rem;
+        padding: var(--space-vertical-08) var(--space-horizontal);
       }
 
       .msrd section {
         max-width: 43rem;
       }
 
-      .msrd h1 {
-        font-size: clamp(1rem, 13.125vw, 4.5625rem);
+      .msrd .logotype {
+        font-feature-settings: var(--font-feature-settings-logotype);
+        font-size: var(--font-06-size);
         font-variation-settings: "wght" 725;
         font-weight: 700;
-        letter-spacing: -0.022em;
-        line-height: 1.150684932;
-        margin-bottom: 0;
-        margin-top: 0px;
-      }
-
-      .msrd p {
-        font-size: clamp(1rem, 6.5625vw, 1.75rem);
-        font-variation-settings: "wght" 325;
-        font-weight: 300;
-        letter-spacing: -0.0195em;
-        line-height: 1.285714286;
-        margin-bottom: 0;
-        margin-top: 0;
-      }
-
-      .msrd .mailto {
-        font-variation-settings: "wght" 325;
+        height: var(--space-vertical-05);
+        left: 0;
+        letter-spacing: var(--font-06-letter-spacing);
+        line-height: var(--space-vertical-05);
+        margin: env(safe-area-inset-top) env(safe-area-inset-right)
+          env(safe-area-inset-bottom) env(safe-area-inset-left);
+        padding-bottom: var(--space-vertical-01);
+        padding-top: var(--space-vertical-01);
         white-space: nowrap;
       }
 
-      .msrd .u-spacing {
-        margin-bottom: clamp(0.75rem, 3.75vw, 1.5rem);
+      .msrd .strapline {
+        font-size: var(--font-9-size); /* fallback */
+        font-size: clamp(var(--font-size), 13.125vw, var(--font-13-size));
+        font-variation-settings: "wght" 725;
+        font-weight: 700;
+        letter-spacing: var(--font-13-letter-spacing);
+        line-height: var(--font-13-line-height);
+        margin-bottom: clamp(
+          var(--space-vertical-03),
+          3.75vw,
+          var(--space-vertical-04)
+        );
+        margin-top: 0;
+      }
+
+      .msrd .call-to-action {
+        font-size: var(--font-4-size); /* fallback */
+        font-size: clamp(var(--font-size), 6.5625vw, var(--font-06-size));
+        font-variation-settings: "wght" 325;
+        font-weight: 300;
+        letter-spacing: var(--font-06-letter-spacing);
+        line-height: var(--font-06-line-height);
+        margin-bottom: 0;
+        margin-top: 0;
+        white-space: nowrap;
       }
     </style>
   </head>
   <body>
     <div class="wrapper msrd">
       <header>
-        <div class="bar"></div>
-        <div class="logo">Measured Co.</div>
+        <div class="logotype">Measured Co.</div>
       </header>
       <main>
         <section>
-          <h1>We turn brands into design systems.</h1>
-          <div class="u-spacing"></div>
-          <p>
-            <a class="mailto" href="mailto:hello@measured.co">
-              hello@measured.co
-            </a>
+          <h1 class="strapline">We turn brands into design systems.</h1>
+          <p class="call-to-action">
+            <a href="mailto:hello@measured.co">hello@measured.co</a>
           </p>
         </section>
       </main>
