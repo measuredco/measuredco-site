@@ -81,6 +81,7 @@
    * Space scales
    */
 
+   /* Vertical space derived from base font-size of 16 & base leading of 1.5. */
   --space-scale-vertical: 24;
 
   --space-scale-vertical-01: calc(var(--space-scale-vertical) * 0.125);
@@ -95,6 +96,7 @@
   --space-scale-vertical-10: calc(var(--space-scale-vertical) * 4);
   --space-scale-vertical-11: calc(var(--space-scale-vertical) * 4.5);
 
+  /* Horizontal space derived from base font-size of 16. */
   --space-scale-horizontal: 16;
 
   --space-scale-horizontal-01: calc(var(--space-scale-horizontal) * 0.125);
@@ -142,21 +144,30 @@
   --type-scale-14: 84;
   --type-scale-15: 96;
 
-  --letter-spacing-scale-01: -0.006223544263;
-  --letter-spacing-scale-02: -0.01095977856;
-  --letter-spacing-scale-03: -0.0143006857;
-  --letter-spacing-scale-04: -0.01756085933;
-  --letter-spacing-scale-05: -0.01949232757;
-  --letter-spacing-scale-06: -0.02090295984;
-  --letter-spacing-scale-07: -0.0216048615;
-  --letter-spacing-scale-08: -0.02195411336;
-  --letter-spacing-scale-09: -0.02217859754;
-  --letter-spacing-scale-10: -0.02225738906;
-  --letter-spacing-scale-11: -0.02228743882;
-  --letter-spacing-scale-12: -0.02229689004;
-  --letter-spacing-scale-13: -0.02229945686;
-  --letter-spacing-scale-14: -0.02229992033;
-  --letter-spacing-scale-15: -0.02229999019;
+  /*
+   * Tracking calculated with Inter Dynamic Metrics.
+   *
+   * https://rsms.me/inter/dynmetrics/
+   *
+   * -0.0223 + 0.185 * Math.pow(Math.e, -0.1745 * --type-scale-xx)
+   *
+   */
+
+  --tracking-scale-01: -0.006223544263;
+  --tracking-scale-02: -0.01095977856;
+  --tracking-scale-03: -0.0143006857;
+  --tracking-scale-04: -0.01756085933;
+  --tracking-scale-05: -0.01949232757;
+  --tracking-scale-06: -0.02090295984;
+  --tracking-scale-07: -0.0216048615;
+  --tracking-scale-08: -0.02195411336;
+  --tracking-scale-09: -0.02217859754;
+  --tracking-scale-10: -0.02225738906;
+  --tracking-scale-11: -0.02228743882;
+  --tracking-scale-12: -0.02229689004;
+  --tracking-scale-13: -0.02229945686;
+  --tracking-scale-14: -0.02229992033;
+  --tracking-scale-15: -0.02229999019;
 
   /*
    * Color tokens
@@ -242,23 +253,23 @@
   --font-14: var(--font-14-size) / var(--font-14-line-height) var(--font-family);
   --font-15: var(--font-15-size) / var(--font-15-line-height) var(--font-family);
 
-  --letter-spacing: calc(var(--letter-spacing-scale-02) * 1em);
+  --letter-spacing: calc(var(--tracking-scale-02) * 1em);
 
-  --font-01-letter-spacing: calc(var(--letter-spacing-scale-01) * 1em);
-  --font-02-letter-spacing: calc(var(--letter-spacing-scale-02) * 1em);
-  --font-03-letter-spacing: calc(var(--letter-spacing-scale-03) * 1em);
-  --font-04-letter-spacing: calc(var(--letter-spacing-scale-04) * 1em);
-  --font-05-letter-spacing: calc(var(--letter-spacing-scale-05) * 1em);
-  --font-06-letter-spacing: calc(var(--letter-spacing-scale-06) * 1em);
-  --font-07-letter-spacing: calc(var(--letter-spacing-scale-07) * 1em);
-  --font-08-letter-spacing: calc(var(--letter-spacing-scale-08) * 1em);
-  --font-09-letter-spacing: calc(var(--letter-spacing-scale-09) * 1em);
-  --font-10-letter-spacing: calc(var(--letter-spacing-scale-10) * 1em);
-  --font-11-letter-spacing: calc(var(--letter-spacing-scale-11) * 1em);
-  --font-12-letter-spacing: calc(var(--letter-spacing-scale-12) * 1em);
-  --font-13-letter-spacing: calc(var(--letter-spacing-scale-13) * 1em);
-  --font-14-letter-spacing: calc(var(--letter-spacing-scale-14) * 1em);
-  --font-15-letter-spacing: calc(var(--letter-spacing-scale-15) * 1em);
+  --font-01-letter-spacing: calc(var(--tracking-scale-01) * 1em);
+  --font-02-letter-spacing: calc(var(--tracking-scale-02) * 1em);
+  --font-03-letter-spacing: calc(var(--tracking-scale-03) * 1em);
+  --font-04-letter-spacing: calc(var(--tracking-scale-04) * 1em);
+  --font-05-letter-spacing: calc(var(--tracking-scale-05) * 1em);
+  --font-06-letter-spacing: calc(var(--tracking-scale-06) * 1em);
+  --font-07-letter-spacing: calc(var(--tracking-scale-07) * 1em);
+  --font-08-letter-spacing: calc(var(--tracking-scale-08) * 1em);
+  --font-09-letter-spacing: calc(var(--tracking-scale-09) * 1em);
+  --font-10-letter-spacing: calc(var(--tracking-scale-10) * 1em);
+  --font-11-letter-spacing: calc(var(--tracking-scale-11) * 1em);
+  --font-12-letter-spacing: calc(var(--tracking-scale-12) * 1em);
+  --font-13-letter-spacing: calc(var(--tracking-scale-13) * 1em);
+  --font-14-letter-spacing: calc(var(--tracking-scale-14) * 1em);
+  --font-15-letter-spacing: calc(var(--tracking-scale-15) * 1em);
 
   --font-feature-settings-logotype: "cpsp", "cv06", "cv11";
 
