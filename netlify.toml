@@ -1,2 +1,12 @@
 [build]
   publish = "src"
+
+[[headers]]
+  for = "/Inter.var.woff2*"
+  [headers.values]
+    cache-control = '''
+    public,
+    notransform,
+    immutable,
+    max-age=31536000,
+    '''
