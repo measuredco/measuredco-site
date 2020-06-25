@@ -86,30 +86,58 @@
       }
 
       .msrd .strapline {
-        font-size: var(--font-9-size); /* fallback */
-        font-size: clamp(var(--font-size), 13.125vw, var(--font-13-size));
+        font: var(--font-09);
         font-variation-settings: "wght" 725;
         font-weight: 700;
-        letter-spacing: var(--font-13-letter-spacing);
-        line-height: var(--font-13-line-height);
-        margin-bottom: clamp(
-          var(--space-vertical-03),
-          3.75vw,
-          var(--space-vertical-04)
-        );
+        letter-spacing: var(--font-09-letter-spacing);
+        margin-bottom: var(--space-vertical-04);
         margin-top: 0;
       }
 
+      @media (min-width: 35em) {
+        .msrd .strapline {
+          font: var(--font-11);
+          font-variation-settings: "wght" 725;
+          font-weight: 700;
+          letter-spacing: var(--font-11-letter-spacing);
+        }
+      }
+
+      @media (min-width: 48em) {
+        .msrd .strapline {
+          font: var(--font-13);
+          font-variation-settings: "wght" 725;
+          font-weight: 700;
+          letter-spacing: var(--font-13-letter-spacing);
+        }
+      }
+
       .msrd .call-to-action {
-        font-size: var(--font-4-size); /* fallback */
-        font-size: clamp(var(--font-size), 6.5625vw, var(--font-06-size));
+        font: var(--font-04);
         font-variation-settings: "wght" 325;
         font-weight: 300;
-        letter-spacing: var(--font-06-letter-spacing);
-        line-height: var(--font-06-line-height);
+        letter-spacing: var(--font-04-letter-spacing);
         margin-bottom: 0;
         margin-top: 0;
         white-space: nowrap;
+      }
+
+      @media (min-width: 35em) {
+        .msrd .call-to-action {
+          font: var(--font-05);
+          font-variation-settings: "wght" 325;
+          font-weight: 300;
+          letter-spacing: var(--font-05-letter-spacing);
+        }
+      }
+
+      @media (min-width: 48em) {
+        .msrd .call-to-action {
+          font: var(--font-06);
+          font-variation-settings: "wght" 325;
+          font-weight: 300;
+          letter-spacing: var(--font-06-letter-spacing);
+        }
       }
     </style>
   </head>

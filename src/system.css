@@ -227,9 +227,9 @@
   --font-06-line-height: calc(var(--leading-scale-02) / var(--type-scale-06));
   --font-07-line-height: calc(var(--leading-scale-03) / var(--type-scale-07));
   --font-08-line-height: calc(var(--leading-scale-03) / var(--type-scale-08));
-  --font-09-line-height: calc(var(--leading-scale-04) / var(--type-scale-09));
+  --font-09-line-height: calc(var(--leading-scale-03) / var(--type-scale-09));
   --font-10-line-height: calc(var(--leading-scale-04) / var(--type-scale-10));
-  --font-11-line-height: calc(var(--leading-scale-05) / var(--type-scale-11));
+  --font-11-line-height: calc(var(--leading-scale-04) / var(--type-scale-11));
   --font-12-line-height: calc(var(--leading-scale-05) / var(--type-scale-12));
   --font-13-line-height: calc(var(--leading-scale-06) / var(--type-scale-13));
   --font-14-line-height: calc(var(--leading-scale-07) / var(--type-scale-14));
