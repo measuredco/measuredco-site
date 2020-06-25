@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@netlify/plugin-lighthouse": "^1.2.1"
+  }
+}
