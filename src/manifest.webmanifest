@@ -1,0 +1,21 @@
+{
+  "name": "Measured Co.",
+  "short_name": "Measured Co.",
+  "description": "We turn brands into design systems.",
+  "start_url": "/?source=pwa",
+  "background_color": "#ffffff",
+  "theme_color": "#a81a66",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "150x150",
+      "type": "image/svg+xml"
+    }
+  ]
+}
