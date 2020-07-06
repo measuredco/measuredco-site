@@ -62,24 +62,14 @@
         flex-grow: 1;
         flex-shrink: 0;
         justify-content: center;
-        margin-top: 5.25rem;
+        margin-top: 9rem;
+        margin-top: min((25vh - 3rem), 9rem);
         padding: var(--space-vertical-08) var(--space-horizontal);
       }
 
-      @media (min-width: 48em) {
-        .msrd main {
-          margin-top: 6.75rem;
-        }
-      }
-
       .msrd section {
-        max-width: 43rem;
-      }
-
-      @media (min-width: 48em) {
-        .msrd section {
-          max-width: 48rem;
-        }
+        max-width: 64rem;
+        width: 100%;
       }
 
       .msrd .logotype {
@@ -105,6 +95,7 @@
         letter-spacing: var(--font-09-letter-spacing);
         margin-bottom: var(--space-vertical-02);
         margin-top: 0;
+        max-width: 12em;
       }
 
       @media (min-width: 35em) {
@@ -117,7 +108,7 @@
         }
       }
 
-      @media (min-width: 48em) {
+      @media (min-width: 49.5em) {
         .msrd .strapline {
           font: var(--font-13);
           font-variation-settings: "wght" 725;
@@ -132,7 +123,7 @@
         font-variation-settings: "wght" 325;
         font-weight: 300;
         letter-spacing: var(--font-04-letter-spacing);
-        margin-bottom: var(--space-vertical-06);
+        margin-bottom: var(--space-vertical-09);
         margin-top: 0;
         white-space: nowrap;
       }
@@ -143,17 +134,17 @@
           font-variation-settings: "wght" 325;
           font-weight: 300;
           letter-spacing: var(--font-05-letter-spacing);
-          margin-bottom: var(--space-vertical-07);
+          margin-bottom: var(--space-vertical-10);
         }
       }
 
-      @media (min-width: 48em) {
+      @media (min-width: 49.5em) {
         .msrd .call-to-action {
           font: var(--font-06);
           font-variation-settings: "wght" 325;
           font-weight: 300;
           letter-spacing: var(--font-06-letter-spacing);
-          margin-bottom: var(--space-vertical-08);
+          margin-bottom: var(--space-vertical-11);
         }
       }
 
@@ -169,6 +160,12 @@
         margin-right: calc(var(--space-horizontal-04) * -1);
         margin-top: 0;
         padding-left: 0;
+      }
+
+      @media (min-width: 35em) {
+        .msrd .logos {
+          justify-content: space-between;
+        }
       }
 
       @media (prefers-color-scheme: dark) {
@@ -187,7 +184,7 @@
         margin-right: var(--space-horizontal-04);
       }
 
-      @media (min-width: 48em) {
+      @media (min-width: 49.5em) {
         .msrd .logo {
           height: var(--space-vertical-05);
         }
