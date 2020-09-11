@@ -126,6 +126,12 @@
   --leading-scale-07: var(--space-scale-vertical-10);
   --leading-scale-08: var(--space-scale-vertical-11);
 
+  /*
+   * Classic typographic scale, mathematically corrected.
+   *
+   * https://spencermortensen.com/articles/typographic-scale/
+   */
+
   --type-scale: 16;
 
   --type-scale-01: 14;
