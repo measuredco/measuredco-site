@@ -72,6 +72,17 @@
         width: 100%;
       }
 
+      .msrd footer {
+        background-color: var(--color-background);
+        padding: var(--space-vertical-03) var(--space-horizontal);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .msrd footer {
+          background-color: var(--color-background-inverted);
+        }
+      }
+
       .msrd .logotype {
         font-feature-settings: var(--font-feature-settings-logotype);
         font-size: var(--font-06-size);
@@ -201,9 +212,21 @@
         display: block;
         height: 100%;
       }
+
+      .msrd .legal {
+        color: var(--color-text-muted);
+        display: block;
+        font: var(--font-01);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .msrd .legal {
+          color: var(--color-text-inverted-muted);
+        }
+      }
     </style>
   </head>
-  <body>
+  <body class="msrd">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -217,7 +240,7 @@
         ]
       }
     </script>
-    <div class="wrapper msrd">
+    <div class="wrapper">
       <header>
         <div class="logotype">Measured Co.</div>
       </header>
@@ -328,5 +351,12 @@
         </section>
       </main>
     </div>
+    <footer>
+      <small class="legal">
+        Measured Co. is the trading name of Measured Corporation Limited,
+        registered in England and Wales under company number 12932902, at 86–90
+        Paul Street, London, EC2A 4NE.
+      </small>
+    </footer>
   </body>
 </html>
