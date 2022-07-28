@@ -12,6 +12,9 @@
     '''
 
 [[plugins]]
+package = "netlify-plugin-no-more-404"
+
+[[plugins]]
 package = "@netlify/plugin-lighthouse"
   [plugins.inputs.thresholds]
     performance = 0.9
