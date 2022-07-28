@@ -19,3 +19,6 @@ package = "@netlify/plugin-lighthouse"
     best-practices = 0.9
     seo = 0.9
     pwa = 0.0 # We could bump this up if we support PWA in future
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
