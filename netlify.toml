@@ -8,8 +8,7 @@
     public,
     notransform,
     immutable,
-    max-age=31536000,
-    '''
+    max-age=31536000'''
 
 [[plugins]]
 package = "netlify-plugin-no-more-404"
