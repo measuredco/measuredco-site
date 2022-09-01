@@ -21,6 +21,9 @@ package = "netlify-plugin-checklinks"
   ]
 
 [[plugins]]
+package = "@netlify/plugin-sitemap"
+
+[[plugins]]
 package = "@netlify/plugin-lighthouse"
   [plugins.inputs.thresholds]
     performance = 0.9
@@ -31,6 +34,3 @@ package = "@netlify/plugin-lighthouse"
 
   [plugins.inputs]
     output_path = "lighthouse/index.html"
-
-[[plugins]]
-package = "@netlify/plugin-sitemap"
