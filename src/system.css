@@ -279,8 +279,6 @@
   --font-14-letter-spacing: calc(var(--tracking-scale-14) * 1em);
   --font-15-letter-spacing: calc(var(--tracking-scale-15) * 1em);
 
-  --font-feature-settings-logotype: "cpsp", "cv06", "cv11";
-
   /*
    * Space tokens
    */
