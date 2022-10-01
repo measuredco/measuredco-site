@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@netlify/plugin-lighthouse": "^3.1.0",
+    "@netlify/plugin-lighthouse": "^3.6.0",
     "@netlify/plugin-sitemap": "^0.8.1",
     "netlify-plugin-checklinks": "^4.1.1",
     "netlify-plugin-no-more-404": "^0.0.15"
