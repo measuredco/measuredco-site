@@ -4,6 +4,16 @@
 [[headers]]
   for = "/*"
   [headers.values]
+    Content-Security-Policy = """
+    frame-ancestors 'none';
+    base-uri 'none';
+    default-src 'self';
+    connect-src https://plausible.io;
+    img-src 'self';
+    object-src 'none';
+    script-src https://plausible.io/js/plausible.js;
+    style-src 'self' 'unsafe-inline';
+    """
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
 
