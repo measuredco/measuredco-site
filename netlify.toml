@@ -11,26 +11,25 @@
     max-age=31536000'''
 
 [[plugins]]
-package = "netlify-plugin-no-more-404"
+  package = "netlify-plugin-no-more-404"
 
 [[plugins]]
-package = "netlify-plugin-checklinks"
+  package = "netlify-plugin-checklinks"
   [plugins.inputs]
-  entryPoints = [
+    entryPoints = [
     "*.html",
   ]
 
 [[plugins]]
-package = "@netlify/plugin-sitemap"
+  package = "@netlify/plugin-sitemap"
 
 [[plugins]]
-package = "@netlify/plugin-lighthouse"
+  package = "@netlify/plugin-lighthouse"
   [plugins.inputs.thresholds]
     performance = 0.9
     accessibility = 0.9
     best-practices = 0.9
     seo = 0.9
     pwa = 0.0 # We could bump this up if we support PWA in future
-
-  [plugins.inputs]
+  [plugins.inputs.audits]
     output_path = "lighthouse/index.html"
