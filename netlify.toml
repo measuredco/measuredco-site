@@ -6,7 +6,7 @@
   [headers.values]
     cache-control = '''
     public,
-    notransform,
+    no-transform,
     immutable,
     max-age=31536000'''
 
