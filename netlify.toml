@@ -1,6 +1,11 @@
+# Explicitly sets publish directory
+# Right now we have no build, so we can just push `src` out
 [build]
   publish = "src"
 
+# Adds Content Security Policy and other security features
+# If your scripts won't run and your images won't load,
+# it's probably because this is locked down pretty tight.
 [[headers]]
   for = "/*"
   [headers.values]
@@ -17,6 +22,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
 
+# Helps prevent some very noticeable FOUT on repeat visits
 [[headers]]
   for = "/Inter.var.woff2*"
   [headers.values]
@@ -26,9 +32,13 @@
     immutable,
     max-age=31536000'''
 
+# Warns if we remove a file, breaking an internal link
+# https://github.com/sw-yx/netlify-plugin-no-more-404
 [[plugins]]
   package = "netlify-plugin-no-more-404"
 
+# Reports on broken links, fragments, redirect chains etc
+# https://github.com/munter/netlify-plugin-checklinks
 [[plugins]]
   package = "netlify-plugin-checklinks"
   [plugins.inputs]
@@ -36,9 +46,13 @@
     "*.html",
   ]
 
+# Builds `/sitemap.xml`
+# https://github.com/netlify-labs/netlify-plugin-sitemap
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
+# Runs Lighthouse on PRs, shouts if we fall under any thresholds
+# https://github.com/netlify/netlify-plugin-lighthouse
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
   [plugins.inputs.thresholds]
