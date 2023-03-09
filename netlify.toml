@@ -2,6 +2,11 @@
   publish = "src"
 
 [[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
   for = "/Inter.var.woff2*"
   [headers.values]
     cache-control = '''
