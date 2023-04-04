@@ -1,0 +1,29 @@
+@import 'components/Base.css';
+@import 'components/Footer.css';
+@import 'components/Header/Header.css';
+@import 'components/Heading.css';
+@import 'components/Section.css';
+@import 'components/Space.css';
+@import 'system.css';
+
+/*
+ * Page styles
+ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/*
+ * Temp
+ */
+
+ main ul, main ol, main p, main blockquote {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

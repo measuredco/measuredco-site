@@ -1,0 +1,43 @@
+.msrd .msrd-Footer {
+  padding-left: var(--space-horizontal);
+  padding-right: var(--space-horizontal);
+}
+
+.msrd .msrd-Footer-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--section-max-width);
+}
+
+.msrd .msrd-Footer ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.msrd .msrd-Footer small {
+  display: block;
+  font: var(--font-01);
+  letter-spacing: var(--font-01-letter-spacing);
+}
+
+.msrd .msrd-Footer-textWithIcon {
+  align-items: center;
+  display: flex;
+  gap: var(--space-horizontal-02);
+}
+
+.msrd .msrd-Footer-linkIcon {
+  color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Footer-linkIcon {
+    color: var(--color-text-inverted);
+  }
+}
+
+.msrd .msrd-Footer-logoLink {
+  color: inherit;
+}

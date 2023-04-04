@@ -1,0 +1,111 @@
+@import 'components/Menu.css';
+@import 'components/MenuButton.css';
+
+html {
+  scroll-padding-top: var(--space-vertical-10);
+}
+
+@media (min-width: 48em) {
+  html {
+    scroll-padding-top: var(--space-vertical-12);
+  }
+}
+
+.msrd .msrd-Header {
+  background-color: var(--color-background);
+  padding: var(--space-vertical-03) var(--space-horizontal);
+  position: sticky;
+  top: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Header {
+    background-color: var(--color-background-inverted);
+  }
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Header {
+    padding: var(--space-vertical-04) var(--space-horizontal);
+  }
+}
+
+.msrd .msrd-Header:after {
+  border-bottom: 0.0625rem solid currentColor;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.msrd .msrd-Header-inner {
+  align-items: center;
+  border-bottom: 0.125rem solid transparent;
+  border-top: 0.125rem solid transparent;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--section-max-width);
+  width: 100%;
+}
+
+.msrd .msrd-Header-logo {
+  margin: 0;
+}
+.msrd .msrd-Header-navItems {
+  font-size: var(--font-05-size);
+  letter-spacing: var(--font-05-letter-spacing);
+  line-height: var(--font-05-line-height);
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Header-navItems {
+    align-items: center;
+    display: flex;
+    font-size: var(--font-size);
+    gap: var(--space-horizontal-07);
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height);
+  }
+}
+
+.msrd .msrd-Header-link {
+  color: inherit;
+}
+
+.msrd .msrd-Header-callToAction {
+  color: var(--color-brand);
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Header-callToAction {
+    color: var(--color-brand-inverted);
+  }
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Header-callToAction {
+    align-items: center;
+    background-color: var(--color-brand);
+    border-radius: 1.3125rem;
+    color: var(--color-text-inverted);
+    display: flex;
+    font-weight: 600;
+    height: 2.75rem;
+    padding: 0 var(--space-horizontal-07);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .msrd .msrd-Header-callToAction,
+    .msrd .msrd-Header-callToAction:visited {
+      background-color: var(--color-brand-inverted);
+      color: var(--color-text);
+    }
+  }
+}

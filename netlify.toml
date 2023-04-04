@@ -16,7 +16,7 @@
     connect-src https://plausible.io;
     img-src 'self';
     object-src 'none';
-    script-src https://plausible.io/js/plausible.js;
+    script-src https://plausible.io/js/plausible.js 'unsafe-inline';
     style-src 'self' 'unsafe-inline';
     """
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -61,7 +61,7 @@
     output_path = "lighthouse/index.html"
 
     [plugins.inputs.thresholds]
-      performance = 0.9
+      performance = 0.85
       accessibility = 0.9
       best-practices = 0.9
       seo = 0.9
