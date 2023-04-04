@@ -1,8 +1,32 @@
 {
+  "name": "measuredco-site",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "NODE_ENV=development npm-run-all clean --parallel dev:*",
+    "dev:postcss": "postcss src/styles.css -o dist/styles.css --config ./postcss.config.js --watch",
+    "dev:eleventy": "ELEVENTY_ENV=development eleventy --incremental --quiet --serve",
+    "build": "NODE_ENV=production npm-run-all clean --parallel prod:*",
+    "prod:postcss": "postcss src/styles.css -o dist/styles.css --config ./postcss.config.js",
+    "prod:eleventy": "ELEVENTY_ENV=production eleventy --output=./dist"
+  },
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "@netlify/plugin-lighthouse": "^4.1.1",
     "@netlify/plugin-sitemap": "^0.8.1",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.0",
     "netlify-plugin-checklinks": "^4.1.1",
-    "netlify-plugin-no-more-404": "^0.0.15"
-  }
+    "netlify-plugin-no-more-404": "^0.0.15",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.22",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "rimraf": "^5.0.0"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "defaults"
+  ]
 }
