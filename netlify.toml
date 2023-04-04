@@ -55,11 +55,12 @@
 # https://github.com/netlify/netlify-plugin-lighthouse
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
-  [plugins.inputs.thresholds]
-    performance = 0.9
-    accessibility = 0.9
-    best-practices = 0.9
-    seo = 0.9
-    pwa = 0.0 # We could bump this up if we support PWA in future
-  [plugins.inputs.audits]
+  [[plugins.inputs.audits]]
     output_path = "lighthouse/index.html"
+
+    [plugins.inputs.thresholds]
+      performance = 0.9
+      accessibility = 0.9
+      best-practices = 0.9
+      seo = 0.9
+      pwa = 0.0 # We could bump this up if we support PWA in future
