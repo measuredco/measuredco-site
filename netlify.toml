@@ -48,20 +48,6 @@
     immutable,
     max-age=31536000'''
 
-# Warns if we remove a file, breaking an internal link
-# https://github.com/sw-yx/netlify-plugin-no-more-404
-[[plugins]]
-  package = "netlify-plugin-no-more-404"
-
-# Reports on broken links, fragments, redirect chains etc
-# https://github.com/munter/netlify-plugin-checklinks
-[[plugins]]
-  package = "netlify-plugin-checklinks"
-  [plugins.inputs]
-    entryPoints = [
-    "*.html",
-  ]
-
 # Builds `/sitemap.xml`
 # https://github.com/netlify-labs/netlify-plugin-sitemap
 [[plugins]]
@@ -80,3 +66,17 @@
       best-practices = 0.9
       seo = 0.9
       pwa = 0.0 # We could bump this up if we support PWA in future
+
+# Warns if we remove a file, breaking an internal link
+# https://github.com/sw-yx/netlify-plugin-no-more-404
+[[plugins]]
+  package = "netlify-plugin-no-more-404"
+
+# Reports on broken links, fragments, redirect chains etc
+# https://github.com/munter/netlify-plugin-checklinks
+[[plugins]]
+  package = "netlify-plugin-checklinks"
+  [plugins.inputs]
+    entryPoints = [
+    "*.html",
+  ]
