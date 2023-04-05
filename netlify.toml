@@ -80,3 +80,7 @@
     entryPoints = [
     "sitemap.xml",
     ]
+
+    todoPatterns = [
+      "lighthouse/"
+    ]
