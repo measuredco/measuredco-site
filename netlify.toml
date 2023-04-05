@@ -78,5 +78,5 @@
   package = "netlify-plugin-checklinks"
   [plugins.inputs]
     entryPoints = [
-    "*.html",
-  ]
+    "sitemap.xml",
+    ]
