@@ -1,7 +1,8 @@
 # Explicitly sets publish directory
 # Right now we have no build, so we can just push `src` out
 [build]
-  publish = "src"
+  command = "yarn build"
+  publish = "dist"
 
 # Adds Content Security Policy and other security features
 # If your scripts won't run and your images won't load,
