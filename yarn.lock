@@ -74,10 +74,10 @@
   dependencies:
     pause-stream "0.0.11"
 
-"@netlify/plugin-lighthouse@^4.0.7":
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-lighthouse/-/plugin-lighthouse-4.0.7.tgz#c4a3f966cbb71f167e9b004e0ef1672afedcd5f9"
-  integrity sha512-J9oPEJ3/7KcWDGaHuxngSYzyiVR21DKEJ8AmfZs/G2nzG+4fXpLpWsJT/SyKj+tgD8DUxNjffZlCcZZPxIu6Vg==
+"@netlify/plugin-lighthouse@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-lighthouse/-/plugin-lighthouse-4.1.1.tgz#bccb77b829328467b8137e185a346bd8294ca5eb"
+  integrity sha512-eFNzOBOkmNpN9oBro7PSYim/eGZNUJDfV4lJf32HcA2lCzv2fmuZECid7BlfAY3B1KGFh7oT66Z2Pa/OUVbnJw==
   dependencies:
     chalk "^4.1.0"
     chrome-launcher "^0.15.0"
