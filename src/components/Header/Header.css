@@ -1,8 +1,8 @@
-@import 'components/Menu.css';
-@import 'components/MenuButton.css';
+@import "components/Menu.css";
+@import "components/MenuButton.css";
 
 html {
-  scroll-padding-top: var(--space-vertical-10);
+  scroll-padding-top: var(--space-vertical-11);
 }
 
 @media (min-width: 48em) {
@@ -31,12 +31,23 @@ html {
 }
 
 .msrd .msrd-Header:after {
-  border-bottom: 0.0625rem solid currentColor;
+  border-bottom: 0.0625rem solid transparent;
   bottom: 0;
   content: "";
   left: 0;
   position: absolute;
   right: 0;
+}
+
+.msrd .msrd-Header--windowScrolled:after {
+  border-bottom-color: var(--color-grey-8);
+  transition: border-bottom-color 0.25s var(--easing-cubic-bezier-easy-ease);
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Header--windowScrolled:after {
+    border-bottom-color: var(--color-grey-2);
+  }
 }
 
 .msrd .msrd-Header-inner {

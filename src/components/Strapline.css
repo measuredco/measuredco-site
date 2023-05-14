@@ -1,0 +1,18 @@
+.msrd .msrd-Strapline {
+  font: var(--font-09);
+  font-weight: 450;
+  letter-spacing: var(--font-09-letter-spacing);
+  margin-bottom: var(--space-vertical-06);
+  margin-top: var(--space-vertical-03);
+  text-wrap: balance;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Strapline {
+    font: var(--font-14);
+    font-weight: 450;
+    letter-spacing: var(--font-14-letter-spacing);
+    margin-bottom: 60px;
+    margin-top: var(--space-vertical);
+  }
+}

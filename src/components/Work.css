@@ -1,0 +1,103 @@
+.msrd .msrd-Work {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.msrd .msrd-Work li {
+  margin-bottom: var(--space-vertical-07);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Work li {
+    display: grid;
+    gap: var(--space-vertical) var(--space-horizontal);
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.msrd .msrd-Work-client {
+  background-color: var(--color-grey-9);
+  border-bottom-left-radius: 0.5625rem;
+  border-top-left-radius: 0.5625rem;
+  color: var(--color-brand);
+  font: var(--font-05);
+  font-weight: normal;
+  letter-spacing: var(--font-05-letter-spacing);
+  margin-bottom: var(--space-vertical-03);
+  margin-right: calc(0px - var(--space-horizontal));
+  margin-top: 0;
+  padding: var(--space-vertical-02) var(--space-horizontal);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Work-client {
+    border-radius: 0.5625rem;
+    display: inline-block;
+    margin-right: 0;
+    padding-bottom: var(--space-vertical-01);
+    padding-top: var(--space-vertical-01);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Work-client {
+    background-color: var(--color-grey-1);
+    color: var(--color-brand-inverted);
+  }
+}
+
+.msrd .msrd-Work-project {
+  font: var(--font-05);
+  letter-spacing: var(--font-05-letter-spacing);
+  margin-bottom: var(--space-vertical-02);
+  margin-left: var(--space-horizontal);
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Work-project {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .msrd .msrd-Work-project {
+    font: var(--font-07);
+    letter-spacing: var(--font-07-letter-spacing);
+  }
+}
+
+.msrd .msrd-Work-url {
+  font: var(--font-04);
+  letter-spacing: var(--font-04-letter-spacing);
+  margin-bottom: var(--space-vertical);
+  margin-left: var(--space-horizontal);
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Work-url {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .msrd .msrd-Work-url {
+    font: var(--font-05);
+    letter-spacing: var(--font-05-letter-spacing);
+  }
+}
+
+
+.msrd .msrd-Work-image {
+  margin-left: var(--space-horizontal);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Work-image {
+    margin-left: 0;
+  }
+}

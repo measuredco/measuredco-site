@@ -1,12 +1,23 @@
 .msrd .msrd-Footer {
-  padding-left: var(--space-horizontal);
-  padding-right: var(--space-horizontal);
+  background: var(--color-grey-9);
+  padding: var(--space-vertical-06) var(--space-horizontal);
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Footer {
+    background: var(--color-grey-1);
+  }
 }
 
 .msrd .msrd-Footer-inner {
   margin-left: auto;
   margin-right: auto;
   max-width: var(--section-max-width);
+}
+
+.msrd .msrd-Footer p {
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .msrd .msrd-Footer ul {
@@ -24,8 +35,8 @@
 
 .msrd .msrd-Footer-textWithIcon {
   align-items: center;
-  display: flex;
-  gap: var(--space-horizontal-02);
+  display: inline-flex;
+  gap: var(--space-horizontal-03);
 }
 
 .msrd .msrd-Footer-linkIcon {
@@ -40,4 +51,5 @@
 
 .msrd .msrd-Footer-logoLink {
   color: inherit;
+  display: inline-block;
 }

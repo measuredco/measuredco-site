@@ -1,10 +1,17 @@
-@import 'components/Base.css';
-@import 'components/Footer.css';
-@import 'components/Header/Header.css';
-@import 'components/Heading.css';
-@import 'components/Section.css';
-@import 'components/Space.css';
-@import 'system.css';
+@import "components/Artifact.css";
+@import "components/Base.css";
+@import "components/Cards.css";
+@import "components/Contact.css";
+@import "components/Footer.css";
+@import "components/Header/Header.css";
+@import "components/Heading.css";
+@import "components/Logos.css";
+@import "components/Section.css";
+@import "components/Space.css";
+@import "components/Strapline.css";
+@import "components/Technologies.css";
+@import "components/Work.css";
+@import "system.css";
 
 /*
  * Page styles
@@ -16,14 +23,4 @@ html {
 
 body {
   margin: 0;
-}
-
-/*
- * Temp
- */
-
- main ul, main ol, main p, main blockquote {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }

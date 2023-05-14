@@ -26,7 +26,6 @@
 }
 
 .msrd a:not([class]) {
-  color: #0158ad; /* fallback */
   color: var(--color-interactive);
 }
 
@@ -77,7 +76,6 @@
   display: block;
   max-width: 100%;
 }
-
 
 /*
  * Utilities

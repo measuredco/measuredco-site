@@ -1,0 +1,13 @@
+.msrd .msrd-Logos {
+  color: var(--color-text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font: var(--font-01);
+  gap: var(--space-vertical) var(--space-horizontal);
+  justify-content: space-around;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+  text-align: center;
+}
