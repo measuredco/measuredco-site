@@ -25,5 +25,8 @@
     "postcss-import": "^15.1.0",
     "rimraf": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "browserslist": [
+    "defaults"
+  ]
 }
