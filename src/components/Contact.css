@@ -1,13 +1,14 @@
 .msrd .msrd-Contact {
-  background-color: var(--color-grey-9);
   color: var(--color-grey-3);
+  display: flex;
+  gap: var(--space-vertical-03);
   border-radius: 1rem;
-  padding: var(--space-vertical) var(--space-horizontal);
+  flex-direction: column;
 }
 
-@media (min-width: 33em) {
+@media (min-width: 64rem) {
   .msrd .msrd-Contact {
-    padding: var(--space-vertical-06) var(--space-horizontal-09);
+    flex-direction: row;
   }
 }
 
@@ -21,6 +22,7 @@
 .msrd .msrd-Contact-heading {
   color: var(--color-brand);
   font: var(--font-07);
+  font-weight: 700;
   letter-spacing: var(--font-07-letter-spacing);
   margin-bottom: 0;
   margin-top: 0;
@@ -29,7 +31,7 @@
 @media (min-width: 33em) {
   .msrd .msrd-Contact-heading {
     font: var(--font-09);
-    font-weight: 450;
+    font-weight: 700;
     letter-spacing: var(--font-09-letter-spacing);
   }
 }
@@ -72,6 +74,12 @@
   .msrd .msrd-Contact-methods {
     font: var(--font-07);
     letter-spacing: var(--font-07-letter-spacing);
+  }
+}
+
+@media (min-width: 64rem) {
+  .msrd .msrd-Contact-methods {
+    margin-left: auto;
   }
 }
 

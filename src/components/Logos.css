@@ -3,8 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   font: var(--font-01);
-  gap: var(--space-vertical) var(--space-horizontal);
-  justify-content: space-around;
+  gap: var(--space-vertical) var(--space-horizontal-10);
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;

@@ -9,7 +9,7 @@
 }
 
 .msrd .msrd-Cards li {
-  background-color: var(--color-grey-9);
+  border: solid 1px var(--color-grey-8);
   border-radius: 1rem;
   padding: var(--space-vertical-03) var(--space-horizontal)
     var(--space-vertical-05);

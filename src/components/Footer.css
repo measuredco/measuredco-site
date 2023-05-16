@@ -1,5 +1,6 @@
 .msrd .msrd-Footer {
   background: var(--color-grey-9);
+  color: var(--color-grey-3);
   padding: var(--space-vertical-06) var(--space-horizontal);
 }
 
@@ -10,9 +11,17 @@
 }
 
 .msrd .msrd-Footer-inner {
+  display: grid;
+  grid-gap: var(--space-vertical-06);
   margin-left: auto;
   margin-right: auto;
   max-width: var(--section-max-width);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Footer-inner {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .msrd .msrd-Footer p {

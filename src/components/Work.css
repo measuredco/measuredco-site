@@ -6,54 +6,22 @@
 }
 
 .msrd .msrd-Work li {
-  margin-bottom: var(--space-vertical-07);
+  margin-bottom: var(--space-vertical-12);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Work li {
     display: grid;
-    gap: var(--space-vertical) var(--space-horizontal);
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.msrd .msrd-Work-client {
-  background-color: var(--color-grey-9);
-  border-bottom-left-radius: 0.5625rem;
-  border-top-left-radius: 0.5625rem;
-  color: var(--color-brand);
-  font: var(--font-05);
-  font-weight: normal;
-  letter-spacing: var(--font-05-letter-spacing);
-  margin-bottom: var(--space-vertical-03);
-  margin-right: calc(0px - var(--space-horizontal));
-  margin-top: 0;
-  padding: var(--space-vertical-02) var(--space-horizontal);
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-Work-client {
-    border-radius: 0.5625rem;
-    display: inline-block;
-    margin-right: 0;
-    padding-bottom: var(--space-vertical-01);
-    padding-top: var(--space-vertical-01);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .msrd .msrd-Work-client {
-    background-color: var(--color-grey-1);
-    color: var(--color-brand-inverted);
+    gap: var(--space-vertical) var(--space-horizontal-12);
+    grid-template-columns: 5fr 7fr;
   }
 }
 
 .msrd .msrd-Work-project {
-  font: var(--font-05);
-  letter-spacing: var(--font-05-letter-spacing);
-  margin-bottom: var(--space-vertical-02);
-  margin-left: var(--space-horizontal);
-  margin-top: 0;
+  font: var(--font-06);
+  letter-spacing: var(--font-06-letter-spacing);
+  margin-bottom: var(--space-vertical-03);
+  margin-top: var(--space-vertical-02);
 }
 
 @media (min-width: 48em) {
@@ -64,8 +32,8 @@
 
 @media (min-width: 64em) {
   .msrd .msrd-Work-project {
-    font: var(--font-07);
-    letter-spacing: var(--font-07-letter-spacing);
+    font: var(--font-06);
+    letter-spacing: var(--font-06-letter-spacing);
   }
 }
 
@@ -73,7 +41,6 @@
   font: var(--font-04);
   letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: var(--space-vertical);
-  margin-left: var(--space-horizontal);
   margin-top: 0;
 }
 
@@ -86,18 +53,25 @@
 
 @media (min-width: 64em) {
   .msrd .msrd-Work-url {
-    font: var(--font-05);
-    letter-spacing: var(--font-05-letter-spacing);
+    font: var(--font-04);
+    letter-spacing: var(--font-04-letter-spacing);
   }
 }
 
-
 .msrd .msrd-Work-image {
-  margin-left: var(--space-horizontal);
+  box-shadow: 0px 0px 64px rgba(11, 75, 24, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Work-image {
     margin-left: 0;
   }
+}
+
+.msrd .msrd-Work-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
