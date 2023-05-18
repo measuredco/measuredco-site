@@ -85,3 +85,7 @@
     todoPatterns = [
       "lighthouse/"
     ]
+
+# Aggressively subset your fonts to speed up the time to font download!
+[[plugins]]
+  package = "netlify-plugin-subfont"
