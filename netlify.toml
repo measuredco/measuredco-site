@@ -89,3 +89,8 @@
 # Aggressively subset your fonts to speed up the time to font download!
 [[plugins]]
   package = "netlify-plugin-subfont"
+
+  [plugins.inputs]
+    entryPoints = [
+      "index.html",
+    ]
