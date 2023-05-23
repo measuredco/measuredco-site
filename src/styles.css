@@ -1,3 +1,4 @@
+@import "system.css";
 @import "components/Artifact.css";
 @import "components/Base.css";
 @import "components/Cards.css";
@@ -11,7 +12,6 @@
 @import "components/Space.css";
 @import "components/Technologies.css";
 @import "components/Work.css";
-@import "system.css";
 
 /*
  * Page styles
