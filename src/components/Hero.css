@@ -14,7 +14,7 @@
   font: var(--font-09);
   font-weight: 800;
   letter-spacing: var(--font-09-letter-spacing);
-  margin-bottom: var(--space-vertical-04);
+  margin-bottom: var(--space-vertical-03);
   margin-top: 0;
   text-wrap: balance;
 }
@@ -24,6 +24,21 @@
     font: var(--font-14);
     font-weight: 800;
     letter-spacing: var(--font-14-letter-spacing);
+    margin-bottom: var(--space-vertical-05);
+  }
+}
+
+.msrd .msrd-Hero-description {
+  font: var(--font-03);
+  letter-spacing: var(--font-03-letter-spacing);
+  margin-bottom: var(--space-vertical-04);
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Hero-description {
+    font: var(--font-04);
+    letter-spacing: var(--font-04-letter-spacing);
     margin-bottom: 0;
   }
 }
