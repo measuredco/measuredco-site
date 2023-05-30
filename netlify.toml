@@ -14,11 +14,12 @@
     frame-ancestors 'none';
     base-uri 'none';
     default-src 'self';
+    font-src https://fonts.gstatic.com;
     connect-src https://plausible.io;
     img-src 'self' https://res.cloudinary.com;
     object-src 'none';
     script-src https://plausible.io/js/plausible.js 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
+    style-src https://fonts.googleapis.com 'self' 'unsafe-inline';
     """
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
@@ -83,5 +84,7 @@
     ]
 
     todoPatterns = [
-      "lighthouse/"
+      "lighthouse/",
+      "fonts.gstatic.com",
+      "fonts.googleapis.com"
     ]
