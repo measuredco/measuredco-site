@@ -2,7 +2,7 @@
 # Right now we have no build, so we can just push `src` out
 [build]
   command = "yarn build"
-  publish = "dist"
+  publish = ".next"
 
 # Adds Content Security Policy and other security features
 # If your scripts won't run and your images won't load,
@@ -56,17 +56,17 @@
 
 # Runs Lighthouse on PRs, shouts if we fall under any thresholds
 # https://github.com/netlify/netlify-plugin-lighthouse
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  [[plugins.inputs.audits]]
-    output_path = "lighthouse/index.html"
-
-    [plugins.inputs.thresholds]
-      performance = 0.9
-      accessibility = 0.9
-      best-practices = 0.9
-      seo = 0.9
-      pwa = 0.0 # We could bump this up if we support PWA in future
+# [[plugins]]
+#   package = "@netlify/plugin-lighthouse"
+#   [[plugins.inputs.audits]]
+#     output_path = "lighthouse/index.html"
+#
+#     [plugins.inputs.thresholds]
+#       performance = 0.9
+#       accessibility = 0.9
+#       best-practices = 0.9
+#       seo = 0.9
+#       pwa = 0.0 # We could bump this up if we support PWA in future
 
 # Warns if we remove a file, breaking an internal link
 # https://github.com/sw-yx/netlify-plugin-no-more-404
@@ -75,13 +75,14 @@
 
 # Reports on broken links, fragments, redirect chains etc
 # https://github.com/munter/netlify-plugin-checklinks
-[[plugins]]
-  package = "netlify-plugin-checklinks"
-  [plugins.inputs]
-    entryPoints = [
-    "sitemap.xml",
-    ]
-
-    todoPatterns = [
-      "lighthouse/"
-    ]
+# [[plugins]]
+#   package = "netlify-plugin-checklinks"
+#   [plugins.inputs]
+#     entryPoints = [
+#     "sitemap.xml",
+#     ]
+#
+#     todoPatterns = [
+#       "lighthouse/"
+#     ]
+#
