@@ -1,0 +1,5 @@
+# robots.txt for measured.co
+
+User-agent: *
+Disallow /edit/
+Disallow: /lighthouse/

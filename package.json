@@ -1,32 +1,26 @@
 {
-  "name": "measuredco-site",
-  "version": "0.0.1",
-  "license": "UNLICENSED",
-  "scripts": {
-    "clean": "rimraf dist",
-    "start": "NODE_ENV=development npm-run-all clean --parallel dev:*",
-    "dev:postcss": "postcss src/styles.css -o dist/styles.css --config ./postcss.config.js --watch",
-    "dev:eleventy": "ELEVENTY_ENV=development eleventy --incremental --quiet --serve",
-    "build": "NODE_ENV=production npm-run-all clean --parallel prod:*",
-    "prod:postcss": "postcss src/styles.css -o dist/styles.css --config ./postcss.config.js",
-    "prod:eleventy": "ELEVENTY_ENV=production eleventy --output=./dist"
+  "name": "measured",
+  "version": "0.0.2",
+  "private": true,
+  "dependencies": {
+    "@measured/puck": "^0.4.0",
+    "classnames": "^2.3.2",
+    "next": "^13.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@netlify/plugin-lighthouse": "^4.1.1",
-    "@netlify/plugin-sitemap": "^0.8.1",
-    "autoprefixer": "^10.4.14",
-    "cssnano": "^6.0.1",
-    "netlify-plugin-checklinks": "^4.1.1",
-    "netlify-plugin-no-more-404": "^0.0.15",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.24",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "rimraf": "^5.0.1"
+    "@types/node": "^17.0.12",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
   },
-  "dependencies": {},
-  "browserslist": [
-    "defaults"
-  ]
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  }
 }
