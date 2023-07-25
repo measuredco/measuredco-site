@@ -20,10 +20,18 @@ export function Client({
         config={config}
         data={data}
         onPublish={async (data: Data) => {
-          await fetch("/api/puck", {
-            body: JSON.stringify({ [path]: data }),
+          const res = await fetch("/api/puck", {
+            body: JSON.stringify({ path, data }),
             method: "post",
           });
+
+          if (res.status !== 200) {
+            alert(`Error: ${res.statusText} (${res.status})`);
+
+            return;
+          }
+
+          alert("Saved successfully!");
         }}
       />
     );

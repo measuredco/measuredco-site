@@ -5,6 +5,7 @@ import type { Data } from "@measured/puck";
 
 import { Client } from "./client";
 import resolvePuckPath from "./resolve-puck-path";
+import { supabase } from "../../lib/supabase";
 
 export async function generateMetadata({
   params,
@@ -19,21 +20,15 @@ export async function generateMetadata({
     };
   }
 
-  // const data: Data = (
-  //   await fetch(`${process.env.DEPLOY_URL}/api/puck`, {
-  //     next: { revalidate: 0 },
-  //   }).then((d) => d.json())
-  // )[path];
-
-  const dataString = fs.existsSync("database.json")
-    ? fs.readFileSync("database.json", "utf-8")
-    : null;
-
-  const data: Data = JSON.parse(dataString || "{}")[path];
+  const pageRes = await supabase
+    .from("puck")
+    .select("*")
+    .eq("path", path)
+    .maybeSingle();
 
   return {
-    title: data?.root?.title,
-    description: data?.root?.description,
+    title: pageRes?.data?.data?.root?.title || "Page",
+    description: pageRes?.data?.data?.root?.description,
   };
 }
 
@@ -44,23 +39,15 @@ export default async function Page({
 }) {
   const { isEdit, path } = resolvePuckPath(params.puckPath);
 
-  // const data = (
-  //   await fetch(`${process.env.DEPLOY_URL}/api/puck`, {
-  //     next: { revalidate: 0 },
-  //   }).then((d) => d.json())
-  // )[path];
+  const pageRes = await supabase
+    .from("puck")
+    .select("*")
+    .eq("path", path)
+    .maybeSingle();
 
-  const dataString = fs.existsSync("database.json")
-    ? fs.readFileSync("database.json", "utf-8")
-    : null;
-
-  const data: Data = JSON.parse(dataString || "{}")[path];
-
-  console.log({ data });
-
-  if (!data && !isEdit) {
+  if (pageRes.status !== 200 && !isEdit) {
     return notFound();
   }
 
-  return <Client isEdit={isEdit} data={data} path={path} />;
+  return <Client isEdit={isEdit} data={pageRes.data?.data} path={path} />;
 }
