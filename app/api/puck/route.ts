@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     console.log("Existing", existingDataRes.data, existingDataRes.status);
     const res = await supabase.from("puck").upsert({
       ...existingDataRes.data,
-      last_edited_by: user.email,
+      updated_by: user.email,
       updated_at: new Date(),
       data,
     });
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
       created_at: new Date(),
       updated_at: new Date(),
       created_by: user.email,
-      last_edited_by: user.email,
+      updated_by: user.email,
       path,
       data,
     });
