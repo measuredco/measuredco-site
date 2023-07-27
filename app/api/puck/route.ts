@@ -33,7 +33,6 @@ export async function POST(request: Request) {
     .maybeSingle();
 
   if (existingDataRes.status === 200 && existingDataRes.data) {
-    console.log("Existing", existingDataRes.data, existingDataRes.status);
     const res = await supabase.from("puck").upsert({
       ...existingDataRes.data,
       updated_by: user.email,
