@@ -2,6 +2,7 @@ import fs from "fs";
 import { supabase } from "../../../lib/supabase";
 
 import { NextResponse } from "next/server";
+import { getUserServer } from "../../../lib/get-user-server";
 
 export async function GET() {
   const data = fs.existsSync("database.json")
@@ -13,6 +14,15 @@ export async function GET() {
 
 export async function POST(request: Request) {
   const postData = await request.json();
+
+  const user = await getUserServer();
+
+  if (!user) {
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 401 }
+    );
+  }
 
   const { path, data } = postData;
 
@@ -26,7 +36,7 @@ export async function POST(request: Request) {
     console.log("Existing", existingDataRes.data, existingDataRes.status);
     const res = await supabase.from("puck").upsert({
       ...existingDataRes.data,
-      last_edited_by: "Dev",
+      last_edited_by: user.email,
       updated_at: new Date(),
       data,
     });
@@ -42,8 +52,8 @@ export async function POST(request: Request) {
     const res = await supabase.from("puck").insert({
       created_at: new Date(),
       updated_at: new Date(),
-      created_by: "Dev",
-      last_edited_by: "Dev",
+      created_by: user.email,
+      last_edited_by: user.email,
       path,
       data,
     });
