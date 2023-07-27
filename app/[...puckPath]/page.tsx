@@ -1,11 +1,11 @@
-import fs from "fs";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import type { Data } from "@measured/puck";
 
 import { Client } from "./client";
 import resolvePuckPath from "./resolve-puck-path";
 import { supabase } from "../../lib/supabase";
+
+import { getUserServer } from "../../lib/get-user-server";
 
 export async function generateMetadata({
   params,
@@ -39,6 +39,8 @@ export default async function Page({
 }) {
   const { isEdit, path } = resolvePuckPath(params.puckPath);
 
+  const user = await getUserServer();
+
   const pageRes = await supabase
     .from("puck")
     .select("*")
@@ -46,6 +48,10 @@ export default async function Page({
     .maybeSingle();
 
   if (pageRes.status !== 200 && !isEdit) {
+    return notFound();
+  }
+
+  if (isEdit && !user) {
     return notFound();
   }
 
