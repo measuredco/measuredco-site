@@ -57,3 +57,5 @@ export default async function Page({
 
   return <Client isEdit={isEdit} data={pageRes.data?.data} path={path} />;
 }
+
+export const dynamic = "force-dynamic";
