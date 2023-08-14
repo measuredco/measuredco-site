@@ -9,12 +9,11 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@measured/puck@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.4.0.tgz#3bd26062f63d79a8314d5b2a354abd689b636e79"
-  integrity sha512-N1CsjHscvzyk/EdCnlk9by0vAiMrzGTELa3KARjEe99addKhXLIyu+k+xn8HC4cg0m/pBZU9M81n1u0g0d5fhw==
+"@measured/puck@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.5.0.tgz#02556a343d162dde96d9a10143d53c1f7b3394a7"
+  integrity sha512-BKAhO/IjGP9ewW2vQGo6Loi0Io9qqQWHRyasIEdKy4dF38ZvFOrx/C3J1z0CvSB7EPV3WlzraRqELV+fHXR4Ow==
   dependencies:
-    "@types/react-beautiful-dnd" "^13.1.4"
     react-beautiful-dnd "^13.1.1"
     react-feather "^2.0.10"
     react-spinners "^0.13.8"
@@ -226,13 +225,6 @@
   version "15.7.5"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
-
-"@types/react-beautiful-dnd@^13.1.4":
-  version "13.1.4"
-  resolved "https://registry.yarnpkg.com/@types/react-beautiful-dnd/-/react-beautiful-dnd-13.1.4.tgz#bcec72da719c18c0d8b4a7cb00e7fb443211d6d7"
-  integrity sha512-4bIBdzOr0aavN+88q3C7Pgz+xkb7tz3whORYrmSj77wfVEMfiWiooIwVWFR7KM2e+uGTe5BVrXqSfb0aHeflJA==
-  dependencies:
-    "@types/react" "*"
 
 "@types/react-dom@^18.0.7":
   version "18.2.5"
