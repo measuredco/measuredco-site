@@ -93,3 +93,95 @@
   font-weight: 800;
   letter-spacing: var(--font-15-letter-spacing);
 }
+
+@media (min-width: 48em) {
+  .msrd .msrd-Heading--desktop01 {
+    font: var(--font-01);
+    font-weight: 700;
+    letter-spacing: var(--font-01-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop02 {
+    font: var(--font-02);
+    font-weight: 700;
+    letter-spacing: var(--font-02-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop03 {
+    font: var(--font-03);
+    font-weight: 700;
+    letter-spacing: var(--font-03-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop04 {
+    font: var(--font-04);
+    font-weight: 700;
+    letter-spacing: var(--font-04-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop05 {
+    font: var(--font-05);
+    font-weight: 700;
+    letter-spacing: var(--font-05-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop06 {
+    font: var(--font-06);
+    font-weight: 700;
+    letter-spacing: var(--font-06-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop07 {
+    font: var(--font-07);
+    font-weight: 700;
+    letter-spacing: var(--font-07-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop08 {
+    font: var(--font-08);
+    font-weight: 700;
+    letter-spacing: var(--font-08-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop09 {
+    font: var(--font-09);
+    font-weight: 800;
+    letter-spacing: var(--font-09-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop10 {
+    font: var(--font-10);
+    font-weight: 800;
+    letter-spacing: var(--font-10-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop11 {
+    font: var(--font-11);
+    font-weight: 800;
+    letter-spacing: var(--font-11-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop12 {
+    font: var(--font-12);
+    font-weight: 800;
+    letter-spacing: var(--font-12-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop13 {
+    font: var(--font-13);
+    font-weight: 800;
+    letter-spacing: var(--font-13-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop14 {
+    font: var(--font-14);
+    font-weight: 800;
+    letter-spacing: var(--font-14-letter-spacing);
+  }
+
+  .msrd .msrd-Heading--desktop15 {
+    font: var(--font-15);
+    font-weight: 800;
+    letter-spacing: var(--font-15-letter-spacing);
+  }
+}

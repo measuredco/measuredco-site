@@ -1,0 +1,57 @@
+.msrd .msrd-Paragraph {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.msrd .msrd-Paragraph--01 {
+  font: var(--font-01);
+  letter-spacing: var(--font-01-letter-spacing);
+}
+
+.msrd .msrd-Paragraph--02 {
+  font: var(--font-02);
+  letter-spacing: var(--font-02-letter-spacing);
+}
+
+.msrd .msrd-Paragraph--03 {
+  font: var(--font-03);
+  letter-spacing: var(--font-03-letter-spacing);
+}
+
+.msrd .msrd-Paragraph--04 {
+  font: var(--font-04);
+  letter-spacing: var(--font-04-letter-spacing);
+}
+
+.msrd .msrd-Paragraph--05 {
+  font: var(--font-05);
+  letter-spacing: var(--font-05-letter-spacing);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Paragraph--desktop01 {
+    font: var(--font-01);
+    letter-spacing: var(--font-01-letter-spacing);
+  }
+
+  .msrd .msrd-Paragraph--desktop02 {
+    font: var(--font-02);
+    letter-spacing: var(--font-02-letter-spacing);
+  }
+
+  .msrd .msrd-Paragraph--desktop03 {
+    font: var(--font-03);
+    letter-spacing: var(--font-03-letter-spacing);
+  }
+
+  .msrd .msrd-Paragraph--desktop04 {
+    font: var(--font-04);
+    letter-spacing: var(--font-04-letter-spacing);
+  }
+
+  .msrd .msrd-Paragraph--desktop05 {
+    font: var(--font-05);
+    letter-spacing: var(--font-05-letter-spacing);
+  }
+}
