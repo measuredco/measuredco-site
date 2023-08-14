@@ -1,4 +1,4 @@
-import type { Config } from "@measured/puck";
+import type { Config, DefaultRootProps } from "@measured/puck";
 
 import {
   Base,
@@ -21,8 +21,6 @@ type Props = {
   Clients: {
     logos: { logo: [keyof typeof logosMapping] }[];
   };
-  Footer: {};
-  Header: {};
   Hero: {
     strapline: string;
     description: string;
@@ -33,7 +31,11 @@ type Props = {
   Work: { client: string; image: string; project: string; url: string };
 };
 
-export const config: Config<Props> = {
+type RootProps = {
+  headerLinks: { href: string; label: string }[];
+} & DefaultRootProps;
+
+export const config: Config<Props, RootProps> = {
   root: {
     fields: {
       title: {
@@ -42,8 +44,32 @@ export const config: Config<Props> = {
       description: {
         type: "text",
       },
+      headerLinks: {
+        type: "array",
+        arrayFields: {
+          href: {
+            type: "text",
+          },
+          label: {
+            type: "text",
+          },
+        },
+        defaultItemProps: {
+          href: "#",
+          label: "Page",
+        },
+        getItemSummary: (item) => item.label,
+      },
     },
-    render: Base,
+    render: ({ children, headerLinks = [] }) => {
+      return (
+        <Base>
+          <Header links={headerLinks} />
+          {children}
+          <Footer />
+        </Base>
+      );
+    },
   },
   components: {
     Contact: {
@@ -81,12 +107,6 @@ export const config: Config<Props> = {
           <Logos>{logos.map((logoKey) => logosMapping[logoKey.logo])}</Logos>
         </Section>
       ),
-    },
-    Footer: {
-      render: Footer,
-    },
-    Header: {
-      render: Header,
     },
     Hero: {
       fields: {

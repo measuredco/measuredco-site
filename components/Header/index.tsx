@@ -4,7 +4,7 @@ import Menu from "./components/Menu";
 import MenuButton from "./components/MenuButton";
 import "./Header.css";
 
-const Header = () => (
+const Header = ({ links }: { links: { href: string; label: string }[] }) => (
   <header className="msrd-Header" id="msrd-header">
     <div className="msrd-Header-inner">
       <h1 className="msrd-Header-logo">
@@ -26,7 +26,7 @@ const Header = () => (
       </h1>
       <nav>
         <MenuButton />
-        <Menu />
+        <Menu links={links} />
       </nav>
     </div>
   </header>
