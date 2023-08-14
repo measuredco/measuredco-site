@@ -14,9 +14,13 @@ import {
   Work,
 } from "./components";
 
+import { logosMapping } from "./components/Logos";
+
 type Props = {
   Contact: {};
-  Clients: {};
+  Clients: {
+    logos: { logo: [keyof typeof logosMapping] }[];
+  };
   Footer: {};
   Header: {};
   Hero: {
@@ -50,10 +54,31 @@ export const config: Config<Props> = {
       ),
     },
     Clients: {
-      render: () => (
+      fields: {
+        logos: {
+          type: "array",
+          arrayFields: {
+            logo: {
+              type: "select",
+              options: Object.keys(logosMapping).map((logoKey) => ({
+                label: logoKey,
+                value: logoKey,
+              })),
+            },
+          },
+          defaultItemProps: {
+            logo: "bt" as any,
+          },
+          getItemSummary: (item) => item.logo as unknown as string,
+        },
+      },
+      defaultProps: {
+        logos: [],
+      },
+      render: ({ logos }) => (
         <Section>
           <h2 className="msrd-u-visuallyHidden">Clients</h2>
-          <Logos />
+          <Logos>{logos.map((logoKey) => logosMapping[logoKey.logo])}</Logos>
         </Section>
       ),
     },
