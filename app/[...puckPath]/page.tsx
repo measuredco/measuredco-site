@@ -39,8 +39,6 @@ export default async function Page({
 }) {
   const { isEdit, path } = resolvePuckPath(params.puckPath);
 
-  const user = await getUserServer();
-
   const pageRes = await supabase
     .from("puck")
     .select("*")
@@ -51,8 +49,12 @@ export default async function Page({
     return notFound();
   }
 
-  if (isEdit && !user) {
-    return notFound();
+  if (isEdit) {
+    const user = await getUserServer();
+
+    if (!user) {
+      return notFound();
+    }
   }
 
   return <Client isEdit={isEdit} data={pageRes.data?.data} path={path} />;
