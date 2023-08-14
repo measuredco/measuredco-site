@@ -2,9 +2,9 @@ import React from "react";
 
 import "./Logos.css";
 
-const Logos = () => (
-  <ul className="msrd-Logos">
-    <li>
+export const logosMapping = {
+  bt: (
+    <li key={"bt"}>
       <a
         className="msrd-Logos-link"
         href="https://business.bt.com"
@@ -25,7 +25,9 @@ const Logos = () => (
         </svg>
       </a>
     </li>
-    <li>
+  ),
+  hilton: (
+    <li key={"hilton"}>
       <a
         className="msrd-Logos-link"
         href="https://www.hilton.com"
@@ -46,7 +48,9 @@ const Logos = () => (
         </svg>
       </a>
     </li>
-    <li>
+  ),
+  hubble: (
+    <li key={"hubble"}>
       <a
         className="msrd-Logos-link"
         href="https://hubblehq.com"
@@ -67,7 +71,9 @@ const Logos = () => (
         </svg>
       </a>
     </li>
-    <li>
+  ),
+  refinitiv: (
+    <li key={"refinitiv"}>
       <a
         className="msrd-Logos-link"
         href="https://www.refinitiv.com"
@@ -88,7 +94,9 @@ const Logos = () => (
         </svg>
       </a>
     </li>
-    <li>
+  ),
+  scoota: (
+    <li key={"scoota"}>
       <a
         className="msrd-Logos-link"
         href="https://www.scoota.com"
@@ -109,7 +117,9 @@ const Logos = () => (
         </svg>
       </a>
     </li>
-    <li>
+  ),
+  thomsonReuters: (
+    <li key={"thomsonReuters"}>
       <a
         className="msrd-Logos-link"
         href="https://www.thomsonreuters.com"
@@ -130,7 +140,9 @@ const Logos = () => (
         </svg>
       </a>
     </li>
-    <li>
+  ),
+  weaver: (
+    <li key={"weaver"}>
       <a
         className="msrd-Logos-link"
         href="https://www.weaver.build"
@@ -151,7 +163,9 @@ const Logos = () => (
         </svg>
       </a>
     </li>
-  </ul>
-);
+  ),
+};
+
+const Logos = ({ children }) => <ul className="msrd-Logos">{children}</ul>;
 
 export default Logos;
