@@ -29,6 +29,6 @@
     "start": "next start"
   },
   "engines": {
-    "node": "18.16.x"
+    "node": "18.x"
   }
 }
