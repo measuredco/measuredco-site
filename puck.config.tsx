@@ -145,6 +145,71 @@ export const config: Config<Props, RootProps> = {
         </Section>
       ),
     },
+    CardDeck: {
+      fields: {
+        cards: {
+          type: "array",
+          arrayFields: {
+            artifact: {
+              type: "select",
+              options: [
+                {
+                  label: "hash #",
+                  value: "#",
+                },
+                {
+                  label: "diamond",
+                  value: "",
+                },
+                {
+                  label: "sun ☼",
+                  value: "☼",
+                },
+                {
+                  label: "ui ⬒",
+                  value: "⬒",
+                },
+              ],
+            },
+            title: {
+              type: "text",
+            },
+            description: {
+              type: "textarea",
+            },
+          },
+          defaultItemProps: {
+            artifact: "#",
+            title: "Card",
+            description: "Description",
+          },
+          getItemSummary: (item) => item.title,
+        },
+      },
+      defaultProps: {
+        cards: [
+          {
+            artifact: "#",
+            title: "Card",
+            description: "Description",
+          },
+        ],
+      },
+      render: ({ cards }) => (
+        <Section>
+          <Cards>
+            {cards.map((card, idx) => (
+              <Card
+                artifact={card.artifact}
+                title={card.title}
+                description={card.description}
+                key={idx}
+              />
+            ))}
+          </Cards>
+        </Section>
+      ),
+    },
     Clients: {
       fields: {
         logos: {
@@ -292,71 +357,6 @@ export const config: Config<Props, RootProps> = {
           <Paragraph size={size} desktopSize={desktopSize}>
             {text}
           </Paragraph>
-        </Section>
-      ),
-    },
-    CardDeck: {
-      fields: {
-        cards: {
-          type: "array",
-          arrayFields: {
-            artifact: {
-              type: "select",
-              options: [
-                {
-                  label: "hash #",
-                  value: "#",
-                },
-                {
-                  label: "diamond",
-                  value: "",
-                },
-                {
-                  label: "sun ☼",
-                  value: "☼",
-                },
-                {
-                  label: "ui ⬒",
-                  value: "⬒",
-                },
-              ],
-            },
-            title: {
-              type: "text",
-            },
-            description: {
-              type: "textarea",
-            },
-          },
-          defaultItemProps: {
-            artifact: "#",
-            title: "Card",
-            description: "Description",
-          },
-          getItemSummary: (item) => item.title,
-        },
-      },
-      defaultProps: {
-        cards: [
-          {
-            artifact: "#",
-            title: "Card",
-            description: "Description",
-          },
-        ],
-      },
-      render: ({ cards }) => (
-        <Section>
-          <Cards>
-            {cards.map((card, idx) => (
-              <Card
-                artifact={card.artifact}
-                title={card.title}
-                description={card.description}
-                key={idx}
-              />
-            ))}
-          </Cards>
         </Section>
       ),
     },
