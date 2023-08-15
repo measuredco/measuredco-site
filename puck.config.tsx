@@ -60,6 +60,7 @@ type Props = {
       | "14"
       | "15";
     text: string;
+    id: string;
   };
   Hero: {
     strapline: string;
@@ -215,11 +216,20 @@ export const config: Config<Props, RootProps> = {
             { label: "H6", value: "6" },
           ],
         },
+        id: {
+          type: "text",
+        },
       },
-      defaultProps: { level: "", desktopSize: "", size: "10", text: "Heading" },
-      render: ({ desktopSize, level, size, text }) => (
+      defaultProps: {
+        level: "",
+        desktopSize: "",
+        size: "10",
+        text: "Heading",
+        id: "",
+      },
+      render: ({ desktopSize, level, size, text, id }) => (
         <Section>
-          <Heading desktopSize={desktopSize} level={level} size={size}>
+          <Heading desktopSize={desktopSize} level={level} size={size} id={id}>
             {text}
           </Heading>
         </Section>
