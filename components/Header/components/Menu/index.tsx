@@ -3,8 +3,8 @@ import React from "react";
 const HeaderMenu = ({ links = [] }) => (
   <div className="msrd-HeaderMenu" id="msrd-menu">
     <ul className="msrd-Header-navItems">
-      {links.map(({ href, label }) => (
-        <li>
+      {links.map(({ href, label }, idx) => (
+        <li key={href + idx}>
           <a className="msrd-Header-link" href={href}>
             {label}
           </a>
