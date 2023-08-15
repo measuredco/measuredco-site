@@ -96,7 +96,7 @@ export const config: Config<Props, RootProps> = {
         type: "text",
       },
       description: {
-        type: "text",
+        type: "textarea",
       },
       headerLinks: {
         type: "array",
@@ -251,8 +251,8 @@ export const config: Config<Props, RootProps> = {
     },
     Hero: {
       fields: {
-        strapline: { type: "text" },
-        description: { type: "text" },
+        strapline: { type: "textarea" },
+        description: { type: "textarea" },
       },
       render: ({ description = "description", strapline = "strapline" }) => (
         <Section>
