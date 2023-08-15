@@ -2,6 +2,7 @@ import type { Config, DefaultRootProps } from "@measured/puck";
 
 import {
   Base,
+  Card,
   Cards,
   Contact,
   Footer,
@@ -69,7 +70,13 @@ type Props = {
     size: "01" | "02" | "03" | "04" | "05";
     text: string;
   };
-  Services: {};
+  CardDeck: {
+    cards: {
+      artifact: string;
+      title: string;
+      description: string;
+    }[];
+  };
   Space: {};
   Technologies: {};
   Work: { client: string; image: string; project: string; url: string };
@@ -264,13 +271,68 @@ export const config: Config<Props, RootProps> = {
         </Section>
       ),
     },
-    Services: {
-      render: () => (
+    CardDeck: {
+      fields: {
+        cards: {
+          type: "array",
+          arrayFields: {
+            artifact: {
+              type: "select",
+              options: [
+                {
+                  label: "hash #",
+                  value: "#",
+                },
+                {
+                  label: "diamond",
+                  value: "",
+                },
+                {
+                  label: "sun ☼",
+                  value: "☼",
+                },
+                {
+                  label: "ui ⬒",
+                  value: "⬒",
+                },
+              ],
+            },
+            title: {
+              type: "text",
+            },
+            description: {
+              type: "textarea",
+            },
+          },
+          defaultItemProps: {
+            artifact: "#",
+            title: "Card",
+            description: "Description",
+          },
+          getItemSummary: (item) => item.title,
+        },
+      },
+      defaultProps: {
+        cards: [
+          {
+            artifact: "#",
+            title: "Card",
+            description: "Description",
+          },
+        ],
+      },
+      render: ({ cards }) => (
         <Section>
-          <h2 className="msrd-u-visuallyHidden" id="services">
-            Services
-          </h2>
-          <Cards />
+          <Cards>
+            {cards.map((card, idx) => (
+              <Card
+                artifact={card.artifact}
+                title={card.title}
+                description={card.description}
+                key={idx}
+              />
+            ))}
+          </Cards>
         </Section>
       ),
     },

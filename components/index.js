@@ -1,6 +1,6 @@
 export { default as Artifact } from "./Artifact";
 export { default as Base } from "./Base";
-export { default as Cards } from "./Cards";
+export { default as Cards, Card } from "./Cards";
 export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
