@@ -9,7 +9,8 @@ export { default as Heading } from "./Heading";
 export { default as Hero } from "./Hero";
 export { default as Logos } from "./Logos";
 export { default as Paragraph } from "./Paragraph";
+export { default as Profile } from "./Profile";
+
 export { default as Section } from "./Section";
 export { default as Space } from "./Space";
 export { default as Technologies } from "./Technologies";
-export { default as Work } from "./Work";
