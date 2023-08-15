@@ -1,4 +1,9 @@
-import type { Config, DefaultRootProps } from "@measured/puck";
+import type {
+  ComponentConfig,
+  Config,
+  DefaultRootProps,
+  Fields,
+} from "@measured/puck";
 
 import {
   Base,
@@ -13,12 +18,26 @@ import {
   Logos,
   Paragraph,
   Profile,
+  ProfileDeck,
   Section,
   Space,
   Technologies,
 } from "./components";
 
 import { logosMapping } from "./components/Logos";
+
+type ProfileProps = {
+  title: string;
+  subtitle: string;
+  image: string;
+  description: string;
+  descriptionSize: "03" | "04" | "05";
+  url: string;
+  cta: string;
+  imageVariant: "" | "round";
+  reverse: boolean;
+  direction: "row" | "column";
+};
 
 type Props = {
   Button: { href: string; label: string };
@@ -75,17 +94,8 @@ type Props = {
     text: string;
     maxWidth: string;
   };
-  Profile: {
-    title: string;
-    subtitle: string;
-    image: string;
-    description: string;
-    url: string;
-    cta: string;
-    imageVariant: "" | "round";
-    reverse: boolean;
-    direction: "row" | "column";
-  };
+  Profile: ProfileProps;
+  ProfileDeck: { profiles: ProfileProps[] };
   CardDeck: {
     cards: {
       artifact: string;
@@ -100,6 +110,58 @@ type Props = {
 type RootProps = {
   headerLinks: { href: string; label: string }[];
 } & DefaultRootProps;
+
+const profileFields: Fields<ProfileProps> = {
+  title: { type: "text" },
+  subtitle: { type: "text" },
+  description: { type: "textarea" },
+  descriptionSize: {
+    type: "select",
+    options: [
+      { label: "03", value: "03" },
+      { label: "04", value: "04" },
+      { label: "05", value: "05" },
+    ],
+  },
+  image: { type: "text" },
+  imageVariant: {
+    type: "radio",
+    options: [
+      { label: "Square", value: "" },
+      { label: "Round", value: "round" },
+    ],
+  },
+  url: { type: "text" },
+  cta: { type: "text" },
+  reverse: {
+    type: "radio",
+    label: "order",
+    options: [
+      { label: "Normal", value: false },
+      { label: "Reverse", value: true },
+    ],
+  },
+  direction: {
+    type: "radio",
+    options: [
+      { label: "Row", value: "row" },
+      { label: "Column", value: "column" },
+    ],
+  },
+};
+
+const defaultProfileProps: ProfileProps = {
+  title: "Title",
+  subtitle: "",
+  image: "Screenshot-BT-01_jpqlkt.tiff",
+  imageVariant: "",
+  description: "Description",
+  descriptionSize: "05",
+  url: "example.com",
+  cta: "example.com",
+  reverse: false,
+  direction: "row",
+};
 
 export const config: Config<Props, RootProps> = {
   root: {
@@ -391,70 +453,34 @@ export const config: Config<Props, RootProps> = {
       ),
     },
     Profile: {
-      fields: {
-        title: { type: "text" },
-        subtitle: { type: "text" },
-        description: { type: "textarea" },
-        image: { type: "text" },
-        imageVariant: {
-          type: "radio",
-          options: [
-            { label: "Square", value: "" },
-            { label: "Round", value: "round" },
-          ],
-        },
-        url: { type: "text" },
-        cta: { type: "text" },
-        reverse: {
-          type: "radio",
-          label: "order",
-          options: [
-            { label: "Normal", value: false },
-            { label: "Reverse", value: true },
-          ],
-        },
-        direction: {
-          type: "radio",
-          options: [
-            { label: "Row", value: "row" },
-            { label: "Column", value: "column" },
-          ],
-        },
-      },
-      defaultProps: {
-        title: "Title",
-        subtitle: "",
-        image: "Screenshot-BT-01_jpqlkt.tiff",
-        imageVariant: "",
-        description: "Description",
-        url: "example.com",
-        cta: "example.com",
-        reverse: false,
-        direction: "row",
-      },
-      render: ({
-        title,
-        subtitle,
-        image,
-        imageVariant,
-        description,
-        url,
-        cta,
-        reverse,
-        direction,
-      }) => (
+      fields: profileFields,
+      defaultProps: defaultProfileProps,
+      render: (props) => (
         <Section>
-          <Profile
-            title={title}
-            subtitle={subtitle}
-            image={image}
-            imageVariant={imageVariant}
-            description={description}
-            url={url}
-            cta={cta}
-            reverse={reverse}
-            direction={direction}
-          />
+          <Profile {...props} />
+        </Section>
+      ),
+    },
+    ProfileDeck: {
+      fields: {
+        profiles: {
+          type: "array",
+          arrayFields: profileFields as any,
+          defaultItemProps: {
+            ...defaultProfileProps,
+            direction: "column",
+            imageVariant: "round",
+          },
+        },
+      },
+      defaultProps: { profiles: [] },
+      render: ({ profiles }) => (
+        <Section>
+          <ProfileDeck>
+            {profiles.map((profile, idx) => (
+              <Profile key={idx} {...profile} />
+            ))}
+          </ProfileDeck>
         </Section>
       ),
     },

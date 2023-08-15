@@ -24,6 +24,7 @@
 
   .msrd .msrd-Profile--column {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 }
 
@@ -66,6 +67,16 @@
   letter-spacing: var(--font-05-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical-01);
+}
+
+.msrd .msrd-Profile--descriptionSize03 .msrd-Profile-description {
+  font: var(--font-03);
+  letter-spacing: var(--font-03-letter-spacing);
+}
+
+.msrd .msrd-Profile--descriptionSize04 .msrd-Profile-description {
+  font: var(--font-04);
+  letter-spacing: var(--font-04-letter-spacing);
 }
 
 .msrd .msrd-Profile-url {
@@ -127,4 +138,9 @@
 .msrd .msrd-Profile--round .msrd-Profile-image {
   border-radius: 500px;
   height: min-content;
+}
+
+.msrd .msrd-Profile--column .msrd-Profile-image {
+  margin-left: auto;
+  margin-right: auto;
 }

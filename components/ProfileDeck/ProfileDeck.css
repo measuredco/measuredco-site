@@ -1,0 +1,6 @@
+.msrd .msrd-ProfileDeck {
+  align-items: start;
+  display: grid;
+  gap: var(--space-vertical) var(--space-horizontal-10);
+  grid-template-columns: 1fr 1fr 1fr;
+}

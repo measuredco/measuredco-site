@@ -9,6 +9,7 @@ const Profile = ({
   image,
   imageVariant,
   description,
+  descriptionSize,
   url,
   cta = url,
   reverse,
@@ -19,6 +20,8 @@ const Profile = ({
       imageVariant ? `msrd-Profile--${imageVariant}` : ""
     } ${reverse ? `msrd-Profile--reverse` : ""} ${
       direction ? `msrd-Profile--${direction}` : ""
+    } ${
+      descriptionSize ? `msrd-Profile--descriptionSize${descriptionSize}` : ""
     }`}
   >
     <div className="msrd-Profile-content">
@@ -33,16 +36,18 @@ const Profile = ({
         </p>
       )}
     </div>
-    <div className="msrd-Profile-image">
-      <Image
-        alt=""
-        height="450"
-        loading="lazy"
-        src={`https://res.cloudinary.com/measuredco/dpr_auto,f_auto,q_auto,w_auto/site/${image}`}
-        sizes="100vw"
-        width="800"
-      />
-    </div>
+    {image && (
+      <div className="msrd-Profile-image">
+        <Image
+          alt=""
+          height="450"
+          loading="lazy"
+          src={`https://res.cloudinary.com/measuredco/dpr_auto,f_auto,q_auto,w_auto/site/${image}`}
+          sizes="100vw"
+          width="800"
+        />
+      </div>
+    )}
   </div>
 );
 
