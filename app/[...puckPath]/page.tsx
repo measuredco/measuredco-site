@@ -45,19 +45,28 @@ export default async function Page({
     .eq("path", path)
     .maybeSingle();
 
-  if (pageRes.status !== 200 && !isEdit) {
+  if ((pageRes.status !== 200 || !pageRes.data?.data) && !isEdit) {
     return notFound();
   }
 
+  let user;
+
   if (isEdit) {
-    const user = await getUserServer();
+    user = await getUserServer();
 
     if (!user) {
       return notFound();
     }
   }
 
-  return <Client isEdit={isEdit} data={pageRes.data?.data} path={path} />;
+  return (
+    <Client
+      isEdit={isEdit}
+      data={pageRes.data?.data}
+      draftData={isEdit ? pageRes.data?.draft_data || pageRes.data?.data : null}
+      path={path}
+    />
+  );
 }
 
 export const dynamic = "force-dynamic";

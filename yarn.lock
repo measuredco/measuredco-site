@@ -9,17 +9,17 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@measured/puck-plugin-heading-analyzer@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.5.0.tgz#e5d4cde241d7853351f96c4199fea5b867332fe2"
-  integrity sha512-kv5+kemZXd+B6QJ6V2iNJLsS8DT8TKUbUsojkBITGPMXHDsXI7Bz4stNbPSw1i4u6ZtEjqlLVkGMVt4Uf+JU6g==
+"@measured/puck-plugin-heading-analyzer@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.6.0.tgz#b0b5b8d68a14e8fbbf71bf1c21ba4cbe8bd74e0c"
+  integrity sha512-vXlBzvzAJcSH8ta80gktA4yoC5bMABl4z+IPmCXomxtVMIbCzxrp5XJfFzrUZcO0Gsktcgxy/kFPpz34gZZg8w==
   dependencies:
     react-from-json "^0.7.2"
 
-"@measured/puck@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.5.0.tgz#02556a343d162dde96d9a10143d53c1f7b3394a7"
-  integrity sha512-BKAhO/IjGP9ewW2vQGo6Loi0Io9qqQWHRyasIEdKy4dF38ZvFOrx/C3J1z0CvSB7EPV3WlzraRqELV+fHXR4Ow==
+"@measured/puck@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.6.0.tgz#18ebbe2c6f55f54196a60bd2c08667419e682f0f"
+  integrity sha512-GGHRjofcoVr7Ultbv8DbLmZwg/jDLbvE6pi7hltHH5dJq82rCy/bt9dl9w8Ws4a1ICMEmsDZpRE8Vi0NBqW2YQ==
   dependencies:
     react-beautiful-dnd "^13.1.1"
     react-feather "^2.0.10"
