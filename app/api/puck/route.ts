@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { path, data } = postData;
+  const { path, data, draft } = postData;
 
   const existingDataRes = await supabase
     .from("puck")
@@ -33,32 +33,38 @@ export async function POST(request: Request) {
     .maybeSingle();
 
   if (existingDataRes.status === 200 && existingDataRes.data) {
-    const res = await supabase.from("puck").upsert({
+    const newData = {
       ...existingDataRes.data,
       updated_by: user.email,
       updated_at: new Date(),
-      data,
-    });
+      draft_data: data,
+      [draft ? "draft_data" : "data"]: data,
+    };
+
+    const res = await supabase.from("puck").upsert(newData);
 
     if (res.status === 201) {
-      return NextResponse.json({ status: "ok" });
+      return NextResponse.json({ status: "ok", data: newData });
     }
 
     console.error(
       `Error writing to supabase: ${res.statusText} (${res.status})`
     );
   } else {
-    const res = await supabase.from("puck").insert({
+    const newData = {
       created_at: new Date(),
       updated_at: new Date(),
       created_by: user.email,
       updated_by: user.email,
       path,
-      data,
-    });
+      draft_data: data,
+      [draft ? "draft_data" : "data"]: data,
+    };
+
+    const res = await supabase.from("puck").insert(newData);
 
     if (res.status === 201) {
-      return NextResponse.json({ status: "ok" });
+      return NextResponse.json({ status: "ok", data: newData });
     }
 
     console.error(
