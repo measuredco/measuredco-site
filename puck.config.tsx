@@ -79,6 +79,7 @@ type Props = {
     description: string;
     url: string;
     cta: string;
+    imageVariant: "" | "round";
   };
   CardDeck: {
     cards: {
@@ -371,21 +372,30 @@ export const config: Config<Props, RootProps> = {
         title: { type: "text" },
         description: { type: "textarea" },
         image: { type: "text" },
+        imageVariant: {
+          type: "radio",
+          options: [
+            { label: "Square", value: "" },
+            { label: "Round", value: "round" },
+          ],
+        },
         url: { type: "text" },
         cta: { type: "text" },
       },
       defaultProps: {
         title: "Title",
         image: "Screenshot-BT-01_jpqlkt.tiff",
+        imageVariant: "",
         description: "Description",
         url: "example.com",
         cta: "example.com",
       },
-      render: ({ title, image, description, url, cta }) => (
+      render: ({ title, image, imageVariant, description, url, cta }) => (
         <Section>
           <Profile
             title={title}
             image={image}
+            imageVariant={imageVariant}
             description={description}
             url={url}
             cta={cta}
