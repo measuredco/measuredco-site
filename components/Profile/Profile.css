@@ -1,30 +1,30 @@
 @media (min-width: 48em) {
-  .msrd .msrd-Work {
+  .msrd .msrd-Profile {
     display: grid;
     gap: var(--space-vertical) var(--space-horizontal-12);
     grid-template-columns: 5fr 7fr;
   }
 }
 
-.msrd .msrd-Work-content {
+.msrd .msrd-Profile-content {
   margin-left: var(--space-horizontal);
   margin-right: var(--space-horizontal);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Work-content {
+  .msrd .msrd-Profile-content {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
 @media (min-width: 64em) {
-  .msrd .msrd-Work-content {
+  .msrd .msrd-Profile-content {
     margin-top: var(--space-vertical);
   }
 }
 
-.msrd .msrd-Work-client {
+.msrd .msrd-Profile-title {
   font: var(--font-05);
   font-weight: 700;
   letter-spacing: var(--font-05-letter-spacing);
@@ -33,19 +33,19 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Work-client {
+  .msrd .msrd-Profile-title {
     margin-bottom: var(--space-vertical-01);
   }
 }
 
-.msrd .msrd-Work-project {
+.msrd .msrd-Profile-description {
   font: var(--font-05);
   letter-spacing: var(--font-05-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: 0;
 }
 
-.msrd .msrd-Work-url {
+.msrd .msrd-Profile-url {
   font: var(--font-04);
   letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: var(--space-vertical);
@@ -53,31 +53,31 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Work-url {
+  .msrd .msrd-Profile-url {
     margin-bottom: 0;
   }
 }
 
 @media (min-width: 64em) {
-  .msrd .msrd-Work-url {
+  .msrd .msrd-Profile-url {
     font: var(--font-04);
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
 
-.msrd .msrd-Work-image {
+.msrd .msrd-Profile-image {
   margin-left: var(--space-horizontal);
   margin-right: var(--space-horizontal);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Work-image {
+  .msrd .msrd-Profile-image {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-.msrd .msrd-Work-image img {
+.msrd .msrd-Profile-image img {
   border-radius: 0.5rem;
   box-shadow: 0 0 64px rgba(0, 23, 93, 0.08);
   overflow: hidden;

@@ -12,10 +12,10 @@ import {
   Hero,
   Logos,
   Paragraph,
+  Profile,
   Section,
   Space,
   Technologies,
-  Work,
 } from "./components";
 
 import { logosMapping } from "./components/Logos";
@@ -73,6 +73,13 @@ type Props = {
     size: "01" | "02" | "03" | "04" | "05";
     text: string;
   };
+  Profile: {
+    title: string;
+    image: string;
+    description: string;
+    url: string;
+    cta: string;
+  };
   CardDeck: {
     cards: {
       artifact: string;
@@ -82,7 +89,6 @@ type Props = {
   };
   Space: {};
   Technologies: {};
-  Work: { client: string; image: string; project: string; url: string };
 };
 
 type RootProps = {
@@ -360,6 +366,33 @@ export const config: Config<Props, RootProps> = {
         </Section>
       ),
     },
+    Profile: {
+      fields: {
+        title: { type: "text" },
+        description: { type: "textarea" },
+        image: { type: "text" },
+        url: { type: "text" },
+        cta: { type: "text" },
+      },
+      defaultProps: {
+        title: "Title",
+        image: "Screenshot-BT-01_jpqlkt.tiff",
+        description: "Description",
+        url: "example.com",
+        cta: "example.com",
+      },
+      render: ({ title, image, description, url, cta }) => (
+        <Section>
+          <Profile
+            title={title}
+            image={image}
+            description={description}
+            url={url}
+            cta={cta}
+          />
+        </Section>
+      ),
+    },
     Space: {
       defaultProps: {
         size: "08",
@@ -389,24 +422,6 @@ export const config: Config<Props, RootProps> = {
       render: () => (
         <Section>
           <Technologies />
-        </Section>
-      ),
-    },
-    Work: {
-      fields: {
-        client: { type: "text" },
-        image: { type: "text" },
-        project: { type: "text" },
-        url: { type: "text" },
-      },
-      render: ({
-        client = "client",
-        image = "src.jpg",
-        project = "project",
-        url = "example.com",
-      }) => (
-        <Section>
-          <Work client={client} image={image} project={project} url={url} />
         </Section>
       ),
     },
