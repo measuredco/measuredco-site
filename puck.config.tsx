@@ -2,6 +2,7 @@ import type { Config, DefaultRootProps } from "@measured/puck";
 
 import {
   Base,
+  Button,
   Card,
   Cards,
   Contact,
@@ -20,6 +21,7 @@ import { logosMapping } from "./components/Logos";
 import Paragraph from "./components/Paragraph";
 
 type Props = {
+  Button: { href: string; label: string };
   Contact: {};
   Clients: {
     logos: { logo: [keyof typeof logosMapping] }[];
@@ -124,6 +126,18 @@ export const config: Config<Props, RootProps> = {
     },
   },
   components: {
+    Button: {
+      fields: {
+        href: { type: "text" },
+        label: { type: "text" },
+      },
+      defaultProps: { href: "#", label: "Button" },
+      render: ({ href, label }) => (
+        <Section>
+          <Button href={href} label={label} />
+        </Section>
+      ),
+    },
     Contact: {
       render: () => (
         <Section>
