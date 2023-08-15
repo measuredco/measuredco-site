@@ -11,6 +11,7 @@ import {
   Heading,
   Hero,
   Logos,
+  Paragraph,
   Section,
   Space,
   Technologies,
@@ -18,7 +19,6 @@ import {
 } from "./components";
 
 import { logosMapping } from "./components/Logos";
-import Paragraph from "./components/Paragraph";
 
 type Props = {
   Button: { href: string; label: string };
