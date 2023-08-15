@@ -10,11 +10,12 @@ const Profile = ({
   description,
   url,
   cta = url,
+  reverse,
 }) => (
   <div
     className={`msrd-Profile ${
       imageVariant ? `msrd-Profile--${imageVariant}` : ""
-    }`}
+    } ${reverse ? `msrd-Profile--reverse` : ""}`}
   >
     <div className="msrd-Profile-content">
       <h3 className="msrd-Profile-title">{title}</h3>
