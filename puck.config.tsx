@@ -82,6 +82,7 @@ type Props = {
     url: string;
     cta: string;
     imageVariant: "" | "round";
+    reverse: boolean;
   };
   CardDeck: {
     cards: {
@@ -401,6 +402,14 @@ export const config: Config<Props, RootProps> = {
         },
         url: { type: "text" },
         cta: { type: "text" },
+        reverse: {
+          type: "radio",
+          label: "order",
+          options: [
+            { label: "Normal", value: false },
+            { label: "Reverse", value: true },
+          ],
+        },
       },
       defaultProps: {
         title: "Title",
@@ -409,8 +418,17 @@ export const config: Config<Props, RootProps> = {
         description: "Description",
         url: "example.com",
         cta: "example.com",
+        reverse: false,
       },
-      render: ({ title, image, imageVariant, description, url, cta }) => (
+      render: ({
+        title,
+        image,
+        imageVariant,
+        description,
+        url,
+        cta,
+        reverse,
+      }) => (
         <Section>
           <Profile
             title={title}
@@ -419,6 +437,7 @@ export const config: Config<Props, RootProps> = {
             description={description}
             url={url}
             cta={cta}
+            reverse={reverse}
           />
         </Section>
       ),

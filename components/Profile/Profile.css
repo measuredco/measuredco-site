@@ -6,8 +6,16 @@
     grid-template-columns: 5fr 7fr;
   }
 
+  .msrd .msrd-Profile--reverse {
+    grid-template-columns: 7fr 5fr;
+  }
+
   .msrd .msrd-Profile--round {
     grid-template-columns: 7fr 5fr;
+  }
+
+  .msrd .msrd-Profile--reverse.msrd-Profile--round {
+    grid-template-columns: 5fr 7fr;
   }
 }
 
@@ -79,6 +87,10 @@
   .msrd .msrd-Profile-image {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .msrd .msrd-Profile--reverse .msrd-Profile-image {
+    order: -1;
   }
 }
 
