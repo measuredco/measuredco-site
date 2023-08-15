@@ -1,8 +1,13 @@
 @media (min-width: 48em) {
   .msrd .msrd-Profile {
+    align-items: center;
     display: grid;
     gap: var(--space-vertical) var(--space-horizontal-12);
     grid-template-columns: 5fr 7fr;
+  }
+
+  .msrd .msrd-Profile--round {
+    grid-template-columns: 7fr 5fr;
   }
 }
 
@@ -77,8 +82,13 @@
   }
 }
 
-.msrd .msrd-Profile-image img {
+.msrd .msrd-Profile-image {
   border-radius: 0.5rem;
   box-shadow: 0 0 64px rgba(0, 23, 93, 0.08);
   overflow: hidden;
+}
+
+.msrd .msrd-Profile--round .msrd-Profile-image {
+  border-radius: 500px;
+  height: min-content;
 }

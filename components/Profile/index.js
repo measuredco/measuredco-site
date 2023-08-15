@@ -3,8 +3,19 @@ import React from "react";
 
 import "./Profile.css";
 
-const Profile = ({ title, image, description, url, cta = url }) => (
-  <div className="msrd-Profile">
+const Profile = ({
+  title,
+  image,
+  imageVariant,
+  description,
+  url,
+  cta = url,
+}) => (
+  <div
+    className={`msrd-Profile ${
+      imageVariant ? `msrd-Profile--${imageVariant}` : ""
+    }`}
+  >
     <div className="msrd-Profile-content">
       <h3 className="msrd-Profile-title">{title}</h3>
       <p className="msrd-Profile-description">{description}</p>
