@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Heading.css";
 
-const Heading = ({ children, desktopSize, id, level, size }) => {
+const Heading = ({ children, desktopSize, id, level, size, maxWidth }) => {
   let Element = "span";
 
   if (level) {
@@ -15,6 +15,7 @@ const Heading = ({ children, desktopSize, id, level, size }) => {
         desktopSize ? `msrd-Heading--desktop${desktopSize}` : ""
       }`}
       id={id}
+      style={{ maxWidth }}
     >
       {children}
     </Element>

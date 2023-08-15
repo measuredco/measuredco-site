@@ -63,6 +63,7 @@ type Props = {
       | "15";
     text: string;
     id: string;
+    maxWidth: string;
   };
   Hero: {
     strapline: string;
@@ -72,6 +73,7 @@ type Props = {
     desktopSize: "" | "01" | "02" | "03" | "04" | "05";
     size: "01" | "02" | "03" | "04" | "05";
     text: string;
+    maxWidth: string;
   };
   Profile: {
     title: string;
@@ -305,6 +307,9 @@ export const config: Config<Props, RootProps> = {
         id: {
           type: "text",
         },
+        maxWidth: {
+          type: "text",
+        },
       },
       defaultProps: {
         level: "",
@@ -312,10 +317,17 @@ export const config: Config<Props, RootProps> = {
         size: "10",
         text: "Heading",
         id: "",
+        maxWidth: "",
       },
-      render: ({ desktopSize, level, size, text, id }) => (
+      render: ({ desktopSize, level, size, text, id, maxWidth }) => (
         <Section>
-          <Heading desktopSize={desktopSize} level={level} size={size} id={id}>
+          <Heading
+            desktopSize={desktopSize}
+            level={level}
+            size={size}
+            id={id}
+            maxWidth={maxWidth}
+          >
             {text}
           </Heading>
         </Section>
@@ -357,11 +369,19 @@ export const config: Config<Props, RootProps> = {
             { label: "05", value: "05" },
           ],
         },
+        maxWidth: {
+          type: "text",
+        },
       },
-      defaultProps: { desktopSize: "", size: "03", text: "Paragraph" },
-      render: ({ desktopSize, size, text }) => (
+      defaultProps: {
+        desktopSize: "",
+        size: "03",
+        text: "Paragraph",
+        maxWidth: "",
+      },
+      render: ({ desktopSize, size, text, maxWidth }) => (
         <Section>
-          <Paragraph size={size} desktopSize={desktopSize}>
+          <Paragraph size={size} desktopSize={desktopSize} maxWidth={maxWidth}>
             {text}
           </Paragraph>
         </Section>
