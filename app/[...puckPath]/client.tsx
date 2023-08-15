@@ -2,6 +2,7 @@
 
 import { Puck, Render } from "@measured/puck";
 import type { Data } from "@measured/puck";
+import headingAnalyzer from "@measured/puck-plugin-heading-analyzer";
 
 import config from "../../puck.config";
 
@@ -19,6 +20,7 @@ export function Client({
       <Puck
         config={config}
         data={data}
+        plugins={[headingAnalyzer]}
         onPublish={async (data: Data) => {
           const res = await fetch("/api/puck", {
             body: JSON.stringify({ path, data }),
