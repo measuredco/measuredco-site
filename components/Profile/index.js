@@ -5,20 +5,25 @@ import "./Profile.css";
 
 const Profile = ({
   title,
+  subtitle,
   image,
   imageVariant,
   description,
   url,
   cta = url,
   reverse,
+  direction = "row",
 }) => (
   <div
     className={`msrd-Profile ${
       imageVariant ? `msrd-Profile--${imageVariant}` : ""
-    } ${reverse ? `msrd-Profile--reverse` : ""}`}
+    } ${reverse ? `msrd-Profile--reverse` : ""} ${
+      direction ? `msrd-Profile--${direction}` : ""
+    }`}
   >
     <div className="msrd-Profile-content">
       <h3 className="msrd-Profile-title">{title}</h3>
+      {subtitle && <p className="msrd-Profile-subtitle">{subtitle}</p>}
       <p className="msrd-Profile-description">{description}</p>
       {url && (
         <p className="msrd-Profile-url">

@@ -77,12 +77,14 @@ type Props = {
   };
   Profile: {
     title: string;
+    subtitle: string;
     image: string;
     description: string;
     url: string;
     cta: string;
     imageVariant: "" | "round";
     reverse: boolean;
+    direction: "row" | "column";
   };
   CardDeck: {
     cards: {
@@ -391,6 +393,7 @@ export const config: Config<Props, RootProps> = {
     Profile: {
       fields: {
         title: { type: "text" },
+        subtitle: { type: "text" },
         description: { type: "textarea" },
         image: { type: "text" },
         imageVariant: {
@@ -410,34 +413,47 @@ export const config: Config<Props, RootProps> = {
             { label: "Reverse", value: true },
           ],
         },
+        direction: {
+          type: "radio",
+          options: [
+            { label: "Row", value: "row" },
+            { label: "Column", value: "column" },
+          ],
+        },
       },
       defaultProps: {
         title: "Title",
+        subtitle: "",
         image: "Screenshot-BT-01_jpqlkt.tiff",
         imageVariant: "",
         description: "Description",
         url: "example.com",
         cta: "example.com",
         reverse: false,
+        direction: "row",
       },
       render: ({
         title,
+        subtitle,
         image,
         imageVariant,
         description,
         url,
         cta,
         reverse,
+        direction,
       }) => (
         <Section>
           <Profile
             title={title}
+            subtitle={subtitle}
             image={image}
             imageVariant={imageVariant}
             description={description}
             url={url}
             cta={cta}
             reverse={reverse}
+            direction={direction}
           />
         </Section>
       ),
