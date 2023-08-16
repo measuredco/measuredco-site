@@ -1,6 +1,10 @@
 import React from "react";
 
-const HeaderMenu = ({ links = [] }) => (
+const HeaderMenu = ({
+  links = [],
+}: {
+  links: { href: string; label: string }[];
+}) => (
   <div className="msrd-HeaderMenu" id="msrd-menu">
     <ul className="msrd-Header-navItems">
       {links.map(({ href, label }, idx) => (
