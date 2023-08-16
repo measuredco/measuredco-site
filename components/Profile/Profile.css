@@ -43,12 +43,6 @@
   }
 }
 
-@media (min-width: 64em) {
-  .msrd .msrd-Profile-content {
-    margin-top: var(--space-vertical);
-  }
-}
-
 .msrd .msrd-Profile-title {
   font: var(--font-05);
   font-weight: 700;
