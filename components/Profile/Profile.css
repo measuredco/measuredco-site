@@ -24,8 +24,11 @@
 
   .msrd .msrd-Profile--column {
     grid-template-columns: 1fr;
-    text-align: center;
   }
+}
+
+.msrd .msrd-Profile--column {
+  text-align: center;
 }
 
 .msrd .msrd-Profile-content {

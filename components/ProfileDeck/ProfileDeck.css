@@ -2,5 +2,11 @@
   align-items: start;
   display: grid;
   gap: var(--space-vertical) var(--space-horizontal-10);
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-ProfileDeck {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
