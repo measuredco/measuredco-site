@@ -81,9 +81,6 @@ const Footer = () => (
       </ul>
       <ul>
         <li>
-          <a href="/lighthouse">Lighthouse</a>
-        </li>
-        <li>
           <a
             href="https://www.iubenda.com/privacy-policy/24566196"
             target="_blank"
