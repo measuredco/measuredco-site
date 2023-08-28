@@ -306,12 +306,18 @@ export const config: Config<Props, RootProps> = {
         },
       },
       defaultProps: {
-        logos: [],
+        logos: [{ logo: "bt" as any }],
       },
       render: ({ logos }) => (
         <Section>
           <h2 className="msrd-u-visuallyHidden">Clients</h2>
-          <Logos>{logos.map((logoKey) => logosMapping[logoKey.logo])}</Logos>
+          <Logos>
+            {logos.map((logoKey, idx) => {
+              const Logo = logosMapping[logoKey.logo];
+
+              return <Logo key={`${logoKey}-${idx}`} />;
+            })}
+          </Logos>
         </Section>
       ),
     },
