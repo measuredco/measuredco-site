@@ -1,10 +1,23 @@
 .msrd .msrd-Cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-vertical) var(--space-horizontal);
+  display: grid;
+  grid-gap: var(--space-vertical) var(--space-horizontal);
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 0;
+}
+
+@media (min-width: 40em) {
+  .msrd .msrd-Cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 64em) {
+  .msrd .msrd-Cards {
+    grid-auto-flow: column;
+  }
 }
 
 .msrd .msrd-Card {
@@ -18,18 +31,6 @@
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Card {
     border-color: var(--color-grey-2);
-  }
-}
-
-@media (min-width: 40em) {
-  .msrd .msrd-Card {
-    width: calc((100% / 2) - (((2 - 1) / 2) * var(--space-horizontal)));
-  }
-}
-
-@media (min-width: 64em) {
-  .msrd .msrd-Card {
-    width: calc((100% / 4) - (((4 - 1) / 4) * var(--space-horizontal)));
   }
 }
 
