@@ -83,6 +83,7 @@ type Props = {
     text: string;
     id: string;
     maxWidth: string;
+    align: "left" | "center" | "right";
   };
   Hero: {
     strapline: string;
@@ -93,6 +94,7 @@ type Props = {
     size: "01" | "02" | "03" | "04" | "05";
     text: string;
     maxWidth: string;
+    align: "left" | "center" | "right";
   };
   Profile: ProfileProps;
   ProfileDeck: { profiles: ProfileProps[] };
@@ -316,6 +318,14 @@ export const config: Config<Props, RootProps> = {
     Heading: {
       fields: {
         text: { type: "text" },
+        align: {
+          type: "radio",
+          options: [
+            { label: "Left", value: "left" },
+            { label: "Center", value: "center" },
+            { label: "Right", value: "right" },
+          ],
+        },
         size: {
           type: "select",
           options: [
@@ -383,8 +393,9 @@ export const config: Config<Props, RootProps> = {
         text: "Heading",
         id: "",
         maxWidth: "",
+        align: "left",
       },
-      render: ({ desktopSize, level, size, text, id, maxWidth }) => (
+      render: ({ desktopSize, level, size, text, id, maxWidth, align }) => (
         <Section>
           <Heading
             desktopSize={desktopSize}
@@ -392,6 +403,7 @@ export const config: Config<Props, RootProps> = {
             size={size}
             id={id}
             maxWidth={maxWidth}
+            align={align}
           >
             {text}
           </Heading>
@@ -412,6 +424,14 @@ export const config: Config<Props, RootProps> = {
     Paragraph: {
       fields: {
         text: { type: "textarea" },
+        align: {
+          type: "radio",
+          options: [
+            { label: "Left", value: "left" },
+            { label: "Center", value: "center" },
+            { label: "Right", value: "right" },
+          ],
+        },
         size: {
           type: "select",
           options: [
@@ -443,10 +463,16 @@ export const config: Config<Props, RootProps> = {
         size: "03",
         text: "Paragraph",
         maxWidth: "",
+        align: "left",
       },
-      render: ({ desktopSize, size, text, maxWidth }) => (
+      render: ({ desktopSize, size, text, maxWidth, align }) => (
         <Section>
-          <Paragraph size={size} desktopSize={desktopSize} maxWidth={maxWidth}>
+          <Paragraph
+            size={size}
+            desktopSize={desktopSize}
+            maxWidth={maxWidth}
+            align={align}
+          >
             {text}
           </Paragraph>
         </Section>
