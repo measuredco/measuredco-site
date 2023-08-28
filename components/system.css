@@ -2,7 +2,7 @@
  * Measured design tokens
  */
 
- :root {
+:root {
   /*
    * Color palette
    */
@@ -319,6 +319,7 @@
   --space-horizontal-12: calc((var(--space-scale-horizontal-12) / 16) * 1rem);
 
   --section-max-width: calc((1024 / 16) * 1rem);
+  --section-max-width-narrow: calc((648 / 16) * 1rem);
 
   --easing-cubic-bezier-easy-ease: cubic-bezier(0.44, 0, 0.55, 0.94);
   --easing-cubic-bezier-ease-in: cubic-bezier(0.44, 0, 1, 1);

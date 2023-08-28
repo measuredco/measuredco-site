@@ -94,6 +94,7 @@ type Props = {
     text: string;
     maxWidth: string;
     align: "left" | "center" | "right";
+    sectionWidth: "narrow" | "";
   };
   Paragraph: {
     desktopSize: "" | "01" | "02" | "03" | "04" | "05";
@@ -444,6 +445,13 @@ export const config: Config<Props, RootProps> = {
             { label: "Right", value: "right" },
           ],
         },
+        sectionWidth: {
+          type: "radio",
+          options: [
+            { label: "Default", value: "" },
+            { label: "Narrow", value: "narrow" },
+          ],
+        },
         maxWidth: {
           type: "text",
         },
@@ -452,9 +460,10 @@ export const config: Config<Props, RootProps> = {
         text: "## Markdown",
         align: "left",
         maxWidth: "",
+        sectionWidth: "",
       },
-      render: ({ text, align, maxWidth }) => (
-        <Section>
+      render: ({ text, align, maxWidth, sectionWidth }) => (
+        <Section width={sectionWidth}>
           <Markdown align={align} maxWidth={maxWidth}>
             {text}
           </Markdown>
