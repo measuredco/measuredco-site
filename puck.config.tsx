@@ -25,6 +25,7 @@ import {
 } from "./components";
 
 import { logosMapping } from "./components/Logos";
+import { Markdown } from "./components/Markdown";
 
 type ProfileProps = {
   title: string;
@@ -88,6 +89,11 @@ type Props = {
   Hero: {
     strapline: string;
     description: string;
+  };
+  Markdown: {
+    text: string;
+    maxWidth: string;
+    align: "left" | "center" | "right";
   };
   Paragraph: {
     desktopSize: "" | "01" | "02" | "03" | "04" | "05";
@@ -424,6 +430,34 @@ export const config: Config<Props, RootProps> = {
       render: ({ description = "description", strapline = "strapline" }) => (
         <Section>
           <Hero description={description} strapline={strapline} />
+        </Section>
+      ),
+    },
+    Markdown: {
+      fields: {
+        text: { type: "textarea" },
+        align: {
+          type: "radio",
+          options: [
+            { label: "Left", value: "left" },
+            { label: "Center", value: "center" },
+            { label: "Right", value: "right" },
+          ],
+        },
+        maxWidth: {
+          type: "text",
+        },
+      },
+      defaultProps: {
+        text: "## Markdown",
+        align: "left",
+        maxWidth: "",
+      },
+      render: ({ text, align, maxWidth }) => (
+        <Section>
+          <Markdown align={align} maxWidth={maxWidth}>
+            {text}
+          </Markdown>
         </Section>
       ),
     },

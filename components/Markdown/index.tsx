@@ -6,25 +6,52 @@ import remarkRehype from "remark-rehype";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 
+import "./Markdown.css";
+
+const defaultTagNames = [
+  "b",
+  "strong",
+  "em",
+  "a",
+  "p",
+  "br",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+];
+
+const processMarkdown = (markdown: string, tagNames = defaultTagNames) =>
+  unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeSanitize, {
+      tagNames,
+    })
+    .use(rehypeStringify)
+    .processSync(markdown);
+
 export const Markdown = ({
+  align = "left",
   children,
-  tagNames = ["b", "strong", "em", "a"],
+  tagNames = defaultTagNames,
+  maxWidth,
 }) => {
-  const [textProcessed, setTextProcessed] = useState(children);
+  const [textProcessed, setTextProcessed] = useState(
+    processMarkdown(children, tagNames)
+  );
 
   useEffect(() => {
-    unified()
-      .use(remarkParse)
-      .use(remarkRehype)
-      .use(rehypeSanitize, {
-        tagNames,
-      })
-      .use(rehypeStringify)
-      .process(children)
-      .then((result) => {
-        setTextProcessed(String(result));
-      });
+    setTextProcessed(processMarkdown(children, tagNames));
   }, [children]);
 
-  return <span dangerouslySetInnerHTML={{ __html: textProcessed }} />;
+  return (
+    <div
+      className={`msrd-Markdown${align ? ` msrd-Markdown--${align}` : ""}`}
+      dangerouslySetInnerHTML={{ __html: textProcessed }}
+      style={{ maxWidth }}
+    />
+  );
 };

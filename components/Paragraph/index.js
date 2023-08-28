@@ -11,7 +11,7 @@ const Paragraph = ({ children, desktopSize, size = "03", maxWidth, align }) => {
       } ${align ? `msrd-Paragraph--${align}` : ""}`}
       style={{ maxWidth }}
     >
-      <Markdown>{children}</Markdown>
+      <Markdown tagNames={["a", "b", "em", "strong"]}>{children}</Markdown>
     </p>
   );
 };
