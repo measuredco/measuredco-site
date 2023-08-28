@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Paragraph.css";
+import { Markdown } from "../Markdown";
 
 const Paragraph = ({ children, desktopSize, size = "03", maxWidth, align }) => {
   return (
@@ -10,7 +11,7 @@ const Paragraph = ({ children, desktopSize, size = "03", maxWidth, align }) => {
       } ${align ? `msrd-Paragraph--${align}` : ""}`}
       style={{ maxWidth }}
     >
-      {children}
+      <Markdown>{children}</Markdown>
     </p>
   );
 };
