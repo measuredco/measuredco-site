@@ -1,0 +1,65 @@
+.msrd .msrd-Markdown h1 {
+  font: var(--font-12);
+  font-weight: 800;
+  letter-spacing: var(--font-12-letter-spacing);
+  margin: 0;
+  margin-bottom: var(--space-vertical-04);
+}
+
+.msrd .msrd-Markdown h2 {
+  font: var(--font-10);
+  font-weight: 800;
+  letter-spacing: var(--font-10-letter-spacing);
+  margin: 0;
+  margin-bottom: var(--space-vertical-04);
+}
+
+.msrd .msrd-Markdown h3 {
+  font: var(--font-08);
+  font-weight: 800;
+  letter-spacing: var(--font-08-letter-spacing);
+  margin: 0;
+  margin-bottom: var(--space-vertical-04);
+}
+
+.msrd .msrd-Markdown h4 {
+  font: var(--font-06);
+  font-weight: 700;
+  letter-spacing: var(--font-06-letter-spacing);
+  margin: 0;
+  margin-bottom: var(--space-vertical-04);
+}
+
+.msrd .msrd-Markdown h5 {
+  font: var(--font-05);
+  font-weight: 700;
+  letter-spacing: var(--font-05-letter-spacing);
+  margin: 0;
+  margin-bottom: var(--space-vertical-04);
+}
+
+.msrd .msrd-Markdown h6 {
+  font: var(--font-04);
+  font-weight: 700;
+  letter-spacing: var(--font-04-letter-spacing);
+  margin: 0;
+  margin-bottom: var(--space-vertical-04);
+}
+
+.msrd .msrd-Markdown p {
+  font: var(--font-03);
+  letter-spacing: var(--font-03-letter-spacing);
+  margin-bottom: var(--space-vertical-04);
+}
+
+.msrd .msrd-Markdown--left {
+  text-align: left;
+}
+
+.msrd .msrd-Markdown--center {
+  text-align: center;
+}
+
+.msrd .msrd-Markdown--right {
+  text-align: right;
+}
