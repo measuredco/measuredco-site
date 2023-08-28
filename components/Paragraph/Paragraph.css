@@ -55,3 +55,15 @@
     letter-spacing: var(--font-05-letter-spacing);
   }
 }
+
+.msrd-Paragraph--left {
+  text-align: left;
+}
+
+.msrd-Paragraph--center {
+  text-align: center;
+}
+
+.msrd-Paragraph--right {
+  text-align: right;
+}

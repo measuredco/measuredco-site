@@ -185,3 +185,15 @@
     letter-spacing: var(--font-15-letter-spacing);
   }
 }
+
+.msrd-Heading--left {
+  text-align: left;
+}
+
+.msrd-Heading--center {
+  text-align: center;
+}
+
+.msrd-Heading--right {
+  text-align: right;
+}
