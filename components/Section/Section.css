@@ -8,3 +8,7 @@
   margin-right: auto;
   max-width: var(--section-max-width);
 }
+
+.msrd .msrd-Section--narrow .msrd-Section-inner {
+  max-width: var(--section-max-width-narrow);
+}
