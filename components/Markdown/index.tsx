@@ -24,6 +24,7 @@ const defaultTagNames = [
   "ul",
   "ol",
   "li",
+  "img",
 ];
 
 const processMarkdown = (markdown: string, tagNames = defaultTagNames) =>
