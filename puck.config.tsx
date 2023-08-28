@@ -499,7 +499,7 @@ export const config: Config<Props, RootProps> = {
           },
         },
       },
-      defaultProps: { profiles: [] },
+      defaultProps: { profiles: [{ ...defaultProfileProps }] },
       render: ({ profiles }) => (
         <Section>
           <ProfileDeck>
