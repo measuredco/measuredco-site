@@ -30,7 +30,7 @@ const Profile = ({
       <p className="msrd-Profile-description">{description}</p>
       {url && (
         <p className="msrd-Profile-url">
-          <a href={`https://${url}`} target="_blank">
+          <a href={url} target="_blank">
             {cta}
           </a>
         </p>
