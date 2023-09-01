@@ -22,7 +22,7 @@
     "encoding": "^0.1.13",
     "eslint-config-custom": "*",
     "tsconfig": "*",
-    "typescript": "^4.5.3"
+    "typescript": "^5.2.2"
   },
   "scripts": {
     "build": "next build",
