@@ -577,7 +577,7 @@ export const config: Config<Props, RootProps> = {
     },
     Space: {
       defaultProps: {
-        size: "08",
+        size: "05",
       },
       fields: {
         size: {
