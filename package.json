@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "private": true,
   "dependencies": {
-    "@measured/puck": "^0.6.0",
+    "@measured/puck": "^0.6.2",
     "@measured/puck-plugin-heading-analyzer": "^0.6.0",
     "@supabase/auth-helpers-nextjs": "^0.7.3",
     "@supabase/auth-ui-react": "^0.4.2",

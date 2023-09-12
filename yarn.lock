@@ -16,10 +16,10 @@
   dependencies:
     react-from-json "^0.7.2"
 
-"@measured/puck@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.6.0.tgz#18ebbe2c6f55f54196a60bd2c08667419e682f0f"
-  integrity sha512-GGHRjofcoVr7Ultbv8DbLmZwg/jDLbvE6pi7hltHH5dJq82rCy/bt9dl9w8Ws4a1ICMEmsDZpRE8Vi0NBqW2YQ==
+"@measured/puck@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.6.2.tgz#23faa637b9a9f233b410b1dd474fbef4acd2bd09"
+  integrity sha512-u4Rq2BNaab0qvYzXPPkl7zN64QaCdu/zn2OGo9w8JTeVlTkueaOWODMT1OBelgOybtB/4XVZdp4cgDk6aEAsTA==
   dependencies:
     react-beautiful-dnd "^13.1.1"
     react-feather "^2.0.10"
