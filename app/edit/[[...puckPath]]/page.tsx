@@ -2,8 +2,10 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Client } from "./client";
-import { supabase } from "../../lib/supabase";
-import resolvePuckPath from "../../lib/resolve-puck-path";
+import resolvePuckPath from "../../../lib/resolve-puck-path";
+import { supabase } from "../../../lib/supabase";
+
+import { getUserServer } from "../../../lib/get-user-server";
 
 export async function generateMetadata({
   params,
@@ -43,11 +45,17 @@ export default async function Page({
     .eq("path", path)
     .maybeSingle();
 
-  if (pageRes.status !== 200 || !pageRes.data?.data) {
+  const user = await getUserServer();
+
+  if (!user) {
     return notFound();
   }
 
-  return <Client data={pageRes.data?.data} path={path} />;
+  return (
+    <Client
+      data={pageRes.data?.data}
+      draftData={pageRes.data?.draft_data || pageRes.data?.data}
+      path={path}
+    />
+  );
 }
-
-export const dynamic = "force-static";
