@@ -147,5 +147,9 @@ export function Client({
     );
   }
 
+  if (!data) {
+    return null;
+  }
+
   return <Render config={config} data={data} />;
 }
