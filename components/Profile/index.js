@@ -4,16 +4,16 @@ import React from "react";
 import "./Profile.css";
 
 const Profile = ({
-  title,
-  subtitle,
-  image,
-  imageVariant,
+  cta = url,
   description,
   descriptionSize,
-  url,
-  cta = url,
-  reverse,
   direction = "row",
+  image,
+  imageVariant,
+  reverse,
+  subtitle,
+  title,
+  url,
 }) => (
   <div
     className={`msrd-Profile ${
@@ -27,7 +27,7 @@ const Profile = ({
     <div className="msrd-Profile-content">
       <h3 className="msrd-Profile-title">{title}</h3>
       {subtitle && <p className="msrd-Profile-subtitle">{subtitle}</p>}
-      <p className="msrd-Profile-description">{description}</p>
+      {description && <p className="msrd-Profile-description">{description}</p>}
       {url && (
         <p className="msrd-Profile-url">
           <a href={url} target="_blank">
