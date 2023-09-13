@@ -89,6 +89,7 @@ type Props = {
   Hero: {
     strapline: string;
     description: string;
+    headingLevel: "1" | "2" | "3" | "4" | "5" | "6" | "";
   };
   Markdown: {
     text: string;
@@ -443,10 +444,30 @@ export const config: Config<Props, RootProps> = {
       fields: {
         strapline: { type: "textarea" },
         description: { type: "textarea" },
+        headingLevel: {
+          type: "select",
+          options: [
+            { label: "", value: "" },
+            { label: "H1", value: "1" },
+            { label: "H2", value: "2" },
+            { label: "H3", value: "3" },
+            { label: "H4", value: "4" },
+            { label: "H5", value: "5" },
+            { label: "H6", value: "6" },
+          ],
+        },
       },
-      render: ({ description = "description", strapline = "strapline" }) => (
+      render: ({
+        description = "description",
+        headingLevel,
+        strapline = "strapline",
+      }) => (
         <Section>
-          <Hero description={description} strapline={strapline} />
+          <Hero
+            description={description}
+            headingLevel={headingLevel}
+            strapline={strapline}
+          />
         </Section>
       ),
     },
