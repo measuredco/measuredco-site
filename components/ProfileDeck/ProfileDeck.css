@@ -5,6 +5,12 @@
   grid-template-columns: 1fr;
 }
 
+@media (min-width: 32em) {
+  .msrd .msrd-ProfileDeck {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (min-width: 48em) {
   .msrd .msrd-ProfileDeck {
     grid-template-columns: 1fr 1fr 1fr;
