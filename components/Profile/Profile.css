@@ -47,23 +47,22 @@
   font: var(--font-05);
   font-weight: 700;
   letter-spacing: var(--font-05-letter-spacing);
-  margin-bottom: var(--space-vertical-01);
+  margin-bottom: 0;
   margin-top: 0;
 }
 
 .msrd .msrd-Profile-subtitle {
   font: var(--font-04);
-  font-weight: 700;
   letter-spacing: var(--font-04-letter-spacing);
-  margin-bottom: var(--space-vertical-03);
+  margin-bottom: 0;
   margin-top: 0;
 }
 
 .msrd .msrd-Profile-description {
   font: var(--font-05);
   letter-spacing: var(--font-05-letter-spacing);
-  margin-bottom: var(--space-vertical-03);
-  margin-top: var(--space-vertical-01);
+  margin-bottom: var(--space-vertical-02);
+  margin-top: var(--space-vertical-02);
 }
 
 .msrd .msrd-Profile--descriptionSize03 .msrd-Profile-description {
@@ -132,9 +131,17 @@
   width: 100%;
 }
 
-.msrd .msrd-Profile--round .msrd-Profile-image {
-  border-radius: 500px;
-  height: min-content;
+.msrd .msrd-Profile--round .msrd-Profile-image  {
+  border-radius: 50%;
+}
+
+.msrd .msrd-Profile--round .msrd-Profile-image img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.msrd .msrd-Profile--column .msrd-Profile-url {
+  margin-bottom: 0;
 }
 
 .msrd .msrd-Profile--column .msrd-Profile-image {
