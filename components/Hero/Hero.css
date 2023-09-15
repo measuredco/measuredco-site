@@ -4,7 +4,14 @@
   letter-spacing: var(--font-09-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: 0;
+  max-width: 9.5em;
   text-wrap: balance;
+}
+
+@supports (text-wrap: balance) {
+  .msrd .msrd-Hero-strapline {
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 48em) {
@@ -21,6 +28,14 @@
   letter-spacing: var(--font-03-letter-spacing);
   margin-bottom: var(--space-vertical-04);
   margin-top: 0;
+  max-width: 30em;
+  text-wrap: balance;
+}
+
+@supports (text-wrap: balance) {
+  .msrd .msrd-Hero-description {
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 48em) {
