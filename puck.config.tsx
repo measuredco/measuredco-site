@@ -105,6 +105,7 @@ type Props = {
     cards: {
       artifact: string;
       headingLevel: "1" | "2" | "3" | "4" | "5" | "6" | "";
+      link: string;
       title: string;
       description: string;
     }[];
@@ -249,6 +250,10 @@ export const config: Config<Props, RootProps> = {
                   label: "ui ⬒",
                   value: "⬒",
                 },
+                {
+                  label: "arrow 🡒",
+                  value: "🡒",
+                },
               ],
             },
             headingLevel: {
@@ -263,6 +268,9 @@ export const config: Config<Props, RootProps> = {
                 { label: "H6", value: "6" },
               ],
             },
+            link: {
+              type: "text",
+            },
             title: {
               type: "text",
             },
@@ -273,6 +281,7 @@ export const config: Config<Props, RootProps> = {
           defaultItemProps: {
             artifact: "#",
             headingLevel: "3",
+            link: "",
             title: "Card",
             description: "Description",
           },
@@ -284,6 +293,7 @@ export const config: Config<Props, RootProps> = {
           {
             artifact: "#",
             headingLevel: "3",
+            link: "",
             title: "Card",
             description: "Description",
           },
@@ -296,6 +306,7 @@ export const config: Config<Props, RootProps> = {
               <Card
                 artifact={card.artifact}
                 headingLevel={card.headingLevel}
+                link={card.link}
                 title={card.title}
                 description={card.description}
                 key={idx}
