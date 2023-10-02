@@ -1,9 +1,4 @@
-import type {
-  ComponentConfig,
-  Config,
-  DefaultRootProps,
-  Fields,
-} from "@measured/puck";
+import type { Config, DefaultRootProps, Fields } from "@measured/puck";
 
 import {
   Base,
