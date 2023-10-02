@@ -1,13 +1,7 @@
 .msrd .msrd-Artifact {
-  color: var(--color-brand);
+  color: currentColor;
   display: block;
   font: var(--font-08);
   font-weight: 100;
   letter-spacing: var(--font-08-letter-spacing);
-}
-
-@media (prefers-color-scheme: dark) {
-  .msrd .msrd-Artifact {
-    color: var(--color-brand-inverted);
-  }
 }

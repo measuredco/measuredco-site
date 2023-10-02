@@ -23,14 +23,71 @@
 .msrd .msrd-Card {
   border: solid 0.0625rem var(--color-grey-8);
   border-radius: 1rem;
+  color: inherit;
   padding: var(--space-vertical-03) var(--space-horizontal)
     var(--space-vertical-05);
   width: 100%;
 }
 
+.msrd a.msrd-Card--link {
+  box-shadow: 0 0 12px
+  color-mix(in srgb, var(--color-interactive) 0%, transparent);
+  transition: box-shadow 0.1s;
+}
+
+.msrd .msrd-Card--link:hover,
+.msrd .msrd-Card--link:focus {
+  box-shadow: 0 0 12px
+    color-mix(in srgb, var(--color-interactive-focus) 15%, transparent);
+}
+
+.msrd .msrd-Card--link:active {
+  box-shadow: 0 0 6px
+    color-mix(in srgb, var(--color-interactive-active) 10%, transparent);
+}
+
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Card {
     border-color: var(--color-grey-2);
+  }
+}
+
+.msrd .msrd-Card-artifact {
+  color: var(--color-brand);
+  transition: color 0.1s, transform 0.1s;
+}
+
+.msrd .msrd-Card--link .msrd-Card-artifact {
+  color: var(--color-interactive);
+}
+
+.msrd .msrd-Card--link:hover .msrd-Card-artifact,
+.msrd .msrd-Card--link:focus .msrd-Card-artifact {
+  color: var(--color-interactive-focus);
+  transform: translateX(6px);
+}
+
+.msrd .msrd-Card--link:active .msrd-Card-artifact {
+  color: var(--color-interactive-active);
+  transform: translateX(8px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Card-artifact {
+    color: var(--color-brand-inverted);
+  }
+
+  .msrd .msrd-Card--link .msrd-Card-artifact {
+    color: var(--color-interactive-inverted);
+  }
+
+  .msrd .msrd-Card--link:hover .msrd-Card-artifact,
+  .msrd .msrd-Card--link:focus .msrd-Card-artifact {
+    color: var(--color-interactive-inverted-focus);
+  }
+
+  .msrd .msrd-Card--link:active .msrd-Card-artifact {
+    color: var(--color-interactive-inverted-active);
   }
 }
 
