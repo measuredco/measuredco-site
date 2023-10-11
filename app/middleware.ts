@@ -9,5 +9,9 @@ export async function middleware(req: NextRequest) {
 
   await supabase.auth.getSession();
 
+  if (req.nextUrl.pathname.endsWith("/edit")) {
+    res.headers.set("x-middleware-cache", "no-cache");
+  }
+
   return res;
 }
