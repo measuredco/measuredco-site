@@ -1,55 +1,252 @@
-.msrd .msrd-Markdown h1 {
-  font: var(--font-12);
-  font-weight: 800;
-  letter-spacing: var(--font-12-letter-spacing);
-  margin: 0;
-  margin-bottom: var(--space-vertical-04);
+.msrd .msrd-Markdown {
+  font: var(--font-03);
+  letter-spacing: var(--font-03-letter-spacing);
 }
 
-.msrd .msrd-Markdown h2 {
-  font: var(--font-10);
-  font-weight: 800;
-  letter-spacing: var(--font-10-letter-spacing);
-  margin: 0;
-  margin-bottom: var(--space-vertical-04);
+.msrd .msrd-Markdown--measured {
+  max-width: 34em;
 }
 
-.msrd .msrd-Markdown h3 {
-  font: var(--font-08);
-  font-weight: 800;
-  letter-spacing: var(--font-08-letter-spacing);
-  margin: 0;
-  margin-bottom: var(--space-vertical-04);
+.msrd .msrd-Markdown--inline {
+  font: inherit;
+  letter-spacing: inherit;
+  max-width: 100%;
 }
 
-.msrd .msrd-Markdown h4 {
-  font: var(--font-06);
-  font-weight: 700;
-  letter-spacing: var(--font-06-letter-spacing);
-  margin: 0;
-  margin-bottom: var(--space-vertical-04);
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown {
+    font: var(--font-04);
+    letter-spacing: var(--font-04-letter-spacing);
+  }
+
+  .msrd .msrd-Markdown--inline {
+    font: inherit;
+    letter-spacing: inherit;
+  }
 }
 
-.msrd .msrd-Markdown h5 {
-  font: var(--font-05);
-  font-weight: 700;
-  letter-spacing: var(--font-05-letter-spacing);
-  margin: 0;
-  margin-bottom: var(--space-vertical-04);
+.msrd .msrd-Markdown blockquote {
+  margin-bottom: var(--space-vertical-03);
+  margin-left: 1em;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.msrd .msrd-Markdown blockquote p {
+  margin-bottom: var(--space-vertical-03);
+  quotes: "“" "”" "‘" "’";
+}
+
+.msrd .msrd-Markdown blockquote p:first-child::before {
+  content: open-quote;
+  margin-left: -0.66ch;
+}
+
+.msrd .msrd-Markdown blockquote p:first-child::after {
+  content: close-quote;
+}
+
+.msrd .msrd-Markdown blockquote p + p:last-child {
+  text-align: right;
+  font: var(--font-02);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown blockquote p + p:last-child {
+    font: var(--font-03);
+  }
+}
+
+.msrd .msrd-Markdown code {
+  background: var(--color-grey-9);
+  border-radius: 0.25em;
+  font: var(--font-02);
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-weight: inherit;
+  letter-spacing: 0;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Markdown code {
+    background: var(--color-grey-1);
+  }
+}
+
+.msrd .msrd-Markdown > code {
+  display: block;
+  margin-bottom: var(--space-vertical);
+  overflow-x: auto;
+  padding: var(--space-vertical);
+  white-space: pre;
+  width: 100%;
 }
 
 .msrd .msrd-Markdown h6 {
+  font: var(--font-02);
+  font-weight: 700;
+  letter-spacing: var(--font-02-letter-spacing);
+  margin-bottom: var(--space-vertical-03);
+  margin-top: var(--space-vertical);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown h6 {
+    margin-bottom: var(--space-vertical);
+    margin-top: var(--space-vertical-06);
+  }
+}
+
+.msrd .msrd-Markdown h5 {
+  font: var(--font-03);
+  font-weight: 700;
+  letter-spacing: var(--font-03-letter-spacing);
+  margin-bottom: var(--space-vertical-03);
+  margin-top: var(--space-vertical);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown h5 {
+    font: var(--font-04);
+    font-weight: 700;
+    letter-spacing: var(--font-04-letter-spacing);
+    margin-bottom: var(--space-vertical);
+    margin-top: var(--space-vertical-06);
+  }
+}
+
+.msrd .msrd-Markdown h4 {
   font: var(--font-04);
   font-weight: 700;
   letter-spacing: var(--font-04-letter-spacing);
-  margin: 0;
-  margin-bottom: var(--space-vertical-04);
+  margin-bottom: var(--space-vertical-03);
+  margin-top: var(--space-vertical);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown h4 {
+    font: var(--font-05);
+    font-weight: 700;
+    letter-spacing: var(--font-05-letter-spacing);
+    margin-bottom: var(--space-vertical);
+    margin-top: var(--space-vertical-06);
+  }
+}
+
+.msrd .msrd-Markdown h3 {
+  font: var(--font-05);
+  font-weight: 700;
+  letter-spacing: var(--font-05-letter-spacing);
+  margin-bottom: var(--space-vertical-03);
+  margin-top: var(--space-vertical);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown h3 {
+    font: var(--font-06);
+    font-weight: 700;
+    letter-spacing: var(--font-06-letter-spacing);
+    margin-bottom: var(--space-vertical);
+    margin-top: var(--space-vertical-06);
+  }
+}
+
+.msrd .msrd-Markdown h2 {
+  font: var(--font-07);
+  font-weight: 700;
+  letter-spacing: var(--font-07-letter-spacing);
+  margin-bottom: var(--space-vertical-03);
+  margin-top: var(--space-vertical);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown h2 {
+    font: var(--font-08);
+    font-weight: 700;
+    letter-spacing: var(--font-08-letter-spacing);
+    margin-bottom: var(--space-vertical);
+    margin-top: var(--space-vertical-06);
+  }
+}
+
+.msrd .msrd-Markdown h1 {
+  font: var(--font-09);
+  font-weight: 800;
+  letter-spacing: var(--font-09-letter-spacing);
+  margin-bottom: var(--space-vertical-06);
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown h1 {
+    font: var(--font-10);
+    font-weight: 800;
+    letter-spacing: var(--font-10-letter-spacing);
+  }
+}
+
+.msrd .msrd-Markdown h1 + h2,
+.msrd .msrd-Markdown h2 + h3,
+.msrd .msrd-Markdown h3 + h4,
+.msrd .msrd-Markdown h4 + h5,
+.msrd .msrd-Markdown h5 + h6  {
+  margin-top: 0;
+}
+
+.msrd .msrd-Markdown hr {
+  background-color: var(--color-grey-8);
+  border: 0;
+  color: var(--color-grey-8);
+  height: calc(1rem / 16);
+  margin-bottom: var(--space-vertical);
+  margin-top: 0;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Markdown hr {
+    background-color: var(--color-grey-2);
+  }
+}
+
+.msrd .msrd-Markdown li {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.msrd .msrd-Markdown li::before {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 1.5em;
+}
+
+.msrd .msrd-Markdown ol,
+.msrd .msrd-Markdown ul {
+  list-style: none;
+  margin-bottom: var(--space-vertical);
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.msrd .msrd-Markdown ol {
+  counter-reset: list;
+}
+
+.msrd .msrd-Markdown ol > li::before {
+  content: counter(list) ".";
+  counter-increment: list;
+}
+
+.msrd .msrd-Markdown ul > li::before {
+  content: "•";
 }
 
 .msrd .msrd-Markdown p {
-  font: var(--font-03);
-  letter-spacing: var(--font-03-letter-spacing);
-  margin-bottom: var(--space-vertical-04);
+  margin-bottom: var(--space-vertical);
+  margin-top: 0;
+  word-wrap: break-word;
 }
 
 .msrd .msrd-Markdown--left {
@@ -62,4 +259,12 @@
 
 .msrd .msrd-Markdown--right {
   text-align: right;
+}
+
+.msrd .msrd-Markdown > :first-child {
+  margin-top: 0;
+}
+
+.msrd .msrd-Markdown > :last-child {
+  margin-bottom: 0;
 }

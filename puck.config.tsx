@@ -56,9 +56,8 @@ type Props = {
   };
   Markdown: {
     text: string;
-    maxWidth: string;
     align: "left" | "center" | "right";
-    sectionWidth: "narrow" | "";
+    measured: boolean;
   };
   Paragraph: {
     size: "" | "small" | "large";
@@ -432,26 +431,22 @@ export const config: Config<Props, RootProps> = {
             { label: "Right", value: "right" },
           ],
         },
-        sectionWidth: {
+        measured: {
           type: "radio",
           options: [
-            { label: "Default", value: "" },
-            { label: "Narrow", value: "narrow" },
+            { label: "Full Width", value: false },
+            { label: "Measured", value: true },
           ],
-        },
-        maxWidth: {
-          type: "text",
         },
       },
       defaultProps: {
         text: "## Markdown",
         align: "left",
-        maxWidth: "",
-        sectionWidth: "",
+        measured: false,
       },
-      render: ({ text, align, maxWidth, sectionWidth }) => (
-        <Section width={sectionWidth}>
-          <Markdown align={align} maxWidth={maxWidth}>
+      render: ({ text, align, measured }) => (
+        <Section>
+          <Markdown align={align} measured={measured}>
             {text}
           </Markdown>
         </Section>

@@ -1,30 +1,31 @@
+import classNames from "classnames";
 import { useEffect, useState } from "react";
-
-import { unified } from "unified";
-import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import remarkParse from "remark-parse";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
+import { unified } from "unified";
 
 import "./Markdown.css";
 
 const defaultTagNames = [
-  "b",
-  "strong",
-  "em",
   "a",
-  "p",
-  "br",
+  "blockquote",
+  "code",
+  "em",
   "h1",
   "h2",
   "h3",
   "h4",
   "h5",
   "h6",
-  "ul",
-  "ol",
-  "li",
+  "hr",
   "img",
+  "li",
+  "ol",
+  "p",
+  "strong",
+  "ul",
 ];
 
 const processMarkdown = (markdown: string, tagNames = defaultTagNames) =>
@@ -40,22 +41,33 @@ const processMarkdown = (markdown: string, tagNames = defaultTagNames) =>
 export const Markdown = ({
   align = "left",
   children,
+  inline = false,
+  measured = false,
   tagNames = defaultTagNames,
-  maxWidth,
 }) => {
+  let Element: any = "div";
   const [textProcessed, setTextProcessed] = useState(
     processMarkdown(children, tagNames)
   );
+
+  if (inline) {
+    Element = "span";
+  }
 
   useEffect(() => {
     setTextProcessed(processMarkdown(children, tagNames));
   }, [children]);
 
   return (
-    <div
-      className={`msrd-Markdown${align ? ` msrd-Markdown--${align}` : ""}`}
+    <Element
+      className={classNames({
+        "msrd-Markdown": true,
+        "msrd-Markdown--inline": inline,
+        "msrd-Markdown--measured": measured,
+        "msrd-Markdown--center": align === "center",
+        "msrd-Markdown--right": align === "right",
+      })}
       dangerouslySetInnerHTML={{ __html: textProcessed }}
-      style={{ maxWidth }}
     />
   );
 };
