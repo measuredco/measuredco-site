@@ -94,9 +94,17 @@ html {
   padding-top: var(--space-vertical-01);
 }
 
+.msrd .msrd-Header-link--current {
+  color: var(--color-brand);
+}
+
 @media (hover: hover) {
   .msrd .msrd-Header-link:hover {
     color: var(--color-grey-1);
+  }
+
+  .msrd .msrd-Header-link--current:hover {
+    color: var(--color-rose-2);
   }
 }
 
@@ -104,15 +112,31 @@ html {
   color: var(--color-grey-2);
 }
 
+.msrd .msrd-Header-link--current:active {
+  color: var(--color-rose-1);
+}
+
 @media (prefers-color-scheme: dark) {
+  .msrd .msrd-Header-link--current {
+    color: var(--color-brand-inverted);
+  }
+
   @media (hover: hover) {
     .msrd .msrd-Header-link:hover {
       color: var(--color-grey-9);
+    }
+
+    .msrd .msrd-Header-link--current:hover {
+      color: var(--color-rose-6);
     }
   }
 
   .msrd .msrd-Header-link:active {
     color: var(--color-grey-8);
+  }
+
+  .msrd .msrd-Header-link--current:active {
+    color: var(--color-rose-7);
   }
 }
 
