@@ -115,7 +115,7 @@ type Props = {
 };
 
 type RootProps = {
-  headerLinks: { href: string; label: string }[];
+  headerLinks: { current: boolean; href: string; label: string }[];
 } & DefaultRootProps;
 
 const profileFields: Fields<ProfileProps> = {
@@ -182,6 +182,13 @@ export const config: Config<Props, RootProps> = {
       headerLinks: {
         type: "array",
         arrayFields: {
+          current: {
+            type: "radio",
+            options: [
+              { label: "Default", value: false },
+              { label: "Current page", value: true },
+            ],
+          },
           href: {
             type: "text",
           },
@@ -190,6 +197,7 @@ export const config: Config<Props, RootProps> = {
           },
         },
         defaultItemProps: {
+          current: false,
           href: "#",
           label: "Page",
         },

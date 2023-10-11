@@ -5,7 +5,11 @@ import Menu from "./components/Menu";
 import MenuButton from "./components/MenuButton";
 import "./Header.css";
 
-const Header = ({ links }: { links: { href: string; label: string }[] }) => {
+const Header = ({
+  links,
+}: {
+  links: { current: boolean; href: string; label: string }[];
+}) => {
   let LogoElement: any = "div";
   const pathname = usePathname();
 
