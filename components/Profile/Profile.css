@@ -44,43 +44,54 @@
 }
 
 .msrd .msrd-Profile-title {
-  font: var(--font-05);
-  font-weight: 700;
-  letter-spacing: var(--font-05-letter-spacing);
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.msrd .msrd-Profile-subtitle {
   font: var(--font-04);
+  font-weight: 700;
   letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: 0;
   margin-top: 0;
 }
 
+@media (min-width: 48em) {
+  .msrd .msrd-Profile-title {
+    font: var(--font-05);
+    font-weight: 700;
+    letter-spacing: var(--font-05-letter-spacing);
+  }
+}
+
+.msrd .msrd-Profile-subtitle {
+  font: var(--font-03);
+  letter-spacing: var(--font-03-letter-spacing);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Profile-subtitle {
+    font: var(--font-04);
+    letter-spacing: var(--font-04-letter-spacing);
+  }
+}
+
 .msrd .msrd-Profile-description {
-  font: var(--font-05);
-  letter-spacing: var(--font-05-letter-spacing);
   margin-bottom: var(--space-vertical-02);
   margin-top: var(--space-vertical-02);
 }
 
-.msrd .msrd-Profile--descriptionSize03 .msrd-Profile-description {
+.msrd .msrd-Profile-url {
   font: var(--font-03);
   letter-spacing: var(--font-03-letter-spacing);
-}
-
-.msrd .msrd-Profile--descriptionSize04 .msrd-Profile-description {
-  font: var(--font-04);
-  letter-spacing: var(--font-04-letter-spacing);
-}
-
-.msrd .msrd-Profile-url {
-  font: var(--font-04);
-  letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: var(--space-vertical);
   margin-top: 0;
 }
+
+@media (min-width: 48em) {
+  .msrd .msrd-Profile-url {
+    font: var(--font-04);
+    letter-spacing: var(--font-04-letter-spacing);
+  }
+}
+
 
 @media (min-width: 48em) {
   .msrd .msrd-Profile-url {

@@ -17,7 +17,7 @@ export const Card = ({ artifact, headingLevel, link, title, description }) => {
       <div className="msrd-Card-artifact">
         <Artifact>{artifact}</Artifact>
       </div>
-      <Heading level={headingLevel} size="05">
+      <Heading level={headingLevel} size="4">
         {title}
       </Heading>
       <Space size="03" />

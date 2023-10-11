@@ -27,7 +27,7 @@ type ProfileProps = {
   subtitle: string;
   image: string;
   description: string;
-  descriptionSize: "03" | "04" | "05";
+  descriptionSize: "" | "small" | "large";
   url: string;
   cta: string;
   imageVariant: "" | "round";
@@ -43,39 +43,7 @@ type Props = {
   };
   Heading: {
     level: "1" | "2" | "3" | "4" | "5" | "6" | "";
-    desktopSize:
-      | ""
-      | "01"
-      | "02"
-      | "03"
-      | "04"
-      | "05"
-      | "06"
-      | "07"
-      | "08"
-      | "09"
-      | "10"
-      | "11"
-      | "12"
-      | "13"
-      | "14"
-      | "15";
-    size:
-      | "01"
-      | "02"
-      | "03"
-      | "04"
-      | "05"
-      | "06"
-      | "07"
-      | "08"
-      | "09"
-      | "10"
-      | "11"
-      | "12"
-      | "13"
-      | "14"
-      | "15";
+    size: "1" | "2" | "3" | "4" | "5" | "6" | "display";
     text: string;
     id: string;
     maxWidth: string;
@@ -93,8 +61,7 @@ type Props = {
     sectionWidth: "narrow" | "";
   };
   Paragraph: {
-    desktopSize: "" | "01" | "02" | "03" | "04" | "05";
-    size: "01" | "02" | "03" | "04" | "05";
+    size: "" | "small" | "large";
     text: string;
     maxWidth: string;
     align: "left" | "center" | "right";
@@ -125,9 +92,9 @@ const profileFields: Fields<ProfileProps> = {
   descriptionSize: {
     type: "select",
     options: [
-      { label: "03", value: "03" },
-      { label: "04", value: "04" },
-      { label: "05", value: "05" },
+      { label: "Default", value: "" },
+      { label: "Small", value: "small" },
+      { label: "Large", value: "large" },
     ],
   },
   image: { type: "text" },
@@ -163,7 +130,7 @@ const defaultProfileProps: ProfileProps = {
   image: "Screenshot-BT-01_jpqlkt.tiff",
   imageVariant: "",
   description: "Description",
-  descriptionSize: "05",
+  descriptionSize: "",
   url: "example.com",
   cta: "example.com",
   reverse: false,
@@ -373,42 +340,13 @@ export const config: Config<Props, RootProps> = {
         size: {
           type: "select",
           options: [
-            { label: "01", value: "01" },
-            { label: "02", value: "02" },
-            { label: "03", value: "03" },
-            { label: "04", value: "04" },
-            { label: "05", value: "05" },
-            { label: "06", value: "06" },
-            { label: "07", value: "07" },
-            { label: "08", value: "08" },
-            { label: "09", value: "09" },
-            { label: "10", value: "10" },
-            { label: "11", value: "11" },
-            { label: "12", value: "12" },
-            { label: "13", value: "13" },
-            { label: "14", value: "14" },
-            { label: "15", value: "15" },
-          ],
-        },
-        desktopSize: {
-          type: "select",
-          options: [
-            { label: "", value: "" },
-            { label: "01", value: "01" },
-            { label: "02", value: "02" },
-            { label: "03", value: "03" },
-            { label: "04", value: "04" },
-            { label: "05", value: "05" },
-            { label: "06", value: "06" },
-            { label: "07", value: "07" },
-            { label: "08", value: "08" },
-            { label: "09", value: "09" },
-            { label: "10", value: "10" },
-            { label: "11", value: "11" },
-            { label: "12", value: "12" },
-            { label: "13", value: "13" },
-            { label: "14", value: "14" },
-            { label: "15", value: "15" },
+            { label: "6", value: "6" },
+            { label: "5", value: "5" },
+            { label: "4", value: "4" },
+            { label: "3", value: "3" },
+            { label: "2", value: "2" },
+            { label: "1", value: "1" },
+            { label: "display", value: "display" },
           ],
         },
         level: {
@@ -432,17 +370,15 @@ export const config: Config<Props, RootProps> = {
       },
       defaultProps: {
         level: "",
-        desktopSize: "",
-        size: "10",
+        size: "1",
         text: "Heading",
         id: "",
         maxWidth: "",
         align: "left",
       },
-      render: ({ desktopSize, level, size, text, id, maxWidth, align }) => (
+      render: ({ level, size, text, id, maxWidth, align }) => (
         <Section>
           <Heading
-            desktopSize={desktopSize}
             level={level}
             size={size}
             id={id}
@@ -535,23 +471,9 @@ export const config: Config<Props, RootProps> = {
         size: {
           type: "select",
           options: [
-            { label: "", value: "" },
-            { label: "01", value: "01" },
-            { label: "02", value: "02" },
-            { label: "03", value: "03" },
-            { label: "04", value: "04" },
-            { label: "05", value: "05" },
-          ],
-        },
-        desktopSize: {
-          type: "select",
-          options: [
-            { label: "", value: "" },
-            { label: "01", value: "01" },
-            { label: "02", value: "02" },
-            { label: "03", value: "03" },
-            { label: "04", value: "04" },
-            { label: "05", value: "05" },
+            { label: "Default", value: "" },
+            { label: "Small", value: "small" },
+            { label: "Large", value: "large" },
           ],
         },
         maxWidth: {
@@ -559,20 +481,14 @@ export const config: Config<Props, RootProps> = {
         },
       },
       defaultProps: {
-        desktopSize: "",
-        size: "03",
+        size: "",
         text: "Paragraph",
         maxWidth: "",
         align: "left",
       },
-      render: ({ desktopSize, size, text, maxWidth, align }) => (
+      render: ({ size, text, maxWidth, align }) => (
         <Section>
-          <Paragraph
-            size={size}
-            desktopSize={desktopSize}
-            maxWidth={maxWidth}
-            align={align}
-          >
+          <Paragraph size={size} maxWidth={maxWidth} align={align}>
             {text}
           </Paragraph>
         </Section>
