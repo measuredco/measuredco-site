@@ -62,24 +62,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
     var body = document.getElementsByTagName("body")[0];
-    var header = document.getElementById("msrd-header");
     var menu = document.getElementById("msrd-menu");
     var menuButton = document.getElementById("msrd-menuButton");
 
-    if (header && menu && menuButton) {
+    if (menu && menuButton) {
 
       function toggleMenu() {
         body.classList.toggle("msrd-u-overflowHidden");
         menu.classList.toggle("msrd-HeaderMenu--open");
         menuButton.classList.toggle("msrd-HeaderMenuButton--menuOpen");
-      }
-
-      function toggleHeaderBorder() {
-        if (window.scrollY >= 24) {
-          header.classList.add("msrd-Header--windowScrolled");
-          return;
-        }
-        header.classList.remove("msrd-Header--windowScrolled");
       }
 
       menu.addEventListener("click", function (event) {
@@ -100,9 +91,6 @@ export default function RootLayout({
           menuButton.classList.remove("msrd-HeaderMenuButton--menuOpen");
         }
       });
-
-      window.addEventListener("domReady", toggleHeaderBorder);
-      window.addEventListener("scroll", toggleHeaderBorder);
     }`,
           }}
         />

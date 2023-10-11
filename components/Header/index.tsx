@@ -1,5 +1,6 @@
+import classNames from "classnames";
 import { usePathname } from "next/navigation";
-import React, { use } from "react";
+import React, { useEffect, useState } from "react";
 
 import Menu from "./components/Menu";
 import MenuButton from "./components/MenuButton";
@@ -12,13 +13,42 @@ const Header = ({
 }) => {
   let LogoElement: any = "div";
   const pathname = usePathname();
+  const homepage = Boolean(pathname === "/" || pathname === "/edit");
+  const [headerBorder, setHeaderBorder] = useState(!homepage);
 
-  if (pathname === "/" || pathname === "/edit") {
+  if (homepage) {
     LogoElement = "h1";
   }
 
+  useEffect(() => {
+    if (homepage === false) {
+      return;
+    }
+
+    const toggleHeaderBorder = () => {
+      if (window.scrollY >= 24) {
+        setHeaderBorder(true);
+        return;
+      }
+      setHeaderBorder(false);
+    };
+
+    toggleHeaderBorder();
+    window.addEventListener("scroll", toggleHeaderBorder);
+
+    return () => {
+      window.removeEventListener("scroll", toggleHeaderBorder);
+    };
+  }, [homepage]);
+
   return (
-    <header className="msrd-Header" id="msrd-header">
+    <header
+      className={classNames({
+        "msrd-Header": true,
+        "msrd-Header--border": headerBorder,
+      })}
+      id="msrd-header"
+    >
       <div className="msrd-Header-inner">
         <LogoElement className="msrd-Header-logo">
           <a className="msrd-Header-link" href="/">

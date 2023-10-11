@@ -40,13 +40,13 @@ html {
   right: 0;
 }
 
-.msrd .msrd-Header--windowScrolled:after {
+.msrd .msrd-Header--border:after {
   border-bottom-color: var(--color-grey-8);
   transition: border-bottom-color 0.25s var(--easing-cubic-bezier-easy-ease);
 }
 
 @media (prefers-color-scheme: dark) {
-  .msrd .msrd-Header--windowScrolled:after {
+  .msrd .msrd-Header--border:after {
     border-bottom-color: var(--color-grey-2);
   }
 }
