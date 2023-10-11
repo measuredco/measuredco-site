@@ -76,7 +76,21 @@ type Props = {
       description: string;
     }[];
   };
-  Space: {};
+  Space: {
+    size:
+      | "01"
+      | "02"
+      | "03"
+      | "04"
+      | "05"
+      | "06"
+      | "07"
+      | "08"
+      | "09"
+      | "10"
+      | "11"
+      | "12";
+  };
   Technologies: {};
 };
 
@@ -544,7 +558,7 @@ export const config: Config<Props, RootProps> = {
           type: "select",
         },
       },
-      render: Space,
+      render: ({ size }) => <Space size={size} />,
     },
     Technologies: {
       render: () => (

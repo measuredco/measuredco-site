@@ -9,21 +9,24 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@measured/puck-plugin-heading-analyzer@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.6.0.tgz#b0b5b8d68a14e8fbbf71bf1c21ba4cbe8bd74e0c"
-  integrity sha512-vXlBzvzAJcSH8ta80gktA4yoC5bMABl4z+IPmCXomxtVMIbCzxrp5XJfFzrUZcO0Gsktcgxy/kFPpz34gZZg8w==
+"@measured/puck-plugin-heading-analyzer@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.9.0.tgz#bce135b9af6a95e324d5a627be8e6a4760fc9f9f"
+  integrity sha512-k3vHHt7aDlSeEyvDrGNNeFnGBYJiONBFGQjITn5Ifnm8gss04zxyXKyK+nUWxH3CGpm5P7n64PtP7TqzUUjkqA==
   dependencies:
     react-from-json "^0.7.2"
 
-"@measured/puck@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.6.2.tgz#23faa637b9a9f233b410b1dd474fbef4acd2bd09"
-  integrity sha512-u4Rq2BNaab0qvYzXPPkl7zN64QaCdu/zn2OGo9w8JTeVlTkueaOWODMT1OBelgOybtB/4XVZdp4cgDk6aEAsTA==
+"@measured/puck@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.9.0.tgz#bea2a9b45b946a0250716981f465e6b67aa90fde"
+  integrity sha512-oeYNIQdGLfnEimZnQxk1nS+beRtTqwFACjx6MWJKchMVYyuJ7H0nCkKbr+Gi0iiTgI24M+VnCGf3MagD19rNTQ==
   dependencies:
+    deep-diff "^1.0.2"
+    event-emitter "^0.3.5"
     react-beautiful-dnd "^13.1.1"
-    react-feather "^2.0.10"
+    react-hotkeys-hook "^4.4.1"
     react-spinners "^0.13.8"
+    use-debounce "^9.0.4"
 
 "@next/env@13.4.5":
   version "13.4.5"
@@ -597,6 +600,11 @@ decode-named-character-reference@^1.0.0:
   dependencies:
     character-entities "^2.0.0"
 
+deep-diff@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/deep-diff/-/deep-diff-1.0.2.tgz#afd3d1f749115be965e89c63edc7abb1506b9c26"
+  integrity sha512-aWS3UIVH+NPGCD1kki+DCU9Dua032iSsO43LqQpcs4R3+dVv7tX0qBGjiVHJHjplsoUM2XRO/KB92glqc68awg==
+
 define-properties@^1.1.3, define-properties@^1.1.4, define-properties@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.2.0.tgz#52988570670c9eacedd8064f4a990f2405849bd5"
@@ -706,7 +714,7 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-es5-ext@^0.10.35, es5-ext@^0.10.50:
+es5-ext@^0.10.35, es5-ext@^0.10.50, es5-ext@~0.10.14:
   version "0.10.62"
   resolved "https://registry.yarnpkg.com/es5-ext/-/es5-ext-0.10.62.tgz#5e6adc19a6da524bf3d1e02bbc8960e5eb49a9a5"
   integrity sha512-BHLqn0klhEpnOKSrzn/Xsz2UIW8j+cGmo9JLzr8BiUapV8hPL9+FliFqjwr9ngW7jWdnxv6eO+/LqyhJVqgrjA==
@@ -891,6 +899,14 @@ esutils@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
+
+event-emitter@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/event-emitter/-/event-emitter-0.3.5.tgz#df8c69eef1647923c7157b9ce83840610b02cc39"
+  integrity sha512-D9rRn9y7kLPnJ+hMq7S/nhvoKwwvVJahBi2BPmx3bvbsEdK3W9ii8cBSGjP+72/LnM4n6fo3+dkCX5FeTQruXA==
+  dependencies:
+    d "1"
+    es5-ext "~0.10.14"
 
 ext@^1.1.2:
   version "1.7.0"
@@ -1908,6 +1924,11 @@ react-from-json@^0.7.2:
   resolved "https://registry.yarnpkg.com/react-from-json/-/react-from-json-0.7.2.tgz#7f4b354f6f1d7c78f408e25d0c1ed115359d85f0"
   integrity sha512-of/jhr45fs4S+GefkRsj4T5wGp+T9o8ddaxni6nAUyel/VrLFS6ogDbnzaSX/UFfBT5Xah59OVKtQtdrYsBWPw==
 
+react-hotkeys-hook@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/react-hotkeys-hook/-/react-hotkeys-hook-4.4.1.tgz#1f7a7a1c9c21d4fa3280bf340fcca8fd77d81994"
+  integrity sha512-sClBMBioFEgFGYLTWWRKvhxcCx1DRznd+wkFHwQZspnRBkHTgruKIHptlK/U/2DPX8BhHoRGzpMVWUXMmdZlmw==
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -2335,6 +2356,11 @@ unist-util-visit@^4.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^5.0.0"
     unist-util-visit-parents "^5.1.1"
+
+use-debounce@^9.0.4:
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/use-debounce/-/use-debounce-9.0.4.tgz#51d25d856fbdfeb537553972ce3943b897f1ac85"
+  integrity sha512-6X8H/mikbrt0XE8e+JXRtZ8yYVvKkdYRfmIhWZYsP8rcNs9hk3APV8Ua2mFkKRLcJKVdnX2/Vwrmg2GWKUQEaQ==
 
 use-memo-one@^1.1.1:
   version "1.1.3"
