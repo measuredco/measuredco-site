@@ -10,13 +10,7 @@ export async function generateMetadata({
 }: {
   params: { puckPath: string[] };
 }): Promise<Metadata> {
-  const { isEdit, path } = resolvePuckPath(params.puckPath);
-
-  if (isEdit) {
-    return {
-      title: `${path ? `Puck path ${path}` : "Puck"}`,
-    };
-  }
+  const { path } = resolvePuckPath(params.puckPath);
 
   const pageRes = await supabase
     .from("puck")
