@@ -94,7 +94,9 @@
   --space-scale-vertical-09: calc(var(--space-scale-vertical) * 3); /* 72 */
   --space-scale-vertical-10: calc(var(--space-scale-vertical) * 3.5); /* 84 */
   --space-scale-vertical-11: calc(var(--space-scale-vertical) * 4); /* 96 */
-  --space-scale-vertical-12: calc(var(--space-scale-vertical) * 4.5); /* 108 */
+  --space-scale-vertical-12: calc(
+    var(--space-scale-vertical) * 4.5
+  ); /* 108   */
   --space-scale-vertical-13: calc(var(--space-scale-vertical) * 5); /* 120 */
   --space-scale-vertical-14: calc(var(--space-scale-vertical) * 6); /* 144 */
 
