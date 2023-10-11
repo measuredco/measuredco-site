@@ -16,6 +16,7 @@ html {
   padding: var(--space-vertical-03) var(--space-horizontal);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 @media (prefers-color-scheme: dark) {
