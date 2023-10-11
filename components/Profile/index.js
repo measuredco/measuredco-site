@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
+import { Paragraph } from "../";
+
 import "./Profile.css";
 
 const Profile = ({
@@ -20,14 +22,16 @@ const Profile = ({
       imageVariant ? `msrd-Profile--${imageVariant}` : ""
     } ${reverse ? `msrd-Profile--reverse` : ""} ${
       direction ? `msrd-Profile--${direction}` : ""
-    } ${
-      descriptionSize ? `msrd-Profile--descriptionSize${descriptionSize}` : ""
     }`}
   >
     <div className="msrd-Profile-content">
       <h3 className="msrd-Profile-title">{title}</h3>
       {subtitle && <p className="msrd-Profile-subtitle">{subtitle}</p>}
-      {description && <p className="msrd-Profile-description">{description}</p>}
+      {description && (
+        <div className="msrd-Profile-description">
+          <Paragraph size={descriptionSize}>{description}</Paragraph>
+        </div>
+      )}
       {url && (
         <p className="msrd-Profile-url">
           <a href={url} target="_blank">

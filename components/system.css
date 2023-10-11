@@ -122,14 +122,14 @@
 
   --leading-scale: var(--space-scale-vertical);
 
-  --leading-scale-01: var(--space-scale-vertical-05);
-  --leading-scale-02: var(--space-scale-vertical-06);
-  --leading-scale-03: var(--space-scale-vertical-07);
-  --leading-scale-04: var(--space-scale-vertical-08);
-  --leading-scale-05: var(--space-scale-vertical-09);
-  --leading-scale-06: var(--space-scale-vertical-10);
-  --leading-scale-07: var(--space-scale-vertical-11);
-  --leading-scale-08: var(--space-scale-vertical-12);
+  --leading-scale-01: var(--space-scale-vertical);
+  --leading-scale-02: calc(var(--space-scale-vertical) * 1.125);
+  --leading-scale-03: calc(var(--space-scale-vertical) * 1.25);
+  --leading-scale-04: calc(var(--space-scale-vertical) * 1.5);
+  --leading-scale-05: calc(var(--space-scale-vertical) * 1.75);
+  --leading-scale-06: calc(var(--space-scale-vertical) * 2);
+  --leading-scale-07: calc(var(--space-scale-vertical) * 2.5);
+  --leading-scale-08: calc(var(--space-scale-vertical) * 4);
 
   /*
    * Classic typographic scale, mathematically corrected.
@@ -142,18 +142,14 @@
   --type-scale-01: 12;
   --type-scale-02: 16;
   --type-scale-03: 18;
-  --type-scale-04: 21;
+  --type-scale-04: 20;
   --type-scale-05: 24;
   --type-scale-06: 28;
   --type-scale-07: 32;
   --type-scale-08: 36;
   --type-scale-09: 42;
   --type-scale-10: 48;
-  --type-scale-11: 55;
-  --type-scale-12: 63;
-  --type-scale-13: 73;
-  --type-scale-14: 84;
-  --type-scale-15: 96;
+  --type-scale-11: 84;
 
   /*
    * Tracking calculated with Inter Dynamic Metrics.
@@ -169,18 +165,14 @@
   --tracking-scale-01: -0.006223544263;
   --tracking-scale-02: -0.01095977856;
   --tracking-scale-03: -0.0143006857;
-  --tracking-scale-04: -0.01756085933;
+  --tracking-scale-04: -0.01673565;
   --tracking-scale-05: -0.01949232757;
   --tracking-scale-06: -0.02090295984;
   --tracking-scale-07: -0.0216048615;
   --tracking-scale-08: -0.02195411336;
   --tracking-scale-09: -0.02217859754;
   --tracking-scale-10: -0.02225738906;
-  --tracking-scale-11: -0.02228743882;
-  --tracking-scale-12: -0.02229689004;
-  --tracking-scale-13: -0.02229945686;
-  --tracking-scale-14: -0.02229992033;
-  --tracking-scale-15: -0.02229999019;
+  --tracking-scale-11: -0.02229992033;
 
   /*
    * Color tokens
@@ -225,28 +217,20 @@
   --font-09-size: calc((var(--type-scale-09) / 16) * 1rem);
   --font-10-size: calc((var(--type-scale-10) / 16) * 1rem);
   --font-11-size: calc((var(--type-scale-11) / 16) * 1rem);
-  --font-12-size: calc((var(--type-scale-12) / 16) * 1rem);
-  --font-13-size: calc((var(--type-scale-13) / 16) * 1rem);
-  --font-14-size: calc((var(--type-scale-14) / 16) * 1rem);
-  --font-15-size: calc((var(--type-scale-15) / 16) * 1rem);
 
   --line-height: calc(var(--leading-scale) / var(--type-scale));
 
   --font-01-line-height: calc(var(--leading-scale-01) / var(--type-scale-01));
   --font-02-line-height: calc(var(--leading-scale-01) / var(--type-scale-02));
-  --font-03-line-height: calc(var(--leading-scale-01) / var(--type-scale-03));
-  --font-04-line-height: calc(var(--leading-scale-02) / var(--type-scale-04));
-  --font-05-line-height: calc(var(--leading-scale-02) / var(--type-scale-05));
-  --font-06-line-height: calc(var(--leading-scale-02) / var(--type-scale-06));
-  --font-07-line-height: calc(var(--leading-scale-03) / var(--type-scale-07));
-  --font-08-line-height: calc(var(--leading-scale-03) / var(--type-scale-08));
-  --font-09-line-height: calc(var(--leading-scale-03) / var(--type-scale-09));
-  --font-10-line-height: calc(var(--leading-scale-04) / var(--type-scale-10));
-  --font-11-line-height: calc(var(--leading-scale-04) / var(--type-scale-11));
-  --font-12-line-height: calc(var(--leading-scale-05) / var(--type-scale-12));
-  --font-13-line-height: calc(var(--leading-scale-06) / var(--type-scale-13));
-  --font-14-line-height: calc(var(--leading-scale-07) / var(--type-scale-14));
-  --font-15-line-height: calc(var(--leading-scale-08) / var(--type-scale-15));
+  --font-03-line-height: calc(var(--leading-scale-02) / var(--type-scale-03));
+  --font-04-line-height: calc(var(--leading-scale-03) / var(--type-scale-04));
+  --font-05-line-height: calc(var(--leading-scale-04) / var(--type-scale-05));
+  --font-06-line-height: calc(var(--leading-scale-04) / var(--type-scale-06));
+  --font-07-line-height: calc(var(--leading-scale-05) / var(--type-scale-07));
+  --font-08-line-height: calc(var(--leading-scale-06) / var(--type-scale-08));
+  --font-09-line-height: calc(var(--leading-scale-06) / var(--type-scale-09));
+  --font-10-line-height: calc(var(--leading-scale-07) / var(--type-scale-10));
+  --font-11-line-height: calc(var(--leading-scale-08) / var(--type-scale-11));
 
   --font: var(--font-size) / var(--line-height) var(--font-family);
 
@@ -261,10 +245,6 @@
   --font-09: var(--font-09-size) / var(--font-09-line-height) var(--font-family);
   --font-10: var(--font-10-size) / var(--font-10-line-height) var(--font-family);
   --font-11: var(--font-11-size) / var(--font-11-line-height) var(--font-family);
-  --font-12: var(--font-12-size) / var(--font-12-line-height) var(--font-family);
-  --font-13: var(--font-13-size) / var(--font-13-line-height) var(--font-family);
-  --font-14: var(--font-14-size) / var(--font-14-line-height) var(--font-family);
-  --font-15: var(--font-15-size) / var(--font-15-line-height) var(--font-family);
 
   --letter-spacing: calc(var(--tracking-scale) * 1em);
 
@@ -279,10 +259,6 @@
   --font-09-letter-spacing: calc(var(--tracking-scale-09) * 1em);
   --font-10-letter-spacing: calc(var(--tracking-scale-10) * 1em);
   --font-11-letter-spacing: calc(var(--tracking-scale-11) * 1em);
-  --font-12-letter-spacing: calc(var(--tracking-scale-12) * 1em);
-  --font-13-letter-spacing: calc(var(--tracking-scale-13) * 1em);
-  --font-14-letter-spacing: calc(var(--tracking-scale-14) * 1em);
-  --font-15-letter-spacing: calc(var(--tracking-scale-15) * 1em);
 
   /*
    * Space tokens
