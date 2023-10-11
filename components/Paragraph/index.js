@@ -11,7 +11,9 @@ const Paragraph = ({ children, size = null, maxWidth, align }) => {
       }`}
       style={{ maxWidth }}
     >
-      <Markdown tagNames={["a", "b", "em", "strong"]}>{children}</Markdown>
+      <Markdown inline tagNames={["a", "b", "code", "em", "strong"]}>
+        {children}
+      </Markdown>
     </p>
   );
 };

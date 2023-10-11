@@ -74,6 +74,10 @@
   max-width: 100%;
 }
 
+.msrd strong {
+  font-weight: 550;
+}
+
 .msrd svg {
   display: block;
   max-width: 100%;
