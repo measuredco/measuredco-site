@@ -15,6 +15,7 @@ const Header = ({
   const pathname = usePathname();
   const homepage = Boolean(pathname === "/" || pathname === "/edit");
   const [headerBorder, setHeaderBorder] = useState(!homepage);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   if (homepage) {
     LogoElement = "h1";
@@ -41,13 +42,36 @@ const Header = ({
     };
   }, [homepage]);
 
+  useEffect(() => {
+    const body = document.body;
+
+    if (menuOpen) {
+      body.classList.add("msrd-u-overflowHidden");
+    } else {
+      body.classList.remove("msrd-u-overflowHidden");
+    }
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.matchMedia("(min-width: 48em)").matches) {
+        setMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <header
       className={classNames({
         "msrd-Header": true,
         "msrd-Header--border": headerBorder,
       })}
-      id="msrd-header"
     >
       <div className="msrd-Header-inner">
         <LogoElement className="msrd-Header-logo">
@@ -68,8 +92,8 @@ const Header = ({
           </a>
         </LogoElement>
         <nav>
-          <MenuButton />
-          <Menu links={links} />
+          <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          <Menu links={links} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </nav>
       </div>
     </header>
