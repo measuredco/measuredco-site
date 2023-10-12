@@ -58,42 +58,6 @@ export default function RootLayout({
           type="application/ld+json"
         />
         {children}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-    var body = document.getElementsByTagName("body")[0];
-    var menu = document.getElementById("msrd-menu");
-    var menuButton = document.getElementById("msrd-menuButton");
-
-    if (menu && menuButton) {
-
-      function toggleMenu() {
-        body.classList.toggle("msrd-u-overflowHidden");
-        menu.classList.toggle("msrd-HeaderMenu--open");
-        menuButton.classList.toggle("msrd-HeaderMenuButton--menuOpen");
-      }
-
-      menu.addEventListener("click", function (event) {
-        if (window.matchMedia("(min-width: 48em)").matches) {
-          return;
-        }
-        if (event.target.tagName === "A") {
-          toggleMenu();
-        }
-      });
-
-      menuButton.addEventListener("click", toggleMenu);
-
-      window.addEventListener("resize", function () {
-        if (window.matchMedia("(min-width: 48em)").matches) {
-          body.classList.remove("msrd-u-overflowHidden");
-          menu.classList.remove("msrd-HeaderMenu--open");
-          menuButton.classList.remove("msrd-HeaderMenuButton--menuOpen");
-        }
-      });
-    }`,
-          }}
-        />
       </body>
     </html>
   );
