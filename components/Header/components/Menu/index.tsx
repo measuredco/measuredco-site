@@ -1,11 +1,14 @@
 import classNames from "classnames";
+import Link from "next/link";
 import React from "react";
 
 const HeaderMenu = ({
+  homepage,
   links = [],
   menuOpen = false,
   setMenuOpen,
 }: {
+  homepage: boolean;
   links: { current: boolean; href: string; label: string }[];
   menuOpen: boolean;
   setMenuOpen: any;
@@ -21,15 +24,18 @@ const HeaderMenu = ({
       if (window.matchMedia("(min-width: 48em)").matches) {
         return;
       }
-      if (element.tagName === "A") {
-        setMenuOpen(!menuOpen);
+      if (
+        element.tagName === "A" &&
+        element.getAttribute("href").startsWith("#")
+      ) {
+        setMenuOpen(false);
       }
     }}
   >
     <ul className="msrd-Header-navItems">
       {links.map(({ current, href, label }, idx) => (
         <li key={href + idx}>
-          <a
+          <Link
             className={classNames({
               "msrd-Header-link": true,
               "msrd-Header-link--current": current,
@@ -37,13 +43,16 @@ const HeaderMenu = ({
             href={href}
           >
             {label}
-          </a>
+          </Link>
         </li>
       ))}
       <li>
-        <a className="msrd-Header-callToAction" href="/#contact">
+        <Link
+          className="msrd-Header-callToAction"
+          href={`${homepage ? "" : "/"}#contact`}
+        >
           Get in touch
-        </a>
+        </Link>
       </li>
     </ul>
   </div>
