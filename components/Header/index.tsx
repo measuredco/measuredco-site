@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -75,7 +76,7 @@ const Header = ({
     >
       <div className="msrd-Header-inner">
         <LogoElement className="msrd-Header-logo">
-          <a className="msrd-Header-link" href="/">
+          <Link className="msrd-Header-link" href="/">
             <svg
               aria-labelledby="measured"
               height="24"
@@ -89,11 +90,16 @@ const Header = ({
                 fill="currentColor"
               />
             </svg>
-          </a>
+          </Link>
         </LogoElement>
         <nav>
           <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-          <Menu links={links} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+          <Menu
+            homepage={homepage}
+            links={links}
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+          />
         </nav>
       </div>
     </header>
