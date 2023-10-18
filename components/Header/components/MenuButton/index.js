@@ -1,8 +1,12 @@
+import classNames from "classnames";
 import React from "react";
 
 const HeaderMenuButton = ({ menuOpen = false, setMenuOpen }) => (
   <button
-    className="msrd-HeaderMenuButton"
+    className={classNames({
+      "msrd-HeaderMenuButton": true,
+      "msrd-HeaderMenuButton--menuOpen": menuOpen,
+    })}
     onClick={() => {
       return setMenuOpen(!menuOpen);
     }}
