@@ -32,3 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# next-puck routes. Removing these will eject them from next-app, but prevent next-puck from updating them.
+/app/\[...puckPath\]
+/app/puck

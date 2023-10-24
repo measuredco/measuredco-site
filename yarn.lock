@@ -1725,6 +1725,11 @@ nanoid@^3.3.6:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
 
+next-puck-experimental@0.10.0-canary.3:
+  version "0.10.0-canary.3"
+  resolved "https://registry.yarnpkg.com/next-puck-experimental/-/next-puck-experimental-0.10.0-canary.3.tgz#7a6ce5e50ab75d49bc9b9b728793dcac66531ae2"
+  integrity sha512-yLJ0uSjvHYKvuLuj6mYOsSwL/WVokU6kLRUVp7fn/jlSsATpyXba0X0wQ/SsKhnK0VsQuICplpmDaSdW1Bqf+Q==
+
 next-tick@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.1.0.tgz#1836ee30ad56d67ef281b22bd199f709449b35eb"

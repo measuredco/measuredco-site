@@ -11,6 +11,7 @@
     "@supabase/supabase-js": "^2.29.0",
     "classnames": "^2.3.2",
     "next": "^13.5.4",
+    "next-puck-experimental": "0.10.0-canary.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
@@ -31,10 +32,11 @@
     "typescript": "^4.5.3"
   },
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
+    "build": "next-puck generate && next build",
+    "dev": "next-puck generate && next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "setup": "next-puck setup"
   },
   "engines": {
     "node": "18.x"
