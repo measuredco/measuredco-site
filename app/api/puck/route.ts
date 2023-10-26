@@ -1,7 +1,6 @@
 import fs from "fs";
 import { supabase } from "../../../lib/supabase";
 
-import { revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { getUserServer } from "../../../lib/get-user-server";
 
@@ -45,9 +44,6 @@ export async function POST(request: Request) {
     const res = await supabase.from("puck").upsert(newData);
 
     if (res.status === 201) {
-      // Purge Next.js supabase cache
-      revalidateTag(path);
-
       return NextResponse.json({ status: "ok", data: newData });
     }
 
@@ -68,9 +64,6 @@ export async function POST(request: Request) {
     const res = await supabase.from("puck").insert(newData);
 
     if (res.status === 201) {
-      // Purge Next.js supabase cache
-      revalidateTag(path);
-
       return NextResponse.json({ status: "ok", data: newData });
     }
 

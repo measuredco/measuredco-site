@@ -9,18 +9,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey, {
   },
   global: {
     fetch: async (url, options) => {
-      const database = url.toString().split("v1/")[1].split("?")[0];
-
-      const tags = [];
-
-      if (database === "puck" && options.method === "GET") {
-        const params = new URLSearchParams(url.toString().split("?")[1]);
-        const path = params.get("path").replace("eq.", "");
-
-        tags.push(path);
-      }
-
-      return fetch(url, { ...options, next: { tags } });
+      return fetch(url, { ...options, next: { revalidate: 0 } });
     },
   },
 });
