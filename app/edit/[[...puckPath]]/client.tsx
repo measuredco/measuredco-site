@@ -27,7 +27,7 @@ export function Client({
       data={draftData}
       plugins={[headingAnalyzer]}
       headerPath={path}
-      renderHeaderActions={({ data: unsavedData }) => {
+      renderHeaderActions={({ state: { data: unsavedData } }) => {
         const unsaved =
           JSON.stringify(unsavedData) !== JSON.stringify(draftData);
         const unpublished = JSON.stringify(draftData) !== JSON.stringify(data);
