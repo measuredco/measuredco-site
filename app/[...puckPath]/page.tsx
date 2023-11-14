@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Render } from "@measured/puck/rsc";
+import config from "../../puck.config";
 
-import { Client } from "./client";
 import { supabase } from "../../lib/supabase";
 import resolvePuckPath from "../../lib/resolve-puck-path";
 
@@ -41,7 +42,7 @@ export default async function Page({
     return notFound();
   }
 
-  return <Client data={pageRes.data?.data} path={path} />;
+  return <Render config={config} data={pageRes.data?.data} />;
 }
 
 export const dynamic = "force-static";
