@@ -1,4 +1,4 @@
-import "@measured/puck/dist/index.css";
+import "@measured/puck/puck.css";
 
 export default function RootLayout({
   children,
