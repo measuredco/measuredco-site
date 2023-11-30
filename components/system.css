@@ -204,6 +204,9 @@
     Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol;
 
+  --font-family-monospaced: ui-monospace, "Cascadia Code", "Source Code Pro",
+    Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
   --font-size: calc((var(--type-scale) / 16) * 1rem);
 
   --font-01-size: calc((var(--type-scale-01) / 16) * 1rem);

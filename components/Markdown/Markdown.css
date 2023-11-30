@@ -61,7 +61,7 @@
   background: var(--color-grey-9);
   border-radius: 0.25em;
   font: var(--font-02);
-  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-family: var(--font-family-monospaced);
   font-weight: inherit;
   letter-spacing: 0;
   padding-left: 0.25em;
