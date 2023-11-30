@@ -1,4 +1,5 @@
 import React from "react";
+import { defaultSchema } from "rehype-sanitize";
 
 import "./Paragraph.css";
 import { Markdown } from "../Markdown";
@@ -11,7 +12,13 @@ const Paragraph = ({ children, size = null, maxWidth, align }) => {
       }`}
       style={{ maxWidth }}
     >
-      <Markdown inline tagNames={["a", "b", "code", "em", "strong"]}>
+      <Markdown
+        inline
+        options={{
+          ...defaultSchema,
+          tagNames: ["a", "b", "code", "del", "em", "strong", "sup"],
+        }}
+      >
         {children}
       </Markdown>
     </p>
