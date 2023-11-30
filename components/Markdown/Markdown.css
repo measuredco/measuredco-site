@@ -47,8 +47,8 @@
 }
 
 .msrd .msrd-Markdown blockquote p + p:last-child {
-  text-align: right;
   font: var(--font-02);
+  text-align: right;
 }
 
 @media (min-width: 48em) {
@@ -190,7 +190,7 @@
 .msrd .msrd-Markdown h2 + h3,
 .msrd .msrd-Markdown h3 + h4,
 .msrd .msrd-Markdown h4 + h5,
-.msrd .msrd-Markdown h5 + h6  {
+.msrd .msrd-Markdown h5 + h6 {
   margin-top: 0;
 }
 
@@ -202,7 +202,6 @@
   margin-bottom: var(--space-vertical);
   margin-top: 0;
 }
-
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Markdown hr {
