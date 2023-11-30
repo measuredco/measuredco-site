@@ -2,41 +2,30 @@
 
 import classNames from "classnames";
 import { useEffect, useState } from "react";
+import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
-import rehypeSanitize from "rehype-sanitize";
+import remarkSlug from "remark-slug";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 import { unified } from "unified";
 
 import "./Markdown.css";
 
-const defaultTagNames = [
-  "a",
-  "blockquote",
-  "code",
-  "em",
-  "h1",
-  "h2",
-  "h3",
-  "h4",
-  "h5",
-  "h6",
-  "hr",
-  "img",
-  "li",
-  "ol",
-  "p",
-  "strong",
-  "ul",
-];
+const defaultOptions = {
+  ...defaultSchema,
+  // Removing clobberPrefix is only safe if authors are trusted!
+  // https://github.com/rehypejs/rehype-sanitize#example-headings-dom-clobbering
+  clobberPrefix: "",
+};
 
-const processMarkdown = (markdown: string, tagNames = defaultTagNames) =>
+const processMarkdown = (markdown: string, options = defaultOptions) =>
   unified()
     .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkSlug)
     .use(remarkRehype)
-    .use(rehypeSanitize, {
-      tagNames,
-    })
+    .use(rehypeSanitize, options)
     .use(rehypeStringify)
     .processSync(markdown);
 
@@ -45,11 +34,11 @@ export const Markdown = ({
   children,
   inline = false,
   measured = false,
-  tagNames = defaultTagNames,
+  options = defaultOptions,
 }) => {
   let Element: any = "div";
   const [textProcessed, setTextProcessed] = useState(
-    processMarkdown(children, tagNames)
+    processMarkdown(children, options)
   );
 
   if (inline) {
@@ -57,7 +46,7 @@ export const Markdown = ({
   }
 
   useEffect(() => {
-    setTextProcessed(processMarkdown(children, tagNames));
+    setTextProcessed(processMarkdown(children, options));
   }, [children]);
 
   return (
