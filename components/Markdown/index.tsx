@@ -6,14 +6,24 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
 import remarkSlug from "remark-slug";
+import rehypeHighlight from "rehype-highlight";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 import { unified } from "unified";
 
+import "./hljs.css";
 import "./Markdown.css";
 
 const defaultOptions = {
   ...defaultSchema,
+  attributes: {
+    ...defaultSchema.attributes,
+    code: [
+      ...(defaultSchema.attributes?.code || []),
+      ["className", /^language-./],
+    ],
+    span: [...(defaultSchema.attributes?.span || []), ["className", /^hljs-./]],
+  },
   // Removing clobberPrefix is only safe if authors are trusted!
   // https://github.com/rehypejs/rehype-sanitize#example-headings-dom-clobbering
   clobberPrefix: "",
@@ -25,6 +35,8 @@ const processMarkdown = (markdown: string, options = defaultOptions) =>
     .use(remarkGfm)
     .use(remarkSlug)
     .use(remarkRehype)
+    .use(rehypeHighlight)
+    // @ts-ignore
     .use(rehypeSanitize, options)
     .use(rehypeStringify)
     .processSync(markdown);
