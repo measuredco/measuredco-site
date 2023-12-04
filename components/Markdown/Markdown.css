@@ -58,7 +58,7 @@
 }
 
 .msrd .msrd-Markdown code {
-  background: var(--color-grey-9);
+  background: var(--color-grey-10);
   border-radius: 0.25em;
   font: var(--font-02);
   font-family: var(--font-family-monospaced);
@@ -70,7 +70,7 @@
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Markdown code {
-    background: var(--color-grey-1);
+    background: var(--color-grey-02);
   }
 }
 
@@ -194,9 +194,9 @@
 }
 
 .msrd .msrd-Markdown hr {
-  background-color: var(--color-grey-8);
+  background-color: var(--color-grey-09);
   border: 0;
-  color: var(--color-grey-8);
+  color: var(--color-grey-09);
   height: calc(1rem / 16);
   margin-bottom: var(--space-vertical);
   margin-top: 0;
@@ -204,7 +204,7 @@
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Markdown hr {
-    background-color: var(--color-grey-2);
+    background-color: var(--color-grey-03);
   }
 }
 
@@ -259,18 +259,18 @@
 }
 
 .msrd .msrd-Markdown tbody tr:nth-child(even) {
-  background-color: var(--color-grey-9);
+  background-color: var(--color-grey-10);
 }
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Markdown tbody tr:nth-child(even) {
-    background-color: var(--color-grey-1);
+    background-color: var(--color-grey-02);
   }
 }
 
 .msrd .msrd-Markdown td,
 .msrd .msrd-Markdown th {
-  border: 1px solid var(--color-grey-8);
+  border: 1px solid var(--color-grey-09);
   padding-bottom: calc(5.5rem / 16);
   padding-left: calc(15rem / 16);
   padding-right: calc(15rem / 16);
@@ -281,7 +281,7 @@
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Markdown td,
   .msrd .msrd-Markdown th {
-    border-color: var(--color-grey-2);
+    border-color: var(--color-grey-03);
   }
 }
 
@@ -307,7 +307,7 @@
 }
 
 .msrd .msrd-Markdown #footnote-label + ol {
-  border-top: 1px solid var(--color-grey-8);
+  border-top: 1px solid var(--color-grey-09);
   color: var(--color-text-muted);
   font: var(--font-02);
   padding-top: var(--space-vertical);
@@ -315,7 +315,7 @@
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Markdown #footnote-label + ol {
-    border-top: 1px solid var(--color-grey-2);
+    border-top: 1px solid var(--color-grey-03);
     color: var(--color-text-inverted-muted);
   }
 }

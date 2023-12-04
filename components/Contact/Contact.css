@@ -1,8 +1,8 @@
 .msrd .msrd-Contact {
-  border: solid 0.0625rem var(--color-grey-8);
+  border: solid 0.0625rem var(--color-grey-09);
   border-radius: 1rem;
   box-shadow: 0 0 64px rgba(0, 23, 93, 0.08);
-  color: var(--color-grey-3);
+  color: var(--color-grey-04);
   padding: var(--space-vertical) var(--space-horizontal-06);
 }
 
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Contact {
-    border-color: var(--color-grey-2);
+    border-color: var(--color-grey-03);
     color: var(--color-text-inverted-muted);
   }
 }

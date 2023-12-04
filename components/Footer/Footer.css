@@ -1,13 +1,13 @@
 .msrd .msrd-Footer {
-  background: var(--color-grey-9);
-  color: var(--color-grey-3);
+  background: var(--color-grey-10);
+  color: var(--color-grey-04);
   padding: var(--space-vertical-07) var(--space-horizontal)
     var(--space-vertical-08);
 }
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Footer {
-    background: var(--color-grey-1);
+    background: var(--color-grey-02);
     color: var(--color-text-inverted-muted);
   }
 }
@@ -61,7 +61,7 @@
 }
 
 .msrd .msrd-Footer-linkIcon {
-  color: var(--color-grey-3);
+  color: var(--color-grey-04);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -76,22 +76,22 @@
 
 @media (hover: hover) {
   .msrd .msrd-Footer-logoLink:hover {
-    color: var(--color-grey-2);
+    color: var(--color-grey-03);
   }
 }
 
 .msrd .msrd-Footer-logoLink:active {
-  color: var(--color-grey-1);
+  color: var(--color-grey-02);
 }
 
 @media (prefers-color-scheme: dark) {
   @media (hover: hover) {
     .msrd .msrd-Footer-logoLink:hover {
-      color: var(--color-grey-6);
+      color: var(--color-grey-07);
     }
   }
 
   .msrd .msrd-Footer-logoLink:active {
-    color: var(--color-grey-7);
+    color: var(--color-grey-08);
   }
 }

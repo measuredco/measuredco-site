@@ -11,12 +11,12 @@
 
 @media (hover: hover) {
   .msrd .msrd-Button:hover {
-    background-color: var(--color-rose-2);
+    background-color: var(--color-rose-03);
   }
 }
 
 .msrd .msrd-Button:active {
-  background-color: var(--color-rose-1);
+  background-color: var(--color-rose-02);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +27,11 @@
 
   @media (hover: hover) {
     .msrd .msrd-Button:hover {
-      background-color: var(--color-rose-6);
+      background-color: var(--color-rose-07);
     }
   }
 
   .msrd .msrd-Button:active {
-    background-color: var(--color-rose-7);
+    background-color: var(--color-rose-08);
   }
 }

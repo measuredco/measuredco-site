@@ -21,7 +21,7 @@
 }
 
 .msrd .msrd-Card {
-  border: solid 0.0625rem var(--color-grey-8);
+  border: solid 0.0625rem var(--color-grey-09);
   border-radius: 1rem;
   color: inherit;
   padding: var(--space-vertical-03) var(--space-horizontal)
@@ -48,7 +48,7 @@
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Card {
-    border-color: var(--color-grey-2);
+    border-color: var(--color-grey-03);
   }
 }
 
