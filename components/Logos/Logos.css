@@ -17,12 +17,12 @@
 
 @media (hover: hover) {
   .msrd .msrd-Logos-link:hover {
-    color: var(--color-grey-3);
+    color: var(--color-grey-04);
   }
 }
 
 .msrd .msrd-Logos-link:active {
-  color: var(--color-grey-2);
+  color: var(--color-grey-03);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,12 +32,12 @@
 
   @media (hover: hover) {
     .msrd .msrd-Logos-link:hover {
-      color: var(--color-grey-6);
+      color: var(--color-grey-07);
     }
   }
 
   .msrd .msrd-Logos-link:active {
-    color: var(--color-grey-7);
+    color: var(--color-grey-08);
   }
 }
 

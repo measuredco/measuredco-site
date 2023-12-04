@@ -41,13 +41,13 @@ html {
 }
 
 .msrd .msrd-Header--border:after {
-  border-bottom-color: var(--color-grey-8);
+  border-bottom-color: var(--color-grey-09);
   transition: border-bottom-color 0.25s var(--easing-cubic-bezier-easy-ease);
 }
 
 @media (prefers-color-scheme: dark) {
   .msrd .msrd-Header--border:after {
-    border-bottom-color: var(--color-grey-2);
+    border-bottom-color: var(--color-grey-03);
   }
 }
 
@@ -100,20 +100,20 @@ html {
 
 @media (hover: hover) {
   .msrd .msrd-Header-link:hover {
-    color: var(--color-grey-1);
+    color: var(--color-grey-02);
   }
 
   .msrd .msrd-Header-link--current:hover {
-    color: var(--color-rose-2);
+    color: var(--color-rose-03);
   }
 }
 
 .msrd .msrd-Header-link:active {
-  color: var(--color-grey-2);
+  color: var(--color-grey-03);
 }
 
 .msrd .msrd-Header-link--current:active {
-  color: var(--color-rose-1);
+  color: var(--color-rose-02);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -123,20 +123,20 @@ html {
 
   @media (hover: hover) {
     .msrd .msrd-Header-link:hover {
-      color: var(--color-grey-9);
+      color: var(--color-grey-10);
     }
 
     .msrd .msrd-Header-link--current:hover {
-      color: var(--color-rose-6);
+      color: var(--color-rose-07);
     }
   }
 
   .msrd .msrd-Header-link:active {
-    color: var(--color-grey-8);
+    color: var(--color-grey-09);
   }
 
   .msrd .msrd-Header-link--current:active {
-    color: var(--color-rose-7);
+    color: var(--color-rose-08);
   }
 }
 
@@ -147,12 +147,12 @@ html {
 
 @media (hover: hover) {
   .msrd .msrd-Header-callToAction:hover {
-    color: var(--color-rose-2);
+    color: var(--color-rose-03);
   }
 }
 
 .msrd .msrd-Header-callToAction:active {
-  color: var(--color-rose-1);
+  color: var(--color-rose-02);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -162,12 +162,12 @@ html {
 
   @media (hover: hover) {
     .msrd .msrd-Header-callToAction:hover {
-      color: var(--color-rose-6);
+      color: var(--color-rose-07);
     }
   }
 
   .msrd .msrd-Header-callToAction:active {
-    color: var(--color-rose-7);
+    color: var(--color-rose-08);
   }
 }
 
@@ -184,13 +184,13 @@ html {
 
   @media (hover: hover) {
     .msrd .msrd-Header-callToAction:hover {
-      background-color: var(--color-rose-2);
+      background-color: var(--color-rose-03);
       color: var(--color-text-inverted);
     }
   }
 
   .msrd .msrd-Header-callToAction:active {
-    background-color: var(--color-rose-1);
+    background-color: var(--color-rose-02);
     color: var(--color-text-inverted);
   }
 
@@ -202,13 +202,13 @@ html {
 
     @media (hover: hover) {
       .msrd .msrd-Header-callToAction:hover {
-        background-color: var(--color-rose-6);
+        background-color: var(--color-rose-07);
         color: var(--color-text);
       }
     }
 
     .msrd .msrd-Header-callToAction:active {
-      background-color: var(--color-rose-7);
+      background-color: var(--color-rose-08);
       color: var(--color-text);
     }
   }

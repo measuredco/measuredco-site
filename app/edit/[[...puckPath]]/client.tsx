@@ -38,7 +38,7 @@ export function Client({
               <small
                 style={{
                   display: "flex",
-                  color: "var(--color-grey-1)",
+                  color: "var(--color-grey-02)",
                   background: "white",
                   alignItems: "center",
                   justifyContent: "center",

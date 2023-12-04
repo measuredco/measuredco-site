@@ -12,23 +12,23 @@
 
 @media (hover: hover) {
   .msrd .msrd-HeaderMenuButton:hover {
-    color: var(--color-grey-1);
+    color: var(--color-grey-02);
   }
 }
 
 .msrd .msrd-HeaderMenuButton:active {
-  color: var(--color-grey-2);
+  color: var(--color-grey-03);
 }
 
 @media (prefers-color-scheme: dark) {
   @media (hover: hover) {
     .msrd .msrd-HeaderMenuButton:hover {
-      color: var(--color-grey-9);
+      color: var(--color-grey-10);
     }
   }
 
   .msrd .msrd-HeaderMenuButton:active {
-    color: var(--color-grey-8);
+    color: var(--color-grey-09);
   }
 }
 
