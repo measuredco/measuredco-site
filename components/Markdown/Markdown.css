@@ -58,7 +58,7 @@
 }
 
 .msrd .msrd-Markdown code {
-  background: var(--color-grey-10);
+  background: var(--color-grey-11);
   border-radius: 0.25em;
   font: var(--font-02);
   font-family: var(--font-family-monospaced);
@@ -259,7 +259,7 @@
 }
 
 .msrd .msrd-Markdown tbody tr:nth-child(even) {
-  background-color: var(--color-grey-10);
+  background-color: var(--color-grey-12);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,7 +1,7 @@
 :root {
-  --base00: var(--color-orange-10); /* Default Background */
-  --base01: var(--color-orange-09); /* Unused */
-  --base02: var(--color-orange-08); /* Selection Background */
+  --base00: var(--color-orange-12); /* Default Background */
+  --base01: var(--color-orange-11); /* Unused */
+  --base02: var(--color-orange-10); /* Selection Background */
   --base03: var(--color-grey-04); /* Comments, Invisibles, Line Highlighting */
   --base04: var(--color-grey-03); /* Dark Foreground (Used for status bars) */
   --base05: var(--color-grey-02); /* Default Foreground, Caret, Delimiters, Operators */
