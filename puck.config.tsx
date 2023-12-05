@@ -188,7 +188,7 @@ export const config: Config<Props, RootProps> = {
       return (
         <Base>
           <Header links={headerLinks} />
-          {children}
+          <main>{children}</main>
           <Footer />
         </Base>
       );

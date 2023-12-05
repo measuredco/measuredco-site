@@ -12,9 +12,13 @@
   background-color: var(--color-background);
   box-sizing: border-box;
   color: var(--color-text);
+  display: grid;
   font-family: var(--font-family);
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: min-content auto 1fr;
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
+  min-height: 100vh;
 }
 
 .msrd *,
