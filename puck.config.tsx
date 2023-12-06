@@ -11,6 +11,7 @@ import {
   Heading,
   Hero,
   Logos,
+  Markdown,
   Paragraph,
   Profile,
   ProfileDeck,
@@ -20,7 +21,6 @@ import {
 } from "./components";
 
 import { logosMapping } from "./components/Logos";
-import { Markdown } from "./components/Markdown";
 
 type ProfileProps = {
   title: string;

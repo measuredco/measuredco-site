@@ -8,7 +8,7 @@ import { processMarkdown, sanitizeDefault } from "../../lib/markdown";
 import "./hljs.css";
 import "./Markdown.css";
 
-export const Markdown = ({
+const Markdown = ({
   align = "left",
   children,
   inline = false,
@@ -41,3 +41,5 @@ export const Markdown = ({
     />
   );
 };
+
+export default Markdown;
