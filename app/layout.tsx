@@ -21,6 +21,24 @@ export default function RootLayout({
           content="initial-scale=1, viewport-fit=cover, width=device-width"
         />
         <meta property="og:image" content="https://measured.co/social.png" />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          href="/feed.atom"
+          title="Measured - Atom Feed"
+        ></link>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href="/feed.xml"
+          title="Measured - RSS Feed"
+        ></link>
+        <link
+          rel="alternate"
+          type="application/json"
+          href="/feed.json"
+          title="Measured - JSON Feed"
+        ></link>
         <link rel="canonical" href="https://measured.co" />
         <link rel="icon" href="favicon.png" type="image/png" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />

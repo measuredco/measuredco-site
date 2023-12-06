@@ -36,6 +36,14 @@ type ProfileProps = {
 };
 
 type Props = {
+  Archive: {
+    posts: {
+      author: string;
+      date: string;
+      slug: string;
+      title: string;
+    }[];
+  };
   Button: { href: string; label: string };
   Contact: {};
   Clients: {
@@ -58,6 +66,12 @@ type Props = {
     text: string;
     align: "left" | "center" | "right";
     measured: boolean;
+  };
+  Post: {
+    author: string;
+    content: string;
+    date: string;
+    title: string;
   };
   Paragraph: {
     size: "" | "small" | "large";
@@ -195,6 +209,60 @@ export const config: Config<Props, RootProps> = {
     },
   },
   components: {
+    Archive: {
+      fields: {
+        posts: {
+          type: "array",
+          arrayFields: {
+            title: {
+              type: "text",
+            },
+            slug: {
+              type: "text",
+            },
+            date: {
+              type: "text",
+            },
+            author: {
+              type: "text",
+            },
+          },
+          defaultItemProps: {
+            author: "Author",
+            date: new Date().toISOString().split("T")[0],
+            slug: "blog-post",
+            title: "Blog Post",
+          },
+          getItemSummary: (item) => item.title,
+        },
+      },
+      defaultProps: {
+        posts: [
+          {
+            author: "Author",
+            date: new Date().toISOString().split("T")[0],
+            slug: "blog-post",
+            title: "Blog Post",
+          },
+        ],
+      },
+      render: ({ posts }) => (
+        <Section>
+          <Cards>
+            {posts.map((post, idx) => (
+              <Card
+                artifact="🡒"
+                description={`${post.date} • ${post.author}`}
+                headingLevel={2}
+                link={`/blog/${post.slug}`}
+                title={post.title}
+                key={idx}
+              />
+            ))}
+          </Cards>
+        </Section>
+      ),
+    },
     Button: {
       fields: {
         href: { type: "text" },
@@ -500,6 +568,33 @@ export const config: Config<Props, RootProps> = {
           <Paragraph size={size} maxWidth={maxWidth} align={align}>
             {text}
           </Paragraph>
+        </Section>
+      ),
+    },
+    Post: {
+      fields: {
+        title: { type: "text" },
+        date: { type: "text" },
+        author: { type: "text" },
+        content: { type: "textarea" },
+      },
+      defaultProps: {
+        author: "Author",
+        content: "",
+        date: new Date().toISOString().split("T")[0],
+        title: "Title",
+      },
+      render: ({ author, content, date, title }) => (
+        <Section>
+          <Space size="07" />
+          <Heading level="1" maxWidth="15em" size="1">
+            {title}
+          </Heading>
+          <Space size="02" />
+          <Paragraph size="small">{`${date} • ${author}`}</Paragraph>
+          <Space size="06" />
+          <Markdown measured={true}>{content}</Markdown>
+          <Space size="12" />
         </Section>
       ),
     },
