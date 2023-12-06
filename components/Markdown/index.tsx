@@ -1,7 +1,7 @@
 "use client";
 
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import { processMarkdown, sanitizeDefault } from "../../lib/markdown";
 
@@ -14,6 +14,12 @@ const Markdown = ({
   inline = false,
   measured = false,
   sanitizeOptions = sanitizeDefault,
+}: {
+  align?: "left" | "center" | "right";
+  children: ReactNode;
+  inline?: boolean;
+  measured?: boolean;
+  sanitizeOptions?: any;
 }) => {
   let Element: any = "div";
   const [textProcessed, setTextProcessed] = useState(
