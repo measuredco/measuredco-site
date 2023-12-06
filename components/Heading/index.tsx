@@ -1,9 +1,23 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import "./Heading.css";
 
-const Heading = ({ children, id, level, size, maxWidth, align }) => {
-  let Element = "div";
+const Heading = ({
+  align,
+  children,
+  id,
+  level,
+  maxWidth,
+  size,
+}: {
+  children: ReactNode;
+  align?: string;
+  id?: string;
+  level?: "1" | "2" | "3" | "4" | "5" | "6" | "";
+  maxWidth?: string;
+  size?: "1" | "2" | "3" | "4" | "5" | "6" | "display";
+}) => {
+  let Element: any = "div";
 
   if (level) {
     Element = `h${level}`;
