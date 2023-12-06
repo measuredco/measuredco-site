@@ -1,6 +1,7 @@
 .msrd .msrd-Footer {
   background: var(--color-grey-11);
   color: var(--color-grey-04);
+  margin-top: auto;
   padding: var(--space-vertical-07) var(--space-horizontal)
     var(--space-vertical-08);
 }
