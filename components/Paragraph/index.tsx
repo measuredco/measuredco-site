@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import { defaultSchema } from "rehype-sanitize";
 
+import { Markdown } from "..";
+
 import "./Paragraph.css";
-import { Markdown } from "../Markdown";
 
 const Paragraph = ({
   align,
