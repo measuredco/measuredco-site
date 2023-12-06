@@ -24,7 +24,7 @@ const Paragraph = ({
     >
       <Markdown
         inline
-        options={{
+        sanitizeOptions={{
           ...defaultSchema,
           tagNames: ["a", "b", "code", "del", "em", "strong", "sup"],
         }}
