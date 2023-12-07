@@ -15,7 +15,7 @@
   display: grid;
   font-family: var(--font-family);
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: min-content auto 1fr;
+  grid-template-rows: auto 1fr auto;
   letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
   min-height: 100vh;
