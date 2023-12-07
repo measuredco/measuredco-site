@@ -62,6 +62,7 @@
   border-radius: 0.25em;
   font: var(--font-02);
   font-family: var(--font-family-monospaced);
+  font-feature-settings: normal;
   font-weight: inherit;
   letter-spacing: 0;
   padding-left: 0.25em;
@@ -252,6 +253,7 @@
   font: inherit;
   font: var(--font-02);
   font-family: var(--font-family-monospaced);
+  font-feature-settings: normal;
   font-weight: inherit;
   letter-spacing: 0;
   margin-bottom: var(--space-vertical);

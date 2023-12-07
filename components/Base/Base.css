@@ -1,19 +1,12 @@
 @import "../system.css";
 
-@font-face {
-  font-display: fallback;
-  font-family: "Inter";
-  font-style: oblique 0deg 10deg;
-  font-weight: 100 900;
-  src: url("../Inter.var.woff2?v=3.19") format("woff2");
-}
-
 .msrd {
   background-color: var(--color-background);
   box-sizing: border-box;
   color: var(--color-text);
   display: grid;
   font-family: var(--font-family);
+  font-feature-settings: 'liga' 1, 'calt' 1; /* Inter fix for Chrome */
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto 1fr auto;
   letter-spacing: var(--letter-spacing);
