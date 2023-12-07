@@ -1,5 +1,7 @@
 # robots.txt for measured.co
 
+Sitemap: https://measured.co/sitemap.xml
+
 User-agent: *
 Disallow: /lighthouse/
 
