@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 import { generateFeed } from "../../../../lib/generate-feed";
 
+export const dynamic = "force-dynamic";
 export const revalidate = 86400;
 
 export async function GET() {
