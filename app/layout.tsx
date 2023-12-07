@@ -42,15 +42,6 @@ export default function RootLayout({
         <link rel="canonical" href="https://measured.co" />
         <link rel="icon" href="favicon.png" type="image/png" />
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-        {/* {
-          <link
-            rel="preload"
-            href="./Inter.var.woff2?v=3.19"
-            as="font"
-            type="font/woff2"
-            crossOrigin=""
-          />
-        } */}
         <script
           defer
           data-domain="measured.co"
