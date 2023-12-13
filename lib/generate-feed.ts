@@ -1,12 +1,14 @@
 import { Feed } from "feed";
 
+import content from "../content.json";
 import { getPosts } from "./get-posts";
 
+const { blogDescription, siteUrl, title } = content;
+
 export const generateFeed = async () => {
-  const siteUrl = "https://measured.co";
   const feed = new Feed({
     copyright: `All rights reserved ${new Date().getFullYear()}, Measured Corporation Ltd`,
-    description: "A blog from Measured, the React and UI specialists.",
+    description: blogDescription,
     favicon: `${siteUrl}/favicon.ico`,
     feedLinks: {
       atom: `${siteUrl}/feed.atom`,
@@ -17,7 +19,7 @@ export const generateFeed = async () => {
     image: `${siteUrl}/social.png`,
     language: "en-gb",
     link: siteUrl,
-    title: "Measured",
+    title,
   });
   const posts = await getPosts(siteUrl);
 
