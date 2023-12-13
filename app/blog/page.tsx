@@ -4,30 +4,24 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import content from "../../content.json";
-import resolvePuckPath from "../../lib/resolve-puck-path";
+import { getPosts } from "../../lib/get-posts";
 import { supabase } from "../../lib/supabase";
 import config from "../../puck.config";
 
-const { openGraphLocale, siteUrl, title } = content;
+const { blogDescription, openGraphLocale, siteUrl, title } = content;
 
 const getPageRes = (path: string) =>
   supabase.from("puck").select("*").eq("path", path).maybeSingle();
 
 export { viewport } from "../page";
 
-export const dynamic = "force-static";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: { puckPath: string[] };
-}): Promise<Metadata> {
-  const { path } = resolvePuckPath(params.puckPath);
+export async function generateMetadata(): Promise<Metadata> {
+  const path = "/blog";
   const pageRes = await getPageRes(path);
   const data = pageRes?.data?.data as Data;
   const root = data?.root;
-  const pageDescription = root?.description || "";
-  const pageTitle = root?.title || "Page";
+  const pageDescription = root?.description || blogDescription;
+  const pageTitle = root?.title || "Blog";
   const pageUrl = `${siteUrl}${path}`;
 
   return {
@@ -54,18 +48,34 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { puckPath: string[] };
-}) {
-  const { path } = resolvePuckPath(params.puckPath);
-  const pageRes = await getPageRes(path);
-  const data = pageRes?.data?.data as Data;
+export default async function Page() {
+  const pageRes = await getPageRes("/blog");
+  const data = pageRes.data?.data as Data;
 
   if (pageRes.status !== 200 || !data) {
     return notFound();
   }
 
-  return <Render config={config} data={data} />;
+  const posts = await getPosts(siteUrl);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: posts.map((post, index) => {
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        url: post.link,
+      };
+    }),
+  };
+
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{ __html: `${JSON.stringify(schema)}` }}
+        type="application/ld+json"
+      />
+      <Render config={config} data={data} />
+    </>
+  );
 }

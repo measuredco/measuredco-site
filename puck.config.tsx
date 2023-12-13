@@ -69,6 +69,7 @@ type Props = {
   };
   Post: {
     author: string;
+    authorUrl: string;
     content: string;
     date: string;
     title: string;
@@ -576,22 +577,26 @@ export const config: Config<Props, RootProps> = {
         title: { type: "text" },
         date: { type: "text" },
         author: { type: "text" },
+        authorUrl: { type: "text" },
         content: { type: "textarea" },
       },
       defaultProps: {
         author: "Author",
+        authorUrl: "",
         content: "",
         date: new Date().toISOString().split("T")[0],
         title: "Title",
       },
-      render: ({ author, content, date, title }) => (
+      render: ({ author, authorUrl, content, date, title }) => (
         <Section>
           <Space size="07" />
           <Heading level="1" maxWidth="15em" size="1">
             {title}
           </Heading>
           <Space size="02" />
-          <Paragraph size="small">{`${date} • ${author}`}</Paragraph>
+          <Paragraph size="small">{`${date} • ${
+            authorUrl ? `[${author}](${authorUrl})` : author
+          }`}</Paragraph>
           <Space size="06" />
           <Markdown measured={true}>{content}</Markdown>
           <Space size="12" />
