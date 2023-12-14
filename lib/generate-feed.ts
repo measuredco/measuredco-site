@@ -21,7 +21,8 @@ export const generateFeed = async () => {
   });
   const posts = await getPosts(siteUrl);
 
-  posts.forEach((post) => {
+  // limit feed to 30 posts
+  posts.slice(0, 30).forEach((post) => {
     feed.addItem(post);
   });
 
