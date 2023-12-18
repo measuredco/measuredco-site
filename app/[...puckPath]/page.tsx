@@ -33,6 +33,7 @@ export async function generateMetadata({
   return {
     alternates: { canonical: pageUrl },
     description: pageDescription,
+    metadataBase: new URL(siteUrl),
     openGraph: {
       description: pageDescription,
       images: [

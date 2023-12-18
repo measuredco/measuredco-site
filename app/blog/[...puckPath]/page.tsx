@@ -39,6 +39,7 @@ export async function generateMetadata({
   return {
     alternates: { canonical: pageUrl },
     description: pageDescription,
+    metadataBase: new URL(siteUrl),
     openGraph: {
       authors: [post.author],
       description: pageDescription,
