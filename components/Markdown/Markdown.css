@@ -60,11 +60,12 @@
 .msrd .msrd-Markdown code {
   background: var(--color-grey-11);
   border-radius: 0.25em;
-  font: var(--font-02);
+  font-size: 0.9em;
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
   font-weight: inherit;
   letter-spacing: 0;
+  line-height: inherit;
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
@@ -76,6 +77,10 @@
 }
 
 .msrd .msrd-Markdown pre code {
+  font: var(--font-02);
+  font-family: var(--font-family-monospaced);
+  font-feature-settings: normal;
+  font-weight: inherit;
   display: block;
   margin-bottom: var(--space-vertical);
   overflow-x: auto;
