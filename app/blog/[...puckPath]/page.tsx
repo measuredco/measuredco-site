@@ -34,14 +34,14 @@ export async function generateMetadata({
   const post = data?.content?.find(
     (item: ComponentData) => item.type === "Post"
   )?.props;
-  const postDate = new Date(post.date).toISOString();
+  const postDate = post ? new Date(post.date).toISOString() : "";
 
   return {
     alternates: { canonical: pageUrl },
     description: pageDescription,
     metadataBase: new URL(siteUrl),
     openGraph: {
-      authors: [post.author],
+      authors: [post?.author],
       description: pageDescription,
       images: [
         {
