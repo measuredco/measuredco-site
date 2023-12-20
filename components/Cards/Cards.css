@@ -14,12 +14,6 @@
   }
 }
 
-@media (min-width: 64em) {
-  .msrd .msrd-Cards {
-    grid-auto-flow: column;
-  }
-}
-
 .msrd .msrd-Card {
   border: solid 0.0625rem var(--color-grey-09);
   border-radius: 1rem;
