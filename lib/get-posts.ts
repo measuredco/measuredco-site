@@ -30,6 +30,11 @@ export const getPosts = async (siteUrl: string) => {
     const post = postData?.content?.find(
       (item: ComponentData) => item.type === "Post"
     )?.props;
+
+    if (!post) {
+      return;
+    }
+
     const postDescription =
       postData?.root?.description || postData?.root?.props?.description;
     const postLink = `${siteUrl}${postPath}`;

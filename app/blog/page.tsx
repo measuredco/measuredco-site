@@ -61,7 +61,7 @@ export default async function Page() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: posts.map((post, index) => {
+    itemListElement: posts?.map((post, index) => {
       return {
         "@type": "ListItem",
         position: index + 1,
