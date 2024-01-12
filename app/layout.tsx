@@ -1,7 +1,7 @@
-import "@measured/puck/puck.css";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 
+import "../components/system.css";
 import content from "../content.json";
 
 const { title } = content;

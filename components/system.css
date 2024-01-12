@@ -2,6 +2,8 @@
  * Measured design tokens
  */
 
+@import "https://rsms.me/inter/inter.css";
+
 :root {
   /*
    * Color palette
