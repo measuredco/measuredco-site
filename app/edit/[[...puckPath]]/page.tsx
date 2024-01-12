@@ -1,3 +1,4 @@
+import "@measured/puck/puck.css";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
