@@ -63,9 +63,12 @@ export default async function Page() {
     return notFound();
   }
 
-  const schema = [
-    {
-      "@context": "https://schema.org",
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: `${title}`,
+    url: `${siteUrl}`,
+    publisher: {
       "@type": "Organization",
       logo: `${siteUrl}/logo-schema-organization.svg`,
       name: `${title}`,
@@ -76,13 +79,7 @@ export default async function Page() {
       ],
       url: `${siteUrl}`,
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: `${title}`,
-      url: `${siteUrl}`,
-    },
-  ];
+  };
 
   return (
     <>
