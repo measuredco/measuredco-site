@@ -78,6 +78,25 @@ const Footer = () => (
             </span>
           </a>
         </li>
+        <li>
+          <a href="https://twitter.com/hellomeasuredco" target="_blank">
+            <span className="msrd-Footer-textWithIcon">
+              <svg
+                aria-hidden="true"
+                className="msrd-Footer-linkIcon"
+                height="20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m18.901 1.153h3.68l-8.04 9.19 9.459 12.503h-7.406l-5.8-7.584-6.638 7.584h-3.682l8.6-9.83-9.074-11.862h7.594l5.243 6.932zm-1.291 19.491h2.039l-13.163-17.404h-2.188z"
+                  fill="currentColor"
+                />
+              </svg>
+              Twitter
+            </span>
+          </a>
+        </li>
       </ul>
       <ul>
         <li>
