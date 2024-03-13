@@ -102,6 +102,7 @@ const Footer = () => (
         <li>
           <a href="mailto:hello@measured.co">hello@measured.co</a>
         </li>
+        <li>Measured®</li>
         <li>
           <a
             href="https://www.iubenda.com/privacy-policy/24566196"
