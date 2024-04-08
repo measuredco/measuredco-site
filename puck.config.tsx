@@ -72,6 +72,7 @@ type Props = {
     authorUrl: string;
     content: string;
     date: string;
+    modifiedDate: string;
     title: string;
   };
   Paragraph: {
@@ -576,6 +577,7 @@ export const config: Config<Props, RootProps> = {
       fields: {
         title: { type: "text" },
         date: { type: "text" },
+        modifiedDate: { type: "text" },
         author: { type: "text" },
         authorUrl: { type: "text" },
         content: { type: "textarea" },
@@ -585,18 +587,19 @@ export const config: Config<Props, RootProps> = {
         authorUrl: "",
         content: "",
         date: new Date().toISOString().split("T")[0],
+        modifiedDate: "",
         title: "Title",
       },
-      render: ({ author, authorUrl, content, date, title }) => (
+      render: ({ author, authorUrl, content, date, modifiedDate, title }) => (
         <Section>
           <Space size="07" />
           <Heading level="1" maxWidth="15em" size="1">
             {title}
           </Heading>
           <Space size="02" />
-          <Paragraph size="small">{`${date} • ${
-            authorUrl ? `[${author}](${authorUrl})` : author
-          }`}</Paragraph>
+          <Paragraph size="small">{`${date} ${
+            modifiedDate ? ` _(updated ${modifiedDate})_` : ""
+          } • ${authorUrl ? `[${author}](${authorUrl})` : author}`}</Paragraph>
           <Space size="06" />
           <Markdown measured={true}>{content}</Markdown>
           <Space size="12" />

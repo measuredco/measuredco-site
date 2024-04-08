@@ -42,10 +42,13 @@ export const getPosts = async (siteUrl: string) => {
     posts.push({
       author: post.author,
       content: processMarkdown(post.content)?.value,
-      date: new Date(post.date),
+      date: post.modifiedDate
+        ? new Date(post.modifiedDate)
+        : new Date(post.date),
       description: postDescription || blogPostDescription,
       id: postLink,
       link: postLink,
+      published: new Date(post.date),
       title: post.title,
     });
   }
