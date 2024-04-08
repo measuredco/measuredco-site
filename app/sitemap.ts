@@ -9,8 +9,8 @@ export default async function sitemap() {
     url: `${siteUrl}${route}`,
   }));
   let posts = await getPosts(siteUrl);
-  posts = posts.map(({ date, link }) => ({
-    lastModified: date,
+  posts = posts.map(({ modifiedDate, link }) => ({
+    lastModified: modifiedDate,
     url: link,
   }));
 
