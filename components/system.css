@@ -207,10 +207,21 @@
   /*
    * Tracking calculated with Inter Dynamic Metrics.
    *
-   * https://rsms.me/inter/dynmetrics/
+   * https://d.rsms.me/inter-website/v3/dynmetrics/
    *
    * -0.0223 + 0.185 * Math.pow(Math.e, -0.1745 * --type-scale-xx)
+   */
+
+  /*
+   * We're currently on Inter v4, which no longer recommends dynamic metrics (on
+   * the website). However, RMS mentioned on Twitter that, for sizes less than
+   * 32pt (42px), recommended metrics from v3 still apply:
    *
+   * https://twitter.com/rsms/status/1726608758770696466
+   *
+   * At time of writing, there is currently no guidance on recommended metrics
+   * for sizes 42px and up. In our case this is `tracking-scale-09`, `10`, and
+   * `11`. So for now, we're removing tracking from these sizes.
    */
 
   --tracking-scale: -0.01095977856; /* --type-scale-02 */
@@ -223,9 +234,9 @@
   --tracking-scale-06: -0.02090295984;
   --tracking-scale-07: -0.0216048615;
   --tracking-scale-08: -0.02195411336;
-  --tracking-scale-09: -0.02217859754;
-  --tracking-scale-10: -0.02225738906;
-  --tracking-scale-11: -0.02229992033;
+  --tracking-scale-09: 0;
+  --tracking-scale-10: 0;
+  --tracking-scale-11: 0;
 
   /*
    * Color tokens
