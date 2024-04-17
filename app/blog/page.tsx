@@ -8,7 +8,7 @@ import { getPosts } from "../../lib/get-posts";
 import { supabase } from "../../lib/supabase";
 import config from "../../puck.config";
 
-const { blogDescription, openGraphLocale, siteUrl, title } = content;
+const { blogDescription, openGraphLocale, siteName, siteUrl, title } = content;
 
 const getPageRes = (path: string) =>
   supabase.from("puck").select("*").eq("path", path).maybeSingle();
@@ -40,7 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
       locale: openGraphLocale,
-      siteName: title,
+      siteName: siteName,
       title: pageTitle,
       type: "website",
       url: pageUrl,
