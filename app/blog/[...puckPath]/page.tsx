@@ -8,7 +8,8 @@ import resolvePuckPath from "../../../lib/resolve-puck-path";
 import { supabase } from "../../../lib/supabase";
 import config from "../../../puck.config";
 
-const { blogPostDescription, openGraphLocale, siteUrl, title } = content;
+const { blogPostDescription, openGraphLocale, siteName, siteUrl, title } =
+  content;
 
 const getPageRes = (path: string) =>
   supabase.from("puck").select("*").eq("path", path).maybeSingle();
@@ -55,7 +56,7 @@ export async function generateMetadata({
       locale: openGraphLocale,
       modifiedTime: postDate,
       publishedTime: postDate,
-      siteName: title,
+      siteName,
       title: pageTitle,
       type: "article",
       url: pageUrl,
@@ -95,7 +96,7 @@ export default async function Page({
     headline: post.title,
     publisher: {
       "@type": "Organization",
-      name: title,
+      name: siteName,
       url: siteUrl,
     },
   };
