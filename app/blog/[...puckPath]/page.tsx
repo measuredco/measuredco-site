@@ -93,13 +93,13 @@ export default async function Page({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     author: {
-      "@type": "Person",
-      name: post.author,
-      url: post.authorUrl || siteUrl,
+      "@type": post?.author ? "Person" : "Organization",
+      name: post?.author || siteName,
+      url: post?.authorUrl || siteUrl,
     },
     dateModified: postModifiedDate || postDate,
     datePublished: postDate,
-    headline: post.title,
+    headline: post?.title || "",
     publisher: {
       "@type": "Organization",
       name: siteName,
