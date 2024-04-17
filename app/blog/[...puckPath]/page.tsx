@@ -35,7 +35,10 @@ export async function generateMetadata({
   const post = data?.content?.find(
     (item: ComponentData) => item.type === "Post"
   )?.props;
-  const postDate = post ? new Date(post.date).toISOString() : "";
+  const postDate = post?.date ? new Date(post.date).toISOString() : "";
+  const postModifiedDate = post?.modifiedDate
+    ? new Date(post.modifiedDate).toISOString()
+    : "";
 
   return {
     alternates: { canonical: pageUrl },
@@ -54,7 +57,7 @@ export async function generateMetadata({
         },
       ],
       locale: openGraphLocale,
-      modifiedTime: postDate,
+      modifiedTime: postModifiedDate || postDate,
       publishedTime: postDate,
       siteName,
       title: pageTitle,
@@ -82,7 +85,10 @@ export default async function Page({
   const post = data?.content?.find(
     (item: ComponentData) => item.type === "Post"
   )?.props;
-  const postDate = new Date(post.date).toISOString();
+  const postDate = post?.date ? new Date(post.date).toISOString() : "";
+  const postModifiedDate = post?.modifiedDate
+    ? new Date(post.modifiedDate).toISOString()
+    : "";
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -91,7 +97,7 @@ export default async function Page({
       name: post.author,
       url: post.authorUrl || siteUrl,
     },
-    dateModified: postDate,
+    dateModified: postModifiedDate || postDate,
     datePublished: postDate,
     headline: post.title,
     publisher: {
