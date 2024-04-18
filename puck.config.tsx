@@ -112,6 +112,7 @@ type Props = {
 
 type RootProps = {
   headerLinks: { current: boolean; href: string; label: string }[];
+  ogImage: { alt: string; type: string; url: string };
 } & DefaultRootProps;
 
 const profileFields: Fields<ProfileProps> = {
@@ -174,6 +175,20 @@ export const config: Config<Props, RootProps> = {
       },
       description: {
         type: "textarea",
+      },
+      ogImage: {
+        type: "object",
+        objectFields: {
+          url: {
+            type: "text",
+          },
+          alt: {
+            type: "text",
+          },
+          type: {
+            type: "text",
+          },
+        },
       },
       headerLinks: {
         type: "array",

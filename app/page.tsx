@@ -25,6 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const data = pageRes?.data?.data as Data;
   const root = data.root;
   const pageDescription = root?.description || description;
+  const pageImage = root?.ogImage || {};
   const pageTitle = root?.title || title;
 
   return {
@@ -35,10 +36,10 @@ export async function generateMetadata(): Promise<Metadata> {
       description: pageDescription,
       images: [
         {
-          alt: siteName,
+          alt: pageImage.alt || siteName,
           height: 630,
-          url: "/social.png",
-          type: "image/png",
+          url: pageImage.url || "/social.png",
+          type: pageImage.type || "image/png",
           width: 1200,
         },
       ],
