@@ -30,6 +30,7 @@ export async function generateMetadata({
   const root = data?.root;
   const pageDescription =
     root?.description || root?.props?.description || blogPostDescription;
+  const pageImage = root?.ogImage || root?.props?.ogImage || {};
   const pageTitle = root?.title || root?.props?.title || "Post";
   const pageUrl = `${siteUrl}${blogPath}${path}`;
   const post = data?.content?.find(
@@ -50,10 +51,10 @@ export async function generateMetadata({
       description: pageDescription,
       images: [
         {
-          alt: siteName,
+          alt: pageImage.alt || siteName,
           height: 630,
-          url: "/social.png",
-          type: "image/png",
+          url: pageImage.url || "/social.png",
+          type: pageImage.type || "image/png",
           width: 1200,
         },
       ],
