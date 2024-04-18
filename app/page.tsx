@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           alt: siteName,
-          height: 600,
+          height: 630,
           url: "/social.png",
           type: "image/png",
           width: 1200,
