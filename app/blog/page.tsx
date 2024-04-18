@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: pageDescription,
       images: [
         {
-          alt: title,
+          alt: siteName,
           height: 600,
           url: "/social.png",
           type: "image/png",
@@ -40,8 +40,8 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
       locale: openGraphLocale,
-      siteName: siteName,
-      title: pageTitle,
+      siteName,
+      title: `${pageTitle} | ${title}`,
       type: "website",
       url: pageUrl,
     },

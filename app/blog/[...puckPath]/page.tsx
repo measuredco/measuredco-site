@@ -39,6 +39,7 @@ export async function generateMetadata({
   const postModifiedDate = post?.modifiedDate
     ? new Date(post.modifiedDate).toISOString()
     : "";
+  const postTitle = post?.title;
 
   return {
     alternates: { canonical: pageUrl },
@@ -49,7 +50,7 @@ export async function generateMetadata({
       description: pageDescription,
       images: [
         {
-          alt: title,
+          alt: siteName,
           height: 600,
           url: "/social.png",
           type: "image/png",
@@ -60,11 +61,11 @@ export async function generateMetadata({
       modifiedTime: postModifiedDate || postDate,
       publishedTime: postDate,
       siteName,
-      title: pageTitle,
+      title: postTitle || pageTitle,
       type: "article",
       url: pageUrl,
     },
-    title: pageTitle,
+    title: postTitle || pageTitle,
   };
 }
 
@@ -82,9 +83,11 @@ export default async function Page({
     return notFound();
   }
 
+  const pageTitle = data.root?.title || data.root?.props?.title || "Post";
   const post = data?.content?.find(
     (item: ComponentData) => item.type === "Post"
   )?.props;
+  const postAuthor = post?.author;
   const postDate = post?.date ? new Date(post.date).toISOString() : "";
   const postModifiedDate = post?.modifiedDate
     ? new Date(post.modifiedDate).toISOString()
@@ -93,13 +96,13 @@ export default async function Page({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     author: {
-      "@type": post?.author ? "Person" : "Organization",
-      name: post?.author || siteName,
+      "@type": postAuthor ? "Person" : "Organization",
+      name: postAuthor || siteName,
       url: post?.authorUrl || siteUrl,
     },
     dateModified: postModifiedDate || postDate,
     datePublished: postDate,
-    headline: post?.title || "",
+    headline: post?.title || pageTitle,
     publisher: {
       "@type": "Organization",
       name: siteName,
