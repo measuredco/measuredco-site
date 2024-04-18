@@ -7,7 +7,8 @@ import content from "../content.json";
 import { supabase } from "../lib/supabase";
 import config from "../puck.config";
 
-const { description, openGraphLocale, siteUrl, themeColor, title } = content;
+const { description, openGraphLocale, siteName, siteUrl, themeColor, title } =
+  content;
 
 const getPageRes = (path: string) =>
   supabase.from("puck").select("*").eq("path", path).maybeSingle();
@@ -34,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: pageDescription,
       images: [
         {
-          alt: title,
+          alt: siteName,
           height: 600,
           url: "/social.png",
           type: "image/png",
@@ -42,7 +43,7 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
       locale: openGraphLocale,
-      siteName: title,
+      siteName,
       title: pageTitle,
       type: "website",
       url: siteUrl,
@@ -63,15 +64,16 @@ export default async function Page() {
     return notFound();
   }
 
+  const pageTitle = data.root?.title || title;
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: `${title}`,
+    name: `${pageTitle}`,
     url: `${siteUrl}`,
     publisher: {
       "@type": "Organization",
       logo: `${siteUrl}/logo-schema-organization.svg`,
-      name: `${title}`,
+      name: `${siteName}`,
       sameAs: [
         "https://github.com/measuredco",
         "https://twitter.com/hellomeasuredco",
