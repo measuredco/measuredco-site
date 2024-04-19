@@ -21,8 +21,7 @@
 
 .msrd .msrd-Contact-heading {
   color: var(--color-brand);
-  font: var(--font-08);
-  font-weight: 700;
+  font: 700 var(--font-08);
   letter-spacing: var(--font-08-letter-spacing);
   margin-bottom: 0;
   margin-top: 0;
@@ -30,16 +29,14 @@
 
 @media (min-width: 23em) {
   .msrd .msrd-Contact-heading {
-    font: var(--font-09);
-    font-weight: 700;
+    font: 700 var(--font-09);
     letter-spacing: var(--font-09-letter-spacing);
   }
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Contact-heading {
-    font: var(--font-10);
-    font-weight: 700;
+    font: 700 var(--font-10);
     letter-spacing: var(--font-10-letter-spacing);
     margin-bottom: var(--space-vertical-01);
   }

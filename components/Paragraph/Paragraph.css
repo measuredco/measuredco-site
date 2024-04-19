@@ -1,7 +1,6 @@
 .msrd .msrd-Paragraph {
-  font: var(--font-03);
+  font: 400 var(--font-03);
   letter-spacing: var(--font-03-letter-spacing);
-  font-weight: normal;
   margin: 0;
 }
 

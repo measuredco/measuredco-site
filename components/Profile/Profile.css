@@ -44,8 +44,7 @@
 }
 
 .msrd .msrd-Profile-title {
-  font: var(--font-04);
-  font-weight: 700;
+  font: 700 var(--font-04);
   letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: 0;
   margin-top: 0;
@@ -53,8 +52,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Profile-title {
-    font: var(--font-05);
-    font-weight: 700;
+    font: 700 var(--font-05);
     letter-spacing: var(--font-05-letter-spacing);
   }
 }
@@ -91,7 +89,6 @@
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
-
 
 @media (min-width: 48em) {
   .msrd .msrd-Profile-url {
@@ -142,7 +139,7 @@
   width: 100%;
 }
 
-.msrd .msrd-Profile--round .msrd-Profile-image  {
+.msrd .msrd-Profile--round .msrd-Profile-image {
   border-radius: 50%;
 }
 
