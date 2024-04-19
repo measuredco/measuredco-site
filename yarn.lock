@@ -16,42 +16,53 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.24.1":
+"@babel/runtime@^7.23.2":
   version "7.24.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.24.4.tgz#de795accd698007a66ba44add6cc86542aff1edd"
   integrity sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@hello-pangea/dnd@^16.3.0":
-  version "16.6.0"
-  resolved "https://registry.yarnpkg.com/@hello-pangea/dnd/-/dnd-16.6.0.tgz#7509639c7bd13f55e537b65a9dcfcd54e7c99ac7"
-  integrity sha512-vfZ4GydqbtUPXSLfAvKvXQ6xwRzIjUSjVU0Sx+70VOhc2xx6CdmJXJ8YhH70RpbTUGjxctslQTHul9sIOxCfFQ==
+"@measured/auto-frame-component@0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@measured/auto-frame-component/-/auto-frame-component-0.1.7.tgz#9d863feb11e3c36d67bf8bf83f66a107573957f2"
+  integrity sha512-bVaIvGFtA4kuuBxaOgtPD7S5a91aBiTPZ+VYm+URLdhKUEuhIUtATPm74NnO7M14IGteJGSGzNf28O/blXSU4g==
   dependencies:
-    "@babel/runtime" "^7.24.1"
+    object-hash "^3.0.0"
+    react-frame-component "5.2.6"
+
+"@measured/dnd@16.6.0-canary.4cba1d1":
+  version "16.6.0-canary.4cba1d1"
+  resolved "https://registry.yarnpkg.com/@measured/dnd/-/dnd-16.6.0-canary.4cba1d1.tgz#47096fc962a9f69411e66e30d1c49b1ab4eb4e44"
+  integrity sha512-mMPQ5jElzQRZFR2HNyBn5WnPWpf+E464q1oT0qaI0dJtPqm7R/ssm5lcFDYaXApGvhZnrCRQWWT1ggoW80j0JA==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
     css-box-model "^1.2.1"
+    lru-cache "^10.2.0"
     memoize-one "^6.0.0"
     raf-schd "^4.0.3"
     react-redux "^8.1.3"
     redux "^4.2.1"
     use-memo-one "^1.1.3"
 
-"@measured/puck-plugin-heading-analyzer@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.13.1.tgz#d386e87c8e343c3dfac58fa157ec50648d484604"
-  integrity sha512-hNmf89uruOH4LIAknLD8aMOldniN01J4EPsqw2kiksnWZD0JhWsSnWJGQr/e3HB6Q7+lketlORaYwIxMUEa/Vg==
+"@measured/puck-plugin-heading-analyzer@^0.14.2":
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.14.2.tgz#e2c00c1f53cc6312318755b69137dbc82044bb0e"
+  integrity sha512-1GwIOEFmGakq+DjJnyqrSJYW5gQh1sFMP7Hx8tdiNV2gi73OFviTpAtXEvjs5bXqLrP/eqAPAbw2CTYdU4hj/A==
   dependencies:
     react-from-json "^0.8.0"
 
-"@measured/puck@^0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.13.1.tgz#07514241229e968b0fee6f4f6873576936ac3019"
-  integrity sha512-cOyqws0EH82oqN/NsDFlRHI48DGKy6/rqJFDX5g6Kx6Itn6JNa6jg51sEopvCN0tlDE79DZ8lkCRjdu7OD4+mA==
+"@measured/puck@^0.14.2":
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.14.2.tgz#7f5ee6dc7e69de227a288a555d001e95232e4249"
+  integrity sha512-lhQoXxZppk1Fz8sjINI5ZmNHYZr5mKZlbyFU0mLpHe4ZJiBWKMBFvCTP9lPRl2MyYTp3cWtopfyJaK4/hQ3blw==
   dependencies:
-    "@hello-pangea/dnd" "^16.3.0"
+    "@measured/auto-frame-component" "0.1.7"
+    "@measured/dnd" "16.6.0-canary.4cba1d1"
     deep-diff "^1.0.2"
     react-hotkeys-hook "^4.4.1"
     react-spinners "^0.13.8"
+    ua-parser-js "^1.0.37"
     use-debounce "^9.0.4"
     uuid "^9.0.1"
 
@@ -1457,6 +1468,11 @@ lowlight@^3.0.0:
     devlop "^1.0.0"
     highlight.js "~11.9.0"
 
+lru-cache@^10.2.0:
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.2.0.tgz#0bd445ca57363465900f4d1f9bd8db343a4d95c3"
+  integrity sha512-2bIM8x+VAf6JT4bKAljS1qUWgMsqZRPGJS6FSahIMPVvctcNhyVp7AJu7quxOW9jwkryBReKZY5tY5JYv2n/7Q==
+
 lru-cache@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
@@ -1983,6 +1999,11 @@ object-assign@^4.1.1:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==
 
+object-hash@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-3.0.0.tgz#73f97f753e7baffc0e2cc9d6e079079744ac82e9"
+  integrity sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==
+
 object-inspect@^1.12.3, object-inspect@^1.9.0:
   version "1.12.3"
   resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.12.3.tgz#ba62dffd67ee256c8c086dfae69e016cd1f198b9"
@@ -2122,6 +2143,11 @@ react-feather@^2.0.10:
   integrity sha512-BLhukwJ+Z92Nmdcs+EMw6dy1Z/VLiJTzEQACDUEnWMClhYnFykJCGWQx+NmwP/qQHGX/5CzQ+TGi8ofg2+HzVQ==
   dependencies:
     prop-types "^15.7.2"
+
+react-frame-component@5.2.6:
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/react-frame-component/-/react-frame-component-5.2.6.tgz#0d9991d251ff1f7177479d8f370deea06b824b79"
+  integrity sha512-CwkEM5VSt6nFwZ1Op8hi3JB5rPseZlmnp5CGiismVTauE6S4Jsc4TNMlT0O7Cts4WgIC3ZBAQ2p1Mm9XgLbj+w==
 
 react-from-json@^0.8.0:
   version "0.8.0"
@@ -2528,6 +2554,11 @@ typescript@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.3.2.tgz#00d1c7c1c46928c5845c1ee8d0cc2791031d4c43"
   integrity sha512-6l+RyNy7oAHDfxC4FzSJcz9vnjTKxrLpDG5M2Vu4SHRVNg6xzqZp6LYSR9zjqQTu8DU/f5xwxUdADOkbrIX2gQ==
+
+ua-parser-js@^1.0.37:
+  version "1.0.37"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.37.tgz#b5dc7b163a5c1f0c510b08446aed4da92c46373f"
+  integrity sha512-bhTyI94tZofjo+Dn8SN6Zv8nBDvyXTymAdM3LDI/0IboIUwTu1rEhW7v2TfiVsoYWgkQ4kOVqnI8APUFbIQIFQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
