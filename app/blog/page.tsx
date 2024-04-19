@@ -19,10 +19,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const path = "/blog";
   const pageRes = await getPageRes(path);
   const data = pageRes?.data?.data as Data;
-  const root = data?.root;
-  const pageDescription = root?.description || blogDescription;
-  const pageImage = root?.ogImage || {};
-  const pageTitle = root?.title || "Blog";
+  const rootProps = data?.root?.props;
+  const pageDescription = rootProps?.description || blogDescription;
+  const pageImage = rootProps?.ogImage || {};
+  const pageTitle = rootProps?.title || "Blog";
   const pageUrl = `${siteUrl}${path}`;
 
   return {
