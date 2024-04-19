@@ -27,11 +27,10 @@ export async function generateMetadata({
   const { path } = resolvePuckPath(params.puckPath);
   const pageRes = await getPageRes(`${blogPath}${path}`);
   const data = pageRes?.data?.data as Data;
-  const root = data?.root;
-  const pageDescription =
-    root?.description || root?.props?.description || blogPostDescription;
-  const pageImage = root?.ogImage || root?.props?.ogImage || {};
-  const pageTitle = root?.title || root?.props?.title || "Post";
+  const rootProps = data?.root?.props;
+  const pageDescription = rootProps?.description || blogPostDescription;
+  const pageImage = rootProps?.ogImage || {};
+  const pageTitle = rootProps?.title || "Post";
   const pageUrl = `${siteUrl}${blogPath}${path}`;
   const post = data?.content?.find(
     (item: ComponentData) => item.type === "Post"

@@ -23,10 +23,10 @@ export const viewport: Viewport = {
 export async function generateMetadata(): Promise<Metadata> {
   const pageRes = await getPageRes("/");
   const data = pageRes?.data?.data as Data;
-  const root = data.root;
-  const pageDescription = root?.description || description;
-  const pageImage = root?.ogImage || {};
-  const pageTitle = root?.title || title;
+  const rootProps = data?.root?.props;
+  const pageDescription = rootProps?.description || description;
+  const pageImage = rootProps?.ogImage || {};
+  const pageTitle = rootProps?.title || title;
 
   return {
     alternates: { canonical: siteUrl },
