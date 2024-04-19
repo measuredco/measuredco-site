@@ -1,6 +1,5 @@
 .msrd .msrd-Hero-strapline {
-  font: var(--font-09);
-  font-weight: 800;
+  font: 800 var(--font-09);
   letter-spacing: var(--font-09-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: 0;
@@ -16,8 +15,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Hero-strapline {
-    font: var(--font-11);
-    font-weight: 800;
+    font: 800 var(--font-11);
     letter-spacing: var(--font-11-letter-spacing);
     margin-bottom: var(--space-vertical-05);
   }

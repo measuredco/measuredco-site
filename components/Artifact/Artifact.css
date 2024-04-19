@@ -1,7 +1,6 @@
 .msrd .msrd-Artifact {
   color: currentColor;
   display: block;
-  font: var(--font-08);
-  font-weight: 100;
+  font: 100 var(--font-08);
   letter-spacing: var(--font-08-letter-spacing);
 }

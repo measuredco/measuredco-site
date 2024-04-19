@@ -5,91 +5,78 @@
 }
 
 .msrd .msrd-Heading--6 {
-  font: var(--font-02);
-  font-weight: 700;
+  font: 700 var(--font-02);
   letter-spacing: var(--font-02-letter-spacing);
 }
 
 .msrd .msrd-Heading--5 {
-  font: var(--font-03);
-  font-weight: 700;
+  font: 700 var(--font-03);
   letter-spacing: var(--font-03-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--5 {
-    font: var(--font-04);
-    font-weight: 700;
+    font: 700 var(--font-04);
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--4 {
-  font: var(--font-04);
-  font-weight: 700;
+  font: 700 var(--font-04);
   letter-spacing: var(--font-04-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--4 {
-    font: var(--font-05);
-    font-weight: 700;
+    font: 700 var(--font-05);
     letter-spacing: var(--font-05-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--3 {
-  font: var(--font-05);
-  font-weight: 700;
+  font: 700 var(--font-05);
   letter-spacing: var(--font-05-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--3 {
-    font: var(--font-06);
-    font-weight: 700;
+    font: 700 var(--font-06);
     letter-spacing: var(--font-06-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--2 {
-  font: var(--font-07);
-  font-weight: 700;
+  font: 700 var(--font-07);
   letter-spacing: var(--font-07-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--2 {
-    font: var(--font-08);
-    font-weight: 700;
+    font: 700 var(--font-08);
     letter-spacing: var(--font-08-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--1 {
-  font: var(--font-09);
-  font-weight: 800;
+  font: 800 var(--font-09);
   letter-spacing: var(--font-09-letter-spacing);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Heading--1  {
-    font: var(--font-10);
-    font-weight: 800;
+  .msrd .msrd-Heading--1 {
+    font: 800 var(--font-10);
     letter-spacing: var(--font-10-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--display {
-  font: var(--font-09);
-  font-weight: 800;
+  font: 800 var(--font-09);
   letter-spacing: var(--font-09-letter-spacing);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Heading--display  {
-    font: var(--font-11);
-    font-weight: 800;
+  .msrd .msrd-Heading--display {
+    font: 800 var(--font-11);
     letter-spacing: var(--font-11-letter-spacing);
   }
 }

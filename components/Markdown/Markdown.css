@@ -77,11 +77,12 @@
 }
 
 .msrd .msrd-Markdown pre code {
-  font: var(--font-02);
+  font-size: var(--font-02-size);
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
   font-weight: inherit;
   display: block;
+  line-height: var(--font-02-line-height);
   margin-bottom: var(--space-vertical);
   overflow-x: auto;
   padding: var(--space-vertical);
@@ -89,8 +90,7 @@
 }
 
 .msrd .msrd-Markdown h6 {
-  font: var(--font-02);
-  font-weight: 700;
+  font: 700 var(--font-02);
   letter-spacing: var(--font-02-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -104,8 +104,7 @@
 }
 
 .msrd .msrd-Markdown h5 {
-  font: var(--font-03);
-  font-weight: 700;
+  font: 700 var(--font-03);
   letter-spacing: var(--font-03-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -113,8 +112,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h5 {
-    font: var(--font-04);
-    font-weight: 700;
+    font: 700 var(--font-04);
     letter-spacing: var(--font-04-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -122,8 +120,7 @@
 }
 
 .msrd .msrd-Markdown h4 {
-  font: var(--font-04);
-  font-weight: 700;
+  font: 700 var(--font-04);
   letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -131,8 +128,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h4 {
-    font: var(--font-05);
-    font-weight: 700;
+    font: 700 var(--font-05);
     letter-spacing: var(--font-05-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -140,8 +136,7 @@
 }
 
 .msrd .msrd-Markdown h3 {
-  font: var(--font-05);
-  font-weight: 700;
+  font: 700 var(--font-05);
   letter-spacing: var(--font-05-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -149,8 +144,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h3 {
-    font: var(--font-06);
-    font-weight: 700;
+    font: 700 var(--font-06);
     letter-spacing: var(--font-06-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -158,8 +152,7 @@
 }
 
 .msrd .msrd-Markdown h2 {
-  font: var(--font-07);
-  font-weight: 700;
+  font: 700 var(--font-07);
   letter-spacing: var(--font-07-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -167,8 +160,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h2 {
-    font: var(--font-08);
-    font-weight: 700;
+    font: 700 var(--font-08);
     letter-spacing: var(--font-08-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -176,8 +168,7 @@
 }
 
 .msrd .msrd-Markdown h1 {
-  font: var(--font-09);
-  font-weight: 800;
+  font: 800 var(--font-09);
   letter-spacing: var(--font-09-letter-spacing);
   margin-bottom: var(--space-vertical-06);
   margin-top: 0;
@@ -185,8 +176,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h1 {
-    font: var(--font-10);
-    font-weight: 800;
+    font: 800 var(--font-10);
     letter-spacing: var(--font-10-letter-spacing);
   }
 }
@@ -256,11 +246,12 @@
 .msrd .msrd-Markdown table {
   border-collapse: collapse;
   font: inherit;
-  font: var(--font-02);
+  font-size: var(--font-02-size);
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
   font-weight: inherit;
   letter-spacing: 0;
+  line-height: var(--font-02-line-height);
   margin-bottom: var(--space-vertical);
   width: 100%;
 }
