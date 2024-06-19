@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </head>
-      <body style={{ margin: "0" }}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
