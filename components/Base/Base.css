@@ -12,6 +12,10 @@
   min-height: 100vh;
 }
 
+body {
+  margin: 0;
+}
+
 /* prevent 100vh when rendered in Puck editor */
 body > div .msrd {
   min-height: 100%;
