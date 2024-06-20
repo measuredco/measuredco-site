@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Puck } from "@measured/puck";
+import { Button, Puck, usePuck } from "@measured/puck";
 import type { Data } from "@measured/puck";
 import headingAnalyzer from "@measured/puck-plugin-heading-analyzer";
 
@@ -27,60 +27,67 @@ export function Client({
       data={draftData}
       plugins={[headingAnalyzer]}
       headerPath={path}
-      renderHeaderActions={({ state: { data: unsavedData } }) => {
-        const unsaved =
-          JSON.stringify(unsavedData) !== JSON.stringify(draftData);
-        const unpublished = JSON.stringify(draftData) !== JSON.stringify(data);
+      overrides={{
+        headerActions: () => {
+          const {
+            appState: { data: unsavedData },
+          } = usePuck();
 
-        return (
-          <>
-            <Base>
-              <small
-                style={{
-                  display: "flex",
-                  color: "var(--color-grey-02)",
-                  background: "white",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "100%",
+          const unsaved =
+            JSON.stringify(unsavedData) !== JSON.stringify(draftData);
+          const unpublished =
+            JSON.stringify(draftData) !== JSON.stringify(data);
+
+          return (
+            <>
+              <Base>
+                <small
+                  style={{
+                    display: "flex",
+                    color: "var(--color-grey-02)",
+                    background: "white",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "100%",
+                  }}
+                >
+                  {unsaved ? (
+                    <span>Unsaved&nbsp;changes</span>
+                  ) : unpublished ? (
+                    <span>Unpublished&nbsp;changes</span>
+                  ) : (
+                    "Published"
+                  )}
+                </small>
+              </Base>
+              <Button
+                onClick={async () => {
+                  const res = await fetch("/api/puck", {
+                    body: JSON.stringify({
+                      path,
+                      data: unsavedData,
+                      draft: true,
+                    }),
+                    method: "post",
+                  });
+
+                  if (res.status !== 200) {
+                    alert(`Error: ${res.statusText} (${res.status})`);
+
+                    return;
+                  }
+
+                  setDraftData(unsavedData);
                 }}
+                variant="secondary"
+                icon={<Save size="16" />}
+                disabled={!unsaved}
               >
-                {unsaved ? (
-                  <span>Unsaved&nbsp;changes</span>
-                ) : unpublished ? (
-                  <span>Unpublished&nbsp;changes</span>
-                ) : (
-                  "Published"
-                )}
-              </small>
-            </Base>
-            <Button
-              onClick={async () => {
-                const res = await fetch("/api/puck", {
-                  body: JSON.stringify({
-                    path,
-                    data: unsavedData,
-                    draft: true,
-                  }),
-                  method: "post",
-                });
-
-                if (res.status !== 200) {
-                  alert(`Error: ${res.statusText} (${res.status})`);
-
-                  return;
-                }
-
-                setDraftData(unsavedData);
-              }}
-              variant="secondary"
-              icon={<Save size="16" />}
-              disabled={!unsaved}
-            >
-              Save draft
-            </Button>
-          </>
-        );
+                Save draft
+              </Button>
+            </>
+          );
+        },
       }}
       onPublish={async (unsavedData: Data) => {
         const res = await fetch("/api/puck", {
