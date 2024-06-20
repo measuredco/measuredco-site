@@ -28,7 +28,7 @@ export function Client({
       plugins={[headingAnalyzer]}
       headerPath={path}
       overrides={{
-        headerActions: () => {
+        headerActions: ({ children }) => {
           const {
             appState: { data: unsavedData },
           } = usePuck();
@@ -85,6 +85,8 @@ export function Client({
               >
                 Save draft
               </Button>
+
+              {children}
             </>
           );
         },
