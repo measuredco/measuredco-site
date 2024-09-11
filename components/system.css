@@ -224,16 +224,16 @@
    * `11`. So for now, we're removing tracking from these sizes.
    */
 
-  --tracking-scale: -0.01095977856; /* --type-scale-02 */
+  --tracking-scale: 0; /* --type-scale-02 */
 
-  --tracking-scale-01: -0.006223544263;
-  --tracking-scale-02: -0.01095977856;
-  --tracking-scale-03: -0.0143006857;
-  --tracking-scale-04: -0.01673565;
-  --tracking-scale-05: -0.01949232757;
-  --tracking-scale-06: -0.02090295984;
-  --tracking-scale-07: -0.0216048615;
-  --tracking-scale-08: -0.02195411336;
+  --tracking-scale-01: 0;
+  --tracking-scale-02: 0;
+  --tracking-scale-03: 0;
+  --tracking-scale-04: 0;
+  --tracking-scale-05: 0;
+  --tracking-scale-06: 0;
+  --tracking-scale-07: 0;
+  --tracking-scale-08: 0;
   --tracking-scale-09: 0;
   --tracking-scale-10: 0;
   --tracking-scale-11: 0;
