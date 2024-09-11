@@ -1,5 +1,7 @@
 .msrd .msrd-Paragraph {
   font: 400 var(--font-03);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-03-letter-spacing);
   margin: 0;
 }
@@ -7,23 +9,31 @@
 @media (min-width: 48em) {
   .msrd .msrd-Paragraph {
     font: var(--font-04);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
 
 .msrd .msrd-Paragraph--small {
   font: var(--font-02);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-02-letter-spacing);
 }
 
 .msrd .msrd-Paragraph--large {
   font: var(--font-04);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-04-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Paragraph--large {
     font: var(--font-05);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-05-letter-spacing);
   }
 }

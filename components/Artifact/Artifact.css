@@ -2,5 +2,7 @@
   color: currentColor;
   display: block;
   font: 100 var(--font-08);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-08-letter-spacing);
 }

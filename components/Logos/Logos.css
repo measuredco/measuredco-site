@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   font: var(--font-01);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   gap: var(--space-vertical-04) var(--space-horizontal-07);
   justify-content: space-around;
   list-style: none;
@@ -32,12 +34,12 @@
 
   @media (hover: hover) {
     .msrd .msrd-Logos-link:hover {
-      color: var(--color-grey-07);
+      color: var(--color-grey-08);
     }
   }
 
   .msrd .msrd-Logos-link:active {
-    color: var(--color-grey-08);
+    color: var(--color-grey-09);
   }
 }
 

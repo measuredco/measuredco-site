@@ -44,7 +44,9 @@
 }
 
 .msrd .msrd-Profile-title {
-  font: 700 var(--font-04);
+  font: 400 var(--font-04);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: 0;
   margin-top: 0;
@@ -52,13 +54,17 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Profile-title {
-    font: 700 var(--font-05);
+    font: 400 var(--font-05);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-05-letter-spacing);
   }
 }
 
 .msrd .msrd-Profile-subtitle {
   font: var(--font-03);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-03-letter-spacing);
   margin-bottom: 0;
   margin-top: 0;
@@ -67,6 +73,8 @@
 @media (min-width: 48em) {
   .msrd .msrd-Profile-subtitle {
     font: var(--font-04);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
@@ -74,10 +82,13 @@
 .msrd .msrd-Profile-description {
   margin-bottom: var(--space-vertical-02);
   margin-top: var(--space-vertical-02);
+  text-wrap: pretty;
 }
 
 .msrd .msrd-Profile-url {
   font: var(--font-03);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-03-letter-spacing);
   margin-bottom: var(--space-vertical);
   margin-top: 0;
@@ -86,6 +97,8 @@
 @media (min-width: 48em) {
   .msrd .msrd-Profile-url {
     font: var(--font-04);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
@@ -99,6 +112,8 @@
 @media (min-width: 64em) {
   .msrd .msrd-Profile-url {
     font: var(--font-04);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
@@ -130,8 +145,9 @@
 }
 
 .msrd .msrd-Profile-image {
-  border-radius: 0.5rem;
-  box-shadow: 0 0 64px rgba(0, 23, 93, 0.08);
+  border-radius: 0.375rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem
+    color-mix(in srgb, var(--color-black) 8%, transparent);
   overflow: hidden;
 }
 

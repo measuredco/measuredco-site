@@ -1,16 +1,7 @@
 .msrd .msrd-Footer {
-  background: var(--color-grey-11);
-  color: var(--color-grey-04);
   margin-top: auto;
   padding: var(--space-vertical-07) var(--space-horizontal)
     var(--space-vertical-08);
-}
-
-@media (prefers-color-scheme: dark) {
-  .msrd .msrd-Footer {
-    background: var(--color-grey-02);
-    color: var(--color-text-inverted-muted);
-  }
 }
 
 .msrd .msrd-Footer-inner {
@@ -51,6 +42,8 @@
 .msrd .msrd-Footer small {
   display: block;
   font: var(--font-01);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-01-letter-spacing);
 }
 
