@@ -1,22 +1,22 @@
 .msrd .msrd-Button {
   align-items: center;
   background-color: var(--color-brand);
-  border-radius: 1.3125rem;
+  border-radius: 0.5rem;
   color: var(--color-text-inverted);
   display: inline-flex;
-  font-weight: 600;
-  height: 2.75rem;
+  font-weight: 500;
+  height: 3rem;
   padding: 0 var(--space-horizontal-07);
 }
 
 @media (hover: hover) {
   .msrd .msrd-Button:hover {
-    background-color: var(--color-rose-03);
+    background-color: var(--color-azure-03);
   }
 }
 
 .msrd .msrd-Button:active {
-  background-color: var(--color-rose-02);
+  background-color: var(--color-azure-02);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +27,11 @@
 
   @media (hover: hover) {
     .msrd .msrd-Button:hover {
-      background-color: var(--color-rose-07);
+      background-color: var(--color-azure-07);
     }
   }
 
   .msrd .msrd-Button:active {
-    background-color: var(--color-rose-08);
+    background-color: var(--color-azure-08);
   }
 }

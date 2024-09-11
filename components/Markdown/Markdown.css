@@ -1,5 +1,7 @@
 .msrd .msrd-Markdown {
   font: var(--font-03);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-03-letter-spacing);
 }
 
@@ -16,6 +18,8 @@
 @media (min-width: 48em) {
   .msrd .msrd-Markdown {
     font: var(--font-04);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
   }
 
@@ -48,21 +52,27 @@
 
 .msrd .msrd-Markdown blockquote p + p:last-child {
   font: var(--font-02);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   text-align: right;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown blockquote p + p:last-child {
     font: var(--font-03);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   }
 }
 
 .msrd .msrd-Markdown code {
   background: var(--color-grey-11);
   border-radius: 0.25em;
-  font-size: 0.9em;
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
+  font-size: 0.9em;
   font-weight: inherit;
   letter-spacing: 0;
   line-height: inherit;
@@ -76,21 +86,45 @@
   }
 }
 
+.msrd .msrd-Markdown pre {
+  position: relative;
+}
+
+.msrd .msrd-Markdown pre::after {
+  border: solid 0.0625rem var(--color-brand-inverted);
+  border-radius: 1.125rem;
+  bottom: 0.25rem;
+  content: "";
+  left: -0.25rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0.25rem;
+  top: -0.25rem;
+}
+
 .msrd .msrd-Markdown pre code {
-  font-size: var(--font-02-size);
+  border-radius: 1.125em;
+  box-shadow: 0.125rem 0.125rem 0.25rem
+    color-mix(in srgb, var(--color-black) 8%, transparent);
+  display: block;
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
+  font-size: var(--font-02-size);
   font-weight: inherit;
-  display: block;
   line-height: var(--font-02-line-height);
   margin-bottom: var(--space-vertical);
   overflow-x: auto;
   padding: var(--space-vertical);
+  position: relative;
   width: 100%;
 }
 
 .msrd .msrd-Markdown h6 {
-  font: 700 var(--font-02);
+  font: 400 var(--font-02);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-02-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -104,7 +138,9 @@
 }
 
 .msrd .msrd-Markdown h5 {
-  font: 700 var(--font-03);
+  font: 400 var(--font-03);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-03-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -112,7 +148,9 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h5 {
-    font: 700 var(--font-04);
+    font: 400 var(--font-04);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -120,7 +158,9 @@
 }
 
 .msrd .msrd-Markdown h4 {
-  font: 700 var(--font-04);
+  font: 400 var(--font-04);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-04-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -128,7 +168,9 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h4 {
-    font: 700 var(--font-05);
+    font: 400 var(--font-05);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-05-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -136,7 +178,9 @@
 }
 
 .msrd .msrd-Markdown h3 {
-  font: 700 var(--font-05);
+  font: 400 var(--font-05);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-05-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -144,7 +188,9 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h3 {
-    font: 700 var(--font-06);
+    font: 400 var(--font-06);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-06-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -152,7 +198,9 @@
 }
 
 .msrd .msrd-Markdown h2 {
-  font: 700 var(--font-07);
+  font: 400 var(--font-07);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-07-letter-spacing);
   margin-bottom: var(--space-vertical-03);
   margin-top: var(--space-vertical);
@@ -160,7 +208,9 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h2 {
-    font: 700 var(--font-08);
+    font: 400 var(--font-08);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-08-letter-spacing);
     margin-bottom: var(--space-vertical);
     margin-top: var(--space-vertical-06);
@@ -168,7 +218,9 @@
 }
 
 .msrd .msrd-Markdown h1 {
-  font: 800 var(--font-09);
+  font: 400 var(--font-09);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-09-letter-spacing);
   margin-bottom: var(--space-vertical-06);
   margin-top: 0;
@@ -176,7 +228,9 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h1 {
-    font: 800 var(--font-10);
+    font: 400 var(--font-10);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-10-letter-spacing);
   }
 }
@@ -202,6 +256,10 @@
   .msrd .msrd-Markdown hr {
     background-color: var(--color-grey-03);
   }
+}
+
+.msrd .msrd-Markdown img {
+  border-radius: 0.375rem;
 }
 
 .msrd .msrd-Markdown li {
@@ -246,9 +304,9 @@
 .msrd .msrd-Markdown table {
   border-collapse: collapse;
   font: inherit;
-  font-size: var(--font-02-size);
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
+  font-size: var(--font-02-size);
   font-weight: inherit;
   letter-spacing: 0;
   line-height: var(--font-02-line-height);
@@ -308,6 +366,8 @@
   border-top: 1px solid var(--color-grey-09);
   color: var(--color-text-muted);
   font: var(--font-02);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   padding-top: var(--space-vertical);
 }
 

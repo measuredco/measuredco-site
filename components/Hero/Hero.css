@@ -1,7 +1,15 @@
+.msrd .msrd-Hero {
+  text-align: center;
+}
+
 .msrd .msrd-Hero-strapline {
-  font: 800 var(--font-09);
+  font: 200 var(--font-09);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-09-letter-spacing);
   margin-bottom: var(--space-vertical-03);
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   max-width: 9.5em;
   text-wrap: balance;
@@ -15,16 +23,42 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Hero-strapline {
-    font: 800 var(--font-11);
+    font: 200 var(--font-11);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-11-letter-spacing);
     margin-bottom: var(--space-vertical-05);
   }
 }
 
+.msrd .msrd-Hero-divider {
+  margin: 1.125rem auto 1.125rem;
+  height: 0.125rem;
+  width: 4rem;
+  border-color: var(--color-brand);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Hero-divider {
+    margin-bottom: 2.25rem;
+    margin-top: 2.25rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .msrd .msrd-Hero-divider {
+    border-color: var(--color-brand-inverted);
+  }
+}
+
 .msrd .msrd-Hero-description {
   font: var(--font-03);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-03-letter-spacing);
   margin-bottom: var(--space-vertical-04);
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   max-width: 30em;
   text-wrap: balance;
@@ -39,6 +73,8 @@
 @media (min-width: 48em) {
   .msrd .msrd-Hero-description {
     font: var(--font-04);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
     margin-bottom: 0;
   }
@@ -58,22 +94,22 @@
 .msrd .msrd-Hero-callToActionLink {
   align-items: center;
   background-color: var(--color-brand);
-  border-radius: 1.3125rem;
+  border-radius: 0.5rem;
   color: var(--color-text-inverted);
   display: inline-flex;
-  font-weight: 600;
-  height: 2.75rem;
+  font-weight: 400;
+  height: 3rem;
   padding: 0 var(--space-horizontal-07);
 }
 
 @media (hover: hover) {
   .msrd .msrd-Hero-callToActionLink:hover {
-    background-color: var(--color-rose-03);
+    background-color: var(--color-azure-03);
   }
 }
 
 .msrd .msrd-Hero-callToActionLink:active {
-  background-color: var(--color-rose-02);
+  background-color: var(--color-azure-02);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,11 +120,11 @@
 
   @media (hover: hover) {
     .msrd .msrd-Hero-callToActionLink:hover {
-      background-color: var(--color-rose-07);
+      background-color: var(--color-azure-07);
     }
   }
 
   .msrd .msrd-Hero-callToActionLink:active {
-    background-color: var(--color-rose-08);
+    background-color: var(--color-azure-08);
   }
 }

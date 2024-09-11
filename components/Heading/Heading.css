@@ -1,82 +1,108 @@
 .msrd .msrd-Heading {
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 400;
   margin: 0;
 }
 
 .msrd .msrd-Heading--6 {
-  font: 700 var(--font-02);
+  font: 400 var(--font-02);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-02-letter-spacing);
 }
 
 .msrd .msrd-Heading--5 {
-  font: 700 var(--font-03);
+  font: 400 var(--font-03);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-03-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--5 {
-    font: 700 var(--font-04);
+    font: 400 var(--font-04);
+    font-optical-sizing: none;
+    font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-04-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--4 {
-  font: 700 var(--font-04);
+  font: 400 var(--font-04);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-04-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--4 {
-    font: 700 var(--font-05);
+    font: 400 var(--font-05);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-05-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--3 {
-  font: 700 var(--font-05);
+  font: 400 var(--font-05);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-05-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--3 {
-    font: 700 var(--font-06);
+    font: 400 var(--font-06);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-06-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--2 {
-  font: 700 var(--font-07);
+  font: 400 var(--font-07);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-07-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--2 {
-    font: 700 var(--font-08);
+    font: 400 var(--font-08);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-08-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--1 {
-  font: 800 var(--font-09);
+  font: 400 var(--font-09);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-09-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--1 {
-    font: 800 var(--font-10);
+    font: 400 var(--font-10);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-10-letter-spacing);
   }
 }
 
 .msrd .msrd-Heading--display {
-  font: 800 var(--font-09);
+  font: 300 var(--font-09);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   letter-spacing: var(--font-09-letter-spacing);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--display {
-    font: 800 var(--font-11);
+    font: 300 var(--font-11);
+    font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
     letter-spacing: var(--font-11-letter-spacing);
   }
 }

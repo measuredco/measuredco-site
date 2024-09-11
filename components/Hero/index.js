@@ -14,6 +14,7 @@ const Hero = ({ description, headingLevel, strapline }) => {
       <StraplineElement className="msrd-Hero-strapline">
         {strapline}
       </StraplineElement>
+      <hr className="msrd-Hero-divider" />
       <p className="msrd-Hero-description">{description}</p>
       <p className="msrd-Hero-callToAction">
         <a className="msrd-Hero-callToActionLink" href="#contact">

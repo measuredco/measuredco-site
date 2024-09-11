@@ -3,6 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   font: var(--font-01);
+  font-optical-sizing: none;
+  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
   gap: var(--space-vertical) var(--space-horizontal-01);
   justify-content: space-around;
   list-style: none;

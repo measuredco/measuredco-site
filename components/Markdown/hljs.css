@@ -22,11 +22,11 @@
     --base00: var(--color-cyan-01); /* Default Background */
     --base01: var(--color-cyan-02); /* Unused */
     --base02: var(--color-cyan-03); /* Selection Background */
-    --base03: var(--color-grey-07); /* Comments, Invisibles, Line Highlighting  */
-    --base04: var(--color-grey-08); /* Dark Foreground (Used for status bars) */
-    --base05: var(--color-grey-09); /* Default Foreground, Caret, Delimiters, Operators */
-    --base06: var(--color-grey-10); /* Unused */
-    --base07: var(--color-grey-11); /* Unused */
+    --base03: var(--color-grey-08); /* Comments, Invisibles, Line Highlighting  */
+    --base04: var(--color-grey-09); /* Dark Foreground (Used for status bars) */
+    --base05: var(--color-grey-10); /* Default Foreground, Caret, Delimiters, Operators */
+    --base06: var(--color-grey-11); /* Unused */
+    --base07: var(--color-grey-12); /* Unused */
     --base08: var(--color-red-06); /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
     --base09: var(--color-orange-07); /* Integers, Boolean, Constants, XML Attributes, Markup Link Url */
     --base0A: var(--color-yellow-07); /* Classes, Markup Bold, Search Text Background */
@@ -96,7 +96,7 @@
 }
 
 .hljs-strong {
-  font-weight: bold;
+  font-weight: 500;
   color: var(--base0A);
 }
 
@@ -143,5 +143,5 @@
 
 .hljs-meta .hljs-keyword,
 .hljs-meta-keyword {
-  font-weight: bold;
+  font-weight: 500;
 }
