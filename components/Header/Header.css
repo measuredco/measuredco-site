@@ -112,15 +112,9 @@ html {
 .msrd .msrd-Header-link {
   color: inherit;
   display: table;
-  font-weight: 300;
+  font-weight: 400;
   padding-bottom: var(--space-vertical-01);
   padding-top: var(--space-vertical-01);
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-Header-link {
-    font-weight: 400;
-  }
 }
 
 .msrd .msrd-Header-link--current {
@@ -171,7 +165,7 @@ html {
 
 .msrd .msrd-Header-callToAction {
   color: var(--color-brand);
-  font-weight: 400;
+  font-weight: 550;
 }
 
 @media (hover: hover) {
