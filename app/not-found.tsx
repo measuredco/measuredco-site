@@ -10,14 +10,11 @@ import {
   Space,
 } from "../components";
 import { supabase } from "../lib/supabase";
+import { getPageRes } from "../lib/get-page-res";
 
 export default async function NotFound() {
-  const pageRes = await supabase
-    .from("puck")
-    .select("*")
-    .eq("path", "/")
-    .maybeSingle();
-  const pageData = pageRes?.data?.data as Data;
+  const pageRes = await getPageRes("/");
+  const pageData = pageRes?.data?.data;
   const headerLinks = pageData?.root?.headerLinks;
 
   return (

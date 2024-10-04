@@ -1,4 +1,4 @@
-import type { Config, DefaultRootProps, Fields } from "@measured/puck";
+import type { Config, Data, DefaultRootProps, Fields } from "@measured/puck";
 
 import {
   Base,
@@ -35,7 +35,7 @@ type ProfileProps = {
   direction: "row" | "column";
 };
 
-type Props = {
+export type Props = {
   Archive: {
     posts: {
       author: string;
@@ -113,7 +113,10 @@ type Props = {
 type RootProps = {
   headerLinks: { current: boolean; href: string; label: string }[];
   ogImage: { alt: string; type: string; url: string };
+  description: string;
 } & DefaultRootProps;
+
+export type UserData = Data<Props, RootProps>;
 
 const profileFields: Fields<ProfileProps> = {
   title: { type: "text" },

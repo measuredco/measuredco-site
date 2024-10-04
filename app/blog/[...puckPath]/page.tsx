@@ -1,4 +1,3 @@
-import { ComponentData, Data } from "@measured/puck";
 import { Render } from "@measured/puck/rsc";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -6,7 +5,7 @@ import { notFound } from "next/navigation";
 import content from "../../../content.json";
 import resolvePuckPath from "../../../lib/resolve-puck-path";
 import { getPageRes } from "../../../lib/get-page-res";
-import config from "../../../puck.config";
+import config, { Props } from "../../../puck.config";
 
 const { blogPostDescription, openGraphLocale, siteName, siteUrl, title } =
   content;
@@ -26,12 +25,11 @@ export async function generateMetadata({
   const data = pageRes?.data?.data;
   const rootProps = data?.root?.props;
   const pageDescription = rootProps?.description || blogPostDescription;
-  const pageImage = rootProps?.ogImage || {};
+  const pageImage = rootProps?.ogImage;
   const pageTitle = rootProps?.title || "Post";
   const pageUrl = `${siteUrl}${blogPath}${path}`;
-  const post = data?.content?.find(
-    (item: ComponentData) => item.type === "Post"
-  )?.props;
+  const post = data?.content?.find((item) => item.type === "Post")
+    ?.props as Props["Post"];
   const postDate = post?.date ? new Date(post.date).toISOString() : "";
   const postModifiedDate = post?.modifiedDate
     ? new Date(post.modifiedDate).toISOString()
@@ -47,10 +45,10 @@ export async function generateMetadata({
       description: pageDescription,
       images: [
         {
-          alt: pageImage.alt || siteName,
+          alt: pageImage?.alt || siteName,
           height: 630,
-          url: pageImage.url || "/social.png",
-          type: pageImage.type || "image/png",
+          url: pageImage?.url || "/social.png",
+          type: pageImage?.type || "image/png",
           width: 1200,
         },
       ],
@@ -74,16 +72,15 @@ export default async function Page({
   const blogPath = "/blog";
   const { path } = resolvePuckPath(params.puckPath);
   const pageRes = await getPageRes(`${blogPath}${path}`);
-  const data = pageRes?.data?.data as Data;
+  const data = pageRes?.data?.data;
 
   if (pageRes.status !== 200 || !data) {
     return notFound();
   }
 
   const pageTitle = data.root?.title || data.root?.props?.title || "Post";
-  const post = data?.content?.find(
-    (item: ComponentData) => item.type === "Post"
-  )?.props;
+  const post = data?.content?.find((item) => item.type === "Post")
+    ?.props as Props["Post"];
   const postAuthor = post?.author;
   const postDate = post?.date ? new Date(post.date).toISOString() : "";
   const postModifiedDate = post?.modifiedDate

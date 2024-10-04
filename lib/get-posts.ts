@@ -1,35 +1,26 @@
-import { ComponentData, Data } from "@measured/puck";
-
 import content from "../content.json";
 import { processMarkdown } from "./markdown";
-import { supabase } from "./supabase";
+import { getPageRes } from "./get-page-res";
+import { Props } from "../puck.config";
 
 const { blogPostDescription } = content;
 
 export const getPosts = async (siteUrl: string) => {
   const blogPath = "/blog";
-  const blogPageRes = await supabase
-    .from("puck")
-    .select("*")
-    .eq("path", blogPath)
-    .maybeSingle();
-  const blogPageData = blogPageRes?.data?.data as Data;
-  const archivePosts = blogPageData?.content?.filter(
-    (item: ComponentData) => item.type === "Archive"
-  )?.[0]?.props?.posts;
+  const blogPageRes = await getPageRes(blogPath);
+  const blogPageData = blogPageRes?.data?.data;
+  const archivePosts = (
+    blogPageData?.content?.filter((item) => item.type === "Archive")?.[0]
+      ?.props as Props["Archive"]
+  ).posts;
   const posts = [];
 
   for (const { slug } of archivePosts) {
     const postPath = `${blogPath}/${slug}`;
-    const postPageRes = await supabase
-      .from("puck")
-      .select("*")
-      .eq("path", postPath)
-      .maybeSingle();
-    const postData = postPageRes?.data?.data as Data;
-    const post = postData?.content?.find(
-      (item: ComponentData) => item.type === "Post"
-    )?.props;
+    const postPageRes = await getPageRes(postPath);
+    const postData = postPageRes?.data?.data;
+    const post = postData?.content?.find((item) => item.type === "Post")
+      ?.props as Props["Post"];
 
     if (!post) {
       return;
