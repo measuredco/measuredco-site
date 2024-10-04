@@ -12,6 +12,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/lighthouse/",
       },
       {
+        userAgent: "*",
+        disallow: "/proposals/",
+      },
+      {
         userAgent: "GPTBot",
         disallow: "/",
       },
