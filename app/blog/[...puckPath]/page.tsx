@@ -5,14 +5,11 @@ import { notFound } from "next/navigation";
 
 import content from "../../../content.json";
 import resolvePuckPath from "../../../lib/resolve-puck-path";
-import { supabase } from "../../../lib/supabase";
+import { getPageRes } from "../../../lib/get-page-res";
 import config from "../../../puck.config";
 
 const { blogPostDescription, openGraphLocale, siteName, siteUrl, title } =
   content;
-
-const getPageRes = (path: string) =>
-  supabase.from("puck").select("*").eq("path", path).maybeSingle();
 
 export { viewport } from "../../page";
 
@@ -26,7 +23,7 @@ export async function generateMetadata({
   const blogPath = "/blog";
   const { path } = resolvePuckPath(params.puckPath);
   const pageRes = await getPageRes(`${blogPath}${path}`);
-  const data = pageRes?.data?.data as Data;
+  const data = pageRes?.data?.data;
   const rootProps = data?.root?.props;
   const pageDescription = rootProps?.description || blogPostDescription;
   const pageImage = rootProps?.ogImage || {};

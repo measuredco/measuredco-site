@@ -4,19 +4,11 @@ import { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 
 import content from "../content.json";
-import { supabase } from "../lib/supabase";
+import { getPageRes } from "../lib/get-page-res";
 import config from "../puck.config";
 
 const { description, openGraphLocale, siteName, siteUrl, themeColor, title } =
   content;
-
-const getPageRes = async (path: string) =>
-  (await supabase.from("puck").select("*").eq("path", path).maybeSingle()) as {
-    status: number;
-    data?: {
-      data: Data<any, { description: string; title: string; ogImage: any }>;
-    };
-  };
 
 export const viewport: Viewport = {
   initialScale: 1,

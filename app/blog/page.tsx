@@ -5,20 +5,17 @@ import { notFound } from "next/navigation";
 
 import content from "../../content.json";
 import { getPosts } from "../../lib/get-posts";
-import { supabase } from "../../lib/supabase";
+import { getPageRes } from "../../lib/get-page-res";
 import config from "../../puck.config";
 
 const { blogDescription, openGraphLocale, siteName, siteUrl, title } = content;
-
-const getPageRes = (path: string) =>
-  supabase.from("puck").select("*").eq("path", path).maybeSingle();
 
 export { viewport } from "../page";
 
 export async function generateMetadata(): Promise<Metadata> {
   const path = "/blog";
   const pageRes = await getPageRes(path);
-  const data = pageRes?.data?.data as Data;
+  const data = pageRes?.data?.data;
   const rootProps = data?.root?.props;
   const pageDescription = rootProps?.description || blogDescription;
   const pageImage = rootProps?.ogImage || {};
