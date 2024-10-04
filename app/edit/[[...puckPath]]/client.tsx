@@ -24,7 +24,7 @@ export function Client({
   return (
     <Puck
       config={config}
-      data={draftData}
+      data={draftData || {}}
       plugins={[headingAnalyzer]}
       headerPath={path}
       overrides={{

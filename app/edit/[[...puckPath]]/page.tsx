@@ -1,4 +1,5 @@
 import "@measured/puck/puck.css";
+import "@measured/puck-plugin-heading-analyzer/dist/index.css";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 

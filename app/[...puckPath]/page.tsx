@@ -1,5 +1,5 @@
 import { Data } from "@measured/puck";
-import { Render } from "@measured/puck/rsc";
+import { Render } from "@measured/puck";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -10,8 +10,13 @@ import config from "../../puck.config";
 
 const { openGraphLocale, siteUrl, title } = content;
 
-const getPageRes = (path: string) =>
-  supabase.from("puck").select("*").eq("path", path).maybeSingle();
+const getPageRes = async (path: string) =>
+  (await supabase.from("puck").select("*").eq("path", path).maybeSingle()) as {
+    status: number;
+    data?: {
+      data: Data<any, { description: string; title: string; ogImage: any }>;
+    };
+  };
 
 export { viewport } from "../page";
 
@@ -24,7 +29,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { path } = resolvePuckPath(params.puckPath);
   const pageRes = await getPageRes(path);
-  const data = pageRes?.data?.data as Data;
+  const data = pageRes?.data?.data;
   const root = data?.root;
   const pageDescription = root?.description || "";
   const pageTitle = root?.title || "Page";
@@ -68,5 +73,5 @@ export default async function Page({
     return notFound();
   }
 
-  return <Render config={config} data={data} />;
+  return <Render config={config} data={data || {}} />;
 }

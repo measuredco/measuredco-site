@@ -1,5 +1,5 @@
 import { Data } from "@measured/puck";
-import { Render } from "@measured/puck/rsc";
+import { Render } from "@measured/puck";
 import { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 
@@ -10,8 +10,13 @@ import config from "../puck.config";
 const { description, openGraphLocale, siteName, siteUrl, themeColor, title } =
   content;
 
-const getPageRes = (path: string) =>
-  supabase.from("puck").select("*").eq("path", path).maybeSingle();
+const getPageRes = async (path: string) =>
+  (await supabase.from("puck").select("*").eq("path", path).maybeSingle()) as {
+    status: number;
+    data?: {
+      data: Data<any, { description: string; title: string; ogImage: any }>;
+    };
+  };
 
 export const viewport: Viewport = {
   initialScale: 1,
@@ -22,7 +27,7 @@ export const viewport: Viewport = {
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageRes = await getPageRes("/");
-  const data = pageRes?.data?.data as Data;
+  const data = pageRes?.data?.data;
   const rootProps = data?.root?.props;
   const pageDescription = rootProps?.description || description;
   const pageImage = rootProps?.ogImage || {};
