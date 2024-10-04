@@ -22,9 +22,9 @@ export async function generateMetadata({
   const { path } = resolvePuckPath(params.puckPath);
   const pageRes = await getPageRes(path);
   const data = pageRes?.data?.data;
-  const root = data?.root;
-  const pageDescription = root?.description || "";
-  const pageTitle = root?.title || "Page";
+  const rootProps = data?.root.props || data?.root;
+  const pageDescription = rootProps?.description || "";
+  const pageTitle = rootProps?.title || "Page";
   const pageUrl = `${siteUrl}${path}`;
 
   return {
