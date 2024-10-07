@@ -37,17 +37,17 @@
     redux "^4.2.1"
     use-memo-one "^1.1.3"
 
-"@measured/puck-plugin-heading-analyzer@0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.16.0.tgz#49ca1ec633a5a6f56751f30f41d9dcf5985062d9"
-  integrity sha512-5BvgkxXLJ70fiW4N/r9mhdwyZQVZwCMJVgLub+2oOLonlajRVxUtH4qbd96JhS8ojENpcI0gBjPEtRgAA34HgQ==
+"@measured/puck-plugin-heading-analyzer@^0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.16.1.tgz#a218dceb59741bc1dbe3044b03dd95882c68f3a2"
+  integrity sha512-n+umrQfecNgxcUm2VtX2N1pe0IWnReq4JAa7sLywJaJo2suJmp4k0+CPTUd8nnX58qjyIldQx9+3kaN/qPmD5A==
   dependencies:
     react-from-json "^0.8.0"
 
-"@measured/puck@0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.16.0.tgz#5caab5a0823b5ffb3f4cf05daf13a45be299c248"
-  integrity sha512-66wyo3zuCpNyBKXmxo11IBa2zpSZpYDuCMxyrn+RN1N9ZoNEtzriydcH3ANWuURPuYb+5er/4cSc+0nJaza02w==
+"@measured/puck@^0.16.1":
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.16.1.tgz#d6d4764cf0711961838e6602aa2c2f080c31b515"
+  integrity sha512-gP86rWsafO3dDVWjZFsydV+sTNbxwpluMa+k0fVoJApYG+rjfluVArmJMi5M7nJiYO4F5yqT+Q4O4zl8kdmmAQ==
   dependencies:
     "@measured/dnd" "16.6.0-canary.4cba1d1"
     deep-diff "^1.0.2"
