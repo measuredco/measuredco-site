@@ -7,6 +7,7 @@ import {
   Cards,
   Contact,
   Footer,
+  Grid,
   Header,
   Heading,
   Hero,
@@ -92,6 +93,14 @@ export type Props = {
       description: string;
     }[];
   };
+  Card: {
+    artifact: string;
+    headingLevel: "1" | "2" | "3" | "4" | "5" | "6" | "";
+    link: string;
+    title: string;
+    description: string;
+  };
+  Grid: {};
   Space: {
     size:
       | "01"
@@ -392,6 +401,72 @@ export const config: Config<Props, RootProps> = {
         </Section>
       ),
     },
+    Card: {
+      fields: {
+        artifact: {
+          type: "select",
+          options: [
+            {
+              label: "hash #",
+              value: "#",
+            },
+            {
+              label: "diamond",
+              value: "",
+            },
+            {
+              label: "sun ☼",
+              value: "☼",
+            },
+            {
+              label: "ui ⬒",
+              value: "⬒",
+            },
+            {
+              label: "arrow 🡒",
+              value: "🡒",
+            },
+          ],
+        },
+        headingLevel: {
+          type: "select",
+          options: [
+            { label: "", value: "" },
+            { label: "H1", value: "1" },
+            { label: "H2", value: "2" },
+            { label: "H3", value: "3" },
+            { label: "H4", value: "4" },
+            { label: "H5", value: "5" },
+            { label: "H6", value: "6" },
+          ],
+        },
+        link: {
+          type: "text",
+        },
+        title: {
+          type: "text",
+        },
+        description: {
+          type: "textarea",
+        },
+      },
+      defaultProps: {
+        artifact: "#",
+        headingLevel: "3",
+        link: "",
+        title: "Card",
+        description: "Description",
+      },
+      render: ({ artifact, headingLevel, link, title, description }) => (
+        <Card
+          artifact={artifact}
+          headingLevel={headingLevel}
+          link={link}
+          title={title}
+          description={description}
+        />
+      ),
+    },
     Clients: {
       fields: {
         logos: {
@@ -424,6 +499,13 @@ export const config: Config<Props, RootProps> = {
               return <Logo key={`${logoKey}-${idx}`} />;
             })}
           </Logos>
+        </Section>
+      ),
+    },
+    Grid: {
+      render: () => (
+        <Section>
+          <Grid />
         </Section>
       ),
     },
