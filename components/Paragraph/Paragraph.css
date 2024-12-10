@@ -1,40 +1,31 @@
 .msrd .msrd-Paragraph {
-  font: 400 var(--font-03);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-03-letter-spacing);
+  font-size: var(--font-03-size);
+  line-height: var(--font-03-line-height);
   margin: 0;
+  text-wrap: pretty;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Paragraph {
-    font: var(--font-04);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-04-letter-spacing);
+    font-size: var(--font-04-size);
+    line-height: var(--font-04-line-height);
   }
 }
 
 .msrd .msrd-Paragraph--small {
-  font: var(--font-02);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-02-letter-spacing);
+  font-size: var(--font-02-size);
+  line-height: var(--font-02-line-height);
 }
 
 .msrd .msrd-Paragraph--large {
-  font: var(--font-04);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-04-letter-spacing);
+  font-size: var(--font-04-size);
+  line-height: var(--font-04-line-height);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Paragraph--large {
-    font: var(--font-05);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-05-letter-spacing);
+    font-size: var(--font-05-size);
+    line-height: var(--font-05-line-height);
   }
 }
 
@@ -48,4 +39,16 @@
 
 .msrd-Paragraph--right {
   text-align: right;
+}
+
+.msrd .msrd-Paragraph--measured {
+  max-width: 35.25em;
+}
+
+.msrd .msrd-Paragraph--measured.msrd-Paragraph--large {
+  max-width: 31.725em;
+}
+
+.msrd .msrd-Paragraph--muted {
+  color: var(--color-text-muted);
 }

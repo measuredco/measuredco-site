@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import content from "../../content.json";
 import resolvePuckPath from "../../lib/resolve-puck-path";
 import { getPageRes } from "../../lib/get-page-res";
-import config from "../../puck.config";
+import config from "../../puck/config";
 
 const { openGraphLocale, siteUrl, title } = content;
 

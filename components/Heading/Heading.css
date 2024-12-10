@@ -1,109 +1,124 @@
 .msrd .msrd-Heading {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
+  text-wrap: balance;
 }
 
 .msrd .msrd-Heading--6 {
-  font: 400 var(--font-02);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-02-letter-spacing);
+  font-size: var(--font-02-size);
+  font-weight: 533;
+  line-height: var(--font-02-line-height);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Heading--6 {
+    font-size: var(--font-03-size);
+    line-height: var(--font-03-line-height);
+  }
 }
 
 .msrd .msrd-Heading--5 {
-  font: 400 var(--font-03);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-03-letter-spacing);
+  font-size: var(--font-03-size);
+  font-weight: 500;
+  line-height: var(--font-03-line-height);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--5 {
-    font: 400 var(--font-04);
-    font-optical-sizing: none;
-    font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-04-letter-spacing);
+    font-size: var(--font-04-size);
+    line-height: var(--font-04-line-height);
   }
 }
 
 .msrd .msrd-Heading--4 {
-  font: 400 var(--font-04);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-04-letter-spacing);
+  font-size: var(--font-04-size);
+  font-weight: 466;
+  line-height: var(--font-04-line-height);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--4 {
-    font: 400 var(--font-05);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-05-letter-spacing);
+    font-size: var(--font-05-size);
+    line-height: var(--font-05-line-height);
   }
 }
 
 .msrd .msrd-Heading--3 {
-  font: 400 var(--font-05);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-05-letter-spacing);
+  font-size: var(--font-05-size);
+  font-weight: 433;
+  line-height: var(--font-05-line-height);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--3 {
-    font: 400 var(--font-06);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-06-letter-spacing);
+    font-size: var(--font-06-size);
+    line-height: var(--font-06-line-height);
   }
 }
 
 .msrd .msrd-Heading--2 {
-  font: 400 var(--font-07);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-07-letter-spacing);
+  font-size: var(--font-07-size);
+  font-weight: 400;
+  line-height: var(--font-07-line-height);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--2 {
-    font: 400 var(--font-08);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-08-letter-spacing);
+    font-size: var(--font-08-size);
+    line-height: var(--font-08-line-height);
   }
 }
 
 .msrd .msrd-Heading--1 {
-  font: 400 var(--font-09);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-09-letter-spacing);
+  font-size: var(--font-09-size);
+  font-weight: 400;
+  line-height: var(--font-09-line-height);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--1 {
-    font: 400 var(--font-10);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-10-letter-spacing);
+    font-size: var(--font-10-size);
+    line-height: var(--font-10-line-height);
   }
 }
 
-.msrd .msrd-Heading--display {
-  font: 300 var(--font-09);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-09-letter-spacing);
+.msrd .msrd-Heading--display3 {
+  font-size: var(--font-10-size);
+  font-weight: 400;
+  line-height: var(--font-10-line-height);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Heading--display {
-    font: 300 var(--font-11);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-11-letter-spacing);
+  .msrd .msrd-Heading--display3 {
+    font-size: var(--font-11-size);
+    line-height: var(--font-11-line-height);
+  }
+}
+
+.msrd .msrd-Heading--display2 {
+  font-size: var(--font-11-size);
+  font-weight: 400;
+  line-height: var(--font-11-line-height);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Heading--display2 {
+    font-size: var(--font-12-size);
+    line-height: var(--font-12-line-height);
+  }
+}
+
+.msrd .msrd-Heading--display1 {
+  font-size: var(--font-12-size);
+  font-weight: 200;
+  line-height: var(--font-12-line-height);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Heading--display1 {
+    font-size: var(--font-13-size);
+    line-height: var(--font-13-line-height);
   }
 }
 

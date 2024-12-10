@@ -1,12 +1,19 @@
 "use client";
 
 import classNames from "classnames";
-import { ReactNode, useEffect, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 
 import { processMarkdown, sanitizeDefault } from "../../lib/markdown";
 
 import "./hljs.css";
 import "./Markdown.css";
+
+export type MarkdownProps = {
+  align?: "left" | "center" | "right";
+  inline?: boolean;
+  measured?: boolean;
+  sanitizeOptions?: any;
+};
 
 const Markdown = ({
   align = "left",
@@ -14,16 +21,10 @@ const Markdown = ({
   inline = false,
   measured = false,
   sanitizeOptions = sanitizeDefault,
-}: {
-  align?: "left" | "center" | "right";
-  children: ReactNode;
-  inline?: boolean;
-  measured?: boolean;
-  sanitizeOptions?: any;
-}) => {
+}: PropsWithChildren<MarkdownProps>) => {
   let Element: any = "div";
   const [textProcessed, setTextProcessed] = useState(
-    processMarkdown(children.toString(), sanitizeOptions)
+    processMarkdown(children?.toString(), sanitizeOptions)
   );
 
   if (inline) {
@@ -31,7 +32,7 @@ const Markdown = ({
   }
 
   useEffect(() => {
-    setTextProcessed(processMarkdown(children.toString(), sanitizeOptions));
+    setTextProcessed(processMarkdown(children?.toString(), sanitizeOptions));
   }, [children]);
 
   return (

@@ -1,0 +1,189 @@
+.msrd .msrd-Card {
+  background: var(--color-card-background);
+  border-radius: 1.125rem;
+  box-shadow: var(--box-shadow-light-source);
+  color: var(--color-card-text);
+  display: flex;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.msrd .msrd-Card-inner {
+  border-radius: 1.125rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-vertical-06) var(--space-horizontal-08);
+  width: 100%;
+}
+
+.msrd .msrd-Card::after {
+  border: solid var(--border-width) var(--color-card-border);
+  border-radius: 1.125rem;
+  bottom: 0.25rem;
+  content: "";
+  left: -0.25rem;
+  pointer-events: none;
+  position: absolute;
+  right: 0.25rem;
+  top: -0.25rem;
+  transition: 0.05s var(--easing-cubic-bezier-easy-ease);
+}
+
+.msrd .msrd-Card a {
+  color: inherit;
+  position: relative;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+}
+
+.msrd .msrd-Card a:focus-visible {
+  outline: none;
+}
+
+.msrd .msrd-Card a:hover,
+.msrd .msrd-Card a:active {
+  color: inherit;
+}
+
+.msrd .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible) {
+  outline: 0.125rem solid var(--color-interactive-focus);
+  outline-offset: 0.25rem;
+}
+
+.msrd .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible)::after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: none;
+}
+
+@media (hover: hover) {
+  .msrd .msrd-Card:has(.msrd-Card-heading a) {
+    cursor: pointer;
+  }
+
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover::after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: 0.1s var(--easing-cubic-bezier-easy-ease);
+  }
+}
+
+.msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
+  bottom: -0.125rem;
+  left: 0.125rem;
+  right: -0.125rem;
+  top: 0.125rem;
+}
+
+.msrd .msrd-Card-heading {
+  font-size: var(--font-05-size);
+  font-weight: 433;
+  line-height: var(--font-05-line-height);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.msrd .msrd-Card-heading a {
+  color: inherit;
+  position: static;
+}
+
+.msrd .msrd-Card-heading a:hover,
+.msrd .msrd-Card-heading a:active {
+  color: inherit;
+}
+
+.msrd .msrd-Card-heading a::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.msrd .msrd-Card-dots {
+  align-items: center;
+  display: flex;
+  height: var(--space-horizontal-03);
+  justify-content: space-between;
+  left: var(--space-horizontal-05);
+  position: absolute;
+  top: var(--space-horizontal-05);
+  width: var(--space-horizontal-07);
+}
+
+.msrd .msrd-Card-dots::before,
+.msrd .msrd-Card-dots::after,
+.msrd .msrd-Card-dotsInner {
+  background-color: var(--color-card-dots);
+  border-radius: 50%;
+  content: "";
+  height: var(--space-horizontal-03);
+  width: var(--space-horizontal-03);
+}
+
+@media (hover: hover) {
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before,
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner,
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
+    background-color: var(--color-card-dots-hover);
+  }
+
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before {
+    transition: 0.1s var(--easing-cubic-bezier-easy-ease);
+  }
+
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
+    transition: 0.2s var(--easing-cubic-bezier-easy-ease);
+  }
+
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
+    transition: 0.3s var(--easing-cubic-bezier-easy-ease);
+  }
+}
+
+.msrd .msrd-Card-dots::before {
+  left: 0;
+  position: absolute;
+}
+
+.msrd .msrd-Card-dots::after {
+  position: absolute;
+  right: 0;
+}
+
+.msrd .msrd-Card-dotsInner {
+  margin: auto;
+  position: relative;
+}
+
+.msrd .msrd-Card-note {
+  font-weight: 466;
+  margin-top: auto;
+}
+
+.msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note {
+  color: var(--color-card-interactive);
+}
+
+.msrd .msrd-Card-note span::after {
+  content: "→";
+  left: 0;
+  opacity: 0;
+  position: relative;
+}
+
+@media (hover: hover) {
+  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-note span::after {
+    left: 0.25em;
+    opacity: 1;
+    transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+      0.2s left var(--easing-cubic-bezier-easy-ease);
+  }
+}

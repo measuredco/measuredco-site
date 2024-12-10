@@ -1,0 +1,93 @@
+.msrd .msrd-SiteFooter {
+  color: var(--color-text-muted);
+  margin-top: auto;
+  padding-bottom: var(--space-vertical);
+  padding-left: var(--space-horizontal);
+  padding-right: var(--space-horizontal);
+  position: relative;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-SiteFooter {
+    padding-bottom: var(--space-vertical-06);
+    padding-left: var(--space-horizontal-07);
+    padding-right: var(--space-horizontal-07);
+  }
+}
+
+.msrd .msrd-SiteFooter-inner {
+  display: grid;
+  gap: var(--space-vertical) var(--space-horizontal);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--section-max-width);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-SiteFooter-inner {
+    align-items: end;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: start;
+  }
+
+  .msrd .msrd-SiteFooter-inner > :first-child,
+  .msrd .msrd-SiteFooter-inner > :nth-child(2) {
+    grid-column-end: span 4;
+  }
+
+  .msrd .msrd-SiteFooter-inner > :nth-child(3) {
+    grid-column-end: span 2;
+  }
+
+  .msrd .msrd-SiteFooter-inner > :last-child {
+    grid-column-end: span 2;
+    justify-self: end;
+  }
+}
+
+.msrd .msrd-SiteFooter ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.msrd .msrd-SiteFooter li {
+  padding-top: var(--space-vertical-01);
+}
+
+.msrd .msrd-SiteFooter a:not([class]) {
+  color: var(--color-interactive-neutral);
+}
+
+/* .msrd .msrd-SiteFooter a:not([class]):visited {
+  color: var(--color-brand-inverted);
+} */
+
+@media (hover: hover) {
+  .msrd .msrd-SiteFooter a:not([class]):hover {
+    color: var(--color-interactive-neutral-hover);
+  }
+}
+
+.msrd .msrd-SiteFooter a:not([class]):active {
+  color: var(--color-interactive-neutral-active);
+}
+
+.msrd .msrd-SiteFooter-logo:has(:focus-visible) {
+  border-radius: 0.0625rem;
+  outline: 0.125rem solid var(--color-interactive-focus);
+  outline-offset: 0.125rem;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-SiteFooter-logo {
+    margin-bottom: var(--space-vertical-02);
+  }
+}
+
+.msrd .msrd-SiteFooter-logoLink,
+.msrd .msrd-SiteFooter-logoLink:hover,
+.msrd .msrd-SiteFooter-logoLink:active {
+  color: var(--color-logo);
+}

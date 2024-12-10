@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import content from "../../content.json";
 import { getPosts } from "../../lib/get-posts";
 import { getPageRes } from "../../lib/get-page-res";
-import config from "../../puck.config";
+import config from "../../puck/config";
 
 const { blogDescription, openGraphLocale, siteName, siteUrl, title } = content;
 
@@ -39,7 +39,7 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
       locale: openGraphLocale,
       siteName,
-      title: `${pageTitle} | ${title}`,
+      title: `${pageTitle} | ${siteName}`,
       type: "website",
       url: pageUrl,
     },

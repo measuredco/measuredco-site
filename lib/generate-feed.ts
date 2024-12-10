@@ -3,7 +3,7 @@ import { Feed } from "feed";
 import content from "../content.json";
 import { getPosts } from "./get-posts";
 
-const { blogDescription, siteUrl, title } = content;
+const { blogDescription, siteName, siteUrl } = content;
 
 export const generateFeed = async () => {
   const feed = new Feed({
@@ -19,12 +19,12 @@ export const generateFeed = async () => {
     image: `${siteUrl}/social.png`,
     language: "en-gb",
     link: siteUrl,
-    title,
+    title: siteName,
   });
   const posts = await getPosts(siteUrl);
 
   // limit feed to 30 posts
-  posts.slice(0, 30).forEach((post) => {
+  posts?.slice(0, 30).forEach((post) => {
     feed.addItem(post);
   });
 

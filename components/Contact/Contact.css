@@ -1,143 +1,35 @@
 .msrd .msrd-Contact {
-  background-color: var(--color-white);
-  border-radius: 1.125rem;
-  box-shadow: 0.125rem 0.125rem 0.25rem
-    color-mix(in srgb, var(--color-black) 8%, transparent);
-  color: var(--color-brand);
-  padding: var(--space-vertical) var(--space-horizontal-06);
-  position: relative;
+  text-align: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  .msrd .msrd-Contact {
-    background-color: var(--color-brand-inverted);
-    color: var(--color-azure-01);
-  }
-}
-
-.msrd .msrd-Contact::after {
-  border: solid 0.0625rem var(--color-brand-inverted);
-  border-radius: 1.125rem;
-  bottom: 0.25rem;
-  content: "";
-  left: -0.25rem;
-  pointer-events: none;
-  position: absolute;
-  right: 0.25rem;
-  top: -0.25rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .msrd .msrd-Contact::after {
-    border-color: var(--color-white);
-  }
+.msrd .msrd-Contact-rule {
+  margin-bottom: var(--space-vertical-04);
+  margin-top: var(--space-vertical-04);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Contact {
-    padding: var(--space-vertical-06) var(--space-horizontal-09);
-  }
-}
-
-.msrd .msrd-Contact-heading {
-  font: 400 var(--font-08);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-08-letter-spacing);
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-@media (min-width: 23em) {
-  .msrd .msrd-Contact-heading {
-    font: 400 var(--font-09);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-09-letter-spacing);
-  }
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-Contact-heading {
-    font: 400 var(--font-10);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-10-letter-spacing);
-    margin-bottom: var(--space-vertical-01);
-  }
-}
-
-.msrd .msrd-Contact-strapline {
-  font: 200 var(--font-03);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-03-letter-spacing);
-  margin-bottom: var(--space-vertical-03);
-  margin-top: 0;
-}
-
-@media (min-width: 23em) {
-  .msrd .msrd-Contact-strapline {
-    font: 200 var(--font-04);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-04-letter-spacing);
-  }
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-Contact-strapline {
-    font: 200 var(--font-05);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-05-letter-spacing);
-  }
-}
-
-.msrd .msrd-Contact-methods {
-  font: 400 var(--font-04);
-  font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  letter-spacing: var(--font-04-letter-spacing);
-  list-style: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 0;
-}
-
-@media (min-width: 23em) {
-  .msrd .msrd-Contact-methods {
-    font: 400 var(--font-05);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-05-letter-spacing);
-  }
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-Contact-methods {
-    font: 400 var(--font-06);
-    font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-    letter-spacing: var(--font-06-letter-spacing);
+  .msrd .msrd-Contact-rule {
+    margin-bottom: var(--space-vertical);
+    margin-top: var(--space-vertical);
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .msrd .msrd-Contact-methods a {
-    color: var(--color-azure-01);
+  .msrd .msrd-Contact a:not([class]) {
+    color: var(--color-interactive-neutral);
   }
 
-  .msrd .msrd-Contact-methods a:focus,
-  .msrd .msrd-Contact-methods a:hover {
-    color: var(--color-azure-02);
+  /* .msrd .msrd-Contact a:not([class]):visited {
+    color: var(--color-brand);
+  } */
+
+  @media (hover: hover) {
+    .msrd .msrd-Contact a:not([class]):hover {
+      color: var(--color-interactive-neutral-hover);
+    }
   }
 
-  .msrd .msrd-Contact-methods a:active {
-    color: var(--color-azure-03);
+  .msrd .msrd-Contact a:not([class]):active {
+    color: var(--color-interactive-neutral-active);
   }
-}
-
-.msrd .msrd-Contact-methods li {
-  margin-bottom: var(--space-vertical-02);
 }

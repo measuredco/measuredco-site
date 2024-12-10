@@ -1,0 +1,84 @@
+.msrd .msrd-Surface--graphicDark {
+  --color-brand: var(--color-azure-07);
+
+  --color-background: var(--color-azure-02);
+  --color-background-highlight: color-mix(
+    in srgb,
+    var(--color-text) 8%,
+    transparent
+  );
+
+  --color-text: var(--color-white);
+  --color-text-contrast: var(--color-grey-01);
+  --color-text-muted: color-mix(in srgb, var(--color-text) 52%, transparent);
+
+  --color-interactive: var(--color-azure-07);
+  --color-interactive-focus: var(--color-azure-07);
+  --color-interactive-hover: var(--color-azure-08);
+  --color-interactive-active: var(--color-azure-09);
+
+  --color-interactive-contrast: var(--color-azure-01);
+
+  --color-interactive-neutral: var(--color-white);
+  --color-interactive-neutral-hover: color-mix(
+    in srgb,
+    var(--color-text) 84%,
+    transparent
+  );
+  --color-interactive-neutral-active: color-mix(
+    in srgb,
+    var(--color-text) 68%,
+    transparent
+  );
+
+  --color-border: color-mix(in srgb, var(--color-text) 16%, transparent);
+  --color-border-code: var(--color-azure-04);
+
+  --box-shadow: 0.125rem 0.125rem 0.25rem color-mix(in srgb, var(--color-azure-01) 92%, transparent);
+  --box-shadow-light-source: 0.125rem 0.125rem 3rem color-mix(in srgb, var(--color-white) 8%, transparent);
+
+  --color-card-background: var(--color-azure-07);
+  --color-card-text: var(--color-grey-01);
+  --color-card-interactive: var(--color-azure-01);
+  --color-card-border: var(--color-white);
+  --color-card-dots: var(--color-azure-04);
+  --color-card-dots-focus: var(--color-white);
+
+  --color-header-background: transparent;
+
+  --color-logo: var(--color-white);
+}
+
+.msrd .msrd-Surface--graphicDark {
+  background-color: var(--color-background);
+  background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png),
+    url(https://res.cloudinary.com/measuredco/image/upload/v1732635074/site/site-background-repeat_kjbjx5.png);
+  background-position: center -1rem, center top;
+  background-repeat: no-repeat, repeat-y;
+  background-size: auto;
+  color: var(--color-text);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Surface--graphicDark {
+    background-position: center top;
+  }
+}
+
+.msrd .msrd-Surface--graphicDark a:not([class]) {
+  color: var(--color-interactive-neutral);
+}
+
+/* .msrd .msrd-Surface--graphicDark a:not([class]):visited {
+  color: var(--color-brand);
+} */
+
+@media (hover: hover) {
+  .msrd .msrd-Surface--graphicDark a:not([class]):hover {
+    color: var(--color-interactive-neutral-hover);
+  }
+}
+
+.msrd .msrd-Surface--graphicDark a:not([class]):active {
+  color: var(--color-interactive-neutral-active);
+}
