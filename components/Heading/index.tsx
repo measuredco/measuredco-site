@@ -1,22 +1,30 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
 import "./Heading.css";
 
+export type HeadingProps = {
+  align?: string;
+  anchor?: string;
+  level?: "1" | "2" | "3" | "4" | "5" | "6" | "";
+  size?:
+    | "display1"
+    | "display2"
+    | "display3"
+    | "1"
+    | "2"
+    | "3"
+    | "4"
+    | "5"
+    | "6";
+};
+
 const Heading = ({
   align,
+  anchor,
   children,
-  id,
   level,
-  maxWidth,
   size,
-}: {
-  children: ReactNode;
-  align?: string;
-  id?: string;
-  level?: "1" | "2" | "3" | "4" | "5" | "6" | "";
-  maxWidth?: string;
-  size?: "1" | "2" | "3" | "4" | "5" | "6" | "display";
-}) => {
+}: PropsWithChildren<HeadingProps>) => {
   let Element: any = "div";
 
   if (level) {
@@ -28,8 +36,7 @@ const Heading = ({
       className={`msrd-Heading ${size ? `msrd-Heading--${size}` : ""} ${
         align ? `msrd-Heading--${align}` : ""
       }`}
-      id={id}
-      style={{ maxWidth }}
+      id={anchor}
     >
       {children}
     </Element>

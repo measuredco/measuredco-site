@@ -1,0 +1,10 @@
+.msrd .msrd-Rule {
+  border-color: var(--color-brand);
+  height: 0.125rem;
+  margin: 0;
+  width: 4rem;
+}
+
+.msrd .msrd-Rule--center {
+  margin: 0 auto;
+}

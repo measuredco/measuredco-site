@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import content from "../../../content.json";
 import resolvePuckPath from "../../../lib/resolve-puck-path";
 import { getPageRes } from "../../../lib/get-page-res";
-import config, { Props } from "../../../puck.config";
+import config, { Props } from "../../../puck/config";
 
 const { blogPostDescription, openGraphLocale, siteName, siteUrl, title } =
   content;

@@ -1,21 +1,50 @@
 import { Metadata } from "next";
+import { Roboto_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { ReactNode } from "react";
 
 import "../components/system.css";
+import { Base } from "../components";
 import content from "../content.json";
 
-const { title } = content;
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  variable: "--font-next-monospaced",
+});
+
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-next",
+// });
+
+const inter = localFont({
+  src: [
+    {
+      path: "./InterVariable.subset.woff2",
+      style: "normal",
+      weight: "100 900",
+    },
+    {
+      path: "./InterVariable-Italic.subset.woff2",
+      style: "italic",
+      weight: "100 900",
+    },
+  ],
+  variable: "--font-next",
+});
+
+const { siteName, title } = content;
 
 export const metadata: Metadata = {
   title: {
     default: title,
-    template: `%s | ${title}`,
+    template: `%s | ${siteName}`,
   },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-gb" style={{ scrollBehavior: "smooth" }}>
+    <html lang="en-gb" className={`${inter.variable} ${robotoMono.variable}`}>
       <head>
         <meta
           httpEquiv="delegate-ch"
@@ -51,7 +80,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="https://plausible.io/js/plausible.js"
         ></script>
       </head>
-      <body>{children}</body>
+      <Base body>{children}</Base>
     </html>
   );
 }

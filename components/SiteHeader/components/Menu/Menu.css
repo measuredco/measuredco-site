@@ -1,0 +1,25 @@
+.msrd .msrd-SiteHeaderMenu {
+  bottom: 0;
+  display: none;
+  left: 0;
+  overflow-y: auto;
+  padding: var(--space-vertical-03) var(--space-horizontal)
+    var(--space-vertical);
+  position: fixed;
+  right: 0;
+  top: var(--space-vertical-09);
+}
+
+.msrd .msrd-SiteHeaderMenu--open {
+  background: var(--color-background);
+  display: block;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-SiteHeaderMenu {
+    display: block;
+    overflow-y: visible;
+    padding: 0;
+    position: static;
+  }
+}

@@ -4,9 +4,8 @@ import { Button, Puck, usePuck } from "@measured/puck";
 import type { Data } from "@measured/puck";
 import headingAnalyzer from "@measured/puck-plugin-heading-analyzer";
 
-import config from "../../../puck.config";
+import config from "../../../puck/config";
 import { Save } from "react-feather";
-import { Base } from "../../../components";
 import { useState } from "react";
 
 export function Client({
@@ -40,26 +39,24 @@ export function Client({
 
           return (
             <>
-              <Base>
-                <small
-                  style={{
-                    display: "flex",
-                    color: "var(--color-grey-02)",
-                    background: "white",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "100%",
-                  }}
-                >
-                  {unsaved ? (
-                    <span>Unsaved&nbsp;changes</span>
-                  ) : unpublished ? (
-                    <span>Unpublished&nbsp;changes</span>
-                  ) : (
-                    "Published"
-                  )}
-                </small>
-              </Base>
+              <small
+                style={{
+                  display: "flex",
+                  color: "var(--color-grey-02)",
+                  background: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "100%",
+                }}
+              >
+                {unsaved ? (
+                  <span>Unsaved&nbsp;changes</span>
+                ) : unpublished ? (
+                  <span>Unpublished&nbsp;changes</span>
+                ) : (
+                  "Published"
+                )}
+              </small>
               <Button
                 onClick={async () => {
                   const res = await fetch("/api/puck", {
@@ -85,7 +82,6 @@ export function Client({
               >
                 Save draft
               </Button>
-
               {children}
             </>
           );
@@ -106,7 +102,7 @@ export function Client({
         setData(unsavedData);
         setDraftData(unsavedData);
 
-        alert("Saved successfully!");
+        // alert("Saved successfully!");
       }}
     />
   );

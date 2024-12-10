@@ -2,25 +2,11 @@
   background-color: var(--color-background);
   box-sizing: border-box;
   color: var(--color-text);
-  display: grid;
   font-family: var(--font-family);
+  font-feature-settings: "calt" 1, "ccmp" 1, "ss03" 1;
   font-optical-sizing: none;
-  font-feature-settings: 'calt' 1, 'ccmp' 1, 'ss03' 1;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto 1fr auto;
-  letter-spacing: var(--letter-spacing);
   line-height: var(--line-height);
-  min-height: 100vh;
-}
-
-body {
   margin: 0;
-  background-color: var(--color-background);
-}
-
-/* prevent 100vh when rendered in Puck editor */
-body > div .msrd {
-  min-height: 100%;
 }
 
 .msrd *,
@@ -33,6 +19,16 @@ body > div .msrd {
   text-decoration: none;
 }
 
+.msrd :focus {
+  outline: none;
+}
+
+.msrd :focus-visible {
+  border-radius: 0.0625rem;
+  outline: 0.125rem solid var(--color-interactive-focus);
+  outline-offset: 0.125rem;
+}
+
 .msrd a:not([class]) {
   color: var(--color-interactive);
 }
@@ -41,41 +37,14 @@ body > div .msrd {
   color: var(--color-brand);
 } */
 
-.msrd a:not([class]):hover,
-.msrd a:not([class]):focus {
-  color: var(--color-interactive-focus);
+@media (hover: hover) {
+  .msrd a:not([class]):hover {
+    color: var(--color-interactive-hover);
+  }
 }
 
 .msrd a:not([class]):active {
   color: var(--color-interactive-active);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--color-background-inverted);
-  }
-
-  .msrd {
-    background-color: var(--color-background-inverted);
-    color: var(--color-text-inverted);
-  }
-
-  .msrd a:not([class]) {
-    color: var(--color-interactive-inverted);
-  }
-
-  /* .msrd a:not([class]):visited {
-    color: var(--color-brand-inverted);
-  } */
-
-  .msrd a:not([class]):hover,
-  .msrd a:not([class]):focus {
-    color: var(--color-interactive-inverted-focus);
-  }
-
-  .msrd a:not([class]):active {
-    color: var(--color-interactive-inverted-active);
-  }
 }
 
 .msrd img {
@@ -85,7 +54,7 @@ body > div .msrd {
 }
 
 .msrd strong {
-  font-weight: 550;
+  font-weight: 566;
 }
 
 .msrd svg {
@@ -99,12 +68,6 @@ body > div .msrd {
 
 .msrd-u-colorTextMuted {
   color: var(--color-text-muted);
-}
-
-@media (prefers-color-scheme: dark) {
-  .msrd-u-colorTextMuted {
-    color: var(--color-text-inverted-muted);
-  }
 }
 
 .msrd-u-overflowHidden {

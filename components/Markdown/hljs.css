@@ -2,11 +2,11 @@
   --base00: var(--color-orange-12); /* Default Background */
   --base01: var(--color-orange-11); /* Unused */
   --base02: var(--color-orange-10); /* Selection Background */
-  --base03: var(--color-grey-04); /* Comments, Invisibles, Line Highlighting */
-  --base04: var(--color-grey-03); /* Dark Foreground (Used for status bars) */
-  --base05: var(--color-grey-02); /* Default Foreground, Caret, Delimiters, Operators */
-  --base06: var(--color-grey-01); /* Unused */
-  --base07: var(--color-black); /* Unused */
+  --base03: var(--color-grey-05); /* Comments, Invisibles, Line Highlighting */
+  --base04: var(--color-grey-04); /* Dark Foreground (Used for status bars) */
+  --base05: var(--color-grey-03); /* Default Foreground, Caret, Delimiters, Operators */
+  --base06: var(--color-grey-02); /* Unused */
+  --base07: var(--color-grey-01); /* Unused */
   --base08: var(--color-red-04); /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
   --base09: var(--color-orange-04); /* Integers, Boolean, Constants, XML Attributes, Markup Link Url */
   --base0A: var(--color-yellow-04); /* Classes, Markup Bold, Search Text Background */
@@ -27,7 +27,7 @@
     --base05: var(--color-grey-10); /* Default Foreground, Caret, Delimiters, Operators */
     --base06: var(--color-grey-11); /* Unused */
     --base07: var(--color-grey-12); /* Unused */
-    --base08: var(--color-red-06); /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
+    --base08: var(--color-red-07); /* Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted */
     --base09: var(--color-orange-07); /* Integers, Boolean, Constants, XML Attributes, Markup Link Url */
     --base0A: var(--color-yellow-07); /* Classes, Markup Bold, Search Text Background */
     --base0B: var(--color-green-07); /* Strings, Inherited Class, Markup Code, Diff Inserted */

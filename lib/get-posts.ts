@@ -1,16 +1,16 @@
 import content from "../content.json";
 import { processMarkdown } from "./markdown";
 import { getPageRes } from "./get-page-res";
-import { Props } from "../puck.config";
+import { Props } from "../puck/config";
 
 const { blogPostDescription } = content;
 
-export const getPosts = async (siteUrl: string) => {
+export const getPosts = async (siteUrl: string, archive: number = 0) => {
   const blogPath = "/blog";
   const blogPageRes = await getPageRes(blogPath);
   const blogPageData = blogPageRes?.data?.data;
   const archivePosts = (
-    blogPageData?.content?.filter((item) => item.type === "Archive")?.[0]
+    blogPageData?.content?.filter((item) => item.type === "Archive")?.[archive]
       ?.props as Props["Archive"]
   ).posts;
   const posts = [];

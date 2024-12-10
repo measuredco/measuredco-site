@@ -3,12 +3,12 @@ import { ReactNode } from "react";
 
 import content from "../../content.json";
 
-const { title } = content;
+const { siteName } = content;
 
 export const metadata: Metadata = {
   title: {
-    default: `Blog | ${title}`,
-    template: `%s | Blog | ${title}`,
+    default: `Blog | ${siteName}`,
+    template: `%s | Blog | ${siteName}`,
   },
 };
 

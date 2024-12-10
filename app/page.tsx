@@ -3,9 +3,10 @@ import { Render } from "@measured/puck";
 import { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 
+import { Surface } from "../components";
 import content from "../content.json";
 import { getPageRes } from "../lib/get-page-res";
-import config from "../puck.config";
+import config from "../puck/config";
 
 const { description, openGraphLocale, siteName, siteUrl, themeColor, title } =
   content;
@@ -73,8 +74,9 @@ export default async function Page() {
       logo: `${siteUrl}/logo-schema-organization.svg`,
       name: `${siteName}`,
       sameAs: [
+        "https://bsky.app/profile/measured.co",
+        "https://dev.to/measuredco",
         "https://github.com/measuredco",
-        "https://twitter.com/hellomeasuredco",
         "https://www.linkedin.com/company/measuredco/",
       ],
       url: `${siteUrl}`,
@@ -87,7 +89,9 @@ export default async function Page() {
         dangerouslySetInnerHTML={{ __html: `${JSON.stringify(schema)}` }}
         type="application/ld+json"
       />
-      <Render config={config} data={data} />
+      <Surface background="graphicDark">
+        <Render config={config} data={data} />
+      </Surface>
     </>
   );
 }

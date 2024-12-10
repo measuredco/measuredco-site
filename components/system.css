@@ -2,129 +2,127 @@
  * Measured design tokens
  */
 
-@import "https://rsms.me/inter/inter.css";
-
 :root {
   /*
    * Color palette
    */
 
   --color-rose-01: #550532;
-  --color-rose-02: #700B43;
-  --color-rose-03: #8B1254;
-  --color-rose-04: #A81A66;
-  --color-rose-05: #BC397D;
-  --color-rose-06: #D15294;
-  --color-rose-07: #E56AAC;
-  --color-rose-08: #EC89BC;
-  --color-rose-09: #F1A5CC;
-  --color-rose-10: #F6C1DC;
-  --color-rose-11: #F9DDEC;
-  --color-rose-12: #FDF2F8;
+  --color-rose-02: #700b43;
+  --color-rose-03: #8b1254;
+  --color-rose-04: #a81a66;
+  --color-rose-05: #bc397d;
+  --color-rose-06: #d15294;
+  --color-rose-07: #e56aac;
+  --color-rose-08: #ec89bc;
+  --color-rose-09: #f1a5cc;
+  --color-rose-10: #f6c1dc;
+  --color-rose-11: #f9ddec;
+  --color-rose-12: #fdf2f8;
 
   --color-blue-01: #300187;
-  --color-blue-02: #3C01AD;
-  --color-blue-03: #571CBC;
-  --color-blue-04: #7031CC;
-  --color-blue-05: #8848DC;
-  --color-blue-06: #A05FEB;
-  --color-blue-07: #B776FB;
-  --color-blue-08: #C790FC;
-  --color-blue-09: #D5AAFD;
-  --color-blue-10: #E2C4FE;
-  --color-blue-11: #EEDEFE;
-  --color-blue-12: #F9F4FF;
+  --color-blue-02: #3c01ad;
+  --color-blue-03: #571cbc;
+  --color-blue-04: #7031cc;
+  --color-blue-05: #8848dc;
+  --color-blue-06: #a05feb;
+  --color-blue-07: #b776fb;
+  --color-blue-08: #c790fc;
+  --color-blue-09: #d5aafd;
+  --color-blue-10: #e2c4fe;
+  --color-blue-11: #eedefe;
+  --color-blue-12: #f9f4ff;
 
   --color-azure-01: #031f60;
   --color-azure-02: #072d75;
   --color-azure-03: #0a3c8a;
   --color-azure-04: #0158ad;
-  --color-azure-05: #186dc5;
-  --color-azure-06: #2782de;
-  --color-azure-07: #3598f8;
+  --color-azure-05: #176bc4;
+  --color-azure-06: #267fdc;
+  --color-azure-07: #3394f4;
   --color-azure-08: #6db5f8;
   --color-azure-09: #93c5fa;
   --color-azure-10: #b3d5fb;
   --color-azure-11: #d1e5fd;
   --color-azure-12: #edf6fe;
 
-  --color-cyan-01: #002E36;
-  --color-cyan-02: #003D45;
-  --color-cyan-03: #004D55;
-  --color-cyan-04: #03636B;
+  --color-cyan-01: #002e36;
+  --color-cyan-02: #003d45;
+  --color-cyan-03: #004d55;
+  --color-cyan-04: #03636b;
   --color-cyan-05: #047880;
-  --color-cyan-06: #048E96;
-  --color-cyan-07: #05A5AD;
-  --color-cyan-08: #55B7BD;
-  --color-cyan-09: #80C8CD;
-  --color-cyan-10: #A5DADD;
-  --color-cyan-11: #C9ECED;
-  --color-cyan-12: #EAF8F9;
+  --color-cyan-06: #048e96;
+  --color-cyan-07: #05a5ad;
+  --color-cyan-08: #55b7bd;
+  --color-cyan-09: #80c8cd;
+  --color-cyan-10: #a5dadd;
+  --color-cyan-11: #c9eced;
+  --color-cyan-12: #eaf8f9;
 
   --color-green-01: #133100;
-  --color-green-02: #1D4204;
+  --color-green-02: #1d4204;
   --color-green-03: #285303;
   --color-green-04: #336502;
-  --color-green-05: #3E7B02;
+  --color-green-05: #3e7b02;
   --color-green-06: #499103;
-  --color-green-07: #55A803;
-  --color-green-08: #7AB945;
-  --color-green-09: #9BCA71;
-  --color-green-10: #BBDA9B;
-  --color-green-11: #D9EBC5;
-  --color-green-12: #F0F7E8;
+  --color-green-07: #55a803;
+  --color-green-08: #7ab945;
+  --color-green-09: #9bca71;
+  --color-green-10: #bbda9b;
+  --color-green-11: #d9ebc5;
+  --color-green-12: #f0f7e8;
 
   --color-yellow-01: #342900;
   --color-yellow-02: #453803;
   --color-yellow-03: #574803;
-  --color-yellow-04: #6A5801;
-  --color-yellow-05: #816B01;
-  --color-yellow-06: #997E02;
-  --color-yellow-07: #B19202;
-  --color-yellow-08: #C2A643;
-  --color-yellow-09: #D2BA6E;
-  --color-yellow-10: #E0CF98;
-  --color-yellow-11: #ECE5C2;
-  --color-yellow-12: #F7F6E9;
+  --color-yellow-04: #6a5801;
+  --color-yellow-05: #816b01;
+  --color-yellow-06: #997e02;
+  --color-yellow-07: #b19202;
+  --color-yellow-08: #c2a643;
+  --color-yellow-09: #d2ba6e;
+  --color-yellow-10: #e0cf98;
+  --color-yellow-11: #ece5c2;
+  --color-yellow-12: #f7f6e9;
 
-  --color-orange-01: #4C1A00;
+  --color-orange-01: #4c1a00;
   --color-orange-02: #612804;
   --color-orange-03: #773604;
-  --color-orange-04: #8E4501;
-  --color-orange-05: #AD5601;
-  --color-orange-06: #CB6503;
-  --color-orange-07: #EA7407;
-  --color-orange-08: #F89435;
-  --color-orange-09: #FFAC64;
-  --color-orange-10: #FFC592;
-  --color-orange-11: #FFDDBD;
-  --color-orange-12: #FEF4E8;
+  --color-orange-04: #8e4501;
+  --color-orange-05: #ad5601;
+  --color-orange-06: #cb6503;
+  --color-orange-07: #ea7407;
+  --color-orange-08: #f89435;
+  --color-orange-09: #ffac64;
+  --color-orange-10: #ffc592;
+  --color-orange-11: #ffddbd;
+  --color-orange-12: #fef4e8;
 
-  --color-red-01: #5D0000;
+  --color-red-01: #5d0000;
   --color-red-02: #790304;
   --color-red-03: #960706;
-  --color-red-04: #B40D05;
-  --color-red-05: #CC3024;
-  --color-red-06: #E44A3F;
-  --color-red-07: #FB625B;
-  --color-red-08: #FF847A;
-  --color-red-09: #FFA49A;
-  --color-red-10: #FFC1BA;
-  --color-red-11: #FFDCDA;
-  --color-red-12: #FFF3F2;
+  --color-red-04: #b40d05;
+  --color-red-05: #cc3024;
+  --color-red-06: #e44a3f;
+  --color-red-07: #fb625b;
+  --color-red-08: #ff847a;
+  --color-red-09: #ffa49a;
+  --color-red-10: #ffc1ba;
+  --color-red-11: #ffdcda;
+  --color-red-12: #fff3f2;
 
-  --color-grey-01: #191919;
-  --color-grey-02: #2a2a2a;
-  --color-grey-03: #3d3d3d;
-  --color-grey-04: #505050;
-  --color-grey-05: #656565;
-  --color-grey-06: #7b7b7b;
-  --color-grey-07: #919191;
-  --color-grey-08: #a5a5a5;
-  --color-grey-09: #bababa;
-  --color-grey-10: #cfcfcf;
-  --color-grey-11: #e4e4e4;
-  --color-grey-12: #fafafa;
+  --color-grey-01: #000000; /* #000001 */
+  --color-grey-02: #18191a;
+  --color-grey-03: #2a2b2c;
+  --color-grey-04: #3c3d3f;
+  --color-grey-05: #505152;
+  --color-grey-06: #656667;
+  --color-grey-07: #838485;
+  --color-grey-08: #a2a3a4;
+  --color-grey-09: #c2c3c4;
+  --color-grey-10: #e3e4e5;
+  --color-grey-11: #f9fafb;
+  --color-grey-12: #fcffff;
 
   --color-black: #000000;
   --color-white: #ffffff;
@@ -175,14 +173,17 @@
 
   --leading-scale: var(--space-scale-vertical);
 
-  --leading-scale-01: var(--space-scale-vertical);
-  --leading-scale-02: calc(var(--space-scale-vertical) * 1.125);
-  --leading-scale-03: calc(var(--space-scale-vertical) * 1.25);
-  --leading-scale-04: calc(var(--space-scale-vertical) * 1.5);
-  --leading-scale-05: calc(var(--space-scale-vertical) * 1.75);
-  --leading-scale-06: calc(var(--space-scale-vertical) * 2);
-  --leading-scale-07: calc(var(--space-scale-vertical) * 2.5);
-  --leading-scale-08: calc(var(--space-scale-vertical) * 4);
+  --leading-scale-01: var(--space-scale-vertical); /* 24 */
+  --leading-scale-02: calc(var(--space-scale-vertical) * 1.125); /* 27 */
+  --leading-scale-03: calc(var(--space-scale-vertical) * 1.25); /* 30 */
+  --leading-scale-04: calc(var(--space-scale-vertical) * 1.5); /* 36 */
+  --leading-scale-05: calc(var(--space-scale-vertical) * 1.75); /* 42 */
+  --leading-scale-06: calc(var(--space-scale-vertical) * 2); /* 48 */
+  --leading-scale-07: calc(var(--space-scale-vertical) * 2.25); /* 54 */
+  --leading-scale-08: calc(var(--space-scale-vertical) * 2.5); /* 60 */
+  --leading-scale-09: calc(var(--space-scale-vertical) * 3); /* 72 */
+  --leading-scale-10: calc(var(--space-scale-vertical) * 4); /* 96 */
+  --leading-scale-11: calc(var(--space-scale-vertical) * 5); /*120 */
 
   /*
    * Classic typographic scale, mathematically corrected.
@@ -192,84 +193,37 @@
 
   --type-scale: 16;
 
-  --type-scale-01: 12;
-  --type-scale-02: 16;
-  --type-scale-03: 18;
-  --type-scale-04: 20;
-  --type-scale-05: 24;
-  --type-scale-06: 28;
-  --type-scale-07: 32;
-  --type-scale-08: 36;
-  --type-scale-09: 42;
-  --type-scale-10: 48;
-  --type-scale-11: 84;
-
-  /*
-   * Tracking calculated with Inter Dynamic Metrics.
-   *
-   * https://d.rsms.me/inter-website/v3/dynmetrics/
-   *
-   * -0.0223 + 0.185 * Math.pow(Math.e, -0.1745 * --type-scale-xx)
-   */
-
-  /*
-   * We're currently on Inter v4, which no longer recommends dynamic metrics (on
-   * the website). However, RMS mentioned on Twitter that, for sizes less than
-   * 32pt (42px), recommended metrics from v3 still apply:
-   *
-   * https://twitter.com/rsms/status/1726608758770696466
-   *
-   * At time of writing, there is currently no guidance on recommended metrics
-   * for sizes 42px and up. In our case this is `tracking-scale-09`, `10`, and
-   * `11`. So for now, we're removing tracking from these sizes.
-   */
-
-  --tracking-scale: 0; /* --type-scale-02 */
-
-  --tracking-scale-01: 0;
-  --tracking-scale-02: 0;
-  --tracking-scale-03: 0;
-  --tracking-scale-04: 0;
-  --tracking-scale-05: 0;
-  --tracking-scale-06: 0;
-  --tracking-scale-07: 0;
-  --tracking-scale-08: 0;
-  --tracking-scale-09: 0;
-  --tracking-scale-10: 0;
-  --tracking-scale-11: 0;
-
-  /*
-   * Color tokens
-   */
-
-  --color-background: var(--color-grey-12);
-  --color-background-inverted: var(--color-grey-01);
-
-  --color-brand: var(--color-azure-04);
-  --color-brand-inverted: var(--color-azure-07);
-
-  --color-interactive: var(--color-azure-04);
-  --color-interactive-focus: var(--color-azure-03);
-  --color-interactive-active: var(--color-azure-02);
-  --color-interactive-inverted: var(--color-azure-07);
-  --color-interactive-inverted-focus: var(--color-azure-08);
-  --color-interactive-inverted-active: var(--color-azure-09);
-
-  --color-text: var(--color-grey-01);
-  --color-text-muted: var(--color-grey-05);
-  --color-text-inverted: var(--color-grey-12);
-  --color-text-inverted-muted: var(--color-grey-07);
+  --type-scale-01: 14; /* 01 - 24 = 1.71428571 */
+  --type-scale-02: 16; /* 01 - 24 = 1.5 */
+  --type-scale-03: 18; /* 02 - 27 = 1.5 */
+  --type-scale-04: 20; /* 03 - 30 = 1.5 */
+  --type-scale-05: 24; /* 04 - 36 = 1.5 */
+  --type-scale-06: 28; /* 05 - 42 = 1.5 */
+  --type-scale-07: 32; /* 06 - 48 = 1.5 */
+  --type-scale-08: 36; /* 06 - 48 = 1.33333333 */
+  --type-scale-09: 42; /* 07 - 54 = 1.28571429 */
+  --type-scale-10: 48; /* 08 - 60 = 1.25 */
+  --type-scale-11: 62; /* 09 - 72 = 1.16129032 */
+  --type-scale-12: 84; /* 10 - 96 = 1.14285714 */
+  --type-scale-13: 120; /* 11 - 120 = 1 */
 
   /*
    * Font tokens
    */
 
-  --font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
+  --font-stack: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
     Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol;
 
-  --font-family-monospaced: "Roboto Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
-    Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --font-family: var(--font-next, var(--font-stack));
+
+  --font-stack-monospaced: "Roboto Mono", ui-monospace, "Cascadia Code",
+    "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  --font-family-monospaced: var(
+    --font-next-monospaced,
+    var(--font-stack-monospaced)
+  );
 
   --font-size: calc((var(--type-scale) / 16) * 1rem);
 
@@ -284,48 +238,50 @@
   --font-09-size: calc((var(--type-scale-09) / 16) * 1rem);
   --font-10-size: calc((var(--type-scale-10) / 16) * 1rem);
   --font-11-size: calc((var(--type-scale-11) / 16) * 1rem);
+  --font-12-size: calc((var(--type-scale-12) / 16) * 1rem);
+  --font-13-size: calc((var(--type-scale-13) / 16) * 1rem);
 
   --line-height: calc(var(--leading-scale) / var(--type-scale));
 
-  --font-01-line-height: calc(var(--leading-scale-01) / var(--type-scale-01));
-  --font-02-line-height: calc(var(--leading-scale-01) / var(--type-scale-02));
-  --font-03-line-height: calc(var(--leading-scale-02) / var(--type-scale-03));
-  --font-04-line-height: calc(var(--leading-scale-03) / var(--type-scale-04));
-  --font-05-line-height: calc(var(--leading-scale-04) / var(--type-scale-05));
-  --font-06-line-height: calc(var(--leading-scale-04) / var(--type-scale-06));
-  --font-07-line-height: calc(var(--leading-scale-05) / var(--type-scale-07));
-  --font-08-line-height: calc(var(--leading-scale-06) / var(--type-scale-08));
-  --font-09-line-height: calc(var(--leading-scale-06) / var(--type-scale-09));
-  --font-10-line-height: calc(var(--leading-scale-07) / var(--type-scale-10));
-  --font-11-line-height: calc(var(--leading-scale-08) / var(--type-scale-11));
-
-  --font: var(--font-size) / var(--line-height) var(--font-family);
-
-  --font-01: var(--font-01-size) / var(--font-01-line-height) var(--font-family);
-  --font-02: var(--font-02-size) / var(--font-02-line-height) var(--font-family);
-  --font-03: var(--font-03-size) / var(--font-03-line-height) var(--font-family);
-  --font-04: var(--font-04-size) / var(--font-04-line-height) var(--font-family);
-  --font-05: var(--font-05-size) / var(--font-05-line-height) var(--font-family);
-  --font-06: var(--font-06-size) / var(--font-06-line-height) var(--font-family);
-  --font-07: var(--font-07-size) / var(--font-07-line-height) var(--font-family);
-  --font-08: var(--font-08-size) / var(--font-08-line-height) var(--font-family);
-  --font-09: var(--font-09-size) / var(--font-09-line-height) var(--font-family);
-  --font-10: var(--font-10-size) / var(--font-10-line-height) var(--font-family);
-  --font-11: var(--font-11-size) / var(--font-11-line-height) var(--font-family);
-
-  --letter-spacing: calc(var(--tracking-scale) * 1em);
-
-  --font-01-letter-spacing: calc(var(--tracking-scale-01) * 1em);
-  --font-02-letter-spacing: calc(var(--tracking-scale-02) * 1em);
-  --font-03-letter-spacing: calc(var(--tracking-scale-03) * 1em);
-  --font-04-letter-spacing: calc(var(--tracking-scale-04) * 1em);
-  --font-05-letter-spacing: calc(var(--tracking-scale-05) * 1em);
-  --font-06-letter-spacing: calc(var(--tracking-scale-06) * 1em);
-  --font-07-letter-spacing: calc(var(--tracking-scale-07) * 1em);
-  --font-08-letter-spacing: calc(var(--tracking-scale-08) * 1em);
-  --font-09-letter-spacing: calc(var(--tracking-scale-09) * 1em);
-  --font-10-letter-spacing: calc(var(--tracking-scale-10) * 1em);
-  --font-11-letter-spacing: calc(var(--tracking-scale-11) * 1em);
+  --font-01-line-height: calc(
+    var(--leading-scale-01) / var(--type-scale-01)
+  ); /* 1.71428571 */
+  --font-02-line-height: calc(
+    var(--leading-scale-01) / var(--type-scale-02)
+  ); /* 1.5 */
+  --font-03-line-height: calc(
+    var(--leading-scale-02) / var(--type-scale-03)
+  ); /* 1.5 */
+  --font-04-line-height: calc(
+    var(--leading-scale-04) / var(--type-scale-04)
+  ); /* 1.5 */
+  --font-05-line-height: calc(
+    var(--leading-scale-04) / var(--type-scale-05)
+  ); /* 1.5 */
+  --font-06-line-height: calc(
+    var(--leading-scale-05) / var(--type-scale-06)
+  ); /* 1.5 */
+  --font-07-line-height: calc(
+    var(--leading-scale-06) / var(--type-scale-07)
+  ); /* 1.5 */
+  --font-08-line-height: calc(
+    var(--leading-scale-06) / var(--type-scale-08)
+  ); /* 1.3333 */
+  --font-09-line-height: calc(
+    var(--leading-scale-07) / var(--type-scale-09)
+  ); /* 1.28571429 */
+  --font-10-line-height: calc(
+    var(--leading-scale-08) / var(--type-scale-10)
+  ); /* 1.25 */
+  --font-11-line-height: calc(
+    var(--leading-scale-09) / var(--type-scale-11)
+  ); /* 1.16129032 */
+  --font-12-line-height: calc(
+    var(--leading-scale-10) / var(--type-scale-12)
+  ); /* 1.14285714 */
+  --font-13-line-height: calc(
+    var(--leading-scale-11) / var(--type-scale-13)
+  ); /* 1 */
 
   /*
    * Space tokens
@@ -363,18 +319,116 @@
   --space-horizontal-11: calc((var(--space-scale-horizontal-11) / 16) * 1rem);
   --space-horizontal-12: calc((var(--space-scale-horizontal-12) / 16) * 1rem);
 
-  --section-max-width: calc((1024 / 16) * 1rem);
-  --section-max-width-narrow: calc((648 / 16) * 1rem);
+  --section-max-width: calc((1220 / 16) * 1rem);
+
+  --border-width: calc((1 / 16) * 1rem);
 
   --easing-cubic-bezier-easy-ease: cubic-bezier(0.44, 0, 0.55, 0.94);
   --easing-cubic-bezier-ease-in: cubic-bezier(0.44, 0, 1, 1);
   --easing-cubic-bezier-ease-out: cubic-bezier(0, 0, 0.55, 0.94);
   --easing-cubic-bezier-reverse-easy-ease: cubic-bezier(0.96, 0.03, 0.53, 0.96);
+
+  /*
+   * Color tokens
+   */
+
+  --color-brand: var(--color-azure-04);
+
+  --color-background: var(--color-grey-11);
+  --color-background-highlight: var(--color-grey-10);
+
+  --color-text: var(--color-grey-01);
+  --color-text-contrast: var(--color-grey-11);
+  --color-text-muted: var(--color-grey-06);
+
+  --color-interactive: var(--color-azure-04);
+  --color-interactive-focus: var(--color-azure-06);
+  --color-interactive-hover: var(--color-azure-03);
+  --color-interactive-active: var(--color-azure-02);
+
+  --color-interactive-contrast: var(--color-white);
+
+  --color-interactive-neutral: var(--color-grey-01);
+  --color-interactive-neutral-hover: var(--color-grey-04);
+  --color-interactive-neutral-active: var(--color-grey-05);
+
+  --color-border: var(--color-grey-09);
+  --color-border-code: var(--color-azure-07);
+
+  --box-shadow: 0.125rem 0.125rem 0.25rem
+    color-mix(in srgb, var(--color-black) 08%, transparent);
+  --box-shadow-light-source: none;
+
+  --color-card-background: var(--color-white);
+  --color-card-text: var(--color-grey-01);
+  --color-card-interactive: var(--color-azure-04);
+  --color-card-border: var(--color-azure-07);
+  --color-card-dots: var(--color-grey-10);
+  --color-card-dots-hover: var(--color-azure-07);
+
+  --color-header-background: var(--color-background);
+
+  --color-logo: var(--color-azure-04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand: var(--color-azure-07);
+
+    --color-background: var(--color-grey-02);
+    --color-background-highlight: color-mix(
+      in srgb,
+      var(--color-text) 8%,
+      transparent
+    );
+
+    --color-text: var(--color-grey-11);
+    --color-text-contrast: var(--color-grey-01);
+    --color-text-muted: color-mix(in srgb, var(--color-text) 52%, transparent);
+
+    --color-interactive: var(--color-azure-07);
+    --color-interactive-focus: var(--color-azure-06);
+    --color-interactive-hover: var(--color-azure-08);
+    --color-interactive-active: var(--color-azure-09);
+
+    --color-interactive-contrast: var(--color-azure-01);
+
+    --color-interactive-neutral: var(--color-grey-11);
+    --color-interactive-neutral-hover: color-mix(
+      in srgb,
+      var(--color-text) 84%,
+      transparent
+    );
+    --color-interactive-neutral-active: color-mix(
+      in srgb,
+      var(--color-text) 68%,
+      transparent
+    );
+
+    --color-border: color-mix(in srgb, var(--color-text) 16%, transparent);
+    --color-border-code: var(--color-azure-04);
+
+    --box-shadow: 0.125rem 0.125rem 0.25rem
+      color-mix(in srgb, var(--color-black) 92%, transparent);
+    --box-shadow-light-source: 0.125rem 0.125rem 3rem
+      color-mix(in srgb, var(--color-white) 8%, transparent);
+
+    --color-card-background: var(--color-azure-07);
+    --color-card-text: var(--color-grey-01);
+    --color-card-interactive: var(--color-azure-01);
+    --color-card-border: var(--color-white);
+    --color-card-dots: var(--color-azure-04);
+    --color-card-dots-hover: var(--color-white);
+
+    --color-header-background: var(--color-background);
+
+    --color-logo: var(--color-azure-07);
+  }
 }
 
 @supports (font-variation-settings: normal) {
   :root {
-    --font-family: InterVariable, -apple-system, BlinkMacSystemFont, Segoe UI,
+    --font-stack: InterVariable, -apple-system, BlinkMacSystemFont, Segoe UI,
       Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
       Segoe UI Symbol;
   }
