@@ -23,7 +23,6 @@
     "remark-parse": "^10.0.2",
     "remark-rehype": "^11.1.0",
     "remark-slug": "^7.0.1",
-    "supports-color": "8.1.1",
     "unified": "^10.1.2"
   },
   "devDependencies": {
