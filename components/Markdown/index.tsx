@@ -33,6 +33,7 @@ const Markdown = ({
 
   useEffect(() => {
     setTextProcessed(processMarkdown(children?.toString(), sanitizeOptions));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children]);
 
   return (

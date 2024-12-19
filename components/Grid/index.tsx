@@ -146,5 +146,6 @@ const GridItem = forwardRef<HTMLDivElement, PropsWithChildren<GridItemProps>>(
 );
 
 Grid.Item = GridItem;
+GridItem.displayName = "Grid.Item";
 
 export default Grid;

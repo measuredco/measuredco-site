@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-head-element */
 import { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import localFont from "next/font/local";
