@@ -8,7 +8,7 @@ import resolvePuckPath from "../../lib/resolve-puck-path";
 import { getPageRes } from "../../lib/get-page-res";
 import config from "../../puck/config";
 
-const { openGraphLocale, siteUrl, title } = content;
+const { description, openGraphLocale, siteUrl, title } = content;
 
 export { viewport } from "../page";
 
@@ -23,7 +23,7 @@ export async function generateMetadata({
   const pageRes = await getPageRes(path);
   const data = pageRes?.data?.data;
   const rootProps = data?.root.props || data?.root;
-  const pageDescription = rootProps?.description || "";
+  const pageDescription = rootProps?.description || description;
   const pageTitle = rootProps?.title || "Page";
   const pageUrl = `${siteUrl}${path}`;
 
