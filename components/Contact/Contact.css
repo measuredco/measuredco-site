@@ -19,10 +19,6 @@
     color: var(--color-interactive-neutral);
   }
 
-  /* .msrd .msrd-Contact a:not([class]):visited {
-    color: var(--color-brand);
-  } */
-
   @media (hover: hover) {
     .msrd .msrd-Contact a:not([class]):hover {
       color: var(--color-interactive-neutral-hover);

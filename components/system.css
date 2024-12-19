@@ -20,18 +20,18 @@
   --color-rose-11: #f9ddec;
   --color-rose-12: #fdf2f8;
 
-  --color-blue-01: #300187;
-  --color-blue-02: #3c01ad;
-  --color-blue-03: #571cbc;
-  --color-blue-04: #7031cc;
-  --color-blue-05: #8848dc;
-  --color-blue-06: #a05feb;
-  --color-blue-07: #b776fb;
-  --color-blue-08: #c790fc;
-  --color-blue-09: #d5aafd;
-  --color-blue-10: #e2c4fe;
-  --color-blue-11: #eedefe;
-  --color-blue-12: #f9f4ff;
+  --color-violet-01: #300187;
+  --color-violet-02: #3c01ad;
+  --color-violet-03: #571cbc;
+  --color-violet-04: #7031cc;
+  --color-violet-05: #8746dc;
+  --color-violet-06: #9e5beb;
+  --color-violet-07: #b470fb;
+  --color-violet-08: #c48bfc;
+  --color-violet-09: #d3a5fe;
+  --color-violet-10: #e1bffe;
+  --color-violet-11: #eddaff;
+  --color-violet-12: #f9f4ff;
 
   --color-azure-01: #031f60;
   --color-azure-02: #072d75;
@@ -342,6 +342,7 @@
   --color-text-muted: var(--color-grey-06);
 
   --color-interactive: var(--color-azure-04);
+  --color-interactive-visited: var(--color-violet-04);
   --color-interactive-focus: var(--color-azure-06);
   --color-interactive-hover: var(--color-azure-03);
   --color-interactive-active: var(--color-azure-02);
@@ -387,6 +388,7 @@
     --color-text-muted: color-mix(in srgb, var(--color-text) 52%, transparent);
 
     --color-interactive: var(--color-azure-07);
+    --color-interactive-visited: var(--color-violet-07);
     --color-interactive-focus: var(--color-azure-06);
     --color-interactive-hover: var(--color-azure-08);
     --color-interactive-active: var(--color-azure-09);
