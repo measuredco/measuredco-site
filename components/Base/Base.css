@@ -33,10 +33,6 @@
   color: var(--color-interactive);
 }
 
-/* .msrd a:not([class]):visited {
-  color: var(--color-brand);
-} */
-
 @media (hover: hover) {
   .msrd a:not([class]):hover {
     color: var(--color-interactive-hover);

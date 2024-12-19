@@ -13,6 +13,7 @@
   --color-text-muted: color-mix(in srgb, var(--color-text) 52%, transparent);
 
   --color-interactive: var(--color-azure-07);
+  --color-interactive-visited: var(--color-violet-07);
   --color-interactive-focus: var(--color-azure-07);
   --color-interactive-hover: var(--color-azure-08);
   --color-interactive-active: var(--color-azure-09);
@@ -68,10 +69,6 @@
 .msrd .msrd-Surface--graphicDark a:not([class]) {
   color: var(--color-interactive-neutral);
 }
-
-/* .msrd .msrd-Surface--graphicDark a:not([class]):visited {
-  color: var(--color-brand);
-} */
 
 @media (hover: hover) {
   .msrd .msrd-Surface--graphicDark a:not([class]):hover {
