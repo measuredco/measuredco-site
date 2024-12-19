@@ -42,7 +42,7 @@
   --color-card-interactive: var(--color-azure-01);
   --color-card-border: var(--color-white);
   --color-card-dots: var(--color-azure-04);
-  --color-card-dots-focus: var(--color-white);
+  --color-card-dots-hover: var(--color-white);
 
   --color-header-background: transparent;
 
