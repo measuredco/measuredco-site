@@ -12,8 +12,12 @@ export const getPosts = async (siteUrl: string, archive: number = 0) => {
   const archivePosts = (
     blogPageData?.content?.filter((item) => item.type === "Archive")?.[archive]
       ?.props as Props["Archive"]
-  ).posts;
+  )?.posts;
   const posts = [];
+
+  if (!Array.isArray(archivePosts)) {
+    return;
+  }
 
   for (const { slug } of archivePosts) {
     const postPath = `${blogPath}/${slug}`;

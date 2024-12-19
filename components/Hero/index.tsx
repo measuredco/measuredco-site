@@ -32,7 +32,7 @@ const Hero = ({ description, headingLevel, logos, strapline }: HeroProps) => {
         </div>
         <Space size="09" />
         <Logos>
-          {logos.map((logoKey, index) => {
+          {logos?.map((logoKey, index) => {
             const Logo = logosMapping[logoKey.logo];
 
             return <Logo key={`${logoKey}-${index}`} />;
