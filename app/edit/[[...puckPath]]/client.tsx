@@ -30,6 +30,7 @@ export function Client({
         headerActions: ({ children }) => {
           const {
             appState: { data: unsavedData },
+            // eslint-disable-next-line react-hooks/rules-of-hooks
           } = usePuck();
 
           const unsaved =
