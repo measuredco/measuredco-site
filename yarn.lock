@@ -266,20 +266,20 @@
   resolved "https://registry.yarnpkg.com/@stitches/core/-/core-1.2.8.tgz#dce3b8fdc764fbc6dbea30c83b73bfb52cf96173"
   integrity sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==
 
-"@supabase/auth-helpers-nextjs@^0.7.3":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@supabase/auth-helpers-nextjs/-/auth-helpers-nextjs-0.7.4.tgz#0e2949b1f7ada97f8593ef1bb57901622c47b065"
-  integrity sha512-MyGCkB7LEDcGrKmesKGjyG54Jlbiss8VGTegrNde/ywXujQyRFnzycijoASDBc6i9SmE7eE1qWBsMr2URb07nw==
+"@supabase/auth-helpers-nextjs@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@supabase/auth-helpers-nextjs/-/auth-helpers-nextjs-0.10.0.tgz#e831968f95e1bc44f400825d251a8b2fda97ee9f"
+  integrity sha512-2dfOGsM4yZt0oS4TPiE7bD4vf7EVz7NRz/IJrV6vLg0GP7sMUx8wndv2euLGq4BjN9lUCpu6DG/uCC8j+ylwPg==
   dependencies:
-    "@supabase/auth-helpers-shared" "0.4.1"
+    "@supabase/auth-helpers-shared" "0.7.0"
     set-cookie-parser "^2.6.0"
 
-"@supabase/auth-helpers-shared@0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@supabase/auth-helpers-shared/-/auth-helpers-shared-0.4.1.tgz#46f53f7ac1e80f6bcb69b5bc95e15b237a80d819"
-  integrity sha512-IEDX9JzWkIjQiLUaP4Qy5YDiG0jFQatWfS+jw8cCQs6QfbNdEPd2Y3qonwGHnM90CZom9SvjuylBv2pFVAL7Lw==
+"@supabase/auth-helpers-shared@0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@supabase/auth-helpers-shared/-/auth-helpers-shared-0.7.0.tgz#244a6b6ac39a5eb1bc8d69a57c25aa580cd0f669"
+  integrity sha512-FBFf2ei2R7QC+B/5wWkthMha8Ca2bWHAndN+syfuEUUfufv4mLcAgBCcgNg5nJR8L0gZfyuaxgubtOc9aW3Cpg==
   dependencies:
-    jose "^4.14.3"
+    jose "^4.14.4"
 
 "@supabase/auth-js@2.67.3":
   version "2.67.3"
@@ -1741,7 +1741,7 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-jose@^4.14.3:
+jose@^4.14.4:
   version "4.15.9"
   resolved "https://registry.yarnpkg.com/jose/-/jose-4.15.9.tgz#9b68eda29e9a0614c042fa29387196c7dd800100"
   integrity sha512-1vUQX+IdDMVPj4k8kOxgUqlcK518yluMuGZwqlr44FS1ppZB/5GWh4rZG89erpOBOJjU/OBsnCVFfapsRz6nEA==
