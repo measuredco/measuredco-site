@@ -23,6 +23,20 @@
   }
 }
 
+.msrd .msrd-Markdown a {
+  color: var(--color-interactive);
+}
+
+@media (hover: hover) {
+  .msrd .msrd-Markdown a:hover {
+    color: var(--color-interactive-hover);
+  }
+}
+
+.msrd .msrd-Markdown a:active {
+  color: var(--color-interactive-active);
+}
+
 .msrd .msrd-Markdown blockquote {
   margin-bottom: var(--space-vertical-05);
   margin-left: 0;
