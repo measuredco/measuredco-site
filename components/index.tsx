@@ -19,6 +19,7 @@ export { default as Space } from "./Space";
 export { default as Surface } from "./Surface";
 
 export type { BannerProps } from "./Banner";
+export type { ContactProps } from "./Contact";
 export type { RuleProps } from "./Rule";
 export type { GridProps, GridItemProps } from "./Grid";
 export type { HeadingProps } from "./Heading";
