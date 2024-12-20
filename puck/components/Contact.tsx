@@ -1,9 +1,20 @@
 import { ComponentConfig } from "@measured/puck";
 
-import { Contact as _Contact } from "../../components";
+import {
+  Contact as _Contact,
+  ContactProps as _ContactProps,
+} from "../../components";
 
-export type ContactProps = {};
+export type ContactProps = _ContactProps;
 
 export const Contact: ComponentConfig<ContactProps> = {
-  render: () => <_Contact />,
+  defaultProps: {
+    email: "paul@measured.co",
+    text: "How can we help?",
+  },
+  fields: {
+    email: { type: "text" },
+    text: { type: "text" },
+  },
+  render: ({ email, text }) => <_Contact email={email} text={text} />,
 };
