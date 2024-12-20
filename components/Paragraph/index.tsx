@@ -1,3 +1,5 @@
+"use client";
+
 import classNames from "classnames";
 import { PropsWithChildren } from "react";
 import { defaultSchema } from "rehype-sanitize";
