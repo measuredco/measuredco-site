@@ -5,7 +5,6 @@ import type { Data } from "@measured/puck";
 import headingAnalyzer from "@measured/puck-plugin-heading-analyzer";
 
 import config from "../../../puck/config";
-import { Save } from "react-feather";
 import { useState } from "react";
 
 export function Client({
@@ -78,7 +77,6 @@ export function Client({
                   setDraftData(unsavedData);
                 }}
                 variant="secondary"
-                icon={<Save size="16" />}
                 disabled={!unsaved}
               >
                 Save draft
