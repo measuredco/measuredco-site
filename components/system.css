@@ -199,7 +199,7 @@
   --type-scale-04: 20; /* 03 - 30 = 1.5 */
   --type-scale-05: 24; /* 04 - 36 = 1.5 */
   --type-scale-06: 28; /* 05 - 42 = 1.5 */
-  --type-scale-07: 32; /* 06 - 48 = 1.5 */
+  --type-scale-07: 32; /* 05 - 42 = 1.35483871 */
   --type-scale-08: 36; /* 06 - 48 = 1.33333333 */
   --type-scale-09: 42; /* 07 - 54 = 1.28571429 */
   --type-scale-10: 48; /* 08 - 60 = 1.25 */
@@ -253,8 +253,11 @@
     var(--leading-scale-02) / var(--type-scale-03)
   ); /* 1.5 */
   --font-04-line-height: calc(
-    var(--leading-scale-04) / var(--type-scale-04)
+    var(--leading-scale-03) / var(--type-scale-04)
   ); /* 1.5 */
+  --font-04-line-height-large: calc(
+    var(--leading-scale-04) / var(--type-scale-04)
+  ); /* 1.8 */
   --font-05-line-height: calc(
     var(--leading-scale-04) / var(--type-scale-05)
   ); /* 1.5 */
@@ -262,8 +265,8 @@
     var(--leading-scale-05) / var(--type-scale-06)
   ); /* 1.5 */
   --font-07-line-height: calc(
-    var(--leading-scale-06) / var(--type-scale-07)
-  ); /* 1.5 */
+    var(--leading-scale-05) / var(--type-scale-07)
+  ); /* 1.35483871 */
   --font-08-line-height: calc(
     var(--leading-scale-06) / var(--type-scale-08)
   ); /* 1.3333 */

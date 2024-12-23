@@ -8,7 +8,7 @@
 @media (min-width: 48em) {
   .msrd .msrd-Paragraph {
     font-size: var(--font-04-size);
-    line-height: var(--font-04-line-height);
+    line-height: var(--font-04-line-height-large);
   }
 }
 
