@@ -57,15 +57,23 @@ const SiteHeader = ({ links }: SiteHeaderProps) => {
   }, [menuOpen]);
 
   useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" || event.key === "Esc") {
+        setMenuOpen(false);
+      }
+    };
+
     const handleResize = () => {
       if (window.matchMedia("(min-width: 48em)").matches) {
         setMenuOpen(false);
       }
     };
 
+    window.addEventListener("keydown", handleEscape);
     window.addEventListener("resize", handleResize);
 
     return () => {
+      window.removeEventListener("keydown", handleEscape);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
