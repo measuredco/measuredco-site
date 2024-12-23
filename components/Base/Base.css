@@ -7,6 +7,7 @@
   font-optical-sizing: none;
   line-height: var(--line-height);
   margin: 0;
+  -webkit-tap-highlight-color: color-mix(in srgb, var(--color-brand) 20%, transparent);
 }
 
 .msrd *,

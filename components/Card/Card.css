@@ -34,7 +34,7 @@
 .msrd .msrd-Card a {
   color: inherit;
   position: relative;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .msrd .msrd-Card a:focus-visible {
