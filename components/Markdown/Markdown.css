@@ -25,16 +25,21 @@
 
 .msrd .msrd-Markdown a {
   color: var(--color-interactive);
+  text-decoration: none;
 }
 
 @media (hover: hover) {
   .msrd .msrd-Markdown a:hover {
     color: var(--color-interactive-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 0.125em;
   }
 }
 
 .msrd .msrd-Markdown a:active {
   color: var(--color-interactive-active);
+  text-underline-offset: 0.1875em;
 }
 
 .msrd .msrd-Markdown blockquote {
