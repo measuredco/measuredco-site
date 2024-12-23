@@ -352,9 +352,9 @@
 
   --color-interactive-contrast: var(--color-white);
 
-  --color-interactive-neutral: var(--color-grey-01);
-  --color-interactive-neutral-hover: var(--color-grey-04);
-  --color-interactive-neutral-active: var(--color-grey-05);
+  --color-interactive-neutral: var(--color-text);
+  --color-interactive-neutral-hover: var(--color-interactive);
+  --color-interactive-neutral-active: var(--color-interactive-active);
 
   --color-border: var(--color-grey-09);
   --color-border-code: var(--color-azure-07);
@@ -398,7 +398,7 @@
 
     --color-interactive-contrast: var(--color-azure-01);
 
-    --color-interactive-neutral: var(--color-grey-11);
+    --color-interactive-neutral: var(--color-text);
     --color-interactive-neutral-hover: color-mix(
       in srgb,
       var(--color-text) 84%,
