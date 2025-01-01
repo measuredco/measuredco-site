@@ -28,8 +28,6 @@ export const processMarkdown = (
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)
-    // https://github.com/orgs/rehypejs/discussions/150#discussioncomment-6864094
-    // @ts-expect-error
     .use(rehypeSlug)
     .use(rehypeColorChips)
     .use(rehypeHighlight)
