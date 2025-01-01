@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@measured/puck": "0.17.0-canary.5e57623",
-    "@measured/puck-plugin-heading-analyzer": "0.17.0-canary.5e57623",
+    "@measured/puck-plugin-heading-analyzer": "0.17.1",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/auth-ui-react": "^0.4.6",
     "@supabase/auth-ui-shared": "^0.1.6",
