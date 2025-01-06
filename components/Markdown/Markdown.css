@@ -32,7 +32,7 @@
   .msrd .msrd-Markdown a:hover {
     color: var(--color-interactive-hover);
     text-decoration: underline;
-    text-decoration-thickness: 0.125rem;
+    text-decoration-thickness: 0.09em;
     text-underline-offset: 0.125em;
   }
 }
