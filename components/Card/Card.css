@@ -1,6 +1,6 @@
 .msrd .msrd-Card {
   background: var(--color-card-background);
-  border-radius: 1.125rem;
+  border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-light-source);
   color: var(--color-card-text);
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .msrd .msrd-Card-inner {
-  border-radius: 1.125rem;
+  border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 
 .msrd .msrd-Card::after {
   border: solid var(--border-width) var(--color-card-border);
-  border-radius: 1.125rem;
+  border-radius: var(--border-radius-card);
   bottom: 0.25rem;
   content: "";
   left: -0.25rem;
