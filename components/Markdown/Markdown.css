@@ -259,12 +259,12 @@
   background-color: var(--color-brand);
   border: 0;
   color: var(--color-border);
-  height: 0.125rem;
+  height: var(--rule-height);
   margin-bottom: var(--space-vertical);
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  width: 4rem;
+  width: var(--rule-width);
 }
 
 .msrd .msrd-Markdown p:has(img) {
@@ -402,10 +402,10 @@
   border: var(--border-width) solid var(--color-brand);
   content: "";
   display: block;
-  height: 0.125rem;
+  height: var(--rule-height);
   margin-bottom: var(--space-vertical-06);
   position: relative;
-  width: 4rem;
+  width: var(--rule-width);
 }
 
 @media (min-width: 80em) {
