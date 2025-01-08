@@ -42,11 +42,11 @@
 }
 
 .msrd .msrd-Paragraph--measured {
-  max-width: 35.25em;
+  max-width: var(--measured);
 }
 
 .msrd .msrd-Paragraph--measured.msrd-Paragraph--large {
-  max-width: 31.725em;
+  max-width: calc(var(--measured) * 0.9);
 }
 
 .msrd .msrd-Paragraph--muted {

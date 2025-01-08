@@ -4,7 +4,7 @@
 }
 
 .msrd .msrd-Markdown--measured {
-  max-width: 35.25em;
+  max-width: var(--measured);
 }
 
 .msrd .msrd-Markdown--inline {
