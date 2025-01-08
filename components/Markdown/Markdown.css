@@ -33,13 +33,13 @@
     color: var(--color-interactive-hover);
     text-decoration: underline;
     text-decoration-thickness: 0.09em;
-    text-underline-offset: 0.125em;
+    text-underline-offset: 0.34em;
   }
 }
 
 .msrd .msrd-Markdown a:active {
   color: var(--color-interactive-active);
-  text-underline-offset: 0.1875em;
+  text-underline-offset: 0.39em;
 }
 
 .msrd .msrd-Markdown blockquote {
