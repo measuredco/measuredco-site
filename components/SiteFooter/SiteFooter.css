@@ -72,8 +72,8 @@
 
 .msrd .msrd-SiteFooter-logo:has(:focus-visible) {
   border-radius: var(--border-radius-focus);
-  outline: 0.125rem solid var(--color-interactive-focus);
-  outline-offset: 0.125rem;
+  outline: var(--outline-width) solid var(--color-interactive-focus);
+  outline-offset: var(--outline-width);
 }
 
 @media (min-width: 48em) {

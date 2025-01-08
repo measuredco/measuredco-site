@@ -317,13 +317,21 @@
   --space-horizontal-12: calc((var(--space-scale-horizontal-12) / 16) * 1rem);
 
   /*
-   * Dimension tokens
+   * Line tokens
    */
 
   --border-width: calc((1 / 16) * 1rem);
 
+  --outline-width: calc((2 / 16) * 1rem);
+
   --rule-height: calc((2 / 16) * 1rem);
   --rule-width: calc((64 / 16) * 1rem);
+
+  --border-offset-card: calc((4 / 16) * 1rem);
+
+  /*
+   * Dimension tokens
+   */
 
   --section-max-width: calc((1220 / 16) * 1rem);
 
