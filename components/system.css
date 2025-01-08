@@ -333,6 +333,8 @@
    * Dimension tokens
    */
 
+  --measured: 35.25em;
+
   --section-max-width: calc((1220 / 16) * 1rem);
 
   /*
