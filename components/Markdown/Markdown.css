@@ -125,13 +125,13 @@
 .msrd .msrd-Markdown pre::after {
   border: solid var(--border-width) var(--color-border-code);
   border-radius: var(--border-radius-card);
-  bottom: 0.25rem;
+  bottom: var(--border-offset-card);
   content: "";
-  left: -0.25rem;
+  left: calc(0rem - var(--border-offset-card));
   pointer-events: none;
   position: absolute;
-  right: 0.25rem;
-  top: -0.25rem;
+  right: var(--border-offset-card);
+  top: calc(0rem - var(--border-offset-card));
 }
 
 .msrd .msrd-Markdown pre code {

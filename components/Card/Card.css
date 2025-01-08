@@ -21,13 +21,13 @@
 .msrd .msrd-Card::after {
   border: solid var(--border-width) var(--color-card-border);
   border-radius: var(--border-radius-card);
-  bottom: 0.25rem;
+  bottom: var(--border-offset-card);
   content: "";
-  left: -0.25rem;
+  left: calc(0rem - var(--border-offset-card));
   pointer-events: none;
   position: absolute;
-  right: 0.25rem;
-  top: -0.25rem;
+  right: var(--border-offset-card);
+  top: calc(0rem - var(--border-offset-card));
   transition: 0.05s var(--easing-cubic-bezier-easy-ease);
 }
 
@@ -47,8 +47,8 @@
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible) {
-  outline: 0.125rem solid var(--color-interactive-focus);
-  outline-offset: 0.25rem;
+  outline: var(--outline-width) solid var(--color-interactive-focus);
+  outline-offset: var(--border-offset-card);
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible)::after {
@@ -74,10 +74,10 @@
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
-  bottom: -0.125rem;
-  left: 0.125rem;
-  right: -0.125rem;
-  top: 0.125rem;
+  bottom: calc(0rem - var(--border-offset-card) / 2);
+  left: calc(var(--border-offset-card) / 2);
+  right: calc(0rem - var(--border-offset-card) / 2);
+  top: calc(var(--border-offset-card) / 2);
 }
 
 .msrd .msrd-Card-heading {
