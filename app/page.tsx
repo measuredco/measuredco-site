@@ -70,7 +70,6 @@ export default async function Page() {
     return notFound();
   }
 
-  const pageTitle = data.root?.title || title;
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
