@@ -131,7 +131,7 @@
    * Space scales
    */
 
-  /* Vertical space derived from base font-size of 16 & base leading of 1.5. */
+  /* Vertical space derived from base font-size of 16 & base leading of 1.5 */
   --space-scale-vertical: 24;
 
   --space-scale-vertical-01: calc(var(--space-scale-vertical) * 0.125); /* 3 */
@@ -145,13 +145,11 @@
   --space-scale-vertical-09: calc(var(--space-scale-vertical) * 3); /* 72 */
   --space-scale-vertical-10: calc(var(--space-scale-vertical) * 3.5); /* 84 */
   --space-scale-vertical-11: calc(var(--space-scale-vertical) * 4); /* 96 */
-  --space-scale-vertical-12: calc(
-    var(--space-scale-vertical) * 4.5
-  ); /* 108   */
+  --space-scale-vertical-12: calc(var(--space-scale-vertical) * 4.5); /* 108 */
   --space-scale-vertical-13: calc(var(--space-scale-vertical) * 5); /* 120 */
   --space-scale-vertical-14: calc(var(--space-scale-vertical) * 6); /* 144 */
 
-  /* Horizontal space derived from base font-size of 16. */
+  /* Horizontal space derived from base font-size of 16 */
   --space-scale-horizontal: 16;
 
   --space-scale-horizontal-01: calc(var(--space-scale-horizontal) * 0.125);
@@ -168,7 +166,7 @@
   --space-scale-horizontal-12: calc(var(--space-scale-horizontal) * 4.5);
 
   /*
-   * Typography scales
+   * Typographic scales
    */
 
   --leading-scale: var(--space-scale-vertical);
@@ -185,45 +183,27 @@
   --leading-scale-10: calc(var(--space-scale-vertical) * 4); /* 96 */
   --leading-scale-11: calc(var(--space-scale-vertical) * 5); /*120 */
 
-  /*
-   * Classic typographic scale, mathematically corrected.
-   *
-   * https://spencermortensen.com/articles/typographic-scale/
-   */
+  /* Classic typographic scale, mathematically corrected */
 
   --type-scale: 16;
 
-  --type-scale-01: 14; /* 01 - 24 = 1.71428571 */
-  --type-scale-02: 16; /* 01 - 24 = 1.5 */
-  --type-scale-03: 18; /* 02 - 27 = 1.5 */
-  --type-scale-04: 20; /* 03 - 30 = 1.5 */
-  --type-scale-05: 24; /* 04 - 36 = 1.5 */
-  --type-scale-06: 28; /* 05 - 42 = 1.5 */
-  --type-scale-07: 32; /* 05 - 42 = 1.35483871 */
-  --type-scale-08: 36; /* 06 - 48 = 1.33333333 */
-  --type-scale-09: 42; /* 07 - 54 = 1.28571429 */
-  --type-scale-10: 48; /* 08 - 60 = 1.25 */
-  --type-scale-11: 62; /* 09 - 72 = 1.16129032 */
-  --type-scale-12: 84; /* 10 - 96 = 1.14285714 */
-  --type-scale-13: 120; /* 11 - 120 = 1 */
+  --type-scale-01: 14; /* leading-scale-01: 24 = 1.71428571 */
+  --type-scale-02: 16; /* leading-scale-01: 24 = 1.5 */
+  --type-scale-03: 18; /* leading-scale-02: 27 = 1.5 */
+  --type-scale-04: 20; /* leading-scale-03: 30 = 1.5 */
+  --type-scale-05: 24; /* leading-scale-04: 36 = 1.5 */
+  --type-scale-06: 28; /* leading-scale-05: 42 = 1.5 */
+  --type-scale-07: 32; /* leading-scale-05: 42 = 1.35483871 */
+  --type-scale-08: 36; /* leading-scale-06: 48 = 1.33333333 */
+  --type-scale-09: 42; /* leading-scale-07: 54 = 1.28571429 */
+  --type-scale-10: 48; /* leading-scale-08: 60 = 1.25 */
+  --type-scale-11: 62; /* leading-scale-09: 72 = 1.16129032 */
+  --type-scale-12: 84; /* leading-scale-10: 96 = 1.14285714 */
+  --type-scale-13: 120; /* leading-scale-11: 120 = 1 */
 
   /*
    * Font tokens
    */
-
-  --font-stack: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol;
-
-  --font-family: var(--font-next, var(--font-stack));
-
-  --font-stack-monospaced: "Roboto Mono", ui-monospace, "Cascadia Code",
-    "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-
-  --font-family-monospaced: var(
-    --font-next-monospaced,
-    var(--font-stack-monospaced)
-  );
 
   --font-size: calc((var(--type-scale) / 16) * 1rem);
 
@@ -286,6 +266,20 @@
     var(--leading-scale-11) / var(--type-scale-13)
   ); /* 1 */
 
+  --font-stack: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+
+  --font-family: var(--font-next, var(--font-stack));
+
+  --font-stack-monospaced: "Roboto Mono", ui-monospace, "Cascadia Code",
+    "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  --font-family-monospaced: var(
+    --font-next-monospaced,
+    var(--font-stack-monospaced)
+  );
+
   /*
    * Space tokens
    */
@@ -325,6 +319,10 @@
   --section-max-width: calc((1220 / 16) * 1rem);
 
   --border-width: calc((1 / 16) * 1rem);
+
+  /*
+   * Motion tokens
+   */
 
   --easing-cubic-bezier-easy-ease: cubic-bezier(0.44, 0, 0.55, 0.94);
   --easing-cubic-bezier-ease-in: cubic-bezier(0.44, 0, 1, 1);
