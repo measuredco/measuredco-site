@@ -277,7 +277,8 @@
 }
 
 .msrd .msrd-Markdown li {
-  padding-left: 1.5em;
+  --bullet-space: 1.5em;
+  padding-left: var(--bullet-space);
   position: relative;
   word-wrap: break-word;
 }
@@ -286,7 +287,7 @@
   left: 0;
   position: absolute;
   text-align: center;
-  width: 1.5em;
+  width: var(--bullet-space);
 }
 
 .msrd .msrd-Markdown ol,

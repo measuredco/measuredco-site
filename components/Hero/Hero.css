@@ -30,7 +30,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  max-width: 11em;
+  max-width: 11em; /* fallback for text-wrap: balance */
   text-wrap: balance;
 }
 
@@ -49,14 +49,14 @@
 }
 
 .msrd .msrd-Hero-rule {
-  margin-bottom: 1.125rem;
-  margin-top: 1.125rem;
+  margin-bottom: var(--space-vertical-04);
+  margin-top: var(--space-vertical-04);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Hero-rule {
-    margin-bottom: 2.25rem;
-    margin-top: 2.25rem;
+    margin-bottom: var(--space-vertical-06);
+    margin-top: var(--space-vertical-06);
   }
 }
 
@@ -67,7 +67,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
-  max-width: 30em;
+  max-width: 30em; /* fallback for text-wrap: balance */
   text-wrap: balance;
 }
 
