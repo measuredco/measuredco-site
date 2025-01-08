@@ -8,8 +8,15 @@ import content from "../content.json";
 import { getPageRes } from "../lib/get-page-res";
 import config from "../puck/config";
 
-const { description, openGraphLocale, siteName, siteUrl, themeColor, title } =
-  content;
+const {
+  alternativeName,
+  description,
+  openGraphLocale,
+  siteName,
+  siteUrl,
+  themeColor,
+  title,
+} = content;
 
 export const viewport: Viewport = {
   initialScale: 1,
@@ -67,7 +74,8 @@ export default async function Page() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: `${pageTitle}`,
+    name: `${siteName}`,
+    alternateName: `${alternativeName}`,
     url: `${siteUrl}`,
     publisher: {
       "@type": "Organization",
