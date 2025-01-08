@@ -173,8 +173,9 @@
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
+  --arrow-offset: 0.25em;
   content: "→";
-  left: 0.25em;
+  left: var(--arrow-offset);
   position: relative;
 }
 
@@ -185,7 +186,7 @@
   }
 
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-note span::after {
-    left: 0.25em;
+    left: var(--arrow-offset);
     opacity: 1;
     transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
       0.2s left var(--easing-cubic-bezier-easy-ease);

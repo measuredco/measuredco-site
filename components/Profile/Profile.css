@@ -19,7 +19,7 @@
   }
 
   .msrd .msrd-Profile-imageWrapper {
-    --image-size: 17.3125rem;
+    --image-size: 17.3125rem; /* magic grid number */
     flex-shrink: 0;
     margin-bottom: 0;
   }

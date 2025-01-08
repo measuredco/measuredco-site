@@ -43,7 +43,7 @@
     color: var(--color-interactive-contrast);
     display: flex;
     font-weight: 500;
-    height: 3rem;
+    height: var(--space-vertical-07);
     padding-bottom: 0;
     padding-left: calc(var(--space-horizontal-06) + 0.9em);
     padding-right: var(--space-horizontal-06);
