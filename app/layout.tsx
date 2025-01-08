@@ -45,7 +45,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en-gb" className={`${inter.variable} ${robotoMono.variable}`}>
+    <html
+      className={`${inter.variable} ${robotoMono.variable}`}
+      lang="en-gb"
+      prefix="og: https://ogp.me/ns#"
+    >
       <head>
         <meta
           httpEquiv="delegate-ch"
