@@ -1,14 +1,13 @@
 .msrd .msrd-Profile-imageWrapper {
   --image-size: var(--space-vertical-14);
-  --corner-ratio: 0.16666667;
-  border-radius: calc(var(--image-size) * var(--corner-ratio));
+  border-radius: calc(var(--image-size) * var(--corner-ratio-square));
   box-shadow: var(--box-shadow-light-source);
   margin-bottom: var(--space-vertical-04);
   width: var(--image-size);
 }
 
 .msrd .msrd-Profile-image {
-  border-radius: calc(var(--image-size) * var(--corner-ratio));
+  border-radius: calc(var(--image-size) * var(--corner-ratio-square));
   box-shadow: var(--box-shadow);
 }
 

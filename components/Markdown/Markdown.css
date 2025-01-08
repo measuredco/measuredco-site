@@ -82,15 +82,16 @@
 }
 
 .msrd .msrd-Markdown code {
+  --padding-x-code-inline: 0.25em;
   background: var(--color-background-highlight);
-  border-radius: 0.25em;
+  border-radius: var(--padding-x-code-inline);
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
   font-weight: inherit;
   line-height: inherit;
   padding-bottom: 0.055em;
-  padding-left: 0.25em;
-  padding-right: 0.25em;
+  padding-left: var(--padding-x-code-inline);
+  padding-right: var(--padding-x-code-inline);
 }
 
 @media (min-width: 48em) {
@@ -101,9 +102,8 @@
 
 .msrd .msrd-Markdown code .gfm-color-chip {
   --chip-size: 0.6em;
-  --corner-ratio: 0.16666667;
   border: var(--border-width) solid var(--color-background);
-  border-radius: calc(var(--chip-size) * var(--corner-ratio));
+  border-radius: calc(var(--chip-size) * var(--corner-ratio-square));
   display: inline-block;
   height: var(--chip-size);
   margin-left: 0.25em;
@@ -117,14 +117,14 @@
 }
 
 .msrd .msrd-Markdown pre {
-  border-radius: 1.125em;
+  border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-light-source);
   position: relative;
 }
 
 .msrd .msrd-Markdown pre::after {
   border: solid var(--border-width) var(--color-border-code);
-  border-radius: 1.125rem;
+  border-radius: var(--border-radius-card);
   bottom: 0.25rem;
   content: "";
   left: -0.25rem;
@@ -135,7 +135,7 @@
 }
 
 .msrd .msrd-Markdown pre code {
-  border-radius: 1.125em;
+  border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow);
   display: block;
   font-family: var(--font-family-monospaced);
@@ -272,7 +272,7 @@
 }
 
 .msrd .msrd-Markdown img {
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius-image);
   box-shadow: var(--box-shadow);
 }
 

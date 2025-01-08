@@ -39,7 +39,7 @@
     align-items: center;
     background-color: var(--color-interactive);
     border: var(--border-width) solid var(--color-interactive);
-    border-radius: 0.5rem;
+    border-radius: var(--border-radius-button);
     color: var(--color-interactive-contrast);
     display: flex;
     font-weight: 500;

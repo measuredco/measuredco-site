@@ -321,6 +321,17 @@
   --border-width: calc((1 / 16) * 1rem);
 
   /*
+   * Corner tokens
+   */
+
+  --border-radius-focus: calc((1 / 16) * 1rem);
+  --border-radius-image: calc((4 / 16) * 1rem);
+  --border-radius-button: calc((8 / 16) * 1rem);
+  --border-radius-card: calc((18 / 16) * 1rem);
+
+  --corner-ratio-square: 0.16666667;
+
+  /*
    * Motion tokens
    */
 
