@@ -25,11 +25,6 @@ const SiteHeader = ({ links }: SiteHeaderProps) => {
   }
 
   useEffect(() => {
-    // if (!homepage) {
-    //   setPageScrolled(true);
-    //   return;
-    // }
-
     const togglePageScrolled = () => {
       if (window.scrollY >= 24) {
         setPageScrolled(true);

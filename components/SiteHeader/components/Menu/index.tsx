@@ -2,8 +2,6 @@ import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import SiteHeaderCallToAction from "../CallToAction";
-
 const SiteHeaderMenu = ({
   links = [],
   menuOpen = false,
@@ -23,15 +21,17 @@ const SiteHeaderMenu = ({
         "msrd-SiteHeaderMenu--open": menuOpen,
       })}
       onClick={(event) => {
-        const element = event.target as HTMLElement;
+        let element = event.target as HTMLElement;
 
         if (window.matchMedia("(min-width: 48em)").matches) {
           return;
         }
-        if (
-          element.tagName === "A" &&
-          element.getAttribute("href") === pathname
-        ) {
+
+        while (element && element.tagName !== "A") {
+          element = element.parentElement as HTMLElement;
+        }
+
+        if (element && element.getAttribute("href") === pathname) {
           setMenuOpen(false);
         }
       }}
@@ -46,13 +46,10 @@ const SiteHeaderMenu = ({
               })}
               href={href}
             >
-              {label}
+              <span className="msrd-SiteHeader-linkText">{label}</span>
             </Link>
           </li>
         ))}
-        <li>
-          <SiteHeaderCallToAction />
-        </li>
       </ul>
     </div>
   );

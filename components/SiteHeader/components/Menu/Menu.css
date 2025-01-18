@@ -3,8 +3,7 @@
   display: none;
   left: 0;
   overflow-y: auto;
-  padding: var(--space-vertical-03) var(--space-horizontal)
-    var(--space-vertical);
+  padding: var(--space-vertical-02) var(--space-horizontal) var(--space-vertical);
   position: fixed;
   right: 0;
   top: var(--space-vertical-09);

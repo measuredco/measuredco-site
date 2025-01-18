@@ -389,6 +389,8 @@
     color-mix(in srgb, var(--color-black) 08%, transparent);
   --box-shadow-light-source: none;
 
+  --color-button-background: var(--color-white);
+
   --color-card-background: var(--color-white);
   --color-card-text: var(--color-grey-01);
   --color-card-interactive: var(--color-azure-04);
@@ -443,6 +445,8 @@
       color-mix(in srgb, var(--color-black) 92%, transparent);
     --box-shadow-light-source: 0.125rem 0.125rem 3rem
       color-mix(in srgb, var(--color-white) 8%, transparent);
+
+    --color-button-background: var(--color-grey-02);
 
     --color-card-background: var(--color-azure-07);
     --color-card-text: var(--color-grey-01);
