@@ -103,6 +103,11 @@ export const config: Config<Props, RootProps> = {
           href: "/blog",
           label: "Blog",
         },
+        {
+          current: false,
+          href: "/contact",
+          label: "Get in touch",
+        },
       ],
     },
     fields: {

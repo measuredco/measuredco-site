@@ -1,4 +1,3 @@
-@import "./components/CallToAction/CallToAction.css";
 @import "./components/Menu/Menu.css";
 @import "./components/MenuButton/MenuButton.css";
 
@@ -85,12 +84,20 @@ html {
 }
 
 .msrd .msrd-SiteHeader-navItems {
+  display: table;
   font-size: var(--font-05-size);
   line-height: var(--font-05-line-height);
   list-style: none;
   margin-bottom: 0;
   margin-top: 0;
   padding-left: 0;
+}
+
+@media (hover: hover) {
+  .msrd .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
+    opacity: 0.42;
+    transition: opacity 0.1s var(--easing-cubic-bezier-easy-ease);
+  }
 }
 
 @media (min-width: 48em) {
@@ -101,25 +108,31 @@ html {
     gap: var(--space-horizontal-07);
     line-height: var(--line-height);
   }
+
+  .msrd .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
+    opacity: 1;
+    transition: none;
+  }
 }
 
 .msrd .msrd-SiteHeader-link {
   color: var(--color-interactive-neutral);
   display: table;
-  margin-bottom: var(--space-vertical-03);
-  padding-bottom: var(--space-vertical-01);
-  padding-top: var(--space-vertical-01);
+  padding-bottom: var(--space-vertical-02);
+  padding-top: var(--space-vertical-02);
+  position: relative;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-SiteHeader-link {
-    margin-bottom: 0;
+    padding-bottom: var(--space-vertical-01);
+    padding-top: var(--space-vertical-01);
   }
-}
 
-@media (hover: hover) {
-  .msrd .msrd-SiteHeader-link:hover {
-    color: var(--color-interactive-neutral-hover);
+  @media (hover: hover) {
+    .msrd .msrd-SiteHeader-link:hover {
+      color: var(--color-interactive-neutral-hover);
+    }
   }
 }
 
@@ -127,7 +140,108 @@ html {
   color: var(--color-interactive-neutral-active);
 }
 
-.msrd .msrd-SiteHeader-link--current {
-  border-bottom: var(--rule-height) solid var(--color-brand);
-  padding-bottom: calc(var(--space-vertical-01) - var(--rule-height));
+.msrd .msrd-SiteHeader-link--current::after {
+  background-color: var(--color-brand);
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: var(--space-vertical-02);
+  margin-left: 0.2em;
+  width: var(--space-vertical-02);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-SiteHeader-link--current {
+    text-decoration: underline;
+    text-decoration-color: var(--color-brand);
+    text-decoration-thickness: var(--rule-height);
+    text-underline-offset: 0.5em;
+  }
+
+  .msrd
+    .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
+    .msrd-SiteHeader-link--current:hover {
+    color: inherit;
+    cursor: default;
+  }
+
+  .msrd .msrd-SiteHeader-link--current::after {
+    display: none;
+  }
+}
+
+/* CTA */
+
+@media (min-width: 48em) {
+  .msrd .msrd-SiteHeader li:has(.msrd-SiteHeader-link[href="/contact"]) {
+    border-radius: var(--border-radius-button);
+    box-shadow: var(--box-shadow-light-source);
+  }
+
+  .msrd .msrd-SiteHeader-link[href="/contact"] {
+    align-items: center;
+    background-color: var(--color-button-background);
+    border: solid var(--border-width) var(--color-card-border);
+    border-radius: var(--border-radius-button);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    height: var(--space-vertical-07);
+    padding-bottom: 0;
+    padding-left: var(--space-horizontal-08);
+    padding-right: var(--space-horizontal-06);
+    padding-top: 0;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .msrd
+    .msrd-SiteHeader-link[href="/contact"]
+    .msrd-SiteHeader-linkText::after {
+    content: "→";
+    display: inline-block;
+    left: 0;
+    opacity: 0;
+    position: relative;
+    transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+      0.2s left var(--easing-cubic-bezier-easy-ease);
+    width: var(--space-horizontal);
+  }
+
+  @media (hover: hover) {
+    .msrd
+      .msrd-SiteHeader-link[href="/contact"]:hover
+      .msrd-SiteHeader-linkText::after {
+      left: 0.25em;
+      opacity: 1;
+    }
+  }
+
+  .msrd .msrd-SiteHeader-link--current[href="/contact"],
+  .msrd
+    .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
+    .msrd-SiteHeader-link--current[href="/contact"]:hover {
+    background-color: var(--color-interactive);
+    border-color: var(--color-interactive);
+    color: var(--color-interactive-contrast);
+  }
+
+  @media (hover: hover) {
+    .msrd .msrd-SiteHeader-link--current[href="/contact"]:hover {
+      background-color: var(--color-interactive-hover);
+      border-color: var(--color-interactive-hover);
+      color: var(--color-interactive-contrast);
+    }
+  }
+
+  .msrd .msrd-SiteHeader-link--current[href="/contact"]:active {
+    background-color: var(--color-interactive-active);
+    border-color: var(--color-interactive-active);
+    color: var(--color-interactive-contrast);
+  }
+
+  .msrd
+    .msrd-SiteHeader-link--current[href="/contact"]
+    .msrd-SiteHeader-linkText::after {
+    visibility: hidden;
+  }
 }
