@@ -224,6 +224,12 @@ html {
     color: var(--color-interactive-contrast);
   }
 
+  .msrd
+    .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
+    .msrd-SiteHeader-link--current[href="/contact"]:hover {
+    cursor: default;
+  }
+
   @media (hover: hover) {
     .msrd .msrd-SiteHeader-link--current[href="/contact"]:hover {
       background-color: var(--color-interactive-hover);
