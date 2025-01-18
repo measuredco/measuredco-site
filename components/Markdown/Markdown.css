@@ -395,8 +395,13 @@
 .msrd .msrd-Markdown #footnote-label + ol {
   font-size: var(--font-02-size);
   line-height: var(--font-02-line-height);
-  margin-left: calc(30rem / -16);
   padding-top: var(--space-vertical-03);
+}
+
+@media (min-width: 80em) {
+  .msrd .msrd-Markdown #footnote-label + ol {
+    margin-left: calc(30rem / -16);
+  }
 }
 
 .msrd .msrd-Markdown #footnote-label + ol::before {
