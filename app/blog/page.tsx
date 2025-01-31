@@ -8,7 +8,7 @@ import { getPosts } from "../../lib/get-posts";
 import { getPageRes } from "../../lib/get-page-res";
 import config from "../../puck/config";
 
-const { blogDescription, openGraphLocale, siteName, siteUrl, title } = content;
+const { blogDescription, openGraphLocale, siteName, siteUrl } = content;
 
 export { viewport } from "../page";
 

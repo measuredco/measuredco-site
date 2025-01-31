@@ -4,7 +4,7 @@ import "./SiteFooter.css";
 
 const SiteFooter = () => (
   <footer className="msrd-SiteFooter">
-    <h2 className="msrd-u-visuallyHidden">SiteFooter</h2>
+    <h2 className="msrd-u-visuallyHidden">Footer</h2>
     <div className="msrd-SiteFooter-inner">
       <div>
         <Rule />
