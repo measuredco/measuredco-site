@@ -10,6 +10,15 @@
   right: -10px;
 }
 
+@media (prefers-reduced-motion) {
+  .msrd .msrd-SiteHeaderMenuButton *,
+  .msrd .msrd-SiteHeaderMenuButton *::after,
+  .msrd .msrd-SiteHeaderMenuButton *::before {
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+
 @media (hover: hover) {
   .msrd .msrd-SiteHeaderMenuButton:hover {
     color: var(--color-interactive-neutral-hover);

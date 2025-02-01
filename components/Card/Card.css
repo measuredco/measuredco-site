@@ -71,6 +71,15 @@
     top: 0;
     transition: 0.1s var(--easing-cubic-bezier-easy-ease);
   }
+
+  @media (prefers-reduced-motion) {
+    .msrd .msrd-Card:has(.msrd-Card-heading a):hover::after {
+      bottom: var(--border-offset-card);
+      left: calc(0rem - var(--border-offset-card));
+      right: var(--border-offset-card);
+      top: calc(0rem - var(--border-offset-card));
+    }
+  }
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
@@ -78,6 +87,15 @@
   left: calc(var(--border-offset-card) / 2);
   right: calc(0rem - var(--border-offset-card) / 2);
   top: calc(var(--border-offset-card) / 2);
+}
+
+@media (prefers-reduced-motion) {
+  .msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
+    bottom: var(--border-offset-card);
+    left: calc(0rem - var(--border-offset-card));
+    right: var(--border-offset-card);
+    top: calc(0rem - var(--border-offset-card));
+  }
 }
 
 .msrd .msrd-Card-heading {
@@ -146,6 +164,16 @@
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
     transition: 0.3s var(--easing-cubic-bezier-easy-ease);
   }
+
+  @media (prefers-reduced-motion) {
+    .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
+      transition: 0.1s var(--easing-cubic-bezier-easy-ease);
+    }
+
+    .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
+      transition: 0.1s var(--easing-cubic-bezier-easy-ease);
+    }
+  }
 }
 
 .msrd .msrd-Card-dots::before {
@@ -190,5 +218,15 @@
     opacity: 1;
     transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
       0.2s left var(--easing-cubic-bezier-easy-ease);
+  }
+
+  @media (prefers-reduced-motion) {
+    .msrd
+      .msrd-Card:has(.msrd-Card-heading a):hover
+      .msrd-Card-note
+      span::after {
+      transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+        0s left var(--easing-cubic-bezier-easy-ease);
+    }
   }
 }

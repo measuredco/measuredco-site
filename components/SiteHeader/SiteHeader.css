@@ -201,8 +201,6 @@ html {
     left: 0;
     opacity: 0;
     position: relative;
-    transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
-      0.2s left var(--easing-cubic-bezier-easy-ease);
     width: var(--space-horizontal);
   }
 
@@ -212,6 +210,17 @@ html {
       .msrd-SiteHeader-linkText::after {
       left: 0.25em;
       opacity: 1;
+      transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+      0.2s left var(--easing-cubic-bezier-easy-ease);
+    }
+
+    @media (prefers-reduced-motion) {
+      .msrd
+        .msrd-SiteHeader-link[href="/contact"]:hover
+        .msrd-SiteHeader-linkText::after {
+        transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+          0s left var(--easing-cubic-bezier-easy-ease);
+      }
     }
   }
 
