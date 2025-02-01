@@ -13,14 +13,14 @@ const Copy = ({ text }: CopyProps) => {
   return (
     <button
       className="msrd-Copy"
-      onBlur={async () => {
+      onBlur={() => {
         setLabel("Copy");
       }}
       onClick={async () => {
         await navigator.clipboard.writeText(text);
         setLabel("Copied");
       }}
-      onMouseLeave={async () => {
+      onMouseLeave={() => {
         setLabel("Copy");
       }}
     >
