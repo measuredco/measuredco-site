@@ -29,3 +29,8 @@
     color: var(--color-interactive-neutral-active);
   }
 }
+
+.msrd .msrd-Contact-email {
+  display: inline-flex;
+  gap: var(--space-horizontal);
+}

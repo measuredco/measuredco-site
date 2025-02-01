@@ -398,6 +398,9 @@
   --color-card-dots: var(--color-grey-10);
   --color-card-dots-hover: var(--color-azure-07);
 
+  --color-copy-interactive: var(--color-azure-04);
+  --color-copy-interactive-hover: var(--color-azure-07);
+
   --color-header-background: var(--color-background);
 
   --color-logo: var(--color-azure-04);
@@ -454,6 +457,9 @@
     --color-card-border: var(--color-white);
     --color-card-dots: var(--color-azure-04);
     --color-card-dots-hover: var(--color-white);
+
+    --color-copy-interactive: var(--color-interactive-neutral);
+    --color-copy-interactive-hover: var(--color-interactive-neutral-hover);
 
     --color-header-background: var(--color-background);
 

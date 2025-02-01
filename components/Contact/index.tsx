@@ -1,4 +1,4 @@
-import { Rule, Heading } from "..";
+import { Copy, Rule, Heading } from "..";
 
 import "./Contact.css";
 
@@ -15,9 +15,12 @@ const Contact = ({ email, text }: ContactProps) => (
     <div className="msrd-Contact-rule">
       <Rule align="center" />
     </div>
-    <Heading size="3">
-      <a href={`mailto:${email}`}>{email}</a>
-    </Heading>
+    <div className="msrd-Contact-email">
+      <Heading size="3">
+        <a href={`mailto:${email}`}>{email}</a>
+      </Heading>
+      <Copy text={email} />
+    </div>
   </div>
 );
 

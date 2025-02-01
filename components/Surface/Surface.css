@@ -49,6 +49,9 @@
   --color-card-dots: var(--color-azure-04);
   --color-card-dots-hover: var(--color-white);
 
+  --color-copy-interactive: var(--color-interactive-neutral);
+  --color-copy-interactive-hover: var(--color-interactive-neutral-hover);
+
   --color-header-background: transparent;
 
   --color-logo: var(--color-white);

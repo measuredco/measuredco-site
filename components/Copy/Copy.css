@@ -1,0 +1,92 @@
+.msrd .msrd-Copy {
+  --color-border: var(--color-copy-interactive);
+  --button-size: calc((44 / 16) * 1rem);
+  --icon-size: calc((24 / 16) * 1rem);
+  --icon-offset: calc((6 / 16) * 1rem);
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  height: var(--button-size);
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: var(--button-size);
+}
+
+.msrd .msrd-Copy::before {
+  border: solid var(--border-width) var(--color-border);
+  border-radius: calc(var(--icon-size) * var(--corner-ratio-square));
+  bottom: calc(var(--button-size) - var(--icon-size) - var(--icon-offset));
+  content: "";
+  height: var(--icon-size);
+  left: calc(var(--button-size) - var(--icon-size) - var(--icon-offset));
+  position: absolute;
+  width: var(--icon-size);
+}
+
+.msrd .msrd-Copy::after {
+  background-color: var(--color-button-background);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: calc(var(--icon-size) * var(--corner-ratio-square));
+  bottom: var(--icon-offset);
+  content: "";
+  height: var(--icon-size);
+  left: var(--icon-offset);
+  position: absolute;
+  width: var(--icon-size);
+}
+
+.msrd .msrd-Copy-text {
+  color: var(--color-copy-interactive);
+  display: block;
+  font-size: var(--font-01-size);
+  height: var(--button-size);
+  left: calc(var(--button-size) - var(--icon-offset));
+  line-height: var(--button-size);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+.msrd .msrd-Copy:focus-visible {
+  outline: 0;
+}
+
+.msrd .msrd-Copy:focus-visible {
+  --outline-offset: calc((4 / 16) * -1rem);
+  border-radius: calc(
+    (var(--button-size) + var(--outline-offset)) * var(--corner-ratio-square)
+  );
+  outline: var(--outline-width) solid var(--color-interactive-focus);
+  outline-offset: var(--outline-offset);
+}
+
+.msrd .msrd-Copy:focus-visible .msrd-Copy-text {
+  left: var(--button-size);
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .msrd .msrd-Copy:hover {
+    --color-border: var(--color-copy-interactive-hover);
+  }
+
+  .msrd .msrd-Copy:hover .msrd-Copy-text {
+    left: var(--button-size);
+    opacity: 1;
+    transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+      0.2s left var(--easing-cubic-bezier-easy-ease);
+  }
+
+  @media (prefers-reduced-motion) {
+    .msrd .msrd-Copy:hover .msrd-Copy-text {
+      transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+        0s left var(--easing-cubic-bezier-easy-ease);
+    }
+  }
+}
+
+.msrd .msrd-Copy:active {
+  --color-border: var(--color-interactive-neutral-active);
+}

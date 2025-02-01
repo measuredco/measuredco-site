@@ -2,6 +2,7 @@ export { default as Banner } from "./Banner";
 export { default as Base } from "./Base";
 export { default as Card } from "./Card";
 export { default as Contact } from "./Contact";
+export { default as Copy } from "./Copy";
 export { default as Rule } from "./Rule";
 export { default as Grid, gridClassName } from "./Grid";
 export { default as Heading } from "./Heading";
@@ -20,6 +21,7 @@ export { default as Surface } from "./Surface";
 
 export type { BannerProps } from "./Banner";
 export type { ContactProps } from "./Contact";
+export type { CopyProps } from "./Copy";
 export type { RuleProps } from "./Rule";
 export type { GridProps, GridItemProps } from "./Grid";
 export type { HeadingProps } from "./Heading";
