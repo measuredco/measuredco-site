@@ -25,12 +25,15 @@ const SiteHeader = ({ links }: SiteHeaderProps) => {
   }
 
   useEffect(() => {
+    const body = document.body;
     const togglePageScrolled = () => {
       if (window.scrollY >= 24) {
         setPageScrolled(true);
+        body.classList.add("msrd-u-pageScrolled");
         return;
       }
       setPageScrolled(false);
+      body.classList.remove("msrd-u-pageScrolled");
     };
 
     togglePageScrolled();
