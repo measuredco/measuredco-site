@@ -48,10 +48,24 @@
     padding-right: var(--space-horizontal);
   }
 
+  @media (min-width: 48em) {
+    .msrd .msrd-Logos {
+      padding-left: var(--space-horizontal-07);
+      padding-right: var(--space-horizontal-07);
+    }
+  }
+
   .msrd .msrd-Logos-inner {
     animation: none;
     flex-shrink: 1;
     flex-wrap: wrap;
+    row-gap: var(--space-vertical-03);
+  }
+
+  @media (min-width: 48em) {
+    .msrd .msrd-Logos-inner {
+      row-gap: var(--space-vertical);
+    }
   }
 
   @media (min-width: 78.25em) {

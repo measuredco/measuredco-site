@@ -8,13 +8,24 @@
   margin-right: auto;
   max-width: var(--section-max-width);
   min-height: calc(100vh - var(--header-height));
-  padding-bottom: var(--space-vertical);
   text-align: center;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Hero {
     --header-height: var(--space-vertical-10);
+  }
+}
+
+.msrd .msrd-Hero-inner {
+  margin-bottom: var(--space-vertical-08);
+  padding-top: var(--space-vertical-06);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Hero-inner {
+    margin-bottom: var(--space-vertical-11);
+    padding-top: var(--space-vertical-09);
   }
 }
 
@@ -76,5 +87,77 @@
     font-size: var(--font-04-size);
     line-height: var(--font-04-line-height-large);
     margin-bottom: 0;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    bottom: calc((14 / 16) * 1rem);
+  }
+  50% {
+    bottom: calc((8 / 16) * 1rem);
+  }
+  100% {
+    bottom: calc((14 / 16) * 1rem);
+  }
+}
+
+.msrd .msrd-Hero-arrow {
+  --animation-delay: 1.375s;
+  --animation-duration: 2.75s;
+  display: none;
+  user-select: none;
+}
+
+.msrd .msrd-Hero--fullscreen .msrd-Hero-arrow {
+  align-items: flex-end;
+  animation: bounce var(--animation-duration) var(--animation-delay)
+    var(--easing-cubic-bezier-easy-ease) infinite;
+  bottom: calc((8 / 16) * 1rem);
+  display: flex;
+  font-size: var(--font-07-size);
+  font-weight: 100;
+  justify-content: center;
+  left: 0;
+  line-height: 1;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  transition: opacity 0.2s var(--animation-delay) linear;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.msrd-u-pageScrolled .msrd-Hero--fullscreen .msrd-Hero-arrow {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+@media (hover: hover) {
+  .msrd .msrd-Hero--fullscreen .msrd-Hero-arrow {
+    animation: none;
+    opacity: 0;
+    transition: none;
+  }
+
+  .msrd:not(:has(a:hover)):hover .msrd-Hero--fullscreen .msrd-Hero-arrow {
+    animation: bounce var(--animation-duration) var(--animation-delay)
+      var(--easing-cubic-bezier-easy-ease) infinite;
+    opacity: 1;
+    transition: opacity 0.2s var(--animation-delay) linear;
+  }
+
+  .msrd-u-pageScrolled .msrd-Hero--fullscreen .msrd-Hero-arrow {
+    animation: none !important;
+    opacity: 0 !important;
+    transition: opacity 0.1s linear !important;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .msrd .msrd-Hero--fullscreen .msrd-Hero-arrow {
+    animation: none !important;
   }
 }

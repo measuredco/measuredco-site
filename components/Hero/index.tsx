@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import classNames from "classnames";
+import { useEffect, useState } from "react";
 
 import { Rule, Logos, logosMapping, Space } from "..";
 
@@ -13,13 +16,40 @@ export type HeroProps = {
 
 const Hero = ({ description, headingLevel, logos, strapline }: HeroProps) => {
   let StraplineElement = "p" as any;
+  const [fullscreen, setFullscreen] = useState(false);
 
   if (headingLevel) {
     StraplineElement = `h${headingLevel}`;
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      const hero = document.getElementsByClassName("msrd-Hero-inner")[0];
+      const header = document.getElementsByClassName("msrd-SiteHeader")[0];
+
+      if (hero.scrollHeight <= window.innerHeight - header.scrollHeight * 2) {
+        setFullscreen(true);
+      } else {
+        setFullscreen(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="msrd-Hero">
+    <div
+      className={classNames({
+        "msrd-Hero": true,
+        "msrd-Hero--fullscreen": fullscreen,
+      })}
+    >
       <div className="msrd-Hero-inner">
         <div className="msrd-Hero-text">
           <StraplineElement className="msrd-Hero-strapline">
@@ -39,6 +69,9 @@ const Hero = ({ description, headingLevel, logos, strapline }: HeroProps) => {
           })}
         </Logos>
       </div>
+      <span className="msrd-Hero-arrow">
+        <span>↓</span>
+      </span>
     </div>
   );
 };
