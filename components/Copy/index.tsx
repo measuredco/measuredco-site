@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import classNames from "classnames";
+import { useRef, useState } from "react";
 
 import "./Copy.css";
 
@@ -9,11 +10,22 @@ export type CopyProps = {
 };
 
 const Copy = ({ text }: CopyProps) => {
+  const timeout = useRef(null);
   const [label, setLabel] = useState("Copy");
+  const [touched, setTouched] = useState(false);
+
   return (
     <button
-      className="msrd-Copy"
+      className={classNames({
+        "msrd-Copy": true,
+        "msrd-Copy--touched": touched,
+      })}
       onBlur={() => {
+        if (timeout.current) {
+          clearTimeout(timeout.current);
+          timeout.current = null;
+        }
+        setTouched(false);
         setLabel("Copy");
       }}
       onClick={async () => {
@@ -23,8 +35,21 @@ const Copy = ({ text }: CopyProps) => {
       onMouseLeave={() => {
         setLabel("Copy");
       }}
+      onTouchEnd={() => {
+        if (timeout.current) {
+          clearTimeout(timeout.current);
+          timeout.current = null;
+        }
+        setTouched(true);
+        timeout.current = setTimeout(() => {
+          setTouched(false);
+          setLabel("Copy");
+        }, 2000);
+      }}
     >
-      <span className="msrd-Copy-text">{label}</span>
+      <span aria-live="polite" className="msrd-Copy-text">
+        {label}
+      </span>
     </button>
   );
 };

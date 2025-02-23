@@ -62,7 +62,8 @@
   outline-offset: var(--outline-offset);
 }
 
-.msrd .msrd-Copy:focus-visible .msrd-Copy-text {
+.msrd .msrd-Copy:focus-visible .msrd-Copy-text,
+.msrd .msrd-Copy--touched .msrd-Copy-text {
   left: var(--button-size);
   opacity: 1;
 }
