@@ -1,7 +1,7 @@
 import "./Space.css";
 
 export type SpaceProps = {
-  size:
+  size?:
     | "01"
     | "02"
     | "03"
