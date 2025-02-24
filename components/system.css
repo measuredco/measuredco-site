@@ -364,6 +364,7 @@
   --color-brand: var(--color-azure-04);
 
   --color-background: var(--color-grey-11);
+  --color-background-emphasis: var(--color-white);
   --color-background-highlight: var(--color-grey-10);
 
   --color-text: var(--color-grey-01);
@@ -411,6 +412,11 @@
     --color-brand: var(--color-azure-07);
 
     --color-background: var(--color-grey-02);
+    --color-background-emphasis: color-mix(
+      in srgb,
+      var(--color-text) 2%,
+      transparent
+    );
     --color-background-highlight: color-mix(
       in srgb,
       var(--color-text) 8%,
