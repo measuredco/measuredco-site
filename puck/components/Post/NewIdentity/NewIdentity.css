@@ -1,3 +1,22 @@
-.msrd .msrd-NewIdentity-custom {
-  color: var(--color-brand);
+.msrd .msrd-NewIdentity p {
+  font-size: var(--font-03-size);
+  line-height: var(--font-03-line-height);
+  margin: 0;
+  max-width: 35em;
+  text-wrap: pretty;
+}
+
+.msrd p.msrd-NewIdentity-callout {
+  margin: 0 auto;
+  max-width: 46em;
+  text-align: center;
+}
+
+.msrd p.msrd-NewIdentity-standfirst {
+  font-size: var(--font-05-size);
+  font-style: italic;
+  line-height: var(--font-05-line-height);
+  margin: 0 auto;
+  max-width: 38em;
+  text-align: center;
 }
