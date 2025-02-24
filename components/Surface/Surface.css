@@ -1,7 +1,13 @@
+.msrd .msrd-Surface--dark,
 .msrd .msrd-Surface--graphicDark {
   --color-brand: var(--color-azure-07);
 
-  --color-background: var(--color-azure-02);
+  --color-background: var(--color-azure-01);
+  --color-background-emphasis: color-mix(
+      in srgb,
+      var(--color-text) 2%,
+      transparent
+    );
   --color-background-highlight: color-mix(
     in srgb,
     var(--color-text) 8%,
@@ -57,14 +63,18 @@
   --color-logo: var(--color-white);
 }
 
+.msrd .msrd-Surface--dark,
 .msrd .msrd-Surface--graphicDark {
   background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.msrd .msrd-Surface--graphicDark {
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png),
     url(https://res.cloudinary.com/measuredco/image/upload/v1732635074/site/site-background-repeat_kjbjx5.png);
   background-position: center -1rem, center top;
   background-repeat: no-repeat, repeat-y;
   background-size: auto;
-  color: var(--color-text);
 }
 
 @media (min-width: 48em) {
@@ -73,16 +83,19 @@
   }
 }
 
+.msrd .msrd-Surface--dark a:not([class]),
 .msrd .msrd-Surface--graphicDark a:not([class]) {
   color: var(--color-interactive-neutral);
 }
 
 @media (hover: hover) {
+  .msrd .msrd-Surface--dark a:not([class]):hover,
   .msrd .msrd-Surface--graphicDark a:not([class]):hover {
     color: var(--color-interactive-neutral-hover);
   }
 }
 
+.msrd .msrd-Surface--dark a:not([class]):active,
 .msrd .msrd-Surface--graphicDark a:not([class]):active {
   color: var(--color-interactive-neutral-active);
 }

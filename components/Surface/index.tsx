@@ -3,7 +3,7 @@ import { PropsWithChildren } from "react";
 import "./Surface.css";
 
 type SurfaceProps = {
-  background?: "graphicDark" | "";
+  background?: "dark" | "graphicDark" | "";
 };
 
 const Surface = ({ background, children }: PropsWithChildren<SurfaceProps>) => {
