@@ -1,12 +1,20 @@
+import Image from "next/image";
+
 import {
   Grid,
   Heading,
+  Paragraph,
   Rule,
   Section,
   Space,
   Surface,
 } from "../../../../components";
 
+import Contact from "./components/Contact";
+import Corner from "./components/Corner";
+import Intro from "./components/Intro";
+import Process from "./components/Process";
+import Tip from "./components/Tip";
 import { PostProps } from "..";
 
 import "./NewIdentity.css";
@@ -16,59 +24,70 @@ interface NewIdentityProps extends Omit<PostProps, "content" | "template"> {}
 const NewIdentity = ({ title }: NewIdentityProps) => (
   <div className="msrd-NewIdentity">
     <Surface background="dark">
-      <Section>
-        <Grid>
-          <Grid.Item colSpan="6" colSpanNarrow="6">
-            <Space size="11" />
-            <Heading level="1" size="display3">
-              {title}
-            </Heading>
-            <Space />
-            <Rule />
-            <Space size="06" />
-            <p>
-              Our overarching purpose is to elevate the quality, consistency and
-              accessibility of UI across the web by helping our clients craft
-              exceptional digital experiences. So it’s a bit of a problem if our
-              own visual identity doesn’t reflect that.
-            </p>
-            <Space size="11" />
-          </Grid.Item>
-        </Grid>
-      </Section>
+      <div className="msrd-NewIdentity-hero">
+        <Section>
+          <Space size="11" />
+          <Grid>
+            <Grid.Item colSpan="6" colSpanNarrow="6">
+              <Heading level="1" size="display3">
+                {title}
+              </Heading>
+              <Space />
+              <Rule />
+              <Space size="06" />
+              <p>
+                Our overarching purpose is to elevate the quality, consistency
+                and accessibility of UI across the web by helping our clients
+                craft exceptional digital experiences. It’s important that our
+                own visual identity reflects that.
+              </p>
+            </Grid.Item>
+            <Grid.Item
+              colSpan="5"
+              colSpanNarrow="5"
+              colStart="8"
+              colStartNarrow="8"
+            >
+              <Image
+                alt=""
+                height="420"
+                src="https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740562751/site/logo_usvaov.png"
+                width="420"
+              />
+            </Grid.Item>
+          </Grid>
+          <Space size="11" />
+        </Section>
+      </div>
     </Surface>
     <div className="msrd-NewIdentity-surfaceLight">
       <Section>
         <Space size="08" />
         <p className="msrd-NewIdentity-standfirst">
-          Like the <a href="/">cobbler’s children</a>, our visual identity had
-          been somewhat neglected. We quickly put together a nascent visual
-          identity when we founded Measured. It wasn’t terrible, but we always
+          Like the <a href="/">cobbler’s children</a> our visual identity had
+          been somewhat neglected. When we founded Measured we quickly put
+          together a nascent visual identity. It wasn’t terrible, but we always
           knew that the branding, and by dint our website, didn’t reflect who we
           are, or the quality of work we deliver.
         </p>
       </Section>
       <Section width="full">
-        <Space size="07" />
+        <Intro />
       </Section>
       <Section>
         <p className="msrd-NewIdentity-callout">
           In mid-2024, we decided it was time to do something about it. Here’s a
           look at how we developed our new visual identity, the thinking behind
-          it, and what we learned along the way.
+          it, and some tips we’d share as a result.
         </p>
         <Space size="08" />
       </Section>
     </div>
-    <div
-      style={{
-        backgroundColor: "var(--color-background-emphasis)",
-      }}
-    >
-      <Section>
-        <Space size="08" />
-        <Grid>
-          <Grid.Item colSpan="7">
+    <Section>
+      <Space size="08" />
+      <Grid>
+        <Grid.Item colSpan="5">
+          <div className="msrd-NewIdentity-process">
             <Heading level="2" size="1">
               The design process
             </Heading>
@@ -111,80 +130,160 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
               concepts before arriving at the last details, and ultimately a
               system that felt right.
             </p>
-          </Grid.Item>
-          <Grid.Item colSpan="5"></Grid.Item>
-        </Grid>
+          </div>
+        </Grid.Item>
+        <Grid.Item colSpan="7">
+          <Process />
+        </Grid.Item>
+      </Grid>
+      <Space size="08" />
+    </Section>
+    <div
+      style={{
+        backgroundColor: "var(--color-background)",
+      }}
+    >
+      <Section>
+        <Space size="08" />
+        <Heading align="center" level="2" size="2">
+          The corner
+        </Heading>
+        <Space />
+        <p className="msrd-NewIdentity-callout">
+          At the heart of the identity is a simple shape we call the corner.
+          This became the foundation for everything else — the logo, UI curves,
+          background patterns, and more. It’s a versatile device that allows us
+          to create recognisably Measured visuals, even without the logo.
+        </p>
+        <Space size="08" />
+        <Corner />
         <Space size="08" />
       </Section>
     </div>
-    <Section>
-      <Space size="08" />
-      <Heading align="center" level="2" size="2">
-        The corner
-      </Heading>
-      <Space />
-      <p className="msrd-NewIdentity-callout">
-        At the heart of the identity is a simple shape we call the corner. This
-        became the foundation for everything else — the logo, UI curves,
-        background patterns, and more. It’s a versatile device that allows us to
-        create recognisably Measured visuals, even without the logo.
-      </p>
-      <Space size="08" />
-    </Section>
     <div className="msrd-NewIdentity-surfaceDark">
       <Section>
         <Space size="08" />
         <Grid>
-          <Grid.Item colSpan="2">
-            <Heading level="2" size="2">
-              Typography and colour
-            </Heading>
-          </Grid.Item>
-          <Grid.Item colSpan="4" rowStart="2">
+          <Grid.Item align="start" colSpan="4">
+            <div style={{ maxWidth: "12em" }}>
+              <Heading level="2" size="2">
+                Typography and colour
+              </Heading>
+            </div>
+            <Space />
             <p>
               Typography was a key focus. We initially approached it from a
-              techy perspective, particularly because the new Display variant of
-              Inter had recently released, which is optimised for headlines and
-              large type.
+              techy perspective, particularly as the Display variant of Inter
+              (our brand typeface) had recently released, optimised for
+              headlines and large type. But James suggested we look at more
+              timeless and classic alternatives.
             </p>
           </Grid.Item>
+          <Grid.Item colSpan="3" colSpanNarrow="4" colStart="7">
+            <div aria-hidden style={{ color: "var(--color-azure-08)" }}>
+              <Heading size="1">Heading 1</Heading>
+              <Space size="03" />
+              <Heading size="2">Heading 2</Heading>
+              <Space size="03" />
+              <Heading size="3">Heading 3</Heading>
+              <Space size="03" />
+              <Heading size="4">Heading 4</Heading>
+              <Space size="03" />
+              <Heading size="5">Heading 5</Heading>
+              <Space size="03" />
+              <Heading size="6">Heading 6</Heading>
+              <Space size="03" />
+              <Paragraph size="small">Body</Paragraph>
+            </div>
+            <Space />
+          </Grid.Item>
+          <Grid.Item colSpan="3" colSpanNarrow="6" colStart="10">
+            <div
+              aria-hidden
+              className="msrd-u-NewIdentity-hiddenMobile"
+              style={{ color: "var(--color-azure-08)" }}
+            >
+              <Heading size="1">48px / 60px</Heading>
+              <Space size="03" />
+              <Heading size="2">36px / 48px</Heading>
+              <Space size="03" />
+              <Heading size="3">28px / 42px</Heading>
+              <Space size="03" />
+              <Heading size="4">24px / 36px</Heading>
+              <Space size="03" />
+              <Heading size="5">20px / 30px</Heading>
+              <Space size="03" />
+              <Heading size="6">18px / 27px</Heading>
+              <Space size="03" />
+              <Paragraph size="small">16px / 24px</Paragraph>
+            </div>
+          </Grid.Item>
         </Grid>
-        <Space size="08" />
+        <Space size="12" />
       </Section>
     </div>
-    <div style={{ backgroundColor: "var(--color-background-emphasis)" }}>
+    <div
+      style={{
+        marginBottom: "calc((-108 / 16) * 1rem)",
+        position: "relative",
+        top: "calc((-108 / 16) * 1rem)",
+      }}
+    >
       <Section>
-        <Space size="08" />
         <Grid>
           <Grid.Item colSpan="4">
+            <div className="msrd-NewIdentity-image">
+              <Image
+                alt=""
+                height="216"
+                src="https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740479244/type-color-01_jkrcrd.jpg"
+                width="384"
+              />
+            </div>
+            <Space size="06" />
             <Rule />
             <Space size="06" />
             <p style={{ maxWidth: "20em" }}>
-              But James suggested we look at more timeless and classic
-              alternatives. We ended up taking his advice on styling headlines:
-              Instead of going bolder as they get larger, we reduced the weight
+              We took James’s advice on styling headlines: no Inter Display, and
+              instead of going bolder as they get larger, we reduced the weight
               for a calmer and, dare we say, more premium feel.
             </p>
             <Space />
           </Grid.Item>
           <Grid.Item colSpan="4">
+            <div className="msrd-NewIdentity-image">
+              <Image
+                alt=""
+                height="216"
+                src="https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740479538/type-color-02_dstt5m.jpg"
+                width="384"
+              />
+            </div>
+            <Space size="06" />
             <Rule />
             <Space size="06" />
             <p style={{ maxWidth: "20em" }}>
-              We built a complete palette incorporating a range of blues and
-              other colours using our colour method, which gives a range of
-              options for creative purposes while keeping accessibility firmly
-              in mind. Blue was already a supporting brand colour, but James
-              encouraged us to lean into the new range of blues as the primary
+              We built a colour palette with a range of blues and other colours,
+              giving us options to play with while prioritising accessibility.
+              James encouraged us to lean into the new blues as the primary
               expression.
             </p>
             <Space />
           </Grid.Item>
           <Grid.Item colSpan="4">
+            <div className="msrd-NewIdentity-image">
+              <Image
+                alt=""
+                height="216"
+                src="https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740479538/type-color-03_qa15ri.jpg"
+                width="384"
+              />
+            </div>
+            <Space size="06" />
             <Rule />
             <Space size="06" />
             <p style={{ maxWidth: "20em" }}>
-              We also carefully considered background patterns and other design
+              We carefully considered background patterns and other design
               elements, which all derive from the corner shape and principles of
               the identity.
             </p>
@@ -192,7 +291,17 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
         </Grid>
         <Space size="08" />
         <Grid>
-          <Grid.Item colSpan="5" colStart="7">
+          <Grid.Item colSpan="7" colSpanNarrow="6">
+            <div className="msrd-NewIdentity-imageLarge">
+              <Image
+                alt=""
+                height="618"
+                src="https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740401216/site/new-identity-01_wi2cl6.jpg"
+                width="618"
+              />
+            </div>
+          </Grid.Item>
+          <Grid.Item align="center" colSpan="5">
             <Heading level="2" size="2">
               Where next?
             </Heading>
@@ -221,63 +330,55 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
         <Space size="08" />
       </Section>
     </div>
-    <Section>
-      <Space size="08" />
-      <Heading align="center" level="2" size="2">
-        Visual identity tips
-      </Heading>
-      <Space />
-      <p className="msrd-NewIdentity-callout" style={{ maxWidth: "35em" }}>
-        To wrap up, here are few tips to consider if you’re embarking on a
-        visual identity refresh for your brand. These are things that worked
-        well for us.
-      </p>
-      <Space size="08" />
-      <Grid>
-        <Grid.Item colSpan="9" colStart="2">
-          <Heading level="3" size="3">
-            Start with a tone exercise
-          </Heading>
-          <Space size="04" />
-          <p>
-            Ask your team to describe your brand and what sets it apart from
-            competitors. Words like “calm” and “intentional” emerged from our
-            exercise, and became guiding principles for the design.
-          </p>
-          <Space size="08" />
-          <Heading level="3" size="3">
-            Write a strong brief
-          </Heading>
-          <Space size="04" />
-          <p>
-            Spend time crafting a clear, detailed brief before bringing in a
-            designer. This helps you get the most from their expertise and keeps
-            the process focused.
-          </p>
-          <Space size="08" />
-          <Heading level="3" size="3">
-            Look beyond competitors
-          </Heading>
-          <Space size="04" />
-          <p>
-            While it’s helpful to look at what your competitors are doing, don’t
-            be afraid to draw inspiration from brands you admire in different
-            industries. We looked at companies like Vercel and Stripe.
-          </p>
-          <Space size="08" />
-          <Heading level="3" size="3">
-            Collaborate across disciplines
-          </Heading>
-          <Space size="04" />
-          <p>
-            Bringing together design and content early in the process was key
-            for us. It helped us tackle the communication problem from multiple
-            angles and create a cohesive result.
-          </p>
-        </Grid.Item>
-      </Grid>
-      <Space size="08" />
-    </Section>
+    <div
+      style={{
+        backgroundColor: "var(--color-background)",
+      }}
+    >
+      <Section>
+        <Space size="08" />
+        <Heading align="center" level="2" size="2">
+          Visual identity tips
+        </Heading>
+        <Space />
+        <p className="msrd-NewIdentity-callout" style={{ maxWidth: "35em" }}>
+          To wrap up, here are few tips to consider if you’re embarking on a
+          visual identity refresh for your brand. These are things that worked
+          well for us.
+        </p>
+        <Space size="08" />
+        <Grid>
+          <Grid.Item colSpan="10" colSpanNarrow="10">
+            <Tip
+              title="Start with a tone exercise"
+              description="Ask your team to describe your brand and what sets it apart from competitors. Words like calm and intentional emerged from our exercise, and became guiding principles for the design."
+              image="v1740442512/tip-02_ic13xj.jpg"
+            />
+            <Space size="08" />
+            <Tip
+              title="Write a strong brief"
+              description="Spend time crafting a clear, detailed brief before bringing in a designer. This helps you get the most from their expertise and keeps the process focused."
+              image="v1740442417/tip-02_ic13xj.jpg"
+            />
+            <Space size="08" />
+            <Tip
+              title="Look beyond competitors"
+              description="While it’s helpful to look at what your competitors are doing, don’t be afraid to draw inspiration from brands you admire in different industries. We looked at companies like Vercel and Stripe."
+              image="v1740442605/tip-03_xveqbg.jpg"
+            />
+            <Space size="08" />
+            <Tip
+              title="Collaborate across disciplines"
+              description="Bringing together design and content early in the process was key for us. It helped us tackle the communication problem from multiple angles and create a cohesive result."
+              image="v1740442606/tip-04_stdstl.jpg"
+            />
+          </Grid.Item>
+        </Grid>
+        <Space size="08" />
+        <Contact />
+        <Space size="08" />
+      </Section>
+    </div>
     <Space size="09" />
   </div>
 );

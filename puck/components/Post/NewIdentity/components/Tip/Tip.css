@@ -1,0 +1,49 @@
+.msrd .msrd-NewIdentityTip {
+  --image-size: 119px;
+  align-items: center;
+  display: grid;
+  gap: var(--space-vertical) var(--space-horizontal-06);
+  grid-template-columns: var(--image-size) 1fr;
+  grid-template-rows: auto auto;
+
+  @media (min-width: 48em) {
+    align-items: start;
+    gap: 0 var(--space-horizontal-08);
+    grid-template-rows: calc(var(--image-size) / 2) minmax(
+        calc(var(--image-size) / 2),
+        auto
+      );
+  }
+
+  @media (min-width: 80.25em) {
+    column-gap: var(--space-horizontal-10);
+    margin-left: var(--space-horizontal);
+  }
+}
+
+.msrd .msrd-NewIdentityTip-image {
+  border-radius: calc(var(--image-size) * var(--corner-ratio-square));
+  box-shadow: var(--box-shadow-light-source);
+}
+
+.msrd .msrd-NewIdentityTip-image img {
+  border-radius: calc(var(--image-size) * var(--corner-ratio-square));
+  box-shadow: var(--box-shadow);
+}
+
+.msrd .msrd-NewIdentityTip h3 {
+  max-width: 9em;
+
+  @media (min-width: 48em) {
+    max-width: 100%;
+  }
+}
+
+.msrd p.msrd-NewIdentityTip-description {
+  grid-column: span 2;
+
+  @media (min-width: 48em) {
+    grid-column-start: 2;
+    max-width: 100% !important;
+  }
+}

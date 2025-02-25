@@ -1,0 +1,240 @@
+.msrd .msrd-NewIdentityProcess {
+  --border-offset: calc((7 / 16) * 1rem);
+  --border-radius: calc((32 / 16) * 1rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light-source);
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+  max-width: calc((705 / 16) * 1rem);
+  position: relative;
+  width: 100%;
+}
+
+.msrd .msrd-NewIdentityProcess-inner {
+  --box-shadow: 0.125rem 0.125rem 1rem
+    color-mix(in srgb, var(--color-black) 08%, transparent);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-vertical-09) var(--space-horizontal-07)
+    var(--space-vertical-03) var(--space-horizontal-05);
+  width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    --box-shadow: 0.125rem 0.125rem 0.25rem
+      color-mix(in srgb, var(--color-black) 92%, transparent);
+  }
+}
+
+.msrd .msrd-NewIdentityProcess::after {
+  border: solid calc((2 / 16) * 1rem) var(--color-azure-07);
+  border-radius: var(--border-radius);
+  bottom: var(--border-offset);
+  content: "";
+  left: calc(0rem - var(--border-offset));
+  pointer-events: none;
+  position: absolute;
+  right: var(--border-offset);
+  top: calc(0rem - var(--border-offset));
+  transition: 0.05s var(--easing-cubic-bezier-easy-ease);
+}
+
+.msrd .msrd-NewIdentityProcess-dots {
+  align-items: center;
+  display: flex;
+  height: var(--space-horizontal-05);
+  justify-content: space-between;
+  left: var(--space-horizontal-06);
+  position: absolute;
+  top: var(--space-horizontal-06);
+  width: var(--space-horizontal-11);
+}
+
+.msrd .msrd-NewIdentityProcess-dots::before,
+.msrd .msrd-NewIdentityProcess-dots::after,
+.msrd .msrd-NewIdentityProcess-dotsInner {
+  background-color: var(--color-azure-07);
+  border-radius: 50%;
+  content: "";
+  height: var(--space-horizontal-05);
+  width: var(--space-horizontal-05);
+}
+
+.msrd .msrd-NewIdentityProcess-steps {
+  font-size: var(--font-01-size);
+  line-height: var(--font-01-line-height);
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+  position: relative;
+}
+
+.msrd .msrd-NewIdentityProcess-start {
+  align-items: center;
+  display: flex;
+  gap: var(--space-horizontal-04);
+  margin-bottom: var(--space-vertical-06);
+  margin-left: var(--space-horizontal-06);
+  position: relative;
+}
+
+.msrd .msrd-NewIdentityProcess-start :first-child {
+  order: 2;
+}
+
+.msrd .msrd-NewIdentityProcess-card {
+  background-color: var(--color-azure-07);
+  border-radius: var(--border-radius-card);
+  color: var(--color-grey-02);
+  margin-bottom: var(--space-vertical-06);
+  max-width: 100%;
+  padding: var(--space-vertical-04);
+  position: relative;
+}
+
+.msrd .msrd-NewIdentityProcess-card:nth-child(2) {
+  width: calc((330 / 16) * 1rem);
+}
+
+.msrd .msrd-NewIdentityProcess-card:nth-child(3) {
+  width: calc((224 / 16) * 1rem);
+}
+
+.msrd .msrd-NewIdentityProcess-card:nth-child(4) {
+  width: calc((240 / 16) * 1rem);
+}
+
+.msrd .msrd-NewIdentityProcess-card:nth-child(5) {
+  width: calc((216 / 16) * 1rem);
+}
+
+.msrd .msrd-NewIdentityProcess-card:nth-child(6) {
+  background-color: var(--color-azure-04);
+  color: var(--color-white);
+  width: calc((280 / 16) * 1rem);
+}
+
+.msrd .msrd-NewIdentityProcess-start::after,
+.msrd .msrd-NewIdentityProcess-card::after {
+  background-image: radial-gradient(var(--color-azure-10) 2px, transparent 0);
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: 10px 10px;
+  bottom: -36px;
+  content: "";
+  height: 36px;
+  left: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.msrd .msrd-NewIdentityProcess-card::after {
+  left: 34px;
+}
+
+.msrd .msrd-NewIdentityProcess-card:nth-child(6)::after {
+  content: none;
+}
+
+.msrd .msrd-NewIdentityProcess-heading {
+  font-size: var(--font-01-size);
+  font-weight: 550;
+  line-height: var(--font-01-line-height);
+  margin-bottom: var(--space-vertical-03);
+  margin-top: 0;
+}
+
+.msrd .msrd-NewIdentityProcess-cardInner {
+  align-items: start;
+  display: flex;
+  gap: var(--space-horizontal);
+}
+
+.msrd .msrd-NewIdentityProcess-button {
+  border: calc((2 / 16) * 1rem) solid var(--color-grey-02);
+  border-radius: var(--border-radius-button);
+  color: var(--color-grey-02);
+  display: block;
+  font-weight: 450;
+  padding: var(--space-vertical-01) var(--space-horizontal-05);
+  transition: 0.1s var(--easing-cubic-bezier-easy-ease);
+  white-space: nowrap;
+  width: min-content;
+}
+
+.msrd .msrd-NewIdentityProcess-button:focus {
+  outline-color: var(--color-azure-01);
+}
+
+@media (hover: hover) {
+  .msrd .msrd-NewIdentityProcess-button:hover {
+    background: rgba(0, 0, 0, 0.055);
+    transition: 0.1s background-color var(--easing-cubic-bezier-easy-ease);
+  }
+}
+
+.msrd .msrd-NewIdentityProcess-button:active {
+  background: rgba(0, 0, 0, 0.11);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-NewIdentityProcess {
+    min-height: calc((780 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-inner {
+    background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1741341203/site/process-dots_uxq3qy.png);
+    background-origin: content-box;
+    background-position-x: calc((150 / 16) * 1rem);
+    background-position-y: calc((47 / 16) * 1rem);
+    background-repeat: no-repeat;
+    background-size: calc((432 / 16) * 1rem) calc((560 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-start {
+    left: calc((8 / 16) * 1rem);
+    position: absolute;
+    top: calc((32 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-start :first-child {
+    order: inherit;
+  }
+
+  .msrd .msrd-NewIdentityProcess-card {
+    position: absolute;
+  }
+
+  .msrd .msrd-NewIdentityProcess-card:nth-child(2) {
+    right: calc((48 / 16) * 1rem);
+    top: calc((8 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-card:nth-child(3) {
+    left: calc((16 / 16) * 1rem);
+    top: calc((104 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-card:nth-child(4) {
+    left: calc((124 / 16) * 1rem);
+    top: calc((286 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-card:nth-child(5) {
+    right: calc((16 / 16) * 1rem);
+    top: calc((509 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-card:nth-child(6) {
+    left: calc((57 / 16) * 1rem);
+    top: calc((545 / 16) * 1rem);
+  }
+
+  .msrd .msrd-NewIdentityProcess-start::after,
+  .msrd .msrd-NewIdentityProcess-card::after {
+    content: none;
+  }
+}

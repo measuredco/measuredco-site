@@ -1,30 +1,35 @@
-.msrd .msrd-NewIdentity p {
-  font-size: var(--font-03-size);
-  line-height: var(--font-03-line-height);
-  margin: 0;
-  max-width: 35em;
-  text-wrap: pretty;
+/**
+ * NewIdentity base
+ */
+
+.msrd:has(.msrd-NewIdentity) {
+  background-color: var(--color-background-emphasis);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-background);
+    background-image: linear-gradient(
+      var(--color-background-emphasis),
+      var(--color-background-emphasis)
+    );
+  }
 }
 
-.msrd p.msrd-NewIdentity-callout {
-  margin: 0 auto;
-  max-width: 46em;
-  text-align: center;
+@media (hover: hover) {
+  .msrd .msrd-NewIdentity a:not([class]):hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.09em;
+    text-underline-offset: 0.34em;
+  }
 }
 
-.msrd p.msrd-NewIdentity-standfirst {
-  font-size: var(--font-05-size);
-  font-style: italic;
-  font-weight: 400;
-  line-height: var(--font-05-line-height);
-  margin: 0 auto;
-  max-width: 38em;
-  text-align: center;
-}
+/**
+ * NewIdentity surfaces
+ */
 
 .msrd .msrd-NewIdentity-surfaceDark {
   --color-background: var(--color-azure-04);
   --color-text: var(--color-white);
+  --color-text-muted: hotpink;
   background-color: var(--color-background);
   color: var(--color-text);
 }
@@ -41,10 +46,8 @@
   font-size: var(--font-04-size);
   font-weight: 500;
   line-height: var(--font-04-line-height);
-}
 
-@media (prefers-color-scheme: dark) {
-  .msrd .msrd-NewIdentity-surfaceLight {
+  @media (prefers-color-scheme: dark) {
     --color-text: var(--color-grey-01);
     --color-interactive: var(--color-white);
     --color-interactive-hover: color-mix(
@@ -57,13 +60,129 @@
       var(--color-white) 88%,
       transparent
     );
-    /* font-size: var(--font-03-size);
-    font-weight: 400;
-    line-height: var(--font-03-line-height); */
   }
 }
 
+/**
+ * NewIdentity images
+ */
+
+.msrd .msrd-NewIdentity-image,
+.msrd .msrd-NewIdentity-imageLarge {
+  --border-radius: calc((8 / 16) * 1rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light-source);
+  display: inline-block;
+  line-height: 0;
+}
+
+.msrd .msrd-NewIdentity-imageLarge {
+  --border-radius: calc((30 / 16) * 1rem);
+}
+
+.msrd .msrd-NewIdentity-image img,
+.msrd .msrd-NewIdentity-imageLarge img {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/**
+ * NewIdentity paragraphs
+ */
+
+.msrd .msrd-NewIdentity p:not(.msrd-Paragraph) {
+  font-size: var(--font-03-size);
+  line-height: var(--font-03-line-height);
+  margin: 0;
+  max-width: 35em;
+  text-wrap: pretty;
+}
+
+.msrd .msrd-NewIdentity p.msrd-NewIdentity-callout {
+  margin: 0 auto;
+  max-width: 46em;
+  text-align: center;
+}
+
+.msrd .msrd-NewIdentity p.msrd-NewIdentity-standfirst {
+  font-size: var(--font-05-size);
+  font-style: italic;
+  font-weight: 400;
+  line-height: var(--font-05-line-height);
+  margin: 0 auto;
+  max-width: 38em;
+  text-align: center;
+}
+
 .msrd .msrd-NewIdentity-surfaceLight .msrd-NewIdentity-callout {
-  font-size: inherit;
-  line-height: inherit;
+  font-size: calc((18.66 / 16) * 1rem) !important;
+}
+
+/**
+ * NewIdentity utilities
+ */
+
+.msrd .msrd-u-NewIdentity-hiddenMobile {
+  display: none;
+
+  @media (min-width: 48em) {
+    display: block;
+  }
+}
+
+/**
+ * NewIdentity hero
+ */
+
+.msrd .msrd-NewIdentity-hero {
+  overflow: hidden;
+  position: relative;
+}
+
+.msrd .msrd-NewIdentity-hero::before {
+  background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png);
+  background-position: 100% top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @media (min-width: 48em) {
+    background-position: initial;
+    bottom: -4%;
+    left: 53.5%;
+  }
+
+  @media (min-width: 53em) {
+    bottom: 0;
+  }
+
+  @media (min-width: 60em) {
+    left: 63%;
+  }
+
+  @media (min-width: 121.75em) {
+    background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png), linear-gradient(to right, transparent 75%, var(--color-azure-03) 75%);
+  }
+}
+
+/**
+ * NewIdentity process
+ */
+
+.msrd .msrd-NewIdentity-process {
+  margin-bottom: var(--space-vertical);
+
+  @media (min-width: 50em) {
+    margin-bottom: var(--space-vertical-07);
+  }
+
+  @media (min-width: 80em) {
+    margin-bottom: 0;
+    max-width: 28.1875em;
+  }
 }
