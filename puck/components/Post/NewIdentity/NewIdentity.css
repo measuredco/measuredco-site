@@ -1,4 +1,16 @@
-.msrd .msrd-NewIdentity p {
+.msrd:has(.msrd-NewIdentity) {
+  background-color: var(--color-background-emphasis);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-background);
+    background-image: linear-gradient(
+      var(--color-background-emphasis),
+      var(--color-background-emphasis)
+    );
+  }
+}
+
+.msrd .msrd-NewIdentity p:not(.msrd-Paragraph) {
   font-size: var(--font-03-size);
   line-height: var(--font-03-line-height);
   margin: 0;
@@ -6,13 +18,13 @@
   text-wrap: pretty;
 }
 
-.msrd p.msrd-NewIdentity-callout {
+.msrd .msrd-NewIdentity p.msrd-NewIdentity-callout {
   margin: 0 auto;
   max-width: 46em;
   text-align: center;
 }
 
-.msrd p.msrd-NewIdentity-standfirst {
+.msrd .msrd-NewIdentity p.msrd-NewIdentity-standfirst {
   font-size: var(--font-05-size);
   font-style: italic;
   font-weight: 400;
@@ -25,6 +37,7 @@
 .msrd .msrd-NewIdentity-surfaceDark {
   --color-background: var(--color-azure-04);
   --color-text: var(--color-white);
+  --color-text-muted: hotpink;
   background-color: var(--color-background);
   color: var(--color-text);
 }
@@ -41,10 +54,8 @@
   font-size: var(--font-04-size);
   font-weight: 500;
   line-height: var(--font-04-line-height);
-}
 
-@media (prefers-color-scheme: dark) {
-  .msrd .msrd-NewIdentity-surfaceLight {
+  @media (prefers-color-scheme: dark) {
     --color-text: var(--color-grey-01);
     --color-interactive: var(--color-white);
     --color-interactive-hover: color-mix(
@@ -57,13 +68,68 @@
       var(--color-white) 88%,
       transparent
     );
-    /* font-size: var(--font-03-size);
-    font-weight: 400;
-    line-height: var(--font-03-line-height); */
   }
 }
 
 .msrd .msrd-NewIdentity-surfaceLight .msrd-NewIdentity-callout {
   font-size: inherit;
   line-height: inherit;
+}
+
+.msrd .msrd-NewIdentity-imageWrapper {
+  --border-radius: calc((8 / 16) * 1rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light-source);
+  display: inline-block;
+  line-height: 0;
+}
+
+.msrd .msrd-NewIdentity-imageWrapper--large {
+  --border-radius: calc((30 / 16) * 1rem);
+}
+
+.msrd .msrd-NewIdentity-image {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.msrd .msrd-NewIdentity-hiddenMobile {
+  color: var(--color-azure-08);
+  display: none;
+
+  @media (min-width: 48em) {
+    display: block;
+  }
+}
+
+.msrd .msrd-NewIdentity-hero {
+  overflow: hidden;
+  position: relative;
+}
+
+.msrd .msrd-NewIdentity-hero::before {
+  background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png);
+  background-position: 100% top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @media (min-width: 48em) {
+    background-position: initial;
+    bottom: -4%;
+    left: 53.5%;
+  }
+
+  @media (min-width: 53em) {
+    bottom: 0;
+  }
+
+  @media (min-width: 60em) {
+    left: 63%;
+  }
 }
