@@ -72,7 +72,7 @@
 
 .msrd .msrd-Heading--1 {
   font-size: var(--font-09-size);
-  font-weight: 400;
+  font-weight: 366;
   line-height: var(--font-09-line-height);
 }
 
@@ -85,7 +85,7 @@
 
 .msrd .msrd-Heading--display3 {
   font-size: var(--font-10-size);
-  font-weight: 400;
+  font-weight: 300;
   line-height: var(--font-10-line-height);
 }
 
@@ -98,7 +98,7 @@
 
 .msrd .msrd-Heading--display2 {
   font-size: var(--font-11-size);
-  font-weight: 400;
+  font-weight: 250;
   line-height: var(--font-11-line-height);
 }
 
