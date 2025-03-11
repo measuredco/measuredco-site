@@ -64,11 +64,14 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
       <Section>
         <Space size="08" />
         <p className="msrd-NewIdentity-standfirst">
-          Like the <a href="/">cobbler’s children</a> our visual identity had
-          been somewhat neglected. When we founded Measured we quickly put
-          together a nascent visual identity. It wasn’t terrible, but we always
-          knew that the branding, and by dint our website, didn’t reflect who we
-          are, or the quality of work we deliver.
+          Like the{" "}
+          <a href="https://clearleft.com/thinking/the-cobblers-children-have-no-shoes">
+            cobbler’s children
+          </a>{" "}
+          our visual identity had been somewhat neglected. When we founded
+          Measured we quickly put together a nascent visual identity. It wasn’t
+          terrible, but we always knew that the branding, and by dint our
+          website, didn’t reflect who we are, or the quality of work we deliver.
         </p>
       </Section>
       <Section width="full">
@@ -358,7 +361,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
             <Tip
               title="Write a strong brief"
               description="Spend time crafting a clear, detailed brief before bringing in a designer. This helps you get the most from their expertise and keeps the process focused."
-              image="v1740442417/tip-02_ic13xj.jpg"
+              image="v1741705447/tip-01_rsgttp.jpg"
             />
             <Space size="08" />
             <Tip
