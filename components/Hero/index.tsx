@@ -27,7 +27,7 @@ const Hero = ({ description, headingLevel, logos, strapline }: HeroProps) => {
       const hero = document.getElementsByClassName("msrd-Hero-inner")[0];
       const header = document.getElementsByClassName("msrd-SiteHeader")[0];
 
-      if (hero.scrollHeight <= window.innerHeight - header.scrollHeight * 2) {
+      if (hero?.scrollHeight <= window.innerHeight - header?.scrollHeight * 2) {
         setFullscreen(true);
       } else {
         setFullscreen(false);
