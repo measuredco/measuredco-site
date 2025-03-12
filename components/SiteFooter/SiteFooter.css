@@ -30,18 +30,42 @@
     justify-items: start;
   }
 
-  .msrd .msrd-SiteFooter-inner > :first-child,
+  .msrd .msrd-SiteFooter-inner > :first-child {
+    grid-column-end: span 2;
+  }
+
   .msrd .msrd-SiteFooter-inner > :nth-child(2) {
     grid-column-end: span 4;
   }
 
   .msrd .msrd-SiteFooter-inner > :nth-child(3) {
-    grid-column-end: span 2;
+    grid-column-end: span 4;
   }
 
   .msrd .msrd-SiteFooter-inner > :last-child {
     grid-column-end: span 2;
     justify-self: end;
+  }
+}
+
+@media (min-width: 53em) {
+  .msrd .msrd-SiteFooter-inner > :first-child  {
+    grid-column-end: span 3;
+  }
+
+  .msrd .msrd-SiteFooter-inner > :nth-child(3) {
+    grid-column-end: span 3;
+  }
+}
+
+@media (min-width: 76.25em) {
+  .msrd .msrd-SiteFooter-inner > :first-child,
+  .msrd .msrd-SiteFooter-inner > :nth-child(2)  {
+    grid-column-end: span 4;
+  }
+
+  .msrd .msrd-SiteFooter-inner > :nth-child(3) {
+    grid-column-end: span 2;
   }
 }
 

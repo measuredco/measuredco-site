@@ -90,6 +90,7 @@ const SiteFooter = () => (
         </ul>
       </div>
       <ul>
+        <li>Measured®</li>
         <li>
           <a href="https://www.iubenda.com/privacy-policy/24566196">
             Privacy policy
@@ -105,7 +106,9 @@ const SiteFooter = () => (
         <li>
           <a href="/contact">Get in touch</a>
         </li>
-        <li>Measured®</li>
+        <li>
+          <a href="/feed.xml">Subscribe via RSS feed</a>
+        </li>
       </ul>
       <div className="msrd-SiteFooter-logo">
         <a className="msrd-SiteFooter-logoLink" href="/">
