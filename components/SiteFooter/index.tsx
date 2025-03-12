@@ -107,7 +107,7 @@ const SiteFooter = () => (
           <a href="/contact">Get in touch</a>
         </li>
         <li>
-          <a href="/feed.xml">Subscribe via RSS feed</a>
+          <a href="/feed.atom">Subscribe via RSS feed</a>
         </li>
       </ul>
       <div className="msrd-SiteFooter-logo">
