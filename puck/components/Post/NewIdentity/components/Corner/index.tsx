@@ -9,7 +9,12 @@ interface CornerProps {}
 const Corner = ({}: CornerProps) => (
   <div className="msrd-NewIdentityCorner">
     <Grid>
-      <Grid.Item colSpan="4" colSpanNarrow="4" colStartNarrow="2">
+      <Grid.Item
+        align="center"
+        colSpan="4"
+        colSpanNarrow="5"
+        colStartNarrow="2"
+      >
         <div className="msrd-NewIdentityCorner-label">
           The small tile slice <br />
           The inner section of the corner creates the small tile slice with a
@@ -17,7 +22,7 @@ const Corner = ({}: CornerProps) => (
           be scaled proportionally.
         </div>
       </Grid.Item>
-      <Grid.Item align="end" colSpan="4" colSpanNarrow="4" rowStart="2">
+      <Grid.Item colSpan="4" colSpanNarrow="4" rowStart="2">
         <Image
           alt=""
           height="220"
@@ -43,7 +48,7 @@ const Corner = ({}: CornerProps) => (
           </div>
         </div>
       </Grid.Item>
-      <Grid.Item colSpan="6" colSpanNarrow="8" colStart="4" colStartNarrow="2">
+      <Grid.Item colSpan="12">
         <Space />
         <p className="msrd-NewIdentityCorner-description">
           The corner is the foundation of the Measured identity and visual

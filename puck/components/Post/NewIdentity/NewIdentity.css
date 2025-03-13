@@ -84,6 +84,7 @@
 .msrd .msrd-NewIdentity-imageLarge img {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
+  margin: 0 auto;
 }
 
 /**
@@ -166,7 +167,39 @@
   }
 
   @media (min-width: 121.75em) {
-    background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png), linear-gradient(to right, transparent 75%, var(--color-azure-03) 75%);
+    background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png),
+      linear-gradient(to right, transparent 75%, var(--color-azure-03) 75%);
+  }
+}
+
+/**
+ * NewIdentity next
+ */
+
+.msrd .msrd-NewIdentity-next {
+  padding-right: var(--space-horizontal);
+
+  @media (min-width: 80em) {
+    padding-right: 0;
+  }
+}
+
+/**
+ * NewIdentity offset
+ */
+
+.msrd .msrd-NewIdentity-offset {
+  margin-top: var(--space-vertical-07);
+
+  @media (min-width: 50em) {
+    margin-top: var(--space-vertical-08);
+  }
+
+  @media (min-width: 80em) {
+    margin-bottom: calc((-108 / 16) * 1rem);
+    margin-top: 0;
+    position: relative;
+    top: calc((-108 / 16) * 1rem);
   }
 }
 
@@ -176,6 +209,9 @@
 
 .msrd .msrd-NewIdentity-process {
   margin-bottom: var(--space-vertical);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc((705 / 16) * 1rem);
 
   @media (min-width: 50em) {
     margin-bottom: var(--space-vertical-07);

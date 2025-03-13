@@ -1,6 +1,11 @@
 .msrd .msrd-NewIdentityCorner {
-  margin: 0 auto;
-  max-width: calc((1010 / 16) * 1rem);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc((414 / 16) * 1rem);
+
+  @media (min-width: 48em) {
+    max-width: calc((844 / 16) * 1rem);
+  }
 
   @media (min-width: 80em) {
     max-width: 100%;
@@ -26,19 +31,14 @@
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740598113/site/large-tile_ezwhgy.png);
   background-size: cover;
   display: flex;
-  max-width: calc((412 / 16) * 1rem);
+  max-width: calc((414 / 16) * 1rem);
   padding: var(--space-horizontal-07);
 }
 
-.msrd
-  .msrd-NewIdentityCorner
-  p.msrd-NewIdentityCorner-description:not(foo) {
+.msrd .msrd-NewIdentityCorner p.msrd-NewIdentityCorner-description:not(foo) {
   font-size: var(--font-01-size);
   line-height: var(--font-01-line-height);
+  margin: 0 auto;
   max-width: 36em;
-
-  @media (min-width: 80em) {
-    margin: 0 auto;
-    text-align: center;
-  }
+  text-align: center;
 }

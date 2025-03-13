@@ -140,6 +140,12 @@
     .msrd .msrd-GridItem--colStartNarrow12 {
       grid-column-start: 12;
     }
+    /**
+     * TODO: Move this to rowStartNarrow
+     */
+    .msrd .msrd-GridItem--rowStart1 {
+      grid-row-start: 1;
+    }
   }
 
   @media (min-width: 80em) {

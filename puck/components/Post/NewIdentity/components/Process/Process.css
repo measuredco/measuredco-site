@@ -6,6 +6,7 @@
   display: flex;
   height: 100%;
   margin-left: auto;
+  margin-right: auto;
   max-width: calc((705 / 16) * 1rem);
   position: relative;
   width: 100%;
@@ -76,13 +77,12 @@
   align-items: center;
   display: flex;
   gap: var(--space-horizontal-04);
+  left: calc((-62 / 16) * 1rem);
   margin-bottom: var(--space-vertical-06);
-  margin-left: var(--space-horizontal-06);
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-}
-
-.msrd .msrd-NewIdentityProcess-start :first-child {
-  order: 2;
+  width: calc((146 / 16) * 1rem);
 }
 
 .msrd .msrd-NewIdentityProcess-card {
@@ -90,6 +90,8 @@
   border-radius: var(--border-radius-card);
   color: var(--color-grey-02);
   margin-bottom: var(--space-vertical-06);
+  margin-left: auto;
+  margin-right: auto;
   max-width: 100%;
   padding: var(--space-vertical-04);
   position: relative;
@@ -122,17 +124,18 @@
   background-image: radial-gradient(var(--color-azure-10) 2px, transparent 0);
   background-position: center;
   background-repeat: repeat-y;
-  background-size: 10px 10px;
-  bottom: -36px;
+  background-size: calc((10 / 16) * 1rem) calc((10 / 16) * 1rem);
+  bottom: calc((-36 / 16) * 1rem);
   content: "";
-  height: 36px;
-  left: 10px;
+  height: calc((36 / 16) * 1rem);
   position: absolute;
-  width: 10px;
+  right: calc((10 / 16) * 1rem);
+  width: calc((10 / 16) * 1rem);
 }
 
 .msrd .msrd-NewIdentityProcess-card::after {
-  left: 34px;
+  left: 50%;
+  margin-left: calc((-10 / 16) * 1rem);
 }
 
 .msrd .msrd-NewIdentityProcess-card:nth-child(6)::after {
@@ -196,6 +199,7 @@
 
   .msrd .msrd-NewIdentityProcess-start {
     left: calc((8 / 16) * 1rem);
+    margin-left: var(--space-horizontal-06);
     position: absolute;
     top: calc((32 / 16) * 1rem);
   }

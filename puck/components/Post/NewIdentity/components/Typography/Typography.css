@@ -1,0 +1,29 @@
+.msrd .msrd-NewIdentityTypography {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc((630 / 16) * 1rem);
+  padding-bottom: var(--space-vertical);
+
+  @media (min-width: 48em) {
+    padding-bottom: var(--space-vertical-07);
+  }
+
+  @media (min-width: 50em) {
+    padding-bottom: var(--space-vertical-08);
+  }
+
+  @media (min-width: 80em) {
+    max-width: 100%;
+    padding-bottom: calc((168 / 16) * 1rem);
+  }
+}
+
+.msrd .msrd-NewIdentityTypography-heading {
+  @media (min-width: 80em) {
+    max-width: 12em;
+  }
+}
+
+.msrd .msrd-NewIdentityTypography-specimen {
+  color: var(--color-azure-08);
+}

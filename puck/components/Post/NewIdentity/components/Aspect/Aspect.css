@@ -1,0 +1,40 @@
+.msrd .msrd-NewIdentityAspect {
+  margin-bottom: var(--space-vertical);
+
+  @media (min-width: 48em) {
+    align-items: center;
+    display: flex;
+    gap: var(--space-horizontal-06);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc((704 / 16) * 1rem);
+  }
+
+  @media (min-width: 54em) {
+    max-width: calc((794 / 16) * 1rem);
+  }
+
+  @media (min-width: 80em) {
+    display: block;
+  }
+}
+
+.msrd :last-child > .msrd-NewIdentityAspect {
+  margin-bottom: 0;
+}
+
+.msrd .msrd-NewIdentityAspect-rule {
+  display: block;
+
+  @media (min-width: 48em) {
+    display: none;
+  }
+
+  @media (min-width: 80em) {
+    display: block;
+  }
+}
+
+.msrd .msrd-NewIdentityAspect p.msrd-NewIdentityAspect-description:not(foo) {
+  max-width: 20em;
+}
