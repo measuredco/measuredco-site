@@ -246,7 +246,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
               <p>
                 We’re pleased to finally have a brand that feels like us, so
                 thanks go to James for his excellent work. We’ll share more
-                about how implemented the new identity soon.
+                about how we implemented the new identity soon.
               </p>
             </div>
           </Grid.Item>
