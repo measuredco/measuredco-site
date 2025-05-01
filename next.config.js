@@ -8,6 +8,15 @@ module.exports = {
   },
   reactStrictMode: false,
   transpilePackages: [],
+  async redirects() {
+    return [
+      {
+        destination: "/blog/font-distribution-problems",
+        permanent: true,
+        source: "/blog/inter-problems",
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
