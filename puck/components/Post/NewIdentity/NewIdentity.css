@@ -169,6 +169,11 @@
   }
 }
 
+:dir(rtl) .msrd .msrd-NewIdentity-hero::before,
+.translated-rtl .msrd .msrd-NewIdentity-hero::before {
+  transform: scaleX(-1);
+}
+
 /**
  * NewIdentity next
  */
