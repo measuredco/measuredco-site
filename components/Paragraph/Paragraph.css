@@ -30,7 +30,7 @@
 }
 
 .msrd-Paragraph--left {
-  text-align: left;
+  text-align: start;
 }
 
 .msrd-Paragraph--center {
@@ -38,15 +38,15 @@
 }
 
 .msrd-Paragraph--right {
-  text-align: right;
+  text-align: end;
 }
 
 .msrd .msrd-Paragraph--measured {
-  max-width: var(--measured);
+  max-inline-size: var(--measured);
 }
 
 .msrd .msrd-Paragraph--measured.msrd-Paragraph--large {
-  max-width: calc(var(--measured) * 0.9);
+  max-inline-size: calc(var(--measured) * 0.9);
 }
 
 .msrd .msrd-Paragraph--muted {

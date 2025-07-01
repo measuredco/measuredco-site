@@ -4,12 +4,12 @@
 }
 
 .msrd .msrd-Markdown--measured {
-  max-width: var(--measured);
+  max-inline-size: var(--measured);
 }
 
 .msrd .msrd-Markdown--inline {
   font: inherit;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 @media (min-width: 48em) {
@@ -43,20 +43,19 @@
 }
 
 .msrd .msrd-Markdown blockquote {
-  margin-bottom: var(--space-vertical-05);
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
+  margin-block-end: var(--space-vertical-05);
+  margin-block-start: 0;
+  margin-inline: 0;
 }
 
 .msrd .msrd-Markdown blockquote p {
-  margin-bottom: 0;
+  margin-block-end: 0;
   quotes: "“" "”" "‘" "’";
 }
 
 .msrd .msrd-Markdown blockquote p:first-child::before {
   content: open-quote;
-  margin-left: -0.81ch;
+  margin-inline-start: -0.81ch;
 }
 
 .msrd .msrd-Markdown blockquote p:first-child::after {
@@ -64,14 +63,14 @@
 }
 
 .msrd .msrd-Markdown blockquote p + p {
-  margin-top: var(--space-vertical-05);
+  margin-block-start: var(--space-vertical-05);
 }
 
 .msrd .msrd-Markdown blockquote p + p:last-child {
   font-size: var(--font-02-size);
   line-height: var(--font-02-line-height);
-  margin-top: var(--space-vertical-03);
-  text-align: right;
+  margin-block-start: var(--space-vertical-03);
+  text-align: end;
 }
 
 @media (min-width: 48em) {
@@ -89,25 +88,25 @@
   font-feature-settings: normal;
   font-weight: inherit;
   line-height: inherit;
-  padding-bottom: 0.055em;
-  padding-left: var(--padding-x-code-inline);
-  padding-right: var(--padding-x-code-inline);
+  padding-block-end: 0.055em;
+  padding-inline-end: var(--padding-x-code-inline);
+  padding-inline-start: var(--padding-x-code-inline);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown p code {
-    padding-bottom: 0.2em;
+    padding-block-end: 0.2em;
   }
 }
 
 .msrd .msrd-Markdown code .gfm-color-chip {
   --chip-size: 0.6em;
+  block-size: var(--chip-size);
   border: var(--border-width) solid var(--color-background);
   border-radius: calc(var(--chip-size) * var(--corner-ratio-square));
   display: inline-block;
-  height: var(--chip-size);
-  margin-left: 0.25em;
-  width: var(--chip-size);
+  inline-size: var(--chip-size);
+  margin-inline-start: 0.25em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -125,13 +124,13 @@
 .msrd .msrd-Markdown pre::after {
   border: solid var(--border-width) var(--color-border-code);
   border-radius: var(--border-radius-card);
-  bottom: var(--border-offset-card);
   content: "";
-  left: calc(0rem - var(--border-offset-card));
+  inset-block-end: var(--border-offset-card);
+  inset-block-start: calc(0rem - var(--border-offset-card));
+  inset-inline-end: var(--border-offset-card);
+  inset-inline-start: calc(0rem - var(--border-offset-card));
   pointer-events: none;
   position: absolute;
-  right: var(--border-offset-card);
-  top: calc(0rem - var(--border-offset-card));
 }
 
 .msrd .msrd-Markdown pre code {
@@ -142,26 +141,26 @@
   font-feature-settings: normal;
   font-size: var(--font-02-size);
   font-weight: inherit;
+  inline-size: 100%;
   line-height: var(--font-02-line-height);
-  margin-bottom: var(--space-vertical);
+  margin-block-end: var(--space-vertical);
   overflow-x: auto;
   padding: var(--space-vertical);
   position: relative;
-  width: 100%;
 }
 
 .msrd .msrd-Markdown h6 {
   font-size: var(--font-02-size);
   font-weight: 533;
   line-height: var(--font-02-line-height);
-  margin-bottom: var(--space-vertical-03);
-  margin-top: var(--space-vertical);
+  margin-block-end: var(--space-vertical-03);
+  margin-block-start: var(--space-vertical);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h6 {
-    margin-bottom: var(--space-vertical);
-    margin-top: var(--space-vertical-06);
+    margin-block-end: var(--space-vertical);
+    margin-block-start: var(--space-vertical-06);
   }
 }
 
@@ -169,16 +168,16 @@
   font-size: var(--font-03-size);
   font-weight: 500;
   line-height: var(--font-03-line-height);
-  margin-bottom: var(--space-vertical-03);
-  margin-top: var(--space-vertical);
+  margin-block-end: var(--space-vertical-03);
+  margin-block-start: var(--space-vertical);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h5 {
     font-size: var(--font-04-size);
     line-height: var(--font-04-line-height);
-    margin-bottom: var(--space-vertical);
-    margin-top: var(--space-vertical-06);
+    margin-block-end: var(--space-vertical);
+    margin-block-start: var(--space-vertical-06);
   }
 }
 
@@ -186,16 +185,16 @@
   font-size: var(--font-04-size);
   font-weight: 466;
   line-height: var(--font-04-line-height);
-  margin-bottom: var(--space-vertical-03);
-  margin-top: var(--space-vertical);
+  margin-block-end: var(--space-vertical-03);
+  margin-block-start: var(--space-vertical);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h4 {
     font-size: var(--font-05-size);
     line-height: var(--font-05-line-height);
-    margin-bottom: var(--space-vertical);
-    margin-top: var(--space-vertical-06);
+    margin-block-end: var(--space-vertical);
+    margin-block-start: var(--space-vertical-06);
   }
 }
 
@@ -203,16 +202,16 @@
   font-size: var(--font-05-size);
   font-weight: 433;
   line-height: var(--font-05-line-height);
-  margin-bottom: var(--space-vertical-03);
-  margin-top: var(--space-vertical);
+  margin-block-end: var(--space-vertical-03);
+  margin-block-start: var(--space-vertical);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h3 {
     font-size: var(--font-06-size);
     line-height: var(--font-06-line-height);
-    margin-bottom: var(--space-vertical);
-    margin-top: var(--space-vertical-06);
+    margin-block-end: var(--space-vertical);
+    margin-block-start: var(--space-vertical-06);
   }
 }
 
@@ -220,16 +219,16 @@
   font-size: var(--font-07-size);
   font-weight: 400;
   line-height: var(--font-07-line-height);
-  margin-bottom: var(--space-vertical-03);
-  margin-top: var(--space-vertical);
+  margin-block-end: var(--space-vertical-03);
+  margin-block-start: var(--space-vertical);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h2 {
     font-size: var(--font-08-size);
     line-height: var(--font-08-line-height);
-    margin-bottom: var(--space-vertical);
-    margin-top: var(--space-vertical-06);
+    margin-block-end: var(--space-vertical);
+    margin-block-start: var(--space-vertical-06);
   }
 }
 
@@ -237,7 +236,7 @@
   font-size: var(--font-09-size);
   font-weight: 400;
   line-height: var(--font-09-line-height);
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 @media (min-width: 48em) {
@@ -252,19 +251,18 @@
 .msrd .msrd-Markdown h3 + h4,
 .msrd .msrd-Markdown h4 + h5,
 .msrd .msrd-Markdown h5 + h6 {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .msrd .msrd-Markdown hr {
   background-color: var(--color-brand);
+  block-size: var(--rule-height);
   border: 0;
   color: var(--color-border);
-  height: var(--rule-height);
-  margin-bottom: var(--space-vertical);
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  width: var(--rule-width);
+  inline-size: var(--rule-width);
+  margin-block-end: var(--space-vertical);
+  margin-block-start: 0;
+  margin-inline: 0;
 }
 
 .msrd .msrd-Markdown p:has(img) {
@@ -278,31 +276,31 @@
 
 .msrd .msrd-Markdown li {
   --bullet-space: 1.5em;
-  padding-left: var(--bullet-space);
+  padding-inline-start: var(--bullet-space);
   position: relative;
   word-wrap: break-word;
 }
 
 .msrd .msrd-Markdown li::before {
-  left: 0;
+  inline-size: var(--bullet-space);
+  inset-inline-start: 0;
   position: absolute;
   text-align: center;
-  width: var(--bullet-space);
 }
 
 .msrd .msrd-Markdown ol,
 .msrd .msrd-Markdown ul {
   list-style: none;
-  margin-bottom: var(--space-vertical);
-  margin-left: 0;
-  margin-top: 0;
-  padding-left: 0;
+  margin-block-end: var(--space-vertical);
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
 }
 
 @media (min-width: 80em) {
   .msrd .msrd-Markdown > ol,
   .msrd .msrd-Markdown > ul {
-    margin-left: calc(30rem / -16);
+    margin-inline-start: calc(30rem / -16);
   }
 }
 
@@ -316,18 +314,18 @@
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
   font-size: calc(13rem / 16);
+  inline-size: calc(27rem / 16);
   line-height: calc(27 / 13);
-  padding-right: calc(3rem / 16);
-  text-align: right;
-  width: calc(27rem / 16);
+  padding-inline-end: calc(3rem / 16);
+  text-align: end;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown ol > li::before {
     font-size: calc(14rem / 16);
+    inline-size: calc(30rem / 16);
     line-height: calc(36 / 14);
-    padding-right: calc(4rem / 16);
-    width: calc(30rem / 16);
+    padding-inline-end: calc(4rem / 16);
   }
 }
 
@@ -336,8 +334,8 @@
 }
 
 .msrd .msrd-Markdown p {
-  margin-bottom: var(--space-vertical);
-  margin-top: 0;
+  margin-block-end: var(--space-vertical);
+  margin-block-start: 0;
   word-wrap: break-word;
 }
 
@@ -352,9 +350,9 @@
   font-feature-settings: normal;
   font-size: var(--font-02-size);
   font-weight: inherit;
+  inline-size: 100%;
   line-height: var(--font-02-line-height);
-  margin-bottom: var(--space-vertical);
-  width: 100%;
+  margin-block-end: var(--space-vertical);
 }
 
 .msrd .msrd-Markdown tbody tr:nth-child(even) {
@@ -363,70 +361,66 @@
 
 .msrd .msrd-Markdown td,
 .msrd .msrd-Markdown th {
-  border: 1px solid var(--color-border);
-  padding-bottom: calc(5.5rem / 16);
-  padding-left: calc(15rem / 16);
-  padding-right: calc(15rem / 16);
-  padding-top: calc(5.5rem / 16);
+  border: calc(1rem / 16) solid var(--color-border);
+  padding-block: calc(5.5rem / 16);
+  padding-inline: calc(15rem / 16);
   vertical-align: middle;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown td,
   .msrd .msrd-Markdown th {
-    padding-bottom: calc(10rem / 16);
-    padding-left: calc(23rem / 16);
-    padding-right: calc(23rem / 16);
-    padding-top: calc(10rem / 16);
+    padding-block: calc(10rem / 16);
+    padding-inline: calc(23rem / 16);
   }
 }
 
 .msrd .msrd-Markdown #footnote-label {
+  block-size: calc(1rem / 16);
   border: 0;
   clip: rect(0, 0, 0, 0);
-  height: 1px;
+  inline-size: calc(1rem / 16);
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px;
   word-wrap: normal;
 }
 
 .msrd .msrd-Markdown #footnote-label + ol {
   font-size: var(--font-02-size);
   line-height: var(--font-02-line-height);
-  padding-top: var(--space-vertical-03);
+  padding-block-start: var(--space-vertical-03);
 }
 
 @media (min-width: 80em) {
   .msrd .msrd-Markdown #footnote-label + ol {
-    margin-left: calc(30rem / -16);
+    margin-inline-start: calc(30rem / -16);
   }
 }
 
 .msrd .msrd-Markdown #footnote-label + ol::before {
+  block-size: var(--rule-height);
   border: var(--border-width) solid var(--color-brand);
   content: "";
   display: block;
-  height: var(--rule-height);
-  margin-bottom: var(--space-vertical-06);
+  inline-size: var(--rule-width);
+  margin-block-end: var(--space-vertical-06);
   position: relative;
-  width: var(--rule-width);
 }
 
 @media (min-width: 80em) {
   .msrd .msrd-Markdown #footnote-label + ol::before {
-    left: calc(30rem / 16);
+    inset-inline-start: calc(30rem / 16);
   }
 }
 
 .msrd .msrd-Markdown #footnote-label + ol > li {
-  padding-left: calc(27rem / 16);
+  padding-inline-start: calc(27rem / 16);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown #footnote-label + ol > li {
-    padding-left: calc(30rem / 16);
+    padding-inline-start: calc(30rem / 16);
   }
 }
 
@@ -449,7 +443,7 @@
 }
 
 .msrd .msrd-Markdown .task-list-item {
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 
 .msrd .msrd-Markdown .task-list-item::before {
@@ -457,15 +451,15 @@
 }
 
 .msrd .msrd-Markdown > :first-child {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .msrd .msrd-Markdown > :last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .msrd .msrd-Markdown--left {
-  text-align: left;
+  text-align: start;
 }
 
 .msrd .msrd-Markdown--center {
@@ -473,5 +467,5 @@
 }
 
 .msrd .msrd-Markdown--right {
-  text-align: right;
+  text-align: end;
 }

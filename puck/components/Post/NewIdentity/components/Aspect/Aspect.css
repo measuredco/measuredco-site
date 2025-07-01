@@ -1,17 +1,16 @@
 .msrd .msrd-NewIdentityAspect {
-  margin-bottom: var(--space-vertical);
+  margin-block-end: var(--space-vertical);
 
   @media (min-width: 48em) {
     align-items: center;
     display: flex;
     gap: var(--space-horizontal-06);
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc((704 / 16) * 1rem);
+    margin-inline: auto;
+    max-inline-size: calc((704 / 16) * 1rem);
   }
 
   @media (min-width: 54em) {
-    max-width: calc((794 / 16) * 1rem);
+    max-inline-size: calc((794 / 16) * 1rem);
   }
 
   @media (min-width: 80em) {
@@ -20,7 +19,7 @@
 }
 
 .msrd :last-child > .msrd-NewIdentityAspect {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .msrd .msrd-NewIdentityAspect-rule {
@@ -36,5 +35,5 @@
 }
 
 .msrd .msrd-NewIdentityAspect p.msrd-NewIdentityAspect-description:not(foo) {
-  max-width: 20em;
+  max-inline-size: 20em;
 }

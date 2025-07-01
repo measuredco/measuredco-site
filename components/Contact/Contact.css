@@ -3,14 +3,12 @@
 }
 
 .msrd .msrd-Contact-rule {
-  margin-bottom: var(--space-vertical-04);
-  margin-top: var(--space-vertical-04);
+  margin-block: var(--space-vertical-04);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Contact-rule {
-    margin-bottom: var(--space-vertical);
-    margin-top: var(--space-vertical);
+    margin-block: var(--space-vertical);
   }
 }
 

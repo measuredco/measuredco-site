@@ -90,7 +90,9 @@ const SiteFooter = () => (
         </ul>
       </div>
       <ul>
-        <li>Measured®</li>
+        <li>
+          <span translate="no">Measured</span>®
+        </li>
         <li>
           <a href="https://www.iubenda.com/privacy-policy/24566196">
             Privacy policy
@@ -111,7 +113,7 @@ const SiteFooter = () => (
         </li>
       </ul>
       <div className="msrd-SiteFooter-logo">
-        <a className="msrd-SiteFooter-logoLink" href="/">
+        <a className="msrd-SiteFooter-logoLink" href="/" translate="no">
           <svg
             aria-labelledby="measured"
             role="img"

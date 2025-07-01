@@ -1,7 +1,7 @@
 .msrd .msrd-Grid {
   display: grid;
-  grid-template-columns: 1fr;
   grid-gap: var(--space-vertical) var(--space-horizontal);
+  grid-template-columns: 1fr;
 }
 
 .msrd [data-puck-component] > .msrd-Grid {
@@ -9,7 +9,7 @@
 }
 
 .msrd [data-puck-component] .msrd-GridItem {
-  border-bottom: 40px solid hotpink
+  border-block-end: calc(40rem / 16) solid hotpink;
 }
 
 .msrd .msrd-Grid--gapNone {
@@ -33,13 +33,13 @@
 }
 
 .msrd .msrd-GridItem {
-  margin-bottom: var(--space-vertical);
+  margin-block-end: var(--space-vertical);
+  min-inline-size: calc(87rem / 16);
   position: relative;
-  min-width: 87px;
 }
 
 .msrd .msrd-GridItem:last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .msrd .msrd-GridItem--alignCenter {
@@ -60,7 +60,7 @@
 
 @supports (display: grid) {
   .msrd .msrd-GridItem {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   @media (min-width: 48em) {
@@ -304,14 +304,11 @@
 .msrd .msrd-GridItem--debugVisible::before {
   align-items: center;
   background-color: color-mix(in srgb, hotpink 50%, transparent);
-  bottom: 0;
   content: "Item";
   display: flex;
+  inset: 0;
   justify-content: center;
-  left: 0;
-  outline: 1px dashed hotpink;
-  outline-offset: -1px;
+  outline: calc(1rem / 16) dashed hotpink;
+  outline-offset: calc(-1rem / 16);
   position: absolute;
-  right: 0;
-  top: 0;
 }

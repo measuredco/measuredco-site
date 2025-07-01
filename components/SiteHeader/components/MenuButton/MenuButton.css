@@ -4,10 +4,10 @@
   color: inherit;
   cursor: pointer;
   display: block;
+  inset-inline-end: calc(-10rem / 16);
   overflow: visible;
-  padding: 10px;
+  padding: calc(10rem / 16);
   position: relative;
-  right: -10px;
 }
 
 @media (prefers-reduced-motion) {
@@ -36,25 +36,25 @@
 }
 
 .msrd .msrd-SiteHeaderMenuButton-box {
+  block-size: calc(24rem / 16);
   display: block;
-  height: 24px;
+  inline-size: calc(24rem / 16);
   position: relative;
-  width: 24px;
 }
 
 .msrd .msrd-SiteHeaderMenuButton-inner,
 .msrd .msrd-SiteHeaderMenuButton-inner::before,
 .msrd .msrd-SiteHeaderMenuButton-inner::after {
   background-color: currentColor;
-  border-radius: 1px;
-  height: 2px;
+  block-size: calc(2rem / 16);
+  border-radius: calc(1rem / 16);
+  inline-size: calc(24rem / 16);
   position: absolute;
-  width: 24px;
 }
 
 .msrd .msrd-SiteHeaderMenuButton-inner {
   display: block;
-  top: 50%;
+  inset-block-start: 50%;
   transition: transform 0.22s var(--easing-cubic-bezier-reverse-easy-ease);
 }
 
@@ -65,14 +65,14 @@
 }
 
 .msrd .msrd-SiteHeaderMenuButton-inner::before {
-  top: -8px;
-  transition: top 0.1s 0.25s var(--easing-cubic-bezier-ease-in),
+  inset-block-start: calc(-8rem / 16);
+  transition: inset-block-start 0.1s 0.25s var(--easing-cubic-bezier-ease-in),
     opacity 0.1s var(--easing-cubic-bezier-ease-in);
 }
 
 .msrd .msrd-SiteHeaderMenuButton-inner::after {
-  bottom: -8px;
-  transition: bottom 0.1s 0.25s var(--easing-cubic-bezier-ease-in),
+  inset-block-end: calc(-8rem / 16);
+  transition: inset-block-end 0.1s 0.25s var(--easing-cubic-bezier-ease-in),
     transform 0.22s var(--easing-cubic-bezier-reverse-easy-ease);
 }
 
@@ -82,26 +82,30 @@
   transition-timing-function: var(--easing-cubic-bezier-easy-ease);
 }
 
-.msrd .msrd-SiteHeaderMenuButton--menuOpen .msrd-SiteHeaderMenuButton-inner::before {
+.msrd
+  .msrd-SiteHeaderMenuButton--menuOpen
+  .msrd-SiteHeaderMenuButton-inner::before {
+  inset-block-start: 0;
   opacity: 0;
-  top: 0;
-  transition: top 0.1s var(--easing-cubic-bezier-ease-out),
+  transition: inset-inline-start 0.1s var(--easing-cubic-bezier-ease-out),
     opacity 0.1s 0.12s var(--easing-cubic-bezier-ease-out);
 }
 
-.msrd .msrd-SiteHeaderMenuButton--menuOpen .msrd-SiteHeaderMenuButton-inner::after {
-  bottom: 0;
+.msrd
+  .msrd-SiteHeaderMenuButton--menuOpen
+  .msrd-SiteHeaderMenuButton-inner::after {
+  inset-block-end: 0;
   transform: rotate(-90deg);
-  transition: bottom 0.1s var(--easing-cubic-bezier-ease-out),
+  transition: inset-block-end 0.1s var(--easing-cubic-bezier-ease-out),
     transform 0.22s 0.12s var(--easing-cubic-bezier-easy-ease);
 }
 
 .msrd .msrd-SiteHeaderMenuButton-text {
+  block-size: calc(1rem / 16);
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
+  inline-size: calc(1rem / 16);
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }

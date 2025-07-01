@@ -1,3 +1,7 @@
+.translated-rtl {
+  direction: rtl;
+}
+
 .msrd {
   background-color: var(--color-background);
   box-sizing: border-box;
@@ -7,7 +11,11 @@
   font-optical-sizing: none;
   line-height: var(--line-height);
   margin: 0;
-  -webkit-tap-highlight-color: color-mix(in srgb, var(--color-brand) 20%, transparent);
+  -webkit-tap-highlight-color: color-mix(
+    in srgb,
+    var(--color-brand) 20%,
+    transparent
+  );
 }
 
 .msrd *,
@@ -45,9 +53,9 @@
 }
 
 .msrd img {
+  block-size: auto;
   display: block;
-  height: auto;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 .msrd strong {
@@ -56,7 +64,7 @@
 
 .msrd svg {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 /*
@@ -72,11 +80,11 @@
 }
 
 .msrd-u-visuallyHidden {
+  block-size: calc(1rem / 16);
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
+  inline-size: calc(1rem / 16);
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }

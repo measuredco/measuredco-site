@@ -2,8 +2,8 @@
   --image-size: var(--space-vertical-14);
   border-radius: calc(var(--image-size) * var(--corner-ratio-square));
   box-shadow: var(--box-shadow-light-source);
-  margin-bottom: var(--space-vertical-04);
-  width: var(--image-size);
+  inline-size: var(--image-size);
+  margin-block-end: var(--space-vertical-04);
 }
 
 .msrd .msrd-Profile-image {
@@ -21,6 +21,6 @@
   .msrd .msrd-Profile-imageWrapper {
     --image-size: 17.3125rem; /* magic grid number */
     flex-shrink: 0;
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
