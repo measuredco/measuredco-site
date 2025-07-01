@@ -2,10 +2,9 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  min-block-size: 100vh;
 }
 
 .msrd .msrd-Page--centered .msrd-Page-main {
-  margin-bottom: auto;
-  margin-top: auto;
+  margin-block: auto;
 }

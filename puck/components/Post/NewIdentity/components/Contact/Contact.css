@@ -9,11 +9,11 @@
 .msrd .msrd-NewIdentityContact-primary,
 .msrd .msrd-NewIdentityContact-secondary {
   --border-width: calc((2 / 16) * 1rem);
-  border: 2px solid var(--color-brand);
+  border: calc(2rem / 16) solid var(--color-brand);
   border-radius: var(--border-radius-button);
   display: block;
   font-weight: 500;
-  min-width: calc((192 / 16) * 1rem);
+  min-inline-size: calc((192 / 16) * 1rem);
   padding: calc(var(--space-vertical-03) - var(--border-width))
     var(--space-horizontal-06);
   text-align: center;

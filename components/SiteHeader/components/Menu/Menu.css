@@ -1,12 +1,13 @@
 .msrd .msrd-SiteHeaderMenu {
-  bottom: 0;
   display: none;
-  left: 0;
+  inset-block-end: 0;
+  inset-block-start: var(--space-vertical-09);
+  inset-inline: 0;
   overflow-y: auto;
-  padding: var(--space-vertical-02) var(--space-horizontal) var(--space-vertical);
+  padding-block-end: var(--space-vertical);
+  padding-block-start: var(--space-vertical-02);
+  padding-inline: var(--space-horizontal);
   position: fixed;
-  right: 0;
-  top: var(--space-vertical-09);
 }
 
 .msrd .msrd-SiteHeaderMenu--open {

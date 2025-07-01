@@ -2,30 +2,30 @@
   --image-linear-gradient-scrim-bottom-dark: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(0,0,0, 0.002) 0.8%,
-    rgba(0,0,0, 0.008) 4.8%,
-    rgba(0,0,0, 0.021) 9%,
-    rgba(0,0,0, 0.042) 13.9%,
-    rgba(0,0,0, 0.075) 19.8%,
-    rgba(0,0,0, 0.126) 27%,
-    rgba(0,0,0, 0.194) 35%,
-    rgba(0,0,0, 0.278) 43.5%,
-    rgba(0,0,0, 0.382) 53%,
-    rgba(0,0,0, 0.541) 66%,
-    rgba(0,0,0, 0.738) 81%,
-    rgba(0,0,0, 1) 100%
+    rgba(0, 0, 0, 0.002) 0.8%,
+    rgba(0, 0, 0, 0.008) 4.8%,
+    rgba(0, 0, 0, 0.021) 9%,
+    rgba(0, 0, 0, 0.042) 13.9%,
+    rgba(0, 0, 0, 0.075) 19.8%,
+    rgba(0, 0, 0, 0.126) 27%,
+    rgba(0, 0, 0, 0.194) 35%,
+    rgba(0, 0, 0, 0.278) 43.5%,
+    rgba(0, 0, 0, 0.382) 53%,
+    rgba(0, 0, 0, 0.541) 66%,
+    rgba(0, 0, 0, 0.738) 81%,
+    rgba(0, 0, 0, 1) 100%
   );
 }
 
 .msrd .msrd-Image {
   background-color: color-mix(in srgb, var(--color-brand) 8%, transparent);
-  width: 100%;
+  inline-size: 100%;
 }
 
 .msrd .msrd-Image-img {
+  block-size: auto;
   display: block;
-  height: auto;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 .msrd .msrd-Image--scrimBottomDark {
@@ -34,24 +34,21 @@
 
 .msrd .msrd-Image--scrimBottomDark::after {
   background-image: var(--image-linear-gradient-scrim-bottom-dark);
-  bottom: 0;
   content: "";
-  left: 0;
+  inset: 0;
   position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .msrd .msrd-Image--cover {
+  block-size: 100%;
   overflow: hidden;
   position: relative;
-  height: 100%;
 }
 
 .msrd .msrd-Image--cover .msrd-Image-img {
-  height: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   object-fit: cover;
-  width: 100%;
 }
 
 .msrd .msrd-Image--anchorN .msrd-Image-img {

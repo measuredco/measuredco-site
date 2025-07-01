@@ -1,12 +1,12 @@
 .msrd .msrd-Card {
   background: var(--color-card-background);
+  block-size: 100%;
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-light-source);
   color: var(--color-card-text);
   display: flex;
-  height: 100%;
+  inline-size: 100%;
   position: relative;
-  width: 100%;
 }
 
 .msrd .msrd-Card-inner {
@@ -14,20 +14,21 @@
   box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
-  padding: var(--space-vertical-06) var(--space-horizontal-08);
-  width: 100%;
+  inline-size: 100%;
+  padding-block: var(--space-vertical-06);
+  padding-inline: var(--space-horizontal-08);
 }
 
 .msrd .msrd-Card::after {
   border: solid var(--border-width) var(--color-card-border);
   border-radius: var(--border-radius-card);
-  bottom: var(--border-offset-card);
   content: "";
-  left: calc(0rem - var(--border-offset-card));
+  inset-block-end: var(--border-offset-card);
+  inset-block-start: calc(0rem - var(--border-offset-card));
+  inset-inline-end: var(--border-offset-card);
+  inset-inline-start: calc(0rem - var(--border-offset-card));
   pointer-events: none;
   position: absolute;
-  right: var(--border-offset-card);
-  top: calc(0rem - var(--border-offset-card));
   transition: 0.05s var(--easing-cubic-bezier-easy-ease);
 }
 
@@ -52,10 +53,7 @@
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible)::after {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
+  inset: 0;
   transition: none;
 }
 
@@ -65,36 +63,33 @@
   }
 
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover::after {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
+    inset: 0;
     transition: 0.1s var(--easing-cubic-bezier-easy-ease);
   }
 
   @media (prefers-reduced-motion) {
     .msrd .msrd-Card:has(.msrd-Card-heading a):hover::after {
-      bottom: var(--border-offset-card);
-      left: calc(0rem - var(--border-offset-card));
-      right: var(--border-offset-card);
-      top: calc(0rem - var(--border-offset-card));
+      inset-block-end: var(--border-offset-card);
+      inset-block-start: calc(0rem - var(--border-offset-card));
+      inset-inline-end: var(--border-offset-card);
+      inset-inline-start: calc(0rem - var(--border-offset-card));
     }
   }
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
-  bottom: calc(0rem - var(--border-offset-card) / 2);
-  left: calc(var(--border-offset-card) / 2);
-  right: calc(0rem - var(--border-offset-card) / 2);
-  top: calc(var(--border-offset-card) / 2);
+  inset-block-end: calc(0rem - var(--border-offset-card) / 2);
+  inset-block-start: calc(var(--border-offset-card) / 2);
+  inset-inline-end: calc(0rem - var(--border-offset-card) / 2);
+  inset-inline-start: calc(var(--border-offset-card) / 2);
 }
 
 @media (prefers-reduced-motion) {
   .msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
-    bottom: var(--border-offset-card);
-    left: calc(0rem - var(--border-offset-card));
-    right: var(--border-offset-card);
-    top: calc(0rem - var(--border-offset-card));
+    inset-block-end: var(--border-offset-card);
+    inset-block-start: calc(0rem - var(--border-offset-card));
+    inset-inline-end: var(--border-offset-card);
+    inset-inline-start: calc(0rem - var(--border-offset-card));
   }
 }
 
@@ -102,8 +97,7 @@
   font-size: var(--font-05-size);
   font-weight: 433;
   line-height: var(--font-05-line-height);
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-block: 0;
 }
 
 .msrd .msrd-Card-heading a {
@@ -117,33 +111,30 @@
 }
 
 .msrd .msrd-Card-heading a::after {
-  bottom: 0;
   content: "";
-  left: 0;
+  inset: 0;
   position: absolute;
-  right: 0;
-  top: 0;
 }
 
 .msrd .msrd-Card-dots {
   align-items: center;
+  block-size: var(--space-horizontal-03);
   display: flex;
-  height: var(--space-horizontal-03);
+  inline-size: var(--space-horizontal-07);
+  inset-block-start: var(--space-horizontal-05);
+  inset-inline-start: var(--space-horizontal-05);
   justify-content: space-between;
-  left: var(--space-horizontal-05);
   position: absolute;
-  top: var(--space-horizontal-05);
-  width: var(--space-horizontal-07);
 }
 
 .msrd .msrd-Card-dots::before,
 .msrd .msrd-Card-dots::after,
 .msrd .msrd-Card-dotsInner {
   background-color: var(--color-card-dots);
+  block-size: var(--space-horizontal-03);
   border-radius: 50%;
   content: "";
-  height: var(--space-horizontal-03);
-  width: var(--space-horizontal-03);
+  inline-size: var(--space-horizontal-03);
 }
 
 @media (hover: hover) {
@@ -177,13 +168,13 @@
 }
 
 .msrd .msrd-Card-dots::before {
-  left: 0;
+  inset-inline-start: 0;
   position: absolute;
 }
 
 .msrd .msrd-Card-dots::after {
+  inset-inline-end: 0;
   position: absolute;
-  right: 0;
 }
 
 .msrd .msrd-Card-dotsInner {
@@ -193,7 +184,7 @@
 
 .msrd .msrd-Card-note {
   font-weight: 466;
-  margin-top: auto;
+  margin-block-start: auto;
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note {
@@ -203,21 +194,34 @@
 .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
   --arrow-offset: 0.25em;
   content: "→";
-  left: var(--arrow-offset);
+  inset-inline-start: var(--arrow-offset);
   position: relative;
+}
+
+:dir(rtl)
+  .msrd
+  .msrd-Card:has(.msrd-Card-heading a)
+  .msrd-Card-note
+  span::after,
+.translated-rtl
+  .msrd
+  .msrd-Card:has(.msrd-Card-heading a)
+  .msrd-Card-note
+  span::after {
+  content: "←";
 }
 
 @media (hover: hover) {
   .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
-    left: 0;
+    inset-inline-start: 0;
     opacity: 0;
   }
 
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-note span::after {
-    left: var(--arrow-offset);
+    inset-inline-start: var(--arrow-offset);
     opacity: 1;
     transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
-      0.2s left var(--easing-cubic-bezier-easy-ease);
+      0.2s inset-inline-start var(--easing-cubic-bezier-easy-ease);
   }
 
   @media (prefers-reduced-motion) {
@@ -226,7 +230,7 @@
       .msrd-Card-note
       span::after {
       transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
-        0s left var(--easing-cubic-bezier-easy-ease);
+        0s inset-inline-start var(--easing-cubic-bezier-easy-ease);
     }
   }
 }

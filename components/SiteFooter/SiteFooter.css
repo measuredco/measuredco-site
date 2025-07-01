@@ -1,26 +1,23 @@
 .msrd .msrd-SiteFooter {
   color: var(--color-text-muted);
-  margin-top: auto;
-  padding-bottom: var(--space-vertical);
-  padding-left: var(--space-horizontal);
-  padding-right: var(--space-horizontal);
+  margin-block-start: auto;
+  padding-block-end: var(--space-vertical);
+  padding-inline: var(--space-horizontal);
   position: relative;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-SiteFooter {
-    padding-bottom: var(--space-vertical-06);
-    padding-left: var(--space-horizontal-07);
-    padding-right: var(--space-horizontal-07);
+    padding-block-end: var(--space-vertical-06);
+    padding-inline: var(--space-horizontal-07);
   }
 }
 
 .msrd .msrd-SiteFooter-inner {
   display: grid;
   gap: var(--space-vertical) var(--space-horizontal);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--section-max-width);
+  margin-inline: auto;
+  max-inline-size: var(--section-max-width);
 }
 
 @media (min-width: 48em) {
@@ -49,7 +46,7 @@
 }
 
 @media (min-width: 53em) {
-  .msrd .msrd-SiteFooter-inner > :first-child  {
+  .msrd .msrd-SiteFooter-inner > :first-child {
     grid-column-end: span 3;
   }
 
@@ -60,7 +57,7 @@
 
 @media (min-width: 76.25em) {
   .msrd .msrd-SiteFooter-inner > :first-child,
-  .msrd .msrd-SiteFooter-inner > :nth-child(2)  {
+  .msrd .msrd-SiteFooter-inner > :nth-child(2) {
     grid-column-end: span 4;
   }
 
@@ -71,13 +68,12 @@
 
 .msrd .msrd-SiteFooter ul {
   list-style: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-left: 0;
+  margin-block: 0;
+  padding-inline-start: 0;
 }
 
 .msrd .msrd-SiteFooter li {
-  padding-top: var(--space-vertical-01);
+  padding-block-start: var(--space-vertical-01);
 }
 
 .msrd .msrd-SiteFooter a:not([class]) {
@@ -102,7 +98,7 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-SiteFooter-logo {
-    margin-bottom: var(--space-vertical-02);
+    margin-block-end: var(--space-vertical-02);
   }
 }
 

@@ -1,5 +1,5 @@
 .msrd .msrd-NewIdentityTip {
-  --image-size: 119px;
+  --image-size: calc(119rem / 16);
   align-items: center;
   display: grid;
   gap: var(--space-vertical) var(--space-horizontal-06);
@@ -17,7 +17,7 @@
 
   @media (min-width: 80.25em) {
     column-gap: var(--space-horizontal-10);
-    margin-left: var(--space-horizontal);
+    margin-inline-start: var(--space-horizontal);
   }
 }
 
@@ -32,10 +32,10 @@
 }
 
 .msrd .msrd-NewIdentityTip h3 {
-  max-width: 9em;
+  max-inline-size: 9em;
 
   @media (min-width: 48em) {
-    max-width: 100%;
+    max-inline-size: 100%;
   }
 }
 
@@ -44,6 +44,6 @@
 
   @media (min-width: 48em) {
     grid-column-start: 2;
-    max-width: 100% !important;
+    max-inline-size: 100% !important;
   }
 }

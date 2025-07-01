@@ -1,12 +1,13 @@
 .msrd .msrd-Rule {
   background-color: var(--color-brand);
+  block-size: var(--rule-height);
   border-color: var(--color-brand);
   color: var(--color-brand);
-  height: var(--rule-height);
+  inline-size: var(--rule-width);
   margin: 0;
-  width: var(--rule-width);
 }
 
 .msrd .msrd-Rule--center {
-  margin: 0 auto;
+  margin-block: 0;
+  margin-inline: auto;
 }

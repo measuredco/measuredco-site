@@ -4,49 +4,53 @@
   --icon-size: calc((24 / 16) * 1rem);
   --icon-offset: calc((6 / 16) * 1rem);
   background-color: transparent;
+  block-size: var(--button-size);
   border: 0;
   color: inherit;
   cursor: pointer;
-  height: var(--button-size);
+  inline-size: var(--button-size);
   padding: 0;
   position: relative;
-  text-align: left;
-  width: var(--button-size);
+  text-align: start;
 }
 
 .msrd .msrd-Copy::before {
+  block-size: var(--icon-size);
   border: solid var(--border-width) var(--color-border);
   border-radius: calc(var(--icon-size) * var(--corner-ratio-square));
-  bottom: calc(var(--button-size) - var(--icon-size) - var(--icon-offset));
   content: "";
-  height: var(--icon-size);
-  left: calc(var(--button-size) - var(--icon-size) - var(--icon-offset));
+  inline-size: var(--icon-size);
+  inset-block-end: calc(
+    var(--button-size) - var(--icon-size) - var(--icon-offset)
+  );
+  inset-inline-start: calc(
+    var(--button-size) - var(--icon-size) - var(--icon-offset)
+  );
   position: absolute;
-  width: var(--icon-size);
 }
 
 .msrd .msrd-Copy::after {
   background-color: var(--color-button-background);
+  block-size: var(--icon-size);
   border: var(--border-width) solid var(--color-border);
   border-radius: calc(var(--icon-size) * var(--corner-ratio-square));
-  bottom: var(--icon-offset);
   content: "";
-  height: var(--icon-size);
-  left: var(--icon-offset);
+  inline-size: var(--icon-size);
+  inset-block-end: var(--icon-offset);
+  inset-inline-start: var(--icon-offset);
   position: absolute;
-  width: var(--icon-size);
 }
 
 .msrd .msrd-Copy-text {
+  block-size: var(--button-size);
   color: var(--color-copy-interactive);
   display: block;
   font-size: var(--font-01-size);
-  height: var(--button-size);
-  left: calc(var(--button-size) - var(--icon-offset));
+  inset-block-start: 0;
+  inset-inline-start: calc(var(--button-size) - var(--icon-offset));
   line-height: var(--button-size);
   opacity: 0;
   position: absolute;
-  top: 0;
 }
 
 .msrd .msrd-Copy:focus-visible {
@@ -64,7 +68,7 @@
 
 .msrd .msrd-Copy:focus-visible .msrd-Copy-text,
 .msrd .msrd-Copy--touched .msrd-Copy-text {
-  left: var(--button-size);
+  inset-inline-start: var(--button-size);
   opacity: 1;
 }
 
@@ -74,16 +78,16 @@
   }
 
   .msrd .msrd-Copy:hover .msrd-Copy-text {
-    left: var(--button-size);
+    inset-inline-start: var(--button-size);
     opacity: 1;
     transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
-      0.2s left var(--easing-cubic-bezier-easy-ease);
+      0.2s inset-inline-start var(--easing-cubic-bezier-easy-ease);
   }
 
   @media (prefers-reduced-motion) {
     .msrd .msrd-Copy:hover .msrd-Copy-text {
       transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
-        0s left var(--easing-cubic-bezier-easy-ease);
+        0s inset-inline-start var(--easing-cubic-bezier-easy-ease);
     }
   }
 }

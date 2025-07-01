@@ -4,10 +4,10 @@
 
   --color-background: var(--color-azure-01);
   --color-background-emphasis: color-mix(
-      in srgb,
-      var(--color-text) 2%,
-      transparent
-    );
+    in srgb,
+    var(--color-text) 2%,
+    transparent
+  );
   --color-background-highlight: color-mix(
     in srgb,
     var(--color-text) 8%,

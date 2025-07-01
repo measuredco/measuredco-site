@@ -2,9 +2,8 @@
   color: inherit;
   display: flex;
   gap: var(--space-horizontal-07);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--section-max-width);
+  margin-inline: auto;
+  max-inline-size: var(--section-max-width);
   overflow: hidden;
   user-select: none;
 }
@@ -16,16 +15,25 @@
   gap: var(--space-vertical) var(--space-horizontal-07);
   justify-content: space-around;
   list-style: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  min-width: 100%;
-  padding-left: 0;
+  margin-block: 0;
+  min-inline-size: 100%;
+  padding-inline-start: 0;
+}
+
+:dir(rtl) .msrd .msrd-Logos-inner,
+.translated-rtl .msrd .msrd-Logos-inner {
+  animation: scroll-rtl 20s linear infinite;
 }
 
 @media (min-width: 76.25em) {
   .msrd .msrd-Logos-inner {
     animation: none;
     justify-content: space-between;
+  }
+
+  :dir(rtl) .msrd .msrd-Logos-inner,
+  .translated-rtl .msrd .msrd-Logos-inner {
+    animation: none;
   }
 }
 
@@ -38,20 +46,27 @@
   }
 }
 
+@keyframes scroll-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100% - var(--space-horizontal-07)));
+  }
+}
+
 @media (prefers-reduced-motion) {
   .msrd .msrd-Logos-inner + .msrd-Logos-inner {
     display: none;
   }
 
   .msrd .msrd-Logos {
-    padding-left: var(--space-horizontal);
-    padding-right: var(--space-horizontal);
+    padding-inline: var(--space-horizontal);
   }
 
   @media (min-width: 48em) {
     .msrd .msrd-Logos {
-      padding-left: var(--space-horizontal-07);
-      padding-right: var(--space-horizontal-07);
+      padding-inline: var(--space-horizontal-07);
     }
   }
 
@@ -70,8 +85,7 @@
 
   @media (min-width: 78.25em) {
     .msrd .msrd-Logos {
-      padding-left: 0;
-      padding-right: 0;
+      padding-inline: 0;
     }
   }
 }
