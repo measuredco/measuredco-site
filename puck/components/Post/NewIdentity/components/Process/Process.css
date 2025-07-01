@@ -117,7 +117,10 @@
 
 .msrd .msrd-NewIdentityProcess-start::after,
 .msrd .msrd-NewIdentityProcess-card::after {
-  background-image: radial-gradient(var(--color-azure-10) calc(2rem / 16), transparent 0);
+  background-image: radial-gradient(
+    var(--color-azure-10) calc(2rem / 16),
+    transparent 0
+  );
   background-position: center;
   background-repeat: repeat-y;
   background-size: calc((10 / 16) * 1rem) calc((10 / 16) * 1rem);
@@ -184,13 +187,25 @@
     min-height: calc((780 / 16) * 1rem);
   }
 
-  .msrd .msrd-NewIdentityProcess-inner {
+  .msrd .msrd-NewIdentityProcess-inner::before {
     background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1741341203/site/process-dots_uxq3qy.png);
     background-origin: content-box;
     background-position-x: calc((150 / 16) * 1rem);
     background-position-y: calc((47 / 16) * 1rem);
     background-repeat: no-repeat;
     background-size: calc((432 / 16) * 1rem) calc((560 / 16) * 1rem);
+    content: "";
+    inset-block-end: 0;
+    inset-block-start: calc((72 / 16) * 1rem);
+    inset-inline-end: 0;
+    inset-inline-start: calc((16 / 16) * 1rem);
+    position: absolute;
+  }
+
+  :dir(rtl) .msrd .msrd-NewIdentityProcess-inner::before,
+  .translated-rtl .msrd .msrd-NewIdentityProcess-inner::before {
+    inset-inline-start: calc((32 / 16) * 1rem);
+    transform: scaleX(-1);
   }
 
   .msrd .msrd-NewIdentityProcess-start {
