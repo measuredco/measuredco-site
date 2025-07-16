@@ -1,4 +1,5 @@
 import type { Config, Data, DefaultRootProps } from "@measured/puck";
+import { ReactNode } from "react";
 
 import { Page } from "../components";
 
@@ -162,7 +163,7 @@ export const config: Config<Props, RootProps> = {
           {renderDropZone({
             disallow: ["GridItem"],
             zone: "default-zone",
-          })}
+          }) as ReactNode}
         </Page>
       );
     },

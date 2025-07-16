@@ -1,4 +1,5 @@
 import { ComponentConfig } from "@measured/puck";
+import { ReactNode } from "react";
 
 import {
   Section as _Section,
@@ -21,6 +22,8 @@ export const Section: ComponentConfig<SectionProps> = {
     },
   },
   render: ({ width, puck: { renderDropZone } }) => (
-    <_Section width={width}>{renderDropZone({ zone: "section" })}</_Section>
+    <_Section width={width}>
+      {renderDropZone({ zone: "section" }) as ReactNode}
+    </_Section>
   ),
 };

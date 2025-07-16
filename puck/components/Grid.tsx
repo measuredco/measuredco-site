@@ -1,4 +1,5 @@
 import { ComponentConfig } from "@measured/puck";
+import { ReactNode } from "react";
 
 import {
   Grid as _Grid,
@@ -26,11 +27,13 @@ export const Grid: ComponentConfig<GridProps> = {
   },
   render: ({ gap, puck: { renderDropZone } }) => (
     <_Grid gap={gap}>
-      {renderDropZone({
-        className: gridClassName(gap),
-        allow: ["GridItem"],
-        zone: "grid",
-      })}
+      {
+        renderDropZone({
+          className: gridClassName(gap),
+          allow: ["GridItem"],
+          zone: "grid",
+        }) as ReactNode
+      }
     </_Grid>
   ),
 };
@@ -124,10 +127,12 @@ export const GridItem: ComponentConfig<GridItemProps> = {
       rowStart={rowStart}
       ref={dragRef}
     >
-      {renderDropZone({
-        disallow: ["Grid", "GridItem", "Section"],
-        zone: "grid-item",
-      })}
+      {
+        renderDropZone({
+          disallow: ["Grid", "GridItem", "Section"],
+          zone: "grid-item",
+        }) as ReactNode
+      }
     </_Grid.Item>
   ),
 };

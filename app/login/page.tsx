@@ -1,6 +1,6 @@
 "use client";
 
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { createBrowserClient } from "@supabase/ssr";
 import { Auth } from "@supabase/auth-ui-react";
 import {
   // Import predefined theme
@@ -10,7 +10,10 @@ import {
 import { useEffect } from "react";
 import { useUser } from "../../lib/use-user";
 
-const supabase = createClientComponentClient();
+const supabase = createBrowserClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export default function Login() {
   const user = useUser();
