@@ -277,13 +277,6 @@
   resolved "https://registry.yarnpkg.com/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz#a81ffb00e69267cd0a1d626eaedb8a8430b2b2f8"
   integrity sha512-+29YMsqY2/9eFEiW93eqWnuLcWcufowXewwSNIT6UwZdUUCrM3oFjMWH/Z6/TMmb4hlFenmfAVbpWeup2jryCw==
 
-"@measured/puck-plugin-heading-analyzer@0.18.3":
-  version "0.18.3"
-  resolved "https://registry.yarnpkg.com/@measured/puck-plugin-heading-analyzer/-/puck-plugin-heading-analyzer-0.18.3.tgz#321fe6eb0049bef0e100fa2a786a4206221a319e"
-  integrity sha512-0SKWG/lgy5bkath5QW5cSnOtPcnBN1Fate4M3Vx2DJMlKbrhd0Z0k3naifFbazb8Rgl756I54vwdzHp6UKqmYQ==
-  dependencies:
-    react-from-json "^0.8.0"
-
 "@measured/puck@0.18.3":
   version "0.18.3"
   resolved "https://registry.yarnpkg.com/@measured/puck/-/puck-0.18.3.tgz#575ec5b7d19bad333b145eec2dabfd6fa04fbb49"
@@ -2672,11 +2665,6 @@ react-dom@^19.0.1:
   integrity sha512-ibrK8llX2a4eOskq1mXKu/TGZj9qzomO+sNfO98M6d9zIPOEhlBkMkBUBLd1vgS0gQsLDBzA+8jJBVXDnfHmJg==
   dependencies:
     scheduler "^0.27.0"
-
-react-from-json@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/react-from-json/-/react-from-json-0.8.0.tgz#c8e6c28a98180308be1eece3d22589a8c663d0dc"
-  integrity sha512-aVCZ7bQ5sUg4LhgW2qfY/Hfacqma1s600F7Z9GZqRqPtHu1JFi9gufS0o2YOIfo0e34OCqovoFZMl3VABMikCw==
 
 react-hotkeys-hook@^4.6.1:
   version "4.6.2"
