@@ -9,6 +9,7 @@ export default async function sitemap() {
     "/about",
     "/work",
     "/work/bt",
+    "/work/hilton",
     "/work/hubble",
     "/blog",
     "/contact",
@@ -25,13 +26,5 @@ export default async function sitemap() {
       }))
     : [];
 
-  let puckPosts = await getPosts(siteUrl, 1);
-  puckPosts = puckPosts?.length
-    ? puckPosts.map(({ date, link }) => ({
-        lastModified: date,
-        url: link,
-      }))
-    : [];
-
-  return [...routes, ...posts, ...puckPosts];
+  return [...routes, ...posts];
 }
