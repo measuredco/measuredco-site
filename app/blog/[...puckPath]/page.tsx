@@ -16,10 +16,11 @@ export const dynamic = "force-static";
 export async function generateMetadata({
   params,
 }: {
-  params: { puckPath: string[] };
+  params: Promise<{ puckPath: string[] }>;
 }): Promise<Metadata> {
   const blogPath = "/blog";
-  const { path } = resolvePuckPath(params.puckPath);
+  const { puckPath } = await params;
+  const { path } = resolvePuckPath(puckPath);
   const pageRes = await getPageRes(`${blogPath}${path}`);
   const data = pageRes?.data?.data;
   const rootProps = data?.root?.props;
@@ -66,10 +67,11 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: { puckPath: string[] };
+  params: Promise<{ puckPath: string[] }>;
 }) {
   const blogPath = "/blog";
-  const { path } = resolvePuckPath(params.puckPath);
+  const { puckPath } = await params;
+  const { path } = resolvePuckPath(puckPath);
   const pageRes = await getPageRes(`${blogPath}${path}`);
   const data = pageRes?.data?.data;
 

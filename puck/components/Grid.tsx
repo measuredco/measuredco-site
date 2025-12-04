@@ -1,4 +1,5 @@
 import { ComponentConfig } from "@measured/puck";
+import type { ReactNode } from "react";
 
 import {
   Grid as _Grid,
@@ -24,15 +25,15 @@ export const Grid: ComponentConfig<GridProps> = {
       type: "select",
     },
   },
-  render: ({ gap, puck: { renderDropZone } }) => (
-    <_Grid gap={gap}>
-      {renderDropZone({
-        className: gridClassName(gap),
-        allow: ["GridItem"],
-        zone: "grid",
-      })}
-    </_Grid>
-  ),
+  render: ({ gap, puck: { renderDropZone } }) => {
+    const dropZone = renderDropZone({
+      className: gridClassName(gap),
+      allow: ["GridItem"],
+      zone: "grid",
+    }) as unknown as ReactNode;
+
+    return <_Grid gap={gap}>{dropZone}</_Grid>;
+  },
 };
 
 export type GridItemProps = _GridItemProps;
@@ -112,22 +113,26 @@ export const GridItem: ComponentConfig<GridItemProps> = {
     puck: { dragRef, renderDropZone },
     rowSpan,
     rowStart,
-  }) => (
-    <_Grid.Item
-      align={align}
-      colSpan={colSpan}
-      colSpanNarrow={colSpanNarrow}
-      colStartNarrow={colStartNarrow}
-      colStart={colStart}
-      justify={justify}
-      rowSpan={rowSpan}
-      rowStart={rowStart}
-      ref={dragRef}
-    >
-      {renderDropZone({
-        disallow: ["Grid", "GridItem", "Section"],
-        zone: "grid-item",
-      })}
-    </_Grid.Item>
-  ),
+  }) => {
+    const dropZone = renderDropZone({
+      disallow: ["Grid", "GridItem", "Section"],
+      zone: "grid-item",
+    }) as unknown as ReactNode;
+
+    return (
+      <_Grid.Item
+        align={align}
+        colSpan={colSpan}
+        colSpanNarrow={colSpanNarrow}
+        colStartNarrow={colStartNarrow}
+        colStart={colStart}
+        justify={justify}
+        rowSpan={rowSpan}
+        rowStart={rowStart}
+        ref={dragRef}
+      >
+        {dropZone}
+      </_Grid.Item>
+    );
+  },
 };

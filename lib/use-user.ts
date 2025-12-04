@@ -1,9 +1,10 @@
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { UserResponse } from "@supabase/supabase-js";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+
+import { createSupabaseBrowserClient } from "./supabase-browser";
 
 export const useUser = () => {
-  const supabase = createClientComponentClient();
+  const supabase = useMemo(() => createSupabaseBrowserClient(), []);
 
   const [user, setUser] = useState<UserResponse["data"]["user"] | undefined>();
 
