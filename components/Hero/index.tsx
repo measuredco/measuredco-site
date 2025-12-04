@@ -1,21 +1,23 @@
 "use client";
 
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { ElementType, useEffect, useState } from "react";
 
 import { Rule, Logos, logosMapping, Space } from "..";
 
 import "./Hero.css";
 
+type LogoKey = keyof typeof logosMapping;
+
 export type HeroProps = {
   description: string;
   headingLevel: "1" | "2" | "3" | "4" | "5" | "6" | "";
-  logos: { logo: any }[];
+  logos: { logo: LogoKey }[];
   strapline: string;
 };
 
 const Hero = ({ description, headingLevel, logos, strapline }: HeroProps) => {
-  let StraplineElement = "p" as any;
+  let StraplineElement: ElementType = "p";
   const [fullscreen, setFullscreen] = useState(false);
 
   if (headingLevel) {

@@ -3,7 +3,7 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { ElementType, useEffect, useState } from "react";
 
 import Menu from "./components/Menu";
 import MenuButton from "./components/MenuButton";
@@ -14,7 +14,7 @@ type SiteHeaderProps = {
 };
 
 const SiteHeader = ({ links }: SiteHeaderProps) => {
-  let LogoElement: any = "div";
+  let LogoElement: ElementType = "div";
   const pathname = usePathname();
   const homepage = Boolean(pathname === "/" || pathname === "/edit");
   const [pageScrolled, setPageScrolled] = useState(false);

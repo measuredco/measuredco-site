@@ -4,9 +4,7 @@ import { Space } from "../../../../../../components";
 
 import "./Process.css";
 
-interface ProcessProps {}
-
-const Process = ({}: ProcessProps) => (
+const Process = () => (
   <div className="msrd-NewIdentityProcess">
     <div className="msrd-NewIdentityProcess-inner">
       <span className="msrd-NewIdentityProcess-dots">

@@ -1,12 +1,29 @@
 import classNames from "classnames";
 import Link from "next/link";
+import { ElementType } from "react";
 
 import { Paragraph, Space } from "..";
 
 import "./Card.css";
 
-const Card = ({ description, headingLevel = "3", link, note = "", title }) => {
-  const HeadingElement = `h${headingLevel}` as any;
+type CardProps = {
+  description: string;
+  headingLevel?: "1" | "2" | "3" | "4" | "5" | "6" | "";
+  link?: string;
+  note?: string;
+  title: string;
+};
+
+const Card = ({
+  description,
+  headingLevel = "3",
+  link,
+  note = "",
+  title,
+}: CardProps) => {
+  const HeadingElement: ElementType = headingLevel
+    ? (`h${headingLevel}` as ElementType)
+    : "div";
 
   return (
     <div className={classNames({ "msrd-Card": true })}>

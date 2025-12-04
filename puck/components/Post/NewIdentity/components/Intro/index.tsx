@@ -2,9 +2,7 @@ import Image from "next/image";
 
 import "./Intro.css";
 
-interface IntroProps {}
-
-const Intro = ({}: IntroProps) => (
+const Intro = () => (
   <div className="msrd-NewIdentityIntro">
     <div className="msrd-NewIdentityIntro-image">
       <Image

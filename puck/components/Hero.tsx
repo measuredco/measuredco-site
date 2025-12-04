@@ -7,12 +7,13 @@ import {
 } from "../../components";
 
 export type HeroProps = _HeroProps;
+type LogoKey = keyof typeof logosMapping;
 
 export const Hero: ComponentConfig<HeroProps> = {
   defaultProps: {
     description: "description",
     headingLevel: "",
-    logos: [{ logo: "bt" as any }],
+    logos: [{ logo: "bt" as LogoKey }],
     strapline: "strapline",
   },
   fields: {
@@ -42,9 +43,9 @@ export const Hero: ComponentConfig<HeroProps> = {
         },
       },
       defaultItemProps: {
-        logo: "bt" as any,
+        logo: "bt" as LogoKey,
       },
-      getItemSummary: (item) => item.logo as unknown as string,
+      getItemSummary: (item: { logo?: LogoKey }) => item.logo ?? "",
     },
   },
   render: ({ description, headingLevel, logos, strapline }) => (

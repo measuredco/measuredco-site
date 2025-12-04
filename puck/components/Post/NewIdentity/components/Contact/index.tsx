@@ -1,8 +1,6 @@
 import "./Contact.css";
 
-interface ContactProps {}
-
-const Contact = ({}: ContactProps) => (
+const Contact = () => (
   <div className="msrd-NewIdentityContact">
     <a className="msrd-NewIdentityContact-primary" href="/contact">
       Contact Measured

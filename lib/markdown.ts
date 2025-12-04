@@ -1,4 +1,5 @@
 import deepmerge from "deepmerge";
+import type { Schema } from "hast-util-sanitize";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
@@ -9,7 +10,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import { unified } from "unified";
 
-export const sanitizeDefault = deepmerge(defaultSchema, {
+export const sanitizeDefault: Schema = deepmerge(defaultSchema, {
   attributes: {
     code: ["className", /^language-./],
     span: [
@@ -18,11 +19,11 @@ export const sanitizeDefault = deepmerge(defaultSchema, {
     ],
   },
   clobberPrefix: "",
-});
+}) as Schema;
 
 export const processMarkdown = (
   markdown: string,
-  sanitizeOptions = sanitizeDefault
+  sanitizeOptions: Schema = sanitizeDefault
 ) =>
   unified()
     .use(remarkParse)

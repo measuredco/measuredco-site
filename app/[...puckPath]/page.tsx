@@ -8,7 +8,7 @@ import resolvePuckPath from "../../lib/resolve-puck-path";
 import { getPageRes } from "../../lib/get-page-res";
 import config from "../../puck/config";
 
-const { description, openGraphLocale, siteName, siteUrl, title } = content;
+const { description, openGraphLocale, siteName, siteUrl } = content;
 
 export { viewport } from "../page";
 
