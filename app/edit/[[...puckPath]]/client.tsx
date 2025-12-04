@@ -2,7 +2,6 @@
 
 import { Button, Puck, usePuck } from "@measured/puck";
 import type { Data } from "@measured/puck";
-import headingAnalyzer from "@measured/puck-plugin-heading-analyzer";
 
 import config from "../../../puck/config";
 import { useState } from "react";
@@ -23,7 +22,6 @@ export function Client({
     <Puck
       config={config}
       data={draftData || {}}
-      plugins={[headingAnalyzer]}
       headerPath={path}
       overrides={{
         headerActions: ({ children }) => {
