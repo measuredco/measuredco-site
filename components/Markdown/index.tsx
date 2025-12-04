@@ -1,8 +1,15 @@
 "use client";
 
 import classNames from "classnames";
+import type { Schema } from "hast-util-sanitize";
 import { useRouter } from "next/navigation";
-import { MouseEvent, PropsWithChildren, useEffect, useState } from "react";
+import {
+  ElementType,
+  MouseEvent,
+  PropsWithChildren,
+  useEffect,
+  useState,
+} from "react";
 
 import { processMarkdown, sanitizeDefault } from "../../lib/markdown";
 
@@ -13,7 +20,7 @@ export type MarkdownProps = {
   align?: "left" | "center" | "right";
   inline?: boolean;
   measured?: boolean;
-  sanitizeOptions?: any;
+  sanitizeOptions?: Schema;
 };
 
 const Markdown = ({
@@ -23,7 +30,7 @@ const Markdown = ({
   measured = false,
   sanitizeOptions = sanitizeDefault,
 }: PropsWithChildren<MarkdownProps>) => {
-  let Element: any = "div";
+  let Element: ElementType = "div";
   const router = useRouter();
   const [textProcessed, setTextProcessed] = useState(
     processMarkdown(children?.toString(), sanitizeOptions)
@@ -49,7 +56,7 @@ const Markdown = ({
       })}
       dangerouslySetInnerHTML={{ __html: textProcessed }}
       onClick={(event: MouseEvent) => {
-        let element = event.target as HTMLElement;
+        const element = event.target as HTMLElement;
 
         if (element && element.tagName === "A") {
           const href = element.getAttribute("href");

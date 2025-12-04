@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { ElementType, PropsWithChildren } from "react";
 
 import "./Heading.css";
 
@@ -25,7 +25,7 @@ const Heading = ({
   level,
   size,
 }: PropsWithChildren<HeadingProps>) => {
-  let Element: any = "div";
+  let Element: ElementType = "div";
 
   if (level) {
     Element = `h${level}`;

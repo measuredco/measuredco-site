@@ -4,9 +4,7 @@ import { Grid, Space } from "../../../../../../components";
 
 import "./Corner.css";
 
-interface CornerProps {}
-
-const Corner = ({}: CornerProps) => (
+const Corner = () => (
   <div className="msrd-NewIdentityCorner">
     <Grid>
       <Grid.Item

@@ -71,7 +71,6 @@ export const ImageSource = ({
   srcSet,
   sizes,
   type,
-  width,
 }: ImageSourceProps) => {
   return (
     <source
@@ -112,11 +111,6 @@ export type ImageSourceProps = {
    * MIME type for the resource URL(s) in the ImageSource element's srcset attribute. If the user agent does not support the given type, the element is skipped. Same format as [type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source#attr-type), i.e. `image/jpeg`.
    */
   type?: string;
-
-  /**
-   * The intrinsic width of the ImageSource, in pixels
-   */
-  width?: number;
 };
 
 export interface ImageProps extends HTMLAttributes<HTMLElement> {

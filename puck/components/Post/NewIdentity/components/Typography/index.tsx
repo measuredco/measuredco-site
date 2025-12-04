@@ -2,9 +2,7 @@ import { Heading, Grid, Paragraph, Space } from "../../../../../../components";
 
 import "./Typography.css";
 
-interface TypographyProps {}
-
-const Typography = ({}: TypographyProps) => (
+const Typography = () => (
   <div className="msrd-NewIdentityTypography">
     <Space size="08" />
     <Grid>

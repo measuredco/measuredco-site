@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import type { Dispatch, SetStateAction } from "react";
 
 const SiteHeaderMenu = ({
   links = [],
@@ -10,7 +11,7 @@ const SiteHeaderMenu = ({
   homepage: boolean;
   links: { current: boolean; href: string; label: string }[];
   menuOpen: boolean;
-  setMenuOpen: any;
+  setMenuOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
   const pathname = usePathname();
 

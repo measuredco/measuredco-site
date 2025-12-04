@@ -25,20 +25,23 @@
     "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.3",
     "@types/node": "^24.10.1",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
     "@typescript-eslint/typescript-estree": "^8.18.1",
+    "hast-util-sanitize": "^5.0.2",
     "encoding": "^0.1.13",
     "eslint": "8.57.0",
     "eslint-config-custom": "*",
+    "eslint-config-next": "^15.1.9",
     "tsconfig": "*",
     "typescript": "^5.6.3"
   },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && tsc --noEmit",
     "start": "next start"
   },
   "engines": {

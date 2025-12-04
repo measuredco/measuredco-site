@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { ElementType, PropsWithChildren } from "react";
 
 import "./Base.css";
 
@@ -12,7 +12,7 @@ const Base = ({
   children,
   className = "msrd",
 }: PropsWithChildren<BaseProps>) => {
-  let Element: any = "div";
+  let Element: ElementType = "div";
 
   if (body) {
     Element = "body";

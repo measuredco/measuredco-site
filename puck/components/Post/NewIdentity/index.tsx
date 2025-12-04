@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   Grid,
   Heading,
-  Paragraph,
   Rule,
   Section,
   Space,
@@ -21,7 +20,7 @@ import { PostProps } from "..";
 
 import "./NewIdentity.css";
 
-interface NewIdentityProps extends Omit<PostProps, "content" | "template"> {}
+type NewIdentityProps = Omit<PostProps, "content" | "template">;
 
 const NewIdentity = ({ title }: NewIdentityProps) => (
   <div className="msrd-NewIdentity">
