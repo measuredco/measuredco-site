@@ -12,9 +12,10 @@ import { getUserServer } from "../../../lib/get-user-server";
 export async function generateMetadata({
   params,
 }: {
-  params: { puckPath: string[] };
+  params: Promise<{ puckPath: string[] }>;
 }): Promise<Metadata> {
-  const { path } = resolvePuckPath(params.puckPath);
+  const { puckPath } = await params;
+  const { path } = resolvePuckPath(puckPath);
 
   return {
     title: `${path ? `Puck path ${path}` : "Puck"}`,
@@ -24,9 +25,10 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: {
-  params: { puckPath: string[] };
+  params: Promise<{ puckPath: string[] }>;
 }) {
-  const { path } = resolvePuckPath(params.puckPath);
+  const { puckPath } = await params;
+  const { path } = resolvePuckPath(puckPath);
 
   const pageRes = await supabase
     .from("puck")
