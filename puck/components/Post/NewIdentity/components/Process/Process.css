@@ -150,7 +150,7 @@
 }
 
 .msrd .msrd-NewIdentityProcess-cardInner {
-  align-items: start;
+  align-items: flex-start;
   display: flex;
   gap: var(--space-horizontal);
 }

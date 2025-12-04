@@ -25,7 +25,7 @@
 }
 
 .msrd .msrd-NewIdentityCorner-largeTile {
-  align-items: end;
+  align-items: flex-end;
   aspect-ratio: 1/1;
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740598113/site/large-tile_ezwhgy.png);
   background-size: cover;
