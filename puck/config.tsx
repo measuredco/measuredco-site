@@ -16,6 +16,7 @@ import { Card, CardProps } from "./components/Card";
 import { Contact, ContactProps } from "./components/Contact";
 import { Rule, RuleProps } from "./components/Rule";
 import { Grid, GridItem, GridProps, GridItemProps } from "./components/Grid";
+import { Header, HeaderProps } from "./components/Header";
 import { Heading, HeadingProps } from "./components/Heading";
 import { Hero, HeroProps } from "./components/Hero";
 import { Image, ImageProps } from "./components/Image";
@@ -35,6 +36,7 @@ export type Props = {
   Grid: GridProps;
   GridItem: GridItemProps;
   Heading: HeadingProps;
+  Header: HeaderProps;
   Hero: HeroProps;
   Image: ImageProps;
   Markdown: MarkdownProps;
@@ -74,6 +76,7 @@ export const config: Config<Props, RootProps> = {
     Grid,
     GridItem,
     Heading,
+    Header,
     Hero,
     Image,
     Markdown,
@@ -163,11 +166,7 @@ export const config: Config<Props, RootProps> = {
         zone: "default-zone",
       }) as unknown as ReactNode;
 
-      return (
-        <Page headerLinks={headerLinks}>
-          {dropZone}
-        </Page>
-      );
+      return <Page headerLinks={headerLinks}>{dropZone}</Page>;
     },
   },
 };
