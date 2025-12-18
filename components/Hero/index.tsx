@@ -12,7 +12,7 @@ type LogoKey = keyof typeof logosMapping;
 export type HeroProps = {
   description: string;
   headingLevel: "1" | "2" | "3" | "4" | "5" | "6" | "";
-  logos: { logo: LogoKey }[];
+  logos: { logo: LogoKey; href?: string }[];
   strapline: string;
 };
 
@@ -67,7 +67,16 @@ const Hero = ({ description, headingLevel, logos, strapline }: HeroProps) => {
           {logos?.map((logoKey, index) => {
             const Logo = logosMapping[logoKey.logo];
 
-            return <Logo key={`${logoKey}-${index}`} />;
+            if (!Logo) {
+              return null;
+            }
+
+            return (
+              <Logo
+                href={logoKey.href}
+                key={`${logoKey.logo}-${logoKey.href ?? index}`}
+              />
+            );
           })}
         </Logos>
       </div>

@@ -17,13 +17,13 @@
 }
 
 .msrd .msrd-Hero-inner {
-  margin-block-end: var(--space-vertical-08);
+  margin-block-end: var(--space-vertical-06);
   padding-block-start: var(--space-vertical-06);
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Hero-inner {
-    margin-block-end: var(--space-vertical-11);
+    margin-block-end: var(--space-vertical-09);
     padding-block-start: var(--space-vertical-09);
   }
 }
