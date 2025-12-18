@@ -13,7 +13,7 @@ export const Hero: ComponentConfig<HeroProps> = {
   defaultProps: {
     description: "description",
     headingLevel: "",
-    logos: [{ logo: "bt" as LogoKey }],
+    logos: [{ logo: "bt" as LogoKey, href: "/work/bt" }],
     strapline: "strapline",
   },
   fields: {
@@ -41,11 +41,13 @@ export const Hero: ComponentConfig<HeroProps> = {
             value: logoKey,
           })),
         },
+        href: { type: "text" },
       },
       defaultItemProps: {
         logo: "bt" as LogoKey,
       },
-      getItemSummary: (item: { logo?: LogoKey }) => item.logo ?? "",
+      getItemSummary: (item: { logo?: LogoKey; href?: string }) =>
+        [item.logo, item.href].filter(Boolean).join(" – "),
     },
   },
   render: ({ description, headingLevel, logos, strapline }) => (

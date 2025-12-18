@@ -4,7 +4,6 @@
   gap: var(--space-horizontal-07);
   margin-inline: auto;
   max-inline-size: var(--section-max-width);
-  overflow: hidden;
   user-select: none;
 }
 
@@ -25,6 +24,10 @@
   animation: scroll-rtl 20s linear infinite;
 }
 
+.msrd .msrd-Logos:has(a:hover) .msrd-Logos-inner {
+  animation-play-state: paused;
+}
+
 @media (min-width: 76.25em) {
   .msrd .msrd-Logos-inner {
     animation: none;
@@ -34,6 +37,10 @@
   :dir(rtl) .msrd .msrd-Logos-inner,
   .translated-rtl .msrd .msrd-Logos-inner {
     animation: none;
+  }
+
+  .msrd .msrd-Logos-inner + .msrd-Logos-inner {
+    display: none;
   }
 }
 
@@ -88,4 +95,42 @@
       padding-inline: 0;
     }
   }
+}
+
+.msrd .msrd-Logos-link {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-vertical-02);
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.msrd .msrd-Logos-label {
+  background-color: color-mix(in srgb, var(--color-azure-07) 38%, transparent);
+  border-radius: var(--border-radius-image);
+  color: var(--color-white);
+  font-family: var(--font-family-monospaced);
+  font-size: calc((10 / 16) * 1rem);
+  line-height: calc(12 / 10);
+  padding: var(--space-vertical-01) var(--space-horizontal-02);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.msrd .msrd-Logos-link:focus-visible .msrd-Logos-label {
+  border-radius: var(--border-radius-focus);
+  outline: var(--outline-width) solid var(--color-interactive-focus);
+  outline-offset: var(--outline-width);
+}
+
+.msrd .msrd-Logos-link:hover .msrd-Logos-label {
+  background-color: color-mix(in srgb, var(--color-azure-07) 54%, transparent);
+}
+
+.msrd .msrd-Logos-link:active .msrd-Logos-label {
+  background-color: color-mix(in srgb, var(--color-azure-07) 70%, transparent);
 }
