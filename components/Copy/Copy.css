@@ -1,8 +1,9 @@
 .msrd .msrd-Copy {
   --color-border: var(--color-copy-interactive);
   --button-size: calc((44 / 16) * 1rem);
-  --icon-size: calc((24 / 16) * 1rem);
-  --icon-offset: calc((6 / 16) * 1rem);
+  --icon-border: calc((2 / 16) * 1rem);
+  --icon-size: calc((23 / 16) * 1rem);
+  --icon-offset: calc((7 / 16) * 1rem);
   background-color: transparent;
   block-size: var(--button-size);
   border: 0;
@@ -16,7 +17,7 @@
 
 .msrd .msrd-Copy::before {
   block-size: var(--icon-size);
-  border: solid var(--border-width) var(--color-border);
+  border: var(--icon-border) solid var(--color-border);
   border-radius: calc(var(--icon-size) * var(--corner-ratio-square));
   content: "";
   inline-size: var(--icon-size);
@@ -32,7 +33,7 @@
 .msrd .msrd-Copy::after {
   background-color: var(--color-button-background);
   block-size: var(--icon-size);
-  border: var(--border-width) solid var(--color-border);
+  border: var(--icon-border) solid var(--color-border);
   border-radius: calc(var(--icon-size) * var(--corner-ratio-square));
   content: "";
   inline-size: var(--icon-size);
