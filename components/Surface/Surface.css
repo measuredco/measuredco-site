@@ -42,9 +42,11 @@
   --color-border-code: var(--color-azure-04);
 
   --box-shadow: 0.125rem 0.125rem 0.25rem
-    color-mix(in srgb, var(--color-azure-01) 92%, transparent);
+    color-mix(in srgb, var(--color-black) 42%, transparent);
   --box-shadow-light-source: 0.125rem 0.125rem 3rem
     color-mix(in srgb, var(--color-white) 8%, transparent);
+
+  --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-black);
 
   --color-button-background: var(--color-azure-02);
 
@@ -58,9 +60,9 @@
   --color-copy-interactive: var(--color-interactive-neutral);
   --color-copy-interactive-hover: var(--color-interactive-neutral-hover);
 
-  --color-header-background: transparent;
-
   --color-logo: var(--color-white);
+
+  --color-site-header-background: transparent;
 }
 
 .msrd .msrd-Surface--dark,

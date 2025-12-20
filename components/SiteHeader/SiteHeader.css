@@ -12,7 +12,7 @@ html {
 }
 
 .msrd .msrd-SiteHeader {
-  background-color: var(--color-header-background);
+  background-color: var(--color-site-header-background);
   inset-block-start: 0;
   position: sticky;
   z-index: 1;
@@ -41,7 +41,7 @@ html {
 }
 
 .msrd .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--site-header-box-shadow);
   transition: box-shadow 0.1s var(--easing-cubic-bezier-easy-ease);
 }
 
