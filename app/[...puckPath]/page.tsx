@@ -1,11 +1,10 @@
-import { Data } from "@measured/puck";
-import { Render } from "@measured/puck";
+import { Data, Render } from "@measured/puck";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import content from "../../content.json";
-import resolvePuckPath from "../../lib/resolve-puck-path";
 import { getPageRes } from "../../lib/get-page-res";
+import { resolvePuckPath } from "../../lib/resolve-puck-path";
 import config from "../../puck/config";
 
 const { description, openGraphLocale, siteName, siteUrl } = content;

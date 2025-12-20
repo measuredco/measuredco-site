@@ -3,7 +3,7 @@
 import classNames from "classnames";
 import { ElementType, useEffect, useState } from "react";
 
-import { Rule, Logos, logosMapping, Space } from "..";
+import { Logos, logosMapping, Rule, Space } from "..";
 
 import "./Hero.css";
 

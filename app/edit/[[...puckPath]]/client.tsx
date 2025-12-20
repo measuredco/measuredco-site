@@ -1,10 +1,9 @@
 "use client";
 
-import { Button, Puck, usePuck } from "@measured/puck";
-import type { Data } from "@measured/puck";
+import { Button, type Data, Puck, usePuck } from "@measured/puck";
+import { useState } from "react";
 
 import config from "../../../puck/config";
-import { useState } from "react";
 
 export function Client({
   data: initialData,
@@ -29,22 +28,21 @@ export function Client({
             appState: { data: unsavedData },
             // eslint-disable-next-line react-hooks/rules-of-hooks
           } = usePuck();
-
-          const unsaved =
-            JSON.stringify(unsavedData) !== JSON.stringify(draftData);
           const unpublished =
             JSON.stringify(draftData) !== JSON.stringify(data);
+          const unsaved =
+            JSON.stringify(unsavedData) !== JSON.stringify(draftData);
 
           return (
             <>
               <small
                 style={{
-                  display: "flex",
-                  color: "var(--color-grey-02)",
-                  background: "white",
                   alignItems: "center",
-                  justifyContent: "center",
+                  background: "white",
+                  color: "var(--color-grey-02)",
+                  display: "flex",
                   height: "100%",
+                  justifyContent: "center",
                 }}
               >
                 {unsaved ? (

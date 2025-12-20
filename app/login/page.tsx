@@ -1,10 +1,7 @@
 "use client";
 
 import { Auth } from "@supabase/auth-ui-react";
-import {
-  // Import predefined theme
-  ThemeSupa,
-} from "@supabase/auth-ui-shared";
+import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect } from "react";
 
 import { createSupabaseBrowserClient } from "../../lib/supabase-browser";

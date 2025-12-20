@@ -1,9 +1,9 @@
 import fs from "fs";
-import { supabase } from "../../../lib/supabase";
-
 import { revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
+
 import { getUserServer } from "../../../lib/get-user-server";
+import { supabase } from "../../../lib/supabase";
 
 export async function GET() {
   const data = fs.existsSync("database.json")
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { path, data, draft } = postData;
+  const { data, draft, path } = postData;
 
   const existingDataRes = await supabase
     .from("puck")
@@ -56,13 +56,13 @@ export async function POST(request: Request) {
     );
   } else {
     const newData = {
-      created_at: new Date(),
-      updated_at: new Date(),
-      created_by: user.email,
-      updated_by: user.email,
-      path,
-      draft_data: data,
       [draft ? "draft_data" : "data"]: data,
+      created_at: new Date(),
+      created_by: user.email,
+      draft_data: data,
+      path,
+      updated_at: new Date(),
+      updated_by: user.email,
     };
 
     const res = await supabase.from("puck").insert(newData);
