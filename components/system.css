@@ -388,6 +388,8 @@
     color-mix(in srgb, var(--color-black) 08%, transparent);
   --box-shadow-light-source: none;
 
+  --site-header-box-shadow:  0 0 0 var(--border-width) color-mix(in srgb, var(--color-black) 08%, transparent);
+
   --color-button-background: var(--color-white);
 
   --color-card-background: var(--color-white);
@@ -400,9 +402,9 @@
   --color-copy-interactive: var(--color-azure-04);
   --color-copy-interactive-hover: var(--color-azure-07);
 
-  --color-header-background: var(--color-background);
-
   --color-logo: var(--color-azure-04);
+
+  --color-site-header-background: var(--color-background);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -453,6 +455,8 @@
     --box-shadow-light-source: 0.125rem 0.125rem 3rem
       color-mix(in srgb, var(--color-white) 8%, transparent);
 
+    --site-header-box-shadow: 0 0 0 var(--outline-width) var(--color-black);
+
     --color-button-background: var(--color-grey-02);
 
     --color-card-background: var(--color-azure-07);
@@ -465,9 +469,9 @@
     --color-copy-interactive: var(--color-interactive-neutral);
     --color-copy-interactive-hover: var(--color-interactive-neutral-hover);
 
-    --color-header-background: var(--color-background);
-
     --color-logo: var(--color-azure-07);
+
+    --color-site-header-background: var(--color-background);
   }
 }
 
