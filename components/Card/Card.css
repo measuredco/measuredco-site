@@ -1,5 +1,5 @@
 .msrd .msrd-Card {
-  background: var(--color-card-background);
+  background-color: var(--color-card-background);
   block-size: 100%;
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-light-source);
@@ -233,4 +233,15 @@
         0s inset-inline-start var(--easing-cubic-bezier-easy-ease);
     }
   }
+}
+
+.msrd .msrd-Card--graphic {
+  --color-card-background: var(--color-azure-01);
+  --color-card-interactive: var(--color-white);
+  --color-card-text: var(--color-white);
+  background-color: var(--color-azure-01);
+  background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
