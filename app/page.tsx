@@ -1,5 +1,4 @@
-import { Data } from "@measured/puck";
-import { Render } from "@measured/puck";
+import { Data, Render } from "@measured/puck";
 import { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 

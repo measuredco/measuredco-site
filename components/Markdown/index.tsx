@@ -49,9 +49,9 @@ const Markdown = ({
     <Element
       className={classNames({
         "msrd-Markdown": true,
+        "msrd-Markdown--center": align === "center",
         "msrd-Markdown--inline": inline,
         "msrd-Markdown--measured": measured,
-        "msrd-Markdown--center": align === "center",
         "msrd-Markdown--right": align === "right",
       })}
       dangerouslySetInnerHTML={{ __html: textProcessed }}

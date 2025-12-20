@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import content from "../../content.json";
-import { getPosts } from "../../lib/get-posts";
 import { getPageRes } from "../../lib/get-page-res";
+import { getPosts } from "../../lib/get-posts";
 import config from "../../puck/config";
 
 const { blogDescription, openGraphLocale, siteName, siteUrl } = content;

@@ -266,9 +266,7 @@
     var(--leading-scale-11) / var(--type-scale-13)
   ); /* 1 */
 
-  --font-stack: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol;
+  --font-stack: Inter, system-ui, sans-serif;
 
   --font-family: var(--font-next, var(--font-stack));
 
@@ -475,8 +473,6 @@
 
 @supports (font-variation-settings: normal) {
   :root {
-    --font-stack: InterVariable, -apple-system, BlinkMacSystemFont, Segoe UI,
-      Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-      Segoe UI Symbol;
+    --font-stack: InterVariable, system-ui, sans-serif;
   }
 }

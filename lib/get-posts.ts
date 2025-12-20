@@ -1,7 +1,7 @@
 import content from "../content.json";
-import { processMarkdown } from "./markdown";
-import { getPageRes } from "./get-page-res";
 import { Props } from "../puck/config";
+import { getPageRes } from "./get-page-res";
+import { processMarkdown } from "./markdown";
 
 const { blogPostDescription } = content;
 

@@ -15,7 +15,5 @@
     "target": "es5"
   },
   "display": "Next.js",
-  "exclude": ["node_modules"],
-  "extends": "./base.json",
-  "include": ["src", "next-env.d.ts"]
+  "extends": "./base.json"
 }

@@ -2,11 +2,10 @@ import "@measured/puck/puck.css";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Client } from "./client";
-import resolvePuckPath from "../../../lib/resolve-puck-path";
-import { supabase } from "../../../lib/supabase";
-
 import { getUserServer } from "../../../lib/get-user-server";
+import { resolvePuckPath } from "../../../lib/resolve-puck-path";
+import { supabase } from "../../../lib/supabase";
+import { Client } from "./client";
 
 export async function generateMetadata({
   params,
