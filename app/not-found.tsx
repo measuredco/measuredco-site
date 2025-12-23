@@ -4,7 +4,7 @@ import { getPageRes } from "../lib/get-page-res";
 export default async function NotFound() {
   const pageRes = await getPageRes("/");
   const pageData = pageRes?.data?.data;
-  const headerLinks = pageData?.root?.headerLinks;
+  const headerLinks = pageData?.root?.props?.headerLinks;
 
   return (
     <Page centered headerLinks={headerLinks}>
