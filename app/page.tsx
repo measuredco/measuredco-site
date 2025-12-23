@@ -71,22 +71,26 @@ export default async function Page() {
 
   const schema = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: `${siteName}`,
-    alternateName: `${alternativeName}`,
-    url: `${siteUrl}`,
-    publisher: {
-      "@type": "Organization",
-      logo: `${siteUrl}/logo-schema-organization.svg`,
-      name: `${siteName}`,
-      sameAs: [
-        "https://bsky.app/profile/measured.co",
-        "https://dev.to/measuredco",
-        "https://github.com/measuredco",
-        "https://www.linkedin.com/company/measuredco/",
-      ],
-      url: `${siteUrl}`,
-    },
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: siteName,
+        alternateName: alternativeName,
+        url: siteUrl,
+      },
+      {
+        "@type": "Organization",
+        logo: `${siteUrl}/logo-schema-organization.svg`,
+        name: siteName,
+        sameAs: [
+          "https://bsky.app/profile/measured.co",
+          "https://dev.to/measuredco",
+          "https://github.com/measuredco",
+          "https://www.linkedin.com/company/measuredco/",
+        ],
+        url: siteUrl,
+      },
+    ],
   };
 
   return (
