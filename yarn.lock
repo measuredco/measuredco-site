@@ -3854,10 +3854,10 @@ regexp.prototype.flags@^1.5.3, regexp.prototype.flags@^1.5.4:
     gopd "^1.2.0"
     set-function-name "^2.0.2"
 
-rehype-color-chips@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/rehype-color-chips/-/rehype-color-chips-0.1.3.tgz#ed0bc01f1e593f01627f3742866364a207cc6b22"
-  integrity sha512-K9/YXDSdDFMVey9QFnZmECCDFoWVUMa82TnHsHbN02j+D+fvwclxlWGFhKfsR7SfWFh4abF83cSU2Yp6abDERg==
+rehype-color-chips@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/rehype-color-chips/-/rehype-color-chips-0.2.0.tgz#e4952836f9a17e62e3ebd8dfb8f62d6d596db6e9"
+  integrity sha512-5zt+QeaSEIdiSNJkpEqlSW1fdLmabB83e16rAwn2O7ytwZJEsyY1XnqyMAoQX9vpKA/Ccow/H51D8ekBnrPtmA==
   dependencies:
     d3-color "^3.1.0"
     hast-util-to-string "^2.0.0"
