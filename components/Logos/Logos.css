@@ -112,27 +112,27 @@
 }
 
 .msrd .msrd-Logos-label {
-  background-color: color-mix(in srgb, var(--color-azure-07) 38%, transparent);
+  background-color: var(--color-button-background);
+  border: 1px solid var(--color-rule);
   border-radius: var(--border-radius-image);
-  color: var(--color-white);
+  color: var(--color-interactive);
   font-family: var(--font-family-monospaced);
   font-size: calc((10 / 16) * 1rem);
-  line-height: calc(12 / 10);
+  font-weight: 466;
+  line-height: calc(10 / 10);
   padding: var(--space-vertical-01) var(--space-horizontal-02);
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .msrd .msrd-Logos-link:focus-visible .msrd-Logos-label {
-  border-radius: var(--border-radius-focus);
-  outline: var(--outline-width) solid var(--color-interactive-focus);
-  outline-offset: var(--outline-width);
+  border-color: var(--color-interactive-focus);
 }
 
 .msrd .msrd-Logos-link:hover .msrd-Logos-label {
-  background-color: color-mix(in srgb, var(--color-azure-07) 54%, transparent);
+  color: var(--color-interactive-hover);
 }
 
 .msrd .msrd-Logos-link:active .msrd-Logos-label {
-  background-color: color-mix(in srgb, var(--color-azure-07) 70%, transparent);
+  color: var(--color-interactive-active);
 }

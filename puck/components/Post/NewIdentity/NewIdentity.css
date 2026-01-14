@@ -48,7 +48,7 @@
   line-height: var(--font-04-line-height);
 
   @media (prefers-color-scheme: dark) {
-    --color-text: var(--color-grey-01);
+    --color-text: var(--color-grey-03);
     --color-interactive: var(--color-white);
     --color-interactive-hover: color-mix(
       in srgb,
