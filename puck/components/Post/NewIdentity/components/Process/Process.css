@@ -85,7 +85,7 @@
 .msrd .msrd-NewIdentityProcess-card {
   background-color: var(--color-azure-07);
   border-radius: var(--border-radius-card);
-  color: var(--color-grey-02);
+  color: var(--color-grey-03);
   margin-block-end: var(--space-vertical-06);
   margin-inline: auto;
   max-inline-size: 100%;
@@ -156,9 +156,9 @@
 }
 
 .msrd .msrd-NewIdentityProcess-button {
-  border: calc((2 / 16) * 1rem) solid var(--color-grey-02);
+  border: calc((2 / 16) * 1rem) solid var(--color-grey-03);
   border-radius: var(--border-radius-button);
-  color: var(--color-grey-02);
+  color: var(--color-grey-03);
   display: block;
   font-weight: 450;
   inline-size: min-content;

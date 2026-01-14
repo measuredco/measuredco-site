@@ -11,7 +11,7 @@
   --color-rose-02: #700b43;
   --color-rose-03: #8b1254;
   --color-rose-04: #a81a66;
-  --color-rose-05: #bc397d;
+  --color-rose-05: #be397e;
   --color-rose-06: #d15294;
   --color-rose-07: #e56aac;
   --color-rose-08: #ec89bc;
@@ -24,7 +24,7 @@
   --color-violet-02: #3c01ad;
   --color-violet-03: #571cbc;
   --color-violet-04: #7031cc;
-  --color-violet-05: #8746dc;
+  --color-violet-05: #813eda;
   --color-violet-06: #9e5beb;
   --color-violet-07: #b470fb;
   --color-violet-08: #c48bfc;
@@ -34,11 +34,11 @@
   --color-violet-12: #f9f4ff;
 
   --color-azure-01: #031f60;
-  --color-azure-02: #072d75;
-  --color-azure-03: #0a3c8a;
+  --color-azure-02: #042467;
+  --color-azure-03: #053d89;
   --color-azure-04: #0158ad;
-  --color-azure-05: #176bc4;
-  --color-azure-06: #267fdc;
+  --color-azure-05: #1666bb;
+  --color-azure-06: #257dd7;
   --color-azure-07: #3394f4;
   --color-azure-08: #6db5f8;
   --color-azure-09: #93c5fa;
@@ -111,18 +111,18 @@
   --color-red-11: #ffdcda;
   --color-red-12: #fff3f2;
 
-  --color-grey-01: #000000; /* #000001 */
-  --color-grey-02: #18191a;
-  --color-grey-03: #2a2b2c;
-  --color-grey-04: #3c3d3f;
-  --color-grey-05: #505152;
+  --color-grey-01: #070809;
+  --color-grey-02: #0b0c0d;
+  --color-grey-03: #0e0f10;
+  --color-grey-04: #232424;
+  --color-grey-05: #434444;
   --color-grey-06: #656667;
-  --color-grey-07: #838485;
-  --color-grey-08: #a2a3a4;
-  --color-grey-09: #c2c3c4;
+  --color-grey-07: #898a8b;
+  --color-grey-08: #a6a7a8;
+  --color-grey-09: #c8c9ca;
   --color-grey-10: #e3e4e5;
-  --color-grey-11: #f9fafb;
-  --color-grey-12: #fcffff;
+  --color-grey-11: #eeeff0;
+  --color-grey-12: #f9fafb;
 
   --color-black: #000000;
   --color-white: #ffffff;
@@ -360,118 +360,110 @@
    */
 
   --color-brand: var(--color-azure-04);
+  --color-rule: var(--color-azure-07);
 
-  --color-background: var(--color-grey-11);
   --color-background-emphasis: var(--color-white);
+  --color-background: var(--color-grey-12);
+  --color-text-contrast: var(--color-grey-12);
   --color-background-highlight: var(--color-grey-10);
-
-  --color-text: var(--color-grey-01);
-  --color-text-contrast: var(--color-grey-11);
+  --color-border-light: var(--color-grey-10);
+  --color-border: var(--color-grey-09);
   --color-text-muted: var(--color-grey-06);
+  --color-text: var(--color-grey-03);
 
-  --color-interactive: var(--color-azure-04);
-  --color-interactive-visited: var(--color-violet-04);
-  --color-interactive-focus: var(--color-azure-06);
+  --color-interactive: var(--color-brand);
   --color-interactive-hover: var(--color-azure-03);
+  --color-interactive-focus: var(--color-rose-06);
   --color-interactive-active: var(--color-azure-02);
-
-  --color-interactive-contrast: var(--color-white);
+  --color-interactive-visited: var(--color-violet-05);
 
   --color-interactive-neutral: var(--color-text);
   --color-interactive-neutral-hover: var(--color-interactive);
   --color-interactive-neutral-active: var(--color-interactive-active);
 
-  --color-border: var(--color-grey-09);
-  --color-border-code: var(--color-azure-07);
+  --color-interactive-prose: var(--color-azure-05);
+  --color-interactive-prose-rule-active: var(--color-interactive-active);
+
+  --color-interactive-contrast: var(--color-text-contrast);
 
   --box-shadow: 0.125rem 0.125rem 0.25rem
     color-mix(in srgb, var(--color-black) 08%, transparent);
   --box-shadow-light-source: none;
 
-  --site-header-box-shadow:  0 0 0 var(--border-width) color-mix(in srgb, var(--color-black) 08%, transparent);
+  --color-button-background: var(--color-background-emphasis);
 
-  --color-button-background: var(--color-white);
+  --color-card-background: var(--color-background-emphasis);
+  --color-card-border: var(--color-rule);
+  --color-card-dots-hover: var(--color-rule);
+  --color-card-dots: var(--color-border-light);
+  --color-card-interactive: var(--color-interactive);
+  --color-card-text: var(--color-text);
 
-  --color-card-background: var(--color-white);
-  --color-card-text: var(--color-grey-01);
-  --color-card-interactive: var(--color-azure-04);
-  --color-card-border: var(--color-azure-07);
-  --color-card-dots: var(--color-grey-10);
-  --color-card-dots-hover: var(--color-azure-07);
+  --color-code-border: var(--color-rule);
 
-  --color-copy-interactive: var(--color-azure-04);
-  --color-copy-interactive-hover: var(--color-azure-07);
+  --color-copy-interactive: var(--color-interactive);
+  --color-copy-interactive-hover: var(--color-interactive-hover);
+  --color-copy-text: var(--color-text);
 
-  --color-logo: var(--color-azure-04);
+  --color-logo: var(--color-brand);
 
   --color-site-header-background: var(--color-background);
+  --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-border-light);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-brand: var(--color-azure-07);
+    --color-rule: var(--color-azure-03);
 
-    --color-background: var(--color-grey-02);
-    --color-background-emphasis: color-mix(
-      in srgb,
-      var(--color-text) 2%,
-      transparent
-    );
-    --color-background-highlight: color-mix(
-      in srgb,
-      var(--color-text) 8%,
-      transparent
-    );
-
+    --color-background-emphasis: var(--color-grey-02);
+    --color-background: var(--color-grey-03);
+    --color-text-contrast: var(--color-grey-03);
+    --color-background-highlight: var(--color-grey-04);
+    --color-border-light: var(--color-grey-04);
+    --color-border: var(--color-grey-05);
+    --color-text-muted: var(--color-grey-07);
     --color-text: var(--color-grey-11);
-    --color-text-contrast: var(--color-grey-01);
-    --color-text-muted: color-mix(in srgb, var(--color-text) 52%, transparent);
 
-    --color-interactive: var(--color-azure-07);
+    --color-interactive: var(--color-brand);
+    --color-interactive-hover: var(--color-azure-06);
+    --color-interactive-focus: var(--color-rose-05);
+    --color-interactive-active: var(--color-azure-05);
     --color-interactive-visited: var(--color-violet-07);
-    --color-interactive-focus: var(--color-azure-06);
-    --color-interactive-hover: var(--color-azure-08);
-    --color-interactive-active: var(--color-azure-09);
-
-    --color-interactive-contrast: var(--color-azure-01);
 
     --color-interactive-neutral: var(--color-text);
-    --color-interactive-neutral-hover: color-mix(
-      in srgb,
-      var(--color-text) 84%,
-      transparent
-    );
-    --color-interactive-neutral-active: color-mix(
-      in srgb,
-      var(--color-text) 68%,
-      transparent
-    );
+    --color-interactive-neutral-hover: var(--color-grey-09);
+    --color-interactive-neutral-active: var(--color-grey-08);
 
-    --color-border: color-mix(in srgb, var(--color-text) 16%, transparent);
-    --color-border-code: var(--color-azure-04);
+    --color-interactive-prose: var(--color-interactive);
+    --color-interactive-prose-rule-active: var(--color-rule);
+
+    --color-interactive-contrast: var(--color-text-contrast);
 
     --box-shadow: 0.125rem 0.125rem 0.25rem
       color-mix(in srgb, var(--color-black) 92%, transparent);
-    --box-shadow-light-source: 0.125rem 0.125rem 3rem
-      color-mix(in srgb, var(--color-white) 8%, transparent);
+    --box-shadow-light-source: none;
 
-    --site-header-box-shadow: 0 0 0 var(--outline-width) var(--color-black);
+    --color-button-background: var(--color-background-emphasis);
 
-    --color-button-background: var(--color-grey-02);
+    --color-card-background: var(--color-background-emphasis);
+    --color-card-border: var(--color-rule);
+    --color-card-dots-hover: var(--color-rule);
+    --color-card-dots: var(--color-border-light);
+    --color-card-interactive: var(--color-interactive);
+    --color-card-text: var(--color-text);
 
-    --color-card-background: var(--color-azure-07);
-    --color-card-text: var(--color-grey-01);
-    --color-card-interactive: var(--color-azure-01);
-    --color-card-border: var(--color-white);
-    --color-card-dots: var(--color-azure-04);
-    --color-card-dots-hover: var(--color-white);
+    --color-code-border: var(--color-rule);
 
-    --color-copy-interactive: var(--color-interactive-neutral);
-    --color-copy-interactive-hover: var(--color-interactive-neutral-hover);
+    --color-copy-interactive: var(--color-interactive);
+    --color-copy-interactive-hover: var(--color-interactive-hover);
+    --color-copy-text: var(--color-text);
 
-    --color-logo: var(--color-azure-07);
+    --color-logo: var(--color-white);
 
     --color-site-header-background: var(--color-background);
+    --site-header-box-shadow: 0 0 0 var(--border-width)
+      var(--color-border-light);
   }
 }
 

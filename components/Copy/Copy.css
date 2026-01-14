@@ -44,8 +44,9 @@
 
 .msrd .msrd-Copy-text {
   block-size: var(--button-size);
-  color: var(--color-copy-interactive);
+  color: var(--color-copy-text);
   display: block;
+  font-family: var(--font-family-monospaced);
   font-size: var(--font-01-size);
   inset-block-start: 0;
   inset-inline-start: calc(var(--button-size) - var(--icon-offset));
@@ -94,5 +95,5 @@
 }
 
 .msrd .msrd-Copy:active {
-  --color-border: var(--color-interactive-neutral-active);
+  --color-border: var(--color-interactive-active);
 }

@@ -144,7 +144,7 @@ html {
 @media (min-width: 48em) {
   .msrd .msrd-SiteHeader-link--current {
     text-decoration: underline;
-    text-decoration-color: var(--color-brand);
+    text-decoration-color: var(--color-rule);
     text-decoration-thickness: var(--rule-height);
     text-underline-offset: 0.5em;
   }

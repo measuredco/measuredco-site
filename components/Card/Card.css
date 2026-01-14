@@ -184,6 +184,7 @@
 
 .msrd .msrd-Card-note {
   font-weight: 466;
+  font-family: var(--font-family-monospaced);
   margin-block-start: auto;
 }
 
@@ -194,6 +195,7 @@
 .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
   --arrow-offset: 0.25em;
   content: "→";
+  font-family: var(--font-family);
   inset-inline-start: var(--arrow-offset);
   position: relative;
 }
@@ -236,10 +238,19 @@
 }
 
 .msrd .msrd-Card--graphic {
-  --color-card-background: var(--color-azure-01);
-  --color-card-interactive: var(--color-white);
-  --color-card-text: var(--color-white);
-  background-color: var(--color-azure-01);
+  --color-card-background: var(--color-azure-02);
+  --color-card-border: var(--color-azure-06);
+  --color-card-dots-hover: var(--color-azure-06);
+  --color-card-dots: var(--color-azure-04);
+  --color-card-interactive: var(--color-azure-08);
+  --color-card-text: var(--color-grey-12);
+  @media (prefers-color-scheme: dark) {
+    --color-card-border: var(--color-azure-05);
+    --color-card-dots-hover: var(--color-azure-05);
+    --color-card-dots: var(--color-azure-03);
+    --color-card-interactive: var(--color-azure-07);
+    --color-card-text: var(--color-grey-11);
+  }
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png);
   background-position: center top;
   background-repeat: no-repeat;

@@ -1,68 +1,67 @@
 .msrd .msrd-Surface--dark,
 .msrd .msrd-Surface--graphicDark {
   --color-brand: var(--color-azure-07);
+  --color-rule: var(--color-azure-04);
 
+  --color-background-emphasis: var(--color-azure-02);
   --color-background: var(--color-azure-01);
-  --color-background-emphasis: color-mix(
-    in srgb,
-    var(--color-text) 2%,
-    transparent
-  );
+  --color-text-contrast: var(--color-azure-01);
   --color-background-highlight: color-mix(
     in srgb,
-    var(--color-text) 8%,
+    var(--color-white) 8%,
     transparent
   );
+  --color-border-light: color-mix(in srgb, var(--color-white) 8%, transparent);
+  --color-border: color-mix(in srgb, var(--color-white) 16%, transparent);
+  --color-text-muted: color-mix(in srgb, var(--color-white) 55%, transparent);
+  --color-text: color-mix(in srgb, var(--color-white) 94%, transparent);
 
-  --color-text: var(--color-white);
-  --color-text-contrast: var(--color-grey-01);
-  --color-text-muted: color-mix(in srgb, var(--color-text) 52%, transparent);
-
-  --color-interactive: var(--color-azure-07);
-  --color-interactive-visited: var(--color-violet-07);
-  --color-interactive-focus: var(--color-azure-07);
+  --color-interactive: var(--color-brand);
   --color-interactive-hover: var(--color-azure-08);
+  --color-interactive-focus: var(--color-rose-07);
   --color-interactive-active: var(--color-azure-09);
+  --color-interactive-visited: var(--color-violet-07);
 
-  --color-interactive-contrast: var(--color-azure-01);
-
-  --color-interactive-neutral: var(--color-white);
+  --color-interactive-neutral: var(--color-text);
   --color-interactive-neutral-hover: color-mix(
     in srgb,
-    var(--color-text) 84%,
+    var(--color-white) 81%,
     transparent
   );
   --color-interactive-neutral-active: color-mix(
     in srgb,
-    var(--color-text) 68%,
+    var(--color-white) 68%,
     transparent
   );
 
-  --color-border: color-mix(in srgb, var(--color-text) 16%, transparent);
-  --color-border-code: var(--color-azure-04);
+  --color-interactive-prose: var(--color-interactive);
+  --color-interactive-prose-rule-active: var(--color-rule);
+
+  --color-interactive-contrast: var(--color-text-contrast);
 
   --box-shadow: 0.125rem 0.125rem 0.25rem
-    color-mix(in srgb, var(--color-black) 42%, transparent);
-  --box-shadow-light-source: 0.125rem 0.125rem 3rem
-    color-mix(in srgb, var(--color-white) 8%, transparent);
+    color-mix(in srgb, var(--color-black) 08%, transparent);
+  --box-shadow-light-source: none;
 
-  --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-black);
+  --color-button-background: var(--color-background-emphasis);
 
-  --color-button-background: var(--color-azure-02);
+  --color-card-background: var(--color-background-emphasis);
+  --color-card-border: var(--color-rule);
+  --color-card-dots-hover: var(--color-rule);
+  --color-card-dots: var(--color-azure-03);
+  --color-card-interactive: var(--color-interactive);
+  --color-card-text: var(--color-text);
 
-  --color-card-background: var(--color-azure-07);
-  --color-card-text: var(--color-grey-01);
-  --color-card-interactive: var(--color-azure-01);
-  --color-card-border: var(--color-white);
-  --color-card-dots: var(--color-azure-04);
-  --color-card-dots-hover: var(--color-white);
+  --color-code-border: var(--color-rule);
 
-  --color-copy-interactive: var(--color-interactive-neutral);
-  --color-copy-interactive-hover: var(--color-interactive-neutral-hover);
+  --color-copy-interactive: var(--color-interactive);
+  --color-copy-interactive-hover: var(--color-interactive-hover);
+  --color-copy-text: var(--color-interactive-neutral);
 
   --color-logo: var(--color-white);
 
   --color-site-header-background: transparent;
+  --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-rule);
 }
 
 .msrd .msrd-Surface--dark,
@@ -72,6 +71,7 @@
 }
 
 .msrd .msrd-Surface--graphicDark {
+  background-attachment: fixed;
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png),
     url(https://res.cloudinary.com/measuredco/image/upload/v1732635074/site/site-background-repeat_kjbjx5.png);
   background-position: center -1rem, center top;
@@ -83,21 +83,4 @@
   .msrd .msrd-Surface--graphicDark {
     background-position: center top;
   }
-}
-
-.msrd .msrd-Surface--dark a:not([class]),
-.msrd .msrd-Surface--graphicDark a:not([class]) {
-  color: var(--color-interactive-neutral);
-}
-
-@media (hover: hover) {
-  .msrd .msrd-Surface--dark a:not([class]):hover,
-  .msrd .msrd-Surface--graphicDark a:not([class]):hover {
-    color: var(--color-interactive-neutral-hover);
-  }
-}
-
-.msrd .msrd-Surface--dark a:not([class]):active,
-.msrd .msrd-Surface--graphicDark a:not([class]):active {
-  color: var(--color-interactive-neutral-active);
 }
