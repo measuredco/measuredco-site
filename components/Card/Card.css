@@ -256,3 +256,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.msrd .msrd-Surface--dark .msrd-Card--graphic,
+.msrd .msrd-Surface--graphicDark .msrd-Card--graphic {
+  --color-card-background: var(--color-background-emphasis);
+  --color-card-border: var(--color-rule);
+  --color-card-dots-hover: var(--color-rule);
+  --color-card-dots: var(--color-azure-03);
+  --color-card-interactive: var(--color-interactive);
+  --color-card-text: var(--color-text);
+}

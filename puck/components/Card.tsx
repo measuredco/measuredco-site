@@ -4,6 +4,7 @@ import { Card as _Card } from "../../components";
 
 export type CardProps = {
   description: string;
+  graphic: boolean;
   headingLevel: "1" | "2" | "3" | "4" | "5" | "6" | "";
   link: string;
   note: string;
@@ -13,6 +14,7 @@ export type CardProps = {
 export const Card: ComponentConfig<CardProps> = {
   defaultProps: {
     description: "Description",
+    graphic: false,
     headingLevel: "3",
     link: "",
     note: "",
@@ -43,10 +45,18 @@ export const Card: ComponentConfig<CardProps> = {
         { label: "H6", value: "6" },
       ],
     },
+    graphic: {
+      type: "radio",
+      options: [
+        { label: "true", value: true },
+        { label: "false", value: false },
+      ],
+    },
   },
-  render: ({ description, headingLevel, link, note, title }) => (
+  render: ({ description, graphic, headingLevel, link, note, title }) => (
     <_Card
       description={description}
+      graphic={graphic}
       headingLevel={headingLevel}
       link={link}
       note={note}
