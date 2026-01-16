@@ -423,7 +423,7 @@
     --color-border-light: var(--color-grey-04);
     --color-border: var(--color-grey-05);
     --color-text-muted: var(--color-grey-07);
-    --color-text: var(--color-grey-11);
+    --color-text: var(--color-grey-10);
 
     --color-interactive: var(--color-brand);
     --color-interactive-hover: var(--color-azure-06);
@@ -459,7 +459,7 @@
     --color-copy-interactive-hover: var(--color-interactive-hover);
     --color-copy-text: var(--color-text);
 
-    --color-logo: var(--color-white);
+    --color-logo: var(--color-brand);
 
     --color-site-header-background: var(--color-background);
     --site-header-box-shadow: 0 0 0 var(--border-width)
