@@ -98,6 +98,7 @@
   font-weight: 433;
   line-height: var(--font-05-line-height);
   margin-block: 0;
+  text-wrap: balance;
 }
 
 .msrd .msrd-Card-heading a {
