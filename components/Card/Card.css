@@ -240,17 +240,12 @@
 
 .msrd .msrd-Card--graphic {
   --color-card-background: var(--color-azure-02);
-  --color-card-border: var(--color-azure-06);
-  --color-card-dots-hover: var(--color-azure-06);
   --color-card-dots: var(--color-azure-04);
-  --color-card-interactive: var(--color-azure-08);
+  --color-card-interactive: var(--color-azure-07);
   --color-card-text: var(--color-grey-12);
   @media (prefers-color-scheme: dark) {
-    --color-card-border: var(--color-azure-05);
-    --color-card-dots-hover: var(--color-azure-05);
-    --color-card-dots: var(--color-azure-03);
-    --color-card-interactive: var(--color-azure-07);
-    --color-card-text: var(--color-grey-11);
+    --color-card-dots: var(--color-azure-02);
+    --color-card-text: var(--color-grey-10);
   }
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png);
   background-position: center top;
