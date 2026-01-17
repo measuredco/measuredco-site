@@ -111,7 +111,7 @@
 
 .msrd .msrd-NewIdentityProcess-card:nth-child(6) {
   background-color: var(--color-azure-04);
-  color: var(--color-grey-12);
+  color: var(--color-grey-11);
   inline-size: calc((280 / 16) * 1rem);
 }
 
