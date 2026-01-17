@@ -48,8 +48,8 @@ export const Card: ComponentConfig<CardProps> = {
     graphic: {
       type: "radio",
       options: [
-        { label: "true", value: true },
-        { label: "false", value: false },
+        { label: "Regular", value: false },
+        { label: "Graphic", value: true },
       ],
     },
   },

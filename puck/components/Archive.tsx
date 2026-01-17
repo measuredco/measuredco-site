@@ -60,10 +60,10 @@ export const Archive: ComponentConfig<ArchiveProps> = {
           type: "text",
         },
         graphic: {
-          type: "radio",
+          type: "select",
           options: [
-            { label: "true", value: true },
-            { label: "false", value: false },
+            { label: "Regular", value: false },
+            { label: "Graphic", value: true },
           ],
         },
       },
