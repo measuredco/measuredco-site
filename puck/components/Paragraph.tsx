@@ -12,7 +12,7 @@ export interface ParagraphProps extends _ParagraphProps {
 export const Paragraph: ComponentConfig<ParagraphProps> = {
   defaultProps: {
     align: "left",
-    maxWidth: null,
+    measured: false,
     size: "",
     text: "Paragraph",
   },
@@ -34,12 +34,16 @@ export const Paragraph: ComponentConfig<ParagraphProps> = {
         { label: "Right", value: "right" },
       ],
     },
-    maxWidth: {
-      type: "number",
+    measured: {
+      type: "select",
+      options: [
+        { label: "Full Width", value: false },
+        { label: "Measured", value: true },
+      ],
     },
   },
-  render: ({ align, maxWidth, size, text }) => (
-    <_Paragraph align={align} maxWidth={maxWidth} size={size}>
+  render: ({ align, measured, size, text }) => (
+    <_Paragraph align={align} measured={measured} size={size}>
       {text}
     </_Paragraph>
   ),

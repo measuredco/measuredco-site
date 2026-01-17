@@ -1,7 +1,6 @@
 "use client";
 
 import classNames from "classnames";
-import type { Schema } from "hast-util-sanitize";
 import { useRouter } from "next/navigation";
 import {
   ElementType,
@@ -11,7 +10,7 @@ import {
   useState,
 } from "react";
 
-import { processMarkdown, sanitizeDefault } from "../../lib/markdown";
+import { processMarkdown } from "../../lib/markdown";
 
 import "./hljs.css";
 import "./Markdown.css";
@@ -20,7 +19,6 @@ export type MarkdownProps = {
   align?: "left" | "center" | "right";
   inline?: boolean;
   measured?: boolean;
-  sanitizeOptions?: Schema;
 };
 
 const Markdown = ({
@@ -28,12 +26,11 @@ const Markdown = ({
   children,
   inline = false,
   measured = false,
-  sanitizeOptions = sanitizeDefault,
 }: PropsWithChildren<MarkdownProps>) => {
   let Element: ElementType = "div";
   const router = useRouter();
   const [textProcessed, setTextProcessed] = useState(
-    processMarkdown(children?.toString(), sanitizeOptions)
+    processMarkdown(children?.toString(), inline),
   );
 
   if (inline) {
@@ -41,7 +38,7 @@ const Markdown = ({
   }
 
   useEffect(() => {
-    setTextProcessed(processMarkdown(children?.toString(), sanitizeOptions));
+    setTextProcessed(processMarkdown(children?.toString(), inline));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children]);
 
