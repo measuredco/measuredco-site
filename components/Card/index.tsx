@@ -53,7 +53,7 @@ const Card = ({
           <>
             <Space size="03" />
             <div className="msrd-Card-note">
-              <Paragraph size="small">{note}</Paragraph>
+              <span>{note}</span>
             </div>
           </>
         ) : null}

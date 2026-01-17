@@ -24,7 +24,9 @@ const Aspect = ({ description, image }: AspectProps) => (
       <Rule />
       <Space size="06" />
     </div>
-    <p className="msrd-NewIdentityAspect-description">{description}</p>
+    <p className="msrd-NewIdentityAspect-description msrd-u-prose">
+      {description}
+    </p>
   </div>
 );
 

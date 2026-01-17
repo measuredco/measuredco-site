@@ -67,6 +67,7 @@
 }
 
 .msrd .msrd-Hero-description {
+  color: var(--color-text-prose);
   font-size: var(--font-03-size);
   line-height: var(--font-03-line-height);
   margin-block-end: var(--space-vertical-04);

@@ -39,7 +39,7 @@ export function Client({
                 style={{
                   alignItems: "center",
                   background: "white",
-                  color: "var(--color-grey-03)",
+                  color: "var(--color-grey-02)",
                   display: "flex",
                   height: "100%",
                   justifyContent: "center",

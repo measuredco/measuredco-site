@@ -1,4 +1,5 @@
 .msrd .msrd-Markdown {
+  color: var(--color-text-prose);
   font-size: var(--font-03-size);
   line-height: var(--font-03-line-height);
 }
@@ -26,6 +27,10 @@
 .msrd .msrd-Markdown a {
   color: var(--color-interactive-prose);
   text-decoration: none;
+}
+
+.msrd .msrd-Markdown a:visited {
+  color: var(--color-interactive-visited);
 }
 
 @media (hover: hover) {
@@ -90,6 +95,7 @@
   font-feature-settings: normal;
   font-weight: inherit;
   line-height: inherit;
+  outline: 0.0625rem solid var(--color-code-highlight-border);
   padding-block-end: 0.055em;
   padding-inline-end: var(--padding-x-code-inline);
   padding-inline-start: var(--padding-x-code-inline);
@@ -146,9 +152,19 @@
   inline-size: 100%;
   line-height: var(--font-02-line-height);
   margin-block-end: var(--space-vertical);
+  outline: none;
   overflow-x: auto;
   padding: var(--space-vertical);
   position: relative;
+}
+
+.msrd .msrd-Markdown h1,
+.msrd .msrd-Markdown h2,
+.msrd .msrd-Markdown h3,
+.msrd .msrd-Markdown h4,
+.msrd .msrd-Markdown h5,
+.msrd .msrd-Markdown h6 {
+  color: var(--color-text);
 }
 
 .msrd .msrd-Markdown h6 {
@@ -388,19 +404,19 @@
   word-wrap: normal;
 }
 
-.msrd .msrd-Markdown #footnote-label + ol {
+.msrd .msrd-Markdown .footnotes ol {
   font-size: var(--font-02-size);
   line-height: var(--font-02-line-height);
   padding-block-start: var(--space-vertical-03);
 }
 
 @media (min-width: 80em) {
-  .msrd .msrd-Markdown #footnote-label + ol {
+  .msrd .msrd-Markdown .footnotes + ol {
     margin-inline-start: calc(30rem / -16);
   }
 }
 
-.msrd .msrd-Markdown #footnote-label + ol::before {
+.msrd .msrd-Markdown .footnotes ol::before {
   block-size: var(--rule-height);
   border: var(--border-width) solid var(--color-rule);
   content: "";
@@ -411,29 +427,33 @@
 }
 
 @media (min-width: 80em) {
-  .msrd .msrd-Markdown #footnote-label + ol::before {
+  .msrd .msrd-Markdown .footnotes ol::before {
     inset-inline-start: calc(30rem / 16);
   }
 }
 
-.msrd .msrd-Markdown #footnote-label + ol > li {
+.msrd .msrd-Markdown .footnotes ol > li {
   padding-inline-start: calc(27rem / 16);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown #footnote-label + ol > li {
+  .msrd .msrd-Markdown .footnotes ol > li {
     padding-inline-start: calc(30rem / 16);
   }
 }
 
-.msrd .msrd-Markdown #footnote-label + ol > li::before {
+.msrd .msrd-Markdown .footnotes ol > li::before {
   line-height: calc(var(--space-scale-vertical) / 13);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown #footnote-label + ol > li::before {
+  .msrd .msrd-Markdown .footnotes ol > li::before {
     line-height: calc(var(--space-scale-vertical) / 14);
   }
+}
+
+.msrd .msrd-Markdown .data-footnote-backref:visited {
+  color: var(--color-interactive-prose);
 }
 
 .msrd .msrd-Markdown [aria-describedby="footnote-label"]::before {

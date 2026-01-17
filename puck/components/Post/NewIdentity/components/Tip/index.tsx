@@ -23,7 +23,9 @@ const Tip = ({ description, image, title }: TipProps) => (
     <Heading level="3" size="3">
       {title}
     </Heading>
-    <p className="msrd-NewIdentityTip-description">{description}</p>
+    <p className="msrd-NewIdentityTip-description msrd-u-prose">
+      {description}
+    </p>
   </div>
 );
 

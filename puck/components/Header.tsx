@@ -67,7 +67,7 @@ export const Header: ComponentConfig<HeaderProps> = {
       {description ? (
         <>
           <Space size={spaceSize[size]} />
-          <Paragraph>{description}</Paragraph>
+          <Paragraph prose={false}>{description}</Paragraph>
         </>
       ) : null}
     </>

@@ -11,7 +11,10 @@
   box-sizing: border-box;
   color: var(--color-text);
   font-family: var(--font-family);
-  font-feature-settings: "calt" 1, "ccmp" 1, "ss03" 1;
+  font-feature-settings:
+    "calt" 1,
+    "ccmp" 1,
+    "ss03" 1;
   font-optical-sizing: none;
   line-height: var(--line-height);
   margin: 0;
@@ -81,6 +84,34 @@
 
 .msrd-u-overflowHidden {
   overflow: hidden;
+}
+
+.msrd-u-prose {
+  color: var(--color-text-prose);
+
+  a:not([class]) {
+    color: var(--color-interactive-prose);
+  }
+
+  a:not([class]):visited {
+    color: var(--color-interactive-visited);
+  }
+
+  @media (hover: hover) {
+    a:not([class]):hover {
+      color: var(--color-interactive-prose);
+      text-decoration: underline;
+      text-decoration-color: var(--color-rule);
+      text-decoration-thickness: 0.09em;
+      text-underline-offset: 0.34em;
+    }
+  }
+
+  a:not([class]):active {
+    color: var(--color-interactive-active);
+    text-decoration-color: var(--color-interactive-prose-rule-active);
+    text-underline-offset: 0.39em;
+  }
 }
 
 .msrd-u-visuallyHidden {
