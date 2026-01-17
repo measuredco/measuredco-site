@@ -121,7 +121,7 @@
   --color-grey-08: #a6a7a8;
   --color-grey-09: #c8c9ca;
   --color-grey-10: #e3e4e5;
-  --color-grey-11: #eeeff0;
+  --color-grey-11: #f2f3f4;
   --color-grey-12: #f9fafb;
 
   --color-black: #000000;
@@ -426,7 +426,7 @@
     --color-border: var(--color-grey-05);
     --color-text-muted: var(--color-grey-07);
     --color-text-prose: var(--color-grey-10);
-    --color-text: var(--color-grey-12);
+    --color-text: var(--color-grey-11);
 
     --color-interactive: var(--color-brand);
     --color-interactive-hover: var(--color-azure-06);
@@ -434,7 +434,7 @@
     --color-interactive-active: var(--color-azure-05);
     --color-interactive-visited: var(--color-violet-06);
 
-    --color-interactive-neutral: var(--color-text);
+    --color-interactive-neutral: var(--color-grey-12);
     --color-interactive-neutral-hover: var(--color-grey-09);
     --color-interactive-neutral-active: var(--color-grey-08);
 

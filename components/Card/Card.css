@@ -242,7 +242,7 @@
   --color-card-background: var(--color-azure-02);
   --color-card-dots: var(--color-azure-04);
   --color-card-interactive: var(--color-azure-07);
-  --color-card-text: var(--color-grey-12);
+  --color-card-text: var(--color-grey-11);
   --color-text-prose: var(--color-grey-10);
   @media (prefers-color-scheme: dark) {
     --color-card-dots: var(--color-azure-02);

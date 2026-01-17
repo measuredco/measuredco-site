@@ -20,7 +20,7 @@
 
 .msrd .msrd-NewIdentity-surfaceDark {
   --color-background: var(--color-azure-04);
-  --color-text: var(--color-grey-12);
+  --color-text: var(--color-grey-11);
   background-color: var(--color-background);
   color: var(--color-text);
 }
