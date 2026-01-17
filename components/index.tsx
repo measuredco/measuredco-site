@@ -3,6 +3,7 @@ export { default as Base } from "./Base";
 export { default as Card } from "./Card";
 export { default as Contact } from "./Contact";
 export { default as Copy } from "./Copy";
+export { default as Date } from "./Date";
 export { default as Rule } from "./Rule";
 export { default as Grid, gridClassName } from "./Grid";
 export { default as Heading } from "./Heading";

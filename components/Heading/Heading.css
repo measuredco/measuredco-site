@@ -109,11 +109,19 @@
   }
 }
 
+/* .msrd .msrd-Heading--display1 {
+  font-size: var(--font-10-size);
+  font-weight: 300;
+  line-height: var(--font-10-line-height);
+}
+
+@media (min-width: 30em) { */
 .msrd .msrd-Heading--display1 {
   font-size: var(--font-12-size);
   font-weight: 200;
   line-height: var(--font-12-line-height);
 }
+/* } */
 
 @media (min-width: 48em) {
   .msrd .msrd-Heading--display1 {

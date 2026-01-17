@@ -1,0 +1,25 @@
+.msrd-Date {
+  font-size: var(--font-03-size);
+  line-height: var(--font-03-line-height);
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Date {
+    font-size: var(--font-04-size);
+    line-height: var(--font-04-line-height-large);
+  }
+}
+
+.msrd-Date-label {
+  &::after {
+    content: ":";
+  }
+
+  @media (min-width: 48em) {
+    display: block;
+
+    &::after {
+      content: "";
+    }
+  }
+}
