@@ -66,6 +66,7 @@
 }
 
 .msrd strong {
+  color: var(--color-text);
   font-weight: 566;
 }
 

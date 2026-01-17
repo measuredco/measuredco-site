@@ -26,6 +26,7 @@ import { Post, PostProps } from "./components/Post";
 import { Profile, ProfileProps } from "./components/Profile";
 import { Section, SectionProps } from "./components/Section";
 import { Space, SpaceProps } from "./components/Space";
+import { Work, WorkProps } from "./components/Work";
 
 export type Props = {
   Archive: ArchiveProps;
@@ -45,6 +46,7 @@ export type Props = {
   Profile: ProfileProps;
   Section: SectionProps;
   Space: SpaceProps;
+  Work: WorkProps;
 };
 
 type RootProps = {
@@ -58,7 +60,7 @@ export type UserData = Data<Props, RootProps>;
 export const config: Config<Props, RootProps> = {
   categories: {
     template: {
-      components: ["Archive", "Post"],
+      components: ["Archive", "Post", "Work"],
     },
     layout: {
       components: ["Grid", "GridItem", "Section", "Space"],
@@ -85,6 +87,7 @@ export const config: Config<Props, RootProps> = {
     Profile,
     Section,
     Space,
+    Work,
   },
   root: {
     defaultProps: {
