@@ -69,7 +69,7 @@ export const Post: ComponentConfig<PostProps> = {
                 {title}
               </Heading>
               <Space size="05" />
-              <Paragraph size="small">{`${date} ${
+              <Paragraph prose={false} size="small">{`${date} ${
                 modifiedDate ? ` _(updated ${modifiedDate})_` : ""
               } • ${
                 authorUrl ? `[${author}](${authorUrl})` : author
@@ -77,7 +77,7 @@ export const Post: ComponentConfig<PostProps> = {
               <Space size="05" />
               {standfirst ? (
                 <>
-                  <Paragraph measured size="large">
+                  <Paragraph measured prose={false} size="large">
                     {standfirst}
                   </Paragraph>
                   <Space size="06" />

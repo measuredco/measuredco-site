@@ -15,6 +15,10 @@
     max-inline-size: 100%;
     padding-block-end: calc((168 / 16) * 1rem);
   }
+
+  p {
+    color: var(--color-grey-10);
+  }
 }
 
 .msrd .msrd-NewIdentityTypography-heading {
@@ -23,6 +27,6 @@
   }
 }
 
-.msrd .msrd-NewIdentityTypography-specimen {
+.msrd .msrd-NewIdentityTypography-specimen * {
   color: var(--color-azure-08);
 }

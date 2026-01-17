@@ -1,8 +1,15 @@
 .msrd .msrd-Paragraph {
+  --color-interactive-prose: var(--color-interactive);
+  --color-interactive-visited: var(--color-interactive);
   font-size: var(--font-03-size);
   line-height: var(--font-03-line-height);
   margin: 0;
   text-wrap: pretty;
+}
+
+.msrd .msrd-Paragraph--prose {
+  --color-interactive-prose: inherit;
+  --color-interactive-visited: inherit;
 }
 
 @media (min-width: 48em) {
@@ -18,6 +25,7 @@
 }
 
 .msrd .msrd-Paragraph--large {
+  --color-text-prose: var(--color-text);
   font-size: var(--font-04-size);
   line-height: var(--font-04-line-height);
 }
@@ -50,5 +58,5 @@
 }
 
 .msrd .msrd-Paragraph--muted {
-  color: var(--color-text-muted);
+  --color-text-prose: var(--color-text-muted);
 }

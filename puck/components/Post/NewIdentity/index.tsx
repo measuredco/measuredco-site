@@ -36,7 +36,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
               <Space />
               <Rule />
               <Space size="06" />
-              <p>
+              <p className="msrd-u-prose">
                 Our overarching purpose is to elevate the quality, consistency
                 and accessibility of UI across the web by helping our clients
                 craft exceptional digital experiences. It’s important that our
@@ -98,7 +98,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
             <Space />
             <Rule />
             <Space size="06" />
-            <p>
+            <p className="msrd-u-prose">
               We partnered with{" "}
               <a href="https://www.linkedin.com/in/james-edward-cross-43269317/">
                 James Cross
@@ -108,20 +108,20 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
               and art direction, and his expertise was invaluable.
             </p>
             <Space />
-            <p>
+            <p className="msrd-u-prose">
               We kicked off the process with open-ended exploratory work:
               reading, research and prototyping ideas in Figma. We wanted the
               identity to come from us. This work was then distilled into the
               brief that we gave to James.
             </p>
             <Space />
-            <p>
+            <p className="msrd-u-prose">
               From there, the process was collaborative and iterative. James
               worked in rounds, presenting a number of options in the early
               stages, and then iterating on the preferred routes.
             </p>
             <Space />
-            <p>
+            <p className="msrd-u-prose">
               At each stage, James would send over the latest designs for us to
               look at. Once we’d had a chance to digest them, we’d jump on a
               call where James would present the thinking behind them, and we’d
@@ -129,7 +129,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
               stage.
             </p>
             <Space />
-            <p>
+            <p className="msrd-u-prose">
               We went through three or four rounds, starting with the key
               concepts before arriving at the last details, and ultimately a
               system that felt right.
@@ -153,7 +153,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
           The corner
         </Heading>
         <Space />
-        <p className="msrd-NewIdentity-callout">
+        <p className="msrd-NewIdentity-callout msrd-u-prose">
           At the heart of the identity is a simple shape we call the corner.
           This became the foundation for everything else — the logo, UI curves,
           background patterns, and more. It’s a versatile device that allows us
@@ -228,21 +228,21 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
                 Where next?
               </Heading>
               <Space />
-              <p>
+              <p className="msrd-u-prose">
                 The new visual identity is systematic, intentional, and built to
                 last. It’s professional, clean, and flexible enough to evolve
                 with us as we grow. We’ve already applied it to our website and
                 social presences, where it’s been pleasingly well-received.
               </p>
               <Space />
-              <p>
+              <p className="msrd-u-prose">
                 It’s designed to be flexible, so we can apply it to everything
                 from physical media to video and animation if and when we need.
                 We’re excited to see how it evolves as we continue to grow and
                 experiment.
               </p>
               <Space />
-              <p>
+              <p className="msrd-u-prose">
                 We’re pleased to finally have a brand that feels like us, so
                 thanks go to James for his excellent work. We’ll share more
                 about how we implemented the new identity soon.
@@ -264,7 +264,10 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
           Visual identity tips
         </Heading>
         <Space />
-        <p className="msrd-NewIdentity-callout" style={{ maxWidth: "35em" }}>
+        <p
+          className="msrd-NewIdentity-callout msrd-u-prose"
+          style={{ maxWidth: "35em" }}
+        >
           To wrap up, here are few tips to consider if you’re embarking on a
           visual identity refresh for your brand. These are things that worked
           well for us.

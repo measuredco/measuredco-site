@@ -11,6 +11,7 @@ export type ParagraphProps = {
   align?: "left" | "center" | "right";
   measured?: boolean;
   muted?: boolean;
+  prose?: boolean;
   size?: "" | "small" | "large";
 };
 
@@ -19,6 +20,7 @@ const Paragraph = ({
   children,
   measured,
   muted,
+  prose = true,
   size = "",
 }: PropsWithChildren<ParagraphProps>) => (
   <p
@@ -26,6 +28,7 @@ const Paragraph = ({
       "msrd-Paragraph": true,
       "msrd-Paragraph--measured": measured,
       "msrd-Paragraph--muted": muted,
+      "msrd-Paragraph--prose": prose,
       [`msrd-Paragraph--${size}`]: size,
       [`msrd-Paragraph--${align}`]: align && align !== "left",
     })}

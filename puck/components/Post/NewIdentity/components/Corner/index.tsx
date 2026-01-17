@@ -48,7 +48,7 @@ const Corner = () => (
       </Grid.Item>
       <Grid.Item colSpan="12">
         <Space />
-        <p className="msrd-NewIdentityCorner-description">
+        <p className="msrd-NewIdentityCorner-description msrd-u-prose">
           The corner is the foundation of the Measured identity and visual
           language. It is the core component used in the logo and has multiple
           applications across the visual language system.

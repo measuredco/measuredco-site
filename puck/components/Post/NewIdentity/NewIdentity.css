@@ -14,22 +14,13 @@
   }
 }
 
-@media (hover: hover) {
-  .msrd .msrd-NewIdentity a:not([class]):hover {
-    text-decoration: underline;
-    text-decoration-thickness: 0.09em;
-    text-underline-offset: 0.34em;
-  }
-}
-
 /**
  * NewIdentity surfaces
  */
 
 .msrd .msrd-NewIdentity-surfaceDark {
   --color-background: var(--color-azure-04);
-  --color-text: var(--color-white);
-  --color-text-muted: hotpink;
+  --color-text: var(--color-grey-12);
   background-color: var(--color-background);
   color: var(--color-text);
 }
@@ -48,7 +39,7 @@
   line-height: var(--font-04-line-height);
 
   @media (prefers-color-scheme: dark) {
-    --color-text: var(--color-grey-03);
+    --color-text: var(--color-grey-02);
     --color-interactive: var(--color-white);
     --color-interactive-hover: color-mix(
       in srgb,
@@ -113,6 +104,14 @@
   margin: 0 auto;
   max-inline-size: 38em;
   text-align: center;
+
+  @media (hover: hover) {
+    a:not([class]):hover {
+      text-decoration: underline;
+      text-decoration-thickness: 0.09em;
+      text-underline-offset: 0.34em;
+    }
+  }
 }
 
 .msrd .msrd-NewIdentity-surfaceLight .msrd-NewIdentity-callout {
@@ -164,7 +163,8 @@
   }
 
   @media (min-width: 121.75em) {
-    background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png),
+    background-image:
+      url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png),
       linear-gradient(to right, transparent 75%, var(--color-azure-03) 75%);
   }
 }
