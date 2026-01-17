@@ -5,12 +5,13 @@ import remarkRehype from "remark-rehype";
 import remarkParse from "remark-parse";
 import rehypeColorChips from "rehype-color-chips";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
 import { unified } from "unified";
 
-export const sanitizeDefault: Schema = deepmerge(defaultSchema, {
+const sanitizeDefault: Schema = deepmerge(defaultSchema, {
   attributes: {
     code: ["className", /^language-./],
     span: [
@@ -21,17 +22,20 @@ export const sanitizeDefault: Schema = deepmerge(defaultSchema, {
   clobberPrefix: "",
 }) as Schema;
 
-export const processMarkdown = (
-  markdown: string,
-  sanitizeOptions: Schema = sanitizeDefault
-) =>
+const sanitizeInline: Schema = {
+  ...sanitizeDefault,
+  tagNames: ["a", "b", "br", "code", "del", "em", "strong", "sup"],
+};
+
+export const processMarkdown = (markdown: string, inline?: boolean) =>
   unified()
     .use(remarkParse)
     .use(remarkGfm)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeSlug)
     .use(rehypeColorChips)
     .use(rehypeHighlight)
-    .use(rehypeSanitize, sanitizeOptions)
+    .use(rehypeSanitize, inline ? sanitizeInline : sanitizeDefault)
     .use(rehypeStringify)
     .processSync(markdown);
