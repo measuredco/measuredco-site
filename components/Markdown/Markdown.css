@@ -411,7 +411,7 @@
 }
 
 @media (min-width: 80em) {
-  .msrd .msrd-Markdown .footnotes + ol {
+  .msrd .msrd-Markdown .footnotes ol {
     margin-inline-start: calc(30rem / -16);
   }
 }
