@@ -1,0 +1,54 @@
+.msrd .msrd-Blockquote {
+  font-size: var(--font-04-size);
+  line-height: var(--font-04-line-height);
+  margin-block: var(--space-vertical-06);
+}
+
+.msrd .msrd-Blockquote:first-child {
+  margin-block-start: 0;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Blockquote {
+    font-size: var(--font-05-size);
+    line-height: var(--font-05-line-height);
+  }
+}
+
+.msrd .msrd-Blockquote blockquote {
+  margin: 0;
+}
+
+.msrd .msrd-Blockquote-quote {
+  --color-text-prose: var(--color-text);
+  margin-block-start: 0;
+  margin-block-end: var(--space-vertical-04);
+  quotes: "“" "”" "‘" "’";
+}
+
+.msrd .msrd-Blockquote-quote::before {
+  content: open-quote;
+  margin-inline-start: -0.81ch;
+}
+
+.msrd .msrd-Blockquote-quote::after {
+  content: close-quote;
+}
+
+.msrd .msrd-Blockquote-cite {
+  font-size: var(--font-02-size);
+  line-height: var(--font-02-line-height);
+  margin-block: 0;
+  text-align: end;
+}
+
+@media (min-width: 48em) {
+  .msrd .msrd-Blockquote-cite {
+    font-size: var(--font-03-size);
+    line-height: var(--font-03-line-height);
+  }
+}
+
+.msrd .msrd-Blockquote--measured {
+  max-inline-size: calc(var(--measured) * 0.9);
+}

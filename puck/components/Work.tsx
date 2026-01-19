@@ -2,6 +2,7 @@ import { ComponentConfig } from "@measured/puck";
 
 import {
   Banner,
+  Blockquote,
   BannerProps,
   Date,
   Grid,
@@ -14,16 +15,23 @@ import {
 } from "../../components";
 
 export type WorkProps = {
+  blockquote: {
+    cite: string;
+    quote: string;
+  };
   content: string;
   date: string;
   image: BannerProps;
-  quote: string;
   standfirst: string;
   title: string;
 };
 
 export const Work: ComponentConfig<WorkProps> = {
   defaultProps: {
+    blockquote: {
+      cite: "",
+      quote: "",
+    },
     content: "",
     date: "",
     image: {
@@ -31,7 +39,6 @@ export const Work: ComponentConfig<WorkProps> = {
       anchor: "C",
       src: "",
     },
-    quote: "",
     standfirst: "Standfirst",
     title: "Title",
   },
@@ -60,10 +67,16 @@ export const Work: ComponentConfig<WorkProps> = {
         src: { type: "text" },
       },
     },
-    quote: { type: "textarea" },
+    blockquote: {
+      type: "object",
+      objectFields: {
+        quote: { type: "text" },
+        cite: { type: "text" },
+      },
+    },
     content: { type: "textarea" },
   },
-  render: ({ content, date, image, standfirst, title }) => {
+  render: ({ content, blockquote, date, image, standfirst, title }) => {
     return (
       <>
         <Space size="09" />
@@ -92,10 +105,15 @@ export const Work: ComponentConfig<WorkProps> = {
           <Space size="06" />
         </Section>
         <Banner alt={image.alt} anchor={image.anchor} src={image.src} />
-        <Space size="06" />
+        <Space size="07" />
         <Section>
           <Grid>
             <Grid.Item colSpan="7" colSpanNarrow="11" colStart="3">
+              {blockquote?.quote ? (
+                <Blockquote cite={blockquote.cite} measured>
+                  {blockquote.quote}
+                </Blockquote>
+              ) : null}
               <Markdown measured>{content}</Markdown>
             </Grid.Item>
           </Grid>
