@@ -1,5 +1,6 @@
 export { default as Banner } from "./Banner";
 export { default as Base } from "./Base";
+export { default as Blockquote } from "./Blockquote";
 export { default as Card } from "./Card";
 export { default as Contact } from "./Contact";
 export { default as Copy } from "./Copy";
