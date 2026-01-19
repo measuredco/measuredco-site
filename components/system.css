@@ -409,6 +409,10 @@
 
   --color-logo: var(--color-brand);
 
+  @media (forced-colors: active) {
+    --color-logo: CanvasText;
+  }
+
   --color-site-header-background: var(--color-background);
   --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-border-light);
 }
@@ -464,6 +468,10 @@
     --color-copy-text: var(--color-text);
 
     --color-logo: var(--color-brand);
+
+    @media (forced-colors: active) {
+      --color-logo: CanvasText;
+    }
 
     --color-site-header-background: var(--color-background);
     --site-header-box-shadow: 0 0 0 var(--border-width)

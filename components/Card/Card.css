@@ -104,6 +104,10 @@
 .msrd .msrd-Card-heading a {
   color: inherit;
   position: static;
+
+  @media (forced-colors: active) {
+    color: CanvasText;
+  }
 }
 
 .msrd .msrd-Card-heading a:hover,
@@ -136,6 +140,10 @@
   border-radius: 50%;
   content: "";
   inline-size: var(--space-horizontal-03);
+
+  @media (forced-colors: active) {
+    background-color: ButtonBorder;
+  }
 }
 
 @media (hover: hover) {
@@ -143,6 +151,10 @@
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner,
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
     background-color: var(--color-card-dots-hover);
+
+    @media (forced-colors: active) {
+      background-color: ButtonBorder;
+    }
   }
 
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before {
@@ -191,6 +203,10 @@
 
 .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note {
   color: var(--color-card-interactive);
+
+  @media (forced-colors: active) {
+    color: LinkText;
+  }
 }
 
 .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
@@ -223,7 +239,8 @@
   .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-note span::after {
     inset-inline-start: var(--arrow-offset);
     opacity: 1;
-    transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+    transition:
+      0.1s opacity var(--easing-cubic-bezier-easy-ease),
       0.2s inset-inline-start var(--easing-cubic-bezier-easy-ease);
   }
 
@@ -232,7 +249,8 @@
       .msrd-Card:has(.msrd-Card-heading a):hover
       .msrd-Card-note
       span::after {
-      transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+      transition:
+        0.1s opacity var(--easing-cubic-bezier-easy-ease),
         0s inset-inline-start var(--easing-cubic-bezier-easy-ease);
     }
   }
@@ -251,6 +269,10 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (forced-colors: active) {
+    background-image: none;
+  }
 }
 
 .msrd .msrd-Surface--dark .msrd-Card--graphic,

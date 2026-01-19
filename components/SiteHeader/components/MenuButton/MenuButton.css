@@ -50,6 +50,10 @@
   border-radius: calc(1rem / 16);
   inline-size: calc(24rem / 16);
   position: absolute;
+
+  @media (forced-colors: active) {
+    background-color: ButtonText;
+  }
 }
 
 .msrd .msrd-SiteHeaderMenuButton-inner {

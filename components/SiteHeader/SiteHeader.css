@@ -21,7 +21,8 @@ html {
 .msrd .msrd-SiteHeader--pageScrolled {
   background-color: var(--color-background);
   box-shadow: var(--box-shadow-light-source);
-  transition: background-color 0.1s var(--easing-cubic-bezier-easy-ease),
+  transition:
+    background-color 0.1s var(--easing-cubic-bezier-easy-ease),
     box-shadow 0.1s var(--easing-cubic-bezier-easy-ease);
 }
 
@@ -41,19 +42,24 @@ html {
 }
 
 .msrd .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
+  border-block-end: calc(1rem / 16) solid transparent;
   box-shadow: var(--site-header-box-shadow);
   transition: box-shadow 0.1s var(--easing-cubic-bezier-easy-ease);
 }
 
 .msrd .msrd-SiteHeader-inner {
   align-items: center;
-  border-block: 0.125rem solid transparent;
+  border-block: calc(2rem / 16) solid transparent;
   display: flex;
   inline-size: 100%;
   justify-content: space-between;
   margin-inline: auto;
   max-inline-size: var(--section-max-width);
   padding-block: calc(var(--space-vertical-03));
+
+  @media (forced-colors: active) {
+    border-color: Canvas;
+  }
 }
 
 @media (min-width: 48em) {
@@ -211,7 +217,8 @@ html {
       .msrd-SiteHeader-linkText::after {
       inset-inline-start: 0.25em;
       opacity: 1;
-      transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+      transition:
+        0.1s opacity var(--easing-cubic-bezier-easy-ease),
         0.2s inset-inline-start var(--easing-cubic-bezier-easy-ease);
     }
 
@@ -219,7 +226,8 @@ html {
       .msrd
         .msrd-SiteHeader-link[href="/contact"]:hover
         .msrd-SiteHeader-linkText::after {
-        transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
+        transition:
+          0.1s opacity var(--easing-cubic-bezier-easy-ease),
           0s inset-inline-start var(--easing-cubic-bezier-easy-ease);
       }
     }

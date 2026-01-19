@@ -109,6 +109,10 @@
   &:focus-visible {
     outline: none;
   }
+
+  @media (forced-colors: active) {
+    color: CanvasText;
+  }
 }
 
 .msrd .msrd-Logos-label {
