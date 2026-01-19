@@ -1,8 +1,6 @@
 .msrd .msrd-Rule {
-  background-color: var(--color-rule);
-  block-size: var(--rule-height);
   border: 0;
-  color: var(--color-rule);
+  border-block-start: var(--rule-height) solid var(--color-rule);
   inline-size: var(--rule-width);
   margin: 0;
 }

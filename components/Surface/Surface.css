@@ -62,6 +62,10 @@
 
   --color-logo: var(--color-white);
 
+  @media (forced-colors: active) {
+    --color-logo: CanvasText;
+  }
+
   --color-site-header-background: transparent;
   --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-rule);
 }
@@ -79,6 +83,10 @@
   background-position: center -1rem, center top;
   background-repeat: no-repeat, repeat-y;
   background-size: auto;
+
+  @media (forced-colors: active) {
+    background-image: none;
+  }
 }
 
 @media (min-width: 48em) {

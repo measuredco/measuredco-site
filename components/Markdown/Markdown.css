@@ -113,6 +113,7 @@
   border: var(--border-width) solid var(--color-background);
   border-radius: calc(var(--chip-size) * var(--corner-ratio-square));
   display: inline-block;
+  forced-color-adjust: none;
   inline-size: var(--chip-size);
   margin-inline-start: 0.25em;
 }
@@ -273,10 +274,8 @@
 }
 
 .msrd .msrd-Markdown hr {
-  background-color: var(--color-rule);
-  block-size: var(--rule-height);
   border: 0;
-  color: var(--color-border);
+  border-block-start: var(--rule-height) solid var(--color-rule);
   inline-size: var(--rule-width);
   margin-block-end: var(--space-vertical);
   margin-block-start: 0;
@@ -417,8 +416,7 @@
 }
 
 .msrd .msrd-Markdown .footnotes ol::before {
-  block-size: var(--rule-height);
-  border: var(--border-width) solid var(--color-rule);
+  border-top: var(--rule-height) solid var(--color-rule);
   content: "";
   display: block;
   inline-size: var(--rule-width);
