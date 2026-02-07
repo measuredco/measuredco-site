@@ -4,6 +4,57 @@ import { HTMLAttributes, PropsWithChildren } from "react";
 
 import "./Image.css";
 
+const CDN_PREFIX = "https://res.cloudinary.com/measuredco/image/upload";
+
+const hasTransformParam = (path: string, param: string) => {
+  const pattern = new RegExp(`(^|[,/])${param}($|[,/:])`);
+
+  return pattern.test(path);
+};
+
+const resolveSrc = (src: string | StaticImageData) => {
+  if (typeof src !== "string") {
+    return src;
+  }
+
+  if (!src) {
+    return src;
+  }
+
+  const cleanSrc = src.trim();
+
+  if (!cleanSrc.startsWith(CDN_PREFIX)) {
+    return cleanSrc;
+  }
+
+  const uploadPath = cleanSrc.slice(CDN_PREFIX.length);
+  const uploadPathNormalized = uploadPath.startsWith("/")
+    ? uploadPath.slice(1)
+    : uploadPath;
+  const hasAutoFormat = hasTransformParam(uploadPathNormalized, "f_auto");
+  const hasAutoQuality = hasTransformParam(uploadPathNormalized, "q_auto");
+
+  if (hasAutoFormat && hasAutoQuality) {
+    return cleanSrc;
+  }
+
+  const paramsToAdd: string[] = [];
+
+  if (!hasAutoFormat) {
+    paramsToAdd.push("f_auto");
+  }
+
+  if (!hasAutoQuality) {
+    paramsToAdd.push("q_auto");
+  }
+
+  if (paramsToAdd.length === 0) {
+    return cleanSrc;
+  }
+
+  return `${CDN_PREFIX}/${paramsToAdd.join(",")}/${uploadPathNormalized}`;
+};
+
 /**
  * Use `Image` to render a single image, or set of images, with support for
  * image fitting and art direction.
@@ -22,7 +73,8 @@ const Image = ({
   src,
   width,
 }: PropsWithChildren<ImageProps>) => {
-  const img = (
+  const resolvedSrc = resolveSrc(src);
+  const img = resolvedSrc ? (
     <NextImage
       className="msrd-Image-img"
       alt={alt}
@@ -30,10 +82,10 @@ const Image = ({
       fill={fit === "cover" ? true : false}
       priority={priority}
       sizes={children ? undefined : sizes}
-      src={src}
+      src={resolvedSrc}
       width={fit === "cover" ? undefined : width}
     />
-  );
+  ) : null;
 
   return (
     <div

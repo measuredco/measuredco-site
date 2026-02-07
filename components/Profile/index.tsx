@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Heading, Paragraph, Space } from "..";
+import { Heading, Image, Paragraph, Space } from "..";
 
 import "./Profile.css";
 
@@ -15,13 +14,7 @@ const Profile = ({ description, image, link, name, title }: ProfileProps) => {
   return (
     <div className="msrd-Profile">
       <div className="msrd-Profile-imageWrapper">
-        <Image
-          alt=""
-          className="msrd-Profile-image"
-          height="288"
-          src={image}
-          width="288"
-        />
+        <Image alt="" height={288} src={image} width={288} />
       </div>
       <div>
         <Paragraph muted size="small">
