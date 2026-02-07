@@ -4,11 +4,11 @@
   box-shadow: var(--box-shadow-light-source);
   inline-size: var(--image-size);
   margin-block-end: var(--space-vertical-04);
-}
 
-.msrd .msrd-Profile-image {
-  border-radius: calc(var(--image-size) * var(--corner-ratio-square));
-  box-shadow: var(--box-shadow);
+  > div {
+    border-radius: calc(var(--image-size) * var(--corner-ratio-square));
+    box-shadow: var(--box-shadow);
+  }
 }
 
 @media (min-width: 76.25em) {
