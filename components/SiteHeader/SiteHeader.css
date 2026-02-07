@@ -178,7 +178,7 @@ html {
     align-items: center;
     background-color: var(--color-button-background);
     block-size: var(--space-vertical-07);
-    border: solid var(--border-width) var(--color-card-border);
+    border: solid var(--border-width) var(--color-interactive);
     border-radius: var(--border-radius-button);
     box-shadow: var(--box-shadow);
     display: flex;
@@ -237,29 +237,13 @@ html {
   .msrd
     .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
     .msrd-SiteHeader-link--current[href="/contact"]:hover {
-    background-color: var(--color-interactive);
-    border-color: var(--color-interactive);
-    color: var(--color-interactive-contrast);
+    border-color: var(--color-rule);
   }
 
   .msrd
     .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
     .msrd-SiteHeader-link--current[href="/contact"]:hover {
     cursor: default;
-  }
-
-  @media (hover: hover) {
-    .msrd .msrd-SiteHeader-link--current[href="/contact"]:hover {
-      background-color: var(--color-interactive-hover);
-      border-color: var(--color-interactive-hover);
-      color: var(--color-interactive-contrast);
-    }
-  }
-
-  .msrd .msrd-SiteHeader-link--current[href="/contact"]:active {
-    background-color: var(--color-interactive-active);
-    border-color: var(--color-interactive-active);
-    color: var(--color-interactive-contrast);
   }
 
   .msrd
