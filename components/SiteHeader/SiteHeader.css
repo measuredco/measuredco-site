@@ -42,7 +42,6 @@ html {
 }
 
 .msrd .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
-  border-block-end: calc(1rem / 16) solid transparent;
   box-shadow: var(--site-header-box-shadow);
   transition: box-shadow 0.1s var(--easing-cubic-bezier-easy-ease);
 }
