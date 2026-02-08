@@ -353,10 +353,7 @@
 .msrd .msrd-Markdown p {
   margin-block-end: var(--space-vertical);
   margin-block-start: 0;
-  word-wrap: break-word;
-}
-
-.msrd .msrd-Markdown > p:last-child {
+  overflow-wrap: break-word;
   text-wrap: pretty;
 }
 
