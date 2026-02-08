@@ -291,22 +291,9 @@
   box-shadow: var(--box-shadow);
 }
 
-.msrd .msrd-Markdown li {
-  --bullet-space: 1.5em;
-  padding-inline-start: var(--bullet-space);
-  position: relative;
-  word-wrap: break-word;
-}
-
-.msrd .msrd-Markdown li::before {
-  inline-size: var(--bullet-space);
-  inset-inline-start: 0;
-  position: absolute;
-  text-align: center;
-}
-
 .msrd .msrd-Markdown ol,
 .msrd .msrd-Markdown ul {
+  --bullet-space: calc(36rem / 16);
   list-style: none;
   margin-block-end: var(--space-vertical);
   margin-block-start: 0;
@@ -314,10 +301,17 @@
   padding-inline-start: 0;
 }
 
+@media (min-width: 48em) {
+  .msrd .msrd-Markdown > ol,
+  .msrd .msrd-Markdown > ul {
+    --bullet-space: var(--space-horizontal-08);
+  }
+}
+
 @media (min-width: 80em) {
   .msrd .msrd-Markdown > ol,
   .msrd .msrd-Markdown > ul {
-    margin-inline-start: calc(30rem / -16);
+    margin-inline-start: calc(0em - var(--bullet-space));
   }
 }
 
@@ -325,29 +319,77 @@
   counter-reset: list;
 }
 
-.msrd .msrd-Markdown ol > li::before {
-  content: counter(list) ".";
-  counter-increment: list;
-  font-family: var(--font-family-monospaced);
-  font-feature-settings: normal;
-  font-size: calc(13rem / 16);
-  inline-size: calc(27rem / 16);
-  line-height: calc(27 / 13);
-  padding-inline-end: calc(3rem / 16);
+.msrd .msrd-Markdown ol li:has(> h2:first-child) > ol,
+.msrd .msrd-Markdown ol li:has(> h2:first-child) > ul,
+.msrd .msrd-Markdown ol li:has(> h3:first-child) > ol,
+.msrd .msrd-Markdown ol li:has(> h3:first-child) > ul {
+  margin-inline-start: calc(0em - var(--bullet-space));
+}
+
+.msrd .msrd-Markdown li {
+  padding-inline-start: var(--bullet-space);
+  position: relative;
+}
+
+.msrd .msrd-Markdown li::before {
+  inline-size: var(--bullet-space);
+  inset-inline-start: 0;
+  position: absolute;
   text-align: end;
 }
 
-@media (min-width: 48em) {
-  .msrd .msrd-Markdown ol > li::before {
-    font-size: calc(14rem / 16);
-    inline-size: calc(30rem / 16);
-    line-height: calc(36 / 14);
-    padding-inline-end: calc(4rem / 16);
+.msrd .msrd-Markdown ol > li::before {
+  content: counter(list) ".";
+  counter-increment: list;
+  font-variant-numeric: tabular-nums;
+  padding-inline-end: var(--space-horizontal-03);
+}
+
+.msrd .msrd-Markdown ol > li:has(> h2)::before {
+  color: var(--color-text);
+  font-size: var(--font-07-size);
+  line-height: var(--font-07-line-height);
+
+  @media (min-width: 48em) {
+    font-size: var(--font-08-size);
+    line-height: var(--font-08-line-height);
+  }
+}
+
+.msrd .msrd-Markdown ol > li:has(> h2:first-child):nth-child(n + 10):before {
+  font-size: var(--font-02-size);
+  line-height: calc(var(--leading-scale-05) / var(--type-scale-02));
+
+  @media (min-width: 48em) {
+    font-size: var(--font-04-size);
+    line-height: calc(var(--leading-scale-06) / var(--type-scale-04));
+  }
+}
+
+.msrd .msrd-Markdown ol > li:has(> h3:first-child)::before {
+  color: var(--color-text);
+  font-size: var(--font-05-size);
+  line-height: var(--font-05-line-height);
+
+  @media (min-width: 48em) {
+    font-size: var(--font-06-size);
+    line-height: var(--font-06-line-height);
+  }
+}
+
+.msrd .msrd-Markdown ol > li:has(> h3:first-child):nth-child(n + 10):before {
+  font-size: var(--font-02-size);
+  line-height: calc(var(--leading-scale-04) / var(--type-scale-02));
+
+  @media (min-width: 48em) {
+    font-size: var(--font-04-size);
+    line-height: calc(var(--leading-scale-05) / var(--type-scale-04));
   }
 }
 
 .msrd .msrd-Markdown ul > li::before {
   content: "•";
+  padding-inline-end: 0.5em;
 }
 
 .msrd .msrd-Markdown p {
@@ -408,7 +450,7 @@
 
 @media (min-width: 80em) {
   .msrd .msrd-Markdown .footnotes ol {
-    margin-inline-start: calc(30rem / -16);
+    margin-inline-start: calc(0em - var(--bullet-space));
   }
 }
 
@@ -423,27 +465,7 @@
 
 @media (min-width: 80em) {
   .msrd .msrd-Markdown .footnotes ol::before {
-    inset-inline-start: calc(30rem / 16);
-  }
-}
-
-.msrd .msrd-Markdown .footnotes ol > li {
-  padding-inline-start: calc(27rem / 16);
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-Markdown .footnotes ol > li {
-    padding-inline-start: calc(30rem / 16);
-  }
-}
-
-.msrd .msrd-Markdown .footnotes ol > li::before {
-  line-height: calc(var(--space-scale-vertical) / 13);
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-Markdown .footnotes ol > li::before {
-    line-height: calc(var(--space-scale-vertical) / 14);
+    inset-inline-start: var(--bullet-space);
   }
 }
 
