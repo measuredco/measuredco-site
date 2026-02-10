@@ -12,11 +12,7 @@ const hasTransformParam = (path: string, param: string) => {
   return pattern.test(path);
 };
 
-const resolveSrc = (src: string | StaticImageData) => {
-  if (typeof src !== "string") {
-    return src;
-  }
-
+const resolveSrc = (src: string) => {
   if (!src) {
     return src;
   }
@@ -55,6 +51,20 @@ const resolveSrc = (src: string | StaticImageData) => {
   return `${CDN_PREFIX}/${paramsToAdd.join(",")}/${uploadPathNormalized}`;
 };
 
+const isValidSrc = (src: string) => {
+  if (!src) {
+    return false;
+  }
+
+  return (
+    src.startsWith("/") ||
+    src.startsWith("https://") ||
+    src.startsWith("http://") ||
+    src.startsWith("data:") ||
+    src.startsWith("blob:")
+  );
+};
+
 /**
  * Use `Image` to render a single image, or set of images, with support for
  * image fitting and art direction.
@@ -73,8 +83,15 @@ const Image = ({
   src,
   width,
 }: PropsWithChildren<ImageProps>) => {
-  const resolvedSrc = resolveSrc(src);
-  const img = resolvedSrc ? (
+  let imageSrc: string | StaticImageData | null = src;
+
+  if (typeof src === "string") {
+    const resolvedSrc = resolveSrc(src);
+
+    imageSrc = isValidSrc(resolvedSrc) ? resolvedSrc : null;
+  }
+
+  const img = imageSrc ? (
     <NextImage
       className="msrd-Image-img"
       alt={alt}
@@ -82,7 +99,7 @@ const Image = ({
       fill={fit === "cover" ? true : false}
       priority={priority}
       sizes={children ? undefined : sizes}
-      src={resolvedSrc}
+      src={imageSrc}
       width={fit === "cover" ? undefined : width}
     />
   ) : null;

@@ -335,6 +335,12 @@
 
   --section-max-width: calc((1220 / 16) * 1rem);
 
+  --site-header-height: var(--space-vertical-09);
+
+  @media (min-width: 48em) {
+    --site-header-height: var(--space-vertical-10);
+  }
+
   /*
    * Corner tokens
    */
