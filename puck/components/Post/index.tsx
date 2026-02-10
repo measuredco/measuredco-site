@@ -1,11 +1,12 @@
 import { ComponentConfig } from "@measured/puck";
 
 import {
-  Rule,
+  Banner,
   Grid,
   Heading,
   Markdown,
   Paragraph,
+  Rule,
   Section,
   Space,
 } from "../../../components";
@@ -15,6 +16,7 @@ import NewIdentity from "./NewIdentity";
 export type PostProps = {
   author: string;
   authorUrl: string;
+  bannerSrc?: string;
   content: string;
   date: string;
   modifiedDate: string;
@@ -26,6 +28,7 @@ export type PostProps = {
 export const Post: ComponentConfig<PostProps> = {
   defaultProps: {
     author: "Paul Love",
+    bannerSrc: "",
     authorUrl: "https://www.linkedin.com/in/paullove/",
     content: "",
     date: new Date().toISOString().split("T")[0],
@@ -34,6 +37,7 @@ export const Post: ComponentConfig<PostProps> = {
     title: "Title",
   },
   fields: {
+    bannerSrc: { type: "text" },
     title: { type: "text" },
     date: { type: "text" },
     modifiedDate: { type: "text" },
@@ -51,6 +55,7 @@ export const Post: ComponentConfig<PostProps> = {
   },
   render: ({
     author,
+    bannerSrc,
     authorUrl,
     content,
     date,
@@ -61,37 +66,50 @@ export const Post: ComponentConfig<PostProps> = {
   }) => {
     if (!template) {
       return (
-        <Section>
-          <Grid>
-            <Grid.Item colSpan="7" colStart="3" colSpanNarrow="11">
-              <Space size="08" />
-              <Heading level="1" size="1">
-                {title}
-              </Heading>
-              <Space size="05" />
-              <Paragraph prose={false} size="small">{`${date} ${
-                modifiedDate ? ` _(updated ${modifiedDate})_` : ""
-              } • ${
-                authorUrl ? `[${author}](${authorUrl})` : author
-              }`}</Paragraph>
-              <Space size="05" />
-              {standfirst ? (
-                <>
-                  <Paragraph measured prose={false} size="large">
-                    {standfirst}
-                  </Paragraph>
-                  <Space size="06" />
-                  <Rule />
-                  <Space size="06" />
-                </>
-              ) : (
-                ""
-              )}
-              <Markdown measured>{content}</Markdown>
-              <Space size="12" />
-            </Grid.Item>
-          </Grid>
-        </Section>
+        <>
+          {bannerSrc ? (
+            <div
+              style={{
+                marginBlockStart: "calc(0rem - var(--site-header-height)",
+              }}
+            >
+              <Banner alt="" anchor="C" src={bannerSrc} />
+              <Space size="07" />
+            </div>
+          ) : (
+            <Space size="08" />
+          )}
+          <Section>
+            <Grid>
+              <Grid.Item colSpan="7" colStart="3" colSpanNarrow="11">
+                <Heading level="1" size="1">
+                  {title}
+                </Heading>
+                <Space size="05" />
+                <Paragraph prose={false} size="small">{`${date} ${
+                  modifiedDate ? ` _(updated ${modifiedDate})_` : ""
+                } • ${
+                  authorUrl ? `[${author}](${authorUrl})` : author
+                }`}</Paragraph>
+                <Space size="05" />
+                {standfirst ? (
+                  <>
+                    <Paragraph measured prose={false} size="large">
+                      {standfirst}
+                    </Paragraph>
+                    <Space size="06" />
+                    <Rule />
+                    <Space size="06" />
+                  </>
+                ) : (
+                  ""
+                )}
+                <Markdown measured>{content}</Markdown>
+                <Space size="12" />
+              </Grid.Item>
+            </Grid>
+          </Section>
+        </>
       );
     }
     if (template === "new-visual-identity") {

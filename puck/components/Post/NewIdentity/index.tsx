@@ -20,7 +20,7 @@ import { PostProps } from "..";
 
 import "./NewIdentity.css";
 
-type NewIdentityProps = Omit<PostProps, "content" | "template">;
+type NewIdentityProps = Omit<PostProps, "bannerSrc" | "content" | "template">;
 
 const NewIdentity = ({ title }: NewIdentityProps) => (
   <div className="msrd-NewIdentity">
