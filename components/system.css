@@ -270,8 +270,9 @@
 
   --font-family: var(--font-next, var(--font-stack));
 
-  --font-stack-monospaced: "Roboto Mono", ui-monospace, "Cascadia Code",
-    "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --font-stack-monospaced:
+    "Roboto Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+    Consolas, "DejaVu Sans Mono", monospace;
 
   --font-family-monospaced: var(
     --font-next-monospaced,
@@ -371,9 +372,10 @@
   --color-background-emphasis: var(--color-white);
   --color-background: var(--color-grey-12);
   --color-text-contrast: var(--color-grey-12);
-  --color-background-highlight: var(--color-grey-10);
+  --color-background-highlight: var(--color-grey-11);
   --color-border-light: var(--color-grey-10);
   --color-border: var(--color-grey-09);
+  --color-non-text-muted: var(--color-grey-07);
   --color-text-muted: var(--color-grey-06);
   --color-text-prose: var(--color-grey-02);
   --color-text: var(--color-grey-01);
@@ -407,16 +409,18 @@
   --color-card-text: var(--color-text);
 
   --color-code-border: var(--color-rule);
-  --color-code-highlight-border: transparent;
+  --color-code-highlight-border: var(--color-border);
 
   --color-copy-interactive: var(--color-interactive);
   --color-copy-interactive-hover: var(--color-interactive-hover);
   --color-copy-text: var(--color-text);
 
   --color-logo: var(--color-brand);
+  --color-logo-neutral: var(--color-black);
 
   @media (forced-colors: active) {
     --color-logo: CanvasText;
+    --color-logo-neutral: CanvasText;
   }
 
   --color-site-header-background: var(--color-background);
@@ -434,6 +438,7 @@
     --color-background-highlight: var(--color-grey-03);
     --color-border-light: var(--color-grey-04);
     --color-border: var(--color-grey-05);
+    --color-non-text-muted: var(--color-grey-06);
     --color-text-muted: var(--color-grey-07);
     --color-text-prose: var(--color-grey-10);
     --color-text: var(--color-grey-11);
@@ -474,9 +479,11 @@
     --color-copy-text: var(--color-text);
 
     --color-logo: var(--color-brand);
+    --color-logo-neutral: var(--color-white);
 
     @media (forced-colors: active) {
       --color-logo: CanvasText;
+      --color-logo-neutral: CanvasText;
     }
 
     --color-site-header-background: var(--color-background);
