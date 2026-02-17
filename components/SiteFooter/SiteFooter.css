@@ -77,7 +77,6 @@
 }
 
 .msrd .msrd-SiteFooter a:not([class]) {
-  display: inline-block;
   color: var(--color-interactive-neutral);
 }
 
