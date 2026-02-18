@@ -5,9 +5,11 @@
   inline-size: var(--image-size);
   margin-block-end: var(--space-vertical-04);
 
-  > div {
+  > div,
+  img {
     border-radius: calc(var(--image-size) * var(--corner-ratio-square));
     box-shadow: var(--box-shadow);
+
   }
 }
 
