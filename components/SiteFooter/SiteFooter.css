@@ -17,7 +17,7 @@
   display: grid;
   gap: var(--space-vertical) var(--space-horizontal);
   margin-inline: auto;
-  max-inline-size: var(--section-max-width);
+  max-inline-size: var(--furniture-max-width);
 }
 
 @media (min-width: 48em) {
@@ -63,6 +63,24 @@
 
   .msrd .msrd-SiteFooter-inner > :nth-child(3) {
     grid-column-end: span 2;
+  }
+}
+
+@media (min-width: 89.125em) {
+  .msrd .msrd-SiteFooter-inner {
+    grid-template-columns: repeat(14, 1fr);
+  }
+
+  .msrd .msrd-SiteFooter-inner > :first-child {
+    grid-column-end: span 5;
+  }
+
+  .msrd .msrd-SiteFooter-inner > :nth-child(3) {
+    grid-column-end: span 4;
+  }
+
+  .msrd .msrd-SiteFooter-inner > :last-child {
+    grid-column-end: span 1;
   }
 }
 

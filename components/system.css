@@ -334,6 +334,8 @@
 
   --measured: 35.25em;
 
+  --furniture-max-width: calc((1426 / 16) * 1rem);
+
   --section-max-width: calc((1220 / 16) * 1rem);
 
   --site-header-height: var(--space-vertical-09);
