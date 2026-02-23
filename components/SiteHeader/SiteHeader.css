@@ -31,16 +31,6 @@ html {
   box-shadow: none;
 }
 
-.msrd .msrd-SiteHeader-wrapper {
-  padding-inline: var(--space-horizontal);
-}
-
-@media (min-width: 48em) {
-  .msrd .msrd-SiteHeader-wrapper {
-    padding-inline: var(--space-horizontal-07);
-  }
-}
-
 .msrd .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
   box-shadow: var(--site-header-box-shadow);
   transition: box-shadow 0.1s var(--easing-cubic-bezier-easy-ease);
@@ -48,13 +38,14 @@ html {
 
 .msrd .msrd-SiteHeader-inner {
   align-items: center;
-  border-block: calc(2rem / 16) solid transparent;
+  border-block: calc(3rem / 16) solid transparent;
   display: flex;
   inline-size: 100%;
   justify-content: space-between;
   margin-inline: auto;
   max-inline-size: var(--furniture-max-width);
   padding-block: calc(var(--space-vertical-03));
+  padding-inline: var(--space-horizontal);
 
   @media (forced-colors: active) {
     border-color: Canvas;
@@ -64,6 +55,7 @@ html {
 @media (min-width: 48em) {
   .msrd .msrd-SiteHeader-inner {
     padding-block: calc(var(--space-vertical-04) - (2rem / 16));
+    padding-inline: var(--space-horizontal-06);
   }
 }
 
@@ -93,7 +85,7 @@ html {
 
 @media (hover: hover) {
   .msrd .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
-    opacity: 0.42;
+    opacity: 0.44;
     transition: opacity 0.1s var(--easing-cubic-bezier-easy-ease);
   }
 }
@@ -182,8 +174,8 @@ html {
     box-shadow: var(--box-shadow);
     display: flex;
     padding-block: 0;
-    padding-inline-end: var(--space-horizontal-06);
-    padding-inline-start: var(--space-horizontal-08);
+    padding-inline-end: calc(var(--space-horizontal-05) - var(--border-width));
+    padding-inline-start: calc(var(--space-horizontal-07) - var(--border-width));
     position: relative;
     text-decoration: none;
   }

@@ -152,18 +152,18 @@
   /* Horizontal space derived from base font-size of 16 */
   --space-scale-horizontal: 16;
 
-  --space-scale-horizontal-01: calc(var(--space-scale-horizontal) * 0.125);
-  --space-scale-horizontal-02: calc(var(--space-scale-horizontal) * 0.25);
-  --space-scale-horizontal-03: calc(var(--space-scale-horizontal) * 0.5);
-  --space-scale-horizontal-04: calc(var(--space-scale-horizontal) * 0.75);
-  --space-scale-horizontal-05: calc(var(--space-scale-horizontal) * 1);
-  --space-scale-horizontal-06: calc(var(--space-scale-horizontal) * 1.5);
-  --space-scale-horizontal-07: calc(var(--space-scale-horizontal) * 2);
-  --space-scale-horizontal-08: calc(var(--space-scale-horizontal) * 2.5);
-  --space-scale-horizontal-09: calc(var(--space-scale-horizontal) * 3);
-  --space-scale-horizontal-10: calc(var(--space-scale-horizontal) * 3.5);
-  --space-scale-horizontal-11: calc(var(--space-scale-horizontal) * 4);
-  --space-scale-horizontal-12: calc(var(--space-scale-horizontal) * 4.5);
+  --space-scale-horizontal-01: calc(var(--space-scale-horizontal) * 0.125); /* 2 */
+  --space-scale-horizontal-02: calc(var(--space-scale-horizontal) * 0.25); /* 4 */
+  --space-scale-horizontal-03: calc(var(--space-scale-horizontal) * 0.5); /* 8 */
+  --space-scale-horizontal-04: calc(var(--space-scale-horizontal) * 0.75); /* 12 */
+  --space-scale-horizontal-05: calc(var(--space-scale-horizontal) * 1); /* 16 */
+  --space-scale-horizontal-06: calc(var(--space-scale-horizontal) * 1.5); /* 24 */
+  --space-scale-horizontal-07: calc(var(--space-scale-horizontal) * 2); /* 32 */
+  --space-scale-horizontal-08: calc(var(--space-scale-horizontal) * 2.5); /* REMOVE */
+  --space-scale-horizontal-09: calc(var(--space-scale-horizontal) * 3); /* 48 */
+  --space-scale-horizontal-10: calc(var(--space-scale-horizontal) * 3.5); /* REMOVE */
+  --space-scale-horizontal-11: calc(var(--space-scale-horizontal) * 4); /* REMOVE */
+  --space-scale-horizontal-12: calc(var(--space-scale-horizontal) * 4.5); /* 72 */
 
   /*
    * Typographic scales
@@ -324,7 +324,7 @@
   --outline-width: calc((2 / 16) * 1rem);
 
   --rule-height: calc((2 / 16) * 1rem);
-  --rule-width: calc((64 / 16) * 1rem);
+  --rule-width: calc((72 / 16) * 1rem);
 
   --border-offset-card: calc((4 / 16) * 1rem);
 
@@ -334,9 +334,9 @@
 
   --measured: 35.25em;
 
-  --furniture-max-width: calc((1426 / 16) * 1rem);
+  --furniture-max-width: calc((1440 / 16) * 1rem);
 
-  --section-max-width: calc((1220 / 16) * 1rem);
+  --section-max-width: calc((1280 / 16) * 1rem);
 
   --site-header-height: var(--space-vertical-09);
 

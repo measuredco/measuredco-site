@@ -178,6 +178,8 @@
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown h6 {
+    font-size: var(--font-03-size);
+    line-height: var(--font-03-line-height);
     margin-block-end: var(--space-vertical);
     margin-block-start: var(--space-vertical-06);
   }
@@ -253,7 +255,7 @@
 
 .msrd .msrd-Markdown h1 {
   font-size: var(--font-09-size);
-  font-weight: 400;
+  font-weight: 366;
   line-height: var(--font-09-line-height);
   margin-block-start: 0;
 }
@@ -304,7 +306,7 @@
 @media (min-width: 48em) {
   .msrd .msrd-Markdown > ol,
   .msrd .msrd-Markdown > ul {
-    --bullet-space: var(--space-horizontal-08);
+    --bullet-space: calc(40rem / 16);
   }
 }
 
@@ -418,16 +420,16 @@
 .msrd .msrd-Markdown td,
 .msrd .msrd-Markdown th {
   border: calc(1rem / 16) solid var(--color-border);
-  padding-block: calc(5.5rem / 16);
-  padding-inline: calc(15rem / 16);
+  padding-block: calc((6rem - 1rem) / 16);
+  padding-inline: calc((16rem - 1rem) / 16);
   vertical-align: middle;
 }
 
 @media (min-width: 48em) {
   .msrd .msrd-Markdown td,
   .msrd .msrd-Markdown th {
-    padding-block: calc(10rem / 16);
-    padding-inline: calc(23rem / 16);
+    padding-block: calc((12rem - 1rem) / 16);
+    padding-inline: calc((24rem - 1rem) / 16);
   }
 }
 

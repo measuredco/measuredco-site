@@ -10,7 +10,7 @@
   padding-block-end: var(--space-vertical-01);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--02 {
     padding-block-end: var(--space-vertical-02);
   }
@@ -20,7 +20,7 @@
   padding-block-end: var(--space-vertical-02);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--03 {
     padding-block-end: var(--space-vertical-03);
   }
@@ -30,7 +30,7 @@
   padding-block-end: var(--space-vertical-03);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--04 {
     padding-block-end: var(--space-vertical-04);
   }
@@ -40,7 +40,7 @@
   padding-block-end: var(--space-vertical-04);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--05 {
     padding-block-end: var(--space-vertical-05);
   }
@@ -50,7 +50,7 @@
   padding-block-end: var(--space-vertical-05);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--06 {
     padding-block-end: var(--space-vertical-06);
   }
@@ -60,7 +60,7 @@
   padding-block-end: var(--space-vertical-06);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--07 {
     padding-block-end: var(--space-vertical-07);
   }
@@ -70,7 +70,7 @@
   padding-block-end: var(--space-vertical-07);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--08 {
     padding-block-end: var(--space-vertical-09);
   }
@@ -80,7 +80,7 @@
   padding-block-end: var(--space-vertical-08);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--09 {
     padding-block-end: var(--space-vertical-11);
   }
@@ -90,7 +90,7 @@
   padding-block-end: var(--space-vertical-09);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--10 {
     padding-block-end: var(--space-vertical-12);
   }
@@ -100,7 +100,7 @@
   padding-block-end: var(--space-vertical-10);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--11 {
     padding-block-end: var(--space-vertical-13);
   }
@@ -110,7 +110,7 @@
   padding-block-end: var(--space-vertical-11);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 64em) {
   .msrd .msrd-Space--12 {
     padding-block-end: var(--space-vertical-14);
   }

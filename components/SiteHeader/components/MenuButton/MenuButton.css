@@ -1,12 +1,15 @@
 .msrd .msrd-SiteHeaderMenuButton {
   background-color: transparent;
-  border: 0;
+  block-size: calc(30rem / 16);
+  border: none;
   color: inherit;
   cursor: pointer;
   display: block;
-  inset-inline-end: calc(-10rem / 16);
+  inset-inline-end: calc(-3rem / 16);
+  margin-block: calc(6rem / 16);
   overflow: visible;
-  padding: calc(10rem / 16);
+  padding-block: 0;
+  padding-inline: calc(3rem / 16);
   position: relative;
 }
 
@@ -59,7 +62,7 @@
 .msrd .msrd-SiteHeaderMenuButton-inner {
   display: block;
   inset-block-start: 50%;
-  transition: transform 0.22s var(--easing-cubic-bezier-reverse-easy-ease);
+  transition: transform 0.2s var(--easing-cubic-bezier-reverse-easy-ease);
 }
 
 .msrd .msrd-SiteHeaderMenuButton-inner::before,
@@ -70,19 +73,19 @@
 
 .msrd .msrd-SiteHeaderMenuButton-inner::before {
   inset-block-start: calc(-8rem / 16);
-  transition: inset-block-start 0.1s 0.25s var(--easing-cubic-bezier-ease-in),
+  transition: inset-block-start 0.1s 0.2s var(--easing-cubic-bezier-ease-in),
     opacity 0.1s var(--easing-cubic-bezier-ease-in);
 }
 
 .msrd .msrd-SiteHeaderMenuButton-inner::after {
   inset-block-end: calc(-8rem / 16);
-  transition: inset-block-end 0.1s 0.25s var(--easing-cubic-bezier-ease-in),
-    transform 0.22s var(--easing-cubic-bezier-reverse-easy-ease);
+  transition: inset-block-end 0.1s 0.2s var(--easing-cubic-bezier-ease-in),
+    transform 0.2s var(--easing-cubic-bezier-reverse-easy-ease);
 }
 
 .msrd .msrd-SiteHeaderMenuButton--menuOpen .msrd-SiteHeaderMenuButton-inner {
   transform: rotate(225deg);
-  transition-delay: 0.12s;
+  transition-delay: 0.1s;
   transition-timing-function: var(--easing-cubic-bezier-easy-ease);
 }
 
@@ -92,7 +95,7 @@
   inset-block-start: 0;
   opacity: 0;
   transition: inset-inline-start 0.1s var(--easing-cubic-bezier-ease-out),
-    opacity 0.1s 0.12s var(--easing-cubic-bezier-ease-out);
+    opacity 0.1s 0.1s var(--easing-cubic-bezier-ease-out);
 }
 
 .msrd
@@ -101,7 +104,7 @@
   inset-block-end: 0;
   transform: rotate(-90deg);
   transition: inset-block-end 0.1s var(--easing-cubic-bezier-ease-out),
-    transform 0.22s 0.12s var(--easing-cubic-bezier-easy-ease);
+    transform 0.2s 0.1s var(--easing-cubic-bezier-easy-ease);
 }
 
 .msrd .msrd-SiteHeaderMenuButton-text {

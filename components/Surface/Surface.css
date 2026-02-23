@@ -14,7 +14,7 @@
   --color-border-light: color-mix(in srgb, var(--color-white) 8%, transparent);
   --color-border: color-mix(in srgb, var(--color-white) 16%, transparent);
   --color-non-muted: color-mix(in srgb, var(--color-white) 40%, transparent);
-  --color-text-muted: color-mix(in srgb, var(--color-white) 55%, transparent);
+  --color-text-muted: color-mix(in srgb, var(--color-white) 56%, transparent);
   --color-text-prose: color-mix(in srgb, var(--color-white) 88%, transparent);
   --color-text: color-mix(in srgb, var(--color-white) 94%, transparent);
 
@@ -27,7 +27,7 @@
   --color-interactive-neutral: var(--color-text);
   --color-interactive-neutral-hover: color-mix(
     in srgb,
-    var(--color-white) 81%,
+    var(--color-white) 80%,
     transparent
   );
   --color-interactive-neutral-active: color-mix(

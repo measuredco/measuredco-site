@@ -8,7 +8,7 @@ export type SectionProps = {
 
 const Section = ({ children, width }: PropsWithChildren<SectionProps>) => (
   <section className={`msrd-Section${width ? ` msrd-Section--${width}` : ""}`}>
-    <div className="msrd-Section-inner">{children}</div>
+    {children}
   </section>
 );
 

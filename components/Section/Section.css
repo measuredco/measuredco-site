@@ -1,4 +1,7 @@
 .msrd .msrd-Section {
+  container-type: inline-size;
+  margin-inline: auto;
+  max-inline-size: var(--section-max-width);
   padding-inline: var(--space-horizontal);
 }
 
@@ -8,15 +11,10 @@
   }
 }
 
-.msrd .msrd-Section-inner {
-  margin-inline: auto;
-  max-inline-size: var(--section-max-width);
-}
-
 .msrd .msrd-Section--full {
   padding-inline: 0;
 }
 
-.msrd .msrd-Section--full .msrd-Section-inner {
+.msrd .msrd-Section--full {
   max-inline-size: 100%;
 }

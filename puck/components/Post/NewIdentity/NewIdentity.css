@@ -43,7 +43,7 @@
     --color-interactive: var(--color-white);
     --color-interactive-hover: color-mix(
       in srgb,
-      var(--color-white) 96%,
+      var(--color-white) 94%,
       transparent
     );
     --color-interactive-active: color-mix(

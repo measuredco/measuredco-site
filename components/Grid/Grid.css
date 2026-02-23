@@ -1,6 +1,7 @@
 .msrd .msrd-Grid {
   display: grid;
-  grid-gap: var(--space-vertical) var(--space-horizontal);
+  grid-column-gap: var(--space-horizontal);
+  grid-row-gap: var(--space-vertical);
   grid-template-columns: 1fr;
 }
 
@@ -16,25 +17,32 @@
   grid-gap: 0;
 }
 
-@media (min-width: 48em) {
+@container (min-inline-size: 37em) {
   .msrd .msrd-Grid {
     grid-template-columns: repeat(12, 1fr);
-  }
-
-  .msrd .msrd-Grid--gapUniform {
-    grid-gap: var(--space-horizontal);
   }
 }
 
 @media (min-width: 48em) {
+  .msrd .msrd-Grid {
+    grid-column-gap : var(--space-horizontal-06);
+  }
+}
+
+@media (min-width: 80em) {
   .msrd .msrd-Grid--gapLarge {
     grid-gap: var(--space-horizontal-07);
+    /* grid-column-gap: var(--space-horizontal-07);
+    grid-row-gap: var(--space-vertical-06); */
   }
+
+  /* .msrd .msrd-Grid--gapLarge.msrd-Grid-gapUniform {
+    grid-row-gap: var(--space-horizontal-07);
+  } */
 }
 
 .msrd .msrd-GridItem {
   margin-block-end: var(--space-vertical);
-  min-inline-size: calc(87rem / 16);
   position: relative;
 }
 
@@ -63,7 +71,7 @@
     margin-block-end: 0;
   }
 
-  @media (min-width: 48em) {
+  @container (min-inline-size: 37em) {
     .msrd .msrd-GridItem {
       grid-column-end: span 12;
     }
@@ -148,7 +156,7 @@
     }
   }
 
-  @media (min-width: 80em) {
+  @container (min-inline-size: 57em) {
     .msrd .msrd-GridItem {
       grid-column-end: auto;
       grid-column-start: auto;

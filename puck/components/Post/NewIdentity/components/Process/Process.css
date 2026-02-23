@@ -24,7 +24,7 @@
 
   @media (prefers-color-scheme: dark) {
     --box-shadow: 0.125rem 0.125rem 0.25rem
-      color-mix(in srgb, var(--color-black) 92%, transparent);
+      color-mix(in srgb, var(--color-black) 94%, transparent);
   }
 }
 

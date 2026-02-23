@@ -34,6 +34,7 @@
 
 .msrd .msrd-Hero-strapline {
   font-size: var(--font-10-size);
+  font-weight: 366;
   line-height: var(--font-10-line-height);
   margin-block-end: var(--space-vertical-03);
   margin-block-start: 0;
@@ -87,19 +88,19 @@
 
 @keyframes bounce {
   0% {
-    inset-block-end: calc((14 / 16) * 1rem);
+    inset-block-end: calc((12 / 16) * 1rem);
   }
   50% {
-    inset-block-end: calc((8 / 16) * 1rem);
+    inset-block-end: calc((6 / 16) * 1rem);
   }
   100% {
-    inset-block-end: calc((14 / 16) * 1rem);
+    inset-block-end: calc((12 / 16) * 1rem);
   }
 }
 
 .msrd .msrd-Hero-arrow {
-  --animation-delay: 1.375s;
-  --animation-duration: 2.75s;
+  --animation-delay: 1.5s;
+  --animation-duration: 3s;
   display: none;
   user-select: none;
 }

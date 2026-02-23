@@ -29,11 +29,12 @@
   animation-play-state: paused;
 }
 
-@media (min-width: 76.25em) {
+@media (min-width: 80em) {
   .msrd .msrd-Logos-inner {
     animation: none;
     justify-content: space-between;
     overflow: auto;
+    padding-inline: var(--space-horizontal-07);
   }
 
   :dir(rtl) .msrd .msrd-Logos-inner,
@@ -89,12 +90,6 @@
   @media (min-width: 48em) {
     .msrd .msrd-Logos-inner {
       row-gap: var(--space-vertical);
-    }
-  }
-
-  @media (min-width: 78.25em) {
-    .msrd .msrd-Logos {
-      padding-inline: 0;
     }
   }
 }

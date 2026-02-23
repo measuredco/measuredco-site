@@ -24,6 +24,13 @@
   line-height: var(--font-02-line-height);
 }
 
+/* @media (min-width: 48em) {
+  .msrd .msrd-Paragraph--small {
+    font-size: var(--font-03-size);
+    line-height: var(--font-03-line-height);
+  }
+} */
+
 .msrd .msrd-Paragraph--large {
   --color-text-prose: var(--color-text);
   font-size: var(--font-04-size);

@@ -173,7 +173,7 @@
 
 .hljs-strong {
   color: var(--base0A);
-  font-weight: 500;
+  font-weight: 566;
 }
 
 .hljs-code,
@@ -219,5 +219,5 @@
 
 .hljs-meta .hljs-keyword,
 .hljs-meta-keyword {
-  font-weight: 500;
+  font-weight: 566;
 }

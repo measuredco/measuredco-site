@@ -2,13 +2,13 @@
   aspect-ratio: 4 / 3;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 48em) {
   .msrd .msrd-Banner {
     aspect-ratio: 2 / 1;
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 64em) {
   .msrd .msrd-Banner {
     aspect-ratio: 412 / 135;
   }

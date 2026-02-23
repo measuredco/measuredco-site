@@ -13,7 +13,7 @@
   }
 }
 
-@media (min-width: 76.25em) {
+@media (min-width: 80em) {
   .msrd .msrd-Profile {
     align-items: flex-end;
     display: flex;
@@ -21,7 +21,7 @@
   }
 
   .msrd .msrd-Profile-imageWrapper {
-    --image-size: 17.3125rem; /* magic grid number */
+    --image-size: calc(192rem / 16);
     flex-shrink: 0;
     margin-block-end: 0;
   }

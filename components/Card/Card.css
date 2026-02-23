@@ -16,7 +16,7 @@
   flex-direction: column;
   inline-size: 100%;
   padding-block: var(--space-vertical-06);
-  padding-inline: var(--space-horizontal-08);
+  padding-inline: var(--space-horizontal-07);
 }
 
 .msrd .msrd-Card::after {
