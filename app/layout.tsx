@@ -80,10 +80,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script
-          defer
-          data-domain="measured.co"
-          src="https://plausible.io/js/plausible.js"
+          async
+          src="https://plausible.io/js/pa-WHveu24hicA_rWLewDRP6.js"
         ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
+              plausible.init=plausible.init||function(i){(plausible.o=i||{})};
+              plausible.init();
+            `,
+          }}
+        />
       </head>
       <Base body>{children}</Base>
     </html>
