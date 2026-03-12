@@ -152,18 +152,36 @@
   /* Horizontal space derived from base font-size of 16 */
   --space-scale-horizontal: 16;
 
-  --space-scale-horizontal-01: calc(var(--space-scale-horizontal) * 0.125); /* 2 */
-  --space-scale-horizontal-02: calc(var(--space-scale-horizontal) * 0.25); /* 4 */
-  --space-scale-horizontal-03: calc(var(--space-scale-horizontal) * 0.5); /* 8 */
-  --space-scale-horizontal-04: calc(var(--space-scale-horizontal) * 0.75); /* 12 */
+  --space-scale-horizontal-01: calc(
+    var(--space-scale-horizontal) * 0.125
+  ); /* 2 */
+  --space-scale-horizontal-02: calc(
+    var(--space-scale-horizontal) * 0.25
+  ); /* 4 */
+  --space-scale-horizontal-03: calc(
+    var(--space-scale-horizontal) * 0.5
+  ); /* 8 */
+  --space-scale-horizontal-04: calc(
+    var(--space-scale-horizontal) * 0.75
+  ); /* 12 */
   --space-scale-horizontal-05: calc(var(--space-scale-horizontal) * 1); /* 16 */
-  --space-scale-horizontal-06: calc(var(--space-scale-horizontal) * 1.5); /* 24 */
+  --space-scale-horizontal-06: calc(
+    var(--space-scale-horizontal) * 1.5
+  ); /* 24 */
   --space-scale-horizontal-07: calc(var(--space-scale-horizontal) * 2); /* 32 */
-  --space-scale-horizontal-08: calc(var(--space-scale-horizontal) * 2.5); /* REMOVE */
+  --space-scale-horizontal-08: calc(
+    var(--space-scale-horizontal) * 2.5
+  ); /* REMOVE */
   --space-scale-horizontal-09: calc(var(--space-scale-horizontal) * 3); /* 48 */
-  --space-scale-horizontal-10: calc(var(--space-scale-horizontal) * 3.5); /* REMOVE */
-  --space-scale-horizontal-11: calc(var(--space-scale-horizontal) * 4); /* REMOVE */
-  --space-scale-horizontal-12: calc(var(--space-scale-horizontal) * 4.5); /* 72 */
+  --space-scale-horizontal-10: calc(
+    var(--space-scale-horizontal) * 3.5
+  ); /* REMOVE */
+  --space-scale-horizontal-11: calc(
+    var(--space-scale-horizontal) * 4
+  ); /* REMOVE */
+  --space-scale-horizontal-12: calc(
+    var(--space-scale-horizontal) * 4.5
+  ); /* 72 */
 
   /*
    * Typographic scales
@@ -353,7 +371,7 @@
   --border-radius-button: calc((8 / 16) * 1rem);
   --border-radius-card: calc((18 / 16) * 1rem);
 
-  --corner-ratio-square: 0.16666667;
+  --corner-ratio-square: 0.16;
 
   /*
    * Motion tokens
