@@ -11,13 +11,11 @@
   box-sizing: border-box;
   color: var(--color-text);
   font-family: var(--font-family);
-  font-feature-settings:
-    "calt" 1,
-    "ccmp" 1,
-    "ss03" 1;
+  font-feature-settings: "ss03" 1;
   font-optical-sizing: none;
   line-height: var(--line-height);
   margin: 0;
+  -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: color-mix(
     in srgb,
     var(--color-brand) 20%,
