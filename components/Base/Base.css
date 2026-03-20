@@ -68,6 +68,11 @@
   font-weight: 566;
 }
 
+.msrd sup,
+.msrd sub {
+  line-height: 0;
+}
+
 .msrd svg {
   display: block;
   max-inline-size: 100%;
