@@ -145,6 +145,7 @@
 .msrd .msrd-Markdown pre code {
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow);
+  direction: ltr;
   display: block;
   font-family: var(--font-family-monospaced);
   font-feature-settings: normal;
@@ -155,6 +156,7 @@
   margin-block-end: var(--space-vertical);
   outline: none;
   overflow-x: auto;
+  overscroll-behavior-x: none;
   padding: var(--space-vertical);
   position: relative;
 }
