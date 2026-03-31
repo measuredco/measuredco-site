@@ -100,7 +100,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
             <Space size="06" />
             <p className="msrd-u-prose">
               We partnered with{" "}
-              <a href="https://www.linkedin.com/in/james-edward-cross-43269317/">
+              <a href="https://www.linkedin.com/in/james-cross-43269317/">
                 James Cross
               </a>
               , a highly-experienced designer based in Copenhagen, to develop a

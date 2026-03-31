@@ -7,7 +7,7 @@ const Contact = () => (
     </a>
     <a
       className="msrd-NewIdentityContact-secondary"
-      href="https://www.linkedin.com/in/james-edward-cross-43269317/"
+      href="https://www.linkedin.com/in/james-cross-43269317/"
     >
       Contact James
     </a>
