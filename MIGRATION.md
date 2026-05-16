@@ -56,7 +56,7 @@ directly in code. Deploy target moves from Vercel → Cloudflare Pages.
 - [x] Phase 1 — data layer: read `content/` instead of Supabase
 - [x] Phase 2 — static params for catch-all routes
 - [x] Phase 3 — static export config (`output: 'export'`, images)
-- [ ] Phase 4 — feeds as build-time static files
+- [x] Phase 4 — feeds as build-time static files
 - [ ] Phase 5 — remove editor/auth/Supabase code + deps
 - [ ] Phase 6 — translate redirects/rewrites → Cloudflare `_redirects`
 - [ ] Phase 7 — Cloudflare Pages deploy config
@@ -90,12 +90,18 @@ directly in code. Deploy target moves from Vercel → Cloudflare Pages.
 - `redirects()`/`rewrites()` are unsupported under `output: 'export'` —
   move to Cloudflare (Phase 6).
 
-### Phase 4 — Feeds
+### Phase 4 — Feeds  ✅ done
 
-- API routes (`app/api/feed/*`) don't work with static export.
-- Generate `feed.xml` / `feed.atom` / `feed.json` at build time into
-  `public/` via a prebuild script using [lib/generate-feed.ts](lib/generate-feed.ts).
-- Preserve current URLs (`/feed.xml`, `/feed.atom`, `/feed.json`).
+- API routes (`app/api/feed/*`) removed.
+- Implemented as **static route handlers** at the real URLs:
+  `app/feed.xml|feed.atom|feed.json/route.ts`, each `force-static`,
+  reusing [lib/generate-feed.ts](lib/generate-feed.ts). Next emits them
+  as static files in `out/` at `/feed.xml` etc. — no rewrites, no extra
+  build script (deviation from original "prebuild script" idea; simpler
+  and Next-native).
+- Cloudflare serves `.xml`/`.json` with correct content-type by
+  extension; `/feed.atom` needs an explicit `application/atom+xml`
+  rule in `_headers` (Phase 7).
 
 ### Phase 5 — Remove management layer
 
