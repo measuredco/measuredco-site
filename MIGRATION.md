@@ -230,6 +230,29 @@ follow-up could shed Next from the browser entirely — e.g. replace
 site but carries behaviour/drift risk, so it is intentionally **not** part
 of this migration. Revisit only if a concrete problem appears.
 
+## Cutover order (do BEFORE merging)
+
+Vercel is still the live origin and is Git-connected with production
+branch `main`. Merging PR #237 would auto-rebuild `main` on Vercel — and
+Vercel **ignores `_redirects`/`_headers`** (Cloudflare-only), so the live
+site would lose the 13 redirects (→ 404) and `proposals/*` (→ 404) until
+DNS moves. Build still succeeds; it's a correctness/SEO regression, not a
+hard break.
+
+**Freeze Vercel first (one toggle, removes all risk):**
+
+1. Vercel project → Settings → Git → **disable/pause production
+   deployments** (or disconnect the Git integration). Vercel keeps
+   serving the current known-good old build, untouched.
+2. Merge PR #237 → `main` (squash). Cloudflare rebuilds `main` = the
+   migrated site, with `_redirects`/`_headers`, succeeds.
+3. Verify `measuredco-site.pages.dev`.
+4. Do the DNS cutover below.
+5. Confirm live on Pages, then delete the project from Vercel.
+
+Rollback at any point = revert the Namecheap records (TTL 300); Vercel's
+old build is still intact until step 5.
+
 ## Domain cutover (DNS)
 
 Current state (verified via DNS):
