@@ -72,18 +72,6 @@ const SiteFooter = () => (
         </div>
       </div>
       <div>
-        <ul>
-          <li>
-            <a href="https://www.iubenda.com/privacy-policy/24566196">
-              Privacy policy
-            </a>
-          </li>
-          <li>
-            <a href=" https://www.iubenda.com/terms-and-conditions/24566196">
-              Terms and conditions
-            </a>
-          </li>
-        </ul>
         <div className="msrd-SiteFooter-logo">
           <a className="msrd-SiteFooter-logoLink" href="/" translate="no">
             <svg
