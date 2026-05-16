@@ -230,6 +230,37 @@ follow-up could shed Next from the browser entirely — e.g. replace
 site but carries behaviour/drift risk, so it is intentionally **not** part
 of this migration. Revisit only if a concrete problem appears.
 
+## Domain cutover (DNS)
+
+Current state (verified via DNS):
+
+- DNS managed at **Namecheap** (`dns1/dns2.registrar-servers.com`) — not
+  Cloudflare, not delegated to Vercel.
+- Apex `measured.co` → `A 76.76.21.21` (Vercel apex IP), TTL 300.
+- `www.measured.co` → `CNAME cname.vercel-dns.com` (Vercel), TTL ~1800.
+
+Wrinkle: Pages provides a CNAME target (`measuredco-site.pages.dev`), not
+an IP, and a CNAME is invalid at the apex. Options:
+
+1. **Namecheap ALIAS at apex** (BasicDNS supports ALIAS) →
+   `measuredco-site.pages.dev`; keep DNS at Namecheap. ✅ recommended,
+   minimal blast radius — email/other records untouched.
+2. Apex → `www` redirect, only `www` on Pages.
+3. Move the `measured.co` zone to Cloudflare (change Namecheap
+   nameservers): one-click apex+www + flattening/proxy, but a full DNS
+   migration — must replicate MX/SPF/DKIM/TXT + subdomains or break email.
+
+Safe sequence (Option 1):
+
+1. Pages → Custom domains → add `measured.co` + `www.measured.co`;
+   Cloudflare states the exact records and issues the cert on validation.
+2. (Optional) lower `www` TTL to 300 a day ahead (apex already 300).
+3. Namecheap: apex `A 76.76.21.21` → **ALIAS `measuredco-site.pages.dev`**;
+   `www` CNAME → **`measuredco-site.pages.dev`**.
+4. Verify domain serves from Pages (cert, pages, redirects).
+5. Only then remove the domain from Vercel and decommission. Rollback =
+   revert the two Namecheap records (fast, TTL 300).
+
 ## Rollback
 
 `static` branch isolates this work; `main` remains the Puck/Supabase site
