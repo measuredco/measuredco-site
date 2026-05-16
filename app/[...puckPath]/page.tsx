@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import content from "../../content.json";
+import { getContentSlugs } from "../../lib/content-paths";
 import { getPageRes } from "../../lib/get-page-res";
 import { resolvePuckPath } from "../../lib/resolve-puck-path";
 import config from "../../puck/config";
@@ -12,6 +13,16 @@ const { description, openGraphLocale, siteName, siteUrl } = content;
 export { viewport } from "../page";
 
 export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const slugs = await getContentSlugs();
+
+  // "/" is served by app/page.tsx; "/blog" and "/blog/*" by the blog routes.
+  return slugs
+    .filter((puckPath) => puckPath.length > 0 && puckPath[0] !== "blog")
+    .map((puckPath) => ({ puckPath }));
+}
 
 export async function generateMetadata({
   params,
