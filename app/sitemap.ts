@@ -3,6 +3,8 @@ import { getPosts } from "../lib/get-posts";
 
 const { siteUrl } = content;
 
+export const dynamic = "force-static";
+
 export default async function sitemap() {
   const routes = [
     "",

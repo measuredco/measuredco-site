@@ -4,6 +4,8 @@ import content from "../content.json";
 
 const { themeColor, title } = content;
 
+export const dynamic = "force-static";
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: title,
