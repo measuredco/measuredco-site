@@ -53,9 +53,9 @@ directly in code. Deploy target moves from Vercel → Cloudflare Pages.
 ## Status
 
 - [x] Export prod Supabase `puck` table → `content/` (56 pages + raw dump)
-- [ ] Phase 1 — data layer: read `content/` instead of Supabase
-- [ ] Phase 2 — static params for catch-all routes
-- [ ] Phase 3 — static export config (`output: 'export'`, images)
+- [x] Phase 1 — data layer: read `content/` instead of Supabase
+- [x] Phase 2 — static params for catch-all routes
+- [x] Phase 3 — static export config (`output: 'export'`, images)
 - [ ] Phase 4 — feeds as build-time static files
 - [ ] Phase 5 — remove editor/auth/Supabase code + deps
 - [ ] Phase 6 — translate redirects/rewrites → Cloudflare `_redirects`
