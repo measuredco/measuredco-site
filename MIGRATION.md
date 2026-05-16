@@ -163,15 +163,29 @@ Verified static export vs live `https://measured.co`:
 - `out/404.html` present; redirected slugs absent (so CF `_redirects`
   fires cleanly).
 
-**Verify on the Cloudflare preview deployment** (not testable with local
-`serve`):
+**Verified on the Cloudflare preview deployment**
+(`b7d44136.measuredco-site.pages.dev`, branch `static`):
 
-- [ ] The 13 `_redirects` actually return 301 (esp. `/blog/inter-problems`
-      → internal, and the puckeditor.com externals).
-- [ ] `/feed.atom` served as `application/atom+xml`, `/feed.json` as
-      `application/feed+json` (from `_headers`).
-- [ ] Visual/interaction spot-check (SiteHeader nav, images) on the
-      preview URL before pointing the domain.
+- [x] All 13 `_redirects` return 301 with correct targets (internal
+      `/blog/inter-problems` + puckeditor.com externals); non-redirected
+      control post 200.
+- [x] `/feed.xml` `application/xml`, `/feed.atom` `application/atom+xml`,
+      `/feed.json` `application/feed+json` (`_headers` applied).
+- [x] All pages 200; `proposals/*` + unknown → 404; sitemap/robots/
+      manifest correct content-types.
+- [x] Body text **byte-identical** to production on `/`, blog post,
+      `/work/bt` (served unaltered by Cloudflare edge).
+
+### Deployment gotcha (resolved)
+
+The Cloudflare Pages GitHub App is scoped to **specific repos** on the
+`measuredco` org. Until `measuredco-site` was added to that scope, the
+project showed "disconnected from your Git account" and **no PR/branch
+preview builds ran** (the production branch could still build from stored
+config — misleading). Fix: GitHub → org Settings → GitHub Apps →
+Cloudflare Pages → Configure → add `measuredco-site`, then push to
+re-trigger. Create the project via **Workers & Pages → Create → Pages →
+Connect to Git** (not Direct Upload / Workers import).
 
 ## Decisions (resolved)
 
