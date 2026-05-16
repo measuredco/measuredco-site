@@ -1,0 +1,66 @@
+{
+  "root": {
+    "props": {
+      "title": "Let\u2019s catch up at this year\u2019s State of the Browser",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "We\u2019ll be going along to State of the Browser in London in September 2024.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-167aafb0-6f83-487d-9ccd-12b2340e18b7",
+        "date": "2024-05-08",
+        "title": "Let\u2019s catch up at this year\u2019s State of the Browser",
+        "author": "Paul Love",
+        "content": "We\u2019re happy to share that we\u2019ll be going along to this year\u2019s [State of the Browser](https://2024.stateofthebrowser.com/)!\n\n## Essential details\n\n* Saturday, 14 September, 2024\n* 9:30 am\u20135:00 pm\n* Barbican Centre, London ([Map](https://www.google.co.uk/maps/place/Barbican+Centre/@51.5209863,-0.0957614,17z/data=!4m6!3m5!1s0x48761b56fb64b275:0xc756e26675d21f40!8m2!3d51.5202077!4d-0.0937864!16zL20vMG02cTY?entry=ttu))\n* [Ticket information](https://2024.stateofthebrowser.com/tickets/)\n\n\n## About the event\n\nIn case you\u2019ve never been, State of the Browser is an excellent one-day event organised by the lovely and talented people at [London Web Standards](https://londonwebstandards.org/). \n\nThere are a variety of talks about things like web standards, accessibility, and the state of the modern web in general. \n\nThe talks are never not insightful, and it\u2019s a great chance to catch up with web industry people. We highly recommend\u2014hence this post.\n\n\n## Talk to us\n\nThe reason we\u2019re sharing this is that we\u2019ll be going and would love to catch up with you.\n\nPossible topics of conversation:\n\n- Weather\n- What you\u2019ve been working on\n- Your UI and branding headaches\n- Weather\n- Design and UI systems generally\n- Accessibility\n- Coffee?\n- Weather\n\nBut other than that, we\u2019re pretty relaxed about conversational subject matter.\n\nWe don\u2019t plan to speak at the event, but a big thanks to State of the Browser for letting us sponsor.\n\n[Grab a ticket](https://2024.stateofthebrowser.com/tickets/), perhaps?",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "standfirst": "We\u2019ll be going along to State of the Browser in London in September 2024.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-8569dc0f-b94e-4c25-884e-8f2f7eef2039",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-d99c3380-dcc9-40e9-9bc2-99165160f834",
+        "size": "12"
+      }
+    }
+  ]
+}

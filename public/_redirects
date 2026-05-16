@@ -1,0 +1,18 @@
+# Cloudflare Pages redirects (was next.config.js redirects()).
+# All 301 permanent. Underlying content for these slugs is intentionally
+# deleted so no static asset conflicts with the rule.
+
+/blog/inter-problems  /blog/font-distribution-problems  301
+
+/blog/puck-open-source-visual-react-editor-modern-content-workflows  https://puckeditor.com/blog/introducing-puck  301
+/blog/building-a-react-page-builder-an-introduction-to-puck  https://puckeditor.com/blog/building-a-react-page-builder-an-introduction-to-puck  301
+/blog/puck-013  https://puckeditor.com/blog/puck-013  301
+/blog/puck-v014  https://puckeditor.com/blog/puck-014  301
+/blog/puck-v015  https://puckeditor.com/blog/puck-015  301
+/blog/puck-v016  https://puckeditor.com/blog/puck-016  301
+/blog/puck-v017  https://puckeditor.com/blog/puck-017  301
+/blog/puck-v018  https://puckeditor.com/blog/puck-018  301
+/blog/using-css-variables-to-create-dynamic-themes-in-puck  https://puckeditor.com/blog/using-css-variables-to-create-dynamic-themes-in-puck  301
+/blog/managing-application-state-in-puck  https://puckeditor.com/blog/managing-application-state-in-puck  301
+/blog/revolutionizing-drag-and-drop-in-react-introducing-puck-018  https://puckeditor.com/blog/revolutionizing-drag-and-drop-in-react-introducing-puck-018  301
+/blog/advanced-layouts-with-puck-harnessing-grid-and-flex-containers  https://puckeditor.com/blog/advanced-layouts-with-puck-harnessing-grid-and-flex-containers  301

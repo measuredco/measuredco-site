@@ -1,0 +1,313 @@
+{
+  "root": {
+    "props": {
+      "title": "About",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "We are a team of designers, engineers and strategists with a mission to revolutionise the quality of UI across the web.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": true
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": false
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {
+    "Grid-99885818-3686-4c16-b860-46d9458c43de:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-4935741b-efbc-4d0a-9a3c-951ec68b3725",
+          "align": "start",
+          "colSpan": "3",
+          "justify": "start",
+          "colSpanNarrow": "7",
+          "colStartNarrow": "2"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-456a7044-548c-427c-befc-b4f09dbdaaa5",
+          "align": "start",
+          "colSpan": "3",
+          "justify": "start",
+          "colStart": "5",
+          "colSpanNarrow": "7",
+          "colStartNarrow": "2"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-795df9ab-e68e-4fec-84fa-ee21174dff8b",
+          "align": "start",
+          "colSpan": "3",
+          "justify": "start",
+          "colStart": "9",
+          "colSpanNarrow": "7",
+          "colStartNarrow": "2"
+        }
+      }
+    ],
+    "Grid-9cea22f6-ee5a-4cb0-b559-e8c3b20a10ea:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-2b818aa2-a27a-4718-bd59-518242c4a2ac",
+          "align": "start",
+          "colSpan": "8",
+          "justify": "start",
+          "colSpanNarrow": "9"
+        }
+      }
+    ],
+    "Grid-a50489c0-d861-4df1-b81e-677d26c55f2d:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-31ae6a97-f1f9-4f62-9fd2-27191d65893f",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-5930558f-97a9-45fd-af61-74b9a027a630",
+          "align": "start",
+          "colSpan": "9",
+          "justify": "start",
+          "colStart": "2",
+          "colSpanNarrow": "8",
+          "colStartNarrow": "2"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-8af545c5-1fc5-4172-a41e-ebc5e21f7131",
+          "align": "start",
+          "colSpan": "9",
+          "justify": "start",
+          "colStart": "2",
+          "rowStart": "",
+          "colSpanNarrow": "8",
+          "colStartNarrow": "2"
+        }
+      }
+    ],
+    "Section-25dc6efc-4eb7-4675-bf28-ae32285d16a9:section": [
+      {
+        "type": "Contact",
+        "props": {
+          "id": "Contact-5663b530-8eb4-4752-908f-bf33074f5ed2",
+          "text": "How can we help?",
+          "email": "paul@measured.co"
+        }
+      }
+    ],
+    "Section-379b024c-b184-4c57-af90-b8df0d7fc01e:section": [
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-9cea22f6-ee5a-4cb0-b559-e8c3b20a10ea",
+          "gap": "default"
+        }
+      },
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-99885818-3686-4c16-b860-46d9458c43de",
+          "gap": "default"
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-a1f341d5-d9db-4e3c-9e20-47f5d12210c9",
+          "size": "08"
+        }
+      },
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-a50489c0-d861-4df1-b81e-677d26c55f2d",
+          "gap": "default"
+        }
+      }
+    ],
+    "GridItem-2b818aa2-a27a-4718-bd59-518242c4a2ac:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-b1ca9973-ff08-4665-9c44-34a1b41929c3",
+          "size": "l",
+          "level": "1",
+          "heading": "About",
+          "description": "We are a team of designers, engineers and strategists with a mission to revolutionise the quality of UI across the web. Here\u2019s [why we\u2019re called Measured](/blog/why-we-are-called-measured)."
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-07ff6f4e-fba7-4938-98ed-467b7cca789b",
+          "size": "12"
+        }
+      }
+    ],
+    "GridItem-31ae6a97-f1f9-4f62-9fd2-27191d65893f:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-52e69895-a9fc-4773-b618-8115bf44c977",
+          "size": "m",
+          "level": "2",
+          "heading": "Meet our founding team",
+          "description": ""
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-1c16c184-5c61-4e65-a036-93020adf4378",
+          "size": "06"
+        }
+      }
+    ],
+    "GridItem-456a7044-548c-427c-befc-b4f09dbdaaa5:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-1e308beb-8afc-43be-ba59-6be49b378125",
+          "size": "m",
+          "level": "2",
+          "heading": "We are pragmatists",
+          "description": "Strong opinions can lead to logjams. We listen more than we speak, and flex to our clients\u2019 unique circumstances."
+        }
+      }
+    ],
+    "GridItem-4935741b-efbc-4d0a-9a3c-951ec68b3725:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-e211c1f9-56d7-494c-b29c-880cdcc8fb46",
+          "size": "m",
+          "level": "2",
+          "heading": "We are craftspeople",
+          "description": "We don\u2019t believe in move fast and break things. We believe in move fast and make things better."
+        }
+      }
+    ],
+    "GridItem-5930558f-97a9-45fd-af61-74b9a027a630:grid-item": [
+      {
+        "type": "Profile",
+        "props": {
+          "id": "Profile-1289963e-28b3-47b1-92b3-a3fe46d6b32b",
+          "link": "https://www.linkedin.com/in/paullove/",
+          "name": "Paul Love",
+          "image": "https://res.cloudinary.com/measuredco/image/upload/v1771417569/site/Paul_BG_Removed_1024_gzqrg8.png",
+          "title": "Principal Consultant",
+          "description": "Paul specialises in leading high-impact teams building web UI projects from scratch, aligning development, design, brand, and UX."
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-7601ef23-06ca-4e2b-8b9d-376c17c8da32",
+          "size": "05"
+        }
+      }
+    ],
+    "GridItem-795df9ab-e68e-4fec-84fa-ee21174dff8b:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-ebbea1bd-83ff-4ff8-b449-9d629a9be851",
+          "size": "m",
+          "level": "",
+          "heading": "We are goal-setters",
+          "description": "We value objective measures of progress. It makes our work accountable and validates our approach. "
+        }
+      }
+    ],
+    "GridItem-8af545c5-1fc5-4172-a41e-ebc5e21f7131:grid-item": [
+      {
+        "type": "Profile",
+        "props": {
+          "id": "Profile-876f7f53-9c22-462f-b91c-8d61b6034cdc",
+          "link": "https://www.linkedin.com/in/scottboyle/",
+          "name": "Scott Boyle",
+          "image": "https://res.cloudinary.com/measuredco/image/upload/v1771417582/site/Scott_BG_Removed_1024_mlz52x.png",
+          "title": "Principal Design Engineer",
+          "description": "Scott has extensive experience in front-end development and UI, building systems that seamlessly interweave design and branding."
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-d63415be-2f62-4d11-beb4-799c260e5e5d",
+          "size": "05"
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-d3782d12-9369-4730-9e4f-165f58d32338",
+        "size": "09"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-379b024c-b184-4c57-af90-b8df0d7fc01e",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-5619eed2-9ac7-46ba-820c-e6a7ef9f5a2f",
+        "size": "12"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-25dc6efc-4eb7-4675-bf28-ae32285d16a9",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-a55e95db-90e8-41c9-9240-8daaf2801cfd",
+        "size": "12"
+      }
+    }
+  ]
+}

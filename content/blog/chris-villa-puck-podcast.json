@@ -1,0 +1,66 @@
+{
+  "root": {
+    "props": {
+      "title": "Hear Chris Villa of Measured discuss all things Puck",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "Hear Chris Villa discuss Puck and Measured past and present, as well as balancing open source with commercial viability, on The Craft of Open Source podcast.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-34accd66-dba6-42b1-b97a-830e2d7539a2",
+        "date": "2025-01-20",
+        "title": "Hear Chris Villa of Measured discuss all things Puck",
+        "author": "Paul Love",
+        "content": "Measured co-founder [Chris Villa](https://www.linkedin.com/in/chrisvilla/) is on the [latest episode](https://www.flagsmith.com/podcast/puck-measured) of [The Craft of Open Source podcast](https://www.flagsmith.com/podcast) with Ben Rometsch.\n\nIt\u2019s a wide-ranging interview \u2014 and a great chance to hear more about [Puck](https://puckeditor.com/), our open-source visual editor for React.\n\nChris talks about things like:\n\n- How and why Puck came to be\n- Puck\u2019s successful [announcement on Hacker News](https://news.ycombinator.com/item?id=37391848) in 2023\n- Balancing open source and commercial viability\n- The story of Measured, including insights into our client work\n- How an agency environment has informed Puck\n\n\u2026 and more besides.\n\nThe episode is now [available on the web](https://www.flagsmith.com/podcast/puck-measured), and through all good podcast platforms. Why not have a listen?\n\nThanks to Ben and [Flagsmith](https://www.flagsmith.com/) for having Chris along.\n\nWe\u2019d love to hear your thoughts. Get involved on [Bluesky](https://bsky.app/profile/chrisvilla.bsky.social/post/3lgauqhep5k2v) or [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7287454403437969408).",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "standfirst": "Hear Chris Villa discuss Puck and Measured past and present, as well as balancing open source with commercial viability, on The Craft of Open Source podcast.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-722a078e-4bce-4972-a69c-f9bbede394f8",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-f8e1a281-2ca8-4687-b4ca-704c80fb1d2c",
+        "size": "12"
+      }
+    }
+  ]
+}

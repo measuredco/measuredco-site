@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "12 tips to make project handovers a success",
+      "ogImage": {
+        "alt": "Handovers are as much about culture as they are processes and technology.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1733840446/Project_handovers_OG_o0sc13.png",
+        "type": "image/png"
+      },
+      "description": "Project handovers are always tricky. They\u2019re as much about people as they are processes. Here\u2019s what we\u2019ve learned over the years, distilled into 12 tips.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-259d6a73-d3d5-4e94-9e2b-beffd85a908f",
+        "date": "2024-11-04",
+        "title": "12 tips to make project handovers a success",
+        "author": "Paul Love",
+        "content": "When you work on a large web project, there will come a time to hand it over to another team. This could be a handover from an outside agency to an internal team, or from one internal team to another.\n\nHandovers are always tricky. They\u2019re as much about people and culture as they are processes and technology.\n\nHere\u2019s what we\u2019ve learned over the years, distilled into 12 tips. Whether you\u2019re a client organisation or a supplier, hopefully you can benefit from our experience. \n\n1. ## Assume zero context\n   Handovers involve two teams: \n\n   - The incoming team picking things up\n   - The outgoing team putting things down\n\n   The outgoing team might have made the thing. The new team might be coming in to maintain it. Those are very different contexts.\n\n   Whatever the circumstances, it\u2019s possible the incoming team has zero context. They might not know the goals of the project, or even what they\u2019ve been brought in to do. The team might be comprised wholly of new hires.\n\n   If people are moved from elsewhere in the organisation, it\u2019s probably a gentler on-ramp. But whatever the circumstances, skew cautious. Don\u2019t make assumptions about what the incoming team already knows.\n\n1. ## Make a plan\n   Making a handover plan is essential. It should be an actual document. It doesn\u2019t need to be long.\n\n   Handovers are mostly about people, so the plan should be people-oriented, with input from everyone. \n\n   A list is a good place to start. Lists help you:\n\n   - Align as a team\n   - Assign and prioritise activities\n   - Adapt to different project structures like now, next, later[^escape-roadmap-trap]\n   - Report progress\n\n   Include all possible duties, especially when it\u2019s not clear how to do them. \n\n   Talk through the list with everyone. You\u2019ll land on things you\u2019ve missed, and things you thought were clear but aren\u2019t. Expand on these.\n\n   Over time, you can flesh the plan out with useful, more detailed information.\n\n   To start with, the plan will be mainly written by the outgoing team for the needs of the incoming team. Gradually, the incoming team will have more input.\n\n1. ## Start with fundamentals\n   The plan should contain whatever the incoming team needs to continue the project autonomously before the outgoing team pack their boxes.\n\n   Helpful things to include are:\n\n   - Aims of the project\n   - A who\u2019s who of stakeholders\n   - Where things are (e.g. project documents)\n   - Working processes (this saves lots of time)\n   - Project history and context\n   - Project architecture\n   - Unusual and unintuitive aspects\n   - Unresolved points of friction\n\n   Remember that it\u2019s a working document, not carved in stone. Add generously, then edit ruthlessly. Keep only useful things.\n\n1. ## Work in phases\n   Identify which list items you can start handing over straight away.\n\n   Use paired working to gradually hand over trickier duties. Let the incoming team member take responsibility as soon as they can, but take as long as is needed.\n\n   Not everything will go smoothly. Reassure the incoming team that points of friction are a chance to make the plan better. \n\n1. ## Test, then iterate\n   The plan should evolve alongside the handover process. \n\n   As the incoming team ramps up, have them use the plan to find its gaps and weaknesses. Figure out who\u2019s best placed to address them. Over time, it\u2019s less likely this will be someone in the outgoing team.\n\n   The plan could pan out in these stages:\n\n   1. Drafted by the outgoing team\n   1. Iterated by the outgoing team based on feedback and observations\n   1. Iterated by the incoming team based on their learnings and needs\n\n   But there are no handover police. Do what works.\n\n1. ## Don\u2019t prescribe\n   A handover plan shouldn\u2019t tell the incoming team how to run the project. It should help them reach the point where they can run it themselves.\n\n   It shouldn\u2019t be:\n\n   - A knowledge repo\n   - A disciplinary guide\n   - A product roadmap or backlog[^backlog]\n   - A list of problems to fix\n   - The home of project documentation\n\n   Report what you\u2019ve been doing to the incoming team, and how you\u2019ve done it. The incoming team should have freedom to do things differently.\n\n   Avoid directly mapping outgoing people to incoming people. It\u2019s a form of telling the incoming team how to work, and skills don\u2019t align this way. Hand over at team level.\n\n1. ## Acknowledge feelings\n   Letting go of something you\u2019ve built is like sending a child to a new school. Anyone who cares about the work will have feelings about it.\n\n   Sometimes the incoming team will have strong opinions, and that can be challenging. Remember, they don\u2019t have the organisational context for the decisions you\u2019ve made.\n\n   Encourage frank discussion about why things were done the way they were. They may uncover organisational challenges that should be documented. \n\n   But be prepared to let things go. You can\u2019t make people understand past decisions. An opinionated team is better than an incoming team that just wants to be told what to do.\n\n   It can be hard for the outgoing team members to not know how the story ends. Suggest ways to catch up in future, even if it\u2019s just going for a coffee. This helps with closure and personal development.\n\n   Ultimately, it\u2019s essential to let go. If by the last day and the outgoing team are holding on to things: problems.\n\n1. ## Manage time\n   Don\u2019t preempt a handover before it\u2019s real. You\u2019ll waste time on things that will change in future.\n\n   Start planning as soon as you know a handover\u2019s coming. A few months is usual, although it depends on the project\u2019s scale and complexity, as well as the number of people involved.\n\n   You\u2019re handing over culture and relationships as well as systems and processes. Those aspects take time.\n\n   If you weren\u2019t given enough notice, share feedback to sow seeds for a rosier future.\n\n1. ## Tidy up\n   A handover is a great excuse to tidy up the project. Leave the incoming team with forward momentum. If they have to unpick knotty problems from day 1, the project will grind to a halt.\n\n   We like to think of it as parking the project nicely so someone else can get in and drive off.\n\n   Resolve as many problems and fix as many broken things as you can before final handover. Prioritise issues that require contextual knowledge.\n\n1. ## Keep a friction log\n   You won\u2019t be able to fix everything, and not everything should be done by the outgoing team. \n\n   Note outstanding issues in a friction log. This could be a section of your handover plan.\n\n   For example, you might discover a process that was hindering progress. It\u2019ll be down to the incoming team to find a better way.\n\n   Any decisions that that will have a long-term effect should be left to the incoming team.[^backlog-friction]\n\n1. ## Treat the handover as core work\n   Don\u2019t think that two teams means double capacity. There\u2019s plenty to do to keep the project on track while also handing over.\n\n   Project work and business-as-usual activities should continue. This prevents the handover plan being theory rather than practice. It shows how things work.\n\n   Don\u2019t worry about keeping the outgoing team busy. If, by the end, they have nothing to do, things have gone well. If they\u2019re grafting on their last day, you\u2019ll be lost when they go.\n\n   Above all, don\u2019t create urgency. It\u2019s not the time to kick off a large or complex piece of work.\n\n1. ## Make friends\n   The outgoing team should make friends with the incoming team. The incoming team should make friends with everyone.\n\n   If possible, get together in person at the beginning of the process. Be honest about the challenges the project and organisation has gone through. \n\n   Be engaged but not obsessive. Doom and gloom isn\u2019t the vibe \u2014 keep it positive. \n\n## Three things to remember\n\nHandovers are about people more than technology or logistics. So:\n\n- Make a plan around the needs of the people involved\n- Include people\u2019s feelings in your thinking\n- Carve out time for the actual handover work\n\nPrioritise these, and you stand every chance of a successful handover.\n\n[^escape-roadmap-trap]: See [Escaping the roadmap trap](https://productcrunch.substack.com/p/escaping-the-roadmap-trap) by Emil Kabisch for more about creating roadmaps which differentiate now, next and later.\n\n[^backlog]: Although the plan shouldn\u2019t be a roadmap, it should be easy for the incoming team to derive one from your list of duties.\n\n[^backlog-friction]: The friction log is another source the incoming team can use to create a roadmap.\n",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1732538343/backgrounds/_Measured_Backgrounds_06_300_ubdoow.png",
+        "standfirst": "Project handovers are always tricky. They\u2019re as much about people as they are processes. Here\u2019s what we\u2019ve learned over the years, distilled into 12 tips.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-e7f1bb40-d3c6-43dd-bdd3-1215e418c422",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-59edb684-da19-43ad-82d4-874682396b2d",
+        "size": "12"
+      }
+    }
+  ]
+}

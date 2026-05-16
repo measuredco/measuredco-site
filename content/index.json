@@ -1,0 +1,397 @@
+{
+  "root": {
+    "props": {
+      "title": "",
+      "schema": "[\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Organization\",\n    \"name\": \"Measured\",\n    \"url\": \"https://measured.co\",\n    \"logo\": \"https://measured.co/logo-schema-organization.svg\",\n    \"sameAs\": [\n      \"https://twitter.com/hellomeasuredco\",\n      \"https://www.linkedin.com/company/measuredco/\",\n      \"https://github.com/measuredco\"\n    ]\n  },\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"WebSite\",\n    \"name\": \"Measured\",\n    \"url\": \"https://measured.co\"\n  }\n]",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work"
+        },
+        {
+          "href": "/blog",
+          "label": "Blog"
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {
+    "Grid-2ed7698d-3962-4e1c-a71a-2199ded1b37e:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-bd5a8bda-a9c3-4c2e-87b4-6534268f03ae",
+          "align": "start",
+          "colSpan": "6",
+          "justify": "start",
+          "colStart": "2"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-909c6c4c-5565-416c-b696-13a67bb8ee14",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "2",
+          "colSpanNarrow": "6",
+          "colStartNarrow": ""
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-9cfe3cb0-ce6c-49cf-8c78-1c436408af74",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "",
+          "colSpanNarrow": "6"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-a720f3f2-bca7-4842-8d10-79013ddcc0b9",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "2",
+          "colSpanNarrow": "6"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-5ab13ae0-4330-4297-8d0f-9a5ac7fcaab6",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "",
+          "colSpanNarrow": "6"
+        }
+      }
+    ],
+    "Grid-3ce45725-68f6-40a6-9cce-3238d8b07ca3:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-25bff192-0a9d-4d1a-9f87-4ef0366fc7e2",
+          "align": "start",
+          "colSpan": "6",
+          "justify": "start",
+          "colStart": "2"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-b48d8ccb-6a89-4f08-9e22-19fd63da61b6",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "2",
+          "colSpanNarrow": "6"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-9891fd54-a893-4433-9daa-4bc2b5bad5a2",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "",
+          "colSpanNarrow": "6"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-e4096e9f-4297-4874-8c69-1609bc3d3549",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "2",
+          "colSpanNarrow": "6",
+          "colStartNarrow": ""
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-30caa08d-deb4-487a-8e51-e477fb78d10d",
+          "align": "start",
+          "colSpan": "5",
+          "justify": "start",
+          "colStart": "",
+          "colSpanNarrow": "6"
+        }
+      }
+    ],
+    "Section-1d71e5d5-7e98-433b-a288-3e36e2f582c6:section": [
+      {
+        "type": "Contact",
+        "props": {
+          "id": "Contact-e34d7d9b-cb45-4377-b8c0-872481f7e1cc",
+          "text": "How can we help?",
+          "email": "paul@measured.co"
+        }
+      }
+    ],
+    "Section-79b4d28c-d446-4e06-820b-bb14b6d8dc80:section": [
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-3ce45725-68f6-40a6-9cce-3238d8b07ca3",
+          "gap": "large"
+        }
+      }
+    ],
+    "Section-aaa0ae78-5880-430d-ba25-98083267e7be:section": [
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-2ed7698d-3962-4e1c-a71a-2199ded1b37e",
+          "gap": "large"
+        }
+      }
+    ],
+    "GridItem-25bff192-0a9d-4d1a-9f87-4ef0366fc7e2:grid-item": [
+      {
+        "type": "Heading",
+        "props": {
+          "id": "Heading-7cfb9789-6bc9-4c4b-9099-0f9e2c2ba233",
+          "name": "work",
+          "size": "1",
+          "text": "Blog",
+          "align": "left",
+          "level": "2",
+          "maxWidth": ""
+        }
+      }
+    ],
+    "GridItem-30caa08d-deb4-487a-8e51-e477fb78d10d:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-81ac85b3-77d5-4b33-a9be-fc8eba7e3129",
+          "link": "/blog/tailwind-trade-offs",
+          "note": "Read",
+          "title": "Understanding the trade-offs of using Tailwind CSS",
+          "description": "Tailwind helps you build web pages quickly with a utility-first approach \u2014 but is it right for your project? Here we explore its benefits and trade-offs.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-5ab13ae0-4330-4297-8d0f-9a5ac7fcaab6:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-b1e6c15d-ff1e-40a8-b90f-bbb8dd11cc31",
+          "link": "/work/hubble",
+          "note": "More",
+          "title": "Enabling a business pivot for Hubble",
+          "graphic": false,
+          "description": "Building a platform for on-demand office space and hybrid working, ready to scale.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-909c6c4c-5565-416c-b696-13a67bb8ee14:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-ea8e2b46-60ea-4729-be4a-b55fccc056ef",
+          "link": "/work/bt",
+          "note": "More",
+          "title": "A cohesive digital identity for BT",
+          "description": "Building a design system to bring a new visual identity to life across a transforming organisation.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-9891fd54-a893-4433-9daa-4bc2b5bad5a2:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-bce836d3-300f-4e78-824e-17b050f3c9bb",
+          "link": "/blog/introducing-facet",
+          "note": "Read",
+          "title": "Introducing Facet: a procedural brand image system built with agentic coding",
+          "graphic": false,
+          "description": "From one-shot prototype to production-ready internal tool for branded blog and social visuals.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-9cfe3cb0-ce6c-49cf-8c78-1c436408af74:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-dbac1d57-ab59-4ff5-812c-24bc021cf694",
+          "link": "/work/dunnhumby",
+          "note": "More",
+          "title": "Design system strategy for dunnhumby",
+          "graphic": false,
+          "description": "Running in-depth discovery with stakeholder teams to establish foundations for a future design system.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-a720f3f2-bca7-4842-8d10-79013ddcc0b9:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-73481c65-4088-41b6-8473-f696c92cfe4b",
+          "link": "/work/hilton",
+          "note": "More",
+          "title": "Brand expression at scale for Hilton",
+          "description": "Systematising a multi-brand portfolio so teams deliver great digital experiences faster and more simply.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-b48d8ccb-6a89-4f08-9e22-19fd63da61b6:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-52047a5d-7975-436d-867f-f38eb54dc1f9",
+          "link": "/blog/reason-design-systems-fail",
+          "note": "Read",
+          "title": "The real reason design systems fail",
+          "graphic": false,
+          "description": "Design systems misfire when organisations hire the team and build at the same time. Avoid paralysis by building the right team in the right way. Here\u2019s how.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-bd5a8bda-a9c3-4c2e-87b4-6534268f03ae:grid-item": [
+      {
+        "type": "Heading",
+        "props": {
+          "id": "work",
+          "name": "work",
+          "size": "1",
+          "text": "Work",
+          "align": "left",
+          "level": "2",
+          "maxWidth": ""
+        }
+      }
+    ],
+    "GridItem-e4096e9f-4297-4874-8c69-1609bc3d3549:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-7228daee-85e3-405a-92a6-539d4cb638ff",
+          "link": "/blog/new-visual-identity",
+          "note": "Read",
+          "title": "Creating a new visual identity for Measured",
+          "graphic": true,
+          "description": "When you work in UI and branding, your own shop window should reflect your expertise. Here\u2019s how we upgraded our visual identity to show what we\u2019re&nbsp;about.",
+          "headingLevel": "3"
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "type": "Hero",
+      "props": {
+        "id": "Hero-4ae8c276-ad00-458b-80f6-568ed6f90009",
+        "logos": [
+          {
+            "logo": "bestBuy"
+          },
+          {
+            "href": "/work/bt",
+            "logo": "bt"
+          },
+          {
+            "href": "/work/dunnhumby",
+            "logo": "dunnhumby"
+          },
+          {
+            "href": "/work/hilton",
+            "logo": "hilton"
+          },
+          {
+            "href": "/work/hubble",
+            "logo": "hubble"
+          },
+          {
+            "logo": "refinitiv"
+          },
+          {
+            "logo": "thomsonReuters"
+          },
+          {
+            "logo": "weaver"
+          }
+        ],
+        "strapline": "Incisive UI strategy for discerning businesses",
+        "description": "We pour decades of experience into helping large organisations craft flawless solutions to their UI challenges."
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-aaa0ae78-5880-430d-ba25-98083267e7be",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-5d910e5d-f543-4f01-89c4-5084317adb5c",
+        "size": "12"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-79b4d28c-d446-4e06-820b-bb14b6d8dc80",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-1692199939852",
+        "size": "12"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-1d71e5d5-7e98-433b-a288-3e36e2f582c6",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-1692049142858",
+        "size": "12"
+      }
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import content from "../../../content.json";
+import { getContentSlugs } from "../../../lib/content-paths";
 import { resolvePuckPath } from "../../../lib/resolve-puck-path";
 import { getPageRes } from "../../../lib/get-page-res";
 import config, { Props } from "../../../puck/config";
@@ -12,6 +13,16 @@ const { blogPostDescription, openGraphLocale, siteName, siteUrl } = content;
 export { viewport } from "../../page";
 
 export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const slugs = await getContentSlugs();
+
+  // Only "/blog/*" posts; the "/blog" index is served by app/blog/page.tsx.
+  return slugs
+    .filter((puckPath) => puckPath[0] === "blog" && puckPath.length > 1)
+    .map((puckPath) => ({ puckPath: puckPath.slice(1) }));
+}
 
 export async function generateMetadata({
   params,

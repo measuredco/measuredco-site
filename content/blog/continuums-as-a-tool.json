@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "Continuums as a tool for understanding",
+      "ogImage": {
+        "alt": "A dark blue presentation slide with the text \"Complex problems rarely have tidy answers\" on the left. A dashed horizontal line runs across the bottom with a label pointing to the center that reads, \"It helps to step back to visualise the range of possibilities.\"",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1764073397/Continuums_as_a_tool_OG_fylyxz.png",
+        "type": "image/png"
+      },
+      "description": "Complex problems rarely have tidy answers. The continuum is a powerful tool to shift from grasping for quick fixes to finding a considered, effective approach.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-6677ab9a-330c-4bf6-b405-12108a55ed18",
+        "date": "2025-09-30",
+        "title": "Continuums as a tool for understanding",
+        "author": "Paul Love",
+        "content": "People are natural problem-solvers. We like to fix things. So when we\u2019re faced with a complex problem, it\u2019s not surprising that we want to solve it. Usually in the fastest and best way possible.\n\nBut there\u2019s risk in trying to fix the whole problem at once. For one, it can make it very difficult to know where to start, which often leads to a form of paralysis. People naturally bounce on to more readily-solvable problems instead. \n\nAlmost always, it helps to step back to visualise the range of possibilities. This is where the idea of a continuum can be a powerful tool in understanding. It helps move from reflexive solutionising to a more considered approach.\n\n## DIY as a spectrum\n\nAs an example, think of renovating a room at home. \n\nAt one end of the spectrum, you could handle every aspect of the project yourself. It\u2019s the most time-consuming option, but it will save a lot of money. It's also difficult, and might lead to a less good outcome. (No offence.)\n\nAt the other end, you could pay to outsource the whole project to relevant trades. Expensive, but it does give you time back, and should lead to the best results.\n\nBut, assuming you have some time and money, you might look at a sensible middle ground. You could get a professional in to handle the tricky job of plastering the walls, but take on the painting yourself.\n\nThe mental model of the continuum helps to map out the interesting options between the extremes. In our experience, the ends of the spectrum rarely lead to a pot of gold.\n\n\n## Multi-brand design systems as a continuum\n\nIn our world, multi-brand design systems are a great example of the usefulness of the continuum. When an organisation has more than one brand, what\u2019s the best way to approach a new or evolving design system? Should you have one system or many? \n\n**Note:** We\u2019re talking about brands here, but the same goes for multiple products or product groups. (Contextual re-nouning is encouraged.)\n\nInstead of approaching this as a binary choice, you can plot a range of different approaches on an axis. \n\nAt one end you have simple theming. This means one design system to rule them all, switching out logos and colour schemes for each brand. It\u2019s a fast and efficient approach, but the trade-off is limited brand differentiation.\n\nAt the other end, the organisation has multiple siloed design systems. Nothing is shared between them, be that code bases, components or anything else. Each brand has total independence, but at the expense of efficiency.\n\nSomewhere in the middle is a multi-brand approach built on one system. You have the benefits of shared architecture and flexibility in brand differentiation. The benefits and trade-offs are more balanced.\n\nFiguring out the best approach means arriving at how far along the continuum you want to land. How much flexibility do you need? How much time and effort do you want to commit to? Pinning the options to a continuum (real or imaginary) helps everyone understand the trade-offs.\n\n## Why continuums work\n\nThinking about this continuum isn\u2019t an abstract exercise. It\u2019s a practical method with real benefits:\n\n**It prevents hasty decisions:** It encourages teams to pause and consider a number of alternatives beyond those that first spring to mind.\n\n**It helps you see the possibilities:** It simplifies complex problems by providing an objective framework for comparison.  \n\n**It fosters a considered consensus:** The continuum makes it clear that there's no single correct answer. Each option has its pros and cons, and the best choice depends on the specific circumstances. This opens up a more nuanced conversation about trade-offs and helps everyone buy into a way forward.\n\n## It\u2019s all about trade-offs\n\nWe often say that all decisions are trade offs. In fact, we probably should have written that post first. Continuums are a tool for understanding and talking about those trade offs.\n\nIt\u2019s much easier than thinking about stand-alone alternatives. Plus you get to make funny hand gestures when you explain things. \ud83e\udef2 \ud83e\udef1",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771287164/facet/facet-s852849991_vmapaq.png",
+        "standfirst": "Complex problems rarely have tidy answers. The continuum is a powerful tool to shift from grasping for quick fixes to finding a considered, effective approach.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-dfe861cb-aeb6-47fa-8656-7cb8d6a84861",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-d61ba780-7d9f-4a0f-af28-ed30676e1e9b",
+        "size": "12"
+      }
+    }
+  ]
+}

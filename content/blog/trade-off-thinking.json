@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "How we use trade-offs to make better-informed product decisions",
+      "ogImage": {
+        "alt": "",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1778931865/articles/facet-822623324-og-ad-mx-a66cn19e86fx0fy50sz80sp53b18l98op11ot0w0d71sc78_iqbfms.png",
+        "type": "png"
+      },
+      "description": "Over-scrutinising an idea seems slow, but what really kills momentum is discovering hidden costs later. Here's how we use trade-offs to spot issues upfront.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-582f38fc-5af3-4de5-9017-783733b96362",
+        "date": "2026-05-16",
+        "title": "How we use trade-offs to make better-informed product decisions",
+        "author": "Paul Love",
+        "content": "Decisions are tricky. The first idea can be seductive when there\u2019s a desire to get things done. Weighing unnecessary alternatives will wipe out momentum \u2014 or that\u2019s the fear at least.\n\nBut it\u2019s rare that there\u2019s only one right answer. Good paths forward are found by looking toward the destination rather than at your feet.\n\nAn aerial view is even better. You can see all the options, and look at the trade-offs each entails. Then you can make informed choices.\n\nWe wrote about [how continuums help you see the range of possibilities](https://measured.co/blog/continuums-as-a-tool). Trade-off thinking is a lens through which you can scrutinise them. Here\u2019s how we go about it.\n\n1. ## Map the viable options\n\n   People can\u2019t keep more than a few options in their heads, so make things tangible.\n\n   Find a whiteboard. Write each option on a card, and add the pros and cons you see in each. You can begin alone. It helps others not to start with a blank canvas.\n\n   Once you have something to share, ask the team to add options and contribute to the pros and cons.\n\n2. ## Arrange them on a continuum\n\n   Draw a horizontal line across your whiteboard and label each end. Use the metric you care about most.\n\n   That could be:\n\n   - Time to market versus feature richness\n   - Project-optimised versus team-friendly tech stack\n   - Customisation-centred versus governance-centred\n\n   As a team, place the options along the line. Choose two options that mark the limits. We call these end caps. They should be practically viable so that they\u2019re useful reference points.\n\n   Place the rest of your options between the end caps. Don\u2019t labour it. Just reach a broad consensus about where the options might stand relative to one another.\n\n3. ## Identify trade-offs\n\n   Next, look at each option\u2019s pros and cons. What does each gain you? What are the costs?\n\n   Discuss which trade-offs you can live with. Statements like \u201cwe get x by accepting y\u201d are more useful than \u201cthis is good\u201d and \u201cthat is bad\u201d. Prioritise your key metric, but look beyond it too.\n\n   Rearrange the options as you learn more about them. The continuum should continue to gain fidelity.\n\n4. ## Decide\n\n   Sometimes one option sets itself apart, but usually that\u2019s not the case. More often, you\u2019ll find that several good options cluster together. This makes sense. The most viable options are usually bundles of things, not neatly-packaged solutions.\n\n   Rather than simply counting the benefits and costs, understand the compromises and their knock-on effects. Identify those you can live with.\n\n   Keep the conversation pegged to the continuum. Before long, a favourite option will emerge.\n\n## A real-world example\n\nImagine your core product relies on an ageing UI library. It still works, but it\u2019s preventing you from adding new features.\n\nThe realistic options are bounded by these end caps:\n\n1. **Overhaul:** Perform a total, ground-up upgrade. You gain a modern, secure foundation by accepting a period of frozen feature development.\n\n2. **Cut:** Remove functionality that relies on the old library. You gain architectural purity by accepting the loss of specific features.\n\nBetween these lie pragmatic bridging options. You upgrade critical paths or wrap the old library so new features can be built on modern tools alongside.\n\nThis is trade-off thinking earning its keep. By looking closely at each option\u2019s compromises, you can land on a sensible middle way.\n\n## Why it works\n\nThere are four main benefits that we see in trade-off thinking.\n\n1. **It surfaces hidden costs.** Writing down what you gain and what you sacrifice forces you to confront knock-on effects before you commit. You can only mitigate for consequences that you know about, and it pays to look for them in advance.\n\n2. **It creates shared understanding.** Only when everyone can see all options and trade-offs can you have informed conversations. The approach gives people concrete options to discuss rather than abstract notions that differ from brain to brain.\n\n3. **It accepts that no path is perfect.** Every option has downsides. The exercise starts from this assumption rather than searching for an impossible perfect solution. This prevents disappointment or an unfair perception of failure later on.\n\n4. **It helps you choose which pain to accept.** By identifying what each option costs, you can agree on which exchanges you can tolerate. The alternative to accepting one downside is usually accepting a worse one. This approach lets you pick intentionally.\n\n## Using design docs\n\nUse design docs when you need to capture the rationale behind a decision in more detail.\n\nThese have three important elements:\n\n- **Context:** The problem you\u2019re solving and why it matters\n- **Recommendation:** The approach you\u2019ve chosen and its trade-offs\n- **Alternatives:** The other options considered and their trade-offs\n\nWe\u2019ll have more to say about design docs in future. What matters for now is that when you need to build wider consensus and help a larger audience understand trade-offs, design docs help you do that in a few pages. [Google\u2019s approach](https://www.industrialempathy.com/posts/design-docs-at-google/) is particularly good.\n\n## When not to use trade-offs\n\nThinking about trade-offs isn\u2019t always in your team\u2019s best interests. The wider organisation needs to be sympathetic.\n\nIn command-and-control cultures, if someone\u2019s told you exactly what to do and you suggest looking at more options, they\u2019ll ask why you're wasting time. This is a systemic problem you probably can\u2019t fix within the bounds of the project.\n\nTrade-off thinking can also require leaders to put organisational needs before their own. That usually happens, but not universally so. If this applies, tread carefully.\n\nFinally, sometimes the answer is bleeding obvious.\n\n## Starting with care is faster in the end\n\nThe fear that examining trade-offs will kill momentum is real. But what really kills momentum is committing to an option and discovering its costs halfway through the project.\n\nTrade-off thinking helps you spot problems before they arrive. You build consensus around realistic expectations rather than scrambling to manage disappointment.\n\nThe upfront investment pays for itself by avoiding the rework, conflict, and lost time that comes from choosing blindly.\n\nTake the aerial view. Map the options. Choose the trade-offs you can live with. You\u2019ll get to your destination faster \u2014 and more smoothly.",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1778931863/articles/facet-822623324-l-ad-mx-a66cn19e86fx0fy50sz80sp53b18l98op11ot0w0d71sc78_tllqqn.png",
+        "standfirst": "Over-scrutinising an idea seems slow, but what really kills momentum is discovering hidden costs later. Here's how we use trade-offs to spot issues upfront.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-79c60540-079f-47b7-b284-ebbb1eb08e44",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-f8b17c9f-63ee-4c5b-a600-864f2983ac52",
+        "size": "12"
+      }
+    }
+  ]
+}

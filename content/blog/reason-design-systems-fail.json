@@ -1,0 +1,52 @@
+{
+  "root": {
+    "props": {
+      "title": "The real reason design systems fail",
+      "ogImage": {
+        "alt": "",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1778931863/articles/facet-808030939-og-ad-lt-a3cn69e0fx34fy96sz35sp1b53l99op76ot48w54d1sc73_n3jokz.png",
+        "type": "png"
+      },
+      "description": "Design systems misfire when organisations hire the team and build at the same time. Avoid paralysis by building the right team in the right way. Here\u2019s how.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-2349e6a1-58ee-4d2a-a41a-75aecfcd2ac4",
+        "date": "2026-05-16",
+        "title": "The real reason design systems fail",
+        "author": "Paul Love",
+        "content": "Design systems are supposed to be a potent accelerant for product organisations. The promise is speed, consistency, and quality. Yet first-time efforts often misfire. Why?\n\nWhen we wrote [Why design systems fail](https://measured.co/blog/why-design-systems-fail), we put forward 11 reasons why these projects can stall. But there\u2019s one overarching reason they fail before they get going. We\u2019ve seen it time and again: The organisation tries to hire the design system team and build the system at the same time. Few succeed.\n\n## Analysis paralysis\n\nIdeally, you give new teams space. They explore the problem, get to know each other, run experiments, and define their operating model. But that\u2019s not what happens.\n\nIn reality, organisations smash together a design system team of all the disciplines. Design, engineering, product and content. A week later, people start asking where the components are.\n\nThis ignores the social progression of any new group, Tuckman\u2019s [Forming, Storming, Norming, Performing](https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development).[^schwarzkopf] You have to build relationships before you can build norms. You have to decide how you make decisions before you can actually ship effectively.\n\nWhen you demand a design system from a team that hasn\u2019t normed, you skip the foundational work, and analysis paralysis sets in.\n\nTeams freeze up over questions around:\n\n* Choice of technology\n* Defining a design token schema\n* Using composable architecture\n\nBecause the team members haven\u2019t gelled, they lack the collective confidence to figure things out. Meanwhile, the organisation looks on with increasing unease.\n\n## Systems, not stacks\n\nThis is compounded by the trend toward generalists. Organisations often assume they can airdrop a group of engineers and designers into the problem.\n\nBut a design system requires extensive domain experience underpinned by systems thinking. You can put generalist engineers on a product feature, and as long as they know the stack, they\u2019ll probably figure it out because the domain is constrained.\n\nPlatform work is different. It requires understanding the ecosystem. Without that experience, you might as well grab them off the street.\n\nSo, if building the team and the system at the same time is a trap, what are your actual options?\n\n## Option 1: Don\u2019t build a design system\n\nThis is a valid choice. Not every organisation needs one. Particularly if you\u2019re building a monolith.\n\nBut if you have, say, 10 products, plus different brands and stacks that operate independently, the trade-offs of not having a system can be huge.\n\nYou accept that you\u2019ll rebuild the same wheel 10 times, and continually wrestle against degradation of the user experience.\n\nUsually the equation is easy. Outcome: you need a design system.\n\n\n## Option 2: Outsource to an agency\n\nYou could pay an agency to build the design system for you.\n\nThis appeals to the factory model of software development. You pay a capital expenditure to build the factory, and then it\u2019s done. But software isn\u2019t a factory. It\u2019s people, it\u2019s time, and it changes constantly.\n\nAgencies can build you an artefact, but a design system is a living service. If you outsource the build, who owns it when they leave? If you haven\u2019t built an internal team alongside, the system stalls the moment you get the keys.\n\nYou\u2019re back to square one. You may have a starter design system, but you still need an internal team to build on it.\n\nSo: don\u2019t do this.\n\n## Option 3: Work with a consultant\n\nThis is the approach we advocate, obviously.\n\nYou bring in a team that has done this before. This offers two massive advantages:\n\n1.  **Immediate velocity:** The consultant (humour our use of the third person here) builds a scaffolding team of specialists who can start meaningful work immediately. Because they\u2019re already norming and performing, they don\u2019t have to figure out how to work together. They know where the sharp edges are because they\u2019ve seen and accounted for them before.\n2.  **Co-piloting the handover:** They don\u2019t just build the library; they help build the team that will replace them.\n\nThey help leadership hire the right designers, engineers and product people. They help navigate the specific constraints of the sector, because building a system for a risk-averse bank requires a different approach than building one for a fast-moving tech company.\n\nCrucially, an experienced consultant solves [Fredkin\u2019s Paradox](https://www.futilitycloset.com/2021/07/09/fredkins-paradox/) for leadership: the closer two options are in value, the less the decision matters and the harder it can be to choose between them.\n\nWhen a new team faces two good technical options, they can lose weeks debating them. The consultant comes with the pattern recognition to say, \u201cWe\u2019ve seen this before. Just do option 1.\u201d The project is unblocked and velocity is maintained.\n\nWith a permanent design system team in place, and a core system built, the scaffolding comes down. The permanent team takes over, running the system with established norms. The organisation gets a system ready to evolve, and the team to do it.\n\nSound about right? [Drop Paul a line](mailto:paul@measured.co).\n\n[^schwarzkopf]: If you can read Tuckman\u2019s words without thinking \u201cSchwarzkopf\u201d, we envy you.",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1778931864/articles/facet-808030939-l-ad-lt-a3cn69e0fx34fy96sz35sp1b53l99op76ot48w54d1sc73_eitsyj.png",
+        "standfirst": "Design systems misfire when organisations hire the team and build at the same time. Avoid paralysis by building the right team in the right way. Here\u2019s how.",
+        "modifiedDate": ""
+      }
+    }
+  ]
+}

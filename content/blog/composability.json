@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "Design systems that scale: the case for composability",
+      "ogImage": {
+        "alt": "Blue geometric abstract with overlapping curved shapes. Text reads 'Make the right thing easy and the wrong thing difficult.' Measured logo in bottom left corner.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1765883929/Composability_OG_aq0wfk.png",
+        "type": "image/png"
+      },
+      "description": "Composability is essential for UI systems at any scale, but often misunderstood. Here's how to make it the foundation of your design system.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-55a038eb-b2f9-4874-8b8c-c5ccdea81755",
+        "date": "2025-12-16",
+        "title": "Design systems that scale: the case for composability",
+        "author": "Paul Love",
+        "content": "Many design systems eventually hit the same wall: By growing to accommodate every variation teams need, they become gruelling to maintain. \n\nA designer needs a button with an icon on the right, not the left, for example. Or an engineer needs a modal that can nest inside another modal. And so on.\n\nSoon enough, the system bends under the weight of prop after prop until it becomes harder to use than to work around. We see this pattern repeatedly on large-scale UI systems.\n\nThere is a solution: composability \u2014 a principle by which design systems continue to work well as they scale.\n\nComposability should be a core principle when building UI, essential both for large systems and smaller systems with big ambition. But it\u2019s poorly understood, and therefore often overlooked. \n\nHere\u2019s how to apply composability as the foundation of a successful, large-scale design system.\n\n## Organisation by technology \u2014 the problem composability solves\n\nIn early web development, the dominant approach was document-first. HTML, CSS and JavaScript were separated into distinct layers, each with its own concerns: structure, style and behaviour respectively. MarkoJS call this [separation of concerns by technology](https://markojs.com/docs/explanation/separation-of-concerns).\n\nMany people still passionately believe in separation by technology, but this purity is unhelpful in modern contexts. Not least because both CSS and HTML have gained behavioural capabilities themselves.\n\nAt scale, with large teams working on different parts of complex applications, separation by technology struggles. A CSS change to fix one page mysteriously breaks another. A JavaScript tweak cascades through unrelated features. \n\nThe separation that should contain the complexity instead disperses it. When systems become overly dependent on each other across these boundaries, it's known as high coupling \u2014 the classic anti-pattern that keeps on giving.\n\n\n## The emergence of composability, or organisation by functionality\n\nIronically, composability predates the web. It emerged as a principle in 1970s computer science and mid-20th century systems theory.[^emergence-of-composability] It involves building complex systems from smaller, self-contained parts with clear boundaries. It\u2019s separation of concerns by functionality rather than technology.\n\n\nComposability in this context means defining what a component does, how it relates to other components, and crucially, how it protects itself from unintended interactions. When done properly, parts can be reused, recombined, and updated without unintended side effects rippling through the system.\n\nModern JavaScript frameworks, particularly React, formalised this approach through component models. Each component keeps its own implementation close by, while staying small enough to be composed from and alongside others. \n\n\n## Why it\u2019s powerful\n\nFor large organisations, composability isn't just a nice-to-have. It's the difference between a system that enables teams and one that obstructs them.\n\nComposability reduces the need for cross-team coordination. Teams can work independently within well-defined boundaries, making parallel work possible without treading on each other\u2019s toes. \n\nInstead of negotiating every change, teams can simply get on with their bit. No more `@here` distraction bombs dropped into Slack.\n\nIt also makes updates safer and easier to test. Changes are contained, reducing the blast radius of bugs.\n\nConversely, when composability is overlooked, teams tend to work around the system. As a result, bad things happen:\n\n- Designers [detach components](https://help.figma.com/hc/en-us/articles/360038665754-Detach-an-instance-from-the-component) from the system and retreat into Figma, widening the gap between design and implementation[^component-health] \n- Engineers fork components or rebuild from scratch, fragmenting the codebase\n- Component APIs accumulate baroque collections of props (`showIconLeft`, `showIconRight`, `iconLeftSize`, `iconRightSize`, `iconLeftColor`\u2026)\n- Styles and behaviours become context-dependent and unpredictable\n\nA composable system prevents these outcomes. Components can be assembled with confidence, and behaviour remains consistent regardless of context.\n\n## The composability\u2013configuration continuum\n\n**Note:** This section contains contrived examples for purely illustrative purposes.\n\nComposability and configuration aren't mutually exclusive. They represent different points on a spectrum, each with distinct trade-offs.\n\nAt the configuration end, teams extend functionality through props and toggles. A typical configuration-based button might look like:\n\n```jsx\n<Button \n  icon=\"arrow\"\n  iconPosition=\"right\" \n  size=\"large\"\n  variant=\"primary\" \n/>\n```\n\nIt's intuitive and requires minimal learning. But configuration doesn't scale gracefully. Each new requirement adds props. Each prop increases testing and maintenance overhead. Performance degrades. The API becomes harder to reason about. \n\nAt the composability end, systems provide smaller, general-purpose building blocks that teams combine. Instead of a `Button` component with an `icon` prop, you might have:\n\n```jsx\n<Button>\n  <ButtonText>\n    Continue\n  </ButtonText>\n  <ButtonIcon>\n    <Arrow />\n  </ButtonIcon>\n</Button>\n```\n\nThe trade-off is that it requires more discipline up front. Teams must understand how components fit together. \n\nBut it scales better: new requirements are handled through new combinations of existing parts rather than adding new props. The component stays simple and the API stays stable.\n\nMost systems land somewhere between these extremes. But composability serves as a useful north star. A well-designed composable system makes the right thing easy and the wrong thing difficult \u2014 not through restriction, but through sensible defaults and clear APIs.\n\n## Designing composable systems\n\nDesigning for composability demands intention. \n\nKey principles include:\n\n**Co-locate structure, style and logic:** Everything related to a component should live together.\n\n**Support internal composition:** Design components that accept children, use slot patterns, or provide sub-components that work together.\n\n**Create clear, documented prop APIs:** Every prop should have clear purpose, naming and type constraints. Avoid generic escape hatches like `className` or `style` props that allow arbitrary overrides.\n\n**Use explicit prop types and validation:** TypeScript interfaces or PropTypes that make correct usage obvious and incorrect usage difficult.\n\n**Choose sensible defaults:** Defaults that encourage correct usage without requiring configuration.\n\nComposability is less about building a perfect system and more about designing for change. It allows systems to evolve safely. Versioning makes it possible to release early, gather data from real-world use, and iteratively improve.\n\n## Learning from existing systems\n\nExisting design systems can provide useful reference points. It\u2019s often said that teams need to build a bad design system before they can build a good one. Reviewing what\u2019s already out there can accelerate that learning process.\n\nThere are many well-documented public design systems available. Building small features with them is a good way to see how composable patterns behave, and how boundaries are defined and respected in actual use.\n\n[Radix UI](https://www.radix-ui.com/) provides unstyled, accessible components built on composition. [Material UI](https://mui.com/material-ui/), [Ant Design](https://ant.design/) and [Carbon](https://carbondesignsystem.com/) similarly show different approaches to balancing composition and configuration. [Primer](https://primer.style/) demonstrates how composability works in a large, multi-platform system.\n\n## Adopting composability\n\nIt\u2019s possible to shift from a configuration-heavy system to a more composable one, but it\u2019s rarely straightforward. You can't simply deprecate the old and ship the new.\n\nYou often end up with two systems living side by side: one designed for configuration, the other for composition. This creates confusion and duplication. You carry the baggage of the old system for a long time \u2014 maybe forever.\n\nIn cases where existing systems must remain in place \u2014 what we call heritage systems \u2014 pragmatic workarounds may be necessary. But where new systems can be introduced, composability should be the starting point.\n\nStrategies that help:\n\n**Version new components separately:** Make it clear which components represent the new approach, reducing confusion about which to use.\n\n**Document thoroughly:** Don't assume teams will figure things out. Provide concrete examples of translating old patterns to new ones.\n\n**Accept coexistence of systems:** Fighting the reality burns goodwill and slows adoption.\n\n## Start small\n\nIf composability is new territory for your team, don\u2019t rush into a big commitment. \n\nHere are things you can do in the early stages:\n\n**Audit a problematic component:** This might be a button, card, or modal with dozens of props. Map which props are actually used, which conflict, and which are workarounds. This reveals where configuration has failed.\n\n**Sketch a composable alternative:** How would you rebuild it using composition? You don't need to implement it. Just design the API. What becomes simpler? What becomes harder?\n\n**Build a pilot component:** Choose something new rather than a replacement for existing work. A feature that needs a component the system doesn't provide yet. Build it composably from the start.\n\n**Review an established system:** Pick an established public design system. Build a small feature with it. Notice what feels natural, what feels awkward, how the pieces fit together.\n\n**Share your learning:** Document what you've learned. Show examples. Build shared understanding before attempting larger changes.\n\n## Worth the effort\n\nComposability is not a new idea. It\u2019s a practical principle that supports maintainability, development speed, and consistency \u2014 particularly in complex environments.\n\nIt requires clarity of intent, thoughtful design, and a willingness to change how teams work. But the investment is worth it to build more resilient systems that you can iterate faster, and which your teams can trust without working around.\n\n[^emergence-of-composability]: Inessential reading rabbit hole: Ludwig von Bertalanffy\u2019s [_General system theory: foundations, development, applications_](https://www.goodreads.com/book/show/1096749.General_System_Theory) (1968), David Parnas\u2019s [_On the criteria to be used in decomposing systems into modules_](https://dl.acm.org/doi/10.1145/361598.361623) (1972), John Backus\u2019s [_Function level programs as mathematical objects_](https://dl.acm.org/doi/10.1145/800223.806757) (1981).\n\n[^component-health]: In [Don\u2019t Detach: Why Figma Component Health Matters](https://www.salesforce.com/blog/figma-component-health/), Salesforce\u2019s Lightning Design System team identifies detaching as a critical threat to design system health.",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771287164/facet/facet-s753576415_eft4dg.png",
+        "standfirst": "Composability is essential for UI systems at any scale, but often misunderstood. Here's how to make it the foundation of your design system.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-5e44a2d4-c195-44f9-85a9-9e7496ea1e5c",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-7e6b15f8-1a3a-4bf0-b95f-31e9cbe76635",
+        "size": "12"
+      }
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "root": {
+    "props": {
+      "title": "Contact",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "Get in touch. Stay in touch.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": false
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": true
+        }
+      ]
+    }
+  },
+  "zones": {
+    "Grid-6af966f3-3982-412f-950d-761ded30b2ac:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-919fe297-2729-47e7-aa20-228611657c9d",
+          "align": "start",
+          "colSpan": "6",
+          "justify": "start",
+          "colStart": ""
+        }
+      }
+    ],
+    "Grid-7becbe57-5039-4afd-b8a7-d2adb7f43974:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-62c0eac4-2f53-4953-8cd9-c743af0f80a3",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start",
+          "colStart": "",
+          "colSpanNarrow": "6",
+          "colStartNarrow": "2"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-a97e17f5-ebf9-47d5-a3b5-c619f91b3a30",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start",
+          "colStart": "",
+          "rowStart": "",
+          "colSpanNarrow": "6",
+          "colStartNarrow": "2"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-d0a61457-e609-4861-a9f1-e01f27d433ac",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start",
+          "colStart": "",
+          "rowStart": "",
+          "colSpanNarrow": "6",
+          "colStartNarrow": "2"
+        }
+      }
+    ],
+    "Section-bd2fc060-970f-4a84-a4b8-8660eef5e748:section": [
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-6af966f3-3982-412f-950d-761ded30b2ac",
+          "gap": "default"
+        }
+      },
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-7becbe57-5039-4afd-b8a7-d2adb7f43974",
+          "gap": "default"
+        }
+      }
+    ],
+    "Section-edc33f7d-bae0-430c-b520-346818a52a55:section": [
+      {
+        "type": "Contact",
+        "props": {
+          "id": "Contact-4020adb2-6cf3-426a-b203-75bcc11f2187",
+          "text": "How can we help?",
+          "email": "paul@measured.co"
+        }
+      }
+    ],
+    "GridItem-62c0eac4-2f53-4953-8cd9-c743af0f80a3:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-bdcd3281-e4cd-4fda-8e9f-8b0922b22cfd",
+          "size": "m",
+          "level": "2",
+          "heading": "Message us",
+          "description": "Email [paul@measured.co](mailto:paul@measured.co)<br>\nLinkedIn [@paullove](https://linkedin.com/in/paullove/)"
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-cb962820-fe03-48af-bf44-e85cf38c4ca4",
+          "size": "04"
+        }
+      }
+    ],
+    "GridItem-919fe297-2729-47e7-aa20-228611657c9d:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-9c171bb7-05d3-4f0c-9ce0-37e0ffa92a2d",
+          "size": "l",
+          "level": "1",
+          "heading": "Contact",
+          "description": "Get in touch. Stay in touch."
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-ffd85218-c025-4a59-b585-073946be4d99",
+          "size": "12"
+        }
+      }
+    ],
+    "GridItem-a97e17f5-ebf9-47d5-a3b5-c619f91b3a30:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-8e7ba099-1c6a-409b-b576-701147cafece",
+          "size": "m",
+          "level": "2",
+          "heading": "Follow us",
+          "description": "Look for @measuredco on<br /> [Bluesky](https://bsky.app/profile/measured.co), [GitHub](https://github.com/measuredco), and [LinkedIn](https://www.linkedin.com/company/measuredco/).<br> Or [subscribe to RSS feed](/feed.atom)."
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-a4445485-74d8-4092-91f0-370fff730d61",
+          "size": "04"
+        }
+      }
+    ],
+    "GridItem-d0a61457-e609-4861-a9f1-e01f27d433ac:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-f3d01af7-a7b6-40e8-992b-eba40cccd534",
+          "size": "m",
+          "level": "2",
+          "heading": "Write to us",
+          "description": "Measured Corporation Limited<br>\n16 Blackfriars Street<br>\nManchester M3 5BQ"
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-fc5af2d2-07ba-4e71-968a-d6e4ad35f18a",
+          "size": "04"
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-b930df96-809a-445b-8166-1f8192ed6250",
+        "size": "09"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-bd2fc060-970f-4a84-a4b8-8660eef5e748",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-3cd53981-91df-44de-9357-fbfa40a9316e",
+        "size": "12"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-edc33f7d-bae0-430c-b520-346818a52a55",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-463d041e-8c9e-4745-823d-4fca4b0fb6a1",
+        "size": "12"
+      }
+    }
+  ]
+}

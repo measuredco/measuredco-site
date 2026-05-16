@@ -1,0 +1,9 @@
+# Cloudflare Pages response headers.
+# .xml/.json get correct types by extension; .atom does not, and the
+# JSON feed spec wants application/feed+json — set both explicitly.
+
+/feed.atom
+  Content-Type: application/atom+xml; charset=utf-8
+
+/feed.json
+  Content-Type: application/feed+json; charset=utf-8

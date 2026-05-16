@@ -1,0 +1,52 @@
+{
+  "root": {
+    "props": {
+      "title": "Creating a new visual identity for Measured",
+      "ogImage": {
+        "alt": "Creating a new visual identity for Measured",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/q_auto/v1741598064/site/visual-identity-OG_zkrn41.jpg",
+        "type": "image/jpg"
+      },
+      "description": "When you work in UI and branding, your own shop window should reflect your expertise. Here\u2019s how we upgraded our visual identity to show what we\u2019re about.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-6fd15791-9c30-4466-bde0-e36100fcc7c3",
+        "date": "2025-03-11",
+        "title": "Creating a new visual identity for Measured",
+        "author": "Scott Boyle",
+        "content": "Our overarching purpose is to elevate the quality, consistency and accessibility of UI across the web by helping our clients craft exceptional digital experiences. It\u2019s important that our own visual identity reflects that.\n\nLike the [cobbler\u2019s children](https://clearleft.com/thinking/the-cobblers-children-have-no-shoes) our visual identity had been somewhat neglected. When we founded Measured we quickly put together a nascent visual identity . It wasn\u2019t terrible, but we always knew that the branding, and by dint our website, didn\u2019t reflect who we are, or the quality of work we deliver.\n\nIn mid-2024, we decided it was time to do something about it. Here\u2019s a look at how we developed our new visual identity, the thinking behind it, and some tips we\u2019d share as a result.\n\n## The design process\n\nWe partnered with [James Cross](https://www.linkedin.com/in/james-edward-cross-43269317/), a highly-experienced designer based in Copenhagen, to develop a new identity. James has a storied career spanning print, digital, and art direction, and his expertise was invaluable.\n\nWe kicked off the process with open-ended exploratory work: reading, research and prototyping ideas in Figma. We wanted the identity to come from us. This work was then distilled into the brief that we gave to James.\n\nFrom there, the process was collaborative and iterative. James worked in rounds, presenting a number of options in the early stages, and then iterating on the preferred routes. \n\nAt each stage, James would send over the latest designs for us to look at. Once we\u2019d had a chance to digest them, we\u2019d jump on a call where James would present the thinking behind them, and we\u2019d give feedback. We didn\u2019t need to share written feedback at any stage.\n\nWe went through three or four rounds, starting with the key concepts before arriving at the last details, and ultimately a system that felt right.\n\n## The corner\n\nAt the heart of the identity is a simple shape we call the corner. This became the foundation for everything else \u2014 the logo, UI curves, background patterns, and more. It\u2019s a versatile device that allows us to create recognisably Measured visuals, even without the logo.\n\n## Typography and colour\n\nTypography was a key focus. We initially approached it from a techy perspective, particularly as the Display variant of Inter (our brand typeface) had recently released, optimised for headlines and large type. But James suggested we look at more timeless and classic alternatives.\n\nWe took James\u2019s advice on styling headlines: no Inter Display, and instead of going bolder as they get larger, we reduced the weight for a calmer and, dare we say, more premium feel.\n              \nWe built a colour palette with a range of blues and other colours, giving us options to play with while prioritising accessibility. James encouraged us to lean into the new blues as the primary expression.\n\nWe carefully considered background patterns and other design elements, which all derive from the corner shape and principles of the identity.\n\n## Where next?\n\nThe new visual identity is systematic, intentional, and built to last. It\u2019s professional, clean, and flexible enough to evolve with us as we grow. We\u2019ve already applied it to our website and social presences, where it\u2019s been pleasingly well-received.\n\nIt\u2019s designed to be flexible, so we can apply it to everything from physical media to video and animation if and when we need. We\u2019re excited to see how it evolves as we continue to grow and experiment.\n\nWe\u2019re pleased to finally have a brand that feels like us, so thanks go to James for his excellent work. We\u2019ll share more about how implemented the new identity soon. \n\n## Visual identity tips\n\nTo wrap up, here are few tips to consider if you\u2019re embarking on a visual identity refresh for your brand. These are things that worked well for us.\n\n### Start with a tone exercise\n\nAsk your team to describe your brand and what sets it apart from competitors. Words like calm and intentional emerged from our exercise, and became guiding principles for the design.\n\n### Write a strong brief\n\nSpend time crafting a clear, detailed brief before bringing in a designer. This helps you get the most from their expertise and keeps the process focused.\n\n### Look beyond competitors\n\nWhile it\u2019s helpful to look at what your competitors are doing, don\u2019t be afraid to draw inspiration from brands you admire in different industries. We looked at companies like Vercel and Stripe.\n\n### Collaborate across disciplines\n\nBringing together design and content early in the process was key for us. It helped us tackle the communication problem from multiple angles and create a cohesive result.",
+        "template": "new-visual-identity",
+        "authorUrl": "https://www.linkedin.com/in/scottboyle/",
+        "standfirst": "",
+        "modifiedDate": ""
+      }
+    }
+  ]
+}

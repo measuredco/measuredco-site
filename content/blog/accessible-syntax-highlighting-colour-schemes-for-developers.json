@@ -1,0 +1,66 @@
+{
+  "root": {
+    "props": {
+      "title": "Accessible syntax highlighting colour schemes for developers",
+      "ogImage": {
+        "alt": "Measured Base16 colour schemes with code examples",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1713448291/measured-base16-SoMe-1200x630_t3wiv8.jpg",
+        "type": "image/jpeg"
+      },
+      "description": "Why we designed and released two Base16 colour schemes for publishing code on the web.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-ce950c51-e97c-4343-8597-f62df177263d",
+        "date": "2024-04-17",
+        "title": "Accessible syntax highlighting colour schemes for developers",
+        "author": "Paul Love",
+        "content": "![Measured Base16 colour schemes with code examples](https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1713427188/measured-base16-SoMe-1360x1032_mnyufx.jpg)\n\nWhen we started Measured, we knew we\u2019d want to write things about technical aspects of our work. Inevitably, that means publishing code snippets.\n\nWe built our website to comply with [WCAG AA accessibility](https://www.w3.org/WAI/WCAG2AA-Conformance), so we needed our code snippets to comply too. That meant applying a colour scheme to snippets to comply with the WCAG requirements for contrast. \n\nMore than that, we actually needed two schemes because our website adapts to visitor system preferences for day and night modes.\n\nWhen we went looking at colour schemes already out there, we ran into one of two issues:\n\n1. They weren\u2019t AA-compliant\n2. They were visually jarring (and in a way that wouldn\u2019t work alongside our existing brand colours)\n\nSo [Scott](https://www.linkedin.com/in/scottboyle/) set about creating them instead. We collectively decided to release them as open source in case people shared our need for AA-compliant Base16 schemes that, not to put too fine a point on it, also look quite nice.\n\nThey\u2019re [available on GitHub](https://github.com/measuredco/base16-measured-scheme) for anyone to use. The obvious use cases are for either writing or publishing code, but the underlying schemes could be used for any lightweight web project.\n\n\n## Notes on development\n\nA few more points for anyone interested in a bit more detail:\n\nWe didn\u2019t start from scratch. We used [Solarized](https://ethanschoonover.com/solarized/) as the basis of the project. It didn\u2019t meet AA criteria, but it did give us a good platform to build from. From there, we essentially adapted our brand colours to meet Base16 needs.\n\nOnce we\u2019d decided to share the schemes, we were keen to contribute to the Base16 ecosystem. To that end, we submitted pull requests to a couple of GitHub projects with mixed success. But the schemes are now included at [Tinted Theming](https://github.com/tinted-theming).\n\nWe\u2019ve assumed this project will potentially interest developers, so we haven\u2019t included much hand-holding in the [README](https://github.com/measuredco/base16-measured-scheme/blob/main/README.md). That said, we did want to make this work immediately useful, so the repo includes files to get the schemes working with widely-used tools. Specifically:\n\n- [CSS and extensions](https://github.com/measuredco/base16-measured-scheme/tree/main/built/styles)\n- [highlight.js](https://github.com/measuredco/base16-measured-scheme/tree/main/built/highlightjs/themes)\n- [iTerm2](https://github.com/measuredco/base16-measured-scheme/tree/main/built/iterm2/itermcolors)\n- [JetBrains](https://github.com/measuredco/base16-measured-scheme/tree/main/built/jetbrains/colors)\n- [Visual Studio Code](https://github.com/measuredco/base16-measured-scheme/tree/main/built/vscode/themes)\n\nWe don\u2019t plan to do more work on this project, but we welcome contributions. There is scope to support more tooling, for example.\n\nYou can start using the [Base16 Measured Scheme via the GitHub repo](https://github.com/measuredco/base16-measured-scheme).",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "standfirst": "Why we designed and released two [Base16](https://github.com/chriskempson/base16) colour schemes for publishing code on the web.",
+        "modifiedDate": "2024-04-18"
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-598cfc2e-175a-4de6-94a3-af33f0ca219a",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-a1a281ea-5a0c-4c5b-adab-8f03933ec801",
+        "size": "12"
+      }
+    }
+  ]
+}

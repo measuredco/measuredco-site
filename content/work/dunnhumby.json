@@ -1,0 +1,57 @@
+{
+  "root": {
+    "props": {
+      "title": "Dunnhumby | Work",
+      "ogImage": {
+        "alt": "Laptop on a round white table displaying a website, next to a stack of books and a coffee cup in a cozy living room setting.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740827056/site/dunnhumby_KV_cropped_1200x630_n4him3.jpg",
+        "type": "image/png"
+      },
+      "description": "How we ran an in-depth discovery with dunnhumby\u2019s stakeholder teams, to understand their needs, and establish the foundations for a future design system.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Work",
+      "props": {
+        "id": "Work-ea79718f-bb5e-4fef-964b-f7c3722ab751",
+        "date": "2024\u20132026",
+        "image": {
+          "alt": "Laptop on a round white table displaying a website, next to a stack of books and a coffee cup in a cozy living room setting.",
+          "src": "https://res.cloudinary.com/measuredco/image/upload/v1740826537/site/dunnhumby_KV_vzaplk.jpg",
+          "anchor": "C"
+        },
+        "title": "dunnhumby",
+        "content": "## Need\n\nWhen we started talking to dunnhumby about UI and the evolution of their product ecosystem, they presented us with a question: how can we establish foundational requirements for a future design system?\n\nWe kicked off an in-depth discovery to gain a full understanding of the client\u2019s historical context and challenges. This meant we\u2019d be in the position to make the most useful recommendations possible to help keep the client on a successful path.\n\n\n## Action\n\nWe need to collaborate closely with dunnhumby\u2019s stakeholder to arrive at the most useful recommendations. This meant:\n\n- Analysing existing component libraries, brand guidelines, and user interfaces\n- Documenting tech stacks\n- Evaluating Design and DesignOps tools, such as Figma and zeroheight\n- Assessing release strategies and design-engineering handoffs\n\nOur findings were synthesised into a comprehensive report, which we refined and presented regularly as new insights emerged.\n\n\n## Outcome\n\nThe report was successful in:\n\n- Articulating the current state of dunnhumby\u2019s UI\n- Making recommendations for managing the existing component library\n- Providing strategic guidance for the direction of future design system\n\nThis enabled UI and product efforts to accelerate, helping them quickly progress to implementing next steps and higher-level recommendations.\n\nOur involvement progressed into:\n\n- Developing the foundations for a new design system\n- Highlighting product implications\n- Helping establish the new internal design system team",
+        "blockquote": {
+          "cite": "",
+          "quote": ""
+        },
+        "standfirst": "Laying the strategic foundations of a future design system."
+      }
+    }
+  ]
+}
