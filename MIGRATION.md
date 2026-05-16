@@ -60,7 +60,7 @@ directly in code. Deploy target moves from Vercel → Cloudflare Pages.
 - [ ] Phase 5 — remove editor/auth/Supabase code + deps
 - [x] Phase 6 — translate redirects/rewrites → Cloudflare `_redirects`
 - [x] Phase 7 — Cloudflare Pages deploy config
-- [ ] Phase 8 — parity verification vs production
+- [x] Phase 8 — parity verification vs production (local; CF preview pending)
 
 ## Phases
 
@@ -149,12 +149,29 @@ Cloudflare Pages → Create project → Connect to Git → this repo, then:
 - Post-cutover: in the Cloudflare/Vercel dashboards, point the
   `measured.co` domain at the Pages project and decommission Vercel.
 
-### Phase 8 — Parity verification
+### Phase 8 — Parity verification  ✅ done (local)
 
-- `next build` clean.
-- Diff/spot-check rendered HTML for: `/`, `/about`, `/work`, `/work/bt`,
-  `/blog`, a blog post, `/contact` vs production.
-- Confirm `sitemap.xml`, `robots.txt`, `manifest`, feeds generated.
+Verified static export vs live `https://measured.co`:
+
+- `next build` clean → 47 pages + feeds + sitemap/robots/manifest.
+- 7 routes (`/`, `/about`, `/work`, `/work/bt`, `/blog`, a blog post,
+  `/contact`): title, description, canonical, OG tags (incl. Cloudinary
+  OG images), `h1`, JSON-LD, nav — **all match**.
+- Visible body text **byte-identical** on `/`, blog post, `/work/bt`.
+- `feed.xml`: 26 items, identical title set vs prod.
+- `sitemap.xml`: 34 URLs, identical set vs prod.
+- `out/404.html` present; redirected slugs absent (so CF `_redirects`
+  fires cleanly).
+
+**Verify on the Cloudflare preview deployment** (not testable with local
+`serve`):
+
+- [ ] The 13 `_redirects` actually return 301 (esp. `/blog/inter-problems`
+      → internal, and the puckeditor.com externals).
+- [ ] `/feed.atom` served as `application/atom+xml`, `/feed.json` as
+      `application/feed+json` (from `_headers`).
+- [ ] Visual/interaction spot-check (SiteHeader nav, images) on the
+      preview URL before pointing the domain.
 
 ## Decisions (resolved)
 
