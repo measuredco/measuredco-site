@@ -40,7 +40,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && tsc --noEmit",
-    "start": "next start"
+    "preview": "npx serve@latest out"
   },
   "engines": {
     "node": "^24"

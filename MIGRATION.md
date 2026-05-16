@@ -59,7 +59,7 @@ directly in code. Deploy target moves from Vercel → Cloudflare Pages.
 - [x] Phase 4 — feeds as build-time static files
 - [ ] Phase 5 — remove editor/auth/Supabase code + deps
 - [x] Phase 6 — translate redirects/rewrites → Cloudflare `_redirects`
-- [ ] Phase 7 — Cloudflare Pages deploy config
+- [x] Phase 7 — Cloudflare Pages deploy config
 - [ ] Phase 8 — parity verification vs production
 
 ## Phases
@@ -120,14 +120,34 @@ Translate from [next.config.js](next.config.js#L11-L87):
 Then delete the now-redundant content files for every redirected
 `/blog/*` slug (decision 3) and all `content/proposals/*` (decision 2).
 
-### Phase 7 — Cloudflare Pages + CI
+### Phase 7 — Cloudflare Pages + CI  ✅ done
 
-- Build command `next build`, output dir `out/`.
-- `public/_redirects` and optional `public/_headers`.
-- `trailingSlash`: keep Next default `false` (decision 5) — no change.
-- Remove any Vercel-specific config/files.
-- CI: GitHub Actions workflow (`next build` → deploy `out/` to Cloudflare
-  Pages) **or** Cloudflare native Git integration. → DECISION NEEDED.
+**Deploy method: Cloudflare native Git integration** (decided). No CI
+workflow or secrets in the repo — Cloudflare builds on push.
+
+Cloudflare Pages → Create project → Connect to Git → this repo, then:
+
+| Setting              | Value                          |
+| -------------------- | ------------------------------ |
+| Framework preset     | Next.js (Static HTML Export)   |
+| Build command        | `pnpm build`                   |
+| Build output dir     | `out`                          |
+| Root directory       | `/`                            |
+| Production branch    | `main` (after merge of `static`) |
+| Env var              | `NODE_VERSION` = `24` (also pinned via `.nvmrc`) |
+
+- pnpm auto-detected from `packageManager` + `pnpm-lock.yaml`; install
+  command default (`pnpm install`).
+- `public/_redirects` → `out/_redirects` (13 × 301).
+- `public/_headers` → `out/_headers` (atom/json content-types).
+- `trailingSlash`: Next default `false` (decision 5) — unchanged.
+- No Vercel files in repo; removed `.vercel` from `.gitignore` and the
+  `start` script (replaced with `preview` = `serve out`). Cleaned
+  `.env.local.example` (no env vars needed).
+- Local `.env.local` / `.env.production.local` still hold old Supabase
+  keys (gitignored, unused) — delete locally at leisure.
+- Post-cutover: in the Cloudflare/Vercel dashboards, point the
+  `measured.co` domain at the Pages project and decommission Vercel.
 
 ### Phase 8 — Parity verification
 
