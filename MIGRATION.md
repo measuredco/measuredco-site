@@ -150,6 +150,18 @@ Then delete the now-redundant content files for every redirected
    `next.config.js` sets nothing → Next default `trailingSlash: false`
    (no trailing slash). Keep default; no config change, no URL churn.
 
+## Cleanups / tech debt (non-blocking)
+
+- **Double `f_auto,q_auto` in Cloudinary URLs.** `resolveSrc` in
+  [components/Image](components/Image/index.tsx) already prepends
+  `f_auto,q_auto`, and [lib/cloudinary-loader.ts](lib/cloudinary-loader.ts)
+  prepends another `f_auto,q_<q>,c_limit,w_<width>` transform → URLs look
+  like `/upload/f_auto,q_auto,c_limit,w_640/f_auto,q_auto/v.../img.jpg`.
+  Valid chained Cloudinary transforms, output is visually identical, so
+  left as-is to avoid changing `resolveSrc` mid-migration. Tidy later by
+  either stripping a leading `f_auto,q_auto/` in the loader or dropping
+  the additions from `resolveSrc` (the loader now owns sizing/format).
+
 ## Future / optional (out of scope for this migration)
 
 If the residual Next client JS later proves undesirable, a *separate*
