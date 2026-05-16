@@ -58,7 +58,7 @@ directly in code. Deploy target moves from Vercel → Cloudflare Pages.
 - [x] Phase 3 — static export config (`output: 'export'`, images)
 - [x] Phase 4 — feeds as build-time static files
 - [ ] Phase 5 — remove editor/auth/Supabase code + deps
-- [ ] Phase 6 — translate redirects/rewrites → Cloudflare `_redirects`
+- [x] Phase 6 — translate redirects/rewrites → Cloudflare `_redirects`
 - [ ] Phase 7 — Cloudflare Pages deploy config
 - [ ] Phase 8 — parity verification vs production
 
@@ -161,6 +161,14 @@ Then delete the now-redundant content files for every redirected
   left as-is to avoid changing `resolveSrc` mid-migration. Tidy later by
   either stripping a leading `f_auto,q_auto/` in the loader or dropping
   the additions from `resolveSrc` (the loader now owns sizing/format).
+
+- **`getPosts` all-or-nothing failure.**
+  [lib/get-posts.ts](lib/get-posts.ts) `return`s `undefined` for the whole
+  list if *any* slug listed in `blog.json`'s Archive lacks a content file.
+  Not triggered today (verified), but when hand-editing content: adding an
+  Archive slug without its `content/blog/<slug>.json` will silently empty
+  the feed **and** sitemap. Harden to skip-and-continue (`continue`
+  instead of `return`) when convenient.
 
 ## Future / optional (out of scope for this migration)
 
