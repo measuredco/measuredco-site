@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "In praise of opportunity roadmaps",
+      "ogImage": {
+        "alt": "Without care, roadmaps can burden teams with deadlines and complexity.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/c_crop,w_1200,h_630,x_0,y_0/v1749647909/In_praise_of_opportunity_roadmaps_OG_1_wrgqco.png",
+        "type": "image/png"
+      },
+      "description": "How do you avoid your roadmap becoming an organisational wish list, with concrete deadlines and complex interdependencies? The key is evolution, not prediction.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-b0c2fcbc-adc3-4815-87c3-aae2c0554131",
+        "date": "2025-06-05",
+        "title": "In praise of opportunity roadmaps",
+        "author": "Paul Love",
+        "content": "Product roadmaps are a fact of life. They\u2019re a good way to set strategy, and communicate progress.\n\nBut without care, they can become an albatross, burdening teams under the weight of hard deadlines and sprawling interdependencies. \n\nBut they don\u2019t need to be. Sometimes you just need to know: \n\n- What\u2019s happening now\n- What you think will happen next\n- What you\u2019ve done\n- What you might do later\n\nWe recommend opportunity roadmaps to stay lean and adaptable. Here\u2019s why we like them, and how we use them.\n\n## What a roadmap is, and why you need one\n\nFirst, the basics. A product roadmap is a visual, strategic document that shows work that is happening now, and which might happen in future. \n\nA good roadmap does two things. It helps the team prioritise what to do next. And it acts as a tool for transparent communication: it helps teams and stakeholders understand the status of the project, and its direction of travel.\n\nThere are many kinds of roadmap, which fall on a spectrum from lightweight to heavy-duty. At the latter end are the traditional roadmaps. These typically set out a linear plan, far into the future, mapping timelines and dependencies. They may also include KPIs. \n\nAt the other end, the case is sometimes made that you don\u2019t need a roadmap at all. The rationale tends to be that good ideas always come back round, and next priority will always be clear. \n\nHaving no roadmap might work for single-product startups, it\u2019s unlikely to fly in most organisations \u2014 with good reason. It\u2019s perfectly reasonable that stakeholders in larger organisations keep tabs on what\u2019s happening now and next \u2014 especially those ultimately responsible for the success of the project, who need to report on progress to higher-ups.\n\nMuch like our thinking behind [why we use Kanban, not Scrum](https://measured.co/blog/kanban-not-scrum), we advocate for lightweight roadmaps. They maintain flexibility, which avoids locking the team into the wrong priorities. But they still communicate the strategy, reassuring everyone that the team isn\u2019t flying blind.\n\n## The opportunity roadmap\n\nWe use something more adaptive \u2014 an opportunity roadmap. It sits somewhere between the just-in-time delivery of Kanban and the visibility of Scrum and waterfall roadmaps.\n\nThis kind of roadmap doesn\u2019t make hard commitments. It doesn\u2019t claim to know everything up front. It\u2019s there to show:\n\n* What we\u2019re working on now\n* What we could start work on next\n* Everything we could attempt given sufficient time and resources\n\nIt\u2019s designed to evolve, not predict. We review it every couple of weeks. We might:\n\n1. Reorder the upcoming milestones based on new information or changes to team capacity\n2. Start working towards new milestones \u2014 if they still look like the right opportunities\n\n\n## Avoid artificial certainty\n\nA common pitfall in roadmapping happens when your roadmap instils a false sense of certainty rather than acting as a guide to strategic direction. \n\nEmil Kabisch\u2019s [Escaping the roadmap trap](https://productcrunch.substack.com/p/escaping-the-roadmap-trap) explains this well. Traditional roadmaps are often confused with project plans. They prioritise deliverables over discovery, create pressure to maintain arbitrary timelines, and encourage teams to treat strategic planning as a one-off activity. As a result, traditional roadmaps can be quite scary. Teams can feel set up to fail.\n\nThey\u2019re also prone to being misread. A linear roadmap suggests the path is fixed \u2014 that all the research and learning is already done. Reality is never that neat. Product discovery is continuous. Priorities shift. Plans change. And these are good things \u2014 they keep your project on course. An opportunity roadmap allows for this.\n\n## Prioritise and communicate\n\nPer Kabisch, our approach is a blend of opportunity tree and Kanban roadmap.\n\nLike the opportunity tree, it encourages teams to regularly pause, reflect and choose the best next move rather than blindly following a fixed plan. Like Kanban, it separates the strategic priority we\u2019re actively working (Now) from those we\u2019re reasonably confident about (Next) and those we have tentatively in mind (Later).\n\nThat separation matters. It avoids the common trap of compiling an organisational wish list and calling it a strategy. If something\u2019s in the Later column, it needs a plausible chance of being picked up in future. It\u2019s not a holding pen for all the things.\n\nOpportunity roadmaps don\u2019t guarantee perfect prioritisation. But they make the conversation clearer and more honest for teams and stakeholders alike.\n\nThey work particularly well as part of our [engagement check-ins](https://measured.co/blog/client-engagement-checkins). Kanban is optimised for delivery, but it can make it trickier for stakeholders to keep tabs on where things are heading. A shared roadmap closes this gap. It gives everyone a touchpoint to discuss priorities, risks and potential shifts in direction.\n\n## In summary, then\n\nThe opportunity roadmap doesn\u2019t try to do everything. But it does give you a clear, adaptable way to ask the right questions \u2014 and a platform to work through them to identify the best next move.\n\nThey\u2019re an example of the lightweight, flexible systems and processes that, in our experience, make it easier to get things done, done well, and almost entirely albatross-free.",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771287167/facet/facet-991712126_iax9dc.png",
+        "standfirst": "How do you avoid your roadmap becoming an organisational wish list, with concrete deadlines and complex interdependencies? The key is evolution, not prediction.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-ae9eaf02-f89c-463c-9bd2-c044a5d7653e",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-424ee9f6-5dbf-4a75-ad8d-2d2a21dc5641",
+        "size": "12"
+      }
+    }
+  ]
+}

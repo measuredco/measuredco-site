@@ -1,0 +1,66 @@
+{
+  "root": {
+    "props": {
+      "title": "Problems with font distribution, and why versioning matters",
+      "ogImage": {
+        "alt": "A dark blue background with the Measured logo and wordmark in white in the top-left corner. In the center, a light blue code snippet box with rounded corners displays a pyftsubset command. The command subsetting InterVariable.ttf includes a list of Unicode ranges and layout features, and specifies the output format as WOFF2.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1745495217/Problems_with_Inter_and_why_font_versioning_matters_OG_o3d6ej.png",
+        "type": "image/png"
+      },
+      "description": "When we rebuilt the Measured site, we didn\u2019t expect fonts to be a problem. But meeting our requirements while keeping file sizes down became a bit of a mission.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-b19df22e-15cf-4660-99d7-09ff7a79756a",
+        "date": "2025-04-24",
+        "title": "Problems with font distribution, and why versioning matters",
+        "author": "Scott Boyle",
+        "content": "When we [refreshed the Measured visual identity](https://measured.co/blog/new-visual-identity), a website rebuild was always part of that scope.\n\nWe expected to make some careful typographic refinements in that process. But what followed was an unexpected deep dive into how fonts are distributed and integrated into modern web infrastructure.\n\nThis is an account of what we encountered, the choices we made, and some thoughts that may be relevant to teams using fonts \u2014 and those making and distributing them. We\u2019ve gone quite heavy with hyperlinks by way of explaining terms if needed.\n\nNote: Though true when we were rebuilding the site around December 2024, some of the detail of what follows has since changed. I\u2019ve done my best to call this out when that\u2019s the case. Hopefully the broader thrust is still useful.\n\n<!--- NEW THRUST BEGINS --->\n\n## The plan\n\nWhen we embarked on the brand refresh and site rebuild, we landed on [Inter](https://rsms.me/inter/) for its [many benefits](https://dev.to/dog_smile_factory/5-reasons-to-give-inter-fonts-a-try-46i2) \u2014 readability and ease of implementation among them.\n\nWe wanted to use [`next/font/google`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts#google-fonts) to implement the Inter Google Font for its magical ways of optimising font performance. We wanted a fast site with green [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview) scores. (Along with images, custom fonts are a major cause of poor site performance.)\n\nBut when we came to implementation, we ran into some blockers:\n\n1. Inter on Google Fonts didn\u2019t have some OpenType features and glyphs that we wanted (rounded \u201cquotes\u201d and commas, for example)\n2. Google Fonts not having Inter Italic at all (true at the time, but no longer[^inter-italic])\n\n## Inter-vention needed\n\nSo - how best to optimally integrate Inter (Italic) with Next.js if it's not available as a Google Font? \n\nOur answer was to use [`next/font/local`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts#local-fonts), a feature that provides similar font optimisations to next/font/google, but for self-hosted font files.\n\nBut though this method worked, performance was significantly downgraded compared to using Google Fonts, and Lighthouse scores were distinctly non-green.\n\nThere were a couple of reasons for this: \n\n1. Downloading Inter from Rasmus\u2019 site offers no way to subset, meaning that our self-hosted Inter files were very large (weighing in at 740kb combined)\n2. It turns out `next/font/local` doesn\u2019t optimise quite as well as next/font/google, which leverages Google's CDN caching \n\nLike the good stoics we are, we dialled into problem 1 as being within our power to affect, so we looked to subset the fonts as aggressively as possible to reduce the file size and get us back into the green.\n\nAfter much trial and error, we eventually managed to subset the two Inter files so that they had all the glyphs we needed while remaining as small as possible. To do this, we used [fontTools](https://github.com/fonttools/fonttools) to try various subsetting and optimising techniques, and [FontDrop](https://fontdrop.info/) to test the output. \n\nIn the end we arrived at this command line magic spell:\n\n```bash\npyftsubset InterVariable.ttf \\\n  --unicodes=U+0000,U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+0131, \\\n            U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC, \\\n            U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+2002, \\\n            U+2009,U+200B,U+2013-2014,U+2018-201A,U+201C-201E, \\\n            U+2022,U+2026,U+2032-2033,U+2039-203A,U+2044,U+2074, \\\n            U+20AC,U+2122,U+2191,U+2193,U+2212,U+FEFF \\\n  --layout-features=calt,ccmp,dnom,frac,kern,locl,mark,mkmk,numr \\\n  --flavor=woff2\n```\n  \nThe result was that our self-hosted files had a combined size of 144kb and Lighthouse performance scores were back in the green \u2014 not quite as good as they would have been with Google Fonts, but green nonetheless. \n\nMost importantly: our site speed was fast again, and with the custom-designed true Italics and all the other typographical nuances we were after.\n\n\n## The need for font versioning\n\nSo how does this lead us to font versioning? \n\nA good example is that Inter 3 didn\u2019t have a separate file for Italics as they were handled with a variable font slant axis. When Inter 4 removed this variable axis and replaced it with a completely separate and custom designed Italic file, it took \u2014 and is still taking \u2014 tools a long time to catch up. \n\nAnd because font versioning isn't really considered, someone using Inter from Google Fonts would have their italics switched from the variable font slant axis in Inter 3, to faux italics with Inter 4 overnight. \n\nAnd all this without really any visibility. Google Fonts doesn't announce version changes, or even show the font version (at least not clearly that we can find \u2014 answers on a postcard). \n\nTo double check what version they were serving, we had to use FontDrop. So you really need to be tuned in to the font\u2019s release history, and to typographical nuances in general, to have any idea about this. \n\nThough it was a mission, digging into the details paid off for us. We were able to achieve the typographic clarity we wanted without significantly compromising performance. \n\n[^inter-italic]: Google Fonts now has all the Inter OpenType features and glyphs, plus Inter Italic, so the original problem is nearly solved. However, at time of writing, `next/font/google` still does not include Inter Italic. Hopefully it will be added in future \u2014 we should probably open a pull request!",
+        "authorUrl": "https://www.linkedin.com/in/scottboyle/",
+        "standfirst": "When we rebuilt the Measured website, we didn\u2019t expect fonts to be a problem. But meeting our requirements while keeping file sizes down proved to be a bit of a mission.",
+        "modifiedDate": "2025-05-01"
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-b4a94686-be28-4935-8a01-7be6562ad6e4",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-418154da-a619-4b84-9b45-42b73414b2ad",
+        "size": "12"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "UI components as Lego: an analogy too far, or not far enough?",
+      "ogImage": {
+        "alt": "White text on Measured blue background reads \u201cA nice set of bricks is no longer enough.\u201d Measured logo in lower left corner. Light blue circular gradient in upper right.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1764857914/UI_components_as_Lego_OG_zbgzne.png",
+        "type": "image/png"
+      },
+      "description": "A box of UI bricks only gets you so far. What happens when product teams need parts that don't exist? Time to examine the Lego analogy more closely.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-a411160c-a622-4dcf-8cfb-b623cf1e01af",
+        "date": "2025-12-04",
+        "title": "UI components as Lego: an analogy too far, or not far enough?",
+        "author": "Paul Love",
+        "content": "The UI Lego analogy is always good for an eye-roll. Components are bricks. Product teams build things with them. An apple a day. Red sky at night.\n\nBut if it wasn\u2019t valid, it wouldn\u2019t have persisted long enough to grow stale.\n\nIs it still useful? We say it is \u2014 if you extend it, that is. Because having a nice set of bricks is no longer enough.\n\n## An incomplete picture\n\nHere\u2019s a common model for building complex things on the web: \n\n1. A central UI team builds the components\n2. Product teams assemble experiences from them\n\nThis scenario can reduce the design system to a fixed library of components. \n\nProduct teams choose from the box of pieces and fit them together. But it only includes pieces for the product needs you can see this side of the horizon.\n\nA Lego set is perfect for building one thing. But when you\u2019re finished, someone\u2019s going to want to turn it into something better. There comes a time when the product team will need something that doesn\u2019t exist yet. What then?\n\n## Beyond the manual\n\nA good design system doesn\u2019t only provide components. It enables teams to create new ones. \n\nThis raises an obvious tension: if product teams can build their own things, how do you maintain quality and consistency? Who maintains it? Who prevents chaos?\n\nThere's no one answer, but there is a [continuum](https://measured.co/blog/continuums-as-a-tool) of options. At one end, you have complete lockdown: the UI team controls everything, making outside contributions difficult, if not impossible.  \n\nAt the other, you have federation: anyone can add anything in the name of community ownership \u2014 which tends to mean no ownership. Quality becomes inconsistent and the system fragments.[^federation-fallacy]\n\nWe find that successful systems start out with strict controls. Clear standards facilitate the rapid progress you need to show early on.\n\nBut to grow well, they need to gradually open up as they mature. That doesn\u2019t mean phasing out control. It means putting governance systems in place. Create documented processes and controls for ownership, contribution and deprecation. \n\nMaintaining over-rigid control indefinitely creates problems. Product teams build what they need anyway, outside the system. Shadow components proliferate. The design system becomes gradually less useful in enabling the work being done.\n\nWhen you add means of both enablement and governance to your collection of components, you elevate it to a full-fledged design system. That is, it becomes a system of systems.[^design-system-ecosystem]\n\n## In the shadows\n\nShadow components aren\u2019t to be feared. They\u2019re useful signals, not least that you have a motivated team that wants to get things done. \n\nBut they also signal that the system isn\u2019t meeting all needs. That could be because the contribution process is hard to understand, onerous to follow, or both.\n\nAsk what problem they were trying to solve and why the existing system didn\u2019t work for them. The answer will reveal gaps to fill.\n\n## Making it work\n\nYour design tokens, icons, and foundational elements need to be available in every format the teams use, be that CSS custom properties, JSON, JavaScript, or any other. \n\nDocumentation should cover both how to use and build components, structured around different user needs.[^diataxis]  \n\nEverything should live in one place rather than scattered across repos, wikis and Slack channels.\n\nThe payoffs are substantial: \n\n- Teams stop wasting time rebuilding primitives.\n- Consistency becomes the default rather than an aspiration. \n- Brand identity holds together. \n- Development speed increases because new problems are only new once \u2014 when they arise again, you\u2019ve already solved them.\n\n## Building on the Lego analogy\n\nThese benefits only materialise when you move beyond the component catalogue model. \n\nThe Lego analogy holds \u2013 but only if your teams can tool up and make new bricks. The goal isn\u2019t to provide every possible component. It's to provide foundational components plus the means to create more.\n\nIn other words, you\u2019ve built a beautiful Lego factory. Now it\u2019s time to hand out the golden tickets.\n\n[^federation-fallacy]: See Nathan Curtis\u2019s [The fallacy of federated design systems](https://medium.com/@nathanacurtis/the-fallacy-of-federated-design-systems-23b9a9a05542), on the \u201cdamage and distress of glorifying the wrong model\u201d.\n\n[^design-system-ecosystem]: Brad Frost's [The design system ecosystem](https://bradfrost.com/blog/post/the-design-system-ecosystem/) breaks down how design systems are ecosystems of interconnected parts all working together. The component library is just one piece.\n\n[^diataxis]: The [Diataxis](https://diataxis.fr/) framework structures documentation around four distinct user needs: tutorials, how-to guides, explanations of concepts, and reference material. It\u2019s a great starting point for planning documentation.",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771287164/facet/facet-s220449913_n9ypng.png",
+        "standfirst": "A box of UI bricks only gets you so far. What happens when product teams need parts that don't exist? Time to examine the Lego analogy more closely.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-c7206145-8c3a-4125-a676-88d95341753a",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-40911784-3c46-4798-9257-1fac9f57fa55",
+        "size": "12"
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "Scott\u2019s Law of Rebrands",
+      "ogImage": {
+        "alt": "lim P(t) = 1t\u2192\u221e \u2014 Over time, the probability of a rebrand starting in the midst of a large web project approaches 1.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1733840446/Scott_s_Law_OG_vw2zks.png",
+        "type": "image/png"
+      },
+      "description": "Rebrands landing during a large web project cause disruption, but they can be a benefit when approached the right way.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-96218051-dee5-4182-bc49-e953d41f8294",
+        "date": "2024-06-19",
+        "title": "Scott\u2019s Law of Rebrands",
+        "author": "Paul Love",
+        "content": "> Over time, the probability of a rebrand starting in the midst of a large web project approaches 1.\n>\n> \u2014 Scott Boyle, Measured Co-Founder\n\nLike any good axiom, Scott\u2019s Law of Rebrands was borne of experience. We\u2019ve seen it enough that we know it to be truthy. (We call it Scott\u2019s Law with tongue lodged firmly in cheek, of course.)\n\nRebrands happen for any number of reasons \u2014 repositioning in the market, new or evolving contexts, or to breathe new life into a brand. Brand identities tend to last 2 to 5 years, so the odds of a rebrand overlapping a major web project are high \u2014 and grow over time.\n\nFor our purposes, let\u2019s discuss a rebrand outside the scope of your project, but which will affect it in myriad ways.\n\nSuch rebrands are always challenging. But approached the right way, they can bring long-term benefits to your project. Here\u2019s how to go about it.\n\n## Accept the cards you\u2019re dealt \n\nA major rebrand will disrupt a large web project running in parallel. Expect questions from your digital teams:\n\n- What\u2019s the scope?\n- When\u2019s it starting?\n- How long will it take?\n- What does it mean for my project?\n\nNo one has the answers when a rebrand kicks off. All you know is that it\u2019s happening, you won\u2019t have control over it, and it will take as long as it takes.\n\nOngoing communication with brand and marketing teams is vital. They\u2019re often siloed from the implementing teams, which adds complexity (although less so for digital brands.)\n\nMake friends. Create lasting feedback loops between brand, marketing and your implementing teams.\n\n## Get on the front foot\n\nWhen you\u2019re surrounded by uncertainty, take it as an opportunity to build something better. Here are three ways to do that.\n\n1. ### Systematise\n   Look at what aspects of the existing brand can be systematised. For example:\n\n   - Colour schemes and their contextual uses\n   - Typography (type sizes, typefaces, fallback font stacks)\n   - Icons (size, location, design descriptors)\n   - Spacing and alignment (margins, component spacing, vertical rhythm) \n   - Motion (timing, duration, motion descriptors)\n\n   Systematising the brand leads to a more consistent and polished UI. \n\n   It also makes the brand easier to understand, which helps to assess the impact of change. You move from the mindset of \u201cthere\u2019s so much to do\u201d to \u201chere\u2019s what we\u2019ll do\u201d.\n\n1. ### Encode the brand\n   As far as possible, derive variables for what you\u2019ve systematised.\n\n   This doesn\u2019t necessarily mean creating design tokens, although it may. The aim is to make it easy to change any aspect of the brand identity. We call this encoding the brand.\n\n   Some might say otherwise, but you won\u2019t be able to encode everything up front. New needs will emerge. And some things can\u2019t be made into variables.\n\n   Encoding the brand makes your implementation as rebrand-ready as possible, and it simplifies future tweaks.\n\n1. ### Plan for flux\n   Brand work, and the digital gubbins around it, is never finished.[^evolution-apple]\n\n   With robust versioning and good communication, your organisation can safely manage changes to your system.\n\n   Label and communicate versions clearly, so everyone can see what\u2019s changed, and make informed decisions about when to adopt. (We recommend [Semantic Versioning](https://semver.org/).)\n\n   Call out changes in a visible and timely way.\n\n## Be flexible above all\n\nReality is messy and the future is unknowable. Systematising your brand and planning for change lay the foundations for success.\n\nSeeing rebrands as an opportunity to make your system adaptable saves time and money in the long run.\n\nWe\u2019d love to hear your thoughts. Get involved on [LinkedIn](https://www.linkedin.com/pulse/scotts-law-rebrands-measuredco-wghue/).\n\n[^evolution-apple]: Even when there\u2019s no rebrand happening, people will always tinker. Technology and humanity continually evolve \u2014 and so must brands. Duncan Nguyen\u2019s Medium post on the [evolution of Apple\u2019s design language](https://medium.com/macoclock/how-apples-design-language-has-evolved-see-it-on-apple-s-event-invitations-2003-2018-3c8943c57403) captures this well.\n",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1732538343/backgrounds/_Measured_Backgrounds_03_300_ysbgjl.png",
+        "standfirst": "Rebrands landing during a large web project cause disruption, but they can be a benefit when approached the right way.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-32757a44-9568-4645-b7bd-292bf55f64eb",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-db52aded-9b42-4d06-b601-12405d8b430a",
+        "size": "12"
+      }
+    }
+  ]
+}

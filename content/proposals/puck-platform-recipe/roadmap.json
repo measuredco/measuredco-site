@@ -1,0 +1,140 @@
+{
+  "root": {
+    "props": {
+      "title": "Timeline & Roadmap",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {
+    "Grid-9c4a9db5-e2ff-4e9a-b212-fc7baa505db2:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-71e79dc4-4664-42e5-8a08-b1d6d0739301",
+          "align": "start",
+          "colSpan": "8",
+          "justify": "start",
+          "colStart": "2"
+        }
+      }
+    ],
+    "Section-5f39d858-aaec-4f31-ac06-1e6d1ef9c103:section": [
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-f4c5d26c-80c3-40f4-82db-03f3d74b58b0",
+          "size": "10"
+        }
+      },
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-9c4a9db5-e2ff-4e9a-b212-fc7baa505db2",
+          "gap": "default"
+        }
+      }
+    ],
+    "GridItem-71e79dc4-4664-42e5-8a08-b1d6d0739301:grid-item": [
+      {
+        "type": "Markdown",
+        "props": {
+          "id": "Markdown-c3b88a77-5812-44fd-aea0-5bbc02976989",
+          "text": "Proposals / [Puck Platform Recipe](/proposals/puck-platform-recipe)",
+          "align": "left",
+          "measured": false
+        }
+      },
+      {
+        "type": "Heading",
+        "props": {
+          "id": "Heading-729d0743-ec00-4f4f-b85c-d83b54503f63",
+          "size": "1",
+          "text": "Roadmap & Timeline",
+          "align": "left",
+          "level": "1",
+          "maxWidth": ""
+        }
+      },
+      {
+        "type": "Paragraph",
+        "props": {
+          "id": "Paragraph-768d3672-28a8-45eb-a8b0-66dc29188525",
+          "size": "large",
+          "text": "Live roadmap and timeline. Subject to change.",
+          "align": "left",
+          "maxWidth": ""
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-9d4302a8-da14-484b-a0bc-3b96bd80176a",
+          "size": "07"
+        }
+      },
+      {
+        "type": "Markdown",
+        "props": {
+          "id": "Markdown-26b76fce-4af0-4ddc-9f06-dea2d0b86643",
+          "text": "The initial recipe will be delivered over an estimated 3-6 month timeline, in 3 phases.\n\n## Phase 1: Baseline \n\n_Target: 4-8 weeks from kick-off_\n\n- **Self-hosted**: Deploy to your own infrastructure. Optimised for Vercel.\n- **Built-in data store**: Store Puck data with the build-in datastore, connecting to any database. Vercel connector provided.\n- **Extendable dashboard**: A clean, themeable dashboard UI for managing sites and pages. Modify existing pages or add new ones for custom functionality.\n- **Puck page builder:** A fully-featured and customizable page builder powered by Puck, using your own React components.\n- **Media uploader**: A built-in media uploader, configurable for Vercel, Cloudinary or another DAM.\n- **Authentication:** A built-in authentication system.\n- **Static site generation**: Out-of-the-box static site generation for rapid page response times.\n- **Site management**: Configure site favicons, sitemap.xml, robots.txt, domain and 404 page.\n- **App isolation**: Separate applications for editing and rendering Puck pages to isolate application concerns, maximise performance and improve resiliency.\n\n## Phase 2: Advanced features \n\n_Target: 4-8 weeks from completion of Phase 1_\n\n\n- **Page versioning**: A versioning system to enable full page history.\n- **Scheduling publishing:** Schedule page publishing and unpublishing for a specific point in time.\n- **Preview links:** Share a preview URL for an unpublished page.\n- **Dynamic pages**: Create pages dynamically using a template based on an external data-store, like a headless CMS.\n- **Template management**: Create Puck templates for use during page creation, or for dynamic pages.\n- **Redirection management:** Configure redirects for old pages.\n\n## Phase 3: Organisation features\n\n_Target: 4-8 weeks from completion of Phase 2_\n\n- **Multi-tenant support**: Support multiple organisations, with secure data segregation.\n- **Single sign-on (SSO)**: Integrate with applications via OAuth 2.0 authorization protocol.\n- **Team management**: Invite team members and configure permissions user access control (UAC).\n- **Sub-organizations**: Create sub-organizations who can create invite their own users and manage their own UAC. Sub-organizations inherit templates from parent organizations.\n- **REST API**: Interact with organizations, websites and pages via a secure REST API.\n\n\n\n## Future phases\n\nThese features are out-of-scope for the initial delivery roadmap.\n\n- **Form submission tracking:** Collect and review form submissions.\n- **Built-in collections**: A micro-CMS for creating page-level content.\n- **Designer:** Create reusable Puck symbols for page building, using the Puck editor.\n- **Translation Manager:** Localise pages for multiple languages.\n- **Gating:** Place pages behind a password or custom authentication.\n- **Bot protection**: Limit form submissions for fraudulent users.",
+          "align": "left",
+          "measured": true
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-6624c5e8-48c5-4495-ad57-b2064c59a70b",
+          "size": "07"
+        }
+      },
+      {
+        "type": "Markdown",
+        "props": {
+          "id": "Markdown-2d3efe60-b87a-4f2f-bbea-523ff7ca5490",
+          "text": "[Continue to License](/proposals/puck-platform-recipe/license/)",
+          "align": "left",
+          "measured": false
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-74b659f5-02e9-4745-8f08-26f33a0cb76b",
+          "size": "12"
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-5f39d858-aaec-4f31-ac06-1e6d1ef9c103",
+        "width": "default"
+      }
+    }
+  ]
+}

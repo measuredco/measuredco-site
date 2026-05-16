@@ -1,0 +1,51 @@
+{
+  "root": {
+    "props": {
+      "title": "Puck 0.17: React 19 support and field improvements",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "Puck 0.17 introduces support for React 19 and various quality-of-life improvements.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-778b21c2-b20a-429b-9999-acbb0a6b57df",
+        "date": "2024-12-18",
+        "title": "Puck 0.17: React 19 support",
+        "author": "Chris Villa",
+        "content": "_This is our final feature release of the year! We're delaying the [new drag-and-drop engine](https://github.com/measuredco/puck/pull/598) release until January while we iron out the last few kinks. Happy holidays, and thanks for being a wonderful community \ud83c\udf84_ \n\n## TLDR\n\n<!--Provide bullet points summarising up to 5 key features-->\n\n- **React 19 support**: We've made [React 19](https://react.dev/blog/2024/12/05/react-19) support official by adding it to the supported list of peer dependencies.\n- **Next.js 15**: Upgraded the next recipe to use [Next 15.1](https://nextjs.org/blog/next-15) and React 19 by default.\n- **[New external field APIs](https://puckeditor.com/docs/api-reference/fields/external)**: External fields now support react elements as rows, and a custom footer, enabling much more customization. Thanks to @camhammel for these improvements!\n- **[Duplicate array items](https://puckeditor.com/docs/api-reference/fields/array)**: Added a new action to the array field so you can easily duplicate array items. Thank you @siarhei-zharnasek \ud83d\ude4f\n- **[resolveFields enhancement](https://puckeditor.com//docs/api-reference/configuration/component-config#paramsparent)**: You can now access the DropZone parent data when using the `resolveFields` API,  enabling you to customize the fields based on the container's type or props.\n\n## Highlights\n\n### React 19 support\n\nWe've made [React 19](https://react.dev/blog/2024/12/05/react-19) support official by adding it to the supported list of peer dependencies. It turns out that earlier versions of Puck already play well with React 19, you don't need to upgrade Puck to use React 19 if you don't want to.\n\n### Next 15\n\nThe official [next recipe](https://github.com/measuredco/puck/tree/main/recipes/next) now uses  [Next 15.1](https://nextjs.org/blog/next-15) and React 19 by default. If you're using the recipe and want to upgrade, make sure you also upgrade to React 19 as required by Next 15 when using the App Router. See the [official Next.js upgrade guide](https://nextjs.org/docs/app/building-your-application/upgrading/version-15) for more info.\n\n### New external field APIs\n\nThe [`mapRow` API](https://puckeditor.com/docs/api-reference/fields/external#maprowitem) now supports react elements, making it possible to add richer content to your external field table:\n\n```tsx\n{\n  type: \"external\",\n  fetchList: async () => {\n    return [\n      { title: \"Hello, world\", imgUrl: \"https://example.com/img.jpg\" },\n      { title: \"Goodbye, world\", imgUrl: \"https://example.com/img.jpg\" },\n    ];\n  },\n  mapRow: (item) => ({ ...item, imgUrl: <img src={item.imgUrl} /> }),\n}\n```\n\nAnd the new [`renderFooter` API](https://puckeditor.com/v/canary/docs/api-reference/fields/external#renderfooterprops) enables you to customise the footer of your external field modal.\n\n```tsx\n{\n  type: \"external\",\n  fetchList: async () => {\n    return [\n      { title: \"Hello, world\" },\n      { title: \"Goodbye, world\" },\n    ];\n  },\n  renderFooter: ({ items }) => (\n    <b>Custom footer with {items.length} results</b>\n  ),\n}\n```\n\n### Duplicate array items\n\nA new action in the array field allows you to easily duplicate array items.\n\n![Cursor clicking the array item duplicate icon button, and the item duplicating, on loop](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fgithub.com%2Fuser-attachments%2Fassets%2Fa69a608d-fecf-42c1-ac4f-87ca26c09cc4)\n\n### Access parent data in resolveFields\n\nThe new [`parent` param](https://puckeditor.com/docs/api-reference/configuration/component-config#paramsparent) on the `resolveFields` API enables you to configure your fields based on the props of the parent item when using DropZones.\n\nHere's an example that shows a field called `flex` when the parent component has a `display` prop of `\"flex\"`:\n\n```tsx\nconst config = {\n  components: {\n    MyComponent: {\n      resolveFields: (data, { fields, parent }) => {\n        if (parent.props.display === \"flex\") {\n          return {\n            ...fields,\n            flex: {\n              type: \"radio\",\n              options: [\n                { label: \"Grow\", value: \"grow\" },\n                { label: \"Shrink\", value: \"shrink\" },\n              ],\n            }\n          }\n        }\n      \n        return fields;\n      },\n      // ...\n    },\n  },\n};\n```\n\n## Full changelog\n\n### Features\n\n* add duplicate action to array field ([229cbdd](https://github.com/measuredco/puck/commit/229cbddb7eed513c8ac9a2e36e3af3b53ff28d7e))\n* add renderFooter API to external field ([ccec96e](https://github.com/measuredco/puck/commit/ccec96e5ddf831fcd89a2af335449ad4cff1ea81))\n* allow react elements in external field mapRow ([2f781de](https://github.com/measuredco/puck/commit/2f781de0a910a193f0a4bae795725119476f8e94))\n* enable resolveFields to access parent data ([196227b](https://github.com/measuredco/puck/commit/196227bdf33ee678ce47b68fc624804448008cc1))\n* list React 19 as supported peer dependency ([85e8cc1](https://github.com/measuredco/puck/commit/85e8cc1a6fcd29d9dd04e5e53c6e7f9a85f99959))\n* track focused field in app state ([91bc97a](https://github.com/measuredco/puck/commit/91bc97a760d1750d65dedbbffee962a6c6ee8d60))\n* upgrade next recipe to v15.1 ([8ef51c5](https://github.com/measuredco/puck/commit/8ef51c54e386528fca69be1e54b8a3ce69651bd0))\n* use React 19 in next recipe ([6b3d97f](https://github.com/measuredco/puck/commit/6b3d97f9f3d0cc2283178ba6f4bda3b23f1f718a))\n\n\n### Bug Fixes\n\n* always run field resolvers when item change ([159d819](https://github.com/measuredco/puck/commit/159d819e0263f4e91bff8a83adfa404601850aa5))\n* always update fields when resolveData runs ([39dd619](https://github.com/measuredco/puck/commit/39dd61934c15a452c59f26b0c6721802df0c1889))\n* ensure radio fields are functional inside arrays ([7736294](https://github.com/measuredco/puck/commit/7736294d201f432799c0854be14b35edbad156d8))\n* prevent field name collision causing hook render mismatch ([b51954a](https://github.com/measuredco/puck/commit/b51954a19875e1f3c87e0cdc03c10173e9786820))\n* prevent flicker when using resolveData with arrays ([1be9b88](https://github.com/measuredco/puck/commit/1be9b886325a1515434759011e9e3514c583bd2e))\n* provide better error when usePuck used inappropriately ([9991c07](https://github.com/measuredco/puck/commit/9991c079b2b7d8f18ecb42efc3ebc32e5d679b88))\n* remove leading zeros in Number field ([5ba9399](https://github.com/measuredco/puck/commit/5ba9399e6546919ae744d7a4986b59faa1cd7aef))\n* respect original value type in radio and select fields ([00ccd1d](https://github.com/measuredco/puck/commit/00ccd1df6513d2420c87cd136577e1df1ac9a9a3) and [6e5864a](https://github.com/measuredco/puck/commit/6e5864a5df01a52fb4e6b23132d68d4496f1e64e))\n\n## New Contributors\n* @ruofee made their first contribution in https://github.com/measuredco/puck/pull/693\n* @DevOfManyThings made their first contribution in https://github.com/measuredco/puck/pull/698\n* @benlife5 made their first contribution in https://github.com/measuredco/puck/pull/695\n* @camhammel made their first contribution in https://github.com/measuredco/puck/pull/682\n* @siarhei-zharnasek made their first contribution in https://github.com/measuredco/puck/pull/676\n* @antonva made their first contribution in https://github.com/measuredco/puck/pull/707\n* @jswhisperer made their first contribution in https://github.com/measuredco/puck/pull/722\n\nSee [GitHub](https://github.com/measuredco/puck/releases) for more.",
+        "authorUrl": "https://www.linkedin.com/in/chrisvilla/",
+        "standfirst": "Introducing support for React 19, improved field APIs and several bug fixes.",
+        "modifiedDate": ""
+      }
+    }
+  ]
+}

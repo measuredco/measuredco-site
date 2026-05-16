@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "Spotting UI icebergs: the complexity beneath the clicks",
+      "ogImage": {
+        "alt": "People forget that designs aren\u2019t the thing, even if they look like it.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1771520783/articles/ui-icebergs-OG_bsg981.png",
+        "type": "image/png"
+      },
+      "description": "Figma designs look real on the surface, but you have to look deeper. Here\u2019s how teams can spot UI icebergs early to prevent unexpected budgetary headaches.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-1145cdc2-5712-4776-bf50-fa41ec925745",
+        "date": "2026-02-19",
+        "title": "Spotting UI icebergs: the complexity beneath the clicks",
+        "author": "Paul Love",
+        "content": "The Figma designs are crisp. The interactions flow beautifully. Sign-off is painless. But when development begins, stickier questions can arise. What does this button actually do? What happens when that form fails? Who\u2019s designing the empty state?\n\nWe call these hidden pieces of complexity UI icebergs. The bit above the surface is evident, but you have to look deeper to see the true scale of the work.\n\nThe trick is to make sure icebergs land on the radar before they cost unexpected time and money. Fortunately, there is a way.\n\n\n## What lies beneath\n\nDuring design, teams often zero in on primary flows, but can overlook the complexity behind the clicks.\u00a0\n\nThe problem compounds as Figma designs look increasingly real. People forget that designs aren\u2019t the thing, even if they look like it. They\u2019re lossy. They don\u2019t capture every implication.\n\nAs an example, say a public sector client has a website of services for homeowners, including checking eligibility for grants and calculating energy savings. The designs look straightforward: a few buttons on a landing page plus some simple navigation. Dev teams estimate a few weeks work.\n\nBut it turns out grant eligibility needs rule engines for property type, location and income. Energy calculations need building data, usage patterns, and local climate factors. \n\nEach tool turns out to be a complete application in its own right. That would have been good to know in advance.\n\n\n## Iceberg-spotting is a team sport\n\nIn the waterfall days, designers assumed developers would figure out the details. Developers assumed designers would spec everything thoroughly. User experience fell into the gap in between.\n\nThe difference today? Ownership of different parts of the experience is still siloed, but there are more roles and disciplines in the mix, and usually more product complexity. So there are many more gaps for things to get lost in. \n\nTake an online shopfront. One team handles product pages, another owns checkout. The product page team doesn\u2019t think about what happens after you hit the buy button. The checkout team doesn\u2019t think about how items arrived in the basket. Iceberg ahead!\n\nThere\u2019s rarely any one person who understands, or is responsible for, the end-to-end journey who also has the bandwidth to find and address icebergs.[^service-design] The team must get together and think through each journey.\n\n## When to spot icebergs\n\nIdeally, you\u2019ll catch icebergs during early design work. The surest way to find them is to gather everyone together and go through every element systematically.\u00a0\n\nAsk what\u2019s behind each interaction \u2014 every link and every button. The response is often that it hasn\u2019t been looked at yet, or it was presumed to be someone else\u2019s responsibility. Iceberg discovered!\n\nBehind that innocent-looking button could be a complete other web app, potentially more complicated than the one at the surface. It might be a system that doesn\u2019t exist. Or it might need wholesale changes to support your proposal. It could be a third-party service that hasn\u2019t been chosen yet.\n\nYou need to constantly review designs and consciously look for these hidden implications. A critical checkpoint is when the scope starts to become definitive. There\u2019s no better time to ask whether it\u2019s possible the team has overlooked massive piles of stuff.\n\nBe sure to record every iceberg you discover, and remember that it shouldn\u2019t automatically become the responsibility of the people that found it.\n\n## Risks of looking the other way\n\nFortunately, there isn\u2019t a Titanic in this analogy to sink your project. The hidden work always appears eventually.\u00a0\n\nThe risk is that you discover more work to do after you\u2019ve committed to timelines and resources. Worst case, you complete a program and discover significant extra work at the end.\u00a0\n\nThis is unlikely in practice as there are usually enough people who care to catch problems earlier. But unexpected icebergs can cause real budgetary headaches if they\u2019re discovered too late.\n\nUltimately, the responsibility is collective and continuous throughout design. That way, delivery can remain a matter of execution rather than a series of unexpected discoveries.\n\n[^service-design]: It\u2019s an evolving discipline, but service design is starting to fill this gap. But in our experience service designers are often spread thinly across an organisation. And they\u2019re not always empowered to referee when problems arise.",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771520784/articles/facet-977462309ls-a72cn85e29fx22fy57sz17sp21b21l32op21ot12w16_qwui96.png",
+        "standfirst": "Figma designs look real on the surface, but you have to look deeper. Here\u2019s how teams can spot UI icebergs early to prevent unexpected budgetary headaches.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-d146947c-68d1-40c6-b7bb-8b3a85c2dc3b",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-f9f4f481-186a-406c-bc76-3b8e97d9259c",
+        "size": "12"
+      }
+    }
+  ]
+}

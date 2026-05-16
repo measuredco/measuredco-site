@@ -1,0 +1,51 @@
+{
+  "root": {
+    "props": {
+      "title": "Puck 0.13: Custom UIs, object fields & DropZone restrictions",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "Puck v0.13.0 introduces some of our most powerful APIs yet, enabling completely custom interfaces, adding support for object fields and mechanisms to restrict DropZones.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-700d411b-d917-4406-8e8e-26693fb0ef1c",
+        "date": "2023-12-20",
+        "title": "Puck 0.13: Custom UIs, object fields & DropZone restrictions",
+        "author": "Chris Villa",
+        "content": "[Puck v0.13.0](https://github.com/measuredco/puck/releases/tag/v0.13.0) introduces some of our most powerful APIs yet,  enabling completely custom interfaces, adding support for object fields and mechanisms to restrict DropZones.\n\n## TLDR\n\n1. [**Custom interfaces**](https://puckeditor.com/docs/extending-puck/custom-interfaces): Take complete control of the Puck UI with the new custom interface APIs.\n2. [**Object fields**](https://puckeditor.com/docs/api-reference/configuration/fields/object): Represent objects as fields with the new `object` field type.\n3. [**DropZone restrictions**](https://puckeditor.com/docs/api-reference/components/drop-zone#allow): The new `allow` and `disallow` props allow you to restrict which components can be dropped into DropZones.\n4. [**New plugin API (Breaking Change)**](https://puckeditor.com/docs/extending-puck/plugins): The plugin API has been updated to align with the new custom interfaces API. This is a breaking change. The plugin API remains experimental.\n5. [**New transformProps API**](https://puckeditor.com/docs/integrating-puck/data-migration): The new transformProps API makes it easier to rename props on your components without breaking your payload.\n6. [**New `ui` prop**](https://puckeditor.com/docs/api-reference/components/puck): Set the initial UI state for the Puck editor on render.\n7. [**Add search to external fields**](https://puckeditor.com/docs/api-reference/configuration/fields/external#showsearch): Show a search input in the `external` field modal, enabling the user to query your external API.\n\n## Highlights\n\n### \ud83c\udfa8 Custom interfaces\n\n\nIt's now possible to create completely [custom Puck interfaces](https://puckeditor.com/docs/extending-puck/custom-interfaces) to integrate more deeply with your own UI and create a seamless experience for your users.\n\n![custom-puck-ui-example](https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1734632203/puck/u6ihin6zmwlofmyhhwqf.jpg)\n\nThis can be achieved by passing children to the `<Puck>` component.\n\n```tsx\nimport { Puck } from \"@measured/puck\";\n\nexport function Editor() {\n  return (\n    <Puck>\n      <div style={{ background: \"hotpink\" }}>\n        <Puck.Preview />\n      </div>\n    </Puck>\n  );\n}\n```\n\nSee [this demo](https://demo.puckeditor.com/custom-ui/edit).\n\n### \ud83e\ude9d The `usePuck` hook\n\nAccess Puck's internals using the `usePuck` hook to extend Puck's functionality with powerful custom components.\n\n```tsx\nimport { Puck, usePuck } from \"@measured/puck\";\n\nconst JSONRenderer = () => {\n  const { appState } = usePuck();\n\n  return <div>{JSON.stringify(appState.data)}</div>;\n};\n\nexport function Editor() {\n  return (\n    <Puck>\n      <JSONRenderer />\n    </Puck>\n  );\n}\n```\n\n### \ud83d\uddc3\ufe0f Object fields\n\nObject fields enable you to represent your `object` types with the fields API. No more flattening your props!\n\n```tsx\nconst config = {\n  components: {\n    Example: {\n      fields: {\n        params: {\n          type: \"object\",\n          objectFields: {\n            title: { type: \"text\" },\n          },\n        },\n      },\n      render: ({ params }) => {\n        return <p>{params.title}</p>;\n      },\n    },\n  },\n};\n```\n\n### \ud83d\ude45 DropZone restrictions\n\nRestrict which components can be passed into a DropZone component with the [`allow` and `disallow` props](https://puckeditor.com/docs/api-reference/components/drop-zone#allow).\n\n```tsx\nconst MyComponent = () => (\n  <DropZone zone=\"my-content\" allow={[\"HeadingBlock\"]} />\n);\n```\n\n\n## Deprecations\n\n### `renderHeader` deprecated\n\nThe `renderHeader` prop has been deprecated in favor of the [overrides API](https://puckeditor.com/docs/api-reference/overrides).\n\n```tsx\n// Before\nexport function Editor() {\n  return (\n    <Puck\n      renderHeader={({ appState, dispatch }) => ()}\n    />\n  );\n}\n\n// After\nexport function Editor() {\n  return (\n    <Puck\n      overrides={{\n        header: ({ appState, dispatch }) => ()\n      }}\n    />\n  );\n}\n```\n\n### `renderHeaderActions` deprecated\n\nThe `renderHeaderActions` prop has been deprecated in favor of the [overrides API](https://puckeditor.com/docs/api-reference/overrides).\n\n```tsx\n// Before\nexport function Editor() {\n  return (\n    <Puck\n      renderHeaderActions={({ appState, dispatch }) => ()}\n    />\n  );\n}\n\n// After\nexport function Editor() {\n  return (\n    <Puck\n      overrides={{\n        headerActions: ({ appState, dispatch }) => ()\n      }}\n    />\n  );\n}\n```\n\n## Breaking changes\n\n### `renderComponentList` removed\n\nThe `renderComponentList` prop has been removed in favor of the [overrides API](https://puckeditor.com/docs/api-reference/overrides).\n\n```tsx\n// Before\nexport function Editor() {\n  return (\n    <Puck\n      renderComponentList={({ appState, dispatch }) => ()}\n    />\n  );\n}\n\n// After\nexport function Editor() {\n  return (\n    <Puck\n      overrides={{\n        componentList: ({ appState, dispatch }) => ()\n      }}\n    />\n  );\n}\n```\n\n### Plugin API revamped\n\nThe [plugin API](https://puckeditor.com/docs/extending-puck/plugins) has been significantly revamped to match the [overrides API](https://puckeditor.com/docs/api-reference/overrides).\n\n```tsx\n// Before\nexport function Editor() {\n  return (\n    <Puck\n      plugins={[\n        { renderFields: ({ appState, dispatch }) => () }\n      ]}\n    />\n  );\n}\n\n// After\nexport function Editor() {\n  return (\n    <Puck\n      plugins={[\n        overrides: {\n          form: ({ appState, dispatch }) => ()\n        }\n      ]}\n    />\n  );\n}\n```\n\n## Changelog\n\n\nSee the [GitHub release](https://github.com/measuredco/puck/releases/tag/v0.13.0) for a full changelog.",
+        "authorUrl": "https://www.linkedin.com/in/chrisvilla/",
+        "standfirst": "",
+        "modifiedDate": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "root": {
+    "props": {
+      "title": "Work",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": true
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": false
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {
+    "Grid-4462c20b-a026-4263-9996-5964391fc0ff:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-15898719-9110-4975-bf86-89d9339c158a",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start",
+          "colSpanNarrow": "6"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-0dbe7550-d59d-46f3-8fd2-8baa4de174a2",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start",
+          "colSpanNarrow": "6"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-20f037db-bb33-471a-a27a-447d7c42e4d6",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start",
+          "colSpanNarrow": "6"
+        }
+      },
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-50f25c8a-f474-4d4c-9fc9-069c2d6d7484",
+          "align": "start",
+          "colSpan": "4",
+          "justify": "start",
+          "colSpanNarrow": "6"
+        }
+      }
+    ],
+    "Grid-9bed378f-0db3-41e6-9566-3c8dd0e88bb8:grid": [],
+    "Grid-edd4760a-e7cd-4132-8220-f66dd0b6db1f:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-7e0ef41b-d5a7-487b-8092-b00526859156",
+          "align": "start",
+          "colSpan": "6",
+          "justify": "start"
+        }
+      }
+    ],
+    "Section-30f3a84f-101e-4e8f-bf59-a92d6bd7ddb8:section": [
+      {
+        "type": "Contact",
+        "props": {
+          "id": "Contact-33eb8cac-283a-4fba-aee4-39fbc3305f23",
+          "text": "How can we help?",
+          "email": "paul@measured.co"
+        }
+      }
+    ],
+    "Section-ba322e39-f8e1-4341-8757-7c8ec43a6ed8:section": [
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-edd4760a-e7cd-4132-8220-f66dd0b6db1f",
+          "gap": "default"
+        }
+      },
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-9bed378f-0db3-41e6-9566-3c8dd0e88bb8",
+          "gap": "default"
+        }
+      },
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-4462c20b-a026-4263-9996-5964391fc0ff",
+          "gap": "large"
+        }
+      }
+    ],
+    "GridItem-0dbe7550-d59d-46f3-8fd2-8baa4de174a2:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-0a7123d9-cdcf-43e5-a71c-b97ac36e8210",
+          "link": "/work/dunnhumby",
+          "note": "More",
+          "title": "Design system strategy for dunnhumby",
+          "graphic": false,
+          "description": "Running in-depth discovery with stakeholder teams to establish foundations for a future design system.",
+          "headingLevel": "3"
+        }
+      }
+    ],
+    "GridItem-15898719-9110-4975-bf86-89d9339c158a:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-8d95decd-20fd-416e-a798-8617c646094a",
+          "link": "/work/bt",
+          "note": "More",
+          "title": "A cohesive digital identity for BT",
+          "description": "Building a design system to bring a new visual identity to life across a transforming organisation.",
+          "headingLevel": "2"
+        }
+      }
+    ],
+    "GridItem-20f037db-bb33-471a-a27a-447d7c42e4d6:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-d3f4859c-699b-42bc-8c35-c9ab13e5215d",
+          "link": "/work/hilton",
+          "note": "More",
+          "title": "Brand expression at scale for Hilton",
+          "description": "Systematising a multi-brand portfolio so teams deliver great digital experiences faster and more simply.",
+          "headingLevel": "2"
+        }
+      }
+    ],
+    "GridItem-50f25c8a-f474-4d4c-9fc9-069c2d6d7484:grid-item": [
+      {
+        "type": "Card",
+        "props": {
+          "id": "Card-1749419e-b2da-498d-8181-343a7b8ea624",
+          "link": "/work/hubble",
+          "note": "More",
+          "title": "Enabling a business pivot for Hubble",
+          "description": "Building a platform for on-demand office space and hybrid working, ready to scale.",
+          "headingLevel": "2"
+        }
+      }
+    ],
+    "GridItem-7e0ef41b-d5a7-487b-8092-b00526859156:grid-item": [
+      {
+        "type": "Header",
+        "props": {
+          "id": "Header-0c603ad8-80a4-4051-9b87-cda6ac32b4d1",
+          "size": "l",
+          "level": "1",
+          "heading": "Work",
+          "description": "How we\u2019ve worked with major brands to shape flawless UI."
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-fb2f68f8-bf8f-4a36-bc0e-03269dfa11f1",
+          "size": "11"
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-73b05e0b-917a-4932-bd71-5b094e1841c6",
+        "size": "09"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-ba322e39-f8e1-4341-8757-7c8ec43a6ed8",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-de3235fd-b341-4a5e-be47-08a3df88b226",
+        "size": "12"
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-30f3a84f-101e-4e8f-bf59-a92d6bd7ddb8",
+        "width": "default"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-5d0b1b6e-a010-4a67-a0e7-b6bc408ff23b",
+        "size": "12"
+      }
+    }
+  ]
+}

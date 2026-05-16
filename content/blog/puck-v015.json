@@ -1,0 +1,51 @@
+{
+  "root": {
+    "props": {
+      "title": "Puck 0.15: Dynamic fields",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "Puck v0.15 introduces powerful new field APIs and numerous quality-of-life features.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-bbc99fce-b8fd-4826-a72b-3161b062e6ce",
+        "date": "2024-05-31",
+        "title": "Puck 0.15: Dynamic fields",
+        "author": "Chris Villa",
+        "content": "[Puck v0.15](https://github.com/measuredco/puck) introduces powerful new field APIs and numerous quality-of-life features.\n\n1. [**Dynamic fields**](https://puckeditor.com/docs/integrating-puck/dynamic-fields): Use the `resolveFields` API to dynamically define your fields - great for showing fields conditionally or loading external APIs.\n2. [**AutoField component**](https://puckeditor.com/docs/api-reference/components/auto-field): Build custom fields using Puck's own field component for a seamless UI.\n3. [**Override the Publish button**](https://puckeditor.com/docs/api-reference/overrides/header-actions): Swap out the publish button without swapping out the entire header.\n4. [**Context-aware components**](https://puckeditor.com/docs/api-reference/configuration/component-config#puckisediting): Modify component behaviour based on whether it's inside `<Puck>` or `<Render>`.\n\nUpgrade today or get started with:\n\n```\nnpx create-puck-app@latest\n```\n\n## Dynamic fields\n\n[Dynamic field resolution](https://puckeditor.com/docs/integrating-puck/dynamic-fields) via the `resolveFields` API allows you to change the [field configuration](https://puckeditor.com/docs/api-reference/configuration/component-config#fields) whenever the props change. You can use this to show and hide fields or even load data from an API.\n\n![](https://github.com/measuredco/puck/assets/985961/298ea7c9-48e4-4e8c-99b5-211c5952c81c)\n\nCode example:\n\n```tsx\nconst config = {\n  components: {\n    MyComponent: {\n      // ...\n      resolveFields: (data) => ({\n        myField: {\n          type: \"radio\",\n          options: [],  // Populate dynamically\n        },\n      }),\n    },\n  },\n};\n```\n\n## AutoField component\nThe [AutoField component](https://puckeditor.com/docs/api-reference/components/auto-field) lets you render a Puck field based on a [Field](https://puckeditor.com/docs/api-reference/fields) object. Use this when building [custom fields](https://puckeditor.com/docs/extending-puck/custom-fields) that need to use Puck-style fields internally.\n\n```tsx\nconst CustomField = ({ onChange, value }) => (\n  <AutoField field={{ type: \"text\" }} onChange={onChange} value={value} />\n);\n```\n\n## Override the Publish button\n\nIt's now possible to implement a custom Publish button without overriding the entire header by using the [`headerActions` override](https://puckeditor.com/docs/api-reference/overrides/header-actions).\n\n```tsx\n<Puck\n  overrides={{\n    headerActions: ({ children }) => (\n      <>\n        {/* children will render default Publish button */}\n        {children}\n        {/* Or you can define your own */}\n        <button>Click me</button>\n      </>\n    ),\n  }}\n/>;\n```\n\n**This creates a breaking change for existing `headerActions` overrides, which will now need to render `children` to show the default Publish button.**\n\n## Context-aware components\n\nComponents now receive the [`puck.isEditing` prop](https://puckeditor.com/docs/api-reference/configuration/component-config#puckisediting). Use this to toggle functionality based on whether the component is being rendered in the `<Puck>` or `<Render>` context.\n\n```tsx\nconst config = {\n  components: {\n    MyComponent: {\n      render: ({ puck }) => (\n        <div style={{ background: puck.isEditing ? \"hotpink\" : \"transparent\" }}>\n          Hello, world\n        </div>\n      ),\n    },\n  },\n};\n```\n\n## Breaking changes & deprecations\n\n### `headerActions` override must now render `{children}` (BREAKING CHANGE)\n\nIn order to support custom Publish buttons, the `headerActions` override will no longer render the default Publish button unless `children` are rendered.\n\n```tsx\n<Puck\n  overrides={{\n    headerActions: ({ children }) => (\n      <>\n        {/* Render default Publish button */}\n        {children}\n      </>\n    ),\n  }}\n/>;\n```\n\n### Undocumented `editMode` API deprecated\n\nThe undocumented `editMode` prop is now deprecated in favor of `puck.isEditing`.\n\n## Full Changelog\n\n\n ### Features\n\n * add AutoField component for using Puck fields inside custom fields ([106028b](https://github.com/measuredco/puck/commit/106028b59bb1a02756645bb76ce400adc398430d))\n * add isEditing flag to `puck` object prop ([13bb1bd](https://github.com/measuredco/puck/commit/13bb1bdf03a62000c07a7d49a56ad09c1433fda0))\n * add resolveFields API for dynamic fields ([0a18bdb](https://github.com/measuredco/puck/commit/0a18bdb9387f302565f74fa30f09fd912ea0769b))\n * allow data prop to accept an empty object ([aedd401](https://github.com/measuredco/puck/commit/aedd401dd415e9d7dc1cbd6e33e59f5264180374))\n * bump next recipe to Next@14 ([47a27ed](https://github.com/measuredco/puck/commit/47a27ed2c6aee80d4093975c399d96b950cb6956))\n * enable override of publish button (breaking change) ([480467a](https://github.com/measuredco/puck/commit/480467ae2e06ae4d36c4fd67f75757557058f561))\n * expose previous data to resolveData via `lastData` param ([dd7051e](https://github.com/measuredco/puck/commit/dd7051e8fbb3770714100c92f7f5c69d0be5dab6))\n * replace history chevrons with undo/redo icons ([91dff22](https://github.com/measuredco/puck/commit/91dff227c382ddd5ad183cd69cb4d2fabd56f093))\n\n ### Bug Fixes\n\n * align Drawer behaviour and docs with expectation ([e2cd445](https://github.com/measuredco/puck/commit/e2cd445f9d3abccca5b3daf95a4d92774a1dd47a))\n * animate loader in iframe ([151a267](https://github.com/measuredco/puck/commit/151a2675bf8e700368aad0652192bc7d9fd2bbd6))\n * don't inline link stylesheets for more predictable behaviour ([c0a331d](https://github.com/measuredco/puck/commit/c0a331de31c2d59e0e21ef342eb4c821850e10be))\n * don't overflow external inputs inside arrays/objects ([42ef582](https://github.com/measuredco/puck/commit/42ef582cac949f8a24f9cdad204baf24d808b410))\n * don't throw warning when user is correctly specifying root props ([46aa8ff](https://github.com/measuredco/puck/commit/46aa8ff3a68dcbd4aec4ebfef246d400469ca4d4))\n * don't unintentionally use read-only styles in external fields ([acaf727](https://github.com/measuredco/puck/commit/acaf72746c2c82881a753dab6350161c774cd13f))\n * fix defaultProps for root ([9a1cc7c](https://github.com/measuredco/puck/commit/9a1cc7c925f0b8a79b5f523fc7c8a6d6afdc2067))\n * infer correct value types in Custom fields ([5c8c0e1](https://github.com/measuredco/puck/commit/5c8c0e1bfa9ca4da04e1cfac83c7a3ab5883fc5c))\n * position field loader relative to sidebar, not fields ([2e8936e](https://github.com/measuredco/puck/commit/2e8936e4f416b0a04b273250cf3848447fb7e045))\n * show external field modal when using custom interfaces ([6e97a0e](https://github.com/measuredco/puck/commit/6e97a0e18aea72581ba466e8cf3f87e60f3a65f3))\n * show field loader when using field overrides ([8ccfa4c](https://github.com/measuredco/puck/commit/8ccfa4c0c3477b8e1d2db2fcc7a352b353643095))\n * still load iframe if styles fail to load ([3e56bc1](https://github.com/measuredco/puck/commit/3e56bc1816c40c555de2eb28148baf5dcdcacbea))\n\nSee the [GitHub release](https://github.com/measuredco/puck/releases/tag/v0.15.0) for the full changelog.\n\n## Community\n\nWe're grateful for the community's support and contributions. Join the conversation on [GitHub](https://github.com/measuredco/puck) and [Discord](https://discord.gg/D9e4E3MQVZ).\n\n## Contributors\n\nA huge thanks to all our existing and new contributors:\n\n* [@goynang](https://github.com/goynang) made their first contribution in https://github.com/measuredco/puck/pull/487\n\n",
+        "authorUrl": "https://www.linkedin.com/in/chrisvilla/",
+        "standfirst": "",
+        "modifiedDate": ""
+      }
+    }
+  ]
+}

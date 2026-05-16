@@ -1,0 +1,83 @@
+{
+  "root": {
+    "props": {
+      "title": "BT | Work",
+      "ogImage": {
+        "alt": "A laptop on a balcony table displays BT's business solutions website, with a headline reading \"We've got your back\" and sections highlighting connectivity, support, and security. In the bottom right corner is a graphic Measured logo.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/q_auto/v1741703742/dell-TxXuh_hAFd8-unsplash_BT_KV_cropped_1200x630_oc2mvy.jpg",
+        "type": "image/jpg"
+      },
+      "description": "Building a design system to bridge new visual identity and digital delivery across a transforming organisation undergoing its first rebrand in 13 years.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": true
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": false
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {
+    "Section-f655e520-6742-4930-b07a-9fc27c4d4057:section": [
+      {
+        "type": "Contact",
+        "props": {
+          "id": "Contact-502ed2a3-bf95-4620-935b-a293c16aba9d",
+          "text": "How can we help?",
+          "email": "paul@measured.co"
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "type": "Work",
+      "props": {
+        "id": "Work-c7ffc757-eeaf-41bf-bcaf-d9ad173109dc",
+        "date": "2019\u20132022",
+        "image": {
+          "alt": "A laptop on a balcony table displays BT's business solutions website, with a headline reading \"We've got your back\" and sections highlighting connectivity, support, and security.",
+          "src": "https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1734126226/site/dell-TxXuh_hAFd8-unsplash_BT_KV_cropped_pu0ke5.jpg",
+          "anchor": "C"
+        },
+        "quote": "",
+        "title": "BT",
+        "content": "## Need\n\nOur task was to help [BT](https://www.bt.com/) build its first proper design system to bridge its new visual identity and its digital design and implementation processes.\n\nThis needed to happen in the face of a rebrand that encompassed many brand expressions over a number of years.\n\n## Action\n\nWe started by developing a detailed discovery report, which quickly evolved into hands-on implementation.\n\nWe broke ground on the design system, dovetailing with internal foundational brand work. \n\nWe built the core of the design system, tailored for a large, transforming organisation. This included:\n\n- Well-considered core brand assets (logos and typefaces)\n- A multi-brand design token architecture \n- A multi-platform design token pipeline\n- Integrated documentation for design and development\n- A React component library\n\nWe needed to accommodate continuous evolution of the brand, while applying the design system to a rebuilt [BT Business](https://business.bt.com/) website. \n\n\n## Outcome\n\nWe laid the foundations of a successful design system that BT was able to own and use. This came to be called the Arc Design System.\n\nAs well as the BT Business website, we supported opportunities to implement the design system across the whole organisation.\n\nThe Arc Design System would go on to be used by many teams and products, streamlining their design processes and improving UI quality and consistency throughout the organisation.",
+        "blockquote": {
+          "cite": "Rob Wright, Senior Engineering Manager, BT Group",
+          "quote": "Measured delivered excellence in their craft while navigating our organisational complexity with ease. Their insightful work evolved the digital expression of our brand thoughtfully, with measurable benefits to our customers prioritised at all times."
+        },
+        "standfirst": "Creating a cohesive digital identity for a transforming, multi-brand organisation."
+      }
+    },
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-f655e520-6742-4930-b07a-9fc27c4d4057",
+        "width": "centered"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-d95619f2-faa0-4157-8e0d-8b21b4354bb7",
+        "size": "12"
+      }
+    }
+  ]
+}

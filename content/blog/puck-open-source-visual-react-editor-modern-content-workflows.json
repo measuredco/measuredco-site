@@ -1,0 +1,62 @@
+{
+  "root": {
+    "props": {
+      "title": "Puck: the Open-Source Visual React Editor for Modern Content Workflows",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "Puck is born out of a problem space that exists somewhere between a headless CMS and a traditional CMS. We\u2019ve often worked in this space over the years and have seen clients wrestle with the fact that neither approach solves all their problems.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-324ea6953a1588254498fb0a7ff772f58af1fcdc",
+        "date": "2023-09-07",
+        "title": "Puck: the Open-Source Visual React Editor for Modern Content Workflows",
+        "author": " Chris Villa",
+        "content": "Earlier this week, Measured launched Puck: the open-source visual editor for React designed to bridge the gap between developers and content teams.\n\nThe launch went better than we could have imagined \u2014 we hit the [Hacker News front page](https://news.ycombinator.com/item?id=37391848) and went from 8 to 1,800 stars [on GitHub](https://news.ycombinator.com/item?id=37391848) in 24 hours. We receive an overwhelmingly positive response from the community, with heavyweights like [Simon Willison](https://news.ycombinator.com/item?id=37393639) (co-creator of Django) and [Guillermo Rauch](https://twitter.com/rauchg/status/1699106822698025103) (creator of Next.js and CEO of Vercel) both lending their support.\n\nPuck is born out of a problem space that exists somewhere between a headless CMS and a traditional CMS. We\u2019ve often worked in this space over the years and have seen clients wrestle with the fact that neither approach solves all their problems\n\nThis post gives some context into our motivations for building Puck.\n\n## The headless CMS problem\n\nTo keep websites on-brand, retain greater control over UI, and account for modern front-end development approaches, many companies have moved away from traditional CMS solutions and their WYSIWYG editors. Instead, they\u2019ve opted for headless CMS solutions: creating reusable pieces of content that developers can pull into their application via an API.\n\nThe headless CMS pattern has solved numerous brand and website quality issues caused by WYSIWYG editors, like off-brand UI or broken behaviour. However, WYSIWYG editors also provided visual feedback to the content author, the value of which to content teams cannot be overstated. This instant visual feedback is something that headless CMS solutions don\u2019t offer.\n\nHeadless CMS solutions optimise for brand consistency over convenience. Content creation is now often significantly slower because content teams have to rely on developers to make even simple layout changes. \n\nThis problem is particularly acute in large organisations that manage vast quantities of webpages (some of our clients have pages in the 10,000s). But it also affects smaller organisations where fast iteration cycles are essential to survival.\n\n## Enterprise-grade solutions: increasing dependencies\n\nSome enterprise-grade CMS solutions (such as Adobe Experience Manager and Bloomreach) have attempted to reconcile these two very different approaches to content management. But often, they end up creating a new issue:\n\nMost are built on Java. This means that any solutions immediately create a knowledge gap between the front-end developers managing the UI and the Java developers managing the CMS. For instance, if a front-end developer wants to expose a new property on a React component to the content team, they\u2019ll likely have to open a ticket with the Java CMS team.\n\nA process that would involve one team (content) using a WYSIWYG editor now involves three \u2014 making the process significantly less efficient.\n\n## Enter Puck, a React-first solution\n\nPuck is an open source visual editor for React built by\u00a0[Measured](https://measured.co/) for developers and content teams for rapid, on-brand content delivery. Puck is:\n\n- **A robust drag-and-drop editor** that works on top of your existing React component library\n- **Extensible** so you can load your content from a 3rd party headless CMS\n- **Self-hosted and open-source under MIT** to avoid vendor lock-in\n- **A portable JSON data model** that\u2019s easy to move to new systems\n\nOur goal is to create a best-of-both-worlds solution for our clients, putting the ease of WYSIWYG back into the content process without breaking the brand, whilst still allowing them to reuse content across their pages \u2014 balancing the needs of developers, content authors and brand stakeholders.\n\n![Gif showing Puck interface](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nykgnimed084co8b02d4.gif)\n\n### How it works\n\n**Front-end developers**\u00a0can add Puck to an existing React application (it pairs beautifully with Next.js), integrate their existing components, and control which properties they want to expose to content authors.\n\n**Content authors**\u00a0can then use Puck to visually create and edit pages without worrying about breaking brand guidelines \u2014 dragging and dropping on-brand components without being dependent on development teams for layout changes. This drastically reduces the time it takes to publish content.\n\nPuck can be used as a standalone CMS or it can pull in data from your existing content repository.\n\n### Avoiding vendor lock-in\n\nWe built Puck specifically to avoid vendor lock-in:\n\n- It\u2019s open source under MIT\n- You can embed it in your own application\n- You own your data\n- The data is stored in [a straight-forward JSON format](https://github.com/measuredco/puck#data)\n\n### Extensibility\n\nPuck can be made even more powerful with adaptors and plugins.\n\n**Adaptors** allow you to pull data from any data source, such as an existing headless CMS.\n\n**Plugins** enhance Puck\u2019s underlying functionality and user interface. We currently have one plugin: **heading-analyzer**, which creates a document outline for the current page and warns you if the structure is not following WCAG 2.1 accessibility guidelines.\n\nWe\u2019re excited to see what else the Puck community can create!\n\n## Try Puck for yourself\n\nIf you\u2019re interested in trying out Puck for yourself, check out the [live demo](http://puck-editor-demo.vercel.app), or the code on [GitHub](http://puck-editor-demo.vercel.app).\n\nIf you're an engineer looking for a guide to setting up Puck, check out our [technical walkthrough](/blog/building-a-react-page-builder-an-introduction-to-puck).",
+        "authorUrl": "https://www.linkedin.com/in/chrisvilla/"
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-87981f37-982c-4cbb-ab50-5954414b6da4"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-67265a82-f5ff-4d64-8ed3-4cde77cb2fd5",
+        "size": "12"
+      }
+    }
+  ]
+}

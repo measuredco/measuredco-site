@@ -1,0 +1,140 @@
+{
+  "root": {
+    "props": {
+      "title": "License",
+      "ogImage": {
+        "alt": "",
+        "url": "",
+        "type": ""
+      },
+      "description": "",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {
+    "Grid-e3ffd471-3c8b-4ecb-92d8-dfe05b93da78:grid": [
+      {
+        "type": "GridItem",
+        "props": {
+          "id": "GridItem-43841544-90c2-4ad7-b957-9a610e487c25",
+          "align": "start",
+          "colSpan": "8",
+          "justify": "start",
+          "colStart": "2"
+        }
+      }
+    ],
+    "Section-5795a848-8800-460c-85c9-2f038ee797b9:section": [
+      {
+        "type": "Grid",
+        "props": {
+          "id": "Grid-e3ffd471-3c8b-4ecb-92d8-dfe05b93da78",
+          "gap": "default"
+        }
+      }
+    ],
+    "GridItem-43841544-90c2-4ad7-b957-9a610e487c25:grid-item": [
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-d0b525a1-c8c3-4599-95bd-aa0de445290c",
+          "size": "10"
+        }
+      },
+      {
+        "type": "Markdown",
+        "props": {
+          "id": "Markdown-bf8b6864-043f-4c8e-a013-a34efecf0e6b",
+          "text": "Proposals / [Puck Platform Recipe](/proposals/puck-platform-recipe)",
+          "align": "left",
+          "measured": false
+        }
+      },
+      {
+        "type": "Heading",
+        "props": {
+          "id": "Heading-4506643d-64e3-440b-8895-8afdfeb99f60",
+          "size": "1",
+          "text": "License",
+          "align": "left",
+          "level": "1",
+          "maxWidth": ""
+        }
+      },
+      {
+        "type": "Paragraph",
+        "props": {
+          "id": "Paragraph-3a282153-2ca5-478b-8e16-a0f0b760c2ea",
+          "size": "large",
+          "text": "Commercial license information & pricing",
+          "align": "left",
+          "maxWidth": ""
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-15f8364e-8867-48a1-9541-5042b2188187",
+          "size": "07"
+        }
+      },
+      {
+        "type": "Markdown",
+        "props": {
+          "id": "Markdown-0c780dd7-4c25-49fe-b8cb-a66454fb1201",
+          "text": "To use the Puck platform, you must purchase a usage license.\n\nThe license includes:\n\n- Uncapped usage of the Puck platform recipe\n- Regular platform updates via private NPM registry\n- Technical recipe support\n- Prioritized technical Puck support\n\n## Fees\n\n- **Setup**: $10,000 one-off payment\n- **License (monthly)**: $5,000 / mo\n- **License (annual)**: $50,000 / year ($4,000 / mo)\n\nReduced fees are available via our Early Access Programme.",
+          "align": "left",
+          "measured": true
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-65b9b7cd-c9d9-4f6c-8b9c-f6e9d36b75da",
+          "size": "07"
+        }
+      },
+      {
+        "type": "Markdown",
+        "props": {
+          "id": "Markdown-5fbd77f7-3ba4-4453-a49c-904283f3309e",
+          "text": "[Continue to Early Access Programme](/proposals/puck-platform-recipe/early-access/)",
+          "align": "left",
+          "measured": false
+        }
+      },
+      {
+        "type": "Space",
+        "props": {
+          "id": "Space-82b178bc-f623-4b93-b00c-19453d2f6e1b",
+          "size": "12"
+        }
+      }
+    ]
+  },
+  "content": [
+    {
+      "type": "Section",
+      "props": {
+        "id": "Section-5795a848-8800-460c-85c9-2f038ee797b9",
+        "width": "default"
+      }
+    }
+  ]
+}

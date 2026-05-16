@@ -1,0 +1,67 @@
+{
+  "root": {
+    "props": {
+      "title": "The value of the client engagement check-in",
+      "ogImage": {
+        "alt": "How good working relationships stay that way.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1748510767/The_value_of_the_client_engagement_check-in_OG_rrzhkq.png",
+        "type": "image/png"
+      },
+      "description": "Regular client check-ins keep projects on track, build trust, and surface issues early. Here\u2019s how we run them \u2014 and why they\u2019re worth the time.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-f35daabd-f03a-4fb5-be3d-55fde0ba2516",
+        "date": "2025-05-29",
+        "title": "The value of the client engagement check-in",
+        "author": "Paul Love",
+        "content": "It sounds obvious to say that consultancies and clients should maintain good communication, but regular check-ins are often overlooked. It\u2019s all too easy to focus on deadlines and deliverables, and assume everything\u2019s fine unless a problem becomes obvious. But without regular check-ins, small issues can escalate, and momentum can stall.\n\nWe call these engagement check-ins, and we see them as critical infrastructure. They help clients stay informed, help consultancies stay unblocked, and help both sides spot and solve problems early. They\u2019re a simple but powerful tool for keeping projects on track and relationships strong.\n\nHere\u2019s why we see them as crucial, and how we approach them.\n\n**Note:** We\u2019re framing this around clients and consultancies, but this probably follows for any teams that work with external stakeholders. Feel free to substitute your preferred collective nouns.\n\n## What engagement check-ins are for\n\nEngagement check-ins aren\u2019t about reviewing work-in-progress or managing delivery. They\u2019re about maintaining the relationship between the people responsible for the engagement.\n\nWe recently wrote about [why we prefer Kanban\u2019s flexibility over Scrum\u2019s ritualism](https://measured.co/blog/kanban-not-scrum). The benefits are many, but it does create the need to keep clients informed. Regular check-ins close that circle. They build client confidence when things are on track, and reassurance that issues will be addressed when they\u2019re not.\n\nFor clients, they offer a structured way to:\n\n* Stay informed about what\u2019s happening\n* Flag changing priorities or emerging needs\n* Raise concerns early\n\nFor consultancies, they\u2019re a chance to:\n\n* Understand the corporate weather, i.e. shifts inside the client organisation that might affect the work\n* Raise issues that can\u2019t be solved through delivery alone, like strategic changes or sponsorship gaps\n* Build trust by showing they want honest feedback\n\nGenerally, check-ins create space for everyone to be human. This is so easy to overlook, but it\u2019s absolutely crucial: engagements aren\u2019t just contracts \u2014 they\u2019re collaborations between real people, navigating real-world complexity and with their own unique priorities and contexts. \n\nThose priorities rarely compete, but if they\u2019re not understood and synchronised, problems can arise.\n\n## Who should attend\n\nKeep check-ins as small as possible but no smaller. Start and end with who\u2019s essential.\n\nYou want people who have oversight, context, and the authority to act. Too large a group makes conversations unwieldy. Too small risks missing critical perspectives.\n\nYou don\u2019t need procurement or the whole delivery team. It\u2019s about the leads on both sides who are directly responsible for success.\n\nOne or two people from each side is about right.\n\n## How long and how often\n\nWe recommend holding check-ins for one hour every two weeks.\n\nThat\u2019s often enough to catch issues early without overwhelming schedules.\n\nBut adjust if needed. Move to weekly during fast-moving phases, or monthly if things are stable, or during holiday periods.\n\n## What you should cover\n\nAlways have an agenda \u2014 even if it\u2019s light.\n\nWe suggest these core topics:\n\n* Current project status: A high-level alignment check \u2014 no need to go into delivery details\n* Corporate weather: Organisational changes that could impact the work\n* Process issues: Billing, timesheets, invoicing and other logistics\n* Concerns: Make a safe space for unstructured conversation where people feel they can speak freely\n\nYou don\u2019t have to cover everything in depth every time, but a standing structure makes sure nothing important gets missed.\n\n\n## Time well spent\n\nRegular check-ins aren\u2019t overhead \u2014 they\u2019re how good working relationships stay good. Talking regularly keeps people aligned, problems small and solvable, and projects moving.",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771287171/facet/facet-474965243mx-a67cn7e30fx76fy88sz47sp77b25l36op16ot39w36_j4b0ks.png",
+        "standfirst": "Regular client check-ins keep projects on track, build trust, and surface issues early. Here\u2019s how we run them \u2014 and why they\u2019re worth the time.",
+        "modifiedDate": ""
+      }
+    },
+    {
+      "type": "Contact",
+      "props": {
+        "id": "Contact-3e3062bd-aebe-463b-81e7-f4b30a6fe404",
+        "text": "How can we help?",
+        "email": "paul@measured.co"
+      }
+    },
+    {
+      "type": "Space",
+      "props": {
+        "id": "Space-274f7de2-7046-4348-9e43-ea60db286a27",
+        "size": "12"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "root": {
+    "props": {
+      "title": "Think before you build: why we do pragmatic planning",
+      "ogImage": {
+        "alt": "Make the solution stick.",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1778612080/articles/facet-379810560-og-ad-tc-a4cn100e0fx0fy0sz78sp0b78l0op0ot55w0d0sc0_oudlhd.png",
+        "type": "png"
+      },
+      "description": "Avoid the sunk cost of patching a flawed foundation. The cheapest time to think is before you build.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-192217ef-240a-48f8-baf4-ff49e4092e5e",
+        "date": "2026-05-12",
+        "title": "Think before you build: why we do pragmatic planning",
+        "author": "Paul Love",
+        "content": "Wasted engineering effort usually starts with: \u201cWe\u2019ll figure it out as we go.\u201d An engineer builds and shares something, and then the feedback lands: you forgot about x, it won\u2019t scale because y.\n\nBy then, changing the written code is a mission. The team fumbles to patch a flawed foundation because the cost of starting again is too high.\n\nYou don\u2019t avoid delay by skipping alignment \u2014 you just move the delay to the end of the project when it\u2019s much more expensive to fix.\n\nThe cheapest time to think is before you build. That\u2019s why we do pragmatic planning: it\u2019s cheaper in the long run.\n\n## What pragmatic planning is (and isn\u2019t)\n\nPragmatic planning is getting the right people together to map things out before writing a line of code. It maintains laser-focus on scoping the right thing to build.\n\nIt\u2019s informal: one to two hours with a whiteboard. You think through the problem. What do you need to consider first? What are the impacts? What does a sensible API look like?\n\nIf you\u2019re familiar with agile practices, it\u2019s like swarming at a strategic level. (You\u2019re figuring out the approach, not doing the work.)\n\nIt\u2019s not dogmatic. There are no story points or heavyweight processes.\n\n## When to use it\n\nPragmatic planning is ideal for small, complex UI problems. It\u2019s not for major architectural work or building a design system from scratch \u2014 those need more structure.\n\nThe scope might range from extending a component\u2019s API to building v1 of a new component. The solution should be non-obvious but the scope nicely contained.\n\nUsually there aren\u2019t clear triggers. A good indicator is when your spidey-sense says \u201cthis is a problem \u2014 what have I done in the past?\u201d\n\nThis ambiguity isn\u2019t a bad thing. Rigid triggers would turn it into the kind of heavyweight process it\u2019s meant to avoid.\n\nUse it when it helps, not because you should.\n\n## How to do it\n\nHere\u2019s how we go about pragmatic planning.\n\n1. ### Get the right people together\n   Who do you need in the room? Participants will vary by task. Sometimes it\u2019ll be obvious that it touches someone else\u2019s work. Loop them in, or if they\u2019re away, have a proposal ready for when they\u2019re back.\n\n   The pragmatic part is doing the best with what you\u2019ve got. There\u2019ll always be someone away or some other constraint. Don\u2019t let it become a blocker.\n\n2. ### Use a whiteboard\n   Use a physical whiteboard. It stops people wandering off, physically and mentally. It\u2019s an artefact you can come back to.\n\n   If you need to meet remotely, use digital whiteboards. They\u2019re less effective, but they\u2019re better than chatting for an hour with nothing to focus on.\n\n3. ### Make it useful\n   Planning conversations tend towards idealised solutions. People drift towards the notionally perfect when they\u2019re not yet dealing with real constraints.\n\n   Take the opportunity to talk about trade-offs. What are you willing to compromise? What\u2019s essential? Asking these questions now means fewer surprises later.\n\n## What success looks like\n\nThe advantages of pragmatic planning can be immediate.\n\nSay you sketch out an API for your component and someone says, \u201cthat doesn\u2019t really make sense \u2014 what about doing this?\u201d The feedback loop is immediate, and it comes before you\u2019ve built anything. You\u2019ve moved the thinking up front rather than doing it once the work is done and the costs are real.\n\nSometimes you need to do the work to understand the problem space, and that\u2019s fine. But when you can think it through first, you avoid that sunk cost.\n\n## Why it can fail\n\nPragmatic planning is hard if people aren\u2019t empowered to solve problems. When Scrum or Scrum-like agile becomes ingrained, it\u2019s more about getting work done than solving problems well. Pragmatic planning is about making the solution stick.\n\nPractical blockers matter too. If you\u2019re doing this in person, but don\u2019t breakout spaces or whiteboards, that\u2019s a challenge.\n\nFor distributed teams, tooling can be an issue. Zoom/Teams/Slack can sap humanity and spontaneity \u2014 screen-sharing shrinks faces to postage stamps and a lot of signal gets lost.\n\nIt\u2019s easier in person, but not impossible remotely \u2014 especially with people who\u2019ve done it together before. But with a new team, doing it in person is best. The informality gets people talking, and there\u2019s more bandwidth for multi-way communication.\n\n## Build the habit\n\nWe\u2019ve found that ingraining pragmatic planning is a bit like using sourdough starter. You build culture in an organisation by bringing a bit of culture with you. If one person has experience, there\u2019s a pot of techniques they can introduce gradually.\n\nIf you build a positive culture, people will share their own techniques, and take away what they\u2019ve picked up and apply it elsewhere.\n\nYou\u2019ll see individual culture shape team culture and eventually the organisation\u2019s culture \u2014 and without anyone having to channel influencer vibes.\n\n## Keep it simple\n\nPragmatic planning is fuzzy by design. It\u2019s not a prescribed process with definitive entry and exit criteria. It\u2019s a tool you reach for when it feels right.\n\nYou\u2019ll come to know when upfront thinking saves more than it costs. It forces a moment of consideration. You might even avoid building something that doesn\u2019t work at all. That\u2019s an hour or two very well spent.\n",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1778612080/articles/facet-379810560-l-ad-tc-a4cn100e0fx0fy0sz78sp0b78l0op0ot55w0d0sc0_eiawis.png",
+        "standfirst": "Avoid the sunk cost of patching a flawed foundation. The cheapest time to think is before you build.",
+        "modifiedDate": ""
+      }
+    }
+  ]
+}
