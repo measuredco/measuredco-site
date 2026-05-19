@@ -161,6 +161,10 @@
   border-radius: var(--clbr-radius-lg);
   box-shadow: none;
   position: relative;
+
+  &:has(> code:focus-visible)::after {
+    border-color: var(--clbr-color-interactive-focus);
+  }
 }
 
 .clbr .msrd-Markdown pre::after {

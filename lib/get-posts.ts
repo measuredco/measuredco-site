@@ -1,7 +1,7 @@
 import content from "../content.json";
 import { Props } from "../puck/config";
 import { getPageRes } from "./get-page-res";
-import { processMarkdown } from "./markdown";
+import { processMarkdown } from "@measured/calibrate-markdown";
 
 const { blogPostDescription } = content;
 
@@ -39,7 +39,7 @@ export const getPosts = async (siteUrl: string, archive: number = 0) => {
 
     posts.push({
       author: post.author,
-      content: processMarkdown(post.content)?.value,
+      content: processMarkdown(post.content),
       date: post.modifiedDate
         ? new Date(post.modifiedDate)
         : new Date(post.date),
