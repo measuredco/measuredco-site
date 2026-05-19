@@ -195,19 +195,6 @@
   --space-horizontal-10: calc((var(--space-scale-horizontal-10) / 16) * 1rem);
   --space-horizontal-11: calc((var(--space-scale-horizontal-11) / 16) * 1rem);
   --space-horizontal-12: calc((var(--space-scale-horizontal-12) / 16) * 1rem);
-
-  /*
-   * Line tokens
-   */
-
-  --border-width: calc((1 / 16) * 1rem);
-
-  --outline-width: calc((2 / 16) * 1rem);
-
-  --rule-height: calc((2 / 16) * 1rem);
-  --rule-width: calc((72 / 16) * 1rem);
-
-  --border-offset-card: calc((4 / 16) * 1rem);
 }
 
 /*
@@ -263,6 +250,16 @@
   @media (min-width: 48em) {
     --site-header-height: var(--clbr-spacing-vertical-1100);
   }
+
+  /*
+   * Line tokens sourced from Calibrate (exact ports). --outline-width is
+   * only used for :focus-visible outlines, so it maps to the focus-ring
+   * width; the rule (divider) tokens map to Calibrate's brand divider.
+   */
+  --border-width: var(--clbr-layout-border-width-default);
+  --outline-width: var(--clbr-layout-focus-ring-width);
+  --rule-height: var(--clbr-layout-divider-brand-thickness);
+  --rule-width: var(--clbr-layout-divider-brand-size);
 
   --color-brand: var(--clbr-color-brand-primary);
   --color-rule: var(--clbr-color-border-brand);

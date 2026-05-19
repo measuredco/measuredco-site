@@ -134,10 +134,10 @@
   border: solid var(--border-width) var(--color-code-border);
   border-radius: var(--border-radius-card);
   content: "";
-  inset-block-end: var(--border-offset-card);
-  inset-block-start: calc(0rem - var(--border-offset-card));
-  inset-inline-end: var(--border-offset-card);
-  inset-inline-start: calc(0rem - var(--border-offset-card));
+  inset-block-end: var(--clbr-effect-stroke-inset);
+  inset-block-start: var(--clbr-effect-stroke-outset);
+  inset-inline-end: var(--clbr-effect-stroke-inset);
+  inset-inline-start: var(--clbr-effect-stroke-outset);
   pointer-events: none;
   position: absolute;
 }

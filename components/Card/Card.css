@@ -23,10 +23,10 @@
   border: solid var(--border-width) var(--color-card-border);
   border-radius: var(--border-radius-card);
   content: "";
-  inset-block-end: var(--border-offset-card);
-  inset-block-start: calc(0rem - var(--border-offset-card));
-  inset-inline-end: var(--border-offset-card);
-  inset-inline-start: calc(0rem - var(--border-offset-card));
+  inset-block-end: var(--clbr-effect-stroke-inset);
+  inset-block-start: var(--clbr-effect-stroke-outset);
+  inset-inline-end: var(--clbr-effect-stroke-inset);
+  inset-inline-start: var(--clbr-effect-stroke-outset);
   pointer-events: none;
   position: absolute;
   transition: 0.05s var(--easing-cubic-bezier-easy-ease);
@@ -49,7 +49,7 @@
 
 .clbr .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible) {
   outline: var(--outline-width) solid var(--color-interactive-focus);
-  outline-offset: var(--border-offset-card);
+  outline-offset: var(--clbr-effect-stroke-inset);
 }
 
 .clbr .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible)::after {
@@ -69,27 +69,27 @@
 
   @media (prefers-reduced-motion) {
     .clbr .msrd-Card:has(.msrd-Card-heading a):hover::after {
-      inset-block-end: var(--border-offset-card);
-      inset-block-start: calc(0rem - var(--border-offset-card));
-      inset-inline-end: var(--border-offset-card);
-      inset-inline-start: calc(0rem - var(--border-offset-card));
+      inset-block-end: var(--clbr-effect-stroke-inset);
+      inset-block-start: var(--clbr-effect-stroke-outset);
+      inset-inline-end: var(--clbr-effect-stroke-inset);
+      inset-inline-start: var(--clbr-effect-stroke-outset);
     }
   }
 }
 
 .clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
-  inset-block-end: calc(0rem - var(--border-offset-card) / 2);
-  inset-block-start: calc(var(--border-offset-card) / 2);
-  inset-inline-end: calc(0rem - var(--border-offset-card) / 2);
-  inset-inline-start: calc(var(--border-offset-card) / 2);
+  inset-block-end: calc(var(--clbr-effect-stroke-outset) / 2);
+  inset-block-start: calc(var(--clbr-effect-stroke-inset) / 2);
+  inset-inline-end: calc(var(--clbr-effect-stroke-outset) / 2);
+  inset-inline-start: calc(var(--clbr-effect-stroke-inset) / 2);
 }
 
 @media (prefers-reduced-motion) {
   .clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
-    inset-block-end: var(--border-offset-card);
-    inset-block-start: calc(0rem - var(--border-offset-card));
-    inset-inline-end: var(--border-offset-card);
-    inset-inline-start: calc(0rem - var(--border-offset-card));
+    inset-block-end: var(--clbr-effect-stroke-inset);
+    inset-block-start: var(--clbr-effect-stroke-outset);
+    inset-inline-end: var(--clbr-effect-stroke-inset);
+    inset-inline-start: var(--clbr-effect-stroke-outset);
   }
 }
 
