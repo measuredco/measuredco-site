@@ -4,197 +4,78 @@
 
 :root {
   /*
-   * Space scales
+   * Type & space tokens
+   *
+   * Previously derived from raw numerical scales (--type-scale*,
+   * --leading-scale*, --space-scale-*). Those scales are intermediate-
+   * only with no Calibrate equivalent, so they are removed and these
+   * tokens carry their precomputed values directly.
    */
 
-  /* Vertical space derived from base font-size of 16 & base leading of 1.5 */
-  --space-scale-vertical: 24;
+  /* Font sizes */
+  --font-size: 1rem;
+  --font-01-size: 0.875rem;
+  --font-02-size: 1rem;
+  --font-03-size: 1.125rem;
+  --font-04-size: 1.25rem;
+  --font-05-size: 1.5rem;
+  --font-06-size: 1.75rem;
+  --font-07-size: 2rem;
+  --font-08-size: 2.25rem;
+  --font-09-size: 2.625rem;
+  --font-10-size: 3rem;
+  --font-11-size: 3.875rem;
+  --font-12-size: 5.25rem;
+  --font-13-size: 7.5rem;
 
-  --space-scale-vertical-01: calc(var(--space-scale-vertical) * 0.125); /* 3 */
-  --space-scale-vertical-02: calc(var(--space-scale-vertical) * 0.25); /* 6 */
-  --space-scale-vertical-03: calc(var(--space-scale-vertical) * 0.5); /* 12 */
-  --space-scale-vertical-04: calc(var(--space-scale-vertical) * 0.75); /* 18 */
-  --space-scale-vertical-05: calc(var(--space-scale-vertical) * 1); /* 24 */
-  --space-scale-vertical-06: calc(var(--space-scale-vertical) * 1.5); /* 36 */
-  --space-scale-vertical-07: calc(var(--space-scale-vertical) * 2); /* 48 */
-  --space-scale-vertical-08: calc(var(--space-scale-vertical) * 2.5); /* 60 */
-  --space-scale-vertical-09: calc(var(--space-scale-vertical) * 3); /* 72 */
-  --space-scale-vertical-10: calc(var(--space-scale-vertical) * 3.5); /* 84 */
-  --space-scale-vertical-11: calc(var(--space-scale-vertical) * 4); /* 96 */
-  --space-scale-vertical-12: calc(var(--space-scale-vertical) * 4.5); /* 108 */
-  --space-scale-vertical-13: calc(var(--space-scale-vertical) * 5); /* 120 */
-  --space-scale-vertical-14: calc(var(--space-scale-vertical) * 6); /* 144 */
+  /* Line heights */
+  --line-height: 1.5;
+  --font-01-line-height: 1.71428571;
+  --font-02-line-height: 1.5;
+  --font-03-line-height: 1.5;
+  --font-04-line-height: 1.5;
+  --font-04-line-height-large: 1.8;
+  --font-05-line-height: 1.5;
+  --font-06-line-height: 1.5;
+  --font-07-line-height: 1.3125;
+  --font-08-line-height: 1.33333333;
+  --font-09-line-height: 1.28571429;
+  --font-10-line-height: 1.25;
+  --font-11-line-height: 1.16129032;
+  --font-12-line-height: 1.14285714;
+  --font-13-line-height: 1;
 
-  /* Horizontal space derived from base font-size of 16 */
-  --space-scale-horizontal: 16;
+  /* Vertical space */
+  --space-vertical: 1.5rem;
+  --space-vertical-01: 0.1875rem;
+  --space-vertical-02: 0.375rem;
+  --space-vertical-03: 0.75rem;
+  --space-vertical-04: 1.125rem;
+  --space-vertical-05: 1.5rem;
+  --space-vertical-06: 2.25rem;
+  --space-vertical-07: 3rem;
+  --space-vertical-08: 3.75rem;
+  --space-vertical-09: 4.5rem;
+  --space-vertical-10: 5.25rem;
+  --space-vertical-11: 6rem;
+  --space-vertical-12: 6.75rem;
+  --space-vertical-13: 7.5rem;
+  --space-vertical-14: 9rem;
 
-  --space-scale-horizontal-01: calc(
-    var(--space-scale-horizontal) * 0.125
-  ); /* 2 */
-  --space-scale-horizontal-02: calc(
-    var(--space-scale-horizontal) * 0.25
-  ); /* 4 */
-  --space-scale-horizontal-03: calc(
-    var(--space-scale-horizontal) * 0.5
-  ); /* 8 */
-  --space-scale-horizontal-04: calc(
-    var(--space-scale-horizontal) * 0.75
-  ); /* 12 */
-  --space-scale-horizontal-05: calc(var(--space-scale-horizontal) * 1); /* 16 */
-  --space-scale-horizontal-06: calc(
-    var(--space-scale-horizontal) * 1.5
-  ); /* 24 */
-  --space-scale-horizontal-07: calc(var(--space-scale-horizontal) * 2); /* 32 */
-  --space-scale-horizontal-08: calc(
-    var(--space-scale-horizontal) * 2.5
-  ); /* REMOVE */
-  --space-scale-horizontal-09: calc(var(--space-scale-horizontal) * 3); /* 48 */
-  --space-scale-horizontal-10: calc(
-    var(--space-scale-horizontal) * 3.5
-  ); /* REMOVE */
-  --space-scale-horizontal-11: calc(
-    var(--space-scale-horizontal) * 4
-  ); /* REMOVE */
-  --space-scale-horizontal-12: calc(
-    var(--space-scale-horizontal) * 4.5
-  ); /* 72 */
-
-  /*
-   * Typographic scales
-   */
-
-  --leading-scale: var(--space-scale-vertical);
-
-  --leading-scale-01: var(--space-scale-vertical); /* 24 */
-  --leading-scale-02: calc(var(--space-scale-vertical) * 1.125); /* 27 */
-  --leading-scale-03: calc(var(--space-scale-vertical) * 1.25); /* 30 */
-  --leading-scale-04: calc(var(--space-scale-vertical) * 1.5); /* 36 */
-  --leading-scale-05: calc(var(--space-scale-vertical) * 1.75); /* 42 */
-  --leading-scale-06: calc(var(--space-scale-vertical) * 2); /* 48 */
-  --leading-scale-07: calc(var(--space-scale-vertical) * 2.25); /* 54 */
-  --leading-scale-08: calc(var(--space-scale-vertical) * 2.5); /* 60 */
-  --leading-scale-09: calc(var(--space-scale-vertical) * 3); /* 72 */
-  --leading-scale-10: calc(var(--space-scale-vertical) * 4); /* 96 */
-  --leading-scale-11: calc(var(--space-scale-vertical) * 5); /*120 */
-
-  /* Classic typographic scale, mathematically corrected */
-
-  --type-scale: 16;
-
-  --type-scale-01: 14; /* leading-scale-01: 24 = 1.71428571 */
-  --type-scale-02: 16; /* leading-scale-01: 24 = 1.5 */
-  --type-scale-03: 18; /* leading-scale-02: 27 = 1.5 */
-  --type-scale-04: 20; /* leading-scale-03: 30 = 1.5 */
-  --type-scale-05: 24; /* leading-scale-04: 36 = 1.5 */
-  --type-scale-06: 28; /* leading-scale-05: 42 = 1.5 */
-  --type-scale-07: 32; /* leading-scale-05: 42 = 1.35483871 */
-  --type-scale-08: 36; /* leading-scale-06: 48 = 1.33333333 */
-  --type-scale-09: 42; /* leading-scale-07: 54 = 1.28571429 */
-  --type-scale-10: 48; /* leading-scale-08: 60 = 1.25 */
-  --type-scale-11: 62; /* leading-scale-09: 72 = 1.16129032 */
-  --type-scale-12: 84; /* leading-scale-10: 96 = 1.14285714 */
-  --type-scale-13: 120; /* leading-scale-11: 120 = 1 */
-
-  /*
-   * Font tokens
-   */
-
-  --font-size: calc((var(--type-scale) / 16) * 1rem);
-
-  --font-01-size: calc((var(--type-scale-01) / 16) * 1rem);
-  --font-02-size: calc((var(--type-scale-02) / 16) * 1rem);
-  --font-03-size: calc((var(--type-scale-03) / 16) * 1rem);
-  --font-04-size: calc((var(--type-scale-04) / 16) * 1rem);
-  --font-05-size: calc((var(--type-scale-05) / 16) * 1rem);
-  --font-06-size: calc((var(--type-scale-06) / 16) * 1rem);
-  --font-07-size: calc((var(--type-scale-07) / 16) * 1rem);
-  --font-08-size: calc((var(--type-scale-08) / 16) * 1rem);
-  --font-09-size: calc((var(--type-scale-09) / 16) * 1rem);
-  --font-10-size: calc((var(--type-scale-10) / 16) * 1rem);
-  --font-11-size: calc((var(--type-scale-11) / 16) * 1rem);
-  --font-12-size: calc((var(--type-scale-12) / 16) * 1rem);
-  --font-13-size: calc((var(--type-scale-13) / 16) * 1rem);
-
-  --line-height: calc(var(--leading-scale) / var(--type-scale));
-
-  --font-01-line-height: calc(
-    var(--leading-scale-01) / var(--type-scale-01)
-  ); /* 1.71428571 */
-  --font-02-line-height: calc(
-    var(--leading-scale-01) / var(--type-scale-02)
-  ); /* 1.5 */
-  --font-03-line-height: calc(
-    var(--leading-scale-02) / var(--type-scale-03)
-  ); /* 1.5 */
-  --font-04-line-height: calc(
-    var(--leading-scale-03) / var(--type-scale-04)
-  ); /* 1.5 */
-  --font-04-line-height-large: calc(
-    var(--leading-scale-04) / var(--type-scale-04)
-  ); /* 1.8 */
-  --font-05-line-height: calc(
-    var(--leading-scale-04) / var(--type-scale-05)
-  ); /* 1.5 */
-  --font-06-line-height: calc(
-    var(--leading-scale-05) / var(--type-scale-06)
-  ); /* 1.5 */
-  --font-07-line-height: calc(
-    var(--leading-scale-05) / var(--type-scale-07)
-  ); /* 1.35483871 */
-  --font-08-line-height: calc(
-    var(--leading-scale-06) / var(--type-scale-08)
-  ); /* 1.3333 */
-  --font-09-line-height: calc(
-    var(--leading-scale-07) / var(--type-scale-09)
-  ); /* 1.28571429 */
-  --font-10-line-height: calc(
-    var(--leading-scale-08) / var(--type-scale-10)
-  ); /* 1.25 */
-  --font-11-line-height: calc(
-    var(--leading-scale-09) / var(--type-scale-11)
-  ); /* 1.16129032 */
-  --font-12-line-height: calc(
-    var(--leading-scale-10) / var(--type-scale-12)
-  ); /* 1.14285714 */
-  --font-13-line-height: calc(
-    var(--leading-scale-11) / var(--type-scale-13)
-  ); /* 1 */
-
-  /*
-   * Space tokens
-   */
-
-  --space-vertical: calc((var(--space-scale-vertical) / 16) * 1rem);
-
-  --space-vertical-01: calc((var(--space-scale-vertical-01) / 16) * 1rem);
-  --space-vertical-02: calc((var(--space-scale-vertical-02) / 16) * 1rem);
-  --space-vertical-03: calc((var(--space-scale-vertical-03) / 16) * 1rem);
-  --space-vertical-04: calc((var(--space-scale-vertical-04) / 16) * 1rem);
-  --space-vertical-05: calc((var(--space-scale-vertical-05) / 16) * 1rem);
-  --space-vertical-06: calc((var(--space-scale-vertical-06) / 16) * 1rem);
-  --space-vertical-07: calc((var(--space-scale-vertical-07) / 16) * 1rem);
-  --space-vertical-08: calc((var(--space-scale-vertical-08) / 16) * 1rem);
-  --space-vertical-09: calc((var(--space-scale-vertical-09) / 16) * 1rem);
-  --space-vertical-10: calc((var(--space-scale-vertical-10) / 16) * 1rem);
-  --space-vertical-11: calc((var(--space-scale-vertical-11) / 16) * 1rem);
-  --space-vertical-12: calc((var(--space-scale-vertical-12) / 16) * 1rem);
-  --space-vertical-13: calc((var(--space-scale-vertical-13) / 16) * 1rem);
-  --space-vertical-14: calc((var(--space-scale-vertical-14) / 16) * 1rem);
-
-  --space-horizontal: calc((var(--space-scale-horizontal) / 16) * 1rem);
-
-  --space-horizontal-01: calc((var(--space-scale-horizontal-01) / 16) * 1rem);
-  --space-horizontal-02: calc((var(--space-scale-horizontal-02) / 16) * 1rem);
-  --space-horizontal-03: calc((var(--space-scale-horizontal-03) / 16) * 1rem);
-  --space-horizontal-04: calc((var(--space-scale-horizontal-04) / 16) * 1rem);
-  --space-horizontal-05: calc((var(--space-scale-horizontal-05) / 16) * 1rem);
-  --space-horizontal-06: calc((var(--space-scale-horizontal-06) / 16) * 1rem);
-  --space-horizontal-07: calc((var(--space-scale-horizontal-07) / 16) * 1rem);
-  --space-horizontal-08: calc((var(--space-scale-horizontal-08) / 16) * 1rem);
-  --space-horizontal-09: calc((var(--space-scale-horizontal-09) / 16) * 1rem);
-  --space-horizontal-10: calc((var(--space-scale-horizontal-10) / 16) * 1rem);
-  --space-horizontal-11: calc((var(--space-scale-horizontal-11) / 16) * 1rem);
-  --space-horizontal-12: calc((var(--space-scale-horizontal-12) / 16) * 1rem);
+  /* Horizontal space */
+  --space-horizontal: 1rem;
+  --space-horizontal-01: 0.125rem;
+  --space-horizontal-02: 0.25rem;
+  --space-horizontal-03: 0.5rem;
+  --space-horizontal-04: 0.75rem;
+  --space-horizontal-05: 1rem;
+  --space-horizontal-06: 1.5rem;
+  --space-horizontal-07: 2rem;
+  --space-horizontal-08: 2.5rem;
+  --space-horizontal-09: 3rem;
+  --space-horizontal-10: 3.5rem;
+  --space-horizontal-11: 4rem;
+  --space-horizontal-12: 4.5rem;
 }
 
 /*
