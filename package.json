@@ -26,6 +26,9 @@
     "eslint": "8.57.0",
     "eslint-config-custom": "*",
     "eslint-config-next": "^15.1.9",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.5",
+    "prettier": "^3.8.3",
     "stylelint": "^17.11.1",
     "tsconfig": "*",
     "typescript": "^5.6.3"
@@ -36,7 +39,16 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && tsc --noEmit",
     "lint:css": "stylelint \"**/*.css\"",
     "lint:css:fix": "stylelint \"**/*.css\" --fix",
-    "preview": "npx serve@latest out"
+    "format": "prettier --write .",
+    "preview": "npx serve@latest out",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,cjs,mjs,jsx,ts,tsx,json,md}": "prettier --write"
   },
   "engines": {
     "node": "^24"
