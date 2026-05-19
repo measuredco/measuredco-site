@@ -1,10 +1,10 @@
 .clbr .msrd-NewIdentityAspect {
-  margin-block-end: var(--space-vertical);
+  margin-block-end: var(--clbr-spacing-vertical-700);
 
   @media (min-width: 48em) {
     align-items: center;
     display: flex;
-    gap: var(--space-horizontal-06);
+    gap: var(--clbr-spacing-horizontal-700);
     margin-inline: auto;
     max-inline-size: calc((704 / 16) * 1rem);
   }

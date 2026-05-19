@@ -1,14 +1,14 @@
 .clbr .msrd-NewIdentityTypography {
   margin-inline: auto;
   max-inline-size: calc((630 / 16) * 1rem);
-  padding-block-end: var(--space-vertical);
+  padding-block-end: var(--clbr-spacing-vertical-700);
 
   @media (min-width: 48em) {
-    padding-block-end: var(--space-vertical-07);
+    padding-block-end: var(--clbr-spacing-vertical-900);
   }
 
   @media (min-width: 50em) {
-    padding-block-end: var(--space-vertical-08);
+    padding-block-end: var(--clbr-spacing-vertical-950);
   }
 
   @media (min-width: 80em) {

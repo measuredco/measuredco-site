@@ -1,7 +1,7 @@
 .clbr .msrd-NewIdentityContact {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-vertical) var(--space-horizontal);
+  gap: var(--clbr-spacing-vertical-700) var(--clbr-spacing-horizontal-600);
   justify-content: center;
   margin: 0 auto;
 }
@@ -9,34 +9,34 @@
 .clbr .msrd-NewIdentityContact-primary,
 .clbr .msrd-NewIdentityContact-secondary {
   --border-width: calc((2 / 16) * 1rem);
-  border: calc(2rem / 16) solid var(--color-brand);
-  border-radius: var(--border-radius-button);
+  border: calc(2rem / 16) solid var(--clbr-color-brand-primary);
+  border-radius: var(--clbr-radius-sm);
   display: block;
   font-weight: 500;
   min-inline-size: calc((192 / 16) * 1rem);
-  padding: calc(var(--space-vertical-03) - var(--border-width))
-    var(--space-horizontal-06);
+  padding: calc(var(--clbr-spacing-vertical-500) - var(--border-width))
+    var(--clbr-spacing-horizontal-700);
   text-align: center;
   text-wrap: nowrap;
 }
 
 .clbr .msrd-NewIdentityContact-primary {
   background-color: var(--color-interactive);
-  color: var(--color-text-contrast);
+  color: var(--clbr-color-foreground-contrast);
 }
 
 @media (hover: hover) {
   .clbr .msrd-NewIdentityContact-primary:hover {
     background-color: var(--color-interactive-hover);
     border-color: var(--color-interactive-hover);
-    color: var(--color-text-contrast);
+    color: var(--clbr-color-foreground-contrast);
   }
 }
 
 .clbr .msrd-NewIdentityContact-primary:active {
   background-color: var(--color-interactive-active);
   border-color: var(--color-interactive-active);
-  color: var(--color-text-contrast);
+  color: var(--clbr-color-foreground-contrast);
 }
 
 .clbr .msrd-NewIdentityContact-secondary {
@@ -45,11 +45,11 @@
 
 @media (hover: hover) {
   .clbr .msrd-NewIdentityContact-secondary:hover {
-    background: color-mix(in srgb, var(--color-brand) 7.5%, transparent);
-    transition: 0.1s background-color var(--easing-cubic-bezier-easy-ease);
+    background: color-mix(in srgb, var(--clbr-color-brand-primary) 7.5%, transparent);
+    transition: 0.1s background-color var(--clbr-motion-easing-ease-in-out);
   }
 }
 
 .clbr .msrd-NewIdentityContact-secondary:active {
-  background: color-mix(in srgb, var(--color-brand) 15%, transparent);
+  background: color-mix(in srgb, var(--clbr-color-brand-primary) 15%, transparent);
 }

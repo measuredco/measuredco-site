@@ -3,7 +3,7 @@
   --border-radius: calc((32 / 16) * 1rem);
   block-size: 100%;
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow-light-source);
+  box-shadow: none;
   display: flex;
   inline-size: 100%;
   margin-inline: auto;
@@ -19,8 +19,8 @@
   display: flex;
   flex-direction: column;
   inline-size: 100%;
-  padding: var(--space-vertical-09) var(--space-horizontal-07)
-    var(--space-vertical-03) var(--space-horizontal-05);
+  padding: var(--clbr-spacing-vertical-1000) var(--clbr-spacing-horizontal-800)
+    var(--clbr-spacing-vertical-500) var(--clbr-spacing-horizontal-600);
 
   @media (prefers-color-scheme: dark) {
     --box-shadow: 0.125rem 0.125rem 0.25rem
@@ -38,16 +38,16 @@
   inset-inline-start: calc(0rem - var(--border-offset));
   pointer-events: none;
   position: absolute;
-  transition: 0.05s var(--easing-cubic-bezier-easy-ease);
+  transition: 0.05s var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-NewIdentityProcess-dots {
   align-items: center;
-  block-size: var(--space-horizontal-05);
+  block-size: var(--clbr-spacing-horizontal-600);
   display: flex;
   inline-size: 4rem;
-  inset-block-start: var(--space-horizontal-06);
-  inset-inline-start: var(--space-horizontal-06);
+  inset-block-start: var(--clbr-spacing-horizontal-700);
+  inset-inline-start: var(--clbr-spacing-horizontal-700);
   justify-content: space-between;
   position: absolute;
 }
@@ -56,15 +56,15 @@
 .clbr .msrd-NewIdentityProcess-dots::after,
 .clbr .msrd-NewIdentityProcess-dotsInner {
   background-color: #3598f8;
-  block-size: var(--space-horizontal-05);
+  block-size: var(--clbr-spacing-horizontal-600);
   border-radius: 50%;
   content: "";
-  inline-size: var(--space-horizontal-05);
+  inline-size: var(--clbr-spacing-horizontal-600);
 }
 
 .clbr .msrd-NewIdentityProcess-steps {
-  font-size: var(--font-01-size);
-  line-height: var(--font-01-line-height);
+  font-size: var(--clbr-typography-type-step-100-font-size);
+  line-height: var(--clbr-typography-type-step-150-line-height);
   list-style: none;
   margin-block: 0;
   padding-inline-start: 0;
@@ -74,22 +74,22 @@
 .clbr .msrd-NewIdentityProcess-start {
   align-items: center;
   display: flex;
-  gap: var(--space-horizontal-04);
+  gap: var(--clbr-spacing-horizontal-500);
   inline-size: calc((146 / 16) * 1rem);
   inset-inline-start: calc((-62 / 16) * 1rem);
-  margin-block-end: var(--space-vertical-06);
+  margin-block-end: var(--clbr-spacing-vertical-800);
   margin-inline: auto;
   position: relative;
 }
 
 .clbr .msrd-NewIdentityProcess-card {
   background-color: #3598f8;
-  border-radius: var(--border-radius-card);
+  border-radius: var(--clbr-radius-lg);
   color: #0e0f10;
-  margin-block-end: var(--space-vertical-06);
+  margin-block-end: var(--clbr-spacing-vertical-800);
   margin-inline: auto;
   max-inline-size: 100%;
-  padding: var(--space-vertical-04);
+  padding: var(--clbr-spacing-vertical-600);
   position: relative;
 }
 
@@ -142,28 +142,28 @@
 }
 
 .clbr .msrd-NewIdentityProcess-heading {
-  font-size: var(--font-01-size);
+  font-size: var(--clbr-typography-type-step-100-font-size);
   font-weight: 550;
-  line-height: var(--font-01-line-height);
-  margin-block-end: var(--space-vertical-03);
+  line-height: var(--clbr-typography-type-step-150-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-500);
   margin-block-start: 0;
 }
 
 .clbr .msrd-NewIdentityProcess-cardInner {
   align-items: flex-start;
   display: flex;
-  gap: var(--space-horizontal);
+  gap: var(--clbr-spacing-horizontal-600);
 }
 
 .clbr .msrd-NewIdentityProcess-button {
   border: calc((2 / 16) * 1rem) solid #0e0f10;
-  border-radius: var(--border-radius-button);
+  border-radius: var(--clbr-radius-sm);
   color: #0e0f10;
   display: block;
   font-weight: 450;
   inline-size: min-content;
-  padding: var(--space-vertical-01) var(--space-horizontal-05);
-  transition: 0.1s var(--easing-cubic-bezier-easy-ease);
+  padding: var(--clbr-spacing-vertical-250) var(--clbr-spacing-horizontal-600);
+  transition: 0.1s var(--clbr-motion-easing-ease-in-out);
   white-space: nowrap;
 }
 
@@ -174,7 +174,7 @@
 @media (hover: hover) {
   .clbr .msrd-NewIdentityProcess-button:hover {
     background: rgba(0, 0, 0, 0.055);
-    transition: 0.1s background-color var(--easing-cubic-bezier-easy-ease);
+    transition: 0.1s background-color var(--clbr-motion-easing-ease-in-out);
   }
 }
 
@@ -211,7 +211,7 @@
   .clbr .msrd-NewIdentityProcess-start {
     inset-block-start: calc((32 / 16) * 1rem);
     inset-inline-start: calc((8 / 16) * 1rem);
-    margin-inline-start: var(--space-horizontal-06);
+    margin-inline-start: var(--clbr-spacing-horizontal-700);
     position: absolute;
   }
 

@@ -6,106 +6,106 @@
 }
 
 .clbr .msrd-Heading--6 {
-  font-size: var(--font-02-size);
+  font-size: var(--clbr-typography-type-step-200-font-size);
   font-weight: 533;
-  line-height: var(--font-02-line-height);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--6 {
-    font-size: var(--font-03-size);
-    line-height: var(--font-03-line-height);
+    font-size: var(--clbr-typography-type-step-300-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 }
 
 .clbr .msrd-Heading--5 {
-  font-size: var(--font-03-size);
+  font-size: var(--clbr-typography-type-step-300-font-size);
   font-weight: 500;
-  line-height: var(--font-03-line-height);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--5 {
-    font-size: var(--font-04-size);
-    line-height: var(--font-04-line-height);
+    font-size: var(--clbr-typography-type-step-400-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 }
 
 .clbr .msrd-Heading--4 {
-  font-size: var(--font-04-size);
+  font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 466;
-  line-height: var(--font-04-line-height);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--4 {
-    font-size: var(--font-05-size);
-    line-height: var(--font-05-line-height);
+    font-size: var(--clbr-typography-type-step-500-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 }
 
 .clbr .msrd-Heading--3 {
-  font-size: var(--font-05-size);
+  font-size: var(--clbr-typography-type-step-500-font-size);
   font-weight: 433;
-  line-height: var(--font-05-line-height);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--3 {
-    font-size: var(--font-06-size);
-    line-height: var(--font-06-line-height);
+    font-size: var(--clbr-typography-type-step-600-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 }
 
 .clbr .msrd-Heading--2 {
-  font-size: var(--font-07-size);
+  font-size: var(--clbr-typography-type-step-700-font-size);
   font-weight: 400;
-  line-height: var(--font-07-line-height);
+  line-height: var(--clbr-typography-type-step-700-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--2 {
-    font-size: var(--font-08-size);
-    line-height: var(--font-08-line-height);
+    font-size: var(--clbr-typography-type-step-800-font-size);
+    line-height: var(--clbr-typography-type-step-800-line-height);
   }
 }
 
 .clbr .msrd-Heading--1 {
-  font-size: var(--font-09-size);
+  font-size: var(--clbr-typography-type-step-900-font-size);
   font-weight: 366;
-  line-height: var(--font-09-line-height);
+  line-height: var(--clbr-typography-type-step-900-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--1 {
-    font-size: var(--font-10-size);
-    line-height: var(--font-10-line-height);
+    font-size: var(--clbr-typography-type-step-1000-font-size);
+    line-height: var(--clbr-typography-type-step-1000-line-height);
   }
 }
 
 .clbr .msrd-Heading--display3 {
-  font-size: var(--font-10-size);
+  font-size: var(--clbr-typography-type-step-1000-font-size);
   font-weight: 300;
-  line-height: var(--font-10-line-height);
+  line-height: var(--clbr-typography-type-step-1000-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--display3 {
-    font-size: var(--font-11-size);
-    line-height: var(--font-11-line-height);
+    font-size: var(--clbr-typography-type-step-1100-font-size);
+    line-height: var(--clbr-typography-type-step-1100-line-height);
   }
 }
 
 .clbr .msrd-Heading--display2 {
-  font-size: var(--font-11-size);
+  font-size: var(--clbr-typography-type-step-1100-font-size);
   font-weight: 250;
-  line-height: var(--font-11-line-height);
+  line-height: var(--clbr-typography-type-step-1100-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--display2 {
-    font-size: var(--font-12-size);
-    line-height: var(--font-12-line-height);
+    font-size: var(--clbr-typography-type-step-1200-font-size);
+    line-height: var(--clbr-typography-type-step-1200-line-height);
   }
 }
 
@@ -114,24 +114,24 @@
  */
 
 .clbr .msrd-Heading--display1 {
-  font-size: var(--font-10-size);
+  font-size: var(--clbr-typography-type-step-1000-font-size);
   font-weight: 300;
-  line-height: var(--font-10-line-height);
+  line-height: var(--clbr-typography-type-step-1000-line-height);
 }
 
 @media (min-width: 24em) {
   .clbr .msrd-Heading--display1 {
-    font-size: var(--font-11-size);
+    font-size: var(--clbr-typography-type-step-1100-font-size);
     font-weight: 250;
-    line-height: var(--font-11-line-height);
+    line-height: var(--clbr-typography-type-step-1100-line-height);
   }
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--display1 {
-    font-size: var(--font-13-size);
+    font-size: var(--clbr-typography-type-step-1300-font-size);
     font-weight: 200;
-    line-height: var(--font-13-line-height);
+    line-height: var(--clbr-typography-type-step-1300-line-height);
   }
 }
 

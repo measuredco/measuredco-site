@@ -1,11 +1,11 @@
 .clbr .msrd-Markdown {
   color: var(--color-text-prose);
-  font-size: var(--font-03-size);
-  line-height: var(--font-03-line-height);
+  font-size: var(--clbr-typography-type-step-300-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 .clbr .msrd-Markdown--measured {
-  max-inline-size: var(--measured);
+  max-inline-size: var(--clbr-typography-measure-default);
 }
 
 .clbr .msrd-Markdown--inline {
@@ -15,8 +15,8 @@
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown {
-    font-size: var(--font-04-size);
-    line-height: var(--font-04-line-height-large);
+    font-size: var(--clbr-typography-type-step-400-font-size);
+    line-height: var(--clbr-typography-type-step-450-line-height);
   }
 
   .clbr .msrd-Markdown--inline {
@@ -37,7 +37,7 @@
   .clbr .msrd-Markdown a:hover {
     color: var(--color-interactive-prose);
     text-decoration: underline;
-    text-decoration-color: var(--color-rule);
+    text-decoration-color: var(--clbr-color-border-brand);
     text-decoration-thickness: 0.09em;
     text-underline-offset: 0.34em;
   }
@@ -45,12 +45,12 @@
 
 .clbr .msrd-Markdown a:active {
   color: var(--color-interactive-active);
-  text-decoration-color: var(--color-interactive-prose-rule-active);
+  text-decoration-color: var(--clbr-color-interactive-prose-active-decoration);
   text-underline-offset: 0.39em;
 }
 
 .clbr .msrd-Markdown blockquote {
-  margin-block-end: var(--space-vertical-05);
+  margin-block-end: var(--clbr-spacing-vertical-700);
   margin-block-start: 0;
   margin-inline: 0;
 }
@@ -70,32 +70,32 @@
 }
 
 .clbr .msrd-Markdown blockquote p + p {
-  margin-block-start: var(--space-vertical-05);
+  margin-block-start: var(--clbr-spacing-vertical-700);
 }
 
 .clbr .msrd-Markdown blockquote p + p:last-child {
-  font-size: var(--font-02-size);
-  line-height: var(--font-02-line-height);
-  margin-block-start: var(--space-vertical-03);
+  font-size: var(--clbr-typography-type-step-200-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  margin-block-start: var(--clbr-spacing-vertical-500);
   text-align: end;
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown blockquote p + p:last-child {
-    font-size: var(--font-03-size);
-    line-height: var(--font-03-line-height);
+    font-size: var(--clbr-typography-type-step-300-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 }
 
 .clbr .msrd-Markdown code {
   --padding-x-code-inline: 0.25em;
-  background: var(--color-background-highlight);
+  background: var(--clbr-color-background-subtle);
   border-radius: var(--padding-x-code-inline);
-  font-family: var(--font-family-monospaced);
+  font-family: var(--clbr-typography-font-family-mono);
   font-feature-settings: normal;
   font-weight: inherit;
   line-height: inherit;
-  outline: 0.0625rem solid var(--color-code-highlight-border);
+  outline: 0.0625rem solid var(--clbr-color-border-default);
   padding-block-end: 0.055em;
   padding-inline-end: var(--padding-x-code-inline);
   padding-inline-start: var(--padding-x-code-inline);
@@ -111,7 +111,7 @@
   --chip-size: 0.6em;
   block-size: var(--chip-size);
   border: var(--border-width) solid var(--color-background);
-  border-radius: calc(var(--chip-size) * var(--corner-ratio-square));
+  border-radius: calc(var(--chip-size) * var(--clbr-radius-ratio-default));
   display: inline-block;
   forced-color-adjust: none;
   inline-size: var(--chip-size);
@@ -125,14 +125,14 @@
 }
 
 .clbr .msrd-Markdown pre {
-  border-radius: var(--border-radius-card);
-  box-shadow: var(--box-shadow-light-source);
+  border-radius: var(--clbr-radius-lg);
+  box-shadow: none;
   position: relative;
 }
 
 .clbr .msrd-Markdown pre::after {
-  border: solid var(--border-width) var(--color-code-border);
-  border-radius: var(--border-radius-card);
+  border: solid var(--border-width) var(--clbr-color-border-brand);
+  border-radius: var(--clbr-radius-lg);
   content: "";
   inset-block-end: var(--clbr-effect-stroke-inset);
   inset-block-start: var(--clbr-effect-stroke-outset);
@@ -143,21 +143,21 @@
 }
 
 .clbr .msrd-Markdown pre code {
-  border-radius: var(--border-radius-card);
+  border-radius: var(--clbr-radius-lg);
   box-shadow: var(--box-shadow);
   direction: ltr;
   display: block;
-  font-family: var(--font-family-monospaced);
+  font-family: var(--clbr-typography-font-family-mono);
   font-feature-settings: normal;
-  font-size: var(--font-02-size);
+  font-size: var(--clbr-typography-type-step-200-font-size);
   font-weight: inherit;
   inline-size: 100%;
-  line-height: var(--font-02-line-height);
-  margin-block-end: var(--space-vertical);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-700);
   outline: none;
   overflow-x: auto;
   overscroll-behavior-x: none;
-  padding: var(--space-vertical);
+  padding: var(--clbr-spacing-vertical-700);
   position: relative;
 }
 
@@ -171,101 +171,101 @@
 }
 
 .clbr .msrd-Markdown h6 {
-  font-size: var(--font-02-size);
+  font-size: var(--clbr-typography-type-step-200-font-size);
   font-weight: 533;
-  line-height: var(--font-02-line-height);
-  margin-block-end: var(--space-vertical-03);
-  margin-block-start: var(--space-vertical);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-500);
+  margin-block-start: var(--clbr-spacing-vertical-700);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h6 {
-    font-size: var(--font-03-size);
-    line-height: var(--font-03-line-height);
-    margin-block-end: var(--space-vertical);
-    margin-block-start: var(--space-vertical-06);
+    font-size: var(--clbr-typography-type-step-300-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
+    margin-block-end: var(--clbr-spacing-vertical-700);
+    margin-block-start: var(--clbr-spacing-vertical-800);
   }
 }
 
 .clbr .msrd-Markdown h5 {
-  font-size: var(--font-03-size);
+  font-size: var(--clbr-typography-type-step-300-font-size);
   font-weight: 500;
-  line-height: var(--font-03-line-height);
-  margin-block-end: var(--space-vertical-03);
-  margin-block-start: var(--space-vertical);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-500);
+  margin-block-start: var(--clbr-spacing-vertical-700);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h5 {
-    font-size: var(--font-04-size);
-    line-height: var(--font-04-line-height);
-    margin-block-end: var(--space-vertical);
-    margin-block-start: var(--space-vertical-06);
+    font-size: var(--clbr-typography-type-step-400-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
+    margin-block-end: var(--clbr-spacing-vertical-700);
+    margin-block-start: var(--clbr-spacing-vertical-800);
   }
 }
 
 .clbr .msrd-Markdown h4 {
-  font-size: var(--font-04-size);
+  font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 466;
-  line-height: var(--font-04-line-height);
-  margin-block-end: var(--space-vertical-03);
-  margin-block-start: var(--space-vertical);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-500);
+  margin-block-start: var(--clbr-spacing-vertical-700);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h4 {
-    font-size: var(--font-05-size);
-    line-height: var(--font-05-line-height);
-    margin-block-end: var(--space-vertical);
-    margin-block-start: var(--space-vertical-06);
+    font-size: var(--clbr-typography-type-step-500-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
+    margin-block-end: var(--clbr-spacing-vertical-700);
+    margin-block-start: var(--clbr-spacing-vertical-800);
   }
 }
 
 .clbr .msrd-Markdown h3 {
-  font-size: var(--font-05-size);
+  font-size: var(--clbr-typography-type-step-500-font-size);
   font-weight: 433;
-  line-height: var(--font-05-line-height);
-  margin-block-end: var(--space-vertical-03);
-  margin-block-start: var(--space-vertical);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-500);
+  margin-block-start: var(--clbr-spacing-vertical-700);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h3 {
-    font-size: var(--font-06-size);
-    line-height: var(--font-06-line-height);
-    margin-block-end: var(--space-vertical);
-    margin-block-start: var(--space-vertical-06);
+    font-size: var(--clbr-typography-type-step-600-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
+    margin-block-end: var(--clbr-spacing-vertical-700);
+    margin-block-start: var(--clbr-spacing-vertical-800);
   }
 }
 
 .clbr .msrd-Markdown h2 {
-  font-size: var(--font-07-size);
+  font-size: var(--clbr-typography-type-step-700-font-size);
   font-weight: 400;
-  line-height: var(--font-07-line-height);
-  margin-block-end: var(--space-vertical-03);
-  margin-block-start: var(--space-vertical);
+  line-height: var(--clbr-typography-type-step-700-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-500);
+  margin-block-start: var(--clbr-spacing-vertical-700);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h2 {
-    font-size: var(--font-08-size);
-    line-height: var(--font-08-line-height);
-    margin-block-end: var(--space-vertical);
-    margin-block-start: var(--space-vertical-06);
+    font-size: var(--clbr-typography-type-step-800-font-size);
+    line-height: var(--clbr-typography-type-step-800-line-height);
+    margin-block-end: var(--clbr-spacing-vertical-700);
+    margin-block-start: var(--clbr-spacing-vertical-800);
   }
 }
 
 .clbr .msrd-Markdown h1 {
-  font-size: var(--font-09-size);
+  font-size: var(--clbr-typography-type-step-900-font-size);
   font-weight: 366;
-  line-height: var(--font-09-line-height);
+  line-height: var(--clbr-typography-type-step-900-line-height);
   margin-block-start: 0;
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h1 {
-    font-size: var(--font-10-size);
-    line-height: var(--font-10-line-height);
+    font-size: var(--clbr-typography-type-step-1000-font-size);
+    line-height: var(--clbr-typography-type-step-1000-line-height);
   }
 }
 
@@ -279,19 +279,19 @@
 
 .clbr .msrd-Markdown hr {
   border: 0;
-  border-block-start: var(--rule-height) solid var(--color-rule);
-  inline-size: var(--rule-width);
-  margin-block-end: var(--space-vertical);
+  border-block-start: var(--clbr-layout-divider-brand-thickness) solid var(--clbr-color-border-brand);
+  inline-size: var(--clbr-layout-divider-brand-size);
+  margin-block-end: var(--clbr-spacing-vertical-700);
   margin-block-start: 0;
   margin-inline: 0;
 }
 
 .clbr .msrd-Markdown p:has(img) {
-  box-shadow: var(--box-shadow-light-source);
+  box-shadow: none;
 }
 
 .clbr .msrd-Markdown img {
-  border-radius: var(--border-radius-image);
+  border-radius: var(--clbr-radius-xs);
   box-shadow: var(--box-shadow);
 }
 
@@ -299,7 +299,7 @@
 .clbr .msrd-Markdown ul {
   --bullet-space: calc(36rem / 16);
   list-style: none;
-  margin-block-end: var(--space-vertical);
+  margin-block-end: var(--clbr-spacing-vertical-700);
   margin-block-start: 0;
   margin-inline-start: 0;
   padding-inline-start: 0;
@@ -346,47 +346,47 @@
   content: counter(list) ".";
   counter-increment: list;
   font-variant-numeric: tabular-nums;
-  padding-inline-end: var(--space-horizontal-03);
+  padding-inline-end: var(--clbr-spacing-horizontal-400);
 }
 
 .clbr .msrd-Markdown ol > li:has(> h2)::before {
   color: var(--color-text);
-  font-size: var(--font-07-size);
-  line-height: var(--font-07-line-height);
+  font-size: var(--clbr-typography-type-step-700-font-size);
+  line-height: var(--clbr-typography-type-step-700-line-height);
 
   @media (min-width: 48em) {
-    font-size: var(--font-08-size);
-    line-height: var(--font-08-line-height);
+    font-size: var(--clbr-typography-type-step-800-font-size);
+    line-height: var(--clbr-typography-type-step-800-line-height);
   }
 }
 
 .clbr .msrd-Markdown ol > li:has(> h2:first-child):nth-child(n + 10):before {
-  font-size: var(--font-02-size);
+  font-size: var(--clbr-typography-type-step-200-font-size);
   line-height: 2.625;
 
   @media (min-width: 48em) {
-    font-size: var(--font-04-size);
+    font-size: var(--clbr-typography-type-step-400-font-size);
     line-height: 2.4;
   }
 }
 
 .clbr .msrd-Markdown ol > li:has(> h3:first-child)::before {
   color: var(--color-text);
-  font-size: var(--font-05-size);
-  line-height: var(--font-05-line-height);
+  font-size: var(--clbr-typography-type-step-500-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 
   @media (min-width: 48em) {
-    font-size: var(--font-06-size);
-    line-height: var(--font-06-line-height);
+    font-size: var(--clbr-typography-type-step-600-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 }
 
 .clbr .msrd-Markdown ol > li:has(> h3:first-child):nth-child(n + 10):before {
-  font-size: var(--font-02-size);
+  font-size: var(--clbr-typography-type-step-200-font-size);
   line-height: 2.25;
 
   @media (min-width: 48em) {
-    font-size: var(--font-04-size);
+    font-size: var(--clbr-typography-type-step-400-font-size);
     line-height: 2.1;
   }
 }
@@ -397,7 +397,7 @@
 }
 
 .clbr .msrd-Markdown p {
-  margin-block-end: var(--space-vertical);
+  margin-block-end: var(--clbr-spacing-vertical-700);
   margin-block-start: 0;
   overflow-wrap: break-word;
   text-wrap: pretty;
@@ -406,17 +406,17 @@
 .clbr .msrd-Markdown table {
   border-collapse: collapse;
   font: inherit;
-  font-family: var(--font-family-monospaced);
+  font-family: var(--clbr-typography-font-family-mono);
   font-feature-settings: normal;
-  font-size: var(--font-02-size);
+  font-size: var(--clbr-typography-type-step-200-font-size);
   font-weight: inherit;
   inline-size: 100%;
-  line-height: var(--font-02-line-height);
-  margin-block-end: var(--space-vertical);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  margin-block-end: var(--clbr-spacing-vertical-700);
 }
 
 .clbr .msrd-Markdown tbody tr:nth-child(even) {
-  background-color: var(--color-background-highlight);
+  background-color: var(--clbr-color-background-subtle);
 }
 
 .clbr .msrd-Markdown td,
@@ -447,9 +447,9 @@
 }
 
 .clbr .msrd-Markdown .footnotes ol {
-  font-size: var(--font-02-size);
-  line-height: var(--font-02-line-height);
-  padding-block-start: var(--space-vertical-03);
+  font-size: var(--clbr-typography-type-step-200-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
+  padding-block-start: var(--clbr-spacing-vertical-500);
 }
 
 @media (min-width: 80em) {
@@ -459,11 +459,11 @@
 }
 
 .clbr .msrd-Markdown .footnotes ol::before {
-  border-top: var(--rule-height) solid var(--color-rule);
+  border-top: var(--clbr-layout-divider-brand-thickness) solid var(--clbr-color-border-brand);
   content: "";
   display: block;
-  inline-size: var(--rule-width);
-  margin-block-end: var(--space-vertical-06);
+  inline-size: var(--clbr-layout-divider-brand-size);
+  margin-block-end: var(--clbr-spacing-vertical-800);
   position: relative;
 }
 

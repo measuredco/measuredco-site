@@ -1,117 +1,117 @@
 .msrd-Space {
-  padding-block-end: var(--space-vertical);
+  padding-block-end: var(--clbr-spacing-vertical-700);
 }
 
 .msrd-Space--01 {
-  padding-block-end: var(--space-vertical-01);
+  padding-block-end: var(--clbr-spacing-vertical-250);
 }
 
 .msrd-Space--02 {
-  padding-block-end: var(--space-vertical-01);
+  padding-block-end: var(--clbr-spacing-vertical-250);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--02 {
-    padding-block-end: var(--space-vertical-02);
+    padding-block-end: var(--clbr-spacing-vertical-400);
   }
 }
 
 .msrd-Space--03 {
-  padding-block-end: var(--space-vertical-02);
+  padding-block-end: var(--clbr-spacing-vertical-400);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--03 {
-    padding-block-end: var(--space-vertical-03);
+    padding-block-end: var(--clbr-spacing-vertical-500);
   }
 }
 
 .msrd-Space--04 {
-  padding-block-end: var(--space-vertical-03);
+  padding-block-end: var(--clbr-spacing-vertical-500);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--04 {
-    padding-block-end: var(--space-vertical-04);
+    padding-block-end: var(--clbr-spacing-vertical-600);
   }
 }
 
 .msrd-Space--05 {
-  padding-block-end: var(--space-vertical-04);
+  padding-block-end: var(--clbr-spacing-vertical-600);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--05 {
-    padding-block-end: var(--space-vertical-05);
+    padding-block-end: var(--clbr-spacing-vertical-700);
   }
 }
 
 .msrd-Space--06 {
-  padding-block-end: var(--space-vertical-05);
+  padding-block-end: var(--clbr-spacing-vertical-700);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--06 {
-    padding-block-end: var(--space-vertical-06);
+    padding-block-end: var(--clbr-spacing-vertical-800);
   }
 }
 
 .msrd-Space--07 {
-  padding-block-end: var(--space-vertical-06);
+  padding-block-end: var(--clbr-spacing-vertical-800);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--07 {
-    padding-block-end: var(--space-vertical-07);
+    padding-block-end: var(--clbr-spacing-vertical-900);
   }
 }
 
 .msrd-Space--08 {
-  padding-block-end: var(--space-vertical-07);
+  padding-block-end: var(--clbr-spacing-vertical-900);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--08 {
-    padding-block-end: var(--space-vertical-09);
+    padding-block-end: var(--clbr-spacing-vertical-1000);
   }
 }
 
 .msrd-Space--09 {
-  padding-block-end: var(--space-vertical-08);
+  padding-block-end: var(--clbr-spacing-vertical-950);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--09 {
-    padding-block-end: var(--space-vertical-11);
+    padding-block-end: var(--clbr-spacing-vertical-1200);
   }
 }
 
 .msrd-Space--10 {
-  padding-block-end: var(--space-vertical-09);
+  padding-block-end: var(--clbr-spacing-vertical-1000);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--10 {
-    padding-block-end: var(--space-vertical-12);
+    padding-block-end: var(--clbr-spacing-vertical-1250);
   }
 }
 
 .msrd-Space--11 {
-  padding-block-end: var(--space-vertical-10);
+  padding-block-end: var(--clbr-spacing-vertical-1100);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--11 {
-    padding-block-end: var(--space-vertical-13);
+    padding-block-end: var(--clbr-spacing-vertical-1300);
   }
 }
 
 .msrd-Space--12 {
-  padding-block-end: var(--space-vertical-11);
+  padding-block-end: var(--clbr-spacing-vertical-1200);
 }
 
 @media (min-width: 64em) {
   .clbr .msrd-Space--12 {
-    padding-block-end: var(--space-vertical-14);
+    padding-block-end: var(--clbr-spacing-vertical-1400);
   }
 }

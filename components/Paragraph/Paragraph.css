@@ -1,8 +1,8 @@
 .clbr .msrd-Paragraph {
   --color-interactive-prose: var(--color-interactive);
   --color-interactive-visited: var(--color-interactive);
-  font-size: var(--font-03-size);
-  line-height: var(--font-03-line-height);
+  font-size: var(--clbr-typography-type-step-300-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
   margin: 0;
   text-wrap: pretty;
 }
@@ -14,33 +14,33 @@
 
 @media (min-width: 48em) {
   .clbr .msrd-Paragraph {
-    font-size: var(--font-04-size);
-    line-height: var(--font-04-line-height-large);
+    font-size: var(--clbr-typography-type-step-400-font-size);
+    line-height: var(--clbr-typography-type-step-450-line-height);
   }
 }
 
 .clbr .msrd-Paragraph--small {
-  font-size: var(--font-02-size);
-  line-height: var(--font-02-line-height);
+  font-size: var(--clbr-typography-type-step-200-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 /* @media (min-width: 48em) {
   .clbr .msrd-Paragraph--small {
-    font-size: var(--font-03-size);
-    line-height: var(--font-03-line-height);
+    font-size: var(--clbr-typography-type-step-300-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 } */
 
 .clbr .msrd-Paragraph--large {
   --color-text-prose: var(--color-text);
-  font-size: var(--font-04-size);
-  line-height: var(--font-04-line-height);
+  font-size: var(--clbr-typography-type-step-400-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Paragraph--large {
-    font-size: var(--font-05-size);
-    line-height: var(--font-05-line-height);
+    font-size: var(--clbr-typography-type-step-500-font-size);
+    line-height: var(--clbr-typography-type-step-200-line-height);
   }
 }
 
@@ -57,13 +57,13 @@
 }
 
 .clbr .msrd-Paragraph--measured {
-  max-inline-size: var(--measured);
+  max-inline-size: var(--clbr-typography-measure-default);
 }
 
 .clbr .msrd-Paragraph--measured.msrd-Paragraph--large {
-  max-inline-size: calc(var(--measured) * 0.9);
+  max-inline-size: calc(var(--clbr-typography-measure-default) * 0.9);
 }
 
 .clbr .msrd-Paragraph--muted {
-  --color-text-prose: var(--color-text-muted);
+  --color-text-prose: var(--clbr-color-foreground-muted-text);
 }

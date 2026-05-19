@@ -24,12 +24,12 @@
 
 @media (hover: hover) {
   .clbr .msrd-SiteHeaderMenuButton:hover {
-    color: var(--color-interactive-neutral-hover);
+    color: var(--clbr-color-interactive-neutral-hover);
   }
 }
 
 .clbr .msrd-SiteHeaderMenuButton:active {
-  color: var(--color-interactive-neutral-active);
+  color: var(--clbr-color-interactive-neutral-active);
 }
 
 @media (min-width: 48em) {
@@ -62,7 +62,7 @@
 .clbr .msrd-SiteHeaderMenuButton-inner {
   display: block;
   inset-block-start: 50%;
-  transition: transform 0.2s var(--easing-cubic-bezier-reverse-easy-ease);
+  transition: transform 0.2s var(--clbr-motion-easing-emphasized);
 }
 
 .clbr .msrd-SiteHeaderMenuButton-inner::before,
@@ -73,20 +73,20 @@
 
 .clbr .msrd-SiteHeaderMenuButton-inner::before {
   inset-block-start: calc(-8rem / 16);
-  transition: inset-block-start 0.1s 0.2s var(--easing-cubic-bezier-ease-in),
-    opacity 0.1s var(--easing-cubic-bezier-ease-in);
+  transition: inset-block-start 0.1s 0.2s var(--clbr-motion-easing-ease-in),
+    opacity 0.1s var(--clbr-motion-easing-ease-in);
 }
 
 .clbr .msrd-SiteHeaderMenuButton-inner::after {
   inset-block-end: calc(-8rem / 16);
-  transition: inset-block-end 0.1s 0.2s var(--easing-cubic-bezier-ease-in),
-    transform 0.2s var(--easing-cubic-bezier-reverse-easy-ease);
+  transition: inset-block-end 0.1s 0.2s var(--clbr-motion-easing-ease-in),
+    transform 0.2s var(--clbr-motion-easing-emphasized);
 }
 
 .clbr .msrd-SiteHeaderMenuButton--menuOpen .msrd-SiteHeaderMenuButton-inner {
   transform: rotate(225deg);
   transition-delay: 0.1s;
-  transition-timing-function: var(--easing-cubic-bezier-easy-ease);
+  transition-timing-function: var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr
@@ -94,8 +94,8 @@
   .msrd-SiteHeaderMenuButton-inner::before {
   inset-block-start: 0;
   opacity: 0;
-  transition: inset-inline-start 0.1s var(--easing-cubic-bezier-ease-out),
-    opacity 0.1s 0.1s var(--easing-cubic-bezier-ease-out);
+  transition: inset-inline-start 0.1s var(--clbr-motion-easing-ease-out),
+    opacity 0.1s 0.1s var(--clbr-motion-easing-ease-out);
 }
 
 .clbr
@@ -103,8 +103,8 @@
   .msrd-SiteHeaderMenuButton-inner::after {
   inset-block-end: 0;
   transform: rotate(-90deg);
-  transition: inset-block-end 0.1s var(--easing-cubic-bezier-ease-out),
-    transform 0.2s 0.1s var(--easing-cubic-bezier-easy-ease);
+  transition: inset-block-end 0.1s var(--clbr-motion-easing-ease-out),
+    transform 0.2s 0.1s var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-SiteHeaderMenuButton-text {
