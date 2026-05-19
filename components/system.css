@@ -208,23 +208,6 @@
   --rule-width: calc((72 / 16) * 1rem);
 
   --border-offset-card: calc((4 / 16) * 1rem);
-
-  /*
-   * Dimension tokens
-   */
-
-  --measured: 35.25em;
-
-  --furniture-max-width: calc((1440 / 16) * 1rem);
-
-  --section-max-width: calc((1280 / 16) * 1rem);
-
-  --site-header-height: var(--space-vertical-09);
-
-  @media (min-width: 48em) {
-    --site-header-height: var(--space-vertical-10);
-  }
-
 }
 
 /*
@@ -266,6 +249,20 @@
   --border-radius-button: var(--clbr-radius-sm);
   --border-radius-card: var(--clbr-radius-lg);
   --corner-ratio-square: var(--clbr-radius-ratio-default);
+
+  /*
+   * Dimensions sourced from Calibrate (exact ports). The site header
+   * height keeps its discrete 72px→84px step via two static spacing
+   * tokens rather than Calibrate's fluid layout-spacing scale.
+   */
+  --measured: var(--clbr-typography-measure-default);
+  --furniture-max-width: var(--clbr-layout-container-max-width-wide);
+  --section-max-width: var(--clbr-layout-container-max-width-default);
+  --site-header-height: var(--clbr-spacing-vertical-1000);
+
+  @media (min-width: 48em) {
+    --site-header-height: var(--clbr-spacing-vertical-1100);
+  }
 
   --color-brand: var(--clbr-color-brand-primary);
   --color-rule: var(--clbr-color-border-brand);
