@@ -235,15 +235,6 @@
   --border-radius-card: calc((18 / 16) * 1rem);
 
   --corner-ratio-square: 0.16666667;
-
-  /*
-   * Motion tokens
-   */
-
-  --easing-cubic-bezier-easy-ease: cubic-bezier(0.44, 0, 0.55, 0.94);
-  --easing-cubic-bezier-ease-in: cubic-bezier(0.44, 0, 1, 1);
-  --easing-cubic-bezier-ease-out: cubic-bezier(0, 0, 0.55, 0.94);
-  --easing-cubic-bezier-reverse-easy-ease: cubic-bezier(0.96, 0.03, 0.53, 0.96);
 }
 
 /*
@@ -265,6 +256,15 @@
    */
   --font-family: var(--clbr-typography-font-family-default);
   --font-family-monospaced: var(--clbr-typography-font-family-mono);
+
+  /*
+   * Motion easing — exact 1:1 port of Calibrate's `--clbr-motion-easing-*`
+   * (same reason as fonts: `--clbr-*` only resolves under `.clbr`).
+   */
+  --easing-cubic-bezier-easy-ease: var(--clbr-motion-easing-ease-in-out);
+  --easing-cubic-bezier-ease-in: var(--clbr-motion-easing-ease-in);
+  --easing-cubic-bezier-ease-out: var(--clbr-motion-easing-ease-out);
+  --easing-cubic-bezier-reverse-easy-ease: var(--clbr-motion-easing-emphasized);
 
   --color-brand: var(--clbr-color-brand-primary);
   --color-rule: var(--clbr-color-border-brand);
