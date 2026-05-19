@@ -11,15 +11,45 @@ html {
   }
 }
 
+/*
+ * Header height is `.clbr`-scoped (not `.msrd-SiteHeader`) because it is
+ * also consumed outside the header — Post offsets its banner by it.
+ */
+.clbr {
+  --site-header-height: var(--clbr-spacing-vertical-1000);
+}
+
+@media (min-width: 48em) {
+  .clbr {
+    --site-header-height: var(--clbr-spacing-vertical-1100);
+  }
+}
+
 .clbr .msrd-SiteHeader {
+  --color-site-header-background: var(--clbr-color-background-default);
+  --site-header-box-shadow: 0 0 0 var(--clbr-layout-border-width-default)
+    var(--clbr-color-border-subtle);
   background-color: var(--color-site-header-background);
   inset-block-start: 0;
   position: sticky;
   z-index: 1;
 }
 
+/*
+ * Brand / inverse surfaces (e.g. the homepage graphic surface) keep the
+ * sticky header transparent until the page scrolls. Declared after the
+ * base rule so it wins when the header is inside such a surface; the
+ * scrolled state sets its own background independently.
+ */
+.clbr [data-clbr-surface="brand"] .msrd-SiteHeader,
+.clbr [data-clbr-surface="inverse"] .msrd-SiteHeader {
+  --color-site-header-background: transparent;
+  --site-header-box-shadow: 0 0 0 var(--clbr-layout-border-width-default)
+    var(--clbr-color-border-brand);
+}
+
 .clbr .msrd-SiteHeader--pageScrolled {
-  background-color: var(--color-background);
+  background-color: var(--clbr-color-background-default);
   box-shadow: none;
   transition:
     background-color 0.1s var(--clbr-motion-easing-ease-in-out),
@@ -27,7 +57,7 @@ html {
 }
 
 .clbr .msrd-SiteHeader--menuOpen {
-  background: var(--color-background);
+  background: var(--clbr-color-background-default);
   box-shadow: none;
   /*
    * While the menu is open the scroll is locked via Calibrate's
@@ -76,7 +106,7 @@ html {
 
 .clbr .msrd-SiteHeader-logo:has(:focus-visible) {
   border-radius: var(--clbr-radius-2xs);
-  outline: var(--clbr-layout-focus-ring-width) solid var(--color-interactive-focus);
+  outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
   outline-offset: var(--clbr-layout-focus-ring-width);
 }
 
@@ -179,13 +209,13 @@ html {
     align-items: center;
     background-color: var(--clbr-color-background-panel);
     block-size: var(--clbr-spacing-vertical-900);
-    border: solid var(--border-width) var(--color-interactive);
+    border: solid var(--clbr-layout-border-width-default) var(--clbr-color-interactive-default);
     border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--clbr-effect-shadow-default);
     display: flex;
     padding-block: 0;
-    padding-inline-end: calc(var(--clbr-spacing-horizontal-600) - var(--border-width));
-    padding-inline-start: calc(var(--clbr-spacing-horizontal-800) - var(--border-width));
+    padding-inline-end: calc(var(--clbr-spacing-horizontal-600) - var(--clbr-layout-border-width-default));
+    padding-inline-start: calc(var(--clbr-spacing-horizontal-800) - var(--clbr-layout-border-width-default));
     position: relative;
     text-decoration: none;
   }

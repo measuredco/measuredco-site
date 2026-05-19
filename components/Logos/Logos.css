@@ -114,7 +114,7 @@
   background-color: var(--clbr-color-background-panel);
   border: 0.0625rem solid var(--clbr-color-border-brand);
   border-radius: var(--clbr-radius-xs);
-  color: var(--color-interactive);
+  color: var(--clbr-color-interactive-default);
   font-family: var(--clbr-typography-font-family-mono);
   font-size: calc((10 / 16) * 1rem);
   font-weight: 466;
@@ -125,13 +125,13 @@
 }
 
 .clbr .msrd-Logos-link:focus-visible .msrd-Logos-label {
-  border-color: var(--color-interactive-focus);
+  border-color: var(--clbr-color-interactive-focus);
 }
 
 .clbr .msrd-Logos-link:hover .msrd-Logos-label {
-  color: var(--color-interactive-hover);
+  color: var(--clbr-color-interactive-hover);
 }
 
 .clbr .msrd-Logos-link:active .msrd-Logos-label {
-  color: var(--color-interactive-active);
+  color: var(--clbr-color-interactive-active);
 }

@@ -12,10 +12,9 @@
 }
 
 .clbr .msrd-NewIdentityProcess-inner {
-  --box-shadow: 0.125rem 0.125rem 1rem
-    color-mix(in srgb, #000000 08%, transparent);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: 0.125rem 0.125rem 1rem
+    color-mix(in srgb, #000000 08%, transparent);
   display: flex;
   flex-direction: column;
   inline-size: 100%;
@@ -23,7 +22,7 @@
     var(--clbr-spacing-vertical-500) var(--clbr-spacing-horizontal-600);
 
   @media (prefers-color-scheme: dark) {
-    --box-shadow: 0.125rem 0.125rem 0.25rem
+    box-shadow: 0.125rem 0.125rem 0.25rem
       color-mix(in srgb, #000000 94%, transparent);
   }
 }

@@ -20,7 +20,7 @@
 }
 
 .clbr .msrd-Blockquote-quote {
-  --color-text-prose: var(--color-text);
+  --color-text-prose: var(--clbr-color-foreground-default);
   margin-block-start: 0;
   margin-block-end: var(--clbr-spacing-vertical-600);
   quotes: "“" "”" "‘" "’";

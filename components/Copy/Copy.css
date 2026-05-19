@@ -1,5 +1,4 @@
 .clbr .msrd-Copy {
-  --color-border: var(--clbr-color-interactive-default);
   --button-size: calc((42 / 16) * 1rem);
   --icon-border: calc((2 / 16) * 1rem);
   --icon-size: calc((24 / 16) * 1rem);
@@ -17,7 +16,7 @@
 
 .clbr .msrd-Copy::before {
   block-size: var(--icon-size);
-  border: var(--icon-border) solid var(--color-border);
+  border: var(--icon-border) solid var(--clbr-color-interactive-default);
   border-radius: calc(var(--icon-size) * var(--clbr-radius-ratio-default));
   content: "";
   inline-size: var(--icon-size);
@@ -33,7 +32,7 @@
 .clbr .msrd-Copy::after {
   background-color: var(--clbr-color-background-panel);
   block-size: var(--icon-size);
-  border: var(--icon-border) solid var(--color-border);
+  border: var(--icon-border) solid var(--clbr-color-interactive-default);
   border-radius: calc(var(--icon-size) * var(--clbr-radius-ratio-default));
   content: "";
   inline-size: var(--icon-size);
@@ -64,7 +63,7 @@
   border-radius: calc(
     (var(--button-size) + var(--outline-offset)) * var(--clbr-radius-ratio-default)
   );
-  outline: var(--clbr-layout-focus-ring-width) solid var(--color-interactive-focus);
+  outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
   outline-offset: var(--outline-offset);
 }
 
@@ -75,8 +74,9 @@
 }
 
 @media (hover: hover) {
-  .clbr .msrd-Copy:hover {
-    --color-border: var(--clbr-color-interactive-hover);
+  .clbr .msrd-Copy:hover::before,
+  .clbr .msrd-Copy:hover::after {
+    border-color: var(--clbr-color-interactive-hover);
   }
 
   .clbr .msrd-Copy:hover .msrd-Copy-text {
@@ -94,6 +94,7 @@
   }
 }
 
-.clbr .msrd-Copy:active {
-  --color-border: var(--color-interactive-active);
+.clbr .msrd-Copy:active::before,
+.clbr .msrd-Copy:active::after {
+  border-color: var(--clbr-color-interactive-active);
 }

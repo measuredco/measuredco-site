@@ -8,39 +8,41 @@
 
 .clbr .msrd-NewIdentityContact-primary,
 .clbr .msrd-NewIdentityContact-secondary {
-  --border-width: calc((2 / 16) * 1rem);
-  border: calc(2rem / 16) solid var(--clbr-color-brand-primary);
+  border: var(--clbr-layout-border-width-thick) solid
+    var(--clbr-color-brand-primary);
   border-radius: var(--clbr-radius-sm);
   display: block;
   font-weight: 500;
   min-inline-size: calc((192 / 16) * 1rem);
-  padding: calc(var(--clbr-spacing-vertical-500) - var(--border-width))
+  padding: calc(
+      var(--clbr-spacing-vertical-500) - var(--clbr-layout-border-width-thick)
+    )
     var(--clbr-spacing-horizontal-700);
   text-align: center;
   text-wrap: nowrap;
 }
 
 .clbr .msrd-NewIdentityContact-primary {
-  background-color: var(--color-interactive);
+  background-color: var(--clbr-color-interactive-default);
   color: var(--clbr-color-foreground-contrast);
 }
 
 @media (hover: hover) {
   .clbr .msrd-NewIdentityContact-primary:hover {
-    background-color: var(--color-interactive-hover);
-    border-color: var(--color-interactive-hover);
+    background-color: var(--clbr-color-interactive-hover);
+    border-color: var(--clbr-color-interactive-hover);
     color: var(--clbr-color-foreground-contrast);
   }
 }
 
 .clbr .msrd-NewIdentityContact-primary:active {
-  background-color: var(--color-interactive-active);
-  border-color: var(--color-interactive-active);
+  background-color: var(--clbr-color-interactive-active);
+  border-color: var(--clbr-color-interactive-active);
   color: var(--clbr-color-foreground-contrast);
 }
 
 .clbr .msrd-NewIdentityContact-secondary {
-  color: var(--color-interactive);
+  color: var(--clbr-color-interactive-default);
 }
 
 @media (hover: hover) {

@@ -4,7 +4,6 @@ import { ReactNode } from "react";
 
 import "@measured/calibrate-assets/fonts.css";
 import "@measured/calibrate-core/styles.css";
-import "../components/system.css";
 import { Base } from "../components";
 import content from "../content.json";
 

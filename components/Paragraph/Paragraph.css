@@ -1,6 +1,6 @@
 .clbr .msrd-Paragraph {
-  --color-interactive-prose: var(--color-interactive);
-  --color-interactive-visited: var(--color-interactive);
+  --color-interactive-prose: var(--clbr-color-interactive-default);
+  --color-interactive-visited: var(--clbr-color-interactive-default);
   font-size: var(--clbr-typography-type-step-300-font-size);
   line-height: var(--clbr-typography-type-step-200-line-height);
   margin: 0;
@@ -32,7 +32,7 @@
 } */
 
 .clbr .msrd-Paragraph--large {
-  --color-text-prose: var(--color-text);
+  --color-text-prose: var(--clbr-color-foreground-default);
   font-size: var(--clbr-typography-type-step-400-font-size);
   line-height: var(--clbr-typography-type-step-200-line-height);
 }

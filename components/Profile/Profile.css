@@ -8,7 +8,7 @@
   > div,
   img {
     border-radius: calc(var(--image-size) * var(--clbr-radius-ratio-default));
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--clbr-effect-shadow-default);
 
   }
 }

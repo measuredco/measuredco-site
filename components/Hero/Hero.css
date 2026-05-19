@@ -68,7 +68,7 @@
 }
 
 .clbr .msrd-Hero-description {
-  color: var(--color-text-prose);
+  color: var(--clbr-color-foreground-prose);
   font-size: var(--clbr-typography-type-step-300-font-size);
   line-height: var(--clbr-typography-type-step-200-line-height);
   margin-block-end: var(--clbr-spacing-vertical-600);

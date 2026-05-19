@@ -6,7 +6,7 @@
   background-color: var(--clbr-color-background-panel);
 
   @media (prefers-color-scheme: dark) {
-    background-color: var(--color-background);
+    background-color: var(--clbr-color-background-default);
     background-image: linear-gradient(
       var(--clbr-color-background-panel),
       var(--clbr-color-background-panel)
@@ -15,51 +15,76 @@
 }
 
 /**
+ * NewIdentity prose
+ *
+ * `.msrd-u-prose` is a NewIdentity-only workaround (Calibrate has no
+ * prose class), relocated here from the former Base.css. Gated behind
+ * `:where(:has(.msrd-NewIdentity))` so it can't leak onto a stray
+ * `.msrd-u-prose` elsewhere in `.clbr`; `:where()` is zero-specificity
+ * so this stays (0,2,0) — identical to the old `.clbr .msrd-u-prose`.
+ * Tokens resolve to their Calibrate defaults (NewIdentity overrides none).
+ */
+
+.clbr:where(:has(.msrd-NewIdentity)) .msrd-u-prose {
+  color: var(--clbr-color-foreground-prose);
+
+  a:not([class]) {
+    color: var(--clbr-color-interactive-prose-default);
+  }
+
+  a:not([class]):visited {
+    color: var(--clbr-color-interactive-visited);
+  }
+
+  @media (hover: hover) {
+    a:not([class]):hover {
+      color: var(--clbr-color-interactive-prose-default);
+      text-decoration: underline;
+      text-decoration-color: var(--clbr-color-border-brand);
+      text-decoration-thickness: 0.09em;
+      text-underline-offset: 0.34em;
+    }
+  }
+
+  a:not([class]):active {
+    color: var(--clbr-color-interactive-active);
+    text-decoration-color: var(--clbr-color-interactive-prose-active-decoration);
+    text-underline-offset: 0.39em;
+  }
+}
+
+/**
  * NewIdentity surfaces
  */
 
 .clbr .msrd-NewIdentity-surfaceDark {
-  --color-background: #0158ad;
-  --color-text: #f2f3f4;
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: #0158ad;
+  color: #f2f3f4;
 }
 
 .clbr .msrd-NewIdentity-surfaceLight {
-  --color-background: #3598f8;
-  --color-text: #ffffff;
-
   /*
-   * Links on this bespoke azure surface need deep-navy (light) / white
-   * (dark) for contrast. Calibrate styles `a` from
-   * `--clbr-color-interactive-*`, so those must be overridden here; the
-   * legacy `--color-interactive-*` are kept for any site-CSS consumers
-   * in this surface (e.g. prose, Contact).
+   * Bespoke azure surface. Links need deep-navy (light) / white (dark)
+   * for contrast; Calibrate styles `a` from `--clbr-color-interactive-*`,
+   * so those are overridden here for the surface's link colours.
    */
   --clbr-color-interactive-default: #031f60;
   --clbr-color-interactive-hover: #042467;
   --clbr-color-interactive-focus: #083c8a;
   --clbr-color-interactive-active: #083c8a;
   --clbr-color-interactive-visited: #031f60;
-  --color-interactive: #031f60;
-  --color-interactive-focus: #083c8a;
-  --color-interactive-hover: #042467;
-  --color-interactive-active: #083c8a;
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: #3598f8;
+  color: #ffffff;
   font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 500;
   line-height: var(--clbr-typography-type-step-200-line-height);
 
   @media (prefers-color-scheme: dark) {
-    --color-text: #0e0f10;
     --clbr-color-interactive-default: #ffffff;
     --clbr-color-interactive-hover: color-mix(in srgb, #ffffff 94%, transparent);
     --clbr-color-interactive-active: color-mix(in srgb, #ffffff 88%, transparent);
     --clbr-color-interactive-visited: #ffffff;
-    --color-interactive: #ffffff;
-    --color-interactive-hover: color-mix(in srgb, #ffffff 94%, transparent);
-    --color-interactive-active: color-mix(in srgb, #ffffff 88%, transparent);
+    color: #0e0f10;
   }
 }
 
@@ -83,7 +108,7 @@
 .clbr .msrd-NewIdentity-image img,
 .clbr .msrd-NewIdentity-imageLarge img {
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--clbr-effect-shadow-default);
   margin: 0 auto;
 }
 
