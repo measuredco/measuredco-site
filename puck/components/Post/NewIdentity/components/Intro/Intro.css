@@ -20,7 +20,8 @@
     column-gap: var(--clbr-spacing-horizontal-600);
     grid-template-columns: repeat(5, minmax(calc((154 / 16) * 1rem), 1fr));
     inline-size: auto;
-    margin-block: var(--clbr-spacing-vertical-500) var(--clbr-spacing-vertical-950);
+    margin-block: var(--clbr-spacing-vertical-500)
+      var(--clbr-spacing-vertical-950);
 
     > :first-child {
       grid-column-start: 2;

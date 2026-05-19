@@ -1,6 +1,7 @@
 .clbr .msrd-Rule {
   border: 0;
-  border-block-start: var(--clbr-layout-divider-brand-thickness) solid var(--clbr-color-border-brand);
+  border-block-start: var(--clbr-layout-divider-brand-thickness) solid
+    var(--clbr-color-border-brand);
   inline-size: var(--clbr-layout-divider-brand-size);
   margin: 0;
 }

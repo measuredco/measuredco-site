@@ -6,9 +6,12 @@
 
 .clbr .msrd-Surface-graphic {
   background-attachment: fixed;
-  background-image: url("https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png"),
+  background-image:
+    url("https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png"),
     url("https://res.cloudinary.com/measuredco/image/upload/v1732635074/site/site-background-repeat_kjbjx5.png");
-  background-position: center -1rem, center top;
+  background-position:
+    center -1rem,
+    center top;
   background-repeat: no-repeat, repeat-y;
   background-size: auto;
 

@@ -22,7 +22,9 @@ export const Section: ComponentConfig<SectionProps> = {
     },
   },
   render: ({ width, puck: { renderDropZone } }) => {
-    const dropZone = renderDropZone({ zone: "section" }) as unknown as ReactNode;
+    const dropZone = renderDropZone({
+      zone: "section",
+    }) as unknown as ReactNode;
 
     return <_Section width={width}>{dropZone}</_Section>;
   },

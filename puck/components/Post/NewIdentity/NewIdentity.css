@@ -48,7 +48,9 @@
 
   a:not([class]):active {
     color: var(--clbr-color-interactive-active);
-    text-decoration-color: var(--clbr-color-interactive-prose-active-decoration);
+    text-decoration-color: var(
+      --clbr-color-interactive-prose-active-decoration
+    );
     text-underline-offset: 0.39em;
   }
 }

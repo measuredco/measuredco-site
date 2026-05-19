@@ -14,8 +14,7 @@
 
 .clbr .msrd-NewIdentityProcess-inner {
   border-radius: var(--border-radius);
-  box-shadow: 0.125rem 0.125rem 1rem
-    color-mix(in srgb, #000 08%, transparent);
+  box-shadow: 0.125rem 0.125rem 1rem color-mix(in srgb, #000 08%, transparent);
   display: flex;
   flex-direction: column;
   inline-size: 100%;
@@ -36,7 +35,8 @@
   inset-inline: calc(0rem - var(--border-offset)) var(--border-offset);
   pointer-events: none;
   position: absolute;
-  transition: var(--clbr-motion-duration-50) var(--clbr-motion-easing-ease-in-out);
+  transition: var(--clbr-motion-duration-50)
+    var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-NewIdentityProcess-dots {
@@ -115,10 +115,7 @@
 
 .clbr .msrd-NewIdentityProcess-start::after,
 .clbr .msrd-NewIdentityProcess-card::after {
-  background-image: radial-gradient(
-    #e4f1fe calc(2rem / 16),
-    transparent 0
-  );
+  background-image: radial-gradient(#e4f1fe calc(2rem / 16), transparent 0);
   background-position: center;
   background-repeat: repeat-y;
   background-size: calc((10 / 16) * 1rem) calc((10 / 16) * 1rem);
@@ -160,7 +157,8 @@
   font-weight: 450;
   inline-size: min-content;
   padding: var(--clbr-spacing-vertical-250) var(--clbr-spacing-horizontal-600);
-  transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+  transition: var(--clbr-motion-duration-100)
+    var(--clbr-motion-easing-ease-in-out);
   white-space: nowrap;
 }
 
@@ -171,7 +169,8 @@
 @media (hover: hover) {
   .clbr .msrd-NewIdentityProcess-button:hover {
     background: rgb(0 0 0 / 5.5%);
-    transition: var(--clbr-motion-duration-100) background-color var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-100) background-color
+      var(--clbr-motion-easing-ease-in-out);
   }
 }
 

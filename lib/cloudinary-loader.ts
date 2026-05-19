@@ -3,8 +3,7 @@
 // generated srcset is delivered straight from Cloudinary; any non-Cloudinary
 // src is passed through untouched.
 
-const CLOUDINARY_PREFIX =
-  "https://res.cloudinary.com/measuredco/image/upload/";
+const CLOUDINARY_PREFIX = "https://res.cloudinary.com/measuredco/image/upload/";
 
 type LoaderArgs = { src: string; width: number; quality?: number };
 

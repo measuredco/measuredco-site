@@ -229,12 +229,13 @@ html {
     display: flex;
     padding-block: 0;
     padding-inline: calc(
-      var(--clbr-spacing-horizontal-800) -
-        var(--clbr-layout-border-width-default)
-    ) calc(
-      var(--clbr-spacing-horizontal-600) -
-        var(--clbr-layout-border-width-default)
-    );
+        var(--clbr-spacing-horizontal-800) -
+          var(--clbr-layout-border-width-default)
+      )
+      calc(
+        var(--clbr-spacing-horizontal-600) -
+          var(--clbr-layout-border-width-default)
+      );
     position: relative;
     text-decoration: none;
   }

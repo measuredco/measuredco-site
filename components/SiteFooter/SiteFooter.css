@@ -68,7 +68,8 @@
 
 .clbr .msrd-SiteFooter-logo:has(:focus-visible) {
   border-radius: var(--clbr-radius-2xs);
-  outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
+  outline: var(--clbr-layout-focus-ring-width) solid
+    var(--clbr-color-interactive-focus);
   outline-offset: var(--clbr-layout-focus-ring-width);
 }
 
