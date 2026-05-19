@@ -16,3 +16,7 @@
 /blog/managing-application-state-in-puck  https://puckeditor.com/blog/managing-application-state-in-puck  301
 /blog/revolutionizing-drag-and-drop-in-react-introducing-puck-018  https://puckeditor.com/blog/revolutionizing-drag-and-drop-in-react-introducing-puck-018  301
 /blog/advanced-layouts-with-puck-harnessing-grid-and-flex-containers  https://puckeditor.com/blog/advanced-layouts-with-puck-harnessing-grid-and-flex-containers  301
+
+# Canonical host: apex (measured.co). Redirect www -> apex. Kept BELOW the
+# path rules above so e.g. www/blog/puck-013 reaches puckeditor in one hop.
+https://www.measured.co/*  https://measured.co/:splat  301
