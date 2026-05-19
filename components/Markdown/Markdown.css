@@ -362,11 +362,11 @@
 
 .clbr .msrd-Markdown ol > li:has(> h2:first-child):nth-child(n + 10):before {
   font-size: var(--font-02-size);
-  line-height: calc(var(--leading-scale-05) / var(--type-scale-02));
+  line-height: 2.625;
 
   @media (min-width: 48em) {
     font-size: var(--font-04-size);
-    line-height: calc(var(--leading-scale-06) / var(--type-scale-04));
+    line-height: 2.4;
   }
 }
 
@@ -383,11 +383,11 @@
 
 .clbr .msrd-Markdown ol > li:has(> h3:first-child):nth-child(n + 10):before {
   font-size: var(--font-02-size);
-  line-height: calc(var(--leading-scale-04) / var(--type-scale-02));
+  line-height: 2.25;
 
   @media (min-width: 48em) {
     font-size: var(--font-04-size);
-    line-height: calc(var(--leading-scale-05) / var(--type-scale-04));
+    line-height: 2.1;
   }
 }
 
