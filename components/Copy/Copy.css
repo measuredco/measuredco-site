@@ -15,8 +15,11 @@
 
 .clbr .msrd-Copy::before {
   block-size: var(--clbr-layout-icon-size-md);
-  border: var(--clbr-layout-border-width-thick) solid var(--clbr-color-interactive-default);
-  border-radius: calc(var(--clbr-layout-icon-size-md) * var(--clbr-radius-ratio-default));
+  border: var(--clbr-layout-border-width-thick) solid
+    var(--clbr-color-interactive-default);
+  border-radius: calc(
+    var(--clbr-layout-icon-size-md) * var(--clbr-radius-ratio-default)
+  );
   content: "";
   inline-size: var(--clbr-layout-icon-size-md);
   inset-block-end: calc(
@@ -31,8 +34,11 @@
 .clbr .msrd-Copy::after {
   background-color: var(--clbr-color-background-panel);
   block-size: var(--clbr-layout-icon-size-md);
-  border: var(--clbr-layout-border-width-thick) solid var(--clbr-color-interactive-default);
-  border-radius: calc(var(--clbr-layout-icon-size-md) * var(--clbr-radius-ratio-default));
+  border: var(--clbr-layout-border-width-thick) solid
+    var(--clbr-color-interactive-default);
+  border-radius: calc(
+    var(--clbr-layout-icon-size-md) * var(--clbr-radius-ratio-default)
+  );
   content: "";
   inline-size: var(--clbr-layout-icon-size-md);
   inset-block-end: var(--icon-offset);
@@ -55,9 +61,11 @@
 
 .clbr .msrd-Copy:focus-visible {
   border-radius: calc(
-    (var(--button-size) + var(--clbr-layout-focus-ring-offset-inset)) * var(--clbr-radius-ratio-default)
+    (var(--button-size) + var(--clbr-layout-focus-ring-offset-inset)) *
+      var(--clbr-radius-ratio-default)
   );
-  outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
+  outline: var(--clbr-layout-focus-ring-width) solid
+    var(--clbr-color-interactive-focus);
   outline-offset: var(--clbr-layout-focus-ring-offset-inset);
 }
 
@@ -76,14 +84,20 @@
   .clbr .msrd-Copy:hover .msrd-Copy-text {
     inset-inline-start: var(--button-size);
     opacity: 1;
-    transition: var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
-      var(--clbr-motion-duration-200) inset-inline-start var(--clbr-motion-easing-ease-in-out);
+    transition:
+      var(--clbr-motion-duration-100) opacity
+        var(--clbr-motion-easing-ease-in-out),
+      var(--clbr-motion-duration-200) inset-inline-start
+        var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
     .clbr .msrd-Copy:hover .msrd-Copy-text {
-      transition: var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
-        var(--clbr-motion-duration-0) inset-inline-start var(--clbr-motion-easing-ease-in-out);
+      transition:
+        var(--clbr-motion-duration-100) opacity
+          var(--clbr-motion-easing-ease-in-out),
+        var(--clbr-motion-duration-0) inset-inline-start
+          var(--clbr-motion-easing-ease-in-out);
     }
   }
 }

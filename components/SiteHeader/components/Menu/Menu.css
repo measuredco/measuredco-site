@@ -3,7 +3,8 @@
   inset-block: var(--clbr-spacing-vertical-1000) 0;
   inset-inline: 0;
   overflow-block: auto;
-  padding-block: var(--clbr-spacing-vertical-400) var(--clbr-spacing-vertical-700);
+  padding-block: var(--clbr-spacing-vertical-400)
+    var(--clbr-spacing-vertical-700);
   padding-inline: var(--clbr-spacing-horizontal-600);
   position: fixed;
 }

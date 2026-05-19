@@ -47,11 +47,20 @@
 
 @media (hover: hover) {
   .clbr .msrd-NewIdentityContact-secondary:hover {
-    background: color-mix(in srgb, var(--clbr-color-brand-primary) 7.5%, transparent);
-    transition: var(--clbr-motion-duration-100) background-color var(--clbr-motion-easing-ease-in-out);
+    background: color-mix(
+      in srgb,
+      var(--clbr-color-brand-primary) 7.5%,
+      transparent
+    );
+    transition: var(--clbr-motion-duration-100) background-color
+      var(--clbr-motion-easing-ease-in-out);
   }
 }
 
 .clbr .msrd-NewIdentityContact-secondary:active {
-  background: color-mix(in srgb, var(--clbr-color-brand-primary) 15%, transparent);
+  background: color-mix(
+    in srgb,
+    var(--clbr-color-brand-primary) 15%,
+    transparent
+  );
 }

@@ -116,7 +116,7 @@ const GridItem = forwardRef<HTMLDivElement, PropsWithChildren<GridItemProps>>(
       rowStart,
       isDebugVisible,
     },
-    ref
+    ref,
   ) => {
     return (
       <div
@@ -142,7 +142,7 @@ const GridItem = forwardRef<HTMLDivElement, PropsWithChildren<GridItemProps>>(
         {children}
       </div>
     );
-  }
+  },
 );
 
 Grid.Item = GridItem;

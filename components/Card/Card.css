@@ -20,14 +20,16 @@
 }
 
 .clbr .msrd-Card::after {
-  border: solid var(--clbr-layout-border-width-default) var(--clbr-color-border-brand);
+  border: solid var(--clbr-layout-border-width-default)
+    var(--clbr-color-border-brand);
   border-radius: var(--clbr-radius-lg);
   content: "";
   inset-block: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
   inset-inline: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
   pointer-events: none;
   position: absolute;
-  transition: var(--clbr-motion-duration-50) var(--clbr-motion-easing-ease-in-out);
+  transition: var(--clbr-motion-duration-50)
+    var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-Card a {
@@ -46,7 +48,8 @@
 }
 
 .clbr .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible) {
-  outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
+  outline: var(--clbr-layout-focus-ring-width) solid
+    var(--clbr-color-interactive-focus);
   outline-offset: var(--clbr-effect-stroke-inset);
 }
 
@@ -62,26 +65,33 @@
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover::after {
     inset: 0;
-    transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
     .clbr .msrd-Card:has(.msrd-Card-heading a):hover::after {
-      inset-block: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
-      inset-inline: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
+      inset-block: var(--clbr-effect-stroke-outset)
+        var(--clbr-effect-stroke-inset);
+      inset-inline: var(--clbr-effect-stroke-outset)
+        var(--clbr-effect-stroke-inset);
     }
   }
 }
 
 .clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
-  inset-block: calc(var(--clbr-effect-stroke-inset) / 2) calc(var(--clbr-effect-stroke-outset) / 2);
-  inset-inline: calc(var(--clbr-effect-stroke-inset) / 2) calc(var(--clbr-effect-stroke-outset) / 2);
+  inset-block: calc(var(--clbr-effect-stroke-inset) / 2)
+    calc(var(--clbr-effect-stroke-outset) / 2);
+  inset-inline: calc(var(--clbr-effect-stroke-inset) / 2)
+    calc(var(--clbr-effect-stroke-outset) / 2);
 }
 
 @media (prefers-reduced-motion) {
   .clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
-    inset-block: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
-    inset-inline: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
+    inset-block: var(--clbr-effect-stroke-outset)
+      var(--clbr-effect-stroke-inset);
+    inset-inline: var(--clbr-effect-stroke-outset)
+      var(--clbr-effect-stroke-inset);
   }
 }
 
@@ -150,24 +160,29 @@
   }
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before {
-    transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-in-out);
   }
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
-    transition: var(--clbr-motion-duration-200) var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-200)
+      var(--clbr-motion-easing-ease-in-out);
   }
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
-    transition: var(--clbr-motion-duration-300) var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-300)
+      var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
     .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
-      transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+      transition: var(--clbr-motion-duration-100)
+        var(--clbr-motion-easing-ease-in-out);
     }
 
     .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
-      transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+      transition: var(--clbr-motion-duration-100)
+        var(--clbr-motion-easing-ease-in-out);
     }
   }
 }
@@ -233,8 +248,10 @@
     inset-inline-start: var(--arrow-offset);
     opacity: 1;
     transition:
-      var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
-      var(--clbr-motion-duration-200) inset-inline-start var(--clbr-motion-easing-ease-in-out);
+      var(--clbr-motion-duration-100) opacity
+        var(--clbr-motion-easing-ease-in-out),
+      var(--clbr-motion-duration-200) inset-inline-start
+        var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
@@ -243,8 +260,10 @@
       .msrd-Card-note
       span::after {
       transition:
-        var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
-        var(--clbr-motion-duration-0) inset-inline-start var(--clbr-motion-easing-ease-in-out);
+        var(--clbr-motion-duration-100) opacity
+          var(--clbr-motion-easing-ease-in-out),
+        var(--clbr-motion-duration-0) inset-inline-start
+          var(--clbr-motion-easing-ease-in-out);
     }
   }
 }

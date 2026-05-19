@@ -38,7 +38,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -58,7 +58,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -78,7 +78,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -98,7 +98,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -118,7 +118,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -138,7 +138,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -158,7 +158,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -178,7 +178,7 @@ export const logosMapping: Record<string, LogoRenderer> = {
             fill="currentColor"
           />
         </svg>,
-        href
+        href,
       )}
     </li>
   ),
@@ -216,13 +216,13 @@ const Logos = ({ children }: { children: ReactNode }) => {
     };
 
     const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
+      "(prefers-reduced-motion: reduce)",
     );
     const smallScreen = window.matchMedia("(max-width: 76.25em)");
 
     const addMediaQueryListener = (
       mediaQueryList: MediaQueryList,
-      handler: () => void
+      handler: () => void,
     ) => {
       mediaQueryList.addEventListener("change", handler);
       return () => mediaQueryList.removeEventListener("change", handler);
@@ -230,11 +230,11 @@ const Logos = ({ children }: { children: ReactNode }) => {
 
     const removePrefersReducedMotionListener = addMediaQueryListener(
       prefersReducedMotion,
-      updateLinkTabIndex
+      updateLinkTabIndex,
     );
     const removeSmallScreenListener = addMediaQueryListener(
       smallScreen,
-      updateLinkTabIndex
+      updateLinkTabIndex,
     );
 
     updateLinkTabIndex();
