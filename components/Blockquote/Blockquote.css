@@ -1,6 +1,6 @@
 .clbr .msrd-Blockquote {
   font-size: var(--clbr-typography-type-step-400-font-size);
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-400-line-height);
   margin-block: var(--clbr-spacing-vertical-800);
 }
 
@@ -11,7 +11,7 @@
 @media (min-width: 48em) {
   .clbr .msrd-Blockquote {
     font-size: var(--clbr-typography-type-step-500-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-500-line-height);
   }
 }
 
@@ -45,7 +45,7 @@
 @media (min-width: 48em) {
   .clbr .msrd-Blockquote-cite {
     font-size: var(--clbr-typography-type-step-300-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-300-line-height);
   }
 }
 

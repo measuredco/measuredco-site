@@ -117,7 +117,7 @@ html {
 .clbr .msrd-SiteHeader-navItems {
   display: table;
   font-size: var(--clbr-typography-type-step-500-font-size);
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-500-line-height);
   list-style: none;
   margin-block: 0;
   padding-inline-start: 0;

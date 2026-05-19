@@ -62,7 +62,7 @@
 }
 
 .clbr .msrd-NewIdentityProcess-steps {
-  font-size: var(--clbr-typography-type-step-100-font-size);
+  font-size: var(--clbr-typography-type-step-150-font-size);
   line-height: var(--clbr-typography-type-step-150-line-height);
   list-style: none;
   margin-block: 0;
@@ -141,7 +141,7 @@
 }
 
 .clbr .msrd-NewIdentityProcess-heading {
-  font-size: var(--clbr-typography-type-step-100-font-size);
+  font-size: var(--clbr-typography-type-step-150-font-size);
   font-weight: 550;
   line-height: var(--clbr-typography-type-step-150-line-height);
   margin-block-end: var(--clbr-spacing-vertical-500);

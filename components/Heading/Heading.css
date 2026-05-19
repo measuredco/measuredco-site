@@ -14,46 +14,46 @@
 @media (min-width: 48em) {
   .clbr .msrd-Heading--6 {
     font-size: var(--clbr-typography-type-step-300-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-300-line-height);
   }
 }
 
 .clbr .msrd-Heading--5 {
   font-size: var(--clbr-typography-type-step-300-font-size);
   font-weight: 500;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-300-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--5 {
     font-size: var(--clbr-typography-type-step-400-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-400-line-height);
   }
 }
 
 .clbr .msrd-Heading--4 {
   font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 466;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-400-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--4 {
     font-size: var(--clbr-typography-type-step-500-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-500-line-height);
   }
 }
 
 .clbr .msrd-Heading--3 {
   font-size: var(--clbr-typography-type-step-500-font-size);
   font-weight: 433;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-500-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Heading--3 {
     font-size: var(--clbr-typography-type-step-600-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-600-line-height);
   }
 }
 
