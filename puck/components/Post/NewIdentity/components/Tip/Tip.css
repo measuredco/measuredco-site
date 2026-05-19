@@ -1,4 +1,4 @@
-.msrd .msrd-NewIdentityTip {
+.clbr .msrd-NewIdentityTip {
   --image-size: calc(119rem / 16);
   align-items: center;
   display: grid;
@@ -21,17 +21,17 @@
   }
 }
 
-.msrd .msrd-NewIdentityTip-image {
+.clbr .msrd-NewIdentityTip-image {
   border-radius: calc(var(--image-size) * var(--corner-ratio-square));
   box-shadow: var(--box-shadow-light-source);
 }
 
-.msrd .msrd-NewIdentityTip-image img {
+.clbr .msrd-NewIdentityTip-image img {
   border-radius: calc(var(--image-size) * var(--corner-ratio-square));
   box-shadow: var(--box-shadow);
 }
 
-.msrd .msrd-NewIdentityTip h3 {
+.clbr .msrd-NewIdentityTip h3 {
   max-inline-size: 9em;
 
   @media (min-width: 48em) {
@@ -39,7 +39,7 @@
   }
 }
 
-.msrd p.msrd-NewIdentityTip-description {
+.clbr p.msrd-NewIdentityTip-description {
   grid-column: span 2;
 
   @media (min-width: 48em) {

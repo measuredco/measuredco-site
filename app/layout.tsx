@@ -1,38 +1,12 @@
 /* eslint-disable @next/next/no-head-element */
 import { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import { ReactNode } from "react";
 
+import "@measured/calibrate-assets/fonts.css";
+import "@measured/calibrate-core/styles.css";
 import "../components/system.css";
 import { Base } from "../components";
 import content from "../content.json";
-
-const robotoMono = Roboto_Mono({
-  subsets: ["latin"],
-  variable: "--font-next-monospaced",
-});
-
-// const inter = Inter({
-//   subsets: ["latin"],
-//   variable: "--font-next",
-// });
-
-const inter = localFont({
-  src: [
-    {
-      path: "./InterVariable.subset.woff2",
-      style: "normal",
-      weight: "100 900",
-    },
-    {
-      path: "./InterVariable-Italic.subset.woff2",
-      style: "italic",
-      weight: "100 900",
-    },
-  ],
-  variable: "--font-next",
-});
 
 const { siteName, title } = content;
 
@@ -45,11 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      className={`${inter.variable} ${robotoMono.variable}`}
-      lang="en-gb"
-      prefix="og: https://ogp.me/ns#"
-    >
+    <html lang="en-gb" prefix="og: https://ogp.me/ns#">
       <head>
         <meta
           httpEquiv="delegate-ch"
@@ -80,7 +50,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
-      <Base body>{children}</Base>
+      <body>
+        <Base>{children}</Base>
+      </body>
     </html>
   );
 }

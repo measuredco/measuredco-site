@@ -1,4 +1,4 @@
-.msrd .msrd-Paragraph {
+.clbr .msrd-Paragraph {
   --color-interactive-prose: var(--color-interactive);
   --color-interactive-visited: var(--color-interactive);
   font-size: var(--font-03-size);
@@ -7,38 +7,38 @@
   text-wrap: pretty;
 }
 
-.msrd .msrd-Paragraph--prose {
+.clbr .msrd-Paragraph--prose {
   --color-interactive-prose: inherit;
   --color-interactive-visited: inherit;
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Paragraph {
+  .clbr .msrd-Paragraph {
     font-size: var(--font-04-size);
     line-height: var(--font-04-line-height-large);
   }
 }
 
-.msrd .msrd-Paragraph--small {
+.clbr .msrd-Paragraph--small {
   font-size: var(--font-02-size);
   line-height: var(--font-02-line-height);
 }
 
 /* @media (min-width: 48em) {
-  .msrd .msrd-Paragraph--small {
+  .clbr .msrd-Paragraph--small {
     font-size: var(--font-03-size);
     line-height: var(--font-03-line-height);
   }
 } */
 
-.msrd .msrd-Paragraph--large {
+.clbr .msrd-Paragraph--large {
   --color-text-prose: var(--color-text);
   font-size: var(--font-04-size);
   line-height: var(--font-04-line-height);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Paragraph--large {
+  .clbr .msrd-Paragraph--large {
     font-size: var(--font-05-size);
     line-height: var(--font-05-line-height);
   }
@@ -56,14 +56,14 @@
   text-align: end;
 }
 
-.msrd .msrd-Paragraph--measured {
+.clbr .msrd-Paragraph--measured {
   max-inline-size: var(--measured);
 }
 
-.msrd .msrd-Paragraph--measured.msrd-Paragraph--large {
+.clbr .msrd-Paragraph--measured.msrd-Paragraph--large {
   max-inline-size: calc(var(--measured) * 0.9);
 }
 
-.msrd .msrd-Paragraph--muted {
+.clbr .msrd-Paragraph--muted {
   --color-text-prose: var(--color-text-muted);
 }

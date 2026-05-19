@@ -1,4 +1,4 @@
-.msrd .msrd-Section {
+.clbr .msrd-Section {
   container-type: inline-size;
   margin-inline: auto;
   max-inline-size: var(--section-max-width);
@@ -6,15 +6,15 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Section {
+  .clbr .msrd-Section {
     padding-inline: var(--space-horizontal-07);
   }
 }
 
-.msrd .msrd-Section--full {
+.clbr .msrd-Section--full {
   padding-inline: 0;
 }
 
-.msrd .msrd-Section--full {
+.clbr .msrd-Section--full {
   max-inline-size: 100%;
 }

@@ -1,84 +1,10 @@
-.msrd .msrd-Surface--dark,
-.msrd .msrd-Surface--graphicDark {
-  --color-brand: var(--color-azure-07);
-  --color-rule: var(--color-azure-04);
+/*
+ * The `inverse` surface tokens (background/text/etc.) are now provided by
+ * Calibrate via `data-clbr-surface`. This file only carries the decorative
+ * graphic background used by the former `graphicDark` surface.
+ */
 
-  --color-background-emphasis: var(--color-azure-02);
-  --color-background: var(--color-azure-01);
-  --color-text-contrast: var(--color-azure-01);
-  --color-background-highlight: color-mix(
-    in srgb,
-    var(--color-white) 8%,
-    transparent
-  );
-  --color-border-light: color-mix(in srgb, var(--color-white) 8%, transparent);
-  --color-border: color-mix(in srgb, var(--color-white) 16%, transparent);
-  --color-non-muted: color-mix(in srgb, var(--color-white) 40%, transparent);
-  --color-text-muted: color-mix(in srgb, var(--color-white) 56%, transparent);
-  --color-text-prose: color-mix(in srgb, var(--color-white) 88%, transparent);
-  --color-text: color-mix(in srgb, var(--color-white) 94%, transparent);
-
-  --color-interactive: var(--color-brand);
-  --color-interactive-hover: var(--color-azure-08);
-  --color-interactive-focus: var(--color-rose-07);
-  --color-interactive-active: var(--color-azure-09);
-  --color-interactive-visited: var(--color-violet-07);
-
-  --color-interactive-neutral: var(--color-text);
-  --color-interactive-neutral-hover: color-mix(
-    in srgb,
-    var(--color-white) 80%,
-    transparent
-  );
-  --color-interactive-neutral-active: color-mix(
-    in srgb,
-    var(--color-white) 68%,
-    transparent
-  );
-
-  --color-interactive-prose: var(--color-interactive);
-  --color-interactive-prose-rule-active: var(--color-rule);
-
-  --color-interactive-contrast: var(--color-text-contrast);
-
-  --box-shadow: 0.125rem 0.125rem 0.25rem
-    color-mix(in srgb, var(--color-black) 08%, transparent);
-  --box-shadow-light-source: none;
-
-  --color-button-background: var(--color-background-emphasis);
-
-  --color-card-background: var(--color-background-emphasis);
-  --color-card-border: var(--color-rule);
-  --color-card-dots-hover: var(--color-rule);
-  --color-card-dots: var(--color-azure-03);
-  --color-card-interactive: var(--color-interactive);
-  --color-card-text: var(--color-text);
-
-  --color-code-border: var(--color-rule);
-  --color-code-highlight-border: transparent;
-
-  --color-copy-interactive: var(--color-interactive);
-  --color-copy-interactive-hover: var(--color-interactive-hover);
-  --color-copy-text: var(--color-interactive-neutral);
-
-  --color-logo: var(--color-white);
-  --color-logo-neutral: var(--color-white);
-
-  @media (forced-colors: active) {
-    --color-logo-neutral: CanvasText;
-  }
-
-  --color-site-header-background: transparent;
-  --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-rule);
-}
-
-.msrd .msrd-Surface--dark,
-.msrd .msrd-Surface--graphicDark {
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
-
-.msrd .msrd-Surface--graphicDark {
+.clbr .msrd-Surface-graphic {
   background-attachment: fixed;
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png),
     url(https://res.cloudinary.com/measuredco/image/upload/v1732635074/site/site-background-repeat_kjbjx5.png);
@@ -92,7 +18,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Surface--graphicDark {
+  .clbr .msrd-Surface-graphic {
     background-position: center top;
   }
 }

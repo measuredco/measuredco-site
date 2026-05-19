@@ -4,130 +4,6 @@
 
 :root {
   /*
-   * Color palette
-   */
-
-  --color-rose-01: #550532;
-  --color-rose-02: #700b43;
-  --color-rose-03: #8b1254;
-  --color-rose-04: #a81a66;
-  --color-rose-05: #bc397d;
-  --color-rose-06: #d15294;
-  --color-rose-07: #e56aac;
-  --color-rose-08: #ec89bc;
-  --color-rose-09: #f1a5cc;
-  --color-rose-10: #f6c1dc;
-  --color-rose-11: #f9ddec;
-  --color-rose-12: #fdf2f8;
-
-  --color-violet-01: #300187;
-  --color-violet-02: #3c01ad;
-  --color-violet-03: #551abc;
-  --color-violet-04: #6c2dcb;
-  --color-violet-05: #813eda;
-  --color-violet-06: #a35ff0;
-  --color-violet-07: #b776fb;
-  --color-violet-08: #c790fc;
-  --color-violet-09: #d5aafd;
-  --color-violet-10: #e2c4fe;
-  --color-violet-11: #eedefe;
-  --color-violet-12: #f9f4ff;
-
-  --color-azure-01: #031f60;
-  --color-azure-02: #042467;
-  --color-azure-03: #083c8a;
-  --color-azure-04: #0158ad;
-  --color-azure-05: #1666bb;
-  --color-azure-06: #2a84e1;
-  --color-azure-07: #3598f8;
-  --color-azure-08: #6db5f8;
-  --color-azure-09: #aed2fb;
-  --color-azure-10: #e4f1fe;
-  --color-azure-11: #e9f4fe;
-  --color-azure-12: #eef7fe;
-
-  --color-cyan-01: #00161a;
-  --color-cyan-02: #04242a;
-  --color-cyan-03: #00333c;
-  --color-cyan-04: #014a53;
-  --color-cyan-05: #03636b;
-  --color-cyan-06: #048e96;
-  --color-cyan-07: #05a5ad;
-  --color-cyan-08: #55b7bd;
-  --color-cyan-09: #80c8cd;
-  --color-cyan-10: #a5dadd;
-  --color-cyan-11: #c9eced;
-  --color-cyan-12: #eaf8f9;
-
-  --color-green-01: #133100;
-  --color-green-02: #1d4204;
-  --color-green-03: #285303;
-  --color-green-04: #336502;
-  --color-green-05: #3e7b02;
-  --color-green-06: #499103;
-  --color-green-07: #55a803;
-  --color-green-08: #7ab945;
-  --color-green-09: #9bca71;
-  --color-green-10: #bbda9b;
-  --color-green-11: #d9ebc5;
-  --color-green-12: #f0f7e8;
-
-  --color-yellow-01: #342900;
-  --color-yellow-02: #453803;
-  --color-yellow-03: #574803;
-  --color-yellow-04: #6a5801;
-  --color-yellow-05: #816b01;
-  --color-yellow-06: #997e02;
-  --color-yellow-07: #b19202;
-  --color-yellow-08: #c2a643;
-  --color-yellow-09: #d2ba6e;
-  --color-yellow-10: #e0cf98;
-  --color-yellow-11: #ece5c2;
-  --color-yellow-12: #f7f6e9;
-
-  --color-orange-01: #4c1a00;
-  --color-orange-02: #612804;
-  --color-orange-03: #773604;
-  --color-orange-04: #8e4501;
-  --color-orange-05: #ad5601;
-  --color-orange-06: #cb6503;
-  --color-orange-07: #ea7407;
-  --color-orange-08: #f89435;
-  --color-orange-09: #ffba7d;
-  --color-orange-10: #ffdfc1;
-  --color-orange-11: #ffe9d4;
-  --color-orange-12: #fef4e8;
-
-  --color-red-01: #5d0000;
-  --color-red-02: #790304;
-  --color-red-03: #960706;
-  --color-red-04: #b40d05;
-  --color-red-05: #cc3024;
-  --color-red-06: #e44a3f;
-  --color-red-07: #fb625b;
-  --color-red-08: #ff847a;
-  --color-red-09: #ffa49a;
-  --color-red-10: #ffc1ba;
-  --color-red-11: #ffdcda;
-  --color-red-12: #fff3f2;
-
-  --color-grey-01: #0b0c0d;
-  --color-grey-02: #0e0f10;
-  --color-grey-03: #191a1a;
-  --color-grey-04: #232424;
-  --color-grey-05: #434444;
-  --color-grey-06: #656667;
-  --color-grey-07: #898a8b;
-  --color-grey-08: #a6a7a8;
-  --color-grey-09: #c8c9ca;
-  --color-grey-10: #e3e4e5;
-  --color-grey-11: #f2f3f4;
-  --color-grey-12: #f9fafb;
-
-  --color-black: #000000;
-  --color-white: #ffffff;
-
-  /*
    * Space scales
    */
 
@@ -152,18 +28,36 @@
   /* Horizontal space derived from base font-size of 16 */
   --space-scale-horizontal: 16;
 
-  --space-scale-horizontal-01: calc(var(--space-scale-horizontal) * 0.125); /* 2 */
-  --space-scale-horizontal-02: calc(var(--space-scale-horizontal) * 0.25); /* 4 */
-  --space-scale-horizontal-03: calc(var(--space-scale-horizontal) * 0.5); /* 8 */
-  --space-scale-horizontal-04: calc(var(--space-scale-horizontal) * 0.75); /* 12 */
+  --space-scale-horizontal-01: calc(
+    var(--space-scale-horizontal) * 0.125
+  ); /* 2 */
+  --space-scale-horizontal-02: calc(
+    var(--space-scale-horizontal) * 0.25
+  ); /* 4 */
+  --space-scale-horizontal-03: calc(
+    var(--space-scale-horizontal) * 0.5
+  ); /* 8 */
+  --space-scale-horizontal-04: calc(
+    var(--space-scale-horizontal) * 0.75
+  ); /* 12 */
   --space-scale-horizontal-05: calc(var(--space-scale-horizontal) * 1); /* 16 */
-  --space-scale-horizontal-06: calc(var(--space-scale-horizontal) * 1.5); /* 24 */
+  --space-scale-horizontal-06: calc(
+    var(--space-scale-horizontal) * 1.5
+  ); /* 24 */
   --space-scale-horizontal-07: calc(var(--space-scale-horizontal) * 2); /* 32 */
-  --space-scale-horizontal-08: calc(var(--space-scale-horizontal) * 2.5); /* REMOVE */
+  --space-scale-horizontal-08: calc(
+    var(--space-scale-horizontal) * 2.5
+  ); /* REMOVE */
   --space-scale-horizontal-09: calc(var(--space-scale-horizontal) * 3); /* 48 */
-  --space-scale-horizontal-10: calc(var(--space-scale-horizontal) * 3.5); /* REMOVE */
-  --space-scale-horizontal-11: calc(var(--space-scale-horizontal) * 4); /* REMOVE */
-  --space-scale-horizontal-12: calc(var(--space-scale-horizontal) * 4.5); /* 72 */
+  --space-scale-horizontal-10: calc(
+    var(--space-scale-horizontal) * 3.5
+  ); /* REMOVE */
+  --space-scale-horizontal-11: calc(
+    var(--space-scale-horizontal) * 4
+  ); /* REMOVE */
+  --space-scale-horizontal-12: calc(
+    var(--space-scale-horizontal) * 4.5
+  ); /* 72 */
 
   /*
    * Typographic scales
@@ -266,19 +160,6 @@
     var(--leading-scale-11) / var(--type-scale-13)
   ); /* 1 */
 
-  --font-stack: Inter, system-ui, sans-serif;
-
-  --font-family: var(--font-next, var(--font-stack));
-
-  --font-stack-monospaced:
-    "Roboto Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
-    Consolas, "DejaVu Sans Mono", monospace;
-
-  --font-family-monospaced: var(
-    --font-next-monospaced,
-    var(--font-stack-monospaced)
-  );
-
   /*
    * Space tokens
    */
@@ -363,42 +244,64 @@
   --easing-cubic-bezier-ease-in: cubic-bezier(0.44, 0, 1, 1);
   --easing-cubic-bezier-ease-out: cubic-bezier(0, 0, 0.55, 0.94);
   --easing-cubic-bezier-reverse-easy-ease: cubic-bezier(0.96, 0.03, 0.53, 0.96);
+}
 
+/*
+ * Color tokens
+ *
+ * Sourced from Calibrate ('--clbr-*'). Calibrate owns light/dark and
+ * surface inversion: it redefines its '--clbr-color-*' tokens at the root
+ * and at every '[data-clbr-surface]' boundary. Because a CSS custom
+ * property inherits its substituted value, these aliases are re-declared at
+ * each surface boundary too, so 'var(--clbr-*)' re-resolves in context.
+ */
+
+.clbr,
+.clbr [data-clbr-surface] {
   /*
-   * Color tokens
+   * Font families are sourced from Calibrate, whose
+   * `--clbr-typography-font-family-*` tokens only resolve under `.clbr`
+   * (not `:root`), so these aliases must live here.
    */
+  --font-family: var(--clbr-typography-font-family-default);
+  --font-family-monospaced: var(--clbr-typography-font-family-mono);
 
-  --color-brand: var(--color-azure-04);
-  --color-rule: var(--color-azure-08);
+  --color-brand: var(--clbr-color-brand-primary);
+  --color-rule: var(--clbr-color-border-brand);
 
-  --color-background-emphasis: var(--color-white);
-  --color-background: var(--color-grey-12);
-  --color-text-contrast: var(--color-grey-12);
-  --color-background-highlight: var(--color-grey-11);
-  --color-border-light: var(--color-grey-10);
-  --color-border: var(--color-grey-09);
-  --color-non-text-muted: var(--color-grey-07);
-  --color-text-muted: var(--color-grey-06);
-  --color-text-prose: var(--color-grey-02);
-  --color-text: var(--color-grey-01);
+  --color-background-emphasis: var(--clbr-color-background-panel);
+  --color-background: var(--clbr-color-background-default);
+  --color-text-contrast: var(--clbr-color-foreground-contrast);
+  --color-background-highlight: var(--clbr-color-background-subtle);
+  --color-border-light: var(--clbr-color-border-subtle);
+  --color-border: var(--clbr-color-border-default);
+  --color-non-text-muted: var(--clbr-color-foreground-muted-non-text);
+  --color-text-muted: var(--clbr-color-foreground-muted-text);
+  --color-text-prose: var(--clbr-color-foreground-prose);
+  --color-text: var(--clbr-color-foreground-default);
 
-  --color-interactive: var(--color-brand);
-  --color-interactive-hover: var(--color-azure-03);
-  --color-interactive-focus: var(--color-rose-06);
-  --color-interactive-active: var(--color-azure-02);
-  --color-interactive-visited: var(--color-violet-05);
+  --color-interactive: var(--clbr-color-interactive-default);
+  --color-interactive-hover: var(--clbr-color-interactive-hover);
+  --color-interactive-focus: var(--clbr-color-interactive-focus);
+  --color-interactive-active: var(--clbr-color-interactive-active);
+  --color-interactive-visited: var(--clbr-color-interactive-visited);
 
-  --color-interactive-neutral: var(--color-text);
-  --color-interactive-neutral-hover: var(--color-interactive);
-  --color-interactive-neutral-active: var(--color-interactive-active);
+  --color-interactive-neutral: var(--clbr-color-interactive-neutral-default);
+  --color-interactive-neutral-hover: var(
+    --clbr-color-interactive-neutral-hover
+  );
+  --color-interactive-neutral-active: var(
+    --clbr-color-interactive-neutral-active
+  );
 
-  --color-interactive-prose: var(--color-azure-05);
-  --color-interactive-prose-rule-active: var(--color-interactive-active);
+  --color-interactive-prose: var(--clbr-color-interactive-prose-default);
+  --color-interactive-prose-rule-active: var(
+    --clbr-color-interactive-prose-active-decoration
+  );
 
   --color-interactive-contrast: var(--color-text-contrast);
 
-  --box-shadow: 0.125rem 0.125rem 0.25rem
-    color-mix(in srgb, var(--color-black) 08%, transparent);
+  --box-shadow: var(--clbr-effect-shadow-default);
   --box-shadow-light-source: none;
 
   --color-button-background: var(--color-background-emphasis);
@@ -417,85 +320,23 @@
   --color-copy-interactive-hover: var(--color-interactive-hover);
   --color-copy-text: var(--color-text);
 
-  --color-logo: var(--color-brand);
-  --color-logo-neutral: var(--color-black);
-
-  @media (forced-colors: active) {
-    --color-logo: CanvasText;
-    --color-logo-neutral: CanvasText;
-  }
+  --color-logo: var(--clbr-color-logo-default);
+  --color-logo-neutral: var(--clbr-color-logo-neutral);
 
   --color-site-header-background: var(--color-background);
   --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-border-light);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-brand: var(--color-azure-07);
-    --color-rule: var(--color-azure-03);
+/*
+ * Brand / inverse surfaces (e.g. the homepage graphic surface) keep the
+ * sticky header transparent until the page scrolls. Restored from the
+ * pre-Calibrate Surface behaviour, re-homed onto `data-clbr-surface`.
+ * Equal specificity to the alias block above, declared after it so it
+ * wins on these surfaces; default surfaces keep the solid background.
+ */
 
-    --color-background-emphasis: var(--color-grey-01);
-    --color-background: var(--color-grey-02);
-    --color-text-contrast: var(--color-grey-02);
-    --color-background-highlight: var(--color-grey-03);
-    --color-border-light: var(--color-grey-04);
-    --color-border: var(--color-grey-05);
-    --color-non-text-muted: var(--color-grey-06);
-    --color-text-muted: var(--color-grey-07);
-    --color-text-prose: var(--color-grey-10);
-    --color-text: var(--color-grey-11);
-
-    --color-interactive: var(--color-brand);
-    --color-interactive-hover: var(--color-azure-06);
-    --color-interactive-focus: var(--color-rose-05);
-    --color-interactive-active: var(--color-azure-05);
-    --color-interactive-visited: var(--color-violet-06);
-
-    --color-interactive-neutral: var(--color-grey-12);
-    --color-interactive-neutral-hover: var(--color-grey-09);
-    --color-interactive-neutral-active: var(--color-grey-08);
-
-    --color-interactive-prose: var(--color-interactive-hover);
-    --color-interactive-prose-rule-active: var(--color-rule);
-
-    --color-interactive-contrast: var(--color-text-contrast);
-
-    --box-shadow: 0.125rem 0.125rem 0.25rem
-      color-mix(in srgb, var(--color-black) 92%, transparent);
-    --box-shadow-light-source: none;
-
-    --color-button-background: var(--color-background-emphasis);
-
-    --color-card-background: var(--color-background-emphasis);
-    --color-card-border: var(--color-rule);
-    --color-card-dots-hover: var(--color-rule);
-    --color-card-dots: var(--color-border-light);
-    --color-card-interactive: var(--color-interactive);
-    --color-card-text: var(--color-text);
-
-    --color-code-border: var(--color-rule);
-    --color-code-highlight-border: var(--color-border);
-
-    --color-copy-interactive: var(--color-interactive);
-    --color-copy-interactive-hover: var(--color-interactive-hover);
-    --color-copy-text: var(--color-text);
-
-    --color-logo: var(--color-brand);
-    --color-logo-neutral: var(--color-white);
-
-    @media (forced-colors: active) {
-      --color-logo: CanvasText;
-      --color-logo-neutral: CanvasText;
-    }
-
-    --color-site-header-background: var(--color-background);
-    --site-header-box-shadow: 0 0 0 var(--border-width)
-      var(--color-border-light);
-  }
-}
-
-@supports (font-variation-settings: normal) {
-  :root {
-    --font-stack: InterVariable, system-ui, sans-serif;
-  }
+.clbr [data-clbr-surface="brand"],
+.clbr [data-clbr-surface="inverse"] {
+  --color-site-header-background: transparent;
+  --site-header-box-shadow: 0 0 0 var(--border-width) var(--color-rule);
 }

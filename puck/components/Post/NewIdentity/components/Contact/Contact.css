@@ -1,4 +1,4 @@
-.msrd .msrd-NewIdentityContact {
+.clbr .msrd-NewIdentityContact {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-vertical) var(--space-horizontal);
@@ -6,8 +6,8 @@
   margin: 0 auto;
 }
 
-.msrd .msrd-NewIdentityContact-primary,
-.msrd .msrd-NewIdentityContact-secondary {
+.clbr .msrd-NewIdentityContact-primary,
+.clbr .msrd-NewIdentityContact-secondary {
   --border-width: calc((2 / 16) * 1rem);
   border: calc(2rem / 16) solid var(--color-brand);
   border-radius: var(--border-radius-button);
@@ -20,36 +20,36 @@
   text-wrap: nowrap;
 }
 
-.msrd .msrd-NewIdentityContact-primary {
+.clbr .msrd-NewIdentityContact-primary {
   background-color: var(--color-interactive);
   color: var(--color-text-contrast);
 }
 
 @media (hover: hover) {
-  .msrd .msrd-NewIdentityContact-primary:hover {
+  .clbr .msrd-NewIdentityContact-primary:hover {
     background-color: var(--color-interactive-hover);
     border-color: var(--color-interactive-hover);
     color: var(--color-text-contrast);
   }
 }
 
-.msrd .msrd-NewIdentityContact-primary:active {
+.clbr .msrd-NewIdentityContact-primary:active {
   background-color: var(--color-interactive-active);
   border-color: var(--color-interactive-active);
   color: var(--color-text-contrast);
 }
 
-.msrd .msrd-NewIdentityContact-secondary {
+.clbr .msrd-NewIdentityContact-secondary {
   color: var(--color-interactive);
 }
 
 @media (hover: hover) {
-  .msrd .msrd-NewIdentityContact-secondary:hover {
+  .clbr .msrd-NewIdentityContact-secondary:hover {
     background: color-mix(in srgb, var(--color-brand) 7.5%, transparent);
     transition: 0.1s background-color var(--easing-cubic-bezier-easy-ease);
   }
 }
 
-.msrd .msrd-NewIdentityContact-secondary:active {
+.clbr .msrd-NewIdentityContact-secondary:active {
   background: color-mix(in srgb, var(--color-brand) 15%, transparent);
 }

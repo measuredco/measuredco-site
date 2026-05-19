@@ -1,4 +1,4 @@
-.msrd .msrd-NewIdentityProcess {
+.clbr .msrd-NewIdentityProcess {
   --border-offset: calc((7 / 16) * 1rem);
   --border-radius: calc((32 / 16) * 1rem);
   block-size: 100%;
@@ -11,9 +11,9 @@
   position: relative;
 }
 
-.msrd .msrd-NewIdentityProcess-inner {
+.clbr .msrd-NewIdentityProcess-inner {
   --box-shadow: 0.125rem 0.125rem 1rem
-    color-mix(in srgb, var(--color-black) 08%, transparent);
+    color-mix(in srgb, #000000 08%, transparent);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   display: flex;
@@ -24,12 +24,12 @@
 
   @media (prefers-color-scheme: dark) {
     --box-shadow: 0.125rem 0.125rem 0.25rem
-      color-mix(in srgb, var(--color-black) 94%, transparent);
+      color-mix(in srgb, #000000 94%, transparent);
   }
 }
 
-.msrd .msrd-NewIdentityProcess::after {
-  border: solid calc((2 / 16) * 1rem) var(--color-azure-07);
+.clbr .msrd-NewIdentityProcess::after {
+  border: solid calc((2 / 16) * 1rem) #3598f8;
   border-radius: var(--border-radius);
   content: "";
   inset-block-end: var(--border-offset);
@@ -41,7 +41,7 @@
   transition: 0.05s var(--easing-cubic-bezier-easy-ease);
 }
 
-.msrd .msrd-NewIdentityProcess-dots {
+.clbr .msrd-NewIdentityProcess-dots {
   align-items: center;
   block-size: var(--space-horizontal-05);
   display: flex;
@@ -52,17 +52,17 @@
   position: absolute;
 }
 
-.msrd .msrd-NewIdentityProcess-dots::before,
-.msrd .msrd-NewIdentityProcess-dots::after,
-.msrd .msrd-NewIdentityProcess-dotsInner {
-  background-color: var(--color-azure-07);
+.clbr .msrd-NewIdentityProcess-dots::before,
+.clbr .msrd-NewIdentityProcess-dots::after,
+.clbr .msrd-NewIdentityProcess-dotsInner {
+  background-color: #3598f8;
   block-size: var(--space-horizontal-05);
   border-radius: 50%;
   content: "";
   inline-size: var(--space-horizontal-05);
 }
 
-.msrd .msrd-NewIdentityProcess-steps {
+.clbr .msrd-NewIdentityProcess-steps {
   font-size: var(--font-01-size);
   line-height: var(--font-01-line-height);
   list-style: none;
@@ -71,7 +71,7 @@
   position: relative;
 }
 
-.msrd .msrd-NewIdentityProcess-start {
+.clbr .msrd-NewIdentityProcess-start {
   align-items: center;
   display: flex;
   gap: var(--space-horizontal-04);
@@ -82,10 +82,10 @@
   position: relative;
 }
 
-.msrd .msrd-NewIdentityProcess-card {
-  background-color: var(--color-azure-07);
+.clbr .msrd-NewIdentityProcess-card {
+  background-color: #3598f8;
   border-radius: var(--border-radius-card);
-  color: var(--color-grey-02);
+  color: #0e0f10;
   margin-block-end: var(--space-vertical-06);
   margin-inline: auto;
   max-inline-size: 100%;
@@ -93,32 +93,32 @@
   position: relative;
 }
 
-.msrd .msrd-NewIdentityProcess-card:nth-child(2) {
+.clbr .msrd-NewIdentityProcess-card:nth-child(2) {
   inline-size: calc((330 / 16) * 1rem);
 }
 
-.msrd .msrd-NewIdentityProcess-card:nth-child(3) {
+.clbr .msrd-NewIdentityProcess-card:nth-child(3) {
   inline-size: calc((224 / 16) * 1rem);
 }
 
-.msrd .msrd-NewIdentityProcess-card:nth-child(4) {
+.clbr .msrd-NewIdentityProcess-card:nth-child(4) {
   inline-size: calc((240 / 16) * 1rem);
 }
 
-.msrd .msrd-NewIdentityProcess-card:nth-child(5) {
+.clbr .msrd-NewIdentityProcess-card:nth-child(5) {
   inline-size: calc((216 / 16) * 1rem);
 }
 
-.msrd .msrd-NewIdentityProcess-card:nth-child(6) {
-  background-color: var(--color-azure-04);
-  color: var(--color-grey-11);
+.clbr .msrd-NewIdentityProcess-card:nth-child(6) {
+  background-color: #0158ad;
+  color: #f2f3f4;
   inline-size: calc((280 / 16) * 1rem);
 }
 
-.msrd .msrd-NewIdentityProcess-start::after,
-.msrd .msrd-NewIdentityProcess-card::after {
+.clbr .msrd-NewIdentityProcess-start::after,
+.clbr .msrd-NewIdentityProcess-card::after {
   background-image: radial-gradient(
-    var(--color-azure-10) calc(2rem / 16),
+    #e4f1fe calc(2rem / 16),
     transparent 0
   );
   background-position: center;
@@ -132,16 +132,16 @@
   position: absolute;
 }
 
-.msrd .msrd-NewIdentityProcess-card::after {
+.clbr .msrd-NewIdentityProcess-card::after {
   inset-inline-start: 50%;
   margin-inline-start: calc((-10 / 16) * 1rem);
 }
 
-.msrd .msrd-NewIdentityProcess-card:nth-child(6)::after {
+.clbr .msrd-NewIdentityProcess-card:nth-child(6)::after {
   content: none;
 }
 
-.msrd .msrd-NewIdentityProcess-heading {
+.clbr .msrd-NewIdentityProcess-heading {
   font-size: var(--font-01-size);
   font-weight: 550;
   line-height: var(--font-01-line-height);
@@ -149,16 +149,16 @@
   margin-block-start: 0;
 }
 
-.msrd .msrd-NewIdentityProcess-cardInner {
+.clbr .msrd-NewIdentityProcess-cardInner {
   align-items: flex-start;
   display: flex;
   gap: var(--space-horizontal);
 }
 
-.msrd .msrd-NewIdentityProcess-button {
-  border: calc((2 / 16) * 1rem) solid var(--color-grey-02);
+.clbr .msrd-NewIdentityProcess-button {
+  border: calc((2 / 16) * 1rem) solid #0e0f10;
   border-radius: var(--border-radius-button);
-  color: var(--color-grey-02);
+  color: #0e0f10;
   display: block;
   font-weight: 450;
   inline-size: min-content;
@@ -167,27 +167,27 @@
   white-space: nowrap;
 }
 
-.msrd .msrd-NewIdentityProcess-button:focus {
-  outline-color: var(--color-azure-01);
+.clbr .msrd-NewIdentityProcess-button:focus {
+  outline-color: #031f60;
 }
 
 @media (hover: hover) {
-  .msrd .msrd-NewIdentityProcess-button:hover {
+  .clbr .msrd-NewIdentityProcess-button:hover {
     background: rgba(0, 0, 0, 0.055);
     transition: 0.1s background-color var(--easing-cubic-bezier-easy-ease);
   }
 }
 
-.msrd .msrd-NewIdentityProcess-button:active {
+.clbr .msrd-NewIdentityProcess-button:active {
   background: rgba(0, 0, 0, 0.11);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-NewIdentityProcess {
+  .clbr .msrd-NewIdentityProcess {
     min-height: calc((780 / 16) * 1rem);
   }
 
-  .msrd .msrd-NewIdentityProcess-inner::before {
+  .clbr .msrd-NewIdentityProcess-inner::before {
     background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1741341203/site/process-dots_uxq3qy.png);
     background-origin: content-box;
     background-position-x: calc((150 / 16) * 1rem);
@@ -202,54 +202,54 @@
     position: absolute;
   }
 
-  :dir(rtl) .msrd .msrd-NewIdentityProcess-inner::before,
-  .translated-rtl .msrd .msrd-NewIdentityProcess-inner::before {
+  :dir(rtl) .clbr .msrd-NewIdentityProcess-inner::before,
+  .translated-rtl .clbr .msrd-NewIdentityProcess-inner::before {
     inset-inline-start: calc((32 / 16) * 1rem);
     transform: scaleX(-1);
   }
 
-  .msrd .msrd-NewIdentityProcess-start {
+  .clbr .msrd-NewIdentityProcess-start {
     inset-block-start: calc((32 / 16) * 1rem);
     inset-inline-start: calc((8 / 16) * 1rem);
     margin-inline-start: var(--space-horizontal-06);
     position: absolute;
   }
 
-  .msrd .msrd-NewIdentityProcess-start :first-child {
+  .clbr .msrd-NewIdentityProcess-start :first-child {
     order: inherit;
   }
 
-  .msrd .msrd-NewIdentityProcess-card {
+  .clbr .msrd-NewIdentityProcess-card {
     position: absolute;
   }
 
-  .msrd .msrd-NewIdentityProcess-card:nth-child(2) {
+  .clbr .msrd-NewIdentityProcess-card:nth-child(2) {
     inset-block-start: calc((8 / 16) * 1rem);
     inset-inline-end: calc((48 / 16) * 1rem);
   }
 
-  .msrd .msrd-NewIdentityProcess-card:nth-child(3) {
+  .clbr .msrd-NewIdentityProcess-card:nth-child(3) {
     inset-block-start: calc((104 / 16) * 1rem);
     inset-inline-start: calc((16 / 16) * 1rem);
   }
 
-  .msrd .msrd-NewIdentityProcess-card:nth-child(4) {
+  .clbr .msrd-NewIdentityProcess-card:nth-child(4) {
     inset-block-start: calc((286 / 16) * 1rem);
     inset-inline-start: calc((124 / 16) * 1rem);
   }
 
-  .msrd .msrd-NewIdentityProcess-card:nth-child(5) {
+  .clbr .msrd-NewIdentityProcess-card:nth-child(5) {
     inset-block-start: calc((509 / 16) * 1rem);
     inset-inline-end: calc((16 / 16) * 1rem);
   }
 
-  .msrd .msrd-NewIdentityProcess-card:nth-child(6) {
+  .clbr .msrd-NewIdentityProcess-card:nth-child(6) {
     inset-block-start: calc((545 / 16) * 1rem);
     inset-inline-start: calc((57 / 16) * 1rem);
   }
 
-  .msrd .msrd-NewIdentityProcess-start::after,
-  .msrd .msrd-NewIdentityProcess-card::after {
+  .clbr .msrd-NewIdentityProcess-start::after,
+  .clbr .msrd-NewIdentityProcess-card::after {
     content: none;
   }
 }

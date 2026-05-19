@@ -1,4 +1,4 @@
-.msrd .msrd-Logos {
+.clbr .msrd-Logos {
   color: inherit;
   display: flex;
   gap: var(--space-horizontal-07);
@@ -8,7 +8,7 @@
   user-select: none;
 }
 
-.msrd .msrd-Logos-inner {
+.clbr .msrd-Logos-inner {
   animation: scroll 20s linear infinite;
   display: flex;
   flex-shrink: 0;
@@ -20,29 +20,29 @@
   padding-inline-start: 0;
 }
 
-:dir(rtl) .msrd .msrd-Logos-inner,
-.translated-rtl .msrd .msrd-Logos-inner {
+:dir(rtl) .clbr .msrd-Logos-inner,
+.translated-rtl .clbr .msrd-Logos-inner {
   animation: scroll-rtl 20s linear infinite;
 }
 
-.msrd .msrd-Logos:has(a:hover) .msrd-Logos-inner {
+.clbr .msrd-Logos:has(a:hover) .msrd-Logos-inner {
   animation-play-state: paused;
 }
 
 @media (min-width: 80em) {
-  .msrd .msrd-Logos-inner {
+  .clbr .msrd-Logos-inner {
     animation: none;
     justify-content: space-between;
     overflow: auto;
     padding-inline: var(--space-horizontal-07);
   }
 
-  :dir(rtl) .msrd .msrd-Logos-inner,
-  .translated-rtl .msrd .msrd-Logos-inner {
+  :dir(rtl) .clbr .msrd-Logos-inner,
+  .translated-rtl .clbr .msrd-Logos-inner {
     animation: none;
   }
 
-  .msrd .msrd-Logos-inner + .msrd-Logos-inner {
+  .clbr .msrd-Logos-inner + .msrd-Logos-inner {
     display: none;
   }
 }
@@ -66,21 +66,21 @@
 }
 
 @media (prefers-reduced-motion) {
-  .msrd .msrd-Logos-inner + .msrd-Logos-inner {
+  .clbr .msrd-Logos-inner + .msrd-Logos-inner {
     display: none;
   }
 
-  .msrd .msrd-Logos {
+  .clbr .msrd-Logos {
     padding-inline: var(--space-horizontal);
   }
 
   @media (min-width: 48em) {
-    .msrd .msrd-Logos {
+    .clbr .msrd-Logos {
       padding-inline: var(--space-horizontal-07);
     }
   }
 
-  .msrd .msrd-Logos-inner {
+  .clbr .msrd-Logos-inner {
     animation: none;
     flex-shrink: 1;
     flex-wrap: wrap;
@@ -88,13 +88,13 @@
   }
 
   @media (min-width: 48em) {
-    .msrd .msrd-Logos-inner {
+    .clbr .msrd-Logos-inner {
       row-gap: var(--space-vertical);
     }
   }
 }
 
-.msrd .msrd-Logos-link {
+.clbr .msrd-Logos-link {
   align-items: center;
   color: inherit;
   display: flex;
@@ -110,7 +110,7 @@
   }
 }
 
-.msrd .msrd-Logos-label {
+.clbr .msrd-Logos-label {
   background-color: var(--color-button-background);
   border: 0.0625rem solid var(--color-rule);
   border-radius: var(--border-radius-image);
@@ -124,14 +124,14 @@
   white-space: nowrap;
 }
 
-.msrd .msrd-Logos-link:focus-visible .msrd-Logos-label {
+.clbr .msrd-Logos-link:focus-visible .msrd-Logos-label {
   border-color: var(--color-interactive-focus);
 }
 
-.msrd .msrd-Logos-link:hover .msrd-Logos-label {
+.clbr .msrd-Logos-link:hover .msrd-Logos-label {
   color: var(--color-interactive-hover);
 }
 
-.msrd .msrd-Logos-link:active .msrd-Logos-label {
+.clbr .msrd-Logos-link:active .msrd-Logos-label {
   color: var(--color-interactive-active);
 }

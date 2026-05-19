@@ -17,72 +17,72 @@
   );
 }
 
-.msrd .msrd-Image {
+.clbr .msrd-Image {
   background-color: color-mix(in srgb, var(--color-brand) 8%, transparent);
   inline-size: 100%;
 }
 
-.msrd .msrd-Image-img {
+.clbr .msrd-Image-img {
   block-size: auto;
   display: block;
   max-inline-size: 100%;
 }
 
-.msrd .msrd-Image--scrimBottomDark {
+.clbr .msrd-Image--scrimBottomDark {
   position: relative;
 }
 
-.msrd .msrd-Image--scrimBottomDark::after {
+.clbr .msrd-Image--scrimBottomDark::after {
   background-image: var(--image-linear-gradient-scrim-bottom-dark);
   content: "";
   inset: 0;
   position: absolute;
 }
 
-.msrd .msrd-Image--cover {
+.clbr .msrd-Image--cover {
   block-size: 100%;
   overflow: hidden;
   position: relative;
 }
 
-.msrd .msrd-Image--cover .msrd-Image-img {
+.clbr .msrd-Image--cover .msrd-Image-img {
   block-size: 100%;
   inline-size: 100%;
   object-fit: cover;
 }
 
-.msrd .msrd-Image--anchorN .msrd-Image-img {
+.clbr .msrd-Image--anchorN .msrd-Image-img {
   object-position: 50% 0;
 }
 
-.msrd .msrd-Image--anchorNE .msrd-Image-img {
+.clbr .msrd-Image--anchorNE .msrd-Image-img {
   object-position: 100% 0;
 }
 
-.msrd .msrd-Image--anchorE .msrd-Image-img {
+.clbr .msrd-Image--anchorE .msrd-Image-img {
   object-position: 100% 50%;
 }
 
-.msrd .msrd-Image--anchorSE .msrd-Image-img {
+.clbr .msrd-Image--anchorSE .msrd-Image-img {
   object-position: 100% 100%;
 }
 
-.msrd .msrd-Image--anchorS .msrd-Image-img {
+.clbr .msrd-Image--anchorS .msrd-Image-img {
   object-position: 50% 100%;
 }
 
-.msrd .msrd-Image--anchorSW .msrd-Image-img {
+.clbr .msrd-Image--anchorSW .msrd-Image-img {
   object-position: 0 100%;
 }
 
-.msrd .msrd-Image--anchorW .msrd-Image-img {
+.clbr .msrd-Image--anchorW .msrd-Image-img {
   object-position: 0 50%;
 }
 
-.msrd .msrd-Image--anchorNW .msrd-Image-img {
+.clbr .msrd-Image--anchorNW .msrd-Image-img {
   object-position: 0 0;
 }
 
-.msrd .msrd-Image--anchorC .msrd-Image-img {
+.clbr .msrd-Image--anchorC .msrd-Image-img {
   object-position: 50% 50%;
 }

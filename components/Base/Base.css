@@ -1,96 +1,20 @@
-.translated-rtl {
-  direction: rtl;
-}
-
-:root {
-  overscroll-behavior: none;
-}
-
-.msrd {
-  background-color: var(--color-background);
-  box-sizing: border-box;
-  color: var(--color-text);
-  font-family: var(--font-family);
-  font-feature-settings: "ss03" 1;
-  font-optical-sizing: none;
-  line-height: var(--line-height);
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: color-mix(
-    in srgb,
-    var(--color-brand) 20%,
-    transparent
-  );
-}
-
-.msrd *,
-.msrd *::after,
-.msrd *::before {
-  box-sizing: border-box;
-}
-
-.msrd a {
-  text-decoration: none;
-}
-
-.msrd :focus {
-  outline: none;
-}
-
-.msrd :focus-visible {
-  border-radius: var(--border-radius-focus);
-  outline: var(--outline-width) solid var(--color-interactive-focus);
-  outline-offset: var(--outline-width);
-}
-
-.msrd a:not([class]) {
-  color: var(--color-interactive);
-}
-
-@media (hover: hover) {
-  .msrd a:not([class]):hover {
-    color: var(--color-interactive-hover);
-  }
-}
-
-.msrd a:not([class]):active {
-  color: var(--color-interactive-active);
-}
-
-.msrd img {
-  block-size: auto;
-  display: block;
-  max-inline-size: 100%;
-}
-
-.msrd strong {
-  color: var(--color-text);
-  font-weight: 566;
-}
-
-.msrd sup,
-.msrd sub {
-  line-height: 0;
-}
-
-.msrd svg {
-  display: block;
-  max-inline-size: 100%;
-}
-
 /*
- * Utilities
+ * App utilities
+ *
+ * The resets/overscroll/rtl/fonts Base.css used to carry are now provided
+ * by Calibrate (core.css `.clbr` reset, `appOverscrollBehavior`,
+ * `:where(.translated-rtl .clbr)`, calibrate-assets fonts). What remains
+ * is the app-specific `prose` utility, which Calibrate has no class for.
+ * It reads `--color-*`, which only resolve inside `.clbr`/surfaces, so it
+ * is `.clbr`-scoped (and stays surface-aware via the alias layer).
+ *
+ * Migrated to Calibrate built-ins:
+ * - `visuallyHidden` → `.visually-hidden` (`.clbr :where(.visually-hidden,.sr-only)`)
+ * - `overflowHidden` → `data-clbr-scroll-locked` attribute on <html>
+ *   (`:root[data-clbr-scroll-locked]` → locks <html> + <body>)
  */
 
-.msrd-u-colorTextMuted {
-  color: var(--color-text-muted);
-}
-
-.msrd-u-overflowHidden {
-  overflow: hidden;
-}
-
-.msrd-u-prose {
+.clbr .msrd-u-prose {
   color: var(--color-text-prose);
 
   a:not([class]) {
@@ -116,14 +40,4 @@
     text-decoration-color: var(--color-interactive-prose-rule-active);
     text-underline-offset: 0.39em;
   }
-}
-
-.msrd-u-visuallyHidden {
-  block-size: calc(1rem / 16);
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  inline-size: calc(1rem / 16);
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
 }

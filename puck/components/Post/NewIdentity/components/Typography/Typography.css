@@ -1,4 +1,4 @@
-.msrd .msrd-NewIdentityTypography {
+.clbr .msrd-NewIdentityTypography {
   margin-inline: auto;
   max-inline-size: calc((630 / 16) * 1rem);
   padding-block-end: var(--space-vertical);
@@ -17,16 +17,16 @@
   }
 
   p {
-    color: var(--color-grey-10);
+    color: #e3e4e5;
   }
 }
 
-.msrd .msrd-NewIdentityTypography-heading {
+.clbr .msrd-NewIdentityTypography-heading {
   @media (min-width: 80em) {
     max-inline-size: 12em;
   }
 }
 
-.msrd .msrd-NewIdentityTypography-specimen * {
-  color: var(--color-azure-08);
+.clbr .msrd-NewIdentityTypography-specimen * {
+  color: #6db5f8;
 }

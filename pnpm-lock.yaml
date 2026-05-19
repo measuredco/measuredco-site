@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@measured/calibrate-assets':
+        specifier: ^0.4.1
+        version: 0.4.1
+      '@measured/calibrate-core':
+        specifier: ^0.4.1
+        version: 0.4.1
+      '@measured/calibrate-react':
+        specifier: ^0.4.1
+        version: 0.4.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@measured/puck':
         specifier: 0.18.3
         version: 0.18.3(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -319,6 +328,18 @@ packages:
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
     cpu: [x64]
     os: [win32]
+
+  '@measured/calibrate-assets@0.4.1':
+    resolution: {integrity: sha512-KWRXMqGzB1qzzBYevRkNkD8UMHfdSe8chxULTPEWvWEL8VHZWqIyebNi1toK0FNZEZFwOsushYR/ygDMxeC15g==}
+
+  '@measured/calibrate-core@0.4.1':
+    resolution: {integrity: sha512-nZhww27Q6ueJ7KUYTMskUm77FV5gdj1h8oFDty3JyX615cLUCvsGp8BxWt5wIaOBp49lqUTwmjc33NWLg/72Bw==}
+
+  '@measured/calibrate-react@0.4.1':
+    resolution: {integrity: sha512-4kcVwdI8pgJIiTd9EJKE0vB3ayXdIqoYty3rVobRkYqEYg/EtSKTZMFny0Nc5Xrvc45hfRc1MdqS4ZxdBLRpMQ==}
+    peerDependencies:
+      react: ^19.2.6
+      react-dom: ^19.2.6
 
   '@measured/puck@0.18.3':
     resolution: {integrity: sha512-mw78Z7Ykk4LbyM+8n3CPsjI41SyMg1dOfYoV3VSWJiZWkMj47x6DJS6SdwfaNSyseyPpcSx6sEbL6BaOBAVoHQ==}
@@ -1514,6 +1535,9 @@ packages:
   lowlight@3.3.0:
     resolution: {integrity: sha512-0JNhgFoPvP6U6lE/UdVsSq99tn6DhjjpAj5MxG49ewd2mOBVtwWYIT8ClyABhq198aXXODMU6Ox8DrGy/CpTZQ==}
 
+  lucide@1.16.0:
+    resolution: {integrity: sha512-20QvduCJTB7e7K9WVvoLBuKPsYZ8d6ptwe9PIdTFiZmjVTPdFWQreBNyNCM9QQtGnqHR0PLiEQdxyhYsL1LdoA==}
+
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
@@ -2454,6 +2478,18 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
+  '@measured/calibrate-assets@0.4.1': {}
+
+  '@measured/calibrate-core@0.4.1':
+    dependencies:
+      lucide: 1.16.0
+
+  '@measured/calibrate-react@0.4.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+    dependencies:
+      '@measured/calibrate-core': 0.4.1
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+
   '@measured/puck@0.18.3(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
       '@dnd-kit/helpers': 0.0.7-beta-20250130032138
@@ -3160,7 +3196,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.32.0)(eslint@8.57.0)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.0)
       eslint-plugin-react: 7.37.5(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
@@ -3179,7 +3215,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.0)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint@8.57.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.0)
       eslint-plugin-react: 7.37.5(eslint@8.57.0)
       eslint-plugin-react-hooks: 5.2.0(eslint@8.57.0)
@@ -3251,7 +3287,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -3262,7 +3298,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -3274,7 +3310,7 @@ snapshots:
       string.prototype.trimend: 1.0.9
       tsconfig-paths: 3.15.0
     optionalDependencies:
-      '@typescript-eslint/parser': 5.59.11(eslint@8.57.0)(typescript@5.9.3)
+      '@typescript-eslint/parser': 8.48.1(eslint@8.57.0)(typescript@5.9.3)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -3291,7 +3327,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -3936,6 +3972,8 @@ snapshots:
       '@types/hast': 3.0.4
       devlop: 1.1.0
       highlight.js: 11.11.1
+
+  lucide@1.16.0: {}
 
   markdown-table@3.0.3: {}
 

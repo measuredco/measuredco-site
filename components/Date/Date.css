@@ -4,7 +4,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Date {
+  .clbr .msrd-Date {
     font-size: var(--font-04-size);
     line-height: var(--font-04-line-height-large);
   }

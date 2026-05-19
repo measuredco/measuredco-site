@@ -1,11 +1,11 @@
-.msrd .msrd-Rule {
+.clbr .msrd-Rule {
   border: 0;
   border-block-start: var(--rule-height) solid var(--color-rule);
   inline-size: var(--rule-width);
   margin: 0;
 }
 
-.msrd .msrd-Rule--center {
+.clbr .msrd-Rule--center {
   margin-block: 0;
   margin-inline: auto;
 }

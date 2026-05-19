@@ -1,10 +1,10 @@
-.msrd .msrd-Page {
+.clbr .msrd-Page {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto 1fr auto;
   min-block-size: 100vh;
 }
 
-.msrd .msrd-Page--centered .msrd-Page-main {
+.clbr .msrd-Page--centered .msrd-Page-main {
   margin-block: auto;
 }
