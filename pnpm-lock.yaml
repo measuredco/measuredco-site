@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@measured/calibrate-assets':
-        specifier: ^0.4.2
-        version: 0.4.2
+        specifier: ^0.4.3
+        version: 0.4.3
       '@measured/calibrate-core':
-        specifier: ^0.4.2
-        version: 0.4.2
+        specifier: ^0.4.3
+        version: 0.4.3
       '@measured/calibrate-react':
-        specifier: ^0.4.2
-        version: 0.4.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: ^0.4.3
+        version: 0.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@measured/puck':
         specifier: 0.18.3
         version: 0.18.3(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -329,14 +329,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@measured/calibrate-assets@0.4.2':
-    resolution: {integrity: sha512-2ClRPkRhwz6rOfbSgH5KbdV9H+Z3pw4r2nrjIReggw1780qwnQccUA0vwwTGKdN2FRsst8ZrfVRCGD7wSUbMvQ==}
+  '@measured/calibrate-assets@0.4.3':
+    resolution: {integrity: sha512-RfyKRqiIpCa9KYe8D1Zu2Pv3idvwMBeA0xxNkUs5edBgMrb7YGzNcGLLasc0qFjNhrxybnjRsKyoJdNX5iw0+w==}
 
-  '@measured/calibrate-core@0.4.2':
-    resolution: {integrity: sha512-N1+kqNtIOGHY3M6ZA1gcGFGhdmPjSkWIxCdMCm4deN2BHjUKJTiS5xqMV8s16y1lLbdz3lj93fOAVbCVgsHY1A==}
+  '@measured/calibrate-core@0.4.3':
+    resolution: {integrity: sha512-CMjg3440kUaCX0NMgdkC259gp9zc4Cpo6uq+VGvA9eJUIPgUTwCJ8v0fS2G8biltzJs1TAXVjmtlZE8ijT7c/w==}
 
-  '@measured/calibrate-react@0.4.2':
-    resolution: {integrity: sha512-jN6uBJ7enyLamA0tV9+RYism32dHeaXiHgEIjyOzI9rHb5GRKUvooxed0JRSMVIfwRaN6ljqOIHFjIJZKktGgA==}
+  '@measured/calibrate-react@0.4.3':
+    resolution: {integrity: sha512-UUlYb/LS7hGnnitFi9XdGcQzF2cGJfHCNjIFZcCn3n86CLFoNaARBV4Ljy7FnuqXmM5WvwSTspB5cQjwF6gViA==}
     peerDependencies:
       react: ^19.2.6
       react-dom: ^19.2.6
@@ -2478,15 +2478,15 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@measured/calibrate-assets@0.4.2': {}
+  '@measured/calibrate-assets@0.4.3': {}
 
-  '@measured/calibrate-core@0.4.2':
+  '@measured/calibrate-core@0.4.3':
     dependencies:
       lucide: 1.16.0
 
-  '@measured/calibrate-react@0.4.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@measured/calibrate-react@0.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@measured/calibrate-core': 0.4.2
+      '@measured/calibrate-core': 0.4.3
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 

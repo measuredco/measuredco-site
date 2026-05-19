@@ -4,9 +4,9 @@
   "private": true,
   "packageManager": "pnpm@10.29.3",
   "dependencies": {
-    "@measured/calibrate-assets": "^0.4.2",
-    "@measured/calibrate-core": "^0.4.2",
-    "@measured/calibrate-react": "^0.4.2",
+    "@measured/calibrate-assets": "^0.4.3",
+    "@measured/calibrate-core": "^0.4.3",
+    "@measured/calibrate-react": "^0.4.3",
     "@measured/puck": "0.18.3",
     "classnames": "^2.5.1",
     "deepmerge": "^4.3.1",
