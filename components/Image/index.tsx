@@ -77,7 +77,6 @@ const Image = ({
   fillColor,
   fit,
   height,
-  overlay,
   priority,
   sizes,
   src,
@@ -110,7 +109,6 @@ const Image = ({
         "msrd-Image": true,
         "msrd-Image--cover": fit === "cover",
         [`msrd-Image--anchor${anchor}`]: fit === "cover",
-        [`msrd-Image--${overlay || ""}`]: overlay,
       })}
       style={{
         ...(fit === "cover" && aspectRatio && { aspectRatio }),
@@ -214,12 +212,6 @@ export interface ImageProps extends HTMLAttributes<HTMLElement> {
    * to fit the Image. Otherwise, the intrinsic height of the Image element.
    */
   height?: number;
-
-  /**
-   * Apply an overlay to the Image, e.g. a scrim gradient for text legibility.
-   * Should not be used if the image has a rasterized overlay.
-   */
-  overlay?: "scrimBottomDark";
 
   /**
    * When true, the Image will be considered high priority and preload

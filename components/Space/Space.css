@@ -1,3 +1,10 @@
+/*
+ * Calibrate's --clbr-layout-spacing-vertical-* are responsive (base value,
+ * stepping up at min-width:64em) — the exact static-var + @media(64em)
+ * pairs this file used. Each modifier collapses to a single responsive
+ * token. `.msrd-Space` / `--01` have no breakpoint step so stay static.
+ */
+
 .msrd-Space {
   padding-block-end: var(--clbr-spacing-vertical-700);
 }
@@ -7,111 +14,45 @@
 }
 
 .msrd-Space--02 {
-  padding-block-end: var(--clbr-spacing-vertical-250);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--02 {
-    padding-block-end: var(--clbr-spacing-vertical-400);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-250);
 }
 
 .msrd-Space--03 {
-  padding-block-end: var(--clbr-spacing-vertical-400);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--03 {
-    padding-block-end: var(--clbr-spacing-vertical-500);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-400);
 }
 
 .msrd-Space--04 {
-  padding-block-end: var(--clbr-spacing-vertical-500);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--04 {
-    padding-block-end: var(--clbr-spacing-vertical-600);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-500);
 }
 
 .msrd-Space--05 {
-  padding-block-end: var(--clbr-spacing-vertical-600);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--05 {
-    padding-block-end: var(--clbr-spacing-vertical-700);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-600);
 }
 
 .msrd-Space--06 {
-  padding-block-end: var(--clbr-spacing-vertical-700);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--06 {
-    padding-block-end: var(--clbr-spacing-vertical-800);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-700);
 }
 
 .msrd-Space--07 {
-  padding-block-end: var(--clbr-spacing-vertical-800);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--07 {
-    padding-block-end: var(--clbr-spacing-vertical-900);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-800);
 }
 
 .msrd-Space--08 {
-  padding-block-end: var(--clbr-spacing-vertical-900);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--08 {
-    padding-block-end: var(--clbr-spacing-vertical-1000);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-900);
 }
 
 .msrd-Space--09 {
-  padding-block-end: var(--clbr-spacing-vertical-950);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--09 {
-    padding-block-end: var(--clbr-spacing-vertical-1200);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-950);
 }
 
 .msrd-Space--10 {
-  padding-block-end: var(--clbr-spacing-vertical-1000);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--10 {
-    padding-block-end: var(--clbr-spacing-vertical-1250);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-1000);
 }
 
 .msrd-Space--11 {
-  padding-block-end: var(--clbr-spacing-vertical-1100);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--11 {
-    padding-block-end: var(--clbr-spacing-vertical-1300);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-1100);
 }
 
 .msrd-Space--12 {
-  padding-block-end: var(--clbr-spacing-vertical-1200);
-}
-
-@media (min-width: 64em) {
-  .clbr .msrd-Space--12 {
-    padding-block-end: var(--clbr-spacing-vertical-1400);
-  }
+  padding-block-end: var(--clbr-layout-spacing-vertical-1200);
 }
