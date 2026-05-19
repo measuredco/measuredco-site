@@ -1,11 +1,9 @@
 .clbr .msrd-SiteHeaderMenu {
   display: none;
-  inset-block-end: 0;
-  inset-block-start: var(--clbr-spacing-vertical-1000);
+  inset-block: var(--clbr-spacing-vertical-1000) 0;
   inset-inline: 0;
-  overflow-y: auto;
-  padding-block-end: var(--clbr-spacing-vertical-700);
-  padding-block-start: var(--clbr-spacing-vertical-400);
+  overflow-block: auto;
+  padding-block: var(--clbr-spacing-vertical-400) var(--clbr-spacing-vertical-700);
   padding-inline: var(--clbr-spacing-horizontal-600);
   position: fixed;
 }
@@ -15,10 +13,10 @@
   display: block;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-SiteHeaderMenu {
     display: block;
-    overflow-y: visible;
+    overflow-block: visible;
     padding: 0;
     position: static;
   }

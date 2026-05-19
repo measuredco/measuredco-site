@@ -6,7 +6,7 @@
   margin-block: var(--clbr-spacing-vertical-600);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Contact-rule {
     margin-block: var(--clbr-spacing-vertical-700);
   }

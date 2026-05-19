@@ -6,6 +6,8 @@
  * are gone. Token roles per the base16 spec are noted inline.
  */
 
+/* stylelint-disable selector-class-pattern -- vendored highlight.js theme; third-party token classes (hljs-built_in, class_, inherited__) we don't author */
+
 .hljs,
 .clbr .msrd-Markdown pre code {
   background: var(--clbr-color-base16-00); /* Default Background */

@@ -30,7 +30,7 @@
   max-inline-size: 100%;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown {
     font-size: var(--clbr-typography-type-step-450-font-size);
     line-height: var(--clbr-typography-type-step-450-line-height);
@@ -80,8 +80,7 @@
 }
 
 .clbr .msrd-Markdown blockquote {
-  margin-block-end: var(--clbr-spacing-vertical-700);
-  margin-block-start: 0;
+  margin-block: 0 var(--clbr-spacing-vertical-700);
   margin-inline: 0;
 }
 
@@ -110,7 +109,7 @@
   text-align: end;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown blockquote p + p:last-child {
     font-size: var(--clbr-typography-type-step-300-font-size);
     line-height: var(--clbr-typography-type-step-300-line-height);
@@ -127,13 +126,12 @@
   outline: var(--clbr-layout-border-width-default) solid
     var(--clbr-color-border-default);
   padding-block-end: var(--clbr-typography-prose-code-padding-block-default);
-  padding-inline-end: var(--clbr-typography-prose-code-padding-inline-default);
-  padding-inline-start: var(
+  padding-inline: var(
     --clbr-typography-prose-code-padding-inline-default
-  );
+  ) var(--clbr-typography-prose-code-padding-inline-default);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown p code {
     padding-block-end: var(--clbr-typography-prose-code-padding-block-lg);
   }
@@ -141,6 +139,7 @@
 
 .clbr .msrd-Markdown code .gfm-color-chip {
   --chip-size: 0.5em;
+
   block-size: var(--chip-size);
   border: var(--clbr-layout-border-width-default) solid
     var(--clbr-color-background-default);
@@ -172,10 +171,8 @@
     var(--clbr-color-border-brand);
   border-radius: var(--clbr-radius-lg);
   content: "";
-  inset-block-end: var(--clbr-effect-stroke-inset);
-  inset-block-start: var(--clbr-effect-stroke-outset);
-  inset-inline-end: var(--clbr-effect-stroke-inset);
-  inset-inline-start: var(--clbr-effect-stroke-outset);
+  inset-block: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
+  inset-inline: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
   pointer-events: none;
   position: absolute;
 }
@@ -193,8 +190,8 @@
   line-height: var(--clbr-typography-type-step-200-line-height);
   margin-block-end: var(--clbr-spacing-vertical-700);
   outline: none;
-  overflow-x: auto;
-  overscroll-behavior-x: none;
+  overflow-inline: auto;
+  overscroll-behavior-inline: none;
   padding: var(--clbr-spacing-vertical-700);
   position: relative;
 }
@@ -212,14 +209,12 @@
   font: var(--clbr-typography-text-heading-responsive-xs);
   font-feature-settings: "ss03" 1;
   font-optical-sizing: none;
-  margin-block-end: var(--clbr-spacing-vertical-500);
-  margin-block-start: var(--clbr-spacing-vertical-700);
+  margin-block: var(--clbr-spacing-vertical-700) var(--clbr-spacing-vertical-500);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown h6 {
-    margin-block-end: var(--clbr-spacing-vertical-700);
-    margin-block-start: var(--clbr-spacing-vertical-800);
+    margin-block: var(--clbr-spacing-vertical-800) var(--clbr-spacing-vertical-700);
   }
 }
 
@@ -227,14 +222,12 @@
   font: var(--clbr-typography-text-heading-responsive-sm);
   font-feature-settings: "ss03" 1;
   font-optical-sizing: none;
-  margin-block-end: var(--clbr-spacing-vertical-500);
-  margin-block-start: var(--clbr-spacing-vertical-700);
+  margin-block: var(--clbr-spacing-vertical-700) var(--clbr-spacing-vertical-500);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown h5 {
-    margin-block-end: var(--clbr-spacing-vertical-700);
-    margin-block-start: var(--clbr-spacing-vertical-800);
+    margin-block: var(--clbr-spacing-vertical-800) var(--clbr-spacing-vertical-700);
   }
 }
 
@@ -242,14 +235,12 @@
   font: var(--clbr-typography-text-heading-responsive-md);
   font-feature-settings: "ss03" 1;
   font-optical-sizing: none;
-  margin-block-end: var(--clbr-spacing-vertical-500);
-  margin-block-start: var(--clbr-spacing-vertical-700);
+  margin-block: var(--clbr-spacing-vertical-700) var(--clbr-spacing-vertical-500);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown h4 {
-    margin-block-end: var(--clbr-spacing-vertical-700);
-    margin-block-start: var(--clbr-spacing-vertical-800);
+    margin-block: var(--clbr-spacing-vertical-800) var(--clbr-spacing-vertical-700);
   }
 }
 
@@ -257,14 +248,12 @@
   font: var(--clbr-typography-text-heading-responsive-lg);
   font-feature-settings: "ss03" 1;
   font-optical-sizing: none;
-  margin-block-end: var(--clbr-spacing-vertical-500);
-  margin-block-start: var(--clbr-spacing-vertical-700);
+  margin-block: var(--clbr-spacing-vertical-700) var(--clbr-spacing-vertical-500);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown h3 {
-    margin-block-end: var(--clbr-spacing-vertical-700);
-    margin-block-start: var(--clbr-spacing-vertical-800);
+    margin-block: var(--clbr-spacing-vertical-800) var(--clbr-spacing-vertical-700);
   }
 }
 
@@ -272,14 +261,12 @@
   font: var(--clbr-typography-text-heading-responsive-xl);
   font-feature-settings: "ss03" 1;
   font-optical-sizing: none;
-  margin-block-end: var(--clbr-spacing-vertical-500);
-  margin-block-start: var(--clbr-spacing-vertical-700);
+  margin-block: var(--clbr-spacing-vertical-700) var(--clbr-spacing-vertical-500);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown h2 {
-    margin-block-end: var(--clbr-spacing-vertical-700);
-    margin-block-start: var(--clbr-spacing-vertical-800);
+    margin-block: var(--clbr-spacing-vertical-800) var(--clbr-spacing-vertical-700);
   }
 }
 
@@ -301,8 +288,7 @@
   border-block-start: var(--clbr-layout-divider-brand-thickness) solid
     var(--clbr-color-border-brand);
   inline-size: var(--clbr-layout-divider-brand-size);
-  margin-block-end: var(--clbr-spacing-vertical-700);
-  margin-block-start: 0;
+  margin-block: 0 var(--clbr-spacing-vertical-700);
   margin-inline: 0;
 }
 
@@ -318,21 +304,21 @@
 .clbr .msrd-Markdown ol,
 .clbr .msrd-Markdown ul {
   --bullet-space: calc(36rem / 16);
+
   list-style: none;
-  margin-block-end: var(--clbr-spacing-vertical-700);
-  margin-block-start: 0;
+  margin-block: 0 var(--clbr-spacing-vertical-700);
   margin-inline-start: 0;
   padding-inline-start: 0;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown > ol,
   .clbr .msrd-Markdown > ul {
     --bullet-space: calc(40rem / 16);
   }
 }
 
-@media (min-width: 80em) {
+@media (width >= 80em) {
   .clbr .msrd-Markdown > ol,
   .clbr .msrd-Markdown > ul {
     margin-inline-start: calc(0em - var(--bullet-space));
@@ -374,19 +360,19 @@
   font-size: var(--clbr-typography-type-step-700-font-size);
   line-height: var(--clbr-typography-type-step-700-line-height);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     font-size: var(--clbr-typography-type-step-800-font-size);
     line-height: var(--clbr-typography-type-step-800-line-height);
   }
 }
 
-.clbr .msrd-Markdown ol > li:has(> h2:first-child):nth-child(n + 10):before {
+.clbr .msrd-Markdown ol > li:has(> h2:first-child):nth-child(n + 10)::before {
   font-size: var(--clbr-typography-type-step-200-font-size);
-  line-height: 2.625;
+  line-height: var(--clbr-typography-leading-850);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     font-size: var(--clbr-typography-type-step-400-font-size);
-    line-height: 2.4;
+    line-height: var(--clbr-typography-leading-900);
   }
 }
 
@@ -395,19 +381,19 @@
   font-size: var(--clbr-typography-type-step-500-font-size);
   line-height: var(--clbr-typography-type-step-500-line-height);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     font-size: var(--clbr-typography-type-step-600-font-size);
     line-height: var(--clbr-typography-type-step-600-line-height);
   }
 }
 
-.clbr .msrd-Markdown ol > li:has(> h3:first-child):nth-child(n + 10):before {
+.clbr .msrd-Markdown ol > li:has(> h3:first-child):nth-child(n + 10)::before {
   font-size: var(--clbr-typography-type-step-200-font-size);
-  line-height: 2.25;
+  line-height: var(--clbr-typography-leading-800);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     font-size: var(--clbr-typography-type-step-400-font-size);
-    line-height: 2.1;
+    line-height: var(--clbr-typography-leading-850);
   }
 }
 
@@ -417,8 +403,7 @@
 }
 
 .clbr .msrd-Markdown p {
-  margin-block-end: var(--clbr-spacing-vertical-700);
-  margin-block-start: 0;
+  margin-block: 0 var(--clbr-spacing-vertical-700);
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
@@ -452,7 +437,7 @@
   vertical-align: middle;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Markdown td,
   .clbr .msrd-Markdown th {
     padding-block: calc(
@@ -466,14 +451,16 @@
 }
 
 .clbr .msrd-Markdown #footnote-label {
+  /* stylelint-disable-next-line unit-disallowed-list -- visually-hidden 1px box; no length token */
   block-size: 1px;
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  /* stylelint-disable-next-line unit-disallowed-list -- visually-hidden 1px box; no length token */
   inline-size: 1px;
   overflow: hidden;
+  overflow-wrap: normal;
   padding: 0;
   position: absolute;
-  word-wrap: normal;
 }
 
 .clbr .msrd-Markdown .footnotes ol {
@@ -482,14 +469,14 @@
   padding-block-start: var(--clbr-spacing-vertical-500);
 }
 
-@media (min-width: 80em) {
+@media (width >= 80em) {
   .clbr .msrd-Markdown .footnotes ol {
     margin-inline-start: calc(0em - var(--bullet-space));
   }
 }
 
 .clbr .msrd-Markdown .footnotes ol::before {
-  border-top: var(--clbr-layout-divider-brand-thickness) solid
+  border-block-start: var(--clbr-layout-divider-brand-thickness) solid
     var(--clbr-color-border-brand);
   content: "";
   display: block;
@@ -498,7 +485,7 @@
   position: relative;
 }
 
-@media (min-width: 80em) {
+@media (width >= 80em) {
   .clbr .msrd-Markdown .footnotes ol::before {
     inset-inline-start: var(--bullet-space);
   }

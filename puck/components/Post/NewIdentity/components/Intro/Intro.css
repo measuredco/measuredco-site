@@ -2,7 +2,7 @@
   max-inline-size: calc((1956 / 16) * 1rem);
   padding: var(--clbr-spacing-vertical-800) var(--clbr-spacing-horizontal-600);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     align-items: center;
     column-gap: var(--clbr-spacing-horizontal-800);
     display: grid;
@@ -16,12 +16,11 @@
     }
   }
 
-  @media (min-width: 64em) {
+  @media (width >= 64em) {
     column-gap: var(--clbr-spacing-horizontal-600);
     grid-template-columns: repeat(5, minmax(calc((154 / 16) * 1rem), 1fr));
     inline-size: auto;
-    margin-block-end: var(--clbr-spacing-vertical-950);
-    margin-block-start: var(--clbr-spacing-vertical-500);
+    margin-block: var(--clbr-spacing-vertical-500) var(--clbr-spacing-vertical-950);
 
     > :first-child {
       grid-column-start: 2;
@@ -32,11 +31,11 @@
     }
   }
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     column-gap: var(--clbr-spacing-horizontal-700);
   }
 
-  @media (min-width: 91.875em) {
+  @media (width >= 91.875em) {
     column-gap: var(--clbr-spacing-horizontal-800);
   }
 }
@@ -44,13 +43,13 @@
 .clbr .msrd-NewIdentityIntro-image img {
   border-radius: var(--clbr-radius-sm);
   box-shadow: 0.125rem 0.125rem 0.25rem
-    color-mix(in srgb, #000000 08%, transparent);
+    color-mix(in srgb, #000 08%, transparent);
   margin-block-end: var(--clbr-spacing-vertical-900);
   margin-inline: auto;
   transform: rotate(6deg);
   transform-origin: 0 50%;
 
-  @media (min-width: 64em) {
+  @media (width >= 64em) {
     margin-block-end: 0;
     margin-inline-end: 0;
   }
@@ -65,7 +64,7 @@
   margin-block-end: var(--clbr-spacing-vertical-700);
   margin-inline: auto;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     margin-block-end: 0;
     margin-inline: 0;
     transform: rotate(6deg);

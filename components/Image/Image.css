@@ -1,5 +1,5 @@
 .clbr .msrd-Image {
-  background-color: color-mix(in srgb, var(--clbr-color-brand-primary) 8%, transparent);
+  background-color: var(--clbr-color-background-subtle);
   inline-size: 100%;
 }
 

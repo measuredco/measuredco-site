@@ -1,12 +1,13 @@
 .clbr .msrd-NewIdentityTip {
   --image-size: calc(119rem / 16);
+
   align-items: center;
   display: grid;
   gap: var(--clbr-spacing-vertical-700) var(--clbr-spacing-horizontal-700);
   grid-template-columns: var(--image-size) 1fr;
   grid-template-rows: auto auto;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     align-items: start;
     gap: 0 2.5rem;
     grid-template-rows: calc(var(--image-size) / 2) minmax(
@@ -15,7 +16,7 @@
       );
   }
 
-  @media (min-width: 80.25em) {
+  @media (width >= 80.25em) {
     column-gap: 3.5rem;
     margin-inline-start: var(--clbr-spacing-horizontal-600);
   }
@@ -34,7 +35,7 @@
 .clbr .msrd-NewIdentityTip h3 {
   max-inline-size: 9em;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     max-inline-size: 100%;
   }
 }
@@ -42,7 +43,7 @@
 .clbr p.msrd-NewIdentityTip-description {
   grid-column: span 2;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     grid-column-start: 2;
     max-inline-size: 100% !important;
   }

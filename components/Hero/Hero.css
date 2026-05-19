@@ -1,16 +1,17 @@
 .clbr .msrd-Hero {
   --header-height: var(--clbr-spacing-vertical-1000);
+
   block-size: min-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-inline: auto;
   max-inline-size: var(--clbr-layout-container-max-width-default);
-  min-block-size: calc(100vh - var(--header-height));
+  min-block-size: calc(100vb - var(--header-height));
   text-align: center;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Hero {
     --header-height: var(--clbr-spacing-vertical-1100);
   }
@@ -21,7 +22,7 @@
   padding-block-start: var(--clbr-spacing-vertical-800);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Hero-inner {
     margin-block-end: var(--clbr-spacing-vertical-1000);
     padding-block-start: var(--clbr-spacing-vertical-1000);
@@ -34,10 +35,10 @@
 
 .clbr .msrd-Hero-strapline {
   font-size: var(--clbr-typography-type-step-1000-font-size);
+  /* stylelint-disable-next-line scale-unlimited/declaration-strict-value -- exact display weight; no font-weight token at 366 */
   font-weight: 366;
   line-height: var(--clbr-typography-type-step-1000-line-height);
-  margin-block-end: var(--clbr-spacing-vertical-500);
-  margin-block-start: 0;
+  margin-block: 0 var(--clbr-spacing-vertical-500);
   margin-inline: auto;
   max-inline-size: 11em; /* fallback for text-wrap: balance */
   text-wrap: balance;
@@ -49,7 +50,7 @@
   }
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Hero-strapline {
     font-size: var(--clbr-typography-type-step-1200-font-size);
     line-height: var(--clbr-typography-type-step-1200-line-height);
@@ -61,7 +62,7 @@
   margin-block: var(--clbr-spacing-vertical-600);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Hero-rule {
     margin-block: var(--clbr-spacing-vertical-800);
   }
@@ -71,14 +72,13 @@
   color: var(--clbr-color-foreground-prose);
   font-size: var(--clbr-typography-type-step-300-font-size);
   line-height: var(--clbr-typography-type-step-300-line-height);
-  margin-block-end: var(--clbr-spacing-vertical-600);
-  margin-block-start: 0;
+  margin-block: 0 var(--clbr-spacing-vertical-600);
   margin-inline: auto;
   max-inline-size: 30em; /* fallback for text-wrap: balance */
   text-wrap: balance;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Hero-description {
     font-size: var(--clbr-typography-type-step-450-font-size);
     line-height: var(--clbr-typography-type-step-450-line-height);
@@ -90,17 +90,21 @@
   0% {
     inset-block-end: var(--clbr-spacing-vertical-500);
   }
+
   50% {
     inset-block-end: var(--clbr-spacing-vertical-400);
   }
+
   100% {
     inset-block-end: var(--clbr-spacing-vertical-500);
   }
 }
 
 .clbr .msrd-Hero-arrow {
+  /* stylelint-disable-next-line unit-disallowed-list -- no motion-duration token at 1.5s */
   --animation-delay: 1.5s;
   --animation-duration: var(--clbr-motion-duration-3000);
+
   display: none;
   user-select: none;
 }
@@ -111,7 +115,9 @@
     var(--clbr-motion-easing-ease-in-out) infinite;
   display: flex;
   font-size: var(--clbr-typography-type-step-700-font-size);
+  /* stylelint-disable-next-line scale-unlimited/declaration-strict-value -- thin arrow glyph; no font-weight token at 100 */
   font-weight: 100;
+  /* stylelint-disable-next-line declaration-property-unit-disallowed-list -- sub-pixel arrow offset; no length token */
   inset-block-end: calc((8 / 16) * 1rem);
   inset-inline: 0;
   justify-content: center;
@@ -119,7 +125,9 @@
   opacity: 1;
   position: fixed;
   text-align: center;
-  transition: opacity var(--clbr-motion-duration-200) var(--animation-delay) linear;
+  transition: opacity var(--clbr-motion-duration-200) var(--animation-delay)
+    linear;
+
   @starting-style {
     opacity: 0;
   }
@@ -141,18 +149,22 @@
     animation: bounce var(--animation-duration) var(--animation-delay)
       var(--clbr-motion-easing-ease-in-out) infinite;
     opacity: 1;
-    transition: opacity var(--clbr-motion-duration-200) var(--animation-delay) linear;
+    transition: opacity var(--clbr-motion-duration-200) var(--animation-delay)
+      linear;
   }
 
   .msrd-u-pageScrolled .msrd-Hero--fullscreen .msrd-Hero-arrow {
+    /* stylelint-disable declaration-no-important -- must override the hover-reveal rule when page is scrolled */
     animation: none !important;
     opacity: 0 !important;
     transition: opacity var(--clbr-motion-duration-100) linear !important;
+    /* stylelint-enable declaration-no-important */
   }
 }
 
 @media (prefers-reduced-motion) {
   .clbr .msrd-Hero--fullscreen .msrd-Hero-arrow {
+    /* stylelint-disable-next-line declaration-no-important -- must override the hover-reveal rule for reduced-motion */
     animation: none !important;
   }
 }

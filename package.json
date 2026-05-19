@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
+    "@measured/calibrate-config": "0.4.3",
     "@types/node": "^24.10.1",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
@@ -25,6 +26,7 @@
     "eslint": "8.57.0",
     "eslint-config-custom": "*",
     "eslint-config-next": "^15.1.9",
+    "stylelint": "^17.11.1",
     "tsconfig": "*",
     "typescript": "^5.6.3"
   },
@@ -32,6 +34,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx && tsc --noEmit",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:css:fix": "stylelint \"**/*.css\" --fix",
     "preview": "npx serve@latest out"
   },
   "engines": {

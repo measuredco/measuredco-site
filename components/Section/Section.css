@@ -5,16 +5,13 @@
   padding-inline: var(--clbr-spacing-horizontal-600);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Section {
     padding-inline: var(--clbr-spacing-horizontal-800);
   }
 }
 
 .clbr .msrd-Section--full {
-  padding-inline: 0;
-}
-
-.clbr .msrd-Section--full {
   max-inline-size: 100%;
+  padding-inline: 0;
 }

@@ -3,15 +3,15 @@
   max-inline-size: calc((630 / 16) * 1rem);
   padding-block-end: var(--clbr-spacing-vertical-700);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     padding-block-end: var(--clbr-spacing-vertical-900);
   }
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     padding-block-end: var(--clbr-spacing-vertical-950);
   }
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     max-inline-size: 100%;
     padding-block-end: calc((168 / 16) * 1rem);
   }
@@ -22,7 +22,7 @@
 }
 
 .clbr .msrd-NewIdentityTypography-heading {
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     max-inline-size: 12em;
   }
 }
