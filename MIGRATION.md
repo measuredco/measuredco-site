@@ -59,11 +59,13 @@ overlap.
    `www.measured.co`. Cloudflare swaps apex/www to proxied Pages targets.
 5. Canonical host = **apex `measured.co`** (already what the app's
    `<link rel=canonical>`, OG `url`, sitemap, feeds emit — no app change).
-   Add `www → apex` 301 via a Cloudflare Redirect Rule (now available with
-   the zone on Cloudflare) **or** a `public/_redirects` line
-   `https://www.measured.co/*  https://measured.co/:splat  301` placed
-   **below** the existing `/blog/*` rules (so `www/blog/puck-*` reaches
-   puckeditor.com in one hop).
+   `www → apex` 301 **must** be a zone-level **Cloudflare Redirect Rule**
+   — Pages `_redirects` only accepts relative paths and rejects
+   absolute/host-based sources at build, so it cannot do this. Rule:
+   When `Hostname equals www.measured.co` → Dynamic redirect to
+   `concat("https://measured.co", http.request.uri.path)`, 301, preserve
+   query string. (Cloudflare's "Redirect from WWW to Root" template does
+   exactly this.)
 6. Verify `measured.co` + `www` serve from Pages, cert active, redirects
    fire, body identical to old site.
 7. Delete the Vercel project. Rollback before step 7 = revert the web

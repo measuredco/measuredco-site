@@ -17,6 +17,7 @@
 /blog/revolutionizing-drag-and-drop-in-react-introducing-puck-018  https://puckeditor.com/blog/revolutionizing-drag-and-drop-in-react-introducing-puck-018  301
 /blog/advanced-layouts-with-puck-harnessing-grid-and-flex-containers  https://puckeditor.com/blog/advanced-layouts-with-puck-harnessing-grid-and-flex-containers  301
 
-# Canonical host: apex (measured.co). Redirect www -> apex. Kept BELOW the
-# path rules above so e.g. www/blog/puck-013 reaches puckeditor in one hop.
-https://www.measured.co/*  https://measured.co/:splat  301
+# NOTE: www -> apex canonical redirect is NOT here. Cloudflare Pages
+# _redirects only supports relative paths (absolute/host-based sources are
+# rejected at build). It is handled by a zone-level Cloudflare Redirect
+# Rule instead (see MIGRATION.md).
