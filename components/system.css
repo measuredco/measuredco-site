@@ -44,38 +44,6 @@
   --font-11-line-height: 1.16129032;
   --font-12-line-height: 1.14285714;
   --font-13-line-height: 1;
-
-  /* Vertical space */
-  --space-vertical: 1.5rem;
-  --space-vertical-01: 0.1875rem;
-  --space-vertical-02: 0.375rem;
-  --space-vertical-03: 0.75rem;
-  --space-vertical-04: 1.125rem;
-  --space-vertical-05: 1.5rem;
-  --space-vertical-06: 2.25rem;
-  --space-vertical-07: 3rem;
-  --space-vertical-08: 3.75rem;
-  --space-vertical-09: 4.5rem;
-  --space-vertical-10: 5.25rem;
-  --space-vertical-11: 6rem;
-  --space-vertical-12: 6.75rem;
-  --space-vertical-13: 7.5rem;
-  --space-vertical-14: 9rem;
-
-  /* Horizontal space */
-  --space-horizontal: 1rem;
-  --space-horizontal-01: 0.125rem;
-  --space-horizontal-02: 0.25rem;
-  --space-horizontal-03: 0.5rem;
-  --space-horizontal-04: 0.75rem;
-  --space-horizontal-05: 1rem;
-  --space-horizontal-06: 1.5rem;
-  --space-horizontal-07: 2rem;
-  --space-horizontal-08: 2.5rem;
-  --space-horizontal-09: 3rem;
-  --space-horizontal-10: 3.5rem;
-  --space-horizontal-11: 4rem;
-  --space-horizontal-12: 4.5rem;
 }
 
 /*
@@ -141,6 +109,39 @@
   --outline-width: var(--clbr-layout-focus-ring-width);
   --rule-height: var(--clbr-layout-divider-brand-thickness);
   --rule-width: var(--clbr-layout-divider-brand-size);
+
+  /*
+   * Spacing — Calibrate's static (non-fluid) spacing scale; exact ports.
+   * The former --space-horizontal 2.5/3.5/4rem steps (-08/-10/-11) had no
+   * Calibrate equivalent and were NewIdentity-only, so they were inlined
+   * at their call sites instead.
+   */
+  --space-vertical: var(--clbr-spacing-vertical-700);
+  --space-vertical-01: var(--clbr-spacing-vertical-250);
+  --space-vertical-02: var(--clbr-spacing-vertical-400);
+  --space-vertical-03: var(--clbr-spacing-vertical-500);
+  --space-vertical-04: var(--clbr-spacing-vertical-600);
+  --space-vertical-05: var(--clbr-spacing-vertical-700);
+  --space-vertical-06: var(--clbr-spacing-vertical-800);
+  --space-vertical-07: var(--clbr-spacing-vertical-900);
+  --space-vertical-08: var(--clbr-spacing-vertical-950);
+  --space-vertical-09: var(--clbr-spacing-vertical-1000);
+  --space-vertical-10: var(--clbr-spacing-vertical-1100);
+  --space-vertical-11: var(--clbr-spacing-vertical-1200);
+  --space-vertical-12: var(--clbr-spacing-vertical-1250);
+  --space-vertical-13: var(--clbr-spacing-vertical-1300);
+  --space-vertical-14: var(--clbr-spacing-vertical-1400);
+
+  --space-horizontal: var(--clbr-spacing-horizontal-600);
+  --space-horizontal-01: var(--clbr-spacing-horizontal-200);
+  --space-horizontal-02: var(--clbr-spacing-horizontal-300);
+  --space-horizontal-03: var(--clbr-spacing-horizontal-400);
+  --space-horizontal-04: var(--clbr-spacing-horizontal-500);
+  --space-horizontal-05: var(--clbr-spacing-horizontal-600);
+  --space-horizontal-06: var(--clbr-spacing-horizontal-700);
+  --space-horizontal-07: var(--clbr-spacing-horizontal-800);
+  --space-horizontal-09: var(--clbr-spacing-horizontal-900);
+  --space-horizontal-12: var(--clbr-spacing-horizontal-1000);
 
   --color-brand: var(--clbr-color-brand-primary);
   --color-rule: var(--clbr-color-border-brand);
