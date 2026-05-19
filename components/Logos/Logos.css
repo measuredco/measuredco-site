@@ -1,9 +1,9 @@
 .clbr .msrd-Logos {
   color: inherit;
   display: flex;
-  gap: var(--space-horizontal-07);
+  gap: var(--clbr-spacing-horizontal-800);
   margin-inline: auto;
-  max-inline-size: var(--section-max-width);
+  max-inline-size: var(--clbr-layout-container-max-width-default);
   overflow: hidden;
   user-select: none;
 }
@@ -12,7 +12,7 @@
   animation: scroll 20s linear infinite;
   display: flex;
   flex-shrink: 0;
-  gap: var(--space-vertical) var(--space-horizontal-07);
+  gap: var(--clbr-spacing-vertical-700) var(--clbr-spacing-horizontal-800);
   justify-content: space-around;
   list-style: none;
   margin-block: 0;
@@ -34,7 +34,7 @@
     animation: none;
     justify-content: space-between;
     overflow: auto;
-    padding-inline: var(--space-horizontal-07);
+    padding-inline: var(--clbr-spacing-horizontal-800);
   }
 
   :dir(rtl) .clbr .msrd-Logos-inner,
@@ -52,7 +52,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - var(--space-horizontal-07)));
+    transform: translateX(calc(-100% - var(--clbr-spacing-horizontal-800)));
   }
 }
 
@@ -61,7 +61,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(100% - var(--space-horizontal-07)));
+    transform: translateX(calc(100% - var(--clbr-spacing-horizontal-800)));
   }
 }
 
@@ -71,12 +71,12 @@
   }
 
   .clbr .msrd-Logos {
-    padding-inline: var(--space-horizontal);
+    padding-inline: var(--clbr-spacing-horizontal-600);
   }
 
   @media (min-width: 48em) {
     .clbr .msrd-Logos {
-      padding-inline: var(--space-horizontal-07);
+      padding-inline: var(--clbr-spacing-horizontal-800);
     }
   }
 
@@ -84,12 +84,12 @@
     animation: none;
     flex-shrink: 1;
     flex-wrap: wrap;
-    row-gap: var(--space-vertical-03);
+    row-gap: var(--clbr-spacing-vertical-500);
   }
 
   @media (min-width: 48em) {
     .clbr .msrd-Logos-inner {
-      row-gap: var(--space-vertical);
+      row-gap: var(--clbr-spacing-vertical-700);
     }
   }
 }
@@ -99,7 +99,7 @@
   color: inherit;
   display: flex;
   flex-direction: column;
-  gap: var(--space-vertical-02);
+  gap: var(--clbr-spacing-vertical-400);
 
   &:focus-visible {
     outline: none;
@@ -111,15 +111,15 @@
 }
 
 .clbr .msrd-Logos-label {
-  background-color: var(--color-button-background);
-  border: 0.0625rem solid var(--color-rule);
-  border-radius: var(--border-radius-image);
+  background-color: var(--clbr-color-background-panel);
+  border: 0.0625rem solid var(--clbr-color-border-brand);
+  border-radius: var(--clbr-radius-xs);
   color: var(--color-interactive);
-  font-family: var(--font-family-monospaced);
+  font-family: var(--clbr-typography-font-family-mono);
   font-size: calc((10 / 16) * 1rem);
   font-weight: 466;
   line-height: calc(10 / 10);
-  padding: var(--space-vertical-01) var(--space-horizontal-02);
+  padding: var(--clbr-spacing-vertical-250) var(--clbr-spacing-horizontal-300);
   text-transform: uppercase;
   white-space: nowrap;
 }

@@ -3,30 +3,30 @@
 }
 
 .clbr .msrd-Contact-rule {
-  margin-block: var(--space-vertical-04);
+  margin-block: var(--clbr-spacing-vertical-600);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Contact-rule {
-    margin-block: var(--space-vertical);
+    margin-block: var(--clbr-spacing-vertical-700);
   }
 }
 
 .clbr .msrd-Contact a:not([class]) {
-  color: var(--color-interactive-neutral);
+  color: var(--clbr-color-interactive-neutral-default);
 }
 
 @media (hover: hover) {
   .clbr .msrd-Contact a:not([class]):hover {
-    color: var(--color-interactive-neutral-hover);
+    color: var(--clbr-color-interactive-neutral-hover);
   }
 }
 
 .clbr .msrd-Contact a:not([class]):active {
-  color: var(--color-interactive-neutral-active);
+  color: var(--clbr-color-interactive-neutral-active);
 }
 
 .clbr .msrd-Contact-email {
   display: inline-flex;
-  gap: var(--space-horizontal);
+  gap: var(--clbr-spacing-horizontal-600);
 }

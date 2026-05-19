@@ -1,12 +1,12 @@
 .msrd-Date {
-  font-size: var(--font-03-size);
-  line-height: var(--font-03-line-height);
+  font-size: var(--clbr-typography-type-step-300-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Date {
-    font-size: var(--font-04-size);
-    line-height: var(--font-04-line-height-large);
+    font-size: var(--clbr-typography-type-step-400-font-size);
+    line-height: var(--clbr-typography-type-step-450-line-height);
   }
 }
 

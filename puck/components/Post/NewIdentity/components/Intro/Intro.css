@@ -1,15 +1,15 @@
 .clbr .msrd-NewIdentityIntro {
   max-inline-size: calc((1956 / 16) * 1rem);
-  padding: var(--space-vertical-06) var(--space-horizontal);
+  padding: var(--clbr-spacing-vertical-800) var(--clbr-spacing-horizontal-600);
 
   @media (min-width: 48em) {
     align-items: center;
-    column-gap: var(--space-horizontal-07);
+    column-gap: var(--clbr-spacing-horizontal-800);
     display: grid;
     grid-template-columns: calc((308 / 16) * 1rem) auto;
     inline-size: min-content;
     margin-inline: auto;
-    padding: var(--space-vertical-07) var(--space-horizontal-07);
+    padding: var(--clbr-spacing-vertical-900) var(--clbr-spacing-horizontal-800);
 
     > :last-child {
       display: none;
@@ -17,11 +17,11 @@
   }
 
   @media (min-width: 64em) {
-    column-gap: var(--space-horizontal);
+    column-gap: var(--clbr-spacing-horizontal-600);
     grid-template-columns: repeat(5, minmax(calc((154 / 16) * 1rem), 1fr));
     inline-size: auto;
-    margin-block-end: var(--space-vertical-08);
-    margin-block-start: var(--space-vertical-03);
+    margin-block-end: var(--clbr-spacing-vertical-950);
+    margin-block-start: var(--clbr-spacing-vertical-500);
 
     > :first-child {
       grid-column-start: 2;
@@ -33,19 +33,19 @@
   }
 
   @media (min-width: 80em) {
-    column-gap: var(--space-horizontal-06);
+    column-gap: var(--clbr-spacing-horizontal-700);
   }
 
   @media (min-width: 91.875em) {
-    column-gap: var(--space-horizontal-07);
+    column-gap: var(--clbr-spacing-horizontal-800);
   }
 }
 
 .clbr .msrd-NewIdentityIntro-image img {
-  border-radius: var(--border-radius-button);
+  border-radius: var(--clbr-radius-sm);
   box-shadow: 0.125rem 0.125rem 0.25rem
     color-mix(in srgb, #000000 08%, transparent);
-  margin-block-end: var(--space-vertical-07);
+  margin-block-end: var(--clbr-spacing-vertical-900);
   margin-inline: auto;
   transform: rotate(6deg);
   transform-origin: 0 50%;
@@ -57,12 +57,12 @@
 }
 
 .msrd-NewIdentityIntro-label {
-  font-family: var(--font-family-monospaced);
-  font-size: var(--font-01-size);
+  font-family: var(--clbr-typography-font-family-mono);
+  font-size: var(--clbr-typography-type-step-100-font-size);
   font-weight: 300;
   inline-size: 10.5em;
   line-height: 1.5;
-  margin-block-end: var(--space-vertical);
+  margin-block-end: var(--clbr-spacing-vertical-700);
   margin-inline: auto;
 
   @media (min-width: 48em) {

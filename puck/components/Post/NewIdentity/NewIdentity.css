@@ -3,13 +3,13 @@
  */
 
 .clbr:has(.msrd-NewIdentity) {
-  background-color: var(--color-background-emphasis);
+  background-color: var(--clbr-color-background-panel);
 
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-background);
     background-image: linear-gradient(
-      var(--color-background-emphasis),
-      var(--color-background-emphasis)
+      var(--clbr-color-background-panel),
+      var(--clbr-color-background-panel)
     );
   }
 }
@@ -47,9 +47,9 @@
   --color-interactive-active: #083c8a;
   background-color: var(--color-background);
   color: var(--color-text);
-  font-size: var(--font-04-size);
+  font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 500;
-  line-height: var(--font-04-line-height);
+  line-height: var(--clbr-typography-type-step-200-line-height);
 
   @media (prefers-color-scheme: dark) {
     --color-text: #0e0f10;
@@ -71,7 +71,7 @@
 .clbr .msrd-NewIdentity-imageLarge {
   --border-radius: calc((8 / 16) * 1rem);
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow-light-source);
+  box-shadow: none;
   display: inline-block;
   line-height: 0;
 }
@@ -92,8 +92,8 @@
  */
 
 .clbr .msrd-NewIdentity p:not(.msrd-Paragraph) {
-  font-size: var(--font-03-size);
-  line-height: var(--font-03-line-height);
+  font-size: var(--clbr-typography-type-step-300-font-size);
+  line-height: var(--clbr-typography-type-step-200-line-height);
   margin: 0;
   max-inline-size: 35em;
   text-wrap: pretty;
@@ -106,10 +106,10 @@
 }
 
 .clbr .msrd-NewIdentity p.msrd-NewIdentity-standfirst {
-  font-size: var(--font-05-size);
+  font-size: var(--clbr-typography-type-step-500-font-size);
   font-style: italic;
   font-weight: 400;
-  line-height: var(--font-05-line-height);
+  line-height: var(--clbr-typography-type-step-200-line-height);
   margin: 0 auto;
   max-inline-size: 38em;
   text-align: center;
@@ -188,7 +188,7 @@
  */
 
 .clbr .msrd-NewIdentity-next {
-  padding-inline-end: var(--space-horizontal);
+  padding-inline-end: var(--clbr-spacing-horizontal-600);
 
   @media (min-width: 80em) {
     padding-inline-end: 0;
@@ -200,10 +200,10 @@
  */
 
 .clbr .msrd-NewIdentity-offset {
-  margin-block-start: var(--space-vertical-07);
+  margin-block-start: var(--clbr-spacing-vertical-900);
 
   @media (min-width: 50em) {
-    margin-block-start: var(--space-vertical-08);
+    margin-block-start: var(--clbr-spacing-vertical-950);
   }
 
   @media (min-width: 80em) {
@@ -219,12 +219,12 @@
  */
 
 .clbr .msrd-NewIdentity-process {
-  margin-block-end: var(--space-vertical);
+  margin-block-end: var(--clbr-spacing-vertical-700);
   margin-inline: auto;
   max-inline-size: calc((705 / 16) * 1rem);
 
   @media (min-width: 50em) {
-    margin-block-end: var(--space-vertical-07);
+    margin-block-end: var(--clbr-spacing-vertical-900);
   }
 
   @media (min-width: 80em) {

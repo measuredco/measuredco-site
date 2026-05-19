@@ -13,9 +13,9 @@
 
 .clbr .msrd-NewIdentityCorner-label {
   color: #1666bb;
-  font-family: var(--font-family-monospaced);
-  font-size: var(--font-01-size);
-  line-height: var(--font-01-line-height);
+  font-family: var(--clbr-typography-font-family-mono);
+  font-size: var(--clbr-typography-type-step-100-font-size);
+  line-height: var(--clbr-typography-type-step-150-line-height);
   max-inline-size: 23em;
   text-wrap: pretty;
 
@@ -31,12 +31,12 @@
   background-size: cover;
   display: flex;
   max-inline-size: calc((414 / 16) * 1rem);
-  padding: var(--space-horizontal-07);
+  padding: var(--clbr-spacing-horizontal-800);
 }
 
 .clbr .msrd-NewIdentityCorner p.msrd-NewIdentityCorner-description:not(foo) {
-  font-size: var(--font-01-size);
-  line-height: var(--font-01-line-height);
+  font-size: var(--clbr-typography-type-step-100-font-size);
+  line-height: var(--clbr-typography-type-step-150-line-height);
   margin: 0 auto;
   max-inline-size: 36em;
   text-align: center;

@@ -1,13 +1,13 @@
 .clbr .msrd-Section {
   container-type: inline-size;
   margin-inline: auto;
-  max-inline-size: var(--section-max-width);
-  padding-inline: var(--space-horizontal);
+  max-inline-size: var(--clbr-layout-container-max-width-default);
+  padding-inline: var(--clbr-spacing-horizontal-600);
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Section {
-    padding-inline: var(--space-horizontal-07);
+    padding-inline: var(--clbr-spacing-horizontal-800);
   }
 }
 

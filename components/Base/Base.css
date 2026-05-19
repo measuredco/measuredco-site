@@ -29,7 +29,7 @@
     a:not([class]):hover {
       color: var(--color-interactive-prose);
       text-decoration: underline;
-      text-decoration-color: var(--color-rule);
+      text-decoration-color: var(--clbr-color-border-brand);
       text-decoration-thickness: 0.09em;
       text-underline-offset: 0.34em;
     }
@@ -37,7 +37,7 @@
 
   a:not([class]):active {
     color: var(--color-interactive-active);
-    text-decoration-color: var(--color-interactive-prose-rule-active);
+    text-decoration-color: var(--clbr-color-interactive-prose-active-decoration);
     text-underline-offset: 0.39em;
   }
 }

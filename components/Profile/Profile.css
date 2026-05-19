@@ -1,13 +1,13 @@
 .clbr .msrd-Profile-imageWrapper {
-  --image-size: var(--space-vertical-14);
-  border-radius: calc(var(--image-size) * var(--corner-ratio-square));
-  box-shadow: var(--box-shadow-light-source);
+  --image-size: var(--clbr-spacing-vertical-1400);
+  border-radius: calc(var(--image-size) * var(--clbr-radius-ratio-default));
+  box-shadow: none;
   inline-size: var(--image-size);
-  margin-block-end: var(--space-vertical-04);
+  margin-block-end: var(--clbr-spacing-vertical-600);
 
   > div,
   img {
-    border-radius: calc(var(--image-size) * var(--corner-ratio-square));
+    border-radius: calc(var(--image-size) * var(--clbr-radius-ratio-default));
     box-shadow: var(--box-shadow);
 
   }
@@ -17,7 +17,7 @@
   .clbr .msrd-Profile {
     align-items: flex-end;
     display: flex;
-    gap: var(--space-horizontal-07);
+    gap: var(--clbr-spacing-horizontal-800);
   }
 
   .clbr .msrd-Profile-imageWrapper {
