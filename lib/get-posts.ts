@@ -26,8 +26,11 @@ export const getPosts = async (siteUrl: string, archive: number = 0) => {
     const post = postData?.content?.find((item) => item.type === "Post")
       ?.props as Props["Post"];
 
+    // Skip (don't abort the whole list) if a referenced slug has no
+    // content file — otherwise one bad Archive entry silently empties
+    // the feed and sitemap.
     if (!post) {
-      return;
+      continue;
     }
 
     const postDescription =
