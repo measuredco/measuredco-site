@@ -50,5 +50,5 @@
 }
 
 .clbr .msrd-Blockquote--measured {
-  max-inline-size: calc(var(--clbr-typography-measure-default) * 0.9);
+  max-inline-size: var(--clbr-typography-measure-tight);
 }

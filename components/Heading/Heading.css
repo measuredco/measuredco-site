@@ -33,7 +33,7 @@
 
 .clbr .msrd-Heading--4 {
   font-size: var(--clbr-typography-type-step-400-font-size);
-  font-weight: 466;
+  font-weight: var(--clbr-typography-font-weight-medium);
   line-height: var(--clbr-typography-type-step-400-line-height);
 }
 
@@ -46,7 +46,7 @@
 
 .clbr .msrd-Heading--3 {
   font-size: var(--clbr-typography-type-step-500-font-size);
-  font-weight: 433;
+  font-weight: var(--clbr-typography-font-weight-regular-plus);
   line-height: var(--clbr-typography-type-step-500-line-height);
 }
 
@@ -59,7 +59,7 @@
 
 .clbr .msrd-Heading--2 {
   font-size: var(--clbr-typography-type-step-700-font-size);
-  font-weight: 400;
+  font-weight: var(--clbr-typography-font-weight-regular);
   line-height: var(--clbr-typography-type-step-700-line-height);
 }
 

@@ -100,7 +100,7 @@
 
 .clbr .msrd-Hero-arrow {
   --animation-delay: 1.5s;
-  --animation-duration: 3s;
+  --animation-duration: var(--clbr-motion-duration-3000);
   display: none;
   user-select: none;
 }
@@ -119,7 +119,7 @@
   opacity: 1;
   position: fixed;
   text-align: center;
-  transition: opacity 0.2s var(--animation-delay) linear;
+  transition: opacity var(--clbr-motion-duration-200) var(--animation-delay) linear;
   @starting-style {
     opacity: 0;
   }
@@ -127,7 +127,7 @@
 
 .msrd-u-pageScrolled .msrd-Hero--fullscreen .msrd-Hero-arrow {
   opacity: 0;
-  transition: opacity 0.1s linear;
+  transition: opacity var(--clbr-motion-duration-100) linear;
 }
 
 @media (hover: hover) {
@@ -141,13 +141,13 @@
     animation: bounce var(--animation-duration) var(--animation-delay)
       var(--clbr-motion-easing-ease-in-out) infinite;
     opacity: 1;
-    transition: opacity 0.2s var(--animation-delay) linear;
+    transition: opacity var(--clbr-motion-duration-200) var(--animation-delay) linear;
   }
 
   .msrd-u-pageScrolled .msrd-Hero--fullscreen .msrd-Hero-arrow {
     animation: none !important;
     opacity: 0 !important;
-    transition: opacity 0.1s linear !important;
+    transition: opacity var(--clbr-motion-duration-100) linear !important;
   }
 }
 

@@ -29,7 +29,7 @@
   inset-inline-start: var(--clbr-effect-stroke-outset);
   pointer-events: none;
   position: absolute;
-  transition: 0.05s var(--clbr-motion-easing-ease-in-out);
+  transition: var(--clbr-motion-duration-50) var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-Card a {
@@ -64,7 +64,7 @@
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover::after {
     inset: 0;
-    transition: 0.1s var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
@@ -95,7 +95,7 @@
 
 .clbr .msrd-Card-heading {
   font-size: var(--clbr-typography-type-step-500-font-size);
-  font-weight: 433;
+  font-weight: var(--clbr-typography-font-weight-regular-plus);
   line-height: var(--clbr-typography-type-step-500-line-height);
   margin-block: 0;
   text-wrap: balance;
@@ -158,24 +158,24 @@
   }
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before {
-    transition: 0.1s var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
   }
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
-    transition: 0.2s var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-200) var(--clbr-motion-easing-ease-in-out);
   }
 
   .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
-    transition: 0.3s var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-300) var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
     .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
-      transition: 0.1s var(--clbr-motion-easing-ease-in-out);
+      transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
     }
 
     .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
-      transition: 0.1s var(--clbr-motion-easing-ease-in-out);
+      transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
     }
   }
 }
@@ -196,7 +196,7 @@
 }
 
 .clbr .msrd-Card-note {
-  font-weight: 466;
+  font-weight: var(--clbr-typography-font-weight-medium);
   font-family: var(--clbr-typography-font-family-mono);
   margin-block-start: auto;
 }
@@ -240,8 +240,8 @@
     inset-inline-start: var(--arrow-offset);
     opacity: 1;
     transition:
-      0.1s opacity var(--clbr-motion-easing-ease-in-out),
-      0.2s inset-inline-start var(--clbr-motion-easing-ease-in-out);
+      var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
+      var(--clbr-motion-duration-200) inset-inline-start var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
@@ -250,8 +250,8 @@
       .msrd-Card-note
       span::after {
       transition:
-        0.1s opacity var(--clbr-motion-easing-ease-in-out),
-        0s inset-inline-start var(--clbr-motion-easing-ease-in-out);
+        var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
+        var(--clbr-motion-duration-0) inset-inline-start var(--clbr-motion-easing-ease-in-out);
     }
   }
 }
