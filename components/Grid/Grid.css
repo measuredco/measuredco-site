@@ -5,27 +5,19 @@
   grid-template-columns: 1fr;
 }
 
-.clbr [data-puck-component] > .msrd-Grid {
-  display: block !important;
-}
-
-.clbr [data-puck-component] .msrd-GridItem {
-  border-block-end: calc(40rem / 16) solid hotpink;
-}
-
 .clbr .msrd-Grid--gapNone {
   grid-gap: 0;
 }
 
 @container (min-inline-size: 37em) {
   .clbr .msrd-Grid {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(var(--clbr-layout-grid-columns), 1fr);
   }
 }
 
 @media (min-width: 48em) {
   .clbr .msrd-Grid {
-    grid-column-gap : var(--clbr-spacing-horizontal-700);
+    grid-column-gap: var(--clbr-spacing-horizontal-700);
   }
 }
 

@@ -88,13 +88,13 @@
 
 @keyframes bounce {
   0% {
-    inset-block-end: calc((12 / 16) * 1rem);
+    inset-block-end: var(--clbr-spacing-vertical-500);
   }
   50% {
-    inset-block-end: calc((6 / 16) * 1rem);
+    inset-block-end: var(--clbr-spacing-vertical-400);
   }
   100% {
-    inset-block-end: calc((12 / 16) * 1rem);
+    inset-block-end: var(--clbr-spacing-vertical-500);
   }
 }
 

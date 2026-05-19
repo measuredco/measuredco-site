@@ -1,22 +1,3 @@
-:root {
-  --image-linear-gradient-scrim-bottom-dark: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0, 0, 0, 0.002) 0.8%,
-    rgba(0, 0, 0, 0.008) 4.8%,
-    rgba(0, 0, 0, 0.021) 9%,
-    rgba(0, 0, 0, 0.042) 13.9%,
-    rgba(0, 0, 0, 0.075) 19.8%,
-    rgba(0, 0, 0, 0.126) 27%,
-    rgba(0, 0, 0, 0.194) 35%,
-    rgba(0, 0, 0, 0.278) 43.5%,
-    rgba(0, 0, 0, 0.382) 53%,
-    rgba(0, 0, 0, 0.541) 66%,
-    rgba(0, 0, 0, 0.738) 81%,
-    rgba(0, 0, 0, 1) 100%
-  );
-}
-
 .clbr .msrd-Image {
   background-color: color-mix(in srgb, var(--clbr-color-brand-primary) 8%, transparent);
   inline-size: 100%;
@@ -26,17 +7,6 @@
   block-size: auto;
   display: block;
   max-inline-size: 100%;
-}
-
-.clbr .msrd-Image--scrimBottomDark {
-  position: relative;
-}
-
-.clbr .msrd-Image--scrimBottomDark::after {
-  background-image: var(--image-linear-gradient-scrim-bottom-dark);
-  content: "";
-  inset: 0;
-  position: absolute;
 }
 
 .clbr .msrd-Image--cover {

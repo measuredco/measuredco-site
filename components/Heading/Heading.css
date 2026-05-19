@@ -1,112 +1,64 @@
+/*
+ * Heading sizes use Calibrate's responsive heading font tokens (weight +
+ * size/line-height + family, stepping up at min-width:48em — exactly the
+ * prior base + @media(48em) pairs). Each level maps 1:1 with identical
+ * values. --display1 keeps its bespoke 3-breakpoint (24em/48em) rules.
+ */
+
 .clbr .msrd-Heading {
-  font-size: 1rem;
-  font-weight: 500;
+  font: var(--clbr-typography-text-heading-md);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
   margin: 0;
   text-wrap: balance;
 }
 
 .clbr .msrd-Heading--6 {
-  font-size: var(--clbr-typography-type-step-200-font-size);
-  font-weight: 533;
-  line-height: var(--clbr-typography-type-step-200-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--6 {
-    font-size: var(--clbr-typography-type-step-300-font-size);
-    line-height: var(--clbr-typography-type-step-300-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-xs);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 .clbr .msrd-Heading--5 {
-  font-size: var(--clbr-typography-type-step-300-font-size);
-  font-weight: 500;
-  line-height: var(--clbr-typography-type-step-300-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--5 {
-    font-size: var(--clbr-typography-type-step-400-font-size);
-    line-height: var(--clbr-typography-type-step-400-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-sm);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 .clbr .msrd-Heading--4 {
-  font-size: var(--clbr-typography-type-step-400-font-size);
-  font-weight: var(--clbr-typography-font-weight-medium);
-  line-height: var(--clbr-typography-type-step-400-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--4 {
-    font-size: var(--clbr-typography-type-step-500-font-size);
-    line-height: var(--clbr-typography-type-step-500-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-md);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 .clbr .msrd-Heading--3 {
-  font-size: var(--clbr-typography-type-step-500-font-size);
-  font-weight: var(--clbr-typography-font-weight-regular-plus);
-  line-height: var(--clbr-typography-type-step-500-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--3 {
-    font-size: var(--clbr-typography-type-step-600-font-size);
-    line-height: var(--clbr-typography-type-step-600-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-lg);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 .clbr .msrd-Heading--2 {
-  font-size: var(--clbr-typography-type-step-700-font-size);
-  font-weight: var(--clbr-typography-font-weight-regular);
-  line-height: var(--clbr-typography-type-step-700-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--2 {
-    font-size: var(--clbr-typography-type-step-800-font-size);
-    line-height: var(--clbr-typography-type-step-800-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-xl);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 .clbr .msrd-Heading--1 {
-  font-size: var(--clbr-typography-type-step-900-font-size);
-  font-weight: 366;
-  line-height: var(--clbr-typography-type-step-900-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--1 {
-    font-size: var(--clbr-typography-type-step-1000-font-size);
-    line-height: var(--clbr-typography-type-step-1000-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-2xl);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 .clbr .msrd-Heading--display3 {
-  font-size: var(--clbr-typography-type-step-1000-font-size);
-  font-weight: 300;
-  line-height: var(--clbr-typography-type-step-1000-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--display3 {
-    font-size: var(--clbr-typography-type-step-1100-font-size);
-    line-height: var(--clbr-typography-type-step-1100-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-3xl);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 .clbr .msrd-Heading--display2 {
-  font-size: var(--clbr-typography-type-step-1100-font-size);
-  font-weight: 250;
-  line-height: var(--clbr-typography-type-step-1100-line-height);
-}
-
-@media (min-width: 48em) {
-  .clbr .msrd-Heading--display2 {
-    font-size: var(--clbr-typography-type-step-1200-font-size);
-    line-height: var(--clbr-typography-type-step-1200-line-height);
-  }
+  font: var(--clbr-typography-text-heading-responsive-4xl);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 /*
@@ -114,16 +66,16 @@
  */
 
 .clbr .msrd-Heading--display1 {
-  font-size: var(--clbr-typography-type-step-1000-font-size);
-  font-weight: 300;
-  line-height: var(--clbr-typography-type-step-1000-line-height);
+  font: var(--clbr-typography-text-heading-3xl);
+  font-feature-settings: "ss03" 1;
+  font-optical-sizing: none;
 }
 
 @media (min-width: 24em) {
   .clbr .msrd-Heading--display1 {
-    font-size: var(--clbr-typography-type-step-1100-font-size);
-    font-weight: 250;
-    line-height: var(--clbr-typography-type-step-1100-line-height);
+    font: var(--clbr-typography-text-heading-4xl);
+    font-feature-settings: "ss03" 1;
+    font-optical-sizing: none;
   }
 }
 

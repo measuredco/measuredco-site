@@ -112,13 +112,14 @@
 
 .clbr .msrd-Logos-label {
   background-color: var(--clbr-color-background-panel);
-  border: 0.0625rem solid var(--clbr-color-border-brand);
+  border: var(--clbr-layout-border-width-default) solid
+    var(--clbr-color-border-brand);
   border-radius: var(--clbr-radius-xs);
   color: var(--clbr-color-interactive-default);
   font-family: var(--clbr-typography-font-family-mono);
   font-size: calc((10 / 16) * 1rem);
   font-weight: var(--clbr-typography-font-weight-medium);
-  line-height: calc(10 / 10);
+  line-height: 1;
   padding: var(--clbr-spacing-vertical-250) var(--clbr-spacing-horizontal-300);
   text-transform: uppercase;
   white-space: nowrap;

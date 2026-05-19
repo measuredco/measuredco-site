@@ -52,8 +52,10 @@ html {
   background-color: var(--clbr-color-background-default);
   box-shadow: none;
   transition:
-    background-color var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out),
-    box-shadow var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+    background-color var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-in-out),
+    box-shadow var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-SiteHeader--menuOpen {
@@ -73,12 +75,13 @@ html {
 
 .clbr .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
   box-shadow: var(--site-header-box-shadow);
-  transition: box-shadow var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+  transition: box-shadow var(--clbr-motion-duration-100)
+    var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-SiteHeader-inner {
   align-items: center;
-  border-block: calc(3rem / 16) solid transparent;
+  border-block: var(--clbr-spacing-vertical-250) solid transparent;
   display: flex;
   inline-size: 100%;
   justify-content: space-between;
@@ -94,7 +97,9 @@ html {
 
 @media (min-width: 48em) {
   .clbr .msrd-SiteHeader-inner {
-    padding-block: calc(var(--clbr-spacing-vertical-600) - (2rem / 16));
+    padding-block: calc(
+      var(--clbr-spacing-vertical-600) - var(--clbr-spacing-vertical-200)
+    );
     padding-inline: var(--clbr-spacing-horizontal-700);
   }
 }
@@ -106,7 +111,8 @@ html {
 
 .clbr .msrd-SiteHeader-logo:has(:focus-visible) {
   border-radius: var(--clbr-radius-2xs);
-  outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
+  outline: var(--clbr-layout-focus-ring-width) solid
+    var(--clbr-color-interactive-focus);
   outline-offset: var(--clbr-layout-focus-ring-width);
 }
 
@@ -125,8 +131,9 @@ html {
 
 @media (hover: hover) {
   .clbr .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
-    opacity: 0.44;
-    transition: opacity var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+    opacity: var(--clbr-effect-opacity-demoted);
+    transition: opacity var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-in-out);
   }
 }
 
@@ -201,7 +208,9 @@ html {
 
 @media (min-width: 48em) {
   .clbr .msrd-SiteHeader li:has(.msrd-SiteHeader-link[href="/contact"]) {
-    border-radius: 0.5rem;
+    border-radius: calc(
+      var(--clbr-spacing-vertical-900) * var(--clbr-radius-ratio-default)
+    );
     box-shadow: none;
   }
 
@@ -209,13 +218,22 @@ html {
     align-items: center;
     background-color: var(--clbr-color-background-panel);
     block-size: var(--clbr-spacing-vertical-900);
-    border: solid var(--clbr-layout-border-width-default) var(--clbr-color-interactive-default);
-    border-radius: 0.5rem;
+    border: solid var(--clbr-layout-border-width-default)
+      var(--clbr-color-interactive-default);
+    border-radius: calc(
+      var(--clbr-spacing-vertical-900) * var(--clbr-radius-ratio-default)
+    );
     box-shadow: var(--clbr-effect-shadow-default);
     display: flex;
     padding-block: 0;
-    padding-inline-end: calc(var(--clbr-spacing-horizontal-600) - var(--clbr-layout-border-width-default));
-    padding-inline-start: calc(var(--clbr-spacing-horizontal-800) - var(--clbr-layout-border-width-default));
+    padding-inline-end: calc(
+      var(--clbr-spacing-horizontal-600) -
+        var(--clbr-layout-border-width-default)
+    );
+    padding-inline-start: calc(
+      var(--clbr-spacing-horizontal-800) -
+        var(--clbr-layout-border-width-default)
+    );
     position: relative;
     text-decoration: none;
   }
@@ -249,8 +267,10 @@ html {
       inset-inline-start: 0.25em;
       opacity: 1;
       transition:
-        var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
-        var(--clbr-motion-duration-200) inset-inline-start var(--clbr-motion-easing-ease-in-out);
+        var(--clbr-motion-duration-100) opacity
+          var(--clbr-motion-easing-ease-in-out),
+        var(--clbr-motion-duration-200) inset-inline-start
+          var(--clbr-motion-easing-ease-in-out);
     }
 
     @media (prefers-reduced-motion) {
@@ -258,8 +278,10 @@ html {
         .msrd-SiteHeader-link[href="/contact"]:hover
         .msrd-SiteHeader-linkText::after {
         transition:
-          var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
-          var(--clbr-motion-duration-0) inset-inline-start var(--clbr-motion-easing-ease-in-out);
+          var(--clbr-motion-duration-100) opacity
+            var(--clbr-motion-easing-ease-in-out),
+          var(--clbr-motion-duration-0) inset-inline-start
+            var(--clbr-motion-easing-ease-in-out);
       }
     }
   }

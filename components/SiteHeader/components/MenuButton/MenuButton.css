@@ -50,7 +50,7 @@
 .clbr .msrd-SiteHeaderMenuButton-inner::after {
   background-color: currentColor;
   block-size: calc(2rem / 16);
-  border-radius: calc(1rem / 16);
+  border-radius: var(--clbr-radius-2xs);
   inline-size: calc(24rem / 16);
   position: absolute;
 

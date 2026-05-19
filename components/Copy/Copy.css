@@ -1,7 +1,5 @@
 .clbr .msrd-Copy {
-  --button-size: calc((42 / 16) * 1rem);
-  --icon-border: calc((2 / 16) * 1rem);
-  --icon-size: calc((24 / 16) * 1rem);
+  --button-size: var(--clbr-typography-leading-850);
   --icon-offset: calc((6 / 16) * 1rem);
   background-color: transparent;
   block-size: var(--button-size);
@@ -15,27 +13,27 @@
 }
 
 .clbr .msrd-Copy::before {
-  block-size: var(--icon-size);
-  border: var(--icon-border) solid var(--clbr-color-interactive-default);
-  border-radius: calc(var(--icon-size) * var(--clbr-radius-ratio-default));
+  block-size: var(--clbr-layout-icon-size-md);
+  border: var(--clbr-layout-border-width-thick) solid var(--clbr-color-interactive-default);
+  border-radius: calc(var(--clbr-layout-icon-size-md) * var(--clbr-radius-ratio-default));
   content: "";
-  inline-size: var(--icon-size);
+  inline-size: var(--clbr-layout-icon-size-md);
   inset-block-end: calc(
-    var(--button-size) - var(--icon-size) - var(--icon-offset)
+    var(--button-size) - var(--clbr-layout-icon-size-md) - var(--icon-offset)
   );
   inset-inline-start: calc(
-    var(--button-size) - var(--icon-size) - var(--icon-offset)
+    var(--button-size) - var(--clbr-layout-icon-size-md) - var(--icon-offset)
   );
   position: absolute;
 }
 
 .clbr .msrd-Copy::after {
   background-color: var(--clbr-color-background-panel);
-  block-size: var(--icon-size);
-  border: var(--icon-border) solid var(--clbr-color-interactive-default);
-  border-radius: calc(var(--icon-size) * var(--clbr-radius-ratio-default));
+  block-size: var(--clbr-layout-icon-size-md);
+  border: var(--clbr-layout-border-width-thick) solid var(--clbr-color-interactive-default);
+  border-radius: calc(var(--clbr-layout-icon-size-md) * var(--clbr-radius-ratio-default));
   content: "";
-  inline-size: var(--icon-size);
+  inline-size: var(--clbr-layout-icon-size-md);
   inset-block-end: var(--icon-offset);
   inset-inline-start: var(--icon-offset);
   position: absolute;
@@ -59,12 +57,11 @@
 }
 
 .clbr .msrd-Copy:focus-visible {
-  --outline-offset: calc((4 / 16) * -1rem);
   border-radius: calc(
-    (var(--button-size) + var(--outline-offset)) * var(--clbr-radius-ratio-default)
+    (var(--button-size) + var(--clbr-layout-focus-ring-offset-inset)) * var(--clbr-radius-ratio-default)
   );
   outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
-  outline-offset: var(--outline-offset);
+  outline-offset: var(--clbr-layout-focus-ring-offset-inset);
 }
 
 .clbr .msrd-Copy:focus-visible .msrd-Copy-text,
