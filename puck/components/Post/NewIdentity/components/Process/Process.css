@@ -37,7 +37,7 @@
   inset-inline-start: calc(0rem - var(--border-offset));
   pointer-events: none;
   position: absolute;
-  transition: 0.05s var(--clbr-motion-easing-ease-in-out);
+  transition: var(--clbr-motion-duration-50) var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-NewIdentityProcess-dots {
@@ -162,7 +162,7 @@
   font-weight: 450;
   inline-size: min-content;
   padding: var(--clbr-spacing-vertical-250) var(--clbr-spacing-horizontal-600);
-  transition: 0.1s var(--clbr-motion-easing-ease-in-out);
+  transition: var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
   white-space: nowrap;
 }
 
@@ -173,7 +173,7 @@
 @media (hover: hover) {
   .clbr .msrd-NewIdentityProcess-button:hover {
     background: rgba(0, 0, 0, 0.055);
-    transition: 0.1s background-color var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-100) background-color var(--clbr-motion-easing-ease-in-out);
   }
 }
 

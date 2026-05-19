@@ -82,14 +82,14 @@
   .clbr .msrd-Copy:hover .msrd-Copy-text {
     inset-inline-start: var(--button-size);
     opacity: 1;
-    transition: 0.1s opacity var(--clbr-motion-easing-ease-in-out),
-      0.2s inset-inline-start var(--clbr-motion-easing-ease-in-out);
+    transition: var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
+      var(--clbr-motion-duration-200) inset-inline-start var(--clbr-motion-easing-ease-in-out);
   }
 
   @media (prefers-reduced-motion) {
     .clbr .msrd-Copy:hover .msrd-Copy-text {
-      transition: 0.1s opacity var(--clbr-motion-easing-ease-in-out),
-        0s inset-inline-start var(--clbr-motion-easing-ease-in-out);
+      transition: var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
+        var(--clbr-motion-duration-0) inset-inline-start var(--clbr-motion-easing-ease-in-out);
     }
   }
 }

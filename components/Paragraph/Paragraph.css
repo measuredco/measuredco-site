@@ -61,7 +61,7 @@
 }
 
 .clbr .msrd-Paragraph--measured.msrd-Paragraph--large {
-  max-inline-size: calc(var(--clbr-typography-measure-default) * 0.9);
+  max-inline-size: var(--clbr-typography-measure-tight);
 }
 
 .clbr .msrd-Paragraph--muted {

@@ -133,7 +133,7 @@
 .clbr .msrd-NewIdentity p.msrd-NewIdentity-standfirst {
   font-size: var(--clbr-typography-type-step-500-font-size);
   font-style: italic;
-  font-weight: 400;
+  font-weight: var(--clbr-typography-font-weight-regular);
   line-height: var(--clbr-typography-type-step-500-line-height);
   margin: 0 auto;
   max-inline-size: 38em;

@@ -117,7 +117,7 @@
   color: var(--clbr-color-interactive-default);
   font-family: var(--clbr-typography-font-family-mono);
   font-size: calc((10 / 16) * 1rem);
-  font-weight: 466;
+  font-weight: var(--clbr-typography-font-weight-medium);
   line-height: calc(10 / 10);
   padding: var(--clbr-spacing-vertical-250) var(--clbr-spacing-horizontal-300);
   text-transform: uppercase;

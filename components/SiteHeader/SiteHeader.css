@@ -52,8 +52,8 @@ html {
   background-color: var(--clbr-color-background-default);
   box-shadow: none;
   transition:
-    background-color 0.1s var(--clbr-motion-easing-ease-in-out),
-    box-shadow 0.1s var(--clbr-motion-easing-ease-in-out);
+    background-color var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out),
+    box-shadow var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-SiteHeader--menuOpen {
@@ -73,7 +73,7 @@ html {
 
 .clbr .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
   box-shadow: var(--site-header-box-shadow);
-  transition: box-shadow 0.1s var(--clbr-motion-easing-ease-in-out);
+  transition: box-shadow var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-SiteHeader-inner {
@@ -126,7 +126,7 @@ html {
 @media (hover: hover) {
   .clbr .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
     opacity: 0.44;
-    transition: opacity 0.1s var(--clbr-motion-easing-ease-in-out);
+    transition: opacity var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
   }
 }
 
@@ -249,8 +249,8 @@ html {
       inset-inline-start: 0.25em;
       opacity: 1;
       transition:
-        0.1s opacity var(--clbr-motion-easing-ease-in-out),
-        0.2s inset-inline-start var(--clbr-motion-easing-ease-in-out);
+        var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
+        var(--clbr-motion-duration-200) inset-inline-start var(--clbr-motion-easing-ease-in-out);
     }
 
     @media (prefers-reduced-motion) {
@@ -258,8 +258,8 @@ html {
         .msrd-SiteHeader-link[href="/contact"]:hover
         .msrd-SiteHeader-linkText::after {
         transition:
-          0.1s opacity var(--clbr-motion-easing-ease-in-out),
-          0s inset-inline-start var(--clbr-motion-easing-ease-in-out);
+          var(--clbr-motion-duration-100) opacity var(--clbr-motion-easing-ease-in-out),
+          var(--clbr-motion-duration-0) inset-inline-start var(--clbr-motion-easing-ease-in-out);
       }
     }
   }

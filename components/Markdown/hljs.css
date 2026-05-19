@@ -65,7 +65,7 @@
 
 .hljs-strong {
   color: var(--clbr-color-base16-0a);
-  font-weight: 566;
+  font-weight: var(--clbr-typography-font-weight-bold);
 }
 
 .hljs-code,
@@ -111,5 +111,5 @@
 
 .hljs-meta .hljs-keyword,
 .hljs-meta-keyword {
-  font-weight: 566;
+  font-weight: var(--clbr-typography-font-weight-bold);
 }

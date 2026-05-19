@@ -223,7 +223,7 @@
 
 .clbr .msrd-Markdown h4 {
   font-size: var(--clbr-typography-type-step-400-font-size);
-  font-weight: 466;
+  font-weight: var(--clbr-typography-font-weight-medium);
   line-height: var(--clbr-typography-type-step-400-line-height);
   margin-block-end: var(--clbr-spacing-vertical-500);
   margin-block-start: var(--clbr-spacing-vertical-700);
@@ -240,7 +240,7 @@
 
 .clbr .msrd-Markdown h3 {
   font-size: var(--clbr-typography-type-step-500-font-size);
-  font-weight: 433;
+  font-weight: var(--clbr-typography-font-weight-regular-plus);
   line-height: var(--clbr-typography-type-step-500-line-height);
   margin-block-end: var(--clbr-spacing-vertical-500);
   margin-block-start: var(--clbr-spacing-vertical-700);
@@ -257,7 +257,7 @@
 
 .clbr .msrd-Markdown h2 {
   font-size: var(--clbr-typography-type-step-700-font-size);
-  font-weight: 400;
+  font-weight: var(--clbr-typography-font-weight-regular);
   line-height: var(--clbr-typography-type-step-700-line-height);
   margin-block-end: var(--clbr-spacing-vertical-500);
   margin-block-start: var(--clbr-spacing-vertical-700);
