@@ -10,7 +10,10 @@ import {
   useState,
 } from "react";
 
-import { processMarkdown } from "../../lib/markdown";
+import {
+  processMarkdown,
+  processMarkdownInline,
+} from "@measured/calibrate-markdown";
 
 import "./hljs.css";
 import "./Markdown.css";
@@ -30,7 +33,9 @@ const Markdown = ({
   let Element: ElementType = "div";
   const router = useRouter();
   const [textProcessed, setTextProcessed] = useState(
-    processMarkdown(children?.toString(), inline),
+    inline
+      ? processMarkdownInline(children?.toString() ?? "")
+      : processMarkdown(children?.toString() ?? ""),
   );
 
   if (inline) {
@@ -38,7 +43,11 @@ const Markdown = ({
   }
 
   useEffect(() => {
-    setTextProcessed(processMarkdown(children?.toString(), inline));
+    setTextProcessed(
+      inline
+        ? processMarkdownInline(children?.toString() ?? "")
+        : processMarkdown(children?.toString() ?? ""),
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children]);
 
