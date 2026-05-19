@@ -32,24 +32,13 @@
       ]
     }
   },
-  "zones": {
-    "Section-f655e520-6742-4930-b07a-9fc27c4d4057:section": [
-      {
-        "type": "Contact",
-        "props": {
-          "id": "Contact-502ed2a3-bf95-4620-935b-a293c16aba9d",
-          "text": "How can we help?",
-          "email": "paul@measured.co"
-        }
-      }
-    ]
-  },
+  "zones": {},
   "content": [
     {
       "type": "Work",
       "props": {
         "id": "Work-c7ffc757-eeaf-41bf-bcaf-d9ad173109dc",
-        "date": "2019\u20132022",
+        "date": "2019–2022",
         "image": {
           "alt": "A laptop on a balcony table displays BT's business solutions website, with a headline reading \"We've got your back\" and sections highlighting connectivity, support, and security.",
           "src": "https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1734126226/site/dell-TxXuh_hAFd8-unsplash_BT_KV_cropped_pu0ke5.jpg",
@@ -63,20 +52,6 @@
           "quote": "Measured delivered excellence in their craft while navigating our organisational complexity with ease. Their insightful work evolved the digital expression of our brand thoughtfully, with measurable benefits to our customers prioritised at all times."
         },
         "standfirst": "Creating a cohesive digital identity for a transforming, multi-brand organisation."
-      }
-    },
-    {
-      "type": "Section",
-      "props": {
-        "id": "Section-f655e520-6742-4930-b07a-9fc27c4d4057",
-        "width": "centered"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-d95619f2-faa0-4157-8e0d-8b21b4354bb7",
-        "size": "12"
       }
     }
   ]

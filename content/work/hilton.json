@@ -38,7 +38,7 @@
       "type": "Work",
       "props": {
         "id": "Work-39a4c72a-2a7d-41ed-aba6-b90d1f283819",
-        "date": "2024\u20132025",
+        "date": "2024–2025",
         "image": {
           "alt": "A laptop on a wooden table displays the Hilton website, showing a search bar and calendar icons for booking rooms, and images of a hotel exterior and cozy interior.",
           "src": "https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1734172572/site/dell-EzYq1HOl5_8-unsplash_Hilton_KV_01_cropped_aye1yx.jpg",
@@ -48,21 +48,6 @@
         "title": "Hilton",
         "content": "Hilton manages a massive portfolio of hotels, and each brand has its own unique personality and visual identity. The challenge is bringing those distinct identities to life consistently and efficiently across all their digital platforms.\n\nWe partnered with Hilton to create a more systematic way for their brands to express themselves online. The goal was to improve speed and clarity while making their websites easier to maintain. Here's how we did it.\n\n### The challenge of brand expression at Hilton\n\nOur work with Hilton started with a close look at their shared web platform. While it did a great job of creating a baseline of consistency and efficiency, we saw an opportunity to let each brand's unique identity shine through more. \n\nHilton had put a lot of work into defining the character of each brand, but those ideas didn't always translate perfectly to the web. The visual differences between brands could be subtle, and the platform wasn't set up to handle the nuances.\n\nThe team had already built a strong foundation, so our job was to figure out how to evolve their systems and processes. We wanted to help them build distinctive, high-quality, and performant interfaces that better supported their business and brand goals.\n\nOur detailed UI report highlighted key areas for improvement, from how they approached their architecture to their delivery processes and visual design. For example, we noticed opportunities to turn brand redesigns around faster.\n\nContributing issues included a lack of reusable components, over-reliance on a single framework (Tailwind), and a lengthy design process that involved multiple third parties. We also found opportunities to improve page performance.\n\n### Foundations through prototypes\n\nAfter we presented our report, we started putting our recommendations into action. We built a prototype design system called Lunar.\n\nInstead of relying on hard-coded classes, Lunar applied brand guidelines directly to components using a simple theming model. We used it to rebuild pages for brands like Tempo, which helped us prove that we could get much closer to their brand guidelines in code.\n\nLunar showed what was possible: Hilton could take a more systematic approach to multi-brand theming. As the project moved forward, we worked with Hilton to figure out how to apply Lunar's principles to their internal platform.\n\n### A shared approach to multi-brand theming\n\nNext, we helped Hilton develop Prism, an internal design system that built on the principles of Lunar. It gave them a more consistent and flexible way to apply brand styles across their entire portfolio of websites.\n\nWorking with a small group at Hilton, we supported them with the tools and architecture they needed to connect design and code more effectively. This included a custom Figma plugin that kept design tokens and code perfectly in sync.\n\nPrism uses a shared API, which means that colors and typography are applied consistently across components without needing manual changes or duplication. This made it easier to manage brand styling while keeping the flexibility needed for future brand launches and updates.\n\n### Rollout and adoption\n\nAs Prism matured, our role grew to include helping teams across Hilton adopt it. We helped them map existing sites to the new token system, making sure brand updates could be applied more consistently and efficiently.\n\nThis phase was all about a careful, engineering-led implementation. By introducing tokens behind the scenes while maintaining the current look and feel, teams could lay the groundwork for big brand updates without having to change the appearance. This approach also made the review and approval process for each brand much smoother.\n\nPrism is now being adopted across Hilton's component library, and a compatibility layer allows for an incremental migration. This means components can adopt the new system without any immediate visual changes, so the rollout can be phased and disruption minimised. \n\nComponents using the new system are clearly marked, making it easy for teams to track their progress. In fact, Hilton's internal Storybook now features multiple brands styled with Prism.\n\n### Prism in action\n\nThe new system has already started paying off. Teams are delivering brand updates faster and aligning more easily on design and engineering. Designers and developers now have clearer guidance and spend less time on workarounds.\n\nPrism has become a core part of Hilton's UI platform. It supports clearer brand expression across their digital products, cuts down on duplicated work, and gives teams a more reliable way to work with brand rules.\n\nUltimately, this work helped Hilton strengthen how their brands show up online, making the whole process simpler for the teams who build those experiences.",
         "standfirst": "Laying the groundwork for brand expression at scale."
-      }
-    },
-    {
-      "type": "Contact",
-      "props": {
-        "id": "Contact-2420a875-d246-4c4e-9e09-6349ad4ee37b",
-        "text": "How can we help?",
-        "email": "paul@measured.co"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-ed9673cf-5360-4199-8164-5079de9cd6cf",
-        "size": "12"
       }
     }
   ]

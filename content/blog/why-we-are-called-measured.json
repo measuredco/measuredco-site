@@ -1,13 +1,13 @@
 {
   "root": {
     "props": {
-      "title": "Why we\u2019re called Measured",
+      "title": "Why we’re called Measured",
       "ogImage": {
-        "alt": "We quantify. We\u2019re pragmatists. We\u2019re craftspeople.",
+        "alt": "We quantify. We’re pragmatists. We’re craftspeople.",
         "url": "https://res.cloudinary.com/measuredco/image/upload/v1733840446/Why_we_re_called_Measured_OG_broacv.png",
         "type": "image/png"
       },
-      "description": "Names are hard. We thought a lot about ours. We thought we\u2019d share our thinking in case it helps people understand us better.",
+      "description": "Names are hard. We thought a lot about ours. We thought we’d share our thinking in case it helps people understand us better.",
       "headerLinks": [
         {
           "href": "/about",
@@ -32,45 +32,20 @@
       ]
     }
   },
-  "zones": {
-    "Section-727a1ac8-5689-4186-9205-248c97896edd:section": [
-      {
-        "type": "Contact",
-        "props": {
-          "id": "Contact-b35496c0-feea-4670-a9ff-12d61f6908f5",
-          "text": "How can we help?",
-          "email": "paul@measured.co"
-        }
-      }
-    ]
-  },
+  "zones": {},
   "content": [
     {
       "type": "Post",
       "props": {
         "id": "Post-c074daca-26ee-49d6-9d16-8248ce8027e6",
         "date": "2024-05-15",
-        "title": "Why we\u2019re called Measured",
+        "title": "Why we’re called Measured",
         "author": "Paul Love",
-        "content": "Names are hard. We thought a lot about ours. We landed on Measured as the best reflection of who we are and how we work. \n\nWe thought we\u2019d expand on that here, in case it helps people understand us better. (And, selfishly, we might be glad we wrote this down one day.) So: here\u2019s why we\u2019re called Measured.\n\n## We take care in our work\nWhether it\u2019s our approach to technology, design, strategy, or ways of working and communicating, Measured encapsulates our careful, precise approach.\n\nAs mantras go, we don\u2019t love _move fast and break things_. We prefer _move fast and leave things better than you found them_. We don\u2019t want to break things, and we want the people we work with to know that. It\u2019s better, more responsible and faster in the long run to not break things.\n\nMeasure twice, cut once is the vibe.\n\n## We\u2019re pragmatists\nWe have professional opinions, and we share them when it\u2019s helpful. But we\u2019re pragmatists, not ideologues; helpers not disruptors.\n\nIn our experience, strong opinions lead to heated discussions, and heated discussions end in logjams. We listen more than we speak, and we find the middle way (again, fastest). We always flex to the client\u2019s unique circumstances.\n\n## We quantify\nWe\u2019re goal-focused. We prioritise outcomes over outputs, and we favour those that can and should be measured. \n\nWe\u2019re not blinkered about it. We don\u2019t view metrics in isolation, ahead of everything else. But we value objective and transparent measures of progress. It makes our work accountable, validates good approaches, and helps us correct course when needed. \n\nIn truth, we weren\u2019t thinking about metrics when we came up with the name, but it works, even if it\u2019s something of a [retcon](https://en.wikipedia.org/wiki/Retroactive_continuity).\n\n## We\u2019re craftspeople\n[Measure means the length of a line of text](https://fonts.google.com/knowledge/glossary/measure_line_length). So we started using `measured` and `isMeasured` in our code as property and class names. It indicates that a piece of text should have its line-length restricted for readability rather than filling the width of its container. \n\nIn other words, Measured is a small doff of the cap to the craft of what we&nbsp;do.",
+        "content": "Names are hard. We thought a lot about ours. We landed on Measured as the best reflection of who we are and how we work. \n\nWe thought we’d expand on that here, in case it helps people understand us better. (And, selfishly, we might be glad we wrote this down one day.) So: here’s why we’re called Measured.\n\n## We take care in our work\nWhether it’s our approach to technology, design, strategy, or ways of working and communicating, Measured encapsulates our careful, precise approach.\n\nAs mantras go, we don’t love _move fast and break things_. We prefer _move fast and leave things better than you found them_. We don’t want to break things, and we want the people we work with to know that. It’s better, more responsible and faster in the long run to not break things.\n\nMeasure twice, cut once is the vibe.\n\n## We’re pragmatists\nWe have professional opinions, and we share them when it’s helpful. But we’re pragmatists, not ideologues; helpers not disruptors.\n\nIn our experience, strong opinions lead to heated discussions, and heated discussions end in logjams. We listen more than we speak, and we find the middle way (again, fastest). We always flex to the client’s unique circumstances.\n\n## We quantify\nWe’re goal-focused. We prioritise outcomes over outputs, and we favour those that can and should be measured. \n\nWe’re not blinkered about it. We don’t view metrics in isolation, ahead of everything else. But we value objective and transparent measures of progress. It makes our work accountable, validates good approaches, and helps us correct course when needed. \n\nIn truth, we weren’t thinking about metrics when we came up with the name, but it works, even if it’s something of a [retcon](https://en.wikipedia.org/wiki/Retroactive_continuity).\n\n## We’re craftspeople\n[Measure means the length of a line of text](https://fonts.google.com/knowledge/glossary/measure_line_length). So we started using `measured` and `isMeasured` in our code as property and class names. It indicates that a piece of text should have its line-length restricted for readability rather than filling the width of its container. \n\nIn other words, Measured is a small doff of the cap to the craft of what we&nbsp;do.",
         "authorUrl": "https://www.linkedin.com/in/paullove/",
         "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1732538343/backgrounds/_Measured_Backgrounds_09_300_iupeaz.png",
-        "standfirst": "We thought we\u2019d write a post about why we\u2019re called Measured in case it helps people understand us better.",
+        "standfirst": "We thought we’d write a post about why we’re called Measured in case it helps people understand us better.",
         "modifiedDate": ""
-      }
-    },
-    {
-      "type": "Section",
-      "props": {
-        "id": "Section-727a1ac8-5689-4186-9205-248c97896edd",
-        "width": "default"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-c4fceaaf-adab-4572-b10e-076341f8d887",
-        "size": "12"
       }
     }
   ]

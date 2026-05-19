@@ -107,7 +107,7 @@
         "props": {
           "id": "Contact-4020adb2-6cf3-426a-b203-75bcc11f2187",
           "text": "How can we help?",
-          "email": "paul@measured.co"
+          "email": "hello@measured.co"
         }
       }
     ],
@@ -119,7 +119,7 @@
           "size": "m",
           "level": "2",
           "heading": "Message us",
-          "description": "Email [paul@measured.co](mailto:paul@measured.co)<br>\nLinkedIn [@paullove](https://linkedin.com/in/paullove/)"
+          "description": "Email [hello@measured.co](mailto:hello@measured.co)"
         }
       },
       {
@@ -157,7 +157,7 @@
           "size": "m",
           "level": "2",
           "heading": "Follow us",
-          "description": "Look for @measuredco on<br /> [Bluesky](https://bsky.app/profile/measured.co), [GitHub](https://github.com/measuredco), and [LinkedIn](https://www.linkedin.com/company/measuredco/).<br> Or [subscribe to RSS feed](/feed.atom)."
+          "description": "Look for @measuredco<br> on [GitHub](https://github.com/measuredco) and [LinkedIn](https://www.linkedin.com/company/measuredco/).<br> Or [subscribe to RSS feed](/feed.atom)."
         }
       },
       {

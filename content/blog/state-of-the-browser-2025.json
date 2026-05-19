@@ -1,13 +1,13 @@
 {
   "root": {
     "props": {
-      "title": "We\u2019ll be back for State of the Browser 2025",
+      "title": "We’ll be back for State of the Browser 2025",
       "ogImage": {
         "alt": "",
         "url": "",
         "type": ""
       },
-      "description": "We\u2019ll be returning to State of the Browser in London at the end of March.  We\u2019ll be around all day to talk about UI and branding. We\u2019d love to see you there.",
+      "description": "We’ll be returning to State of the Browser in London at the end of March.  We’ll be around all day to talk about UI and branding. We’d love to see you there.",
       "headerLinks": [
         {
           "href": "/about",
@@ -39,27 +39,12 @@
       "props": {
         "id": "Post-de307122-fead-465d-8868-c6fb5f70b194",
         "date": "2025-01-20",
-        "title": "We\u2019ll be back for State of the Browser 2025",
+        "title": "We’ll be back for State of the Browser 2025",
         "author": "Paul Love",
-        "content": "We\u2019ll be going along to State of the Browser 2025. We had such a nice time at the [last one](https://measured.co/blog/catch-up-at-state-of-the-browser) we thought we\u2019d go again.\n\n## Essential details\n\n- Saturday, 29 March, 2024\n- 8:30 am\u20133:00 pm\n- The Barbican Centre, Frobisher Auditorium 1 ([Map](https://www.google.co.uk/maps/place/Barbican+Centre/@51.5209863,-0.0957614,17z/data=!4m6!3m5!1s0x48761b56fb64b275:0xc756e26675d21f40!8m2!3d51.5202077!4d-0.0937864!16zL20vMG02cTY?entry=ttu)) \u2014 We recommend entering by Silk Street\n- [Ticket information](https://2025.stateofthebrowser.com/tickets/)\n\n## About the event\n\nState of the Browser is a super event for anyone who works in the world of web. The talks are always engaging, and it\u2019s a really lovely vibe in person (though you can attend online too).\n\nThis year\u2019s speaker lineup is shaping up nicely. You can follow speaker announcements on London Web Standards\u2019 social channels: [Bluesky](https://bsky.app/profile/londonwebstandards.org), [LinkedIn](https://www.linkedin.com/company/londonwebstandards/), and [Mastodon](https://mastodon.world/@webstandards).\n\n## Find us on the day\n\nWe won\u2019t be speaking, but will be around all day to talk about UI, branding and accessibility \u2014 or whatever else grabs you. (Weather chat is still most welcome.)\n\nOnce more, thanks to London Web Standards for letting us sponsor. We\u2018re pleased to be involved in a small way.\n\nHere\u2019s the [ticket link](https://2024.stateofthebrowser.com/tickets/) once more.",
+        "content": "We’ll be going along to State of the Browser 2025. We had such a nice time at the [last one](https://measured.co/blog/catch-up-at-state-of-the-browser) we thought we’d go again.\n\n## Essential details\n\n- Saturday, 29 March, 2024\n- 8:30 am–3:00 pm\n- The Barbican Centre, Frobisher Auditorium 1 ([Map](https://www.google.co.uk/maps/place/Barbican+Centre/@51.5209863,-0.0957614,17z/data=!4m6!3m5!1s0x48761b56fb64b275:0xc756e26675d21f40!8m2!3d51.5202077!4d-0.0937864!16zL20vMG02cTY?entry=ttu)) — We recommend entering by Silk Street\n- [Ticket information](https://2025.stateofthebrowser.com/tickets/)\n\n## About the event\n\nState of the Browser is a super event for anyone who works in the world of web. The talks are always engaging, and it’s a really lovely vibe in person (though you can attend online too).\n\nThis year’s speaker lineup is shaping up nicely. You can follow speaker announcements on London Web Standards’ social channels: [Bluesky](https://bsky.app/profile/londonwebstandards.org), [LinkedIn](https://www.linkedin.com/company/londonwebstandards/), and [Mastodon](https://mastodon.world/@webstandards).\n\n## Find us on the day\n\nWe won’t be speaking, but will be around all day to talk about UI, branding and accessibility — or whatever else grabs you. (Weather chat is still most welcome.)\n\nOnce more, thanks to London Web Standards for letting us sponsor. We‘re pleased to be involved in a small way.\n\nHere’s the [ticket link](https://2024.stateofthebrowser.com/tickets/) once more.",
         "authorUrl": "https://www.linkedin.com/in/paullove/",
-        "standfirst": "We\u2019ll be returning to State of the Browser in London at the end of March. We\u2019d love to see you there.",
+        "standfirst": "We’ll be returning to State of the Browser in London at the end of March. We’d love to see you there.",
         "modifiedDate": ""
-      }
-    },
-    {
-      "type": "Contact",
-      "props": {
-        "id": "Contact-dc03c53c-aa1b-4363-8b86-c937523d0c1e",
-        "text": "How can we help?",
-        "email": "paul@measured.co"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-279a6681-f732-43f1-8ece-ede4390f8074",
-        "size": "12"
       }
     }
   ]

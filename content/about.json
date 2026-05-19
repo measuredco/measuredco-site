@@ -118,16 +118,6 @@
         }
       }
     ],
-    "Section-25dc6efc-4eb7-4675-bf28-ae32285d16a9:section": [
-      {
-        "type": "Contact",
-        "props": {
-          "id": "Contact-5663b530-8eb4-4752-908f-bf33074f5ed2",
-          "text": "How can we help?",
-          "email": "paul@measured.co"
-        }
-      }
-    ],
     "Section-379b024c-b184-4c57-af90-b8df0d7fc01e:section": [
       {
         "type": "Grid",
@@ -166,7 +156,7 @@
           "size": "l",
           "level": "1",
           "heading": "About",
-          "description": "We are a team of designers, engineers and strategists with a mission to revolutionise the quality of UI across the web. Here\u2019s [why we\u2019re called Measured](/blog/why-we-are-called-measured)."
+          "description": "We are a team of designers, engineers and strategists with a mission to revolutionise the quality of UI across the web. Here’s [why we’re called Measured](/blog/why-we-are-called-measured)."
         }
       },
       {
@@ -204,7 +194,7 @@
           "size": "m",
           "level": "2",
           "heading": "We are pragmatists",
-          "description": "Strong opinions can lead to logjams. We listen more than we speak, and flex to our clients\u2019 unique circumstances."
+          "description": "Strong opinions can lead to logjams. We listen more than we speak, and flex to our clients’ unique circumstances."
         }
       }
     ],
@@ -216,7 +206,7 @@
           "size": "m",
           "level": "2",
           "heading": "We are craftspeople",
-          "description": "We don\u2019t believe in move fast and break things. We believe in move fast and make things better."
+          "description": "We don’t believe in move fast and break things. We believe in move fast and make things better."
         }
       }
     ],
@@ -292,20 +282,6 @@
       "type": "Space",
       "props": {
         "id": "Space-5619eed2-9ac7-46ba-820c-e6a7ef9f5a2f",
-        "size": "12"
-      }
-    },
-    {
-      "type": "Section",
-      "props": {
-        "id": "Section-25dc6efc-4eb7-4675-bf28-ae32285d16a9",
-        "width": "default"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-a55e95db-90e8-41c9-9240-8daaf2801cfd",
         "size": "12"
       }
     }

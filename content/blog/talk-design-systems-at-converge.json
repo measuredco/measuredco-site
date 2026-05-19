@@ -1,13 +1,13 @@
 {
   "root": {
     "props": {
-      "title": "Let\u2019s talk design systems at Converge this October",
+      "title": "Let’s talk design systems at Converge this October",
       "ogImage": {
         "alt": "",
         "url": "",
         "type": ""
       },
-      "description": "We\u2019re going to the Converge design systems conference on October 3 and 4 to chat about all things UI. There\u2019s a great speaker line-up. We hope to see you there!",
+      "description": "We’re going to the Converge design systems conference on October 3 and 4 to chat about all things UI. There’s a great speaker line-up. We hope to see you there!",
       "headerLinks": [
         {
           "href": "/about",
@@ -39,27 +39,12 @@
       "props": {
         "id": "Post-9b4bc793-9ddf-4657-a7dd-06cb627af11c",
         "date": "2024-09-17",
-        "title": "Let\u2019s talk design systems at Converge this October",
+        "title": "Let’s talk design systems at Converge this October",
         "author": "Paul Love",
-        "content": "A small but exciting update: We\u2019re going to be back in sunny Brighton to attend [Converge](https://zeroheight.com/events/converge/) this October. Given its billing as Europe\u2019s biggest design system conference, we\u2019d be remiss if we didn\u2019t.\n\n## Essential details\n\n- Wednesday, October 2 to Friday, October 4, 2024\n- Brighton Dome, Brighton, BN1 1UE ([Map](https://maps.app.goo.gl/pTpN21pU1c16hGWr7))\n- [Ticket information](https://ti.to/zeroheight/converge-2024)\n\n\n## When to find us\n\nChris, Scott and I will be there to chat about all things design system, and UI in general. We\u2019ll be at the conference bit on Thursday and Friday, but not the workshop on Wednesday. \n\n[Tickets](https://ti.to/zeroheight/converge-2024) are still available, and the speaker line-up looks fantastic. The Brighton Dome is worth the price of admission alone. An easy event to recommend \u2014 hopefully we\u2019ll see you there!",
+        "content": "A small but exciting update: We’re going to be back in sunny Brighton to attend [Converge](https://zeroheight.com/events/converge/) this October. Given its billing as Europe’s biggest design system conference, we’d be remiss if we didn’t.\n\n## Essential details\n\n- Wednesday, October 2 to Friday, October 4, 2024\n- Brighton Dome, Brighton, BN1 1UE ([Map](https://maps.app.goo.gl/pTpN21pU1c16hGWr7))\n- [Ticket information](https://ti.to/zeroheight/converge-2024)\n\n\n## When to find us\n\nChris, Scott and I will be there to chat about all things design system, and UI in general. We’ll be at the conference bit on Thursday and Friday, but not the workshop on Wednesday. \n\n[Tickets](https://ti.to/zeroheight/converge-2024) are still available, and the speaker line-up looks fantastic. The Brighton Dome is worth the price of admission alone. An easy event to recommend — hopefully we’ll see you there!",
         "authorUrl": "https://www.linkedin.com/in/paullove/",
-        "standfirst": "We\u2019re going to the Converge design systems conference on October 3 and 4 to chat about all things UI.",
+        "standfirst": "We’re going to the Converge design systems conference on October 3 and 4 to chat about all things UI.",
         "modifiedDate": ""
-      }
-    },
-    {
-      "type": "Contact",
-      "props": {
-        "id": "Contact-9a42f006-abbb-402f-9642-a1d6ef96e9e3",
-        "text": "How can we help?",
-        "email": "paul@measured.co"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-cac14448-34c5-490e-9265-35935acf9598",
-        "size": "12"
       }
     }
   ]

@@ -7,7 +7,7 @@
         "url": "",
         "type": ""
       },
-      "description": "Building the platform enabling Hubble\u2019s pivot to flexible, on-demand office space, helping them adapt and thrive in the post-pandemic world.",
+      "description": "Building the platform enabling Hubble’s pivot to flexible, on-demand office space, helping them adapt and thrive in the post-pandemic world.",
       "headerLinks": [
         {
           "href": "/about",
@@ -32,24 +32,13 @@
       ]
     }
   },
-  "zones": {
-    "Section-3a93e3c7-7887-427c-94e8-d15812d1c887:section": [
-      {
-        "type": "Contact",
-        "props": {
-          "id": "Contact-0364a010-7299-4057-93bf-ef03c36f7a44",
-          "text": "How can we help?",
-          "email": "paul@measured.co"
-        }
-      }
-    ]
-  },
+  "zones": {},
   "content": [
     {
       "type": "Work",
       "props": {
         "id": "Work-c1275956-ad97-41ca-a42f-48e2cccb5c9d",
-        "date": "2021\u20132023",
+        "date": "2021–2023",
         "image": {
           "alt": "A laptop on a cushioned bench shows Hubble's website, featuring a search tool to find workspaces according to location and other preferences, along with a tagline: \"Find amazing workspaces for your team to thrive.\"",
           "src": "https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1734109002/site/dell-2L-0vnCnzcU-unsplash_Hubble_KV_01_jhtme5.jpg",
@@ -57,26 +46,12 @@
         },
         "quote": "",
         "title": "Hubble",
-        "content": "## Need\n\nLike many companies, [Hubble](https://hubblehq.com/) were hugely affected by the COVID-19 pandemic. With a business model matching clients to long-term office space, they needed to pivot fast. \n\nFollowing the launch of their On-Demand subscription product, Hubble needed to expand functionality to meet the needs of their quickly-growing customer base. Enter Measured, with an initial scope to deliver tightly-defined aspects of the project.\n\n\n## Action\n\nBeginning with one developer for a week at a time, our involvement expanded into 4 developers for up to 40 days per programme of work. Pivotal contributions included:\n\n- Building [Slack](https://hubblehq.com/slack) and calendar integrations on top of web functionality allowing colleagues to see where and when others are working, and to join them in person at short notice\n- Retiring legacy code, greatly reducing technical debt, by migrating Hubble\u2019s Inbox application from AngularJS to React, and its Messaging service from Node to Django\n- Integrating day office and meeting room booking capabilities\n- Integrating Stripe to support subscription services, one-off payments, and the ability for large organizations to manage individual member expenditure\n\n\n## Outcome\n\nMeasured were an essential partner throughout the launch of [Hubble On-Demand](https://hubblehq.com/pass), which successfully positioned the client as a leader in flexible, on-demand office space.",
+        "content": "## Need\n\nLike many companies, [Hubble](https://hubblehq.com/) were hugely affected by the COVID-19 pandemic. With a business model matching clients to long-term office space, they needed to pivot fast. \n\nFollowing the launch of their On-Demand subscription product, Hubble needed to expand functionality to meet the needs of their quickly-growing customer base. Enter Measured, with an initial scope to deliver tightly-defined aspects of the project.\n\n\n## Action\n\nBeginning with one developer for a week at a time, our involvement expanded into 4 developers for up to 40 days per programme of work. Pivotal contributions included:\n\n- Building [Slack](https://hubblehq.com/slack) and calendar integrations on top of web functionality allowing colleagues to see where and when others are working, and to join them in person at short notice\n- Retiring legacy code, greatly reducing technical debt, by migrating Hubble’s Inbox application from AngularJS to React, and its Messaging service from Node to Django\n- Integrating day office and meeting room booking capabilities\n- Integrating Stripe to support subscription services, one-off payments, and the ability for large organizations to manage individual member expenditure\n\n\n## Outcome\n\nMeasured were an essential partner throughout the launch of [Hubble On-Demand](https://hubblehq.com/pass), which successfully positioned the client as a leader in flexible, on-demand office space.",
         "blockquote": {
           "cite": "Simon Andrews, VP of Engineering at Hubble",
           "quote": "Working with Measured has been a dream. They care deeply about the quality of their work, which means we can trust Measured to handle the details, saving significant time for us. Communication has been excellent, so we always know the status of work, we know what we need to provide, and collaboration happens seamlessly."
         },
-        "standfirst": "Helping Hubble pivot to customers\u2019 flexible working needs."
-      }
-    },
-    {
-      "type": "Section",
-      "props": {
-        "id": "Section-3a93e3c7-7887-427c-94e8-d15812d1c887",
-        "width": "centered"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-8311b185-09de-4ffd-8b2e-9b506673a593",
-        "size": "12"
+        "standfirst": "Helping Hubble pivot to customers’ flexible working needs."
       }
     }
   ]

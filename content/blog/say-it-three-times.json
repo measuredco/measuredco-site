@@ -7,7 +7,7 @@
         "url": "https://res.cloudinary.com/measuredco/image/upload/v1742993322/The_power_of_saying_it_three_times_OG_rzsudi.png",
         "type": "image/png"
       },
-      "description": "We\u2019ve found that when communicating a complex idea, it helps to say it three times to make sure it takes hold.",
+      "description": "We’ve found that when communicating a complex idea, it helps to say it three times to make sure it takes hold.",
       "headerLinks": [
         {
           "href": "/about",
@@ -41,26 +41,11 @@
         "date": "2025-03-26",
         "title": "The power of saying it three times",
         "author": "Paul Love",
-        "content": "When it comes to making things memorable, the number three has a flawless track record. For example:\n\n- Veni, vidi, vici\n- Government of the people, by the people, for the people\n- Turn on, tune in, drop out[^caesar-lincoln-leary]\n\nBeyond rhetoric, we\u2019ve found that when communicating a complex idea, it helps to say it three times. That is, it generally takes three distinct explanations for a tricky idea to take hold.\n\nOccasionally, people get it first time. If that happens, great, but avoid making this your benchmark. That will only lead to disappointment. More often, they won\u2019t. In that case, be patient. Remember that other people won\u2019t have all the context that you do, and have their own priorities jostling for headspace.\n\nDon\u2019t worry about whether people got it \u2014 that will become clear. It might be through a small piece of work, a comment in a meeting, or even a quizzical look. These are all useful datapoints that let you know you\u2019ll need to say it three times.\n\nWhen these moments happen, there\u2019s no need to react immediately. Instead, make a plan to say it again in the way that\u2019s most likely to land. Put it another way, or in another format. If you can, show the idea working. \n\nBut however you put it, make sure it\u2019s clear, concise and, if possible, memorable. Do that, and they\u2019ll get there eventually. And you\u2019ll be able to tell when it lands in all the same ways you could tell that it didn\u2019t.\n\nSo we often say to each other: say it three times. It\u2019s as much a reminder to be patient and intentional as it is a guide to making ideas stick.\n\n[^caesar-lincoln-leary]: As attributed to Julius Caesar, Abraham Lincoln, and Timothy Leary. Caesar wrote it in a letter. Lincoln and Leary said it out loud. History does not record if they later emailed attendees their PowerPoint decks.",
+        "content": "When it comes to making things memorable, the number three has a flawless track record. For example:\n\n- Veni, vidi, vici\n- Government of the people, by the people, for the people\n- Turn on, tune in, drop out[^caesar-lincoln-leary]\n\nBeyond rhetoric, we’ve found that when communicating a complex idea, it helps to say it three times. That is, it generally takes three distinct explanations for a tricky idea to take hold.\n\nOccasionally, people get it first time. If that happens, great, but avoid making this your benchmark. That will only lead to disappointment. More often, they won’t. In that case, be patient. Remember that other people won’t have all the context that you do, and have their own priorities jostling for headspace.\n\nDon’t worry about whether people got it — that will become clear. It might be through a small piece of work, a comment in a meeting, or even a quizzical look. These are all useful datapoints that let you know you’ll need to say it three times.\n\nWhen these moments happen, there’s no need to react immediately. Instead, make a plan to say it again in the way that’s most likely to land. Put it another way, or in another format. If you can, show the idea working. \n\nBut however you put it, make sure it’s clear, concise and, if possible, memorable. Do that, and they’ll get there eventually. And you’ll be able to tell when it lands in all the same ways you could tell that it didn’t.\n\nSo we often say to each other: say it three times. It’s as much a reminder to be patient and intentional as it is a guide to making ideas stick.\n\n[^caesar-lincoln-leary]: As attributed to Julius Caesar, Abraham Lincoln, and Timothy Leary. Caesar wrote it in a letter. Lincoln and Leary said it out loud. History does not record if they later emailed attendees their PowerPoint decks.",
         "authorUrl": "https://www.linkedin.com/in/paullove/",
         "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771287169/facet/facet-762327123lt-a41cn75e79fx19fy61sz22sp10b6l69op84ot86w71_zvhphk.png",
         "standfirst": "When communicating a complex idea, it helps to say it three times to make sure it takes hold.",
         "modifiedDate": ""
-      }
-    },
-    {
-      "type": "Contact",
-      "props": {
-        "id": "Contact-96265134-3859-47e9-b75b-d6ddbde0c8e2",
-        "text": "How can we help?",
-        "email": "paul@measured.co"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-11fb6109-74d4-4043-8d57-d6902c88a69e",
-        "size": "12"
       }
     }
   ]
