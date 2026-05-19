@@ -1,6 +1,7 @@
 .clbr .msrd-Paragraph {
   --color-interactive-prose: var(--clbr-color-interactive-default);
   --color-interactive-visited: var(--clbr-color-interactive-default);
+
   font-size: var(--clbr-typography-type-step-300-font-size);
   line-height: var(--clbr-typography-type-step-300-line-height);
   margin: 0;
@@ -12,7 +13,7 @@
   --color-interactive-visited: inherit;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Paragraph {
     font-size: var(--clbr-typography-type-step-450-font-size);
     line-height: var(--clbr-typography-type-step-450-line-height);
@@ -33,11 +34,12 @@
 
 .clbr .msrd-Paragraph--large {
   --color-text-prose: var(--clbr-color-foreground-default);
+
   font-size: var(--clbr-typography-type-step-400-font-size);
   line-height: var(--clbr-typography-type-step-400-line-height);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Paragraph--large {
     font-size: var(--clbr-typography-type-step-500-font-size);
     line-height: var(--clbr-typography-type-step-500-line-height);

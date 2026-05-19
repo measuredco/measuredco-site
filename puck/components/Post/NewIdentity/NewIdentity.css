@@ -73,17 +73,19 @@
   --clbr-color-interactive-focus: #083c8a;
   --clbr-color-interactive-active: #083c8a;
   --clbr-color-interactive-visited: #031f60;
+
   background-color: #3598f8;
-  color: #ffffff;
+  color: #fff;
   font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 500;
   line-height: var(--clbr-typography-type-step-400-line-height);
 
   @media (prefers-color-scheme: dark) {
-    --clbr-color-interactive-default: #ffffff;
-    --clbr-color-interactive-hover: color-mix(in srgb, #ffffff 94%, transparent);
-    --clbr-color-interactive-active: color-mix(in srgb, #ffffff 88%, transparent);
-    --clbr-color-interactive-visited: #ffffff;
+    --clbr-color-interactive-default: #fff;
+    --clbr-color-interactive-hover: color-mix(in srgb, #fff 94%, transparent);
+    --clbr-color-interactive-active: color-mix(in srgb, #fff 88%, transparent);
+    --clbr-color-interactive-visited: #fff;
+
     color: #0e0f10;
   }
 }
@@ -95,6 +97,7 @@
 .clbr .msrd-NewIdentity-image,
 .clbr .msrd-NewIdentity-imageLarge {
   --border-radius: calc((8 / 16) * 1rem);
+
   border-radius: var(--border-radius);
   box-shadow: none;
   display: inline-block;
@@ -159,7 +162,7 @@
 .clbr .msrd-u-NewIdentity-hiddenMobile {
   display: none;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     display: block;
   }
 }
@@ -174,7 +177,7 @@
 }
 
 .clbr .msrd-NewIdentity-hero::before {
-  background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png);
+  background-image: url("https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png");
   background-position: 100% top;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -182,23 +185,23 @@
   inset: 0;
   position: absolute;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     background-position: initial;
     inset-block-end: -4%;
     inset-inline-start: 53.5%;
   }
 
-  @media (min-width: 53em) {
+  @media (width >= 53em) {
     inset-block-end: 0;
   }
 
-  @media (min-width: 60em) {
+  @media (width >= 60em) {
     inset-inline-start: 63%;
   }
 
-  @media (min-width: 121.75em) {
+  @media (width >= 121.75em) {
     background-image:
-      url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png),
+      url("https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740564389/site/hero-bg_oc1h9z.png"),
       linear-gradient(to right, transparent 75%, #083c8a 75%);
   }
 }
@@ -215,7 +218,7 @@
 .clbr .msrd-NewIdentity-next {
   padding-inline-end: var(--clbr-spacing-horizontal-600);
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     padding-inline-end: 0;
   }
 }
@@ -227,14 +230,13 @@
 .clbr .msrd-NewIdentity-offset {
   margin-block-start: var(--clbr-spacing-vertical-900);
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     margin-block-start: var(--clbr-spacing-vertical-950);
   }
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     inset-block-start: calc((-108 / 16) * 1rem);
-    margin-block-end: calc((-108 / 16) * 1rem);
-    margin-block-start: 0;
+    margin-block: 0 calc((-108 / 16) * 1rem);
     position: relative;
   }
 }
@@ -248,11 +250,11 @@
   margin-inline: auto;
   max-inline-size: calc((705 / 16) * 1rem);
 
-  @media (min-width: 50em) {
+  @media (width >= 50em) {
     margin-block-end: var(--clbr-spacing-vertical-900);
   }
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     margin-block-end: 0;
     max-inline-size: 28.1875em;
   }

@@ -71,7 +71,7 @@
   font-optical-sizing: none;
 }
 
-@media (min-width: 24em) {
+@media (width >= 24em) {
   .clbr .msrd-Heading--display1 {
     font: var(--clbr-typography-text-heading-4xl);
     font-feature-settings: "ss03" 1;
@@ -79,9 +79,10 @@
   }
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Heading--display1 {
     font-size: var(--clbr-typography-type-step-1300-font-size);
+    /* stylelint-disable-next-line scale-unlimited/declaration-strict-value -- bespoke display1 weight; no font-weight token at 200 */
     font-weight: 200;
     line-height: var(--clbr-typography-type-step-1300-line-height);
   }

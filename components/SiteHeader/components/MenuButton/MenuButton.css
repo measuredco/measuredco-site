@@ -5,10 +5,12 @@
   color: inherit;
   cursor: pointer;
   display: block;
+  /* stylelint-disable-next-line declaration-property-unit-disallowed-list -- sub-pixel button geometry; no length token */
   inset-inline-end: calc(-3rem / 16);
-  margin-block: calc(6rem / 16);
+  margin-block: var(--clbr-spacing-vertical-400);
   overflow: visible;
   padding-block: 0;
+  /* stylelint-disable-next-line declaration-property-unit-disallowed-list -- sub-pixel button geometry; no length token */
   padding-inline: calc(3rem / 16);
   position: relative;
 }
@@ -17,8 +19,10 @@
   .clbr .msrd-SiteHeaderMenuButton *,
   .clbr .msrd-SiteHeaderMenuButton *::after,
   .clbr .msrd-SiteHeaderMenuButton *::before {
+    /* stylelint-disable declaration-no-important -- forced motion-off for prefers-reduced-motion */
     transition-delay: var(--clbr-motion-duration-0) !important;
     transition-duration: var(--clbr-motion-duration-0) !important;
+    /* stylelint-enable declaration-no-important */
   }
 }
 
@@ -32,7 +36,7 @@
   color: var(--clbr-color-interactive-neutral-active);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-SiteHeaderMenuButton {
     display: none;
   }
@@ -48,7 +52,7 @@
 .clbr .msrd-SiteHeaderMenuButton-inner,
 .clbr .msrd-SiteHeaderMenuButton-inner::before,
 .clbr .msrd-SiteHeaderMenuButton-inner::after {
-  background-color: currentColor;
+  background-color: currentcolor;
   block-size: calc(2rem / 16);
   border-radius: var(--clbr-radius-2xs);
   inline-size: calc(24rem / 16);
@@ -62,7 +66,8 @@
 .clbr .msrd-SiteHeaderMenuButton-inner {
   display: block;
   inset-block-start: 50%;
-  transition: transform var(--clbr-motion-duration-200) var(--clbr-motion-easing-emphasized);
+  transition: transform var(--clbr-motion-duration-200)
+    var(--clbr-motion-easing-emphasized);
 }
 
 .clbr .msrd-SiteHeaderMenuButton-inner::before,
@@ -72,15 +77,22 @@
 }
 
 .clbr .msrd-SiteHeaderMenuButton-inner::before {
+  /* stylelint-disable-next-line declaration-property-unit-disallowed-list -- hamburger bar offset; no length token */
   inset-block-start: calc(-8rem / 16);
-  transition: inset-block-start var(--clbr-motion-duration-100) var(--clbr-motion-duration-200) var(--clbr-motion-easing-ease-in),
+  transition:
+    inset-block-start var(--clbr-motion-duration-100)
+      var(--clbr-motion-duration-200) var(--clbr-motion-easing-ease-in),
     opacity var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in);
 }
 
 .clbr .msrd-SiteHeaderMenuButton-inner::after {
+  /* stylelint-disable-next-line declaration-property-unit-disallowed-list -- hamburger bar offset; no length token */
   inset-block-end: calc(-8rem / 16);
-  transition: inset-block-end var(--clbr-motion-duration-100) var(--clbr-motion-duration-200) var(--clbr-motion-easing-ease-in),
-    transform var(--clbr-motion-duration-200) var(--clbr-motion-easing-emphasized);
+  transition:
+    inset-block-end var(--clbr-motion-duration-100)
+      var(--clbr-motion-duration-200) var(--clbr-motion-easing-ease-in),
+    transform var(--clbr-motion-duration-200)
+      var(--clbr-motion-easing-emphasized);
 }
 
 .clbr .msrd-SiteHeaderMenuButton--menuOpen .msrd-SiteHeaderMenuButton-inner {
@@ -94,8 +106,11 @@
   .msrd-SiteHeaderMenuButton-inner::before {
   inset-block-start: 0;
   opacity: 0;
-  transition: inset-inline-start var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-out),
-    opacity var(--clbr-motion-duration-100) var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-out);
+  transition:
+    inset-inline-start var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-out),
+    opacity var(--clbr-motion-duration-100) var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-out);
 }
 
 .clbr
@@ -103,13 +118,15 @@
   .msrd-SiteHeaderMenuButton-inner::after {
   inset-block-end: 0;
   transform: rotate(-90deg);
-  transition: inset-block-end var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-out),
-    transform var(--clbr-motion-duration-200) var(--clbr-motion-duration-100) var(--clbr-motion-easing-ease-in-out);
+  transition:
+    inset-block-end var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-out),
+    transform var(--clbr-motion-duration-200) var(--clbr-motion-duration-100)
+      var(--clbr-motion-easing-ease-in-out);
 }
 
 .clbr .msrd-SiteHeaderMenuButton-text {
   block-size: calc(1rem / 16);
-  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   inline-size: calc(1rem / 16);
   overflow: hidden;

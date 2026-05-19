@@ -1,11 +1,11 @@
-@import "./components/Menu/Menu.css";
-@import "./components/MenuButton/MenuButton.css";
+@import url("./components/Menu/Menu.css");
+@import url("./components/MenuButton/MenuButton.css");
 
 html {
   scroll-padding-block-start: var(--clbr-spacing-vertical-1250);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   html {
     scroll-padding-block-start: var(--clbr-spacing-vertical-1400);
   }
@@ -19,7 +19,7 @@ html {
   --site-header-height: var(--clbr-spacing-vertical-1000);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr {
     --site-header-height: var(--clbr-spacing-vertical-1100);
   }
@@ -29,6 +29,7 @@ html {
   --color-site-header-background: var(--clbr-color-background-default);
   --site-header-box-shadow: 0 0 0 var(--clbr-layout-border-width-default)
     var(--clbr-color-border-subtle);
+
   background-color: var(--color-site-header-background);
   inset-block-start: 0;
   position: sticky;
@@ -61,6 +62,7 @@ html {
 .clbr .msrd-SiteHeader--menuOpen {
   background: var(--clbr-color-background-default);
   box-shadow: none;
+
   /*
    * While the menu is open the scroll is locked via Calibrate's
    * `data-clbr-scroll-locked` (overflow:hidden on <html>), which removes
@@ -95,7 +97,7 @@ html {
   }
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-SiteHeader-inner {
     padding-block: calc(
       var(--clbr-spacing-vertical-600) - var(--clbr-spacing-vertical-200)
@@ -137,7 +139,7 @@ html {
   }
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-SiteHeader-navItems {
     align-items: center;
     display: flex;
@@ -159,7 +161,7 @@ html {
   position: relative;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-SiteHeader-link {
     padding-block: var(--clbr-spacing-vertical-250);
   }
@@ -185,7 +187,7 @@ html {
   margin-inline-start: 0.2em;
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-SiteHeader-link--current {
     text-decoration: underline;
     text-decoration-color: var(--clbr-color-border-brand);
@@ -206,7 +208,7 @@ html {
 
 /* CTA */
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-SiteHeader li:has(.msrd-SiteHeader-link[href="/contact"]) {
     border-radius: calc(
       var(--clbr-spacing-vertical-900) * var(--clbr-radius-ratio-default)
@@ -226,12 +228,11 @@ html {
     box-shadow: var(--clbr-effect-shadow-default);
     display: flex;
     padding-block: 0;
-    padding-inline-end: calc(
-      var(--clbr-spacing-horizontal-600) -
-        var(--clbr-layout-border-width-default)
-    );
-    padding-inline-start: calc(
+    padding-inline: calc(
       var(--clbr-spacing-horizontal-800) -
+        var(--clbr-layout-border-width-default)
+    ) calc(
+      var(--clbr-spacing-horizontal-600) -
         var(--clbr-layout-border-width-default)
     );
     position: relative;

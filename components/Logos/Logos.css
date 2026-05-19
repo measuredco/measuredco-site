@@ -9,6 +9,7 @@
 }
 
 .clbr .msrd-Logos-inner {
+  /* stylelint-disable-next-line unit-disallowed-list -- marquee duration; no motion-duration token at 20s */
   animation: scroll 20s linear infinite;
   display: flex;
   flex-shrink: 0;
@@ -22,6 +23,7 @@
 
 :dir(rtl) .clbr .msrd-Logos-inner,
 .translated-rtl .clbr .msrd-Logos-inner {
+  /* stylelint-disable-next-line unit-disallowed-list -- marquee duration; no motion-duration token at 20s */
   animation: scroll-rtl 20s linear infinite;
 }
 
@@ -29,7 +31,7 @@
   animation-play-state: paused;
 }
 
-@media (min-width: 80em) {
+@media (width >= 80em) {
   .clbr .msrd-Logos-inner {
     animation: none;
     justify-content: space-between;
@@ -51,6 +53,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(calc(-100% - var(--clbr-spacing-horizontal-800)));
   }
@@ -60,6 +63,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(calc(100% - var(--clbr-spacing-horizontal-800)));
   }
@@ -74,7 +78,7 @@
     padding-inline: var(--clbr-spacing-horizontal-600);
   }
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     .clbr .msrd-Logos {
       padding-inline: var(--clbr-spacing-horizontal-800);
     }
@@ -87,7 +91,7 @@
     row-gap: var(--clbr-spacing-vertical-500);
   }
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     .clbr .msrd-Logos-inner {
       row-gap: var(--clbr-spacing-vertical-700);
     }
@@ -117,6 +121,7 @@
   border-radius: var(--clbr-radius-xs);
   color: var(--clbr-color-interactive-default);
   font-family: var(--clbr-typography-font-family-mono);
+  /* stylelint-disable-next-line declaration-property-unit-disallowed-list -- 10px label; smallest type-step token is 12px */
   font-size: calc((10 / 16) * 1rem);
   font-weight: var(--clbr-typography-font-weight-medium);
   line-height: 1;

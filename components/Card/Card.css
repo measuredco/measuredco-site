@@ -23,10 +23,8 @@
   border: solid var(--clbr-layout-border-width-default) var(--clbr-color-border-brand);
   border-radius: var(--clbr-radius-lg);
   content: "";
-  inset-block-end: var(--clbr-effect-stroke-inset);
-  inset-block-start: var(--clbr-effect-stroke-outset);
-  inset-inline-end: var(--clbr-effect-stroke-inset);
-  inset-inline-start: var(--clbr-effect-stroke-outset);
+  inset-block: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
+  inset-inline: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
   pointer-events: none;
   position: absolute;
   transition: var(--clbr-motion-duration-50) var(--clbr-motion-easing-ease-in-out);
@@ -69,27 +67,21 @@
 
   @media (prefers-reduced-motion) {
     .clbr .msrd-Card:has(.msrd-Card-heading a):hover::after {
-      inset-block-end: var(--clbr-effect-stroke-inset);
-      inset-block-start: var(--clbr-effect-stroke-outset);
-      inset-inline-end: var(--clbr-effect-stroke-inset);
-      inset-inline-start: var(--clbr-effect-stroke-outset);
+      inset-block: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
+      inset-inline: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
     }
   }
 }
 
 .clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
-  inset-block-end: calc(var(--clbr-effect-stroke-outset) / 2);
-  inset-block-start: calc(var(--clbr-effect-stroke-inset) / 2);
-  inset-inline-end: calc(var(--clbr-effect-stroke-outset) / 2);
-  inset-inline-start: calc(var(--clbr-effect-stroke-inset) / 2);
+  inset-block: calc(var(--clbr-effect-stroke-inset) / 2) calc(var(--clbr-effect-stroke-outset) / 2);
+  inset-inline: calc(var(--clbr-effect-stroke-inset) / 2) calc(var(--clbr-effect-stroke-outset) / 2);
 }
 
 @media (prefers-reduced-motion) {
   .clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
-    inset-block-end: var(--clbr-effect-stroke-inset);
-    inset-block-start: var(--clbr-effect-stroke-outset);
-    inset-inline-end: var(--clbr-effect-stroke-inset);
-    inset-inline-start: var(--clbr-effect-stroke-outset);
+    inset-block: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
+    inset-inline: var(--clbr-effect-stroke-outset) var(--clbr-effect-stroke-inset);
   }
 }
 
@@ -196,8 +188,8 @@
 }
 
 .clbr .msrd-Card-note {
-  font-weight: var(--clbr-typography-font-weight-medium);
   font-family: var(--clbr-typography-font-family-mono);
+  font-weight: var(--clbr-typography-font-weight-medium);
   margin-block-start: auto;
 }
 
@@ -211,6 +203,7 @@
 
 .clbr .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
   --arrow-offset: 0.25em;
+
   content: "→";
   font-family: var(--clbr-typography-font-family-default);
   inset-inline-start: var(--arrow-offset);

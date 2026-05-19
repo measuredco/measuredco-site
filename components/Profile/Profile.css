@@ -1,5 +1,6 @@
 .clbr .msrd-Profile-imageWrapper {
   --image-size: var(--clbr-spacing-vertical-1400);
+
   border-radius: calc(var(--image-size) * var(--clbr-radius-ratio-default));
   box-shadow: none;
   inline-size: var(--image-size);
@@ -13,7 +14,7 @@
   }
 }
 
-@media (min-width: 80em) {
+@media (width >= 80em) {
   .clbr .msrd-Profile {
     align-items: flex-end;
     display: flex;
@@ -22,6 +23,7 @@
 
   .clbr .msrd-Profile-imageWrapper {
     --image-size: calc(192rem / 16);
+
     flex-shrink: 0;
     margin-block-end: 0;
   }

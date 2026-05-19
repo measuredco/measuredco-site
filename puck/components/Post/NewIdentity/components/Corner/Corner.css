@@ -2,11 +2,11 @@
   margin-inline: auto;
   max-inline-size: calc((414 / 16) * 1rem);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     max-inline-size: calc((844 / 16) * 1rem);
   }
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     max-inline-size: 100%;
   }
 }
@@ -27,7 +27,7 @@
 .clbr .msrd-NewIdentityCorner-largeTile {
   align-items: flex-end;
   aspect-ratio: 1/1;
-  background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740598113/site/large-tile_ezwhgy.png);
+  background-image: url("https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740598113/site/large-tile_ezwhgy.png");
   background-size: cover;
   display: flex;
   max-inline-size: calc((414 / 16) * 1rem);

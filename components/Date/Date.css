@@ -3,7 +3,7 @@
   line-height: var(--clbr-typography-type-step-300-line-height);
 }
 
-@media (min-width: 48em) {
+@media (width >= 48em) {
   .clbr .msrd-Date {
     font-size: var(--clbr-typography-type-step-450-font-size);
     line-height: var(--clbr-typography-type-step-450-line-height);
@@ -15,7 +15,7 @@
     content: ":";
   }
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     display: block;
 
     &::after {

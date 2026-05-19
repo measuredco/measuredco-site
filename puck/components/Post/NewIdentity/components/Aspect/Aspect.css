@@ -1,7 +1,7 @@
 .clbr .msrd-NewIdentityAspect {
   margin-block-end: var(--clbr-spacing-vertical-700);
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     align-items: center;
     display: flex;
     gap: var(--clbr-spacing-horizontal-700);
@@ -9,11 +9,11 @@
     max-inline-size: calc((704 / 16) * 1rem);
   }
 
-  @media (min-width: 54em) {
+  @media (width >= 54em) {
     max-inline-size: calc((794 / 16) * 1rem);
   }
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     display: block;
   }
 }
@@ -25,11 +25,11 @@
 .clbr .msrd-NewIdentityAspect-rule {
   display: block;
 
-  @media (min-width: 48em) {
+  @media (width >= 48em) {
     display: none;
   }
 
-  @media (min-width: 80em) {
+  @media (width >= 80em) {
     display: block;
   }
 }
