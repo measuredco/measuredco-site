@@ -225,16 +225,6 @@
     --site-header-height: var(--space-vertical-10);
   }
 
-  /*
-   * Corner tokens
-   */
-
-  --border-radius-focus: calc((1 / 16) * 1rem);
-  --border-radius-image: calc((4 / 16) * 1rem);
-  --border-radius-button: calc((8 / 16) * 1rem);
-  --border-radius-card: calc((18 / 16) * 1rem);
-
-  --corner-ratio-square: 0.16666667;
 }
 
 /*
@@ -265,6 +255,17 @@
   --easing-cubic-bezier-ease-in: var(--clbr-motion-easing-ease-in);
   --easing-cubic-bezier-ease-out: var(--clbr-motion-easing-ease-out);
   --easing-cubic-bezier-reverse-easy-ease: var(--clbr-motion-easing-emphasized);
+
+  /*
+   * Corner radii sourced from Calibrate's radius scale. focus/image/card
+   * are exact ports; button maps to the nearest size (--clbr-radius-sm,
+   * 8px→6px); the square corner ratio maps to --clbr-radius-ratio-default.
+   */
+  --border-radius-focus: var(--clbr-radius-2xs);
+  --border-radius-image: var(--clbr-radius-xs);
+  --border-radius-button: var(--clbr-radius-sm);
+  --border-radius-card: var(--clbr-radius-lg);
+  --corner-ratio-square: var(--clbr-radius-ratio-default);
 
   --color-brand: var(--clbr-color-brand-primary);
   --color-rule: var(--clbr-color-border-brand);
