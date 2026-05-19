@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@measured/calibrate-assets':
-        specifier: ^0.4.1
-        version: 0.4.1
+        specifier: ^0.4.2
+        version: 0.4.2
       '@measured/calibrate-core':
-        specifier: ^0.4.1
-        version: 0.4.1
+        specifier: ^0.4.2
+        version: 0.4.2
       '@measured/calibrate-react':
-        specifier: ^0.4.1
-        version: 0.4.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+        specifier: ^0.4.2
+        version: 0.4.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@measured/puck':
         specifier: 0.18.3
         version: 0.18.3(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -329,14 +329,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@measured/calibrate-assets@0.4.1':
-    resolution: {integrity: sha512-KWRXMqGzB1qzzBYevRkNkD8UMHfdSe8chxULTPEWvWEL8VHZWqIyebNi1toK0FNZEZFwOsushYR/ygDMxeC15g==}
+  '@measured/calibrate-assets@0.4.2':
+    resolution: {integrity: sha512-2ClRPkRhwz6rOfbSgH5KbdV9H+Z3pw4r2nrjIReggw1780qwnQccUA0vwwTGKdN2FRsst8ZrfVRCGD7wSUbMvQ==}
 
-  '@measured/calibrate-core@0.4.1':
-    resolution: {integrity: sha512-nZhww27Q6ueJ7KUYTMskUm77FV5gdj1h8oFDty3JyX615cLUCvsGp8BxWt5wIaOBp49lqUTwmjc33NWLg/72Bw==}
+  '@measured/calibrate-core@0.4.2':
+    resolution: {integrity: sha512-N1+kqNtIOGHY3M6ZA1gcGFGhdmPjSkWIxCdMCm4deN2BHjUKJTiS5xqMV8s16y1lLbdz3lj93fOAVbCVgsHY1A==}
 
-  '@measured/calibrate-react@0.4.1':
-    resolution: {integrity: sha512-4kcVwdI8pgJIiTd9EJKE0vB3ayXdIqoYty3rVobRkYqEYg/EtSKTZMFny0Nc5Xrvc45hfRc1MdqS4ZxdBLRpMQ==}
+  '@measured/calibrate-react@0.4.2':
+    resolution: {integrity: sha512-jN6uBJ7enyLamA0tV9+RYism32dHeaXiHgEIjyOzI9rHb5GRKUvooxed0JRSMVIfwRaN6ljqOIHFjIJZKktGgA==}
     peerDependencies:
       react: ^19.2.6
       react-dom: ^19.2.6
@@ -2478,15 +2478,15 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@measured/calibrate-assets@0.4.1': {}
+  '@measured/calibrate-assets@0.4.2': {}
 
-  '@measured/calibrate-core@0.4.1':
+  '@measured/calibrate-core@0.4.2':
     dependencies:
       lucide: 1.16.0
 
-  '@measured/calibrate-react@0.4.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
+  '@measured/calibrate-react@0.4.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@measured/calibrate-core': 0.4.1
+      '@measured/calibrate-core': 0.4.2
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
 
@@ -3196,7 +3196,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.32.0)(eslint@8.57.0)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint@8.57.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.0)
       eslint-plugin-react: 7.37.5(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.57.0)
@@ -3215,7 +3215,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.0)
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.0)
       eslint-plugin-react: 7.37.5(eslint@8.57.0)
       eslint-plugin-react-hooks: 5.2.0(eslint@8.57.0)
@@ -3287,7 +3287,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -3298,7 +3298,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -3310,7 +3310,7 @@ snapshots:
       string.prototype.trimend: 1.0.9
       tsconfig-paths: 3.15.0
     optionalDependencies:
-      '@typescript-eslint/parser': 8.48.1(eslint@8.57.0)(typescript@5.9.3)
+      '@typescript-eslint/parser': 5.59.11(eslint@8.57.0)(typescript@5.9.3)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -3327,7 +3327,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@5.59.11(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.48.1(eslint@8.57.0)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
