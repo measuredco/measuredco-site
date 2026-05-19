@@ -1,4 +1,4 @@
-.msrd .msrd-NewIdentityCorner {
+.clbr .msrd-NewIdentityCorner {
   margin-inline: auto;
   max-inline-size: calc((414 / 16) * 1rem);
 
@@ -11,8 +11,8 @@
   }
 }
 
-.msrd .msrd-NewIdentityCorner-label {
-  color: var(--color-azure-05);
+.clbr .msrd-NewIdentityCorner-label {
+  color: #1666bb;
   font-family: var(--font-family-monospaced);
   font-size: var(--font-01-size);
   line-height: var(--font-01-line-height);
@@ -20,11 +20,11 @@
   text-wrap: pretty;
 
   @media (prefers-color-scheme: dark) {
-    color: var(--color-azure-07);
+    color: #3598f8;
   }
 }
 
-.msrd .msrd-NewIdentityCorner-largeTile {
+.clbr .msrd-NewIdentityCorner-largeTile {
   align-items: flex-end;
   aspect-ratio: 1/1;
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1740598113/site/large-tile_ezwhgy.png);
@@ -34,7 +34,7 @@
   padding: var(--space-horizontal-07);
 }
 
-.msrd .msrd-NewIdentityCorner p.msrd-NewIdentityCorner-description:not(foo) {
+.clbr .msrd-NewIdentityCorner p.msrd-NewIdentityCorner-description:not(foo) {
   font-size: var(--font-01-size);
   line-height: var(--font-01-line-height);
   margin: 0 auto;

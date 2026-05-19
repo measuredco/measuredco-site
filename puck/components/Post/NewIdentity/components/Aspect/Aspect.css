@@ -1,4 +1,4 @@
-.msrd .msrd-NewIdentityAspect {
+.clbr .msrd-NewIdentityAspect {
   margin-block-end: var(--space-vertical);
 
   @media (min-width: 48em) {
@@ -18,11 +18,11 @@
   }
 }
 
-.msrd :last-child > .msrd-NewIdentityAspect {
+.clbr :last-child > .msrd-NewIdentityAspect {
   margin-block-end: 0;
 }
 
-.msrd .msrd-NewIdentityAspect-rule {
+.clbr .msrd-NewIdentityAspect-rule {
   display: block;
 
   @media (min-width: 48em) {
@@ -34,6 +34,6 @@
   }
 }
 
-.msrd .msrd-NewIdentityAspect p.msrd-NewIdentityAspect-description:not(foo) {
+.clbr .msrd-NewIdentityAspect p.msrd-NewIdentityAspect-description:not(foo) {
   max-inline-size: 20em;
 }

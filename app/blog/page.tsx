@@ -1,4 +1,3 @@
-import { Data } from "@measured/puck";
 import { Render } from "@measured/puck/rsc";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -6,7 +5,7 @@ import { notFound } from "next/navigation";
 import content from "../../content.json";
 import { getPageRes } from "../../lib/get-page-res";
 import { getPosts } from "../../lib/get-posts";
-import config from "../../puck/config";
+import config, { type UserData } from "../../puck/config";
 
 const { blogDescription, openGraphLocale, siteName, siteUrl } = content;
 
@@ -49,7 +48,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Page() {
   const pageRes = await getPageRes("/blog");
-  const data = pageRes.data?.data as Data;
+  const data = pageRes.data?.data as UserData;
 
   if (pageRes.status !== 200 || !data) {
     return notFound();

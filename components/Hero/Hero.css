@@ -1,4 +1,4 @@
-.msrd .msrd-Hero {
+.clbr .msrd-Hero {
   --header-height: var(--space-vertical-09);
   block-size: min-content;
   display: flex;
@@ -11,28 +11,28 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Hero {
+  .clbr .msrd-Hero {
     --header-height: var(--space-vertical-10);
   }
 }
 
-.msrd .msrd-Hero-inner {
+.clbr .msrd-Hero-inner {
   margin-block-end: var(--space-vertical-06);
   padding-block-start: var(--space-vertical-06);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Hero-inner {
+  .clbr .msrd-Hero-inner {
     margin-block-end: var(--space-vertical-09);
     padding-block-start: var(--space-vertical-09);
   }
 }
 
-.msrd .msrd-Hero-text {
+.clbr .msrd-Hero-text {
   padding-inline: var(--space-horizontal);
 }
 
-.msrd .msrd-Hero-strapline {
+.clbr .msrd-Hero-strapline {
   font-size: var(--font-10-size);
   font-weight: 366;
   line-height: var(--font-10-line-height);
@@ -44,30 +44,30 @@
 }
 
 @supports (text-wrap: balance) {
-  .msrd .msrd-Hero-strapline {
+  .clbr .msrd-Hero-strapline {
     max-inline-size: 100%;
   }
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Hero-strapline {
+  .clbr .msrd-Hero-strapline {
     font-size: var(--font-12-size);
     line-height: var(--font-12-line-height);
     margin-block-end: var(--space-vertical-05);
   }
 }
 
-.msrd .msrd-Hero-rule {
+.clbr .msrd-Hero-rule {
   margin-block: var(--space-vertical-04);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Hero-rule {
+  .clbr .msrd-Hero-rule {
     margin-block: var(--space-vertical-06);
   }
 }
 
-.msrd .msrd-Hero-description {
+.clbr .msrd-Hero-description {
   color: var(--color-text-prose);
   font-size: var(--font-03-size);
   line-height: var(--font-03-line-height);
@@ -79,7 +79,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Hero-description {
+  .clbr .msrd-Hero-description {
     font-size: var(--font-04-size);
     line-height: var(--font-04-line-height-large);
     margin-block-end: 0;
@@ -98,14 +98,14 @@
   }
 }
 
-.msrd .msrd-Hero-arrow {
+.clbr .msrd-Hero-arrow {
   --animation-delay: 1.5s;
   --animation-duration: 3s;
   display: none;
   user-select: none;
 }
 
-.msrd .msrd-Hero--fullscreen .msrd-Hero-arrow {
+.clbr .msrd-Hero--fullscreen .msrd-Hero-arrow {
   align-items: flex-end;
   animation: bounce var(--animation-duration) var(--animation-delay)
     var(--easing-cubic-bezier-easy-ease) infinite;
@@ -131,13 +131,13 @@
 }
 
 @media (hover: hover) {
-  .msrd .msrd-Hero--fullscreen .msrd-Hero-arrow {
+  .clbr .msrd-Hero--fullscreen .msrd-Hero-arrow {
     animation: none;
     opacity: 0;
     transition: none;
   }
 
-  .msrd:not(:has(a:hover)):hover .msrd-Hero--fullscreen .msrd-Hero-arrow {
+  .clbr:not(:has(a:hover)):hover .msrd-Hero--fullscreen .msrd-Hero-arrow {
     animation: bounce var(--animation-duration) var(--animation-delay)
       var(--easing-cubic-bezier-easy-ease) infinite;
     opacity: 1;
@@ -152,7 +152,7 @@
 }
 
 @media (prefers-reduced-motion) {
-  .msrd .msrd-Hero--fullscreen .msrd-Hero-arrow {
+  .clbr .msrd-Hero--fullscreen .msrd-Hero-arrow {
     animation: none !important;
   }
 }

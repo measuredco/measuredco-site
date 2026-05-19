@@ -1,5 +1,7 @@
 import { PropsWithChildren } from "react";
 
+import { Surface as ClbrSurface } from "@measured/calibrate-react";
+
 import "./Surface.css";
 
 type SurfaceProps = {
@@ -7,14 +9,18 @@ type SurfaceProps = {
 };
 
 const Surface = ({ background, children }: PropsWithChildren<SurfaceProps>) => {
+  if (background === "graphicDark") {
+    return (
+      <ClbrSurface variant="brand" contentTheme="dark">
+        <div className="msrd-Surface-graphic">{children}</div>
+      </ClbrSurface>
+    );
+  }
+
   return (
-    <div
-      className={`msrd-Surface ${
-        background ? `msrd-Surface--${background}` : ""
-      }`}
-    >
+    <ClbrSurface variant={background === "dark" ? "brand" : "default"}>
       {children}
-    </div>
+    </ClbrSurface>
   );
 };
 

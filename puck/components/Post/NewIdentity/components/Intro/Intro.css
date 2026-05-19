@@ -1,4 +1,4 @@
-.msrd .msrd-NewIdentityIntro {
+.clbr .msrd-NewIdentityIntro {
   max-inline-size: calc((1956 / 16) * 1rem);
   padding: var(--space-vertical-06) var(--space-horizontal);
 
@@ -41,10 +41,10 @@
   }
 }
 
-.msrd .msrd-NewIdentityIntro-image img {
+.clbr .msrd-NewIdentityIntro-image img {
   border-radius: var(--border-radius-button);
   box-shadow: 0.125rem 0.125rem 0.25rem
-    color-mix(in srgb, var(--color-black) 08%, transparent);
+    color-mix(in srgb, #000000 08%, transparent);
   margin-block-end: var(--space-vertical-07);
   margin-inline: auto;
   transform: rotate(6deg);

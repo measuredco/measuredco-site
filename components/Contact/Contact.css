@@ -1,32 +1,32 @@
-.msrd .msrd-Contact {
+.clbr .msrd-Contact {
   text-align: center;
 }
 
-.msrd .msrd-Contact-rule {
+.clbr .msrd-Contact-rule {
   margin-block: var(--space-vertical-04);
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Contact-rule {
+  .clbr .msrd-Contact-rule {
     margin-block: var(--space-vertical);
   }
 }
 
-.msrd .msrd-Contact a:not([class]) {
+.clbr .msrd-Contact a:not([class]) {
   color: var(--color-interactive-neutral);
 }
 
 @media (hover: hover) {
-  .msrd .msrd-Contact a:not([class]):hover {
+  .clbr .msrd-Contact a:not([class]):hover {
     color: var(--color-interactive-neutral-hover);
   }
 }
 
-.msrd .msrd-Contact a:not([class]):active {
+.clbr .msrd-Contact a:not([class]):active {
   color: var(--color-interactive-neutral-active);
 }
 
-.msrd .msrd-Contact-email {
+.clbr .msrd-Contact-email {
   display: inline-flex;
   gap: var(--space-horizontal);
 }

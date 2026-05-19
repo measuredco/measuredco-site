@@ -45,12 +45,12 @@ const SiteHeader = ({ links }: SiteHeaderProps) => {
   }, [homepage]);
 
   useEffect(() => {
-    const body = document.body;
+    const root = document.documentElement;
 
     if (menuOpen) {
-      body.classList.add("msrd-u-overflowHidden");
+      root.setAttribute("data-clbr-scroll-locked", "");
     } else {
-      body.classList.remove("msrd-u-overflowHidden");
+      root.removeAttribute("data-clbr-scroll-locked");
     }
   }, [menuOpen]);
 

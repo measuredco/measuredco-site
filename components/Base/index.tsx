@@ -1,24 +1,13 @@
-import { ElementType, PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
+
+import { Root } from "@measured/calibrate-react";
 
 import "./Base.css";
 
-type BaseProps = {
-  body?: boolean;
-  className?: string;
-};
-
-const Base = ({
-  body = false,
-  children,
-  className = "msrd",
-}: PropsWithChildren<BaseProps>) => {
-  let Element: ElementType = "div";
-
-  if (body) {
-    Element = "body";
-  }
-
-  return <Element className={className}>{children}</Element>;
-};
+const Base = ({ children }: PropsWithChildren<unknown>) => (
+  <Root appRoot appOverscrollBehavior="none" brand="msrd">
+    {children}
+  </Root>
+);
 
 export default Base;

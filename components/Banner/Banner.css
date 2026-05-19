@@ -1,15 +1,15 @@
-.msrd .msrd-Banner {
+.clbr .msrd-Banner {
   aspect-ratio: 4 / 3;
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Banner {
+  .clbr .msrd-Banner {
     aspect-ratio: 2 / 1;
   }
 }
 
 @media (min-width: 64em) {
-  .msrd .msrd-Banner {
+  .clbr .msrd-Banner {
     aspect-ratio: 412 / 135;
   }
 }

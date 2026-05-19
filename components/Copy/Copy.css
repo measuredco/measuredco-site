@@ -1,4 +1,4 @@
-.msrd .msrd-Copy {
+.clbr .msrd-Copy {
   --color-border: var(--color-copy-interactive);
   --button-size: calc((42 / 16) * 1rem);
   --icon-border: calc((2 / 16) * 1rem);
@@ -15,7 +15,7 @@
   text-align: start;
 }
 
-.msrd .msrd-Copy::before {
+.clbr .msrd-Copy::before {
   block-size: var(--icon-size);
   border: var(--icon-border) solid var(--color-border);
   border-radius: calc(var(--icon-size) * var(--corner-ratio-square));
@@ -30,7 +30,7 @@
   position: absolute;
 }
 
-.msrd .msrd-Copy::after {
+.clbr .msrd-Copy::after {
   background-color: var(--color-button-background);
   block-size: var(--icon-size);
   border: var(--icon-border) solid var(--color-border);
@@ -42,7 +42,7 @@
   position: absolute;
 }
 
-.msrd .msrd-Copy-text {
+.clbr .msrd-Copy-text {
   block-size: var(--button-size);
   color: var(--color-copy-text);
   display: block;
@@ -55,11 +55,11 @@
   position: absolute;
 }
 
-.msrd .msrd-Copy:focus-visible {
+.clbr .msrd-Copy:focus-visible {
   outline: 0;
 }
 
-.msrd .msrd-Copy:focus-visible {
+.clbr .msrd-Copy:focus-visible {
   --outline-offset: calc((4 / 16) * -1rem);
   border-radius: calc(
     (var(--button-size) + var(--outline-offset)) * var(--corner-ratio-square)
@@ -68,18 +68,18 @@
   outline-offset: var(--outline-offset);
 }
 
-.msrd .msrd-Copy:focus-visible .msrd-Copy-text,
-.msrd .msrd-Copy--touched .msrd-Copy-text {
+.clbr .msrd-Copy:focus-visible .msrd-Copy-text,
+.clbr .msrd-Copy--touched .msrd-Copy-text {
   inset-inline-start: var(--button-size);
   opacity: 1;
 }
 
 @media (hover: hover) {
-  .msrd .msrd-Copy:hover {
+  .clbr .msrd-Copy:hover {
     --color-border: var(--color-copy-interactive-hover);
   }
 
-  .msrd .msrd-Copy:hover .msrd-Copy-text {
+  .clbr .msrd-Copy:hover .msrd-Copy-text {
     inset-inline-start: var(--button-size);
     opacity: 1;
     transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
@@ -87,13 +87,13 @@
   }
 
   @media (prefers-reduced-motion) {
-    .msrd .msrd-Copy:hover .msrd-Copy-text {
+    .clbr .msrd-Copy:hover .msrd-Copy-text {
       transition: 0.1s opacity var(--easing-cubic-bezier-easy-ease),
         0s inset-inline-start var(--easing-cubic-bezier-easy-ease);
     }
   }
 }
 
-.msrd .msrd-Copy:active {
+.clbr .msrd-Copy:active {
   --color-border: var(--color-interactive-active);
 }

@@ -1,4 +1,4 @@
-.msrd .msrd-Card {
+.clbr .msrd-Card {
   background-color: var(--color-card-background);
   block-size: 100%;
   border-radius: var(--border-radius-card);
@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.msrd .msrd-Card-inner {
+.clbr .msrd-Card-inner {
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow);
   display: flex;
@@ -19,7 +19,7 @@
   padding-inline: var(--space-horizontal-07);
 }
 
-.msrd .msrd-Card::after {
+.clbr .msrd-Card::after {
   border: solid var(--border-width) var(--color-card-border);
   border-radius: var(--border-radius-card);
   content: "";
@@ -32,43 +32,43 @@
   transition: 0.05s var(--easing-cubic-bezier-easy-ease);
 }
 
-.msrd .msrd-Card a {
+.clbr .msrd-Card a {
   color: inherit;
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
 
-.msrd .msrd-Card a:focus-visible {
+.clbr .msrd-Card a:focus-visible {
   outline: none;
 }
 
-.msrd .msrd-Card a:hover,
-.msrd .msrd-Card a:active {
+.clbr .msrd-Card a:hover,
+.clbr .msrd-Card a:active {
   color: inherit;
 }
 
-.msrd .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible) {
+.clbr .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible) {
   outline: var(--outline-width) solid var(--color-interactive-focus);
   outline-offset: var(--border-offset-card);
 }
 
-.msrd .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible)::after {
+.clbr .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible)::after {
   inset: 0;
   transition: none;
 }
 
 @media (hover: hover) {
-  .msrd .msrd-Card:has(.msrd-Card-heading a) {
+  .clbr .msrd-Card:has(.msrd-Card-heading a) {
     cursor: pointer;
   }
 
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover::after {
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover::after {
     inset: 0;
     transition: 0.1s var(--easing-cubic-bezier-easy-ease);
   }
 
   @media (prefers-reduced-motion) {
-    .msrd .msrd-Card:has(.msrd-Card-heading a):hover::after {
+    .clbr .msrd-Card:has(.msrd-Card-heading a):hover::after {
       inset-block-end: var(--border-offset-card);
       inset-block-start: calc(0rem - var(--border-offset-card));
       inset-inline-end: var(--border-offset-card);
@@ -77,7 +77,7 @@
   }
 }
 
-.msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
+.clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
   inset-block-end: calc(0rem - var(--border-offset-card) / 2);
   inset-block-start: calc(var(--border-offset-card) / 2);
   inset-inline-end: calc(0rem - var(--border-offset-card) / 2);
@@ -85,7 +85,7 @@
 }
 
 @media (prefers-reduced-motion) {
-  .msrd .msrd-Card:has(.msrd-Card-heading a):active::after {
+  .clbr .msrd-Card:has(.msrd-Card-heading a):active::after {
     inset-block-end: var(--border-offset-card);
     inset-block-start: calc(0rem - var(--border-offset-card));
     inset-inline-end: var(--border-offset-card);
@@ -93,7 +93,7 @@
   }
 }
 
-.msrd .msrd-Card-heading {
+.clbr .msrd-Card-heading {
   font-size: var(--font-05-size);
   font-weight: 433;
   line-height: var(--font-05-line-height);
@@ -101,7 +101,7 @@
   text-wrap: balance;
 }
 
-.msrd .msrd-Card-heading a {
+.clbr .msrd-Card-heading a {
   color: inherit;
   position: static;
 
@@ -110,18 +110,18 @@
   }
 }
 
-.msrd .msrd-Card-heading a:hover,
-.msrd .msrd-Card-heading a:active {
+.clbr .msrd-Card-heading a:hover,
+.clbr .msrd-Card-heading a:active {
   color: inherit;
 }
 
-.msrd .msrd-Card-heading a::after {
+.clbr .msrd-Card-heading a::after {
   content: "";
   inset: 0;
   position: absolute;
 }
 
-.msrd .msrd-Card-dots {
+.clbr .msrd-Card-dots {
   align-items: center;
   block-size: var(--space-horizontal-03);
   display: flex;
@@ -132,9 +132,9 @@
   position: absolute;
 }
 
-.msrd .msrd-Card-dots::before,
-.msrd .msrd-Card-dots::after,
-.msrd .msrd-Card-dotsInner {
+.clbr .msrd-Card-dots::before,
+.clbr .msrd-Card-dots::after,
+.clbr .msrd-Card-dotsInner {
   background-color: var(--color-card-dots);
   block-size: var(--space-horizontal-03);
   border-radius: 50%;
@@ -147,9 +147,9 @@
 }
 
 @media (hover: hover) {
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before,
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner,
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before,
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner,
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
     background-color: var(--color-card-dots-hover);
 
     @media (forced-colors: active) {
@@ -157,51 +157,51 @@
     }
   }
 
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before {
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::before {
     transition: 0.1s var(--easing-cubic-bezier-easy-ease);
   }
 
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
     transition: 0.2s var(--easing-cubic-bezier-easy-ease);
   }
 
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
     transition: 0.3s var(--easing-cubic-bezier-easy-ease);
   }
 
   @media (prefers-reduced-motion) {
-    .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
+    .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dotsInner {
       transition: 0.1s var(--easing-cubic-bezier-easy-ease);
     }
 
-    .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
+    .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-dots::after {
       transition: 0.1s var(--easing-cubic-bezier-easy-ease);
     }
   }
 }
 
-.msrd .msrd-Card-dots::before {
+.clbr .msrd-Card-dots::before {
   inset-inline-start: 0;
   position: absolute;
 }
 
-.msrd .msrd-Card-dots::after {
+.clbr .msrd-Card-dots::after {
   inset-inline-end: 0;
   position: absolute;
 }
 
-.msrd .msrd-Card-dotsInner {
+.clbr .msrd-Card-dotsInner {
   margin: auto;
   position: relative;
 }
 
-.msrd .msrd-Card-note {
+.clbr .msrd-Card-note {
   font-weight: 466;
   font-family: var(--font-family-monospaced);
   margin-block-start: auto;
 }
 
-.msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note {
+.clbr .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note {
   color: var(--color-card-interactive);
 
   @media (forced-colors: active) {
@@ -209,7 +209,7 @@
   }
 }
 
-.msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
+.clbr .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
   --arrow-offset: 0.25em;
   content: "→";
   font-family: var(--font-family);
@@ -218,12 +218,12 @@
 }
 
 :dir(rtl)
-  .msrd
+  .clbr
   .msrd-Card:has(.msrd-Card-heading a)
   .msrd-Card-note
   span::after,
 .translated-rtl
-  .msrd
+  .clbr
   .msrd-Card:has(.msrd-Card-heading a)
   .msrd-Card-note
   span::after {
@@ -231,12 +231,12 @@
 }
 
 @media (hover: hover) {
-  .msrd .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
+  .clbr .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note span::after {
     inset-inline-start: 0;
     opacity: 0;
   }
 
-  .msrd .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-note span::after {
+  .clbr .msrd-Card:has(.msrd-Card-heading a):hover .msrd-Card-note span::after {
     inset-inline-start: var(--arrow-offset);
     opacity: 1;
     transition:
@@ -245,7 +245,7 @@
   }
 
   @media (prefers-reduced-motion) {
-    .msrd
+    .clbr
       .msrd-Card:has(.msrd-Card-heading a):hover
       .msrd-Card-note
       span::after {
@@ -256,14 +256,14 @@
   }
 }
 
-.msrd .msrd-Card--graphic {
-  --color-card-background: var(--color-azure-02);
-  --color-card-dots: var(--color-azure-04);
-  --color-card-interactive: var(--color-azure-07);
-  --color-card-text: color-mix(in srgb, var(--color-white) 94%, transparent);
-  --color-text-prose: color-mix(in srgb, var(--color-white) 88%, transparent);
+.clbr .msrd-Card--graphic {
+  --color-card-background: #042467;
+  --color-card-dots: #0158ad;
+  --color-card-interactive: #3598f8;
+  --color-card-text: color-mix(in srgb, #ffffff 94%, transparent);
+  --color-text-prose: color-mix(in srgb, #ffffff 88%, transparent);
   @media (prefers-color-scheme: dark) {
-    --color-card-dots: var(--color-azure-02);
+    --color-card-dots: #042467;
   }
   background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png);
   background-position: center top;
@@ -273,9 +273,4 @@
   @media (forced-colors: active) {
     background-image: none;
   }
-}
-
-.msrd .msrd-Surface--dark .msrd-Card--graphic,
-.msrd .msrd-Surface--graphicDark .msrd-Card--graphic {
-  --color-card-dots: var(--color-azure-03);
 }

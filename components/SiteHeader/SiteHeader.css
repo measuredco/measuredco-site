@@ -11,14 +11,14 @@ html {
   }
 }
 
-.msrd .msrd-SiteHeader {
+.clbr .msrd-SiteHeader {
   background-color: var(--color-site-header-background);
   inset-block-start: 0;
   position: sticky;
   z-index: 1;
 }
 
-.msrd .msrd-SiteHeader--pageScrolled {
+.clbr .msrd-SiteHeader--pageScrolled {
   background-color: var(--color-background);
   box-shadow: var(--box-shadow-light-source);
   transition:
@@ -26,17 +26,27 @@ html {
     box-shadow 0.1s var(--easing-cubic-bezier-easy-ease);
 }
 
-.msrd .msrd-SiteHeader--menuOpen {
+.clbr .msrd-SiteHeader--menuOpen {
   background: var(--color-background);
   box-shadow: none;
+  /*
+   * While the menu is open the scroll is locked via Calibrate's
+   * `data-clbr-scroll-locked` (overflow:hidden on <html>), which removes
+   * the scrollport `position: sticky` relies on. Pin the header to the
+   * viewport so the logo/menu button stay visible above the fixed menu
+   * even when the page was already scrolled.
+   */
+  inset-block-start: 0;
+  inset-inline: 0;
+  position: fixed;
 }
 
-.msrd .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
+.clbr .msrd-SiteHeader--pageScrolled .msrd-SiteHeader-wrapper {
   box-shadow: var(--site-header-box-shadow);
   transition: box-shadow 0.1s var(--easing-cubic-bezier-easy-ease);
 }
 
-.msrd .msrd-SiteHeader-inner {
+.clbr .msrd-SiteHeader-inner {
   align-items: center;
   border-block: calc(3rem / 16) solid transparent;
   display: flex;
@@ -53,28 +63,28 @@ html {
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-SiteHeader-inner {
+  .clbr .msrd-SiteHeader-inner {
     padding-block: calc(var(--space-vertical-04) - (2rem / 16));
     padding-inline: var(--space-horizontal-06);
   }
 }
 
-.msrd .msrd-SiteHeader-logo {
+.clbr .msrd-SiteHeader-logo {
   color: var(--color-logo);
   margin: 0;
 }
 
-.msrd .msrd-SiteHeader-logo:has(:focus-visible) {
+.clbr .msrd-SiteHeader-logo:has(:focus-visible) {
   border-radius: var(--border-radius-focus);
   outline: var(--outline-width) solid var(--color-interactive-focus);
   outline-offset: var(--outline-width);
 }
 
-.msrd .msrd-SiteHeader-logo svg {
+.clbr .msrd-SiteHeader-logo svg {
   fill: var(--color-logo);
 }
 
-.msrd .msrd-SiteHeader-navItems {
+.clbr .msrd-SiteHeader-navItems {
   display: table;
   font-size: var(--font-05-size);
   line-height: var(--font-05-line-height);
@@ -84,14 +94,14 @@ html {
 }
 
 @media (hover: hover) {
-  .msrd .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
+  .clbr .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
     opacity: 0.44;
     transition: opacity 0.1s var(--easing-cubic-bezier-easy-ease);
   }
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-SiteHeader-navItems {
+  .clbr .msrd-SiteHeader-navItems {
     align-items: center;
     display: flex;
     font-size: var(--font-size);
@@ -99,13 +109,13 @@ html {
     line-height: var(--line-height);
   }
 
-  .msrd .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
+  .clbr .msrd-SiteHeader-navItems:has(a:hover) a:not(:hover) {
     opacity: 1;
     transition: none;
   }
 }
 
-.msrd .msrd-SiteHeader-link {
+.clbr .msrd-SiteHeader-link {
   color: var(--color-interactive-neutral);
   display: table;
   padding-block: var(--space-vertical-02);
@@ -113,22 +123,22 @@ html {
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-SiteHeader-link {
+  .clbr .msrd-SiteHeader-link {
     padding-block: var(--space-vertical-01);
   }
 
   @media (hover: hover) {
-    .msrd .msrd-SiteHeader-link:hover {
+    .clbr .msrd-SiteHeader-link:hover {
       color: var(--color-interactive-neutral-hover);
     }
   }
 }
 
-.msrd .msrd-SiteHeader-link:active {
+.clbr .msrd-SiteHeader-link:active {
   color: var(--color-interactive-neutral-active);
 }
 
-.msrd .msrd-SiteHeader-link--current::after {
+.clbr .msrd-SiteHeader-link--current::after {
   background-color: var(--color-brand);
   block-size: var(--space-vertical-02);
   border-radius: 50%;
@@ -139,20 +149,20 @@ html {
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-SiteHeader-link--current {
+  .clbr .msrd-SiteHeader-link--current {
     text-decoration: underline;
     text-decoration-color: var(--color-rule);
     text-decoration-thickness: var(--rule-height);
     text-underline-offset: 0.5em;
   }
 
-  .msrd
+  .clbr
     .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
     .msrd-SiteHeader-link--current:hover {
     color: inherit;
   }
 
-  .msrd .msrd-SiteHeader-link--current::after {
+  .clbr .msrd-SiteHeader-link--current::after {
     display: none;
   }
 }
@@ -160,12 +170,12 @@ html {
 /* CTA */
 
 @media (min-width: 48em) {
-  .msrd .msrd-SiteHeader li:has(.msrd-SiteHeader-link[href="/contact"]) {
+  .clbr .msrd-SiteHeader li:has(.msrd-SiteHeader-link[href="/contact"]) {
     border-radius: var(--border-radius-button);
     box-shadow: var(--box-shadow-light-source);
   }
 
-  .msrd .msrd-SiteHeader-link[href="/contact"] {
+  .clbr .msrd-SiteHeader-link[href="/contact"] {
     align-items: center;
     background-color: var(--color-button-background);
     block-size: var(--space-vertical-07);
@@ -180,7 +190,7 @@ html {
     text-decoration: none;
   }
 
-  .msrd
+  .clbr
     .msrd-SiteHeader-link[href="/contact"]
     .msrd-SiteHeader-linkText::after {
     content: "→";
@@ -192,18 +202,18 @@ html {
   }
 
   :dir(rtl)
-    .msrd
+    .clbr
     .msrd-SiteHeader-link[href="/contact"]
     .msrd-SiteHeader-linkText::after,
   .translated-rtl
-    .msrd
+    .clbr
     .msrd-SiteHeader-link[href="/contact"]
     .msrd-SiteHeader-linkText::after {
     content: "←";
   }
 
   @media (hover: hover) {
-    .msrd
+    .clbr
       .msrd-SiteHeader-link[href="/contact"]:hover
       .msrd-SiteHeader-linkText::after {
       inset-inline-start: 0.25em;
@@ -214,7 +224,7 @@ html {
     }
 
     @media (prefers-reduced-motion) {
-      .msrd
+      .clbr
         .msrd-SiteHeader-link[href="/contact"]:hover
         .msrd-SiteHeader-linkText::after {
         transition:
@@ -224,20 +234,20 @@ html {
     }
   }
 
-  .msrd .msrd-SiteHeader-link--current[href="/contact"],
-  .msrd
+  .clbr .msrd-SiteHeader-link--current[href="/contact"],
+  .clbr
     .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
     .msrd-SiteHeader-link--current[href="/contact"]:hover {
     border-color: var(--color-rule);
   }
 
-  .msrd
+  .clbr
     .msrd-SiteHeader:not(.msrd-SiteHeader--pageScrolled)
     .msrd-SiteHeader-link--current[href="/contact"]:hover {
     cursor: default;
   }
 
-  .msrd
+  .clbr
     .msrd-SiteHeader-link--current[href="/contact"]
     .msrd-SiteHeader-linkText::after {
     visibility: hidden;

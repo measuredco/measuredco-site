@@ -1,40 +1,40 @@
-.msrd .msrd-Markdown {
+.clbr .msrd-Markdown {
   color: var(--color-text-prose);
   font-size: var(--font-03-size);
   line-height: var(--font-03-line-height);
 }
 
-.msrd .msrd-Markdown--measured {
+.clbr .msrd-Markdown--measured {
   max-inline-size: var(--measured);
 }
 
-.msrd .msrd-Markdown--inline {
+.clbr .msrd-Markdown--inline {
   font: inherit;
   max-inline-size: 100%;
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown {
+  .clbr .msrd-Markdown {
     font-size: var(--font-04-size);
     line-height: var(--font-04-line-height-large);
   }
 
-  .msrd .msrd-Markdown--inline {
+  .clbr .msrd-Markdown--inline {
     font: inherit;
   }
 }
 
-.msrd .msrd-Markdown a {
+.clbr .msrd-Markdown a {
   color: var(--color-interactive-prose);
   text-decoration: none;
 }
 
-.msrd .msrd-Markdown a:visited {
+.clbr .msrd-Markdown a:visited {
   color: var(--color-interactive-visited);
 }
 
 @media (hover: hover) {
-  .msrd .msrd-Markdown a:hover {
+  .clbr .msrd-Markdown a:hover {
     color: var(--color-interactive-prose);
     text-decoration: underline;
     text-decoration-color: var(--color-rule);
@@ -43,37 +43,37 @@
   }
 }
 
-.msrd .msrd-Markdown a:active {
+.clbr .msrd-Markdown a:active {
   color: var(--color-interactive-active);
   text-decoration-color: var(--color-interactive-prose-rule-active);
   text-underline-offset: 0.39em;
 }
 
-.msrd .msrd-Markdown blockquote {
+.clbr .msrd-Markdown blockquote {
   margin-block-end: var(--space-vertical-05);
   margin-block-start: 0;
   margin-inline: 0;
 }
 
-.msrd .msrd-Markdown blockquote p {
+.clbr .msrd-Markdown blockquote p {
   margin-block-end: 0;
   quotes: "“" "”" "‘" "’";
 }
 
-.msrd .msrd-Markdown blockquote p:first-child::before {
+.clbr .msrd-Markdown blockquote p:first-child::before {
   content: open-quote;
   margin-inline-start: -0.81ch;
 }
 
-.msrd .msrd-Markdown blockquote p:first-child::after {
+.clbr .msrd-Markdown blockquote p:first-child::after {
   content: close-quote;
 }
 
-.msrd .msrd-Markdown blockquote p + p {
+.clbr .msrd-Markdown blockquote p + p {
   margin-block-start: var(--space-vertical-05);
 }
 
-.msrd .msrd-Markdown blockquote p + p:last-child {
+.clbr .msrd-Markdown blockquote p + p:last-child {
   font-size: var(--font-02-size);
   line-height: var(--font-02-line-height);
   margin-block-start: var(--space-vertical-03);
@@ -81,13 +81,13 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown blockquote p + p:last-child {
+  .clbr .msrd-Markdown blockquote p + p:last-child {
     font-size: var(--font-03-size);
     line-height: var(--font-03-line-height);
   }
 }
 
-.msrd .msrd-Markdown code {
+.clbr .msrd-Markdown code {
   --padding-x-code-inline: 0.25em;
   background: var(--color-background-highlight);
   border-radius: var(--padding-x-code-inline);
@@ -102,12 +102,12 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown p code {
+  .clbr .msrd-Markdown p code {
     padding-block-end: 0.2em;
   }
 }
 
-.msrd .msrd-Markdown code .gfm-color-chip {
+.clbr .msrd-Markdown code .gfm-color-chip {
   --chip-size: 0.6em;
   block-size: var(--chip-size);
   border: var(--border-width) solid var(--color-background);
@@ -119,18 +119,18 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .msrd .msrd-Markdown code {
+  .clbr .msrd-Markdown code {
     box-shadow: var(--box-shadow);
   }
 }
 
-.msrd .msrd-Markdown pre {
+.clbr .msrd-Markdown pre {
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow-light-source);
   position: relative;
 }
 
-.msrd .msrd-Markdown pre::after {
+.clbr .msrd-Markdown pre::after {
   border: solid var(--border-width) var(--color-code-border);
   border-radius: var(--border-radius-card);
   content: "";
@@ -142,7 +142,7 @@
   position: absolute;
 }
 
-.msrd .msrd-Markdown pre code {
+.clbr .msrd-Markdown pre code {
   border-radius: var(--border-radius-card);
   box-shadow: var(--box-shadow);
   direction: ltr;
@@ -161,16 +161,16 @@
   position: relative;
 }
 
-.msrd .msrd-Markdown h1,
-.msrd .msrd-Markdown h2,
-.msrd .msrd-Markdown h3,
-.msrd .msrd-Markdown h4,
-.msrd .msrd-Markdown h5,
-.msrd .msrd-Markdown h6 {
+.clbr .msrd-Markdown h1,
+.clbr .msrd-Markdown h2,
+.clbr .msrd-Markdown h3,
+.clbr .msrd-Markdown h4,
+.clbr .msrd-Markdown h5,
+.clbr .msrd-Markdown h6 {
   color: var(--color-text);
 }
 
-.msrd .msrd-Markdown h6 {
+.clbr .msrd-Markdown h6 {
   font-size: var(--font-02-size);
   font-weight: 533;
   line-height: var(--font-02-line-height);
@@ -179,7 +179,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown h6 {
+  .clbr .msrd-Markdown h6 {
     font-size: var(--font-03-size);
     line-height: var(--font-03-line-height);
     margin-block-end: var(--space-vertical);
@@ -187,7 +187,7 @@
   }
 }
 
-.msrd .msrd-Markdown h5 {
+.clbr .msrd-Markdown h5 {
   font-size: var(--font-03-size);
   font-weight: 500;
   line-height: var(--font-03-line-height);
@@ -196,7 +196,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown h5 {
+  .clbr .msrd-Markdown h5 {
     font-size: var(--font-04-size);
     line-height: var(--font-04-line-height);
     margin-block-end: var(--space-vertical);
@@ -204,7 +204,7 @@
   }
 }
 
-.msrd .msrd-Markdown h4 {
+.clbr .msrd-Markdown h4 {
   font-size: var(--font-04-size);
   font-weight: 466;
   line-height: var(--font-04-line-height);
@@ -213,7 +213,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown h4 {
+  .clbr .msrd-Markdown h4 {
     font-size: var(--font-05-size);
     line-height: var(--font-05-line-height);
     margin-block-end: var(--space-vertical);
@@ -221,7 +221,7 @@
   }
 }
 
-.msrd .msrd-Markdown h3 {
+.clbr .msrd-Markdown h3 {
   font-size: var(--font-05-size);
   font-weight: 433;
   line-height: var(--font-05-line-height);
@@ -230,7 +230,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown h3 {
+  .clbr .msrd-Markdown h3 {
     font-size: var(--font-06-size);
     line-height: var(--font-06-line-height);
     margin-block-end: var(--space-vertical);
@@ -238,7 +238,7 @@
   }
 }
 
-.msrd .msrd-Markdown h2 {
+.clbr .msrd-Markdown h2 {
   font-size: var(--font-07-size);
   font-weight: 400;
   line-height: var(--font-07-line-height);
@@ -247,7 +247,7 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown h2 {
+  .clbr .msrd-Markdown h2 {
     font-size: var(--font-08-size);
     line-height: var(--font-08-line-height);
     margin-block-end: var(--space-vertical);
@@ -255,7 +255,7 @@
   }
 }
 
-.msrd .msrd-Markdown h1 {
+.clbr .msrd-Markdown h1 {
   font-size: var(--font-09-size);
   font-weight: 366;
   line-height: var(--font-09-line-height);
@@ -263,21 +263,21 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown h1 {
+  .clbr .msrd-Markdown h1 {
     font-size: var(--font-10-size);
     line-height: var(--font-10-line-height);
   }
 }
 
-.msrd .msrd-Markdown h1 + h2,
-.msrd .msrd-Markdown h2 + h3,
-.msrd .msrd-Markdown h3 + h4,
-.msrd .msrd-Markdown h4 + h5,
-.msrd .msrd-Markdown h5 + h6 {
+.clbr .msrd-Markdown h1 + h2,
+.clbr .msrd-Markdown h2 + h3,
+.clbr .msrd-Markdown h3 + h4,
+.clbr .msrd-Markdown h4 + h5,
+.clbr .msrd-Markdown h5 + h6 {
   margin-block-start: 0;
 }
 
-.msrd .msrd-Markdown hr {
+.clbr .msrd-Markdown hr {
   border: 0;
   border-block-start: var(--rule-height) solid var(--color-rule);
   inline-size: var(--rule-width);
@@ -286,17 +286,17 @@
   margin-inline: 0;
 }
 
-.msrd .msrd-Markdown p:has(img) {
+.clbr .msrd-Markdown p:has(img) {
   box-shadow: var(--box-shadow-light-source);
 }
 
-.msrd .msrd-Markdown img {
+.clbr .msrd-Markdown img {
   border-radius: var(--border-radius-image);
   box-shadow: var(--box-shadow);
 }
 
-.msrd .msrd-Markdown ol,
-.msrd .msrd-Markdown ul {
+.clbr .msrd-Markdown ol,
+.clbr .msrd-Markdown ul {
   --bullet-space: calc(36rem / 16);
   list-style: none;
   margin-block-end: var(--space-vertical);
@@ -306,50 +306,50 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown > ol,
-  .msrd .msrd-Markdown > ul {
+  .clbr .msrd-Markdown > ol,
+  .clbr .msrd-Markdown > ul {
     --bullet-space: calc(40rem / 16);
   }
 }
 
 @media (min-width: 80em) {
-  .msrd .msrd-Markdown > ol,
-  .msrd .msrd-Markdown > ul {
+  .clbr .msrd-Markdown > ol,
+  .clbr .msrd-Markdown > ul {
     margin-inline-start: calc(0em - var(--bullet-space));
   }
 }
 
-.msrd .msrd-Markdown ol {
+.clbr .msrd-Markdown ol {
   counter-reset: list;
 }
 
-.msrd .msrd-Markdown ol li:has(> h2:first-child) > ol,
-.msrd .msrd-Markdown ol li:has(> h2:first-child) > ul,
-.msrd .msrd-Markdown ol li:has(> h3:first-child) > ol,
-.msrd .msrd-Markdown ol li:has(> h3:first-child) > ul {
+.clbr .msrd-Markdown ol li:has(> h2:first-child) > ol,
+.clbr .msrd-Markdown ol li:has(> h2:first-child) > ul,
+.clbr .msrd-Markdown ol li:has(> h3:first-child) > ol,
+.clbr .msrd-Markdown ol li:has(> h3:first-child) > ul {
   margin-inline-start: calc(0em - var(--bullet-space));
 }
 
-.msrd .msrd-Markdown li {
+.clbr .msrd-Markdown li {
   padding-inline-start: var(--bullet-space);
   position: relative;
 }
 
-.msrd .msrd-Markdown li::before {
+.clbr .msrd-Markdown li::before {
   inline-size: var(--bullet-space);
   inset-inline-start: 0;
   position: absolute;
   text-align: end;
 }
 
-.msrd .msrd-Markdown ol > li::before {
+.clbr .msrd-Markdown ol > li::before {
   content: counter(list) ".";
   counter-increment: list;
   font-variant-numeric: tabular-nums;
   padding-inline-end: var(--space-horizontal-03);
 }
 
-.msrd .msrd-Markdown ol > li:has(> h2)::before {
+.clbr .msrd-Markdown ol > li:has(> h2)::before {
   color: var(--color-text);
   font-size: var(--font-07-size);
   line-height: var(--font-07-line-height);
@@ -360,7 +360,7 @@
   }
 }
 
-.msrd .msrd-Markdown ol > li:has(> h2:first-child):nth-child(n + 10):before {
+.clbr .msrd-Markdown ol > li:has(> h2:first-child):nth-child(n + 10):before {
   font-size: var(--font-02-size);
   line-height: calc(var(--leading-scale-05) / var(--type-scale-02));
 
@@ -370,7 +370,7 @@
   }
 }
 
-.msrd .msrd-Markdown ol > li:has(> h3:first-child)::before {
+.clbr .msrd-Markdown ol > li:has(> h3:first-child)::before {
   color: var(--color-text);
   font-size: var(--font-05-size);
   line-height: var(--font-05-line-height);
@@ -381,7 +381,7 @@
   }
 }
 
-.msrd .msrd-Markdown ol > li:has(> h3:first-child):nth-child(n + 10):before {
+.clbr .msrd-Markdown ol > li:has(> h3:first-child):nth-child(n + 10):before {
   font-size: var(--font-02-size);
   line-height: calc(var(--leading-scale-04) / var(--type-scale-02));
 
@@ -391,19 +391,19 @@
   }
 }
 
-.msrd .msrd-Markdown ul > li::before {
+.clbr .msrd-Markdown ul > li::before {
   content: "•";
   padding-inline-end: 0.5em;
 }
 
-.msrd .msrd-Markdown p {
+.clbr .msrd-Markdown p {
   margin-block-end: var(--space-vertical);
   margin-block-start: 0;
   overflow-wrap: break-word;
   text-wrap: pretty;
 }
 
-.msrd .msrd-Markdown table {
+.clbr .msrd-Markdown table {
   border-collapse: collapse;
   font: inherit;
   font-family: var(--font-family-monospaced);
@@ -415,12 +415,12 @@
   margin-block-end: var(--space-vertical);
 }
 
-.msrd .msrd-Markdown tbody tr:nth-child(even) {
+.clbr .msrd-Markdown tbody tr:nth-child(even) {
   background-color: var(--color-background-highlight);
 }
 
-.msrd .msrd-Markdown td,
-.msrd .msrd-Markdown th {
+.clbr .msrd-Markdown td,
+.clbr .msrd-Markdown th {
   border: calc(1rem / 16) solid var(--color-border);
   padding-block: calc((6rem - 1rem) / 16);
   padding-inline: calc((16rem - 1rem) / 16);
@@ -428,14 +428,14 @@
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-Markdown td,
-  .msrd .msrd-Markdown th {
+  .clbr .msrd-Markdown td,
+  .clbr .msrd-Markdown th {
     padding-block: calc((12rem - 1rem) / 16);
     padding-inline: calc((24rem - 1rem) / 16);
   }
 }
 
-.msrd .msrd-Markdown #footnote-label {
+.clbr .msrd-Markdown #footnote-label {
   block-size: calc(1rem / 16);
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -446,19 +446,19 @@
   word-wrap: normal;
 }
 
-.msrd .msrd-Markdown .footnotes ol {
+.clbr .msrd-Markdown .footnotes ol {
   font-size: var(--font-02-size);
   line-height: var(--font-02-line-height);
   padding-block-start: var(--space-vertical-03);
 }
 
 @media (min-width: 80em) {
-  .msrd .msrd-Markdown .footnotes ol {
+  .clbr .msrd-Markdown .footnotes ol {
     margin-inline-start: calc(0em - var(--bullet-space));
   }
 }
 
-.msrd .msrd-Markdown .footnotes ol::before {
+.clbr .msrd-Markdown .footnotes ol::before {
   border-top: var(--rule-height) solid var(--color-rule);
   content: "";
   display: block;
@@ -468,47 +468,47 @@
 }
 
 @media (min-width: 80em) {
-  .msrd .msrd-Markdown .footnotes ol::before {
+  .clbr .msrd-Markdown .footnotes ol::before {
     inset-inline-start: var(--bullet-space);
   }
 }
 
-.msrd .msrd-Markdown .data-footnote-backref:visited {
+.clbr .msrd-Markdown .data-footnote-backref:visited {
   color: var(--color-interactive-prose);
 }
 
-.msrd .msrd-Markdown [aria-describedby="footnote-label"]::before {
+.clbr .msrd-Markdown [aria-describedby="footnote-label"]::before {
   content: "[";
 }
 
-.msrd .msrd-Markdown [aria-describedby="footnote-label"]::after {
+.clbr .msrd-Markdown [aria-describedby="footnote-label"]::after {
   content: "]";
 }
 
-.msrd .msrd-Markdown .task-list-item {
+.clbr .msrd-Markdown .task-list-item {
   padding-inline-start: 0;
 }
 
-.msrd .msrd-Markdown .task-list-item::before {
+.clbr .msrd-Markdown .task-list-item::before {
   content: "";
 }
 
-.msrd .msrd-Markdown > :first-child {
+.clbr .msrd-Markdown > :first-child {
   margin-block-start: 0;
 }
 
-.msrd .msrd-Markdown > :last-child {
+.clbr .msrd-Markdown > :last-child {
   margin-block-end: 0;
 }
 
-.msrd .msrd-Markdown--left {
+.clbr .msrd-Markdown--left {
   text-align: start;
 }
 
-.msrd .msrd-Markdown--center {
+.clbr .msrd-Markdown--center {
   text-align: center;
 }
 
-.msrd .msrd-Markdown--right {
+.clbr .msrd-Markdown--right {
   text-align: end;
 }

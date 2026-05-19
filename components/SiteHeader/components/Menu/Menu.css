@@ -1,4 +1,4 @@
-.msrd .msrd-SiteHeaderMenu {
+.clbr .msrd-SiteHeaderMenu {
   display: none;
   inset-block-end: 0;
   inset-block-start: var(--space-vertical-09);
@@ -10,13 +10,13 @@
   position: fixed;
 }
 
-.msrd .msrd-SiteHeaderMenu--open {
+.clbr .msrd-SiteHeaderMenu--open {
   background: var(--color-background);
   display: block;
 }
 
 @media (min-width: 48em) {
-  .msrd .msrd-SiteHeaderMenu {
+  .clbr .msrd-SiteHeaderMenu {
     display: block;
     overflow-y: visible;
     padding: 0;
