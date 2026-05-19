@@ -209,7 +209,6 @@
           "link": "/work/hubble",
           "note": "More",
           "title": "Enabling a business pivot for Hubble",
-          "graphic": false,
           "description": "Building a platform for on-demand office space and hybrid working, ready to scale.",
           "headingLevel": "3"
         }
@@ -236,7 +235,6 @@
           "link": "/blog/introducing-facet",
           "note": "Read",
           "title": "Introducing Facet: a procedural brand image system built with agentic coding",
-          "graphic": false,
           "description": "From one-shot prototype to production-ready internal tool for branded blog and social visuals.",
           "headingLevel": "3"
         }
@@ -250,7 +248,6 @@
           "link": "/work/dunnhumby",
           "note": "More",
           "title": "Design system strategy for dunnhumby",
-          "graphic": false,
           "description": "Running in-depth discovery with stakeholder teams to establish foundations for a future design system.",
           "headingLevel": "3"
         }
@@ -277,7 +274,6 @@
           "link": "/blog/reason-design-systems-fail",
           "note": "Read",
           "title": "The real reason design systems fail",
-          "graphic": false,
           "description": "Design systems misfire when organisations hire the team and build at the same time. Avoid paralysis by building the right team in the right way. Here\u2019s how.",
           "headingLevel": "3"
         }
@@ -305,7 +301,6 @@
           "link": "/blog/new-visual-identity",
           "note": "Read",
           "title": "Creating a new visual identity for Measured",
-          "graphic": true,
           "description": "When you work in UI and branding, your own shop window should reflect your expertise. Here\u2019s how we upgraded our visual identity to show what we\u2019re&nbsp;about.",
           "headingLevel": "3"
         }

@@ -11,7 +11,7 @@
 }
 
 .clbr .msrd-SiteHeaderMenu--open {
-  background: var(--color-background);
+  background: var(--clbr-color-background-default);
   display: block;
 }
 

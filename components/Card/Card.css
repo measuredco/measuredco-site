@@ -1,9 +1,9 @@
 .clbr .msrd-Card {
-  background-color: var(--color-card-background);
+  background-color: var(--clbr-color-background-panel);
   block-size: 100%;
   border-radius: var(--clbr-radius-lg);
   box-shadow: none;
-  color: var(--color-card-text);
+  color: var(--clbr-color-foreground-default);
   display: flex;
   inline-size: 100%;
   position: relative;
@@ -11,7 +11,7 @@
 
 .clbr .msrd-Card-inner {
   border-radius: var(--clbr-radius-lg);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--clbr-effect-shadow-default);
   display: flex;
   flex-direction: column;
   inline-size: 100%;
@@ -20,7 +20,7 @@
 }
 
 .clbr .msrd-Card::after {
-  border: solid var(--border-width) var(--clbr-color-border-brand);
+  border: solid var(--clbr-layout-border-width-default) var(--clbr-color-border-brand);
   border-radius: var(--clbr-radius-lg);
   content: "";
   inset-block-end: var(--clbr-effect-stroke-inset);
@@ -48,7 +48,7 @@
 }
 
 .clbr .msrd-Card:has(.msrd-Card-heading a):has(:focus-visible) {
-  outline: var(--clbr-layout-focus-ring-width) solid var(--color-interactive-focus);
+  outline: var(--clbr-layout-focus-ring-width) solid var(--clbr-color-interactive-focus);
   outline-offset: var(--clbr-effect-stroke-inset);
 }
 
@@ -135,7 +135,7 @@
 .clbr .msrd-Card-dots::before,
 .clbr .msrd-Card-dots::after,
 .clbr .msrd-Card-dotsInner {
-  background-color: var(--color-card-dots);
+  background-color: var(--clbr-color-border-subtle);
   block-size: var(--clbr-spacing-horizontal-400);
   border-radius: 50%;
   content: "";
@@ -202,7 +202,7 @@
 }
 
 .clbr .msrd-Card:has(.msrd-Card-heading a) .msrd-Card-note {
-  color: var(--color-card-interactive);
+  color: var(--clbr-color-interactive-default);
 
   @media (forced-colors: active) {
     color: LinkText;
@@ -253,24 +253,5 @@
         0.1s opacity var(--clbr-motion-easing-ease-in-out),
         0s inset-inline-start var(--clbr-motion-easing-ease-in-out);
     }
-  }
-}
-
-.clbr .msrd-Card--graphic {
-  --color-card-background: #042467;
-  --color-card-dots: #0158ad;
-  --color-card-interactive: #3598f8;
-  --color-card-text: color-mix(in srgb, #ffffff 94%, transparent);
-  --color-text-prose: color-mix(in srgb, #ffffff 88%, transparent);
-  @media (prefers-color-scheme: dark) {
-    --color-card-dots: #042467;
-  }
-  background-image: url(https://res.cloudinary.com/measuredco/image/upload/v1732634892/site/site-background-top_v8ll2o.png);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  @media (forced-colors: active) {
-    background-image: none;
   }
 }

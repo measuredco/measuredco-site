@@ -144,7 +144,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
     </Section>
     <div
       style={{
-        backgroundColor: "var(--color-background)",
+        backgroundColor: "var(--clbr-color-background-default)",
       }}
     >
       <Section>
@@ -255,7 +255,7 @@ const NewIdentity = ({ title }: NewIdentityProps) => (
     </div>
     <div
       style={{
-        backgroundColor: "var(--color-background)",
+        backgroundColor: "var(--clbr-color-background-default)",
       }}
     >
       <Section>

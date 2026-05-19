@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import Link from "next/link";
 import { ElementType } from "react";
 
@@ -8,7 +7,6 @@ import "./Card.css";
 
 type CardProps = {
   description: string;
-  graphic?: boolean;
   headingLevel?: "1" | "2" | "3" | "4" | "5" | "6" | "";
   link?: string;
   note?: string;
@@ -17,7 +15,6 @@ type CardProps = {
 
 const Card = ({
   description,
-  graphic,
   headingLevel = "3",
   link,
   note = "",
@@ -28,12 +25,7 @@ const Card = ({
     : "div";
 
   return (
-    <div
-      className={classNames({
-        "msrd-Card": true,
-        "msrd-Card--graphic": graphic,
-      })}
-    >
+    <div className="msrd-Card">
       <div className="msrd-Card-inner">
         <span className="msrd-Card-dots">
           <span className="msrd-Card-dotsInner" />

@@ -8,7 +8,6 @@ export type ArchiveProps = {
     author: string;
     date: string;
     description: string;
-    graphic: boolean;
     slug: string;
     title: string;
   }[];
@@ -22,7 +21,6 @@ export const Archive: ComponentConfig<ArchiveProps> = {
         author: "Author",
         date: new Date().toISOString().split("T")[0],
         description: "Description",
-        graphic: false,
         slug: "blog-post",
         title: "Blog Post",
       },
@@ -59,19 +57,11 @@ export const Archive: ComponentConfig<ArchiveProps> = {
         author: {
           type: "text",
         },
-        graphic: {
-          type: "select",
-          options: [
-            { label: "Regular", value: false },
-            { label: "Graphic", value: true },
-          ],
-        },
       },
       defaultItemProps: {
         author: "Author",
         date: new Date().toISOString().split("T")[0],
         description: "Description",
-        graphic: false,
         slug: "blog-post",
         title: "Blog Post",
       },
@@ -85,7 +75,6 @@ export const Archive: ComponentConfig<ArchiveProps> = {
           <Grid.Item colSpan="4" colSpanNarrow="6" key={index}>
             <Card
               description={`${post.description || ""}`}
-              graphic={post.graphic}
               headingLevel={headingLevel}
               link={`/blog/${post.slug}`}
               note="Read"

@@ -107,7 +107,6 @@
             "slug": "reason-design-systems-fail",
             "title": "The real reason design systems fail",
             "author": "Paul Love",
-            "graphic": false,
             "description": "Design systems misfire when organisations hire the team and build at the same time. Avoid paralysis by building the right team in the right way. Here\u2019s how."
           },
           {
@@ -115,7 +114,6 @@
             "slug": "trade-off-thinking",
             "title": "How we use trade-offs to make better-informed product decisions",
             "author": "Paul Love",
-            "graphic": false,
             "description": "Over-scrutinising an idea seems slow, but what really kills momentum is discovering hidden costs later. Here's how we use trade-offs to spot issues upfront."
           },
           {
@@ -123,7 +121,6 @@
             "slug": "pragmatic-planning",
             "title": "Think before you build: why we do pragmatic planning",
             "author": "Paul Love",
-            "graphic": false,
             "description": "Avoid the sunk cost of patching a flawed foundation. The cheapest time to think is before you build. That\u2019s why we\u2019ve turned pragmatic planning into a habit."
           },
           {
@@ -131,7 +128,6 @@
             "slug": "introducing-facet",
             "title": "Introducing Facet: a procedural brand image system built with agentic coding",
             "author": "Scott Boyle",
-            "graphic": false,
             "description": "From one-shot prototype to production-ready internal tool for branded blog and social visuals."
           },
           {
@@ -139,7 +135,6 @@
             "slug": "ui-icebergs",
             "title": "Spotting UI icebergs: the complexity beneath the clicks",
             "author": "Paul Love",
-            "graphic": false,
             "description": "Figma designs look real on the surface, but you have to look deeper. Here\u2019s how teams can spot UI icebergs early to prevent unexpected budgetary headaches."
           },
           {
@@ -210,7 +205,6 @@
             "slug": "new-visual-identity",
             "title": "Creating a new visual identity for Measured",
             "author": "Scott Boyle",
-            "graphic": true,
             "description": "When you work in UI and branding, your own shop window should reflect your expertise. Here\u2019s how we upgraded our visual identity to show what we\u2019re about."
           },
           {

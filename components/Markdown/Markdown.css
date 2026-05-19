@@ -1,3 +1,20 @@
+/*
+ * Prose theming tokens (formerly components/system.css).
+ *
+ * Consumed only by Markdown (below); Paragraph / Blockquote re-theme
+ * their inner <Markdown> children by overriding these on their own
+ * wrappers (e.g. .msrd-Paragraph--muted, .msrd-Blockquote-quote).
+ * Declared at `.clbr` AND every `[data-clbr-surface]` so the Calibrate
+ * source re-resolves per surface (custom-property substitution is
+ * computed at declaration site).
+ */
+.clbr,
+.clbr [data-clbr-surface] {
+  --color-text-prose: var(--clbr-color-foreground-prose);
+  --color-interactive-prose: var(--clbr-color-interactive-prose-default);
+  --color-interactive-visited: var(--clbr-color-interactive-visited);
+}
+
 .clbr .msrd-Markdown {
   color: var(--color-text-prose);
   font-size: var(--clbr-typography-type-step-300-font-size);
@@ -44,7 +61,7 @@
 }
 
 .clbr .msrd-Markdown a:active {
-  color: var(--color-interactive-active);
+  color: var(--clbr-color-interactive-active);
   text-decoration-color: var(--clbr-color-interactive-prose-active-decoration);
   text-underline-offset: 0.39em;
 }
@@ -110,7 +127,7 @@
 .clbr .msrd-Markdown code .gfm-color-chip {
   --chip-size: 0.6em;
   block-size: var(--chip-size);
-  border: var(--border-width) solid var(--color-background);
+  border: var(--clbr-layout-border-width-default) solid var(--clbr-color-background-default);
   border-radius: calc(var(--chip-size) * var(--clbr-radius-ratio-default));
   display: inline-block;
   forced-color-adjust: none;
@@ -120,7 +137,7 @@
 
 @media (prefers-color-scheme: dark) {
   .clbr .msrd-Markdown code {
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--clbr-effect-shadow-default);
   }
 }
 
@@ -131,7 +148,7 @@
 }
 
 .clbr .msrd-Markdown pre::after {
-  border: solid var(--border-width) var(--clbr-color-border-brand);
+  border: solid var(--clbr-layout-border-width-default) var(--clbr-color-border-brand);
   border-radius: var(--clbr-radius-lg);
   content: "";
   inset-block-end: var(--clbr-effect-stroke-inset);
@@ -144,7 +161,7 @@
 
 .clbr .msrd-Markdown pre code {
   border-radius: var(--clbr-radius-lg);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--clbr-effect-shadow-default);
   direction: ltr;
   display: block;
   font-family: var(--clbr-typography-font-family-mono);
@@ -167,7 +184,7 @@
 .clbr .msrd-Markdown h4,
 .clbr .msrd-Markdown h5,
 .clbr .msrd-Markdown h6 {
-  color: var(--color-text);
+  color: var(--clbr-color-foreground-default);
 }
 
 .clbr .msrd-Markdown h6 {
@@ -292,7 +309,7 @@
 
 .clbr .msrd-Markdown img {
   border-radius: var(--clbr-radius-xs);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--clbr-effect-shadow-default);
 }
 
 .clbr .msrd-Markdown ol,
@@ -350,7 +367,7 @@
 }
 
 .clbr .msrd-Markdown ol > li:has(> h2)::before {
-  color: var(--color-text);
+  color: var(--clbr-color-foreground-default);
   font-size: var(--clbr-typography-type-step-700-font-size);
   line-height: var(--clbr-typography-type-step-700-line-height);
 
@@ -371,7 +388,7 @@
 }
 
 .clbr .msrd-Markdown ol > li:has(> h3:first-child)::before {
-  color: var(--color-text);
+  color: var(--clbr-color-foreground-default);
   font-size: var(--clbr-typography-type-step-500-font-size);
   line-height: var(--clbr-typography-type-step-200-line-height);
 
@@ -421,7 +438,7 @@
 
 .clbr .msrd-Markdown td,
 .clbr .msrd-Markdown th {
-  border: calc(1rem / 16) solid var(--color-border);
+  border: calc(1rem / 16) solid var(--clbr-color-border-default);
   padding-block: calc((6rem - 1rem) / 16);
   padding-inline: calc((16rem - 1rem) / 16);
   vertical-align: middle;
