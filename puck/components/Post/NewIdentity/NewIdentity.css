@@ -77,7 +77,7 @@
   color: #ffffff;
   font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 500;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-400-line-height);
 
   @media (prefers-color-scheme: dark) {
     --clbr-color-interactive-default: #ffffff;
@@ -118,7 +118,7 @@
 
 .clbr .msrd-NewIdentity p:not(.msrd-Paragraph) {
   font-size: var(--clbr-typography-type-step-300-font-size);
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-300-line-height);
   margin: 0;
   max-inline-size: 35em;
   text-wrap: pretty;
@@ -134,7 +134,7 @@
   font-size: var(--clbr-typography-type-step-500-font-size);
   font-style: italic;
   font-weight: 400;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-500-line-height);
   margin: 0 auto;
   max-inline-size: 38em;
   text-align: center;

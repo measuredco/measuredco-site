@@ -14,7 +14,7 @@
 .clbr .msrd-NewIdentityCorner-label {
   color: #1666bb;
   font-family: var(--clbr-typography-font-family-mono);
-  font-size: var(--clbr-typography-type-step-100-font-size);
+  font-size: var(--clbr-typography-type-step-150-font-size);
   line-height: var(--clbr-typography-type-step-150-line-height);
   max-inline-size: 23em;
   text-wrap: pretty;
@@ -35,7 +35,7 @@
 }
 
 .clbr .msrd-NewIdentityCorner p.msrd-NewIdentityCorner-description:not(foo) {
-  font-size: var(--clbr-typography-type-step-100-font-size);
+  font-size: var(--clbr-typography-type-step-150-font-size);
   line-height: var(--clbr-typography-type-step-150-line-height);
   margin: 0 auto;
   max-inline-size: 36em;

@@ -96,7 +96,7 @@
 .clbr .msrd-Card-heading {
   font-size: var(--clbr-typography-type-step-500-font-size);
   font-weight: 433;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-500-line-height);
   margin-block: 0;
   text-wrap: balance;
 }

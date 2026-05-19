@@ -18,7 +18,7 @@
 .clbr .msrd-Markdown {
   color: var(--color-text-prose);
   font-size: var(--clbr-typography-type-step-300-font-size);
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-300-line-height);
 }
 
 .clbr .msrd-Markdown--measured {
@@ -32,7 +32,7 @@
 
 @media (min-width: 48em) {
   .clbr .msrd-Markdown {
-    font-size: var(--clbr-typography-type-step-400-font-size);
+    font-size: var(--clbr-typography-type-step-450-font-size);
     line-height: var(--clbr-typography-type-step-450-line-height);
   }
 
@@ -100,7 +100,7 @@
 @media (min-width: 48em) {
   .clbr .msrd-Markdown blockquote p + p:last-child {
     font-size: var(--clbr-typography-type-step-300-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-300-line-height);
   }
 }
 
@@ -198,7 +198,7 @@
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h6 {
     font-size: var(--clbr-typography-type-step-300-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-300-line-height);
     margin-block-end: var(--clbr-spacing-vertical-700);
     margin-block-start: var(--clbr-spacing-vertical-800);
   }
@@ -207,7 +207,7 @@
 .clbr .msrd-Markdown h5 {
   font-size: var(--clbr-typography-type-step-300-font-size);
   font-weight: 500;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-300-line-height);
   margin-block-end: var(--clbr-spacing-vertical-500);
   margin-block-start: var(--clbr-spacing-vertical-700);
 }
@@ -215,7 +215,7 @@
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h5 {
     font-size: var(--clbr-typography-type-step-400-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-400-line-height);
     margin-block-end: var(--clbr-spacing-vertical-700);
     margin-block-start: var(--clbr-spacing-vertical-800);
   }
@@ -224,7 +224,7 @@
 .clbr .msrd-Markdown h4 {
   font-size: var(--clbr-typography-type-step-400-font-size);
   font-weight: 466;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-400-line-height);
   margin-block-end: var(--clbr-spacing-vertical-500);
   margin-block-start: var(--clbr-spacing-vertical-700);
 }
@@ -232,7 +232,7 @@
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h4 {
     font-size: var(--clbr-typography-type-step-500-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-500-line-height);
     margin-block-end: var(--clbr-spacing-vertical-700);
     margin-block-start: var(--clbr-spacing-vertical-800);
   }
@@ -241,7 +241,7 @@
 .clbr .msrd-Markdown h3 {
   font-size: var(--clbr-typography-type-step-500-font-size);
   font-weight: 433;
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-500-line-height);
   margin-block-end: var(--clbr-spacing-vertical-500);
   margin-block-start: var(--clbr-spacing-vertical-700);
 }
@@ -249,7 +249,7 @@
 @media (min-width: 48em) {
   .clbr .msrd-Markdown h3 {
     font-size: var(--clbr-typography-type-step-600-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-600-line-height);
     margin-block-end: var(--clbr-spacing-vertical-700);
     margin-block-start: var(--clbr-spacing-vertical-800);
   }
@@ -390,11 +390,11 @@
 .clbr .msrd-Markdown ol > li:has(> h3:first-child)::before {
   color: var(--clbr-color-foreground-default);
   font-size: var(--clbr-typography-type-step-500-font-size);
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-500-line-height);
 
   @media (min-width: 48em) {
     font-size: var(--clbr-typography-type-step-600-font-size);
-    line-height: var(--clbr-typography-type-step-200-line-height);
+    line-height: var(--clbr-typography-type-step-600-line-height);
   }
 }
 

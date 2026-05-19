@@ -70,7 +70,7 @@
 .clbr .msrd-Hero-description {
   color: var(--clbr-color-foreground-prose);
   font-size: var(--clbr-typography-type-step-300-font-size);
-  line-height: var(--clbr-typography-type-step-200-line-height);
+  line-height: var(--clbr-typography-type-step-300-line-height);
   margin-block-end: var(--clbr-spacing-vertical-600);
   margin-block-start: 0;
   margin-inline: auto;
@@ -80,7 +80,7 @@
 
 @media (min-width: 48em) {
   .clbr .msrd-Hero-description {
-    font-size: var(--clbr-typography-type-step-400-font-size);
+    font-size: var(--clbr-typography-type-step-450-font-size);
     line-height: var(--clbr-typography-type-step-450-line-height);
     margin-block-end: 0;
   }
