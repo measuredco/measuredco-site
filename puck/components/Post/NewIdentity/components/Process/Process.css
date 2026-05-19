@@ -45,7 +45,7 @@
   align-items: center;
   block-size: var(--space-horizontal-05);
   display: flex;
-  inline-size: var(--space-horizontal-11);
+  inline-size: 4rem;
   inset-block-start: var(--space-horizontal-06);
   inset-inline-start: var(--space-horizontal-06);
   justify-content: space-between;
