@@ -171,7 +171,7 @@ html {
 
 @media (min-width: 48em) {
   .clbr .msrd-SiteHeader li:has(.msrd-SiteHeader-link[href="/contact"]) {
-    border-radius: var(--border-radius-button);
+    border-radius: 0.5rem;
     box-shadow: var(--box-shadow-light-source);
   }
 
@@ -180,7 +180,7 @@ html {
     background-color: var(--color-button-background);
     block-size: var(--space-vertical-07);
     border: solid var(--border-width) var(--color-interactive);
-    border-radius: var(--border-radius-button);
+    border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
     display: flex;
     padding-block: 0;
