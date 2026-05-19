@@ -2,50 +2,6 @@
  * Measured design tokens
  */
 
-:root {
-  /*
-   * Type & space tokens
-   *
-   * Previously derived from raw numerical scales (--type-scale*,
-   * --leading-scale*, --space-scale-*). Those scales are intermediate-
-   * only with no Calibrate equivalent, so they are removed and these
-   * tokens carry their precomputed values directly.
-   */
-
-  /* Font sizes */
-  --font-size: 1rem;
-  --font-01-size: 0.875rem;
-  --font-02-size: 1rem;
-  --font-03-size: 1.125rem;
-  --font-04-size: 1.25rem;
-  --font-05-size: 1.5rem;
-  --font-06-size: 1.75rem;
-  --font-07-size: 2rem;
-  --font-08-size: 2.25rem;
-  --font-09-size: 2.625rem;
-  --font-10-size: 3rem;
-  --font-11-size: 3.875rem;
-  --font-12-size: 5.25rem;
-  --font-13-size: 7.5rem;
-
-  /* Line heights */
-  --line-height: 1.5;
-  --font-01-line-height: 1.71428571;
-  --font-02-line-height: 1.5;
-  --font-03-line-height: 1.5;
-  --font-04-line-height: 1.5;
-  --font-04-line-height-large: 1.8;
-  --font-05-line-height: 1.5;
-  --font-06-line-height: 1.5;
-  --font-07-line-height: 1.3125;
-  --font-08-line-height: 1.33333333;
-  --font-09-line-height: 1.28571429;
-  --font-10-line-height: 1.25;
-  --font-11-line-height: 1.16129032;
-  --font-12-line-height: 1.14285714;
-  --font-13-line-height: 1;
-}
-
 /*
  * Color tokens
  *
@@ -65,6 +21,44 @@
    */
   --font-family: var(--clbr-typography-font-family-default);
   --font-family-monospaced: var(--clbr-typography-font-family-mono);
+
+  /*
+   * Type scale — sourced from Calibrate's static type-step tokens. Sizes
+   * are exact ports; the repeating line-heights match to ~6dp (sub-1e-6,
+   * imperceptible). --font-07-line-height moves from 1.3125 to Calibrate's
+   * intended leading for the 2rem step (type-step-700 = 1.354839): a small
+   * deliberate change to the three 32px H2 headings.
+   */
+  --font-size: var(--clbr-typography-type-step-200-font-size);
+  --font-01-size: var(--clbr-typography-type-step-100-font-size);
+  --font-02-size: var(--clbr-typography-type-step-200-font-size);
+  --font-03-size: var(--clbr-typography-type-step-300-font-size);
+  --font-04-size: var(--clbr-typography-type-step-400-font-size);
+  --font-05-size: var(--clbr-typography-type-step-500-font-size);
+  --font-06-size: var(--clbr-typography-type-step-600-font-size);
+  --font-07-size: var(--clbr-typography-type-step-700-font-size);
+  --font-08-size: var(--clbr-typography-type-step-800-font-size);
+  --font-09-size: var(--clbr-typography-type-step-900-font-size);
+  --font-10-size: var(--clbr-typography-type-step-1000-font-size);
+  --font-11-size: var(--clbr-typography-type-step-1100-font-size);
+  --font-12-size: var(--clbr-typography-type-step-1200-font-size);
+  --font-13-size: var(--clbr-typography-type-step-1300-font-size);
+
+  --line-height: var(--clbr-typography-type-step-200-line-height);
+  --font-01-line-height: var(--clbr-typography-type-step-150-line-height);
+  --font-02-line-height: var(--clbr-typography-type-step-200-line-height);
+  --font-03-line-height: var(--clbr-typography-type-step-200-line-height);
+  --font-04-line-height: var(--clbr-typography-type-step-200-line-height);
+  --font-04-line-height-large: var(--clbr-typography-type-step-450-line-height);
+  --font-05-line-height: var(--clbr-typography-type-step-200-line-height);
+  --font-06-line-height: var(--clbr-typography-type-step-200-line-height);
+  --font-07-line-height: var(--clbr-typography-type-step-700-line-height);
+  --font-08-line-height: var(--clbr-typography-type-step-800-line-height);
+  --font-09-line-height: var(--clbr-typography-type-step-900-line-height);
+  --font-10-line-height: var(--clbr-typography-type-step-1000-line-height);
+  --font-11-line-height: var(--clbr-typography-type-step-1100-line-height);
+  --font-12-line-height: var(--clbr-typography-type-step-1200-line-height);
+  --font-13-line-height: var(--clbr-typography-type-step-1300-line-height);
 
   /*
    * Motion easing — exact 1:1 port of Calibrate's `--clbr-motion-easing-*`
