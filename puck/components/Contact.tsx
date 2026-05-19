@@ -9,7 +9,7 @@ export type ContactProps = _ContactProps;
 
 export const Contact: ComponentConfig<ContactProps> = {
   defaultProps: {
-    email: "paul@measured.co",
+    email: "hello@measured.co",
     text: "How can we help?",
   },
   fields: {

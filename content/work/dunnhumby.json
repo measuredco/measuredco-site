@@ -17,12 +17,12 @@
         {
           "href": "/work",
           "label": "Work",
-          "current": false
+          "current": true
         },
         {
           "href": "/blog",
           "label": "Blog",
-          "current": true
+          "current": false
         },
         {
           "href": "/contact",

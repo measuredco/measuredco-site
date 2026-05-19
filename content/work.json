@@ -87,16 +87,6 @@
         }
       }
     ],
-    "Section-30f3a84f-101e-4e8f-bf59-a92d6bd7ddb8:section": [
-      {
-        "type": "Contact",
-        "props": {
-          "id": "Contact-33eb8cac-283a-4fba-aee4-39fbc3305f23",
-          "text": "How can we help?",
-          "email": "paul@measured.co"
-        }
-      }
-    ],
     "Section-ba322e39-f8e1-4341-8757-7c8ec43a6ed8:section": [
       {
         "type": "Grid",
@@ -180,7 +170,7 @@
           "size": "l",
           "level": "1",
           "heading": "Work",
-          "description": "How we\u2019ve worked with major brands to shape flawless UI."
+          "description": "How we’ve worked with major brands to shape flawless UI."
         }
       },
       {
@@ -211,20 +201,6 @@
       "type": "Space",
       "props": {
         "id": "Space-de3235fd-b341-4a5e-be47-08a3df88b226",
-        "size": "12"
-      }
-    },
-    {
-      "type": "Section",
-      "props": {
-        "id": "Section-30f3a84f-101e-4e8f-bf59-a92d6bd7ddb8",
-        "width": "default"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-5d0b1b6e-a010-4a67-a0e7-b6bc408ff23b",
         "size": "12"
       }
     }

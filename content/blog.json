@@ -43,16 +43,6 @@
         }
       }
     ],
-    "Section-69e4c817-c9d6-4ce5-89ec-3957e939f51a:section": [
-      {
-        "type": "Contact",
-        "props": {
-          "id": "Contact-242603ae-94b7-4c06-b671-cc9c30ecb2d2",
-          "text": "How can we help?",
-          "email": "paul@measured.co"
-        }
-      }
-    ],
     "Section-8fcb9cbe-72d9-4c92-9e1c-9a4a7be7976d:section": [
       {
         "type": "Grid",
@@ -107,7 +97,7 @@
             "slug": "reason-design-systems-fail",
             "title": "The real reason design systems fail",
             "author": "Paul Love",
-            "description": "Design systems misfire when organisations hire the team and build at the same time. Avoid paralysis by building the right team in the right way. Here\u2019s how."
+            "description": "Design systems misfire when organisations hire the team and build at the same time. Avoid paralysis by building the right team in the right way. Here’s how."
           },
           {
             "date": "2026-05-16",
@@ -121,7 +111,7 @@
             "slug": "pragmatic-planning",
             "title": "Think before you build: why we do pragmatic planning",
             "author": "Paul Love",
-            "description": "Avoid the sunk cost of patching a flawed foundation. The cheapest time to think is before you build. That\u2019s why we\u2019ve turned pragmatic planning into a habit."
+            "description": "Avoid the sunk cost of patching a flawed foundation. The cheapest time to think is before you build. That’s why we’ve turned pragmatic planning into a habit."
           },
           {
             "date": "2026-03-16",
@@ -135,7 +125,7 @@
             "slug": "ui-icebergs",
             "title": "Spotting UI icebergs: the complexity beneath the clicks",
             "author": "Paul Love",
-            "description": "Figma designs look real on the surface, but you have to look deeper. Here\u2019s how teams can spot UI icebergs early to prevent unexpected budgetary headaches."
+            "description": "Figma designs look real on the surface, but you have to look deeper. Here’s how teams can spot UI icebergs early to prevent unexpected budgetary headaches."
           },
           {
             "date": "2025-12-16",
@@ -177,105 +167,105 @@
             "slug": "client-engagement-checkins",
             "title": "The value of the client engagement check-in",
             "author": "Paul Love",
-            "description": "Regular client check-ins keep projects on track, build trust, and surface issues early. Here\u2019s how we run them \u2014 and why they\u2019re worth the time."
+            "description": "Regular client check-ins keep projects on track, build trust, and surface issues early. Here’s how we run them — and why they’re worth the time."
           },
           {
             "date": "2025-04-24",
             "slug": "font-distribution-problems",
             "title": "Problems with font distribution, and why versioning matters",
             "author": "Scott Boyle",
-            "description": "When we rebuilt the Measured site, we didn\u2019t expect fonts to be a problem. But meeting our requirements while keeping file sizes down became a bit of a mission."
+            "description": "When we rebuilt the Measured site, we didn’t expect fonts to be a problem. But meeting our requirements while keeping file sizes down became a bit of a mission."
           },
           {
             "date": "2025-03-26",
             "slug": "say-it-three-times",
             "title": "The power of saying it three times",
             "author": "Paul Love",
-            "description": "We\u2019ve found that when communicating a complex idea, it helps to say it three times to make sure it takes hold."
+            "description": "We’ve found that when communicating a complex idea, it helps to say it three times to make sure it takes hold."
           },
           {
             "date": "2025-03-24",
             "slug": "kanban-not-scrum",
-            "title": "Why we use Kanban \u2014 not Scrum",
+            "title": "Why we use Kanban — not Scrum",
             "author": "Paul Love",
-            "description": "The right thing at the right time in the right way: When it comes to agile, we favour the flexibility of Kanban over the rituals of Scrum. Here\u2019s why."
+            "description": "The right thing at the right time in the right way: When it comes to agile, we favour the flexibility of Kanban over the rituals of Scrum. Here’s why."
           },
           {
             "date": "2025-03-11",
             "slug": "new-visual-identity",
             "title": "Creating a new visual identity for Measured",
             "author": "Scott Boyle",
-            "description": "When you work in UI and branding, your own shop window should reflect your expertise. Here\u2019s how we upgraded our visual identity to show what we\u2019re about."
+            "description": "When you work in UI and branding, your own shop window should reflect your expertise. Here’s how we upgraded our visual identity to show what we’re about."
           },
           {
             "date": "2025-02-04",
             "slug": "tailwind-trade-offs",
             "title": "Understanding the trade-offs of using Tailwind CSS",
             "author": "Scott Boyle",
-            "description": "Tailwind helps you build web pages quickly with a utility-first approach \u2014 but is it right for your project? Here we explore its benefits and trade-offs."
+            "description": "Tailwind helps you build web pages quickly with a utility-first approach — but is it right for your project? Here we explore its benefits and trade-offs."
           },
           {
             "date": "2025-01-20",
             "slug": "state-of-the-browser-2025",
-            "title": "We\u2019ll be back for State of the Browser 2025",
+            "title": "We’ll be back for State of the Browser 2025",
             "author": "Paul Love",
-            "description": "We\u2019ll be returning to State of the Browser in London at the end of March.  We\u2019ll be around all day to talk about UI and branding. We\u2019d love to see you there."
+            "description": "We’ll be returning to State of the Browser in London at the end of March.  We’ll be around all day to talk about UI and branding. We’d love to see you there."
           },
           {
             "date": "2024-11-04",
             "slug": "project-handovers-success",
             "title": "12 tips to make project handovers a success",
             "author": "Paul Love",
-            "description": "Project handovers are always tricky. They\u2019re as much about people as they are processes. Here\u2019s what we\u2019ve learned over the years, distilled into 12 tips."
+            "description": "Project handovers are always tricky. They’re as much about people as they are processes. Here’s what we’ve learned over the years, distilled into 12 tips."
           },
           {
             "date": "2024-09-30",
             "slug": "why-design-systems-fail",
             "title": "Why design systems fail",
             "author": "Paul Love",
-            "description": "Disaster is rare, but design systems often fail to meet the needs of the teams they\u2019re meant to help. Here are 11 reasons why, and what to do to address them."
+            "description": "Disaster is rare, but design systems often fail to meet the needs of the teams they’re meant to help. Here are 11 reasons why, and what to do to address them."
           },
           {
             "date": "2024-09-17 ",
             "slug": "talk-design-systems-at-converge",
-            "title": "Let\u2019s talk design systems at Converge this October",
+            "title": "Let’s talk design systems at Converge this October",
             "author": "Paul Love",
-            "description": "We\u2019re going to the 2024 Converge design systems conference on October 3 and 4 to chat about all things UI. There\u2019s a great speaker line-up. We hope to see you there!"
+            "description": "We’re going to the 2024 Converge design systems conference on October 3 and 4 to chat about all things UI. There’s a great speaker line-up. We hope to see you there!"
           },
           {
             "date": "2024-09-06",
             "slug": "dont-build-a-design-system",
-            "title": "Don\u2019t build a design system \u2014 build what you actually need",
+            "title": "Don’t build a design system — build what you actually need",
             "author": "Paul Love",
             "description": "Design system means different things to different people. Avoid the risk of misunderstanding by starting out from the problems your organisation wants to solve."
           },
           {
             "date": "2024-06-19",
             "slug": "scotts-law-of-rebrands",
-            "title": "Scott\u2019s Law of Rebrands",
+            "title": "Scott’s Law of Rebrands",
             "author": "Paul Love",
             "description": "Rebrands landing during a large web project cause disruption, but they can be a benefit when approached the right way."
           },
           {
             "date": "2024-05-22",
             "slug": "how-to-do-great-live-demos",
-            "title": "How to do great live demos \u2014 and why they\u2019re important to get right",
+            "title": "How to do great live demos — and why they’re important to get right",
             "author": "Paul Love",
-            "description": "Live demos are a great way to share progress and the best way to get feedback quickly. So it\u2019s important to do them well. Here\u2019s how. "
+            "description": "Live demos are a great way to share progress and the best way to get feedback quickly. So it’s important to do them well. Here’s how. "
           },
           {
             "date": "2024-05-15",
             "slug": "why-we-are-called-measured",
-            "title": "Why we\u2019re called Measured",
+            "title": "Why we’re called Measured",
             "author": "Paul Love",
-            "description": "Names are hard. We thought a lot about ours. We thought we\u2019d share our thinking in case it helps people understand us better."
+            "description": "Names are hard. We thought a lot about ours. We thought we’d share our thinking in case it helps people understand us better."
           },
           {
             "date": "2024-05-08",
             "slug": "catch-up-at-state-of-the-browser",
-            "title": "Let\u2019s catch up at this year\u2019s State of the Browser",
+            "title": "Let’s catch up at this year’s State of the Browser",
             "author": "Paul Love",
-            "description": "We\u2019ll be going along to State of the Browser in London in September 2024."
+            "description": "We’ll be going along to State of the Browser in London in September 2024."
           },
           {
             "date": "2024-04-17",
@@ -292,20 +282,6 @@
       "type": "Space",
       "props": {
         "id": "Space-1696238943450",
-        "size": "11"
-      }
-    },
-    {
-      "type": "Section",
-      "props": {
-        "id": "Section-69e4c817-c9d6-4ce5-89ec-3957e939f51a",
-        "width": "centered"
-      }
-    },
-    {
-      "type": "Space",
-      "props": {
-        "id": "Space-9a13b21e-21e7-4ebb-9d01-767fa4f25cfa",
         "size": "12"
       }
     }
