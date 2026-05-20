@@ -33,8 +33,12 @@
   } */
 }
 
+/* min-inline-size overrides the grid-item default of `auto`, otherwise content
+   with a large min-content width (e.g. a long unbreakable string in <pre>) can
+   expand the item past its column track and cause page horizontal scroll. */
 .clbr .msrd-GridItem {
   margin-block-end: var(--clbr-spacing-vertical-700);
+  min-inline-size: 0;
   position: relative;
 }
 
