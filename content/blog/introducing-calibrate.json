@@ -7,7 +7,7 @@
         "url": "https://res.cloudinary.com/measuredco/image/upload/v1779118402/calibrate/facet-965825281_gatqoa_OG_jphc4q.png",
         "type": "png"
       },
-      "description": "A toolkit for building digital experiences, a reference implementation for our design systems practice, and a testbed for new approaches.",
+      "description": "A toolkit for building digital experiences and a reference implementation for our design systems practice.",
       "headerLinks": [
         {
           "href": "/about",
@@ -38,13 +38,13 @@
       "type": "Post",
       "props": {
         "id": "Post-6d9c076e-ab94-4741-a19f-0f974680b55e",
-        "date": "2026-05-20",
+        "date": "2026-06-11",
         "title": "Introducing Calibrate: Measured’s brand design system",
         "author": "Scott Boyle",
-        "content": "TODO: write the post.",
+        "content": "![Screenshot of the Calibrate design system website](https://res.cloudinary.com/measuredco/image/upload/f_auto,q_auto/v1779278597/calibrate/calibrate.measured.co__pdsafe.png)\n\nWhen I was building [Facet](/blog/introducing-facet) earlier this year, I wanted it to reflect [Measured’s visual identity](/blog/new-visual-identity). While the visual language already existed, there was no reusable system behind it, so building Facet’s UI meant translating the brand into tokens, components, and patterns from scratch.\n\nThat gap had never felt particularly important before. The visual identity was already doing its job: it gave us a website, a social presence, and a consistent way to represent Measured. At the same time, because design systems are such a core part of our client work, we’d often talked about creating one for ourselves. It was a worthwhile idea, but one that always seemed to sit just below the line.\n\nOver the last year or so, that started to change.\n\nAI-assisted development tools have made it easier to explore ideas in software. Facet is a case in point: projects like this are simply more practical to experiment with now. For us, that increased the value of having a design system ready to use.\n\nThe same tools also made the prospect of building the system itself feel more achievable, in part because they make it much easier to experiment with and refactor architecture as you go.\n\nThe more I worked on the idea, the more it felt worth doing properly.\n\nA few months later, the result was [Calibrate](https://calibrate.measured.co): a design system built around the Measured visual identity, and a working example of our approach.",
         "authorUrl": "https://www.linkedin.com/in/scottboyle/",
         "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1771287162/facet/facet-965825281_gatqoa.png",
-        "standfirst": "[Calibrate](https://calibrate.measured.co) is a toolkit for building digital experiences, a reference implementation for our design systems practice, and a testbed for new approaches.",
+        "standfirst": "[Calibrate](https://calibrate.measured.co) is a toolkit for building digital experiences and a reference implementation for   our design systems practice.",
         "modifiedDate": ""
       }
     }
