@@ -70,7 +70,7 @@ export const Post: ComponentConfig<PostProps> = {
           {bannerSrc ? (
             <div
               style={{
-                marginBlockStart: "calc(0rem - var(--site-header-height)",
+                marginBlockStart: `${date !== "2026-07-16" ? "calc(0rem - var(--site-header-height)" : ""}`,
               }}
             >
               <Banner alt="" anchor="C" src={bannerSrc} />

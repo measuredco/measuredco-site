@@ -1,0 +1,52 @@
+{
+  "root": {
+    "props": {
+      "title": "Measured 2020-2026",
+      "ogImage": {
+        "alt": "Measured 2020-2026",
+        "url": "https://res.cloudinary.com/measuredco/image/upload/v1784132555/articles/wrap-og_rqphvi.png",
+        "type": "png"
+      },
+      "description": "The digital product consultancy: 2020–2026.",
+      "headerLinks": [
+        {
+          "href": "/about",
+          "label": "About",
+          "current": false
+        },
+        {
+          "href": "/work",
+          "label": "Work",
+          "current": false
+        },
+        {
+          "href": "/blog",
+          "label": "Blog",
+          "current": true
+        },
+        {
+          "href": "/contact",
+          "label": "Get in touch",
+          "current": false
+        }
+      ]
+    }
+  },
+  "zones": {},
+  "content": [
+    {
+      "type": "Post",
+      "props": {
+        "id": "Post-6d9c076e-ab94-4741-a19f-0f974680b55e",
+        "date": "2026-07-16",
+        "title": "Measured 2020–2026",
+        "author": "Paul Love",
+        "content": "In 2020, we started Measured as a digital product consultancy, providing UI design systems consulting and contractor-staffed product engineering services.\n\nOver six years, we worked with high-growth startups like [Hubble](https://measured.co/work/hubble) (since acquired by [Yardi](https://www.yardi.com/)), and large corporates including [Hilton](https://measured.co/work/hilton), [BT](https://measured.co/work/bt), and [dunnhumby](https://measured.co/work/dunnhumby), building the design foundations and the teams to deliver them.\n\nFollowing the conclusion of our final client engagement, we've made the decision to close Measured in 2026.\n\nIt's been a good run, and we'd like to say thanks to all of those who were a part of it.\n\n— [Paul](https://www.linkedin.com/in/paullove/) and [Scott](https://www.linkedin.com/in/scottboyle/)",
+        "authorUrl": "https://www.linkedin.com/in/paullove/",
+        "bannerSrc": "https://res.cloudinary.com/measuredco/image/upload/v1784132664/articles/wrap_uraufy.png",
+        "standfirst": "The digital product consultancy: 2020–2026.",
+        "modifiedDate": ""
+      }
+    }
+  ]
+}
